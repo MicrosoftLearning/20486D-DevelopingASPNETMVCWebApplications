@@ -1,10 +1,10 @@
-﻿# Module 2: Designing ASP.NET MVC 5 Web Applications
+﻿# Module 2: Designing ASP.NET Core MVC Web Applications
 
-# Lab: Designing ASP.NET MVC 5 Web Applications
+# Lab: Designing ASP.NET Core MVC Web Applications
 
 #### Scenario
 
-Your team has chosen ASP.NET MVC 5 as the most appropriate ASP.NET programming model to create the photo sharing application for the Adventure Works web application. You need to create a detailed project design for the application, and have been given a set of functional and technical requirements with other information. You have to plan:
+Your team has chosen ASP.NET MVC Core as the most appropriate ASP.NET programming model to create the photo sharing application for the Adventure Works web application. You need to create a detailed project design for the application, and have been given a set of functional and technical requirements with other information. You have to plan:
 
 - An MVC model that you can use to implement the desired functionality.
 - One or more controllers and controller actions that respond to users actions.
@@ -15,12 +15,12 @@ Your team has chosen ASP.NET MVC 5 as the most appropriate ASP.NET programming m
 
 After completing this lab, you will be able to:
 
-- Design an ASP.NET MVC 5 web application that meets a set of functional requirements.
+- Design an ASP.NET MVC Core web application that meets a set of functional requirements.
 - Record the design in an accurate, precise, and informative manner.
 
 #### Lab Setup
 
-Estimated Time: **40 minutes**
+Estimated Time: **60 minutes**
 
 ### Exercise 1: Planning Model Classes
 
@@ -40,7 +40,7 @@ The main tasks for this exercise are as follows:
 
 1. Open the **InitialInvestigation** document by using the following information:
 
-   - File location: **Allfiles\20486C\Mod02\Labfiles**
+   - File location: **Allfiles\Mod02\Labfiles**
 
 2. Enable the **Navigation Pane** feature.
 3. Read the contents of the Introduction section.
@@ -123,15 +123,21 @@ The main tasks for this exercise are as follows:
 2. Add the required views to the Controllers.
 3. Add a description to the views.
 4. Merge rows in the **Controller** column and save the document.
-6. Create a new **WPF Window** with the name **SinglePhotoView**.
-7. Drag a **label** as header.
-8. Drag a **Canvas**, and put inside it **buttons**, as the site menu according the the use cases defined.
-9. **Design** the canvas and buttons so they will look well.
-10. Drag below it **labels** that show the photo properties as needed. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
-11. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\20486D\Mod02\Labfiles\NoImage.jpg** to be shown instead of real photos).
-12. Drag canvas for comments and fill it with labels according to the comment properties. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
 
-#### Task 2: Plan the gallery view.
+
+#### Task 2: Design the single photo view.
+
+1. Create a new **WPF Window** with the name **SinglePhotoView**.
+2. Drag a **label** as header.
+3. Drag a **Canvas**, and put inside it **buttons**, as the site menu according the the use cases defined.
+4. **Design** the canvas and buttons so they will look well.
+5. Drag below it **labels** that show the photo properties as needed. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
+6. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\Mod02\Labfiles\NoImage.jpg** to be shown instead of real photos).
+7. Drag **Canvas** for the comments and fill it with **Labels** according to the comment properties. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
+8. Add a **TextBlock** which supports underline to represend a link, and fill it with the text **Add Comment**.
+
+
+#### Task 3: Design the gallery view.
 
 Create a new **WPF Window** with the name **PhotoGalleryView**.
 7. Drag a **label** as header.
