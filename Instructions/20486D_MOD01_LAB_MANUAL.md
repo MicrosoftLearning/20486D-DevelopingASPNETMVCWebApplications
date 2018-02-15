@@ -134,7 +134,7 @@ The main tasks for this exercise are as follows:
      - **Allfiles/Mod01/Labfiles/ActorsRazorPages**
 
 19. Add the **images** existing files to the **images** folder from the following location:
-    -  **Allfiles/Mod01/Labfiles/RazorPages/AddData/Images**     
+    -  **Allfiles/Mod01/Labfiles/ActorsRazorPages/Images**     
 
 20. Inside  the **Pages** folder Add a new folder using the following information:
     - Folder name: **Actors**
