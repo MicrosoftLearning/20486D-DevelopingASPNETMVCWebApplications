@@ -53,7 +53,7 @@ The main tasks for this exercise are as follows:
 1. Add a new Razor Page to the **Pages** folder using the following information:
     - Razor Page name: **TestPage.cshtml**
     - Use a layout page: **checked** 
- 2. Add a **ViewData**  
+2. Add a **ViewData**  
      - ViewData Key: **Title**
     - ViewData Value : **"Test Page"**
 3. Add an **H1** element to the TestPage.cshtml page by using the following information:
@@ -128,12 +128,13 @@ The main tasks for this exercise are as follows:
 17. Add the **GetActorById** method to the **IData** interface by using the following information:
 
     - Return type: **Actor**
+    - Name: **GetActorById**
     - Parameter: an Nullable integer named **Id**
 
- 18. Add the **Data.cs** existing file to the **Model** folder from the following location:
+18. Add the **Data.cs** existing file to the **Model** folder from the following location:
      - **Allfiles/Mod01/Labfiles/ActorsRazorPages**
 
-19. Add the **images** existing files to the **images** folder from the following location:
+19. Add the **images** existing files to the **images** folder inside **wwwroot** folder from the following location:
     -  **Allfiles/Mod01/Labfiles/ActorsRazorPages/Images**     
 
 20. Inside  the **Pages** folder Add a new folder using the following information:
@@ -236,7 +237,7 @@ The main tasks for this exercise are as follows:
    - Data type: **integer**
    - Access: **Read and write**
  
-  6. Add a new interface called **IData** to the Models folder in the project.
+6. Add a new interface called **IData** to the Models folder in the project.
 
 7. Set **public** scope to the new interface.
 
@@ -254,9 +255,10 @@ The main tasks for this exercise are as follows:
 10. Add the **GetCakeById** method to the **IData** interface by using the following information:
 
    - Return type: **CakeStore**
+   - Name: **GetCakeById**
    - Parameter: an Nullable integer named **Id**
 
- 11. Add the **Data.cs** existing file to the **Model** folder from the following location:
+11. Add the **Data.cs** existing file to the **Model** folder from the following location:
      - **Allfiles/Mod01/Labfiles/CakeStoreApi**
 
 12. Create a new controller for handling **CakeStore** objects by using the following information:
@@ -264,9 +266,7 @@ The main tasks for this exercise are as follows:
     - Controller name: **CakeStoreApiController**
     - Template: **API Controller - Empty**
  
-  13.  Add **using** statement to the controller for the **Models** namespace.
-
-14. In the **CakeStoreApiController** class, create a new private object by using the following information:
+13. In the **CakeStoreApiController** class, create a new private object by using the following information:
 
     - Scope: **private**
     - Class: **IData**
@@ -274,32 +274,34 @@ The main tasks for this exercise are as follows:
 
     Instantiate the new object by calling the **IData**  in the constructor.
  
- 15. Add a method for the **GetAll** action by using the following information:
+14. Add a method for the **GetAll** action by using the following information:
      - Scope: **public**
      - Return Type : **IEnumerable&lt;CakeStore&gt;**
      - View name: **GetAll**
      - Model:  **_data.CakesInitializeData();**
 
-16. Add to **GetAll** action **HttpGet**  attribute with the following information : 
+ >**Note**: The **_data** parameter is the private object you just Instantiate.
+>
+15. Add to **GetAll** action **HttpGet**  attribute with the following information : 
      - template : **"/api/CakeStore"**
  
-17. Add a method for the **GetById** action by using the following information:
+16. Add a method for the **GetById** action by using the following information:
 
      - Scope: **public**
      - Return Type: **IActionResult**
      - Name: **GetById**
      - Parameters: One Nullable  integer called **id**
 
-18. Within the **GetById** action code block, add code to find a single **Cake** object from its **Id**.
-19. If no Cake with the right Id is found, return the **NotFound** value.
-20. If a Cake with the right Id is found, pass it to a new ObjectResult.
-21. Add to **GetById** action **HttpGet**  attribute with the following information : 
+17. Within the **GetById** action code block, add code to find a single **Cake** object from its **Id**.
+18. If no Cake with the right Id is found, return the **NotFound** value.
+19. If a Cake with the right Id is found, pass it to a new ObjectResult.
+20. Add to **GetById** action **HttpGet**  attribute with the following information : 
      - template : **"/api/CakeStore/{id}"**
 
-22. In the **Startup.cs**  class add **IData** to the services container as Singleton.
-23. Save all the changes.
-24. Run the website, and view the page you added.
-25. Stop debugging by closing Microsoft Edge.
+21. In the **Startup.cs**  class add **IData** to the services container as Singleton.
+22. Save all the changes.
+23. Run the website, and view the page you added.
+24. Stop debugging by closing Microsoft Edge.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
 >
@@ -342,7 +344,7 @@ The main tasks for this exercise are as follows:
     - Scaffold template: **Empty (without model)**  
     - Use a layout page: **checked**
  
- 4. Add an **H1** element to the **TestPage.cshtml** page by using the following information:
+4. Add an **H1** element to the **TestPage.cshtml** page by using the following information:
 
     - Content: **This is a Test Page**
 
@@ -366,7 +368,7 @@ The main tasks for this exercise are as follows:
    - Data type: **integer**
    - Access: **Read and write**
   
-  8. Add a **Name** property to the **Animal** model class by using the following information:
+8. Add a **Name** property to the **Animal** model class by using the following information:
      - Scope: **public**
      - Property name: **Name**
      - Data type: **string**
@@ -378,13 +380,13 @@ The main tasks for this exercise are as follows:
      - Data type: **string**
      - Access: **Read and write**
  
-  10.  Add an **UniqueInformation** property to the **Animal** model class by using the following information:
+10.  Add an **UniqueInformation** property to the **Animal** model class by using the following information:
         - Scope: **public**
         - Property name: **UniqueInformation**
         - Data type: **string**
         - Access: **Read and write**
    
-  11. Add a **Category** property to the **Animal** model class by using the following information:
+11. Add a **Category** property to the **Animal** model class by using the following information:
         - Scope: **public**
         - Property name: **Category**
         - Data type: **string**
@@ -411,7 +413,7 @@ The main tasks for this exercise are as follows:
     - Parameter: an Nullable integer named **Id**
     - Name: **GetAnimalById**
 
- 17. Add the **Data.cs** existing file to the **Model** folder from the following location:
+17. Add the **Data.cs** existing file to the **Model** folder from the following location:
      - **Allfiles/Mod01/Labfiles/AnimalsMvc**
 
 
@@ -441,23 +443,23 @@ The main tasks for this exercise are as follows:
 
     Instantiate the new object by calling the **IData**  in the constructor.
  
- 23. Edit the code in the **Index** action by using the following information:
+23. Edit the code in the **Index** action by using the following information:
 
      - Return class: **View**
      - View name: **Index**
      - Model: **indexViewModel**
 
 24. Initiate  **indexViewModel** Animals List  property  with **AnimalsInitializeData** method from the IData interface.
-25. Add a method for the **Display** action by using the following information:
+25. Add a method for the **Details** action by using the following information:
 
     - Scope: **public**
     - Return Type: **IActionResult**
-    - Name: **Display**
+    - Name: **Details**
     - Parameters: One nullable integer called **id**
 
-26. Within the **Display** action code block, add code to find a single **Animal** object from its **Id**.
+26. Within the **Details** action code block, add code to find a single **Animal** object from its **Id**.
 27. If no animal with the right Id is found, return the **NotFound** value.
-28. If an animal with the right Id is found, pass it to a view called **Display**.
+28. If an animal with the right Id is found, pass it to a view called **Details**.
 
 29. Add the **images** existing files to the **images** folder from the following location:
     -  **Allfiles/Mod01/Labfiles/AnimalsMvc/Images**     
@@ -470,7 +472,8 @@ The main tasks for this exercise are as follows:
  
  >**Note**: Make sure that you have **IndexViewModel** model namespace in the view. 
 >
- 31. Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
+
+31. Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
      - **Allfiles/Mod01/Labfiles/AnimalsMvc/Views**
 
 32.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
@@ -481,7 +484,8 @@ The main tasks for this exercise are as follows:
  
   >**Note**: Make sure that you have **Animal** model namespace in the view.
 >
- 33. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml**  file from the following location:
+ 
+33. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml**  file from the following location:
      - **Allfiles/Mod01/Labfiles/AnimalsMvc/Views**
 
 34. In the **Shared** folder  inside **_Layout.cshtml** page Add a link using the following information:
