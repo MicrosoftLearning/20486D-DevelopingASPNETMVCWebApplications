@@ -254,9 +254,9 @@ The main tasks for this exercise are as follows:
 
 10. Add the **GetCakeById** method to the **IData** interface by using the following information:
 
-   - Return type: **CakeStore**
-   - Name: **GetCakeById**
-   - Parameter: an Nullable integer named **Id**
+    - Return type: **CakeStore**
+    - Name: **GetCakeById**
+    - Parameter: an Nullable integer named **Id**
 
 11. Add the **Data.cs** existing file to the **Model** folder from the following location:
      - **Allfiles/Mod01/Labfiles/CakeStoreApi**
