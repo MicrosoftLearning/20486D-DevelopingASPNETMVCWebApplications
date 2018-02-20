@@ -176,9 +176,12 @@ The main tasks for this exercise are as follows:
     - Attribute: **asp-page=&quot;/Actors/Index&quot;**
     - Content: **Actors**
     - End tag: **&lt;/a&gt;&lt;/li&gt;**
-29. Save all the changes.
-30. Run the website, and view the page you added.
-31. Stop debugging by closing Microsoft Edge.
+
+#### Task 4: Run the application.
+
+1. Save all the changes.
+2. Run the website, and view the **Test Page** and **Actors** pages you added.
+3. Stop debugging by closing Microsoft Edge.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
 >
@@ -299,9 +302,12 @@ The main tasks for this exercise are as follows:
      - template : **"/api/CakeStore/{id}"**
 
 21. In the **Startup.cs**  class add **IData** to the services container as Singleton.
-22. Save all the changes.
-23. Run the website, and view the page you added.
-24. Stop debugging by closing Microsoft Edge.
+
+#### Task 4: Run the application.
+
+1. Save all the changes.
+2. Run the website, and view the content you added.
+3. Stop debugging by closing Microsoft Edge.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
 >
@@ -502,6 +508,11 @@ The main tasks for this exercise are as follows:
 37. Run the website, and view the page you added.
 38. Stop debugging by closing Microsoft Edge.
 
+#### Task 4: Run the application.
+
+1. Save all the changes.
+2. Run the website, and view the **Test Page** and **Animals** pages you added.
+3. Stop debugging by closing Microsoft Edge.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Mvc application in Visual Studio.
 >
