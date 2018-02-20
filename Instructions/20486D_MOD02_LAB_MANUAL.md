@@ -40,7 +40,7 @@ The main tasks for this exercise are as follows:
 
 1. Open the **InitialInvestigation** document by using the following information:
 
-   - File location: **Allfiles\Mod02\Labfiles**
+   - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
 
 2. Enable the **Navigation Pane** feature.
 3. Read the contents of the Introduction section.
@@ -51,6 +51,9 @@ The main tasks for this exercise are as follows:
 #### Task 2: Plan the photo model class.
 
 1. Open the **DetailedPlanningDocument** document and locate the MVC Model section.
+
+   - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+
 2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model**.
 3. Add properties to the model class you created in **Table 1: MVC Model**. The model class will have many properties
 4. Add data types to the photo properties. Each property will have one and only one data type.
@@ -132,7 +135,7 @@ The main tasks for this exercise are as follows:
 3. Drag a **Canvas**, and put inside it **buttons**, as the site menu according the the use cases defined.
 4. **Design** the canvas and buttons so they will look well.
 5. Drag below it **labels** that show the photo properties as needed. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
-6. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\Mod02\Labfiles\NoImage.jpg** to be shown instead of real photos).
+6. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\Mod02\Labfiles\01_DesignProject_begin\NoImage.jpg** to be shown instead of real photos).
 7. Drag **Canvas** for the comments and fill it with **Labels** according to the comment properties. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
 8. Add a **TextBlock** which supports underline to represend a link, and fill it with the text **Add Comment**.
 
