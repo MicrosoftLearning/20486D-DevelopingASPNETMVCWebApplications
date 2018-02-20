@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace DesignProject
 {
     /// <summary>
-    /// Interaction logic for SinglePhotoView.xaml
+    /// Interaction logic for PhotoGalleryView.xaml
     /// </summary>
     public partial class SinglePhotoView : Window
     {

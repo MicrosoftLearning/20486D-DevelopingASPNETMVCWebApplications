@@ -54,11 +54,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="PhotoGalleryView.xaml.cs">
-      <DependentUpon>PhotoGalleryView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SinglePhotoView.xaml.cs">
       <DependentUpon>SinglePhotoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoGalleryView.xaml.cs">
+      <DependentUpon>PhotoGalleryView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -73,11 +73,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PhotoGalleryView.xaml">
+    <Page Include="SinglePhotoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SinglePhotoView.xaml">
+    <Page Include="PhotoGalleryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
