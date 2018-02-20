@@ -113,20 +113,5 @@
   <ItemGroup>
     <Resource Include="NoImage.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="NoImage1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="NoImage2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="NoImage3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="NoImage4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="NoImage5.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

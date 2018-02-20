@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesignProject"
         mc:Ignorable="d"
-        Title="PhotoGalleryView" Height="1093" Width="500" WindowStyle="None">
+        Title="SinglePhotoView" Height="1093" Width="500" WindowStyle="None">
     <Grid>
         <Label Content="Adventure Works Photo Sharing" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Canvas HorizontalAlignment="Left" Height="40" Margin="41,66,0,0" VerticalAlignment="Top" Width="400" Background="#FF96AFCF">
@@ -16,7 +16,7 @@
         </Canvas>
         <Label Content="&quot;Title&quot;" HorizontalAlignment="Left" Margin="51,124,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="By: Owner" HorizontalAlignment="Left" Margin="58,166,0,0" VerticalAlignment="Top"/>
-        <Image HorizontalAlignment="Left" Height="244" Margin="58,197,0,0" VerticalAlignment="Top" Width="404" Source="C:\Users\dolevsh\source\Repos\WpfApp2\WpfApp2\NoImage.jpg"/>
+        <Image HorizontalAlignment="Left" Height="244" Margin="58,197,0,0" VerticalAlignment="Top" Width="404" Source="NoImage.jpg"/>
         <Label Content="Description" HorizontalAlignment="Left" Margin="78,457,0,0" VerticalAlignment="Top"/>
         <Label Content="Photo Description...." HorizontalAlignment="Left" Margin="78,488,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2" Width="300" Height="157"/>
         <Label Content="Comments:" HorizontalAlignment="Left" Margin="78,659,0,0" VerticalAlignment="Top"/>
