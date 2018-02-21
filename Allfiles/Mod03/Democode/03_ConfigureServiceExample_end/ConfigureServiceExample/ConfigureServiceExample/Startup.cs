@@ -15,11 +15,11 @@ namespace ConfigureServiceExample
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IComplexCalculator, ComplexCalculator>();
+            services.AddSingleton<ILogger, Logger>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IComplexCalculator calc)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILogger log)
         {
             if (env.IsDevelopment())
             {
@@ -28,7 +28,8 @@ namespace ConfigureServiceExample
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync(calc.ComplexCalculation());
+                log.Log("Logged line");
+                await context.Response.WriteAsync("Hello World!");
             });
         }
     }
