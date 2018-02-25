@@ -94,16 +94,16 @@
 2. On the **FILE** menu of the **Start Page - Microsoft Visual Studio** window, point to **New**, and then click **Project**.
 3. In the navigation pane of the **New Project** dialog box, expand **Installed**, and then click **Visual C#**.
 4. In the result pane of the **New Project** dialog box, click **ASP.NET Core Web Application**, 
-5. Click on the **Name** textbox, write  **StaticFilesExample**, click the **Location** textbox, write **Allfiles\Mod03\Democode\02_StaticFilesExample_begin\** and then click **OK**. 
+5. Click on the **Name** textbox, write  **StaticFilesExample**, click the **Location** textbox, write **Allfiles\Mod03\Democode\02_StaticFilesExample_begin** and then click **OK**. 
 6. In the result pane of the **New ASP.NET Core Web Application**  dialog box, click **Empty**, and then click **OK**.
 7. In the **Solution Explorer** see that the **wwwroot** folder is empty.
-8. On the **Windows Explorer** copy the **HtmlFile.html** and the **ImageFile.jpg** files from the **Allfiles\Mod03\Democode\02_StaticFilesExample_begin\** directory into the **Allfiles\Mod03\Democode\02_StaticFilesExample_begin\StaticFilesExample\StaticFilesExample\wwwroot** directory.
+8. On the **Windows Explorer** copy the **HtmlFile.html** and the **ImageFile.jpg** files from the **Allfiles\Mod03\Democode\02_StaticFilesExample_begin** directory into the **Allfiles\Mod03\Democode\02_StaticFilesExample_begin\StaticFilesExample\StaticFilesExample\wwwroot** directory.
 9. In the **Solution Explorer** see that the **wwwroot** folder contains both of the copied files (You might need to click the arrow next to it to see the files in its directory).
 10. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 11. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/HtmlFile.html and press enter.
 12. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/ImageFile.jpg and press enter. 
 13. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/NonExistingPath.jpg and press enter. 
- >**Note:** the app.Run is executed as always, and returns Hello World !
+     >**Note:** the app.Run is executed as always, and returns Hello World !
 14. In the **Microsoft Edge** window, click **Close**.
 15. On the **Debug** Menu, click **Stop Debugging**.
 16. In the **Solution Explorer** window, double click on the **Startup.cs** class. 
@@ -119,7 +119,7 @@
 20. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/HtmlFile.html and press enter.
 21. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/ImageFile.jpg and press enter. 
 22. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/NonExistingPath.jpg and press enter. 
- >**Note:** Now the existing files are shown, and the nonexisting path leads to app.Run
+     >**Note:** Now the existing files are shown, and the nonexisting path leads to app.Run
 23. In the **Microsoft Edge** window, click **Close**.
 24. On the **Debug** Menu, click **Stop Debugging**.
 
