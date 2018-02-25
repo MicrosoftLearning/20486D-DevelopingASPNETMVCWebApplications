@@ -18,7 +18,6 @@
 
 5. Close the Microsoft Edge window.
 
-
 #### Demonstration Steps
 
 1. In the Solution Explorer pane of the **PhotoSharingSample – Microsoft Visual Studio** window, expand **PhotoSharingSample**, and then note that the PhotoSharingSample application does not have the default.html, the default.aspx, or the default.cshtml files to act as a home page.
@@ -52,7 +51,7 @@
         </span>
         </div>
 ```
- >**Note:** This code block represents the View that renders the home page.
+>**Note:** This code block represents the View that renders the home page.
 
 7. On the toolbar of the **PhotoSharingSample – Microsoft Visual Studio** window, click **Microsoft Edge**.
 
@@ -67,13 +66,14 @@
   ```cs
         app.UseMvcWithDefaultRoute();
 ```
+
 >**Note:** This code block represents the default route that forwards requests to the specified controller.
 
 12. On the taskbar, click the **Microsoft Edge** icon.
 
 13. In the Address bar of the Microsoft Edge window, type the URL **http://localhost:[port]/home/index**, and then click **Go to**.
 
-   >**Note:** The browser window displays the Home page of the **http://localhost:[port]/home/index** web application.
+    >**Note:** The browser window displays the Home page of the **http://localhost:[port]/home/index** web application.
 
 14. On the taskbar, click the **Microsoft Visual Studio** icon.
 
@@ -106,7 +106,7 @@
         }
         return File(fileBytes, requestedPhoto.ImageMimeType);
 ```
-   >**Note:** This code block represents the **GetImage** action of the Photo Controller.
+   >**Note:** This code block represents the **GetImage** action of the PhotoController.
 
 20. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
@@ -117,11 +117,11 @@
         <img class="photo-display-img" src="@Url.Action("GetImage", "Home", new { PhotoId = item.PhotoID })" />
         </div>
 ```
-   >**Note:**  The Razor view engine runs this code and renders the Photo Image.
+>**Note:**  The Razor view engine runs this code and renders the Photo Image.
 
 22. On the taskbar, click the **Microsoft Edge** icon.
 
-23. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]
+23. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]**
 
     >**Note:** All the photos are displayed in the browser window. 
 

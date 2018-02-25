@@ -170,7 +170,7 @@ The main tasks for this exercise are as follows:
 
 26. Add the **Details.cs** and **Details.cshtml** existing files to the **Pages/Actors** folder from the following location:
       - **Allfiles/Mod01/Labfiles/ActorsRazorPages/Pages**   
-     >**Note:**  That the namespace project name identical to your project name in both files. 
+    >**Note:**  That the namespace project name identical to your project name in both files. 
 
 27.  In the **Startup.cs**  class add **IData** to the services container as Singleton.
 
@@ -292,7 +292,7 @@ The main tasks for this exercise are as follows:
      - View name: **GetAll**
      - Model:  **_data.CakesInitializeData();**
 
- >**Note**: The **_data** parameter is the private object you just Instantiate.
+    >**Note**: The **_data** parameter is the private object you just Instantiate.
 >
 
 15. Add to **GetAll** action **HttpGet**  attribute with the following information : 
@@ -326,6 +326,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
 >
+
 ### 	Exercise 3: Exploring an MVC Application
 
 #### Scenario
@@ -499,7 +500,7 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)***
      - Use a layout page: **Yes**
  
- >**Note**: Make sure that you have **IndexViewModel** model namespace in the view. 
+     >**Note**: Make sure that you have **IndexViewModel** model namespace in the view. 
 >
 
 31. Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
@@ -511,7 +512,7 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)***
      - Use a layout page: **Yes**
  
-  >**Note**: Make sure that you have **Animal** model namespace in the view.
+     >**Note**: Make sure that you have **Animal** model namespace in the view.
 
  
 33. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml**  file from the following location:

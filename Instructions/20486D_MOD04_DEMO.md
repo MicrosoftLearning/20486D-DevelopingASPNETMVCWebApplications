@@ -100,22 +100,23 @@
 17. On the **DEBUG** menu of the **ControllersExample - Microsoft Visual Studio** window, click Start Debugging.
 
 18. In the **http://localhost:[port]** window.
- >**Note:** The text **Welcome to module 4 demo 1** is the action result you added to the **Index** action.
+    >**Note:** The text **Welcome to module 4 demo 1** is the action result you added to the **Index** action.
 
 19. In the **http://localhost:[port]** window, write the following Url **http://localhost:[port]/home/ParamExample/2**.
->**Note:** The text **My param is: 2** is the content result you added in the **ParamExample** action.
+    >**Note:** The text **My param is: 2** is the content result you added in the **ParamExample** action.
 
 20. In the **http://localhost:[port]/home/ParamExample/2** window, write the following Url 
 **http://localhost:[port]/home/RouteDataExample/4**.
- >**Note:** The text **Action information: the action is in home controller, the action name is RouteDataExample and the id value is 4** is the content result you added >          in the **RouteDataExample** action.
+    >**Note:** The text **Action information: the action is in home controller, the action name is RouteDataExample and the id value is 4** is the content result you 
+    >          added in the **RouteDataExample** action.
 
 21. In the **http://localhost:[port]/home/RouteDataExample/4** window, write the following Url 
 **http://localhost:[port]/home/ViewBagExample**.
- >**Note:** The text **The Message is: View Bag Example** is the action result you added in the **ViewBagExample** action.
+    >**Note:** The text **The Message is: View Bag Example** is the action result you added in the **ViewBagExample** action.
 
 22. In the **http://localhost:[port]/home/ViewBagExample** window, write the following Url 
 **http://localhost:[port]/home/ViewDataExample**.
->**Note:** The text **The Message is: View Data Example** is the action result you added in the **ViewDataExample** action.
+    >**Note:** The text **The Message is: View Data Example** is the action result you added in the **ViewDataExample** action.
 
 23. In the Microsoft Edge window, click Close.
 
@@ -245,21 +246,21 @@
 20. On the **DEBUG** menu of the **RoutesExample - Microsoft Visual Studio** window, click Start Debugging.
 
 21. In the **http://localhost:[port]** window.
->**Note:** The text **This is the Home controller with default param: 50** is the action result you added, in the **Index** action inside the **HomeController**.
+    >**Note:** The text **This is the Home controller with default param: 50** is the action result you added, in the **Index** action inside the **HomeController**.
 
 22. In the **http://localhost:[port]** window, write the following Url **http://localhost:[port]/hello/Gerald/Tesch**.
->**Note:** The text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added, in the **Greeting** action inside the **HomeController**.
+    >**Note:** The text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added, in the **Greeting** action inside the **HomeController**.
 
 23. In the **http://localhost:[port]/hello/Gerald/Tesch** window, write the following Url 
 **http://localhost:[port]/Calculator/MultByTwo/4**.
->**Note:** The result **8** is the action result you added, in the **MultByTwo** action inside the **CalculatorController**.
+    >**Note:** The result **8** is the action result you added, in the **MultByTwo** action inside the **CalculatorController**.
 
 24. In the **http://localhost:[port]/Calculator/MultByTwo/4** window, write the following Url 
 **http://localhost:[port]/Calc/Mult/5/5**.
->**Note:** The result **25** is the action result you added, in the **Mult** action inside the **CalculatorController**.
+    >**Note:** The result **25** is the action result you added, in the **Mult** action inside the **CalculatorController**.
 
 25. In the **http://localhost:[port]/Calc/Mult/5/5** window, write the following Url **http://localhost:[port]/Divide/100**.
->**Note:** The result **10** is the action result you added, in the **DivideByTen** action inside the **CalculatorController**.
+    >**Note:** The result **10** is the action result you added, in the **DivideByTen** action inside the **CalculatorController**.
 
 26. In the Microsoft Edge window, click Close.
 
