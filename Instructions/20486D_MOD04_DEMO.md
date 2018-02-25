@@ -7,19 +7,19 @@
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
  https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
-2. Go to **Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click ControllersExample.sln.
+2. Go to **Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click **ControllersExample.sln**.
 
 #### Demonstration Steps
 
 1. In the Solution Explorer pane of the **ControllersExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
 2. In the **Scaffold** dialog box, click **MVC controller - Empty**.
 3. In the **Controller Name** text box of the **Add Controller** dialog box, type **HomeController**, and then click **Add**.
-4. In the HomeController.cs code window, locate the following code.
+4. In the **HomeController.cs** code window, locate the following code.
 
   ```cs
        using Microsoft.AspNetCore.Mvc;
 ```
-5. Ensure that the mouse cursor is at the end of the Microsoft.AspNetCore.Mvc namespace, press Enter, and then type the following code.
+5. Ensure that the mouse cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code.
 
   ```cs
        using ControllersExample.Models;
@@ -32,8 +32,7 @@
 7. Replace the selected code with the following code.
 
   ```cs
-       ExampleModel model = new ExampleModel() 
-       { Sentence = "Welcome to module 4 demo 1" };
+       ExampleModel model = new ExampleModel() { Sentence = "Welcome to module 4 demo 1" };
        return View(model);
 ```
 8. Ensure that the cursor is at the end of the **Index** action code block, press Enter, and then type the following code.
@@ -117,11 +116,12 @@ is the action result you added in the **ViewBagExample** action.
 **The Message is: View Data Example 
 Server time is: 2/20/2018 1:33:51 PM** 
 is the action result you added in the **ViewDataExample** action.
+
 23. In the Microsoft Edge window, click Close.
 
-24. On the Debug Menu, click Stop Debugging.
+24. On the **DEBUG** menu of the **ControllersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-25. In the **ControllersExample - Microsoft Visual Studio** window, click **Close**.
+25. On the **FILE** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Exit**.
 
 # Lesson 2: Configuring Routes
 
@@ -130,7 +130,7 @@ is the action result you added in the **ViewDataExample** action.
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
  https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
-2. Go to **Allfiles\Mod04\Democode\02_RoutesExample_begin**, and then double-click RoutesExample.sln.
+2. Go to **Allfiles\Mod04\Democode\02_RoutesExample_begin**, and then double-click **RoutesExample.sln**.
 
 #### Demonstration Steps
 
@@ -153,13 +153,12 @@ is the action result you added in the **ViewDataExample** action.
             return Content("This is the Home controller with default param: " + id);
         }
 ```
-6. Ensure that the cursor is at the end of the **Index** action code block, press Enter, and then type the following code.
+6. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code.
 
   ```cs
         [Route("Hello/{name}/{lastName}")]
         public IActionResult Greeting(string name, string lastName)
         {
-            
         }
 ```
 7. In the **Greeting** action code block, type the following code.
@@ -168,8 +167,11 @@ is the action result you added in the **ViewDataExample** action.
         return Content(String.Format("Hello {0}-{1} from module 4 demo 2",name,lastName));
 ```
 8. In the Solution Explorer pane of the **RoutesExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
+
 9. In the **Scaffold** dialog box, click **MVC controller - Empty**.
+
 10. In the **Controller Name** text box of the **Add Controller** dialog box, type **CalculatorController**, and then click **Add**.
+
 11. In the **CalculatorController** class code block, select the following code.
 
   ```cs
@@ -187,13 +189,12 @@ is the action result you added in the **ViewDataExample** action.
             return Content(result.ToString());
         }
 ```
-13. Ensure that the cursor is at the end of the **MultByTwo** action code block, press Enter, and then type the following code.
+13. Ensure that the cursor is at the end of the **MultByTwo** action code block, press Enter twice, and then type the following code.
 
   ```cs
         [Route("Calc/Mult/{num1:int}/{num2:int}")]
         public IActionResult Mult(int num1, int num2)
         {
-            
         }
 ```
 14. In the **Mult** action code block, type the following code.
@@ -203,13 +204,12 @@ is the action result you added in the **ViewDataExample** action.
         return Content(result.ToString());
 ```
 
-15. Ensure that the cursor is at the end of the **Mult** action code block, press Enter, and then type the following code.
+15. Ensure that the cursor is at the end of the **Mult** action code block, press Enter twice, and then type the following code.
 
   ```cs
         [HttpGet("Divide/{param?}")]
         public IActionResult DivideByTen(int param)
         {
-            
         }
 ```
 16. In the **DivideByTen** action code block, type the following code.
@@ -219,7 +219,8 @@ is the action result you added in the **ViewDataExample** action.
         return Content(result.ToString());
 ```
 17. In the Solution Explorer pane of the **RoutesExample - Microsoft Visual Studio** window, click **Startup.cs**.
-18. In the **Configure** method place the mouse cursor after the **app.UseStaticFiles();** method call, press Enter, and then type the following code.
+
+18. In the **Configure** method place the mouse cursor after the **app.UseStaticFiles();** method call, press Enter twice, and then type the following code.
 ```cs
         app.UseMvc(routes =>
             {
@@ -237,27 +238,168 @@ is the action result you added in the **ViewDataExample** action.
 
 19. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Save All**.
 
-20. On the DEBUG menu of the **ControllersExample - Microsoft Visual Studio** window, click Start Debugging.
+20. On the DEBUG menu of the **RoutesExample - Microsoft Visual Studio** window, click Start Debugging.
 
-21. On the DEBUG menu of the **RoutesExample - Microsoft Visual Studio** window, click Start Debugging.
+21. In the **http://localhost:[port]** window, note the text **This is the Home controller with default param: 50** is the action result you added in the **Home** controller in the **Index** action.
 
-22. In the **http://localhost:[port]** window, note the text **This is the Home controller with default param: 50** is the action result you added in the **Home** controller in the **Index** action.
-
-23. In the **http://localhost:[port]** window, write the following Url
+22. In the **http://localhost:[port]** window, write the following Url
 **http://localhost:[port]/hello/Gerald/Tesch**, note the text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added in the **Home** controller in the **Greeting** action.
 
-24. In the **http://localhost:[port]/hello/Gerald/Tesch** window, write the following Url
+23. In the **http://localhost:[port]/hello/Gerald/Tesch** window, write the following Url
 **http://localhost:[port]/Calculator/MultByTwo/4**, note the result **8** is the action result you added in the **Calculator** controller in the **MultByTwo** action.
 
-25. In the **http://localhost:[port]/Calculator/MultByTwo/4** window, write the following Url
+24. In the **http://localhost:[port]/Calculator/MultByTwo/4** window, write the following Url
 **http://localhost:[port]/Calc/Mult/5/5**, note the result **25** is the action result you added in the **Calculator** controller in the **Mult** action.
 
-26. In the **http://localhost:[port]/Calc/Mult/5/5** window, write the following Url
+25. In the **http://localhost:[port]/Calc/Mult/5/5** window, write the following Url
 **http://localhost:[port]/Divide/100**, note the result **10** is the action result you added in the **Calculator** controller in the **DivideByTen** action.
 
-27. In the Microsoft Edge window, click Close.
+26. In the Microsoft Edge window, click Close.
 
-28. On the Debug Menu, click Stop Debugging.
+27. On the **DEBUG** menu of the **RoutesExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-29. In the **RoutesExample - Microsoft Visual Studio** window, click **Close**.
+28. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Exit**.
 
+# Lesson 3: Writing Action Filters
+
+### Demonstration: How to Create and Use Action Filters 
+#### Preparation Steps
+
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
+ https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+2. Go to **Allfiles\Mod04\Democode\03_FiltersExample_begin**, and then double-click **FiltersExample.sln**.
+
+#### Demonstration Steps
+
+1. In the Solution Explorer pane of the **FiltersExample - Microsoft Visual Studio** window, right-click **Filters** folder, point to Add, and then click **class**
+2. In the **Name** box of the **Add New Item – FiltersExample** dialog box, type **CustomActionFilter**, and then click Add.
+3. In the **CustomActionFilter** class code window, locate the following code.
+
+  ```cs
+       using System.Threading.Tasks;
+```
+4. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
+
+  ```cs
+      using System.Diagnostics;
+      using Microsoft.AspNetCore.Mvc;
+      using Microsoft.AspNetCore.Mvc.Filters;
+```
+5. In the **CustomActionFilter** class code window, locate the following code.
+
+  ```cs
+       public class CustomActionFilter
+```
+6.  Append the following code to the existing line of code.
+
+  ```cs
+       : ActionFilterAttribute
+```
+7. In the **CustomActionFilter** class code block, press Enter and then type the following code.
+
+
+  ```cs
+       public override void OnActionExecuting(ActionExecutingContext filterContext)
+       {
+       }
+```
+8. In the **OnActionExecuting** action code block, type the following code.
+
+  ```cs
+         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
+         Debug.WriteLine(">>> "+actionName +" started, event fired: OnActionExecuting");
+```
+
+9. Ensure that the cursor is at the end of the **OnActionExecuting** action code block, press Enter twice, and then type the following code.
+
+  ```cs
+        public override void OnActionExecuted(ActionExecutedContext filterContext)
+        {            
+        }
+```
+10. In the **OnActionExecuted** action code block, type the following code.
+
+  ```cs
+        string actionName = filterContext.ActionDescriptor.RouteValues["action"];
+            Debug.WriteLine(">>> "+actionName +" finished, event fired: OnActionExecuted");
+```
+11. Ensure that the cursor is at the end of the **OnActionExecuted** action code block, press Enter twice, and then type the following code.
+
+  ```cs
+         public override void OnResultExecuting(ResultExecutingContext filterContext)
+        {   
+        }
+```
+12. In the **OnResultExecuting** action code block, type the following code.
+
+  ```cs
+         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
+            Debug.WriteLine(">>> "+actionName + " before result, event fired: OnResultExecuting");
+```
+
+13. Ensure that the cursor is at the end of the **OnResultExecuting** action code block, press Enter twice, and then type the following code.
+
+  ```cs
+         public override void OnResultExecuted(ResultExecutedContext filterContext)
+        {            
+        }
+```
+14. In the **OnResultExecuted** action code block, type the following code.
+
+  ```cs
+         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
+            ContentResult result = (ContentResult)filterContext.Result;
+            Debug.WriteLine(string.Format(">>> {0} result is: {1},event fired: OnResultExecuted", actionName, result.Content));
+```
+15. In the **FiltersExample – Microsoft Visual Studio** window, In the Solution Explorer pane, double-click **HomeController.cs**.
+
+16. In the **HomeController** code window, locate the following code.
+
+  ```cs
+       using Microsoft.AspNetCore.Mvc;
+```
+17. Ensure that the mouse cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code.
+
+  ```cs
+       using FiltersExample.Filters;
+```
+18. In the **HomeController** class code block, select the following code.
+
+  ```cs
+        public IActionResult Index()
+        {
+            return View();
+        }
+```
+19. Replace the selected code with the following code.
+
+  ```cs
+        [CustomActionFilter]
+        public IActionResult Index()
+        {
+            return Content("Welcome to module 4 demo 3");
+        }
+```
+20. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Save All**.
+
+21. On the DEBUG menu of the **FiltersExample - Microsoft Visual Studio** window, click Start Debugging.
+
+22. On the taskbar, click the **FiltersExample - Microsoft Visual Studio** icon.
+
+23. In the Output pane of the **FiltersExample (Running) - Microsoft Visual Studio** window, click the **Output** tab.
+
+24. On the **Output** tab, locate the following line of code.
+
+  ```cs
+       >>> Index started, event fired: OnActionExecuting
+       >>> Index finished, event fired: OnActionExecuted
+       >>> Indexbefore result, event fired: OnResultExecuting
+       >>> Index result is: Welcome to module 4 demo 3,event fired: OnResultExecuted
+```
+   >**Note:** In the above output lines, note that this is the CustomActionFilter class methods result. 
+
+25. In the Microsoft Edge window, click Close.
+
+26. On the **DEBUG** menu of the **FiltersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+
+27. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Exit**.
