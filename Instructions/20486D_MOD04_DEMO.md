@@ -28,7 +28,7 @@
   ```cs
        using ControllersExample.Models;
 ```
-6. In the **HomeController** code window, In the **Index** action code block, select the following code.
+6. In the **HomeController** code window, in the **Index** action code block, select the following code.
 
   ```cs
         return View();
@@ -105,13 +105,16 @@
 19. In the **http://localhost:[port]** window, write the following Url **http://localhost:[port]/home/ParamExample/2**.
 >**Note:** The text **My param is: 2** is the content result you added in the **ParamExample** action.
 
-20. In the **http://localhost:[port]/home/ParamExample/2** window, write the following Url **http://localhost:[port]/home/RouteDataExample/4**.
- >**Note:** The text **Action information: the action is in home controller, the action name is RouteDataExample and the id value is 4** is the content result you added in the **RouteDataExample** action.
+20. In the **http://localhost:[port]/home/ParamExample/2** window, write the following Url 
+**http://localhost:[port]/home/RouteDataExample/4**.
+ >**Note:** The text **Action information: the action is in home controller, the action name is RouteDataExample and the id value is 4** is the content result you added >          in the **RouteDataExample** action.
 
-21. In the **http://localhost:[port]/home/RouteDataExample/4** window, write the following Url **http://localhost:[port]/home/ViewBagExample**.
+21. In the **http://localhost:[port]/home/RouteDataExample/4** window, write the following Url 
+**http://localhost:[port]/home/ViewBagExample**.
  >**Note:** The text **The Message is: View Bag Example** is the action result you added in the **ViewBagExample** action.
 
-22. In the **http://localhost:[port]/home/ViewBagExample** window, write the following Url **http://localhost:[port]/home/ViewDataExample**.
+22. In the **http://localhost:[port]/home/ViewBagExample** window, write the following Url 
+**http://localhost:[port]/home/ViewDataExample**.
 >**Note:** The text **The Message is: View Data Example** is the action result you added in the **ViewDataExample** action.
 
 23. In the Microsoft Edge window, click Close.
@@ -226,8 +229,8 @@
         app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "firstRoute",
-                    template: "{controller}/{action}/{num:int}");
+                        name: "firstRoute",
+                        template: "{controller}/{action}/{num:int}");
 
                 routes.MapRoute(
                     name: "secondRoute",
@@ -239,22 +242,24 @@
 
 19. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Save All**.
 
-20. On the DEBUG menu of the **RoutesExample - Microsoft Visual Studio** window, click Start Debugging.
+20. On the **DEBUG** menu of the **RoutesExample - Microsoft Visual Studio** window, click Start Debugging.
 
 21. In the **http://localhost:[port]** window.
->**Note:**  note the text **This is the Home controller with default param: 50** is the action result you added in the **Home** controller in the **Index** action.
+>**Note:** The text **This is the Home controller with default param: 50** is the action result you added, in the **Index** action inside the **HomeController**.
 
 22. In the **http://localhost:[port]** window, write the following Url **http://localhost:[port]/hello/Gerald/Tesch**.
->**Note:** Text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added in the **Home** controller in the **Greeting** action.
+>**Note:** The text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added, in the **Greeting** action inside the **HomeController**.
 
-23. In the **http://localhost:[port]/hello/Gerald/Tesch** window, write the following Url **http://localhost:[port]/Calculator/MultByTwo/4**.
->**Note:** The result **8** is the action result you added in the **Calculator** controller in the **MultByTwo** action.
+23. In the **http://localhost:[port]/hello/Gerald/Tesch** window, write the following Url 
+**http://localhost:[port]/Calculator/MultByTwo/4**.
+>**Note:** The result **8** is the action result you added, in the **MultByTwo** action inside the **CalculatorController**.
 
-24. In the **http://localhost:[port]/Calculator/MultByTwo/4** window, write the following Url **http://localhost:[port]/Calc/Mult/5/5**.
->**Note:** The result **25** is the action result you added in the **Calculator** controller in the **Mult** action.
+24. In the **http://localhost:[port]/Calculator/MultByTwo/4** window, write the following Url 
+**http://localhost:[port]/Calc/Mult/5/5**.
+>**Note:** The result **25** is the action result you added, in the **Mult** action inside the **CalculatorController**.
 
 25. In the **http://localhost:[port]/Calc/Mult/5/5** window, write the following Url **http://localhost:[port]/Divide/100**.
->**Note:** The result **10** is the action result you added in the **Calculator** controller in the **DivideByTen** action.
+>**Note:** The result **10** is the action result you added, in the **DivideByTen** action inside the **CalculatorController**.
 
 26. In the Microsoft Edge window, click Close.
 
@@ -274,9 +279,9 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the **FiltersExample - Microsoft Visual Studio** window, right-click **Filters** folder, point to Add, and then click **class**
+1. In the Solution Explorer pane of the **FiltersExample - Microsoft Visual Studio** window, right-click **Filters** folder, point to **Add**, and then click **class**
 
-2. In the **Name** box of the **Add New Item – FiltersExample** dialog box, type **CustomActionFilter**, and then click Add.
+2. In the **Name** box of the **Add New Item – FiltersExample** dialog box, type **CustomActionFilter**, and then click **Add**.
 
 3. In the **CustomActionFilter** class code window, locate the following code.
 
@@ -326,7 +331,7 @@
 
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
-         Debug.WriteLine(">>> "+actionName +" finished, event fired: OnActionExecuted");
+        Debug.WriteLine(">>> "+actionName +" finished, event fired: OnActionExecuted");
 ```
 11. Ensure that the cursor is at the end of the **OnActionExecuted** action code block, press Enter twice, and then type the following code.
 
@@ -356,7 +361,7 @@
         ContentResult result = (ContentResult)filterContext.Result;
         Debug.WriteLine(string.Format(">>> {0} result is: {1},event fired: OnResultExecuted", actionName, result.Content));
 ```
-15. In the **FiltersExample – Microsoft Visual Studio** window, In the Solution Explorer pane, double-click **HomeController.cs**.
+15. In the **FiltersExample – Microsoft Visual Studio** window, in the Solution Explorer pane, double-click **HomeController.cs**.
 
 16. In the **HomeController** code window, locate the following code.
 
