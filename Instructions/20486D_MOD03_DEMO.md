@@ -17,7 +17,7 @@
 6. In the result pane of the **New ASP.NET Core Web Application**  dialog box, click **Empty**, and then click **OK**.
 7. In the **Solution Explorer** window, double click on the **Startup.cs** class.
 8. Locate the following code:
-  ```cs
+```cs
     app.Run(async (context) =>
     {
         await context.Response.WriteAsync("Hello World!");
@@ -73,7 +73,7 @@
 30. On the **Debug** Menu, click **Stop Debugging**.
      >**Note** : Now, the app.Use result is gone and only the app.Run works !
 31. Select the following code:
-  ```cs
+```cs
     app.Run(async (context) =>
     {
         await context.Response.WriteAsync("Hello World!");
@@ -108,11 +108,11 @@
 15. On the **Debug** Menu, click **Stop Debugging**.
 16. In the **Solution Explorer** window, double click on the **Startup.cs** class. 
 17. Locate the following code:
-  ```cs
+```cs
     app.Run(async (context) =>
 ```
 18. Put the cursor at the end of the line before the code that is shown above and write the following code:
- ```cs
+```cs
     app.UseStaticFiles();
 ```
 19. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
