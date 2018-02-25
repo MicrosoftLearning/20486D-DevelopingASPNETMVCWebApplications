@@ -28,14 +28,12 @@ namespace ControllersExample.Controllers
         public IActionResult ViewBagExample()
         {
             ViewBag.Message = "View Bag Example";
-            ViewBag.ServerTime = DateTime.Now;
             return View();
         }
 
         public IActionResult ViewDataExample()
         {
             ViewData["Message"] = "View Data Example";
-            ViewData["ServerTime"] = DateTime.Now;
             return View();
         }
     }
