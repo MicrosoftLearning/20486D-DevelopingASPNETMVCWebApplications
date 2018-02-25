@@ -197,11 +197,6 @@ Press enter and type the code below:
 23. In the **Microsoft Edge** window, click **Close**.
 24. On the **Debug** Menu, click **Stop Debugging**.
 25. In the **Solution Explorer**, double click the new created **XXXX-XX-XX--XX-XX-XX.log** file.
-26. See the added log.
-27. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-28. In the **Microsoft Edge** window, click **Close**.
-29. On the **Debug** Menu, click **Stop Debugging**.
-30. See that another log file was created with a new date values.
 
 
 
