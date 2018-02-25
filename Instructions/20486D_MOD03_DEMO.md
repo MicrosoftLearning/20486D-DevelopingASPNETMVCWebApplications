@@ -18,10 +18,10 @@
 7. In the **Solution Explorer** window, double click on the **Startup.cs** class.
 8. Locate the following code:
   ```cs
-       app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+        app.Run(async (context) =>
+        {
+            await context.Response.WriteAsync("Hello World!");
+        });
 ```
 9. On the **DEBUG** menu of the **Configure Middlewares Example –  Microsoft Visual Studio** window, click **Start Debugging**.
 10. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/dolev and press **Enter**.
@@ -31,10 +31,10 @@
     >**Note** : Notice that no matter what is the url under the **localhost:[port]** domain, the result stays **Hello World!**.
 14. Put the cursor at the end of the line above the app.Run, press enter and Insert the following code:
 ```cs
-                app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + Environment.NewLine);
-            });
+        app.Use(async (context, next) =>
+        {
+            await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + Environment.NewLine);
+        });
 ```
 >**Note** The context.Request.Path returns the subpath of the URL after the domain and port as can be seen in the following pattern: [protocol]://[domain]:[port]/[path]
 15. On the **DEBUG** menu of the **ConfigureMiddlewaresExample –  Microsoft Visual Studio** window, click **Start Debugging**.
@@ -45,7 +45,7 @@
      >**Note** : Notice that no matter what url under the **localhost:[port]** domain, the result is replaced to **Custom MiddleWare, Path = [URL Path]**, and the app.Run is ignored.
 20. Put the cursor at the end of the following code you just typed:
 ```cs
-                await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + Environment.NewLine);
+        await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + Environment.NewLine);
 ```
 21.  Press enter and type put the following code:
 ```cs
@@ -60,11 +60,11 @@
      Because the app.Run is now executed after the app.Use
 25. Select the following code:
 ```cs
-                app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + Environment.NewLine);
+        app.Use(async (context, next) =>
+        {
+            await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + Environment.NewLine);
                 await next.Invoke();
-            });
+        });
 ```
 26. right click and press **Cut**, and remove the empty line that was left.
 27. Move the cursor right before the end of the Configure method, before the closing brackets, and press paste.
@@ -74,10 +74,10 @@
      >**Note** : Now, the app.Use result is gone and only the app.Run works !
 31. Select the following code:
   ```cs
-       app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+        app.Run(async (context) =>
+        {
+            await context.Response.WriteAsync("Hello World!");
+        });
 ```
 32. right click and press **Cut**, and remove the empty line that was left.
 33. Move the cursor right before the end of the Configure method,before the closing brackets,  and press paste.
@@ -109,11 +109,11 @@
 16. In the **Solution Explorer** window, double click on the **Startup.cs** class. 
 17. Locate the following code:
   ```cs
-       app.Run(async (context) =>
+        app.Run(async (context) =>
 ```
 18. Put the cursor at the end of the line before the code that is shown above and write the following code:
  ```cs
-app.UseStaticFiles();
+        app.UseStaticFiles();
 ```
 19. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 20. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/HtmlFile.html and press enter.
@@ -143,19 +143,19 @@ app.UseStaticFiles();
 8. In the **Add New Item** dialog window, inside the **Name** textbox type **Logger** and press **Add**.
 9. Put the cursor at the end of the following code:
 ```cs 
-using System.Threading.Tasks;
+        using System.Threading.Tasks;
 ```
 Press enter and write the code below:
 ```cs
- using System.IO;
+        using System.IO;
  ```
 10. Inside the empty class create a variable as below;
 ```cs
-string filename;
+        string filename;
 ```
 11. Below it create a constructor:
 ```cs
-public Logger()
+        public Logger()
         {
         }
 ```
