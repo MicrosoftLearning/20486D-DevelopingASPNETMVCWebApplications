@@ -55,11 +55,15 @@ The main tasks for this exercise are as follows:
 #### Task 3: Add simple functionality.
 
 1. Add a new Razor Page to the **Pages** folder using the following information:
+ 
     - Razor Page name: **TestPage.cshtml**
     - Use a layout page: **checked** 
+
 2. Add a **ViewData**  
-     - ViewData Key: **Title**
+
+    - ViewData Key: **Title**
     - ViewData Value : **"Test Page"**
+
 3. Add an **H1** element to the TestPage.cshtml page by using the following information:
 
     - Content: **This is a Test Page**
@@ -72,6 +76,7 @@ The main tasks for this exercise are as follows:
     - End tag: **&lt;/a&gt;&lt;/li&gt;**
 
 5. Add a new folder to the application at the root level by using the following information:
+ 
    - Folder name: **Models**
  
 6. Add a new model class to the **Models** folder by using the following information:
@@ -79,36 +84,42 @@ The main tasks for this exercise are as follows:
    - Class name: **Actor**
 
 7. Add a primary key property to the **Actor** model class by using the following information:
+
    - Scope: **public**
    - Property name: **Id**
    - Data type: **integer**
    - Access: **Read and write**
 
 8. Add a **FirstName** property to the **Actor** model class by using the following information:
+
    - Scope: **public**
    - Property name: **FirstName**
    - Data type: **string**
    - Access: **Read and write**
 
 9.  Add a **LastName** property to the **Actor** model class by using the following information:
+
     - Scope: **public**
     - Property name: **LastName**
     - Data type: **string**
     - Access: **Read and write**
 
 10. Add a **KnownFor** property to the **Actor** model class by using the following information:
+
     - Scope: **public**
     - Property name: **KnownFor**
     - Data type: **string**
     - Access: **Read and write**
 
 11. Add an **OscarWinner** property to the **Actor** model class by using the following information:
+ 
     - Scope: **public**
     - Property name: **OscarWinner**
     - Data type: **bool**
     - Access: **Read and write**
 
 12. Add an **ImageName** property to the **Actor** model class by using the following information:
+ 
     - Scope: **public**
     - Property name: **ImageName**
     - Data type: **string**
@@ -119,7 +130,7 @@ The main tasks for this exercise are as follows:
 14. Set **public** scope to the new interface.
 
 15. Add the **ActorsList** property to the **IData** interface by using the following information:
-
+ 
     - Type: **List&lt;Actor&gt;**
     - Name: **ActorsList**
     - Access: **Read and write**
@@ -136,21 +147,25 @@ The main tasks for this exercise are as follows:
     - Parameter: an Nullable integer named **Id**
 
 18. Add the **Data.cs** existing file to the **Model** folder from the following location:
+ 
      - **Allfiles/Mod01/Labfiles/ActorsRazorPages**
 
 19. Add the **images** existing files to the **images** folder inside **wwwroot** folder from the following location:
+  
     -  **Allfiles/Mod01/Labfiles/ActorsRazorPages/Images**     
 
 20. Inside  the **Pages** folder Add a new folder using the following information:
+  
     - Folder name: **Actors**
 
 21. Add a new Razor Page using the following information:
+
     - Folder: **Pages/Actors**
     - Name: **Index**
     - Use a layout page: **checked**
   
 22.  In the **Index.cshtml.cs** class, create a new private object using the following information:
-
+ 
      - Scope: **private**
      - Class: **IData**
      - Name: **_data**
@@ -166,16 +181,19 @@ The main tasks for this exercise are as follows:
 24. In  the  **Index.cshtml.cs** class  inside **OnGet** method  initiate **Actors** property  with **ActorsInitializeData** method from the IData interface.
 
 25.  Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
+ 
      - **Allfiles/Mod01/Labfiles/ActorsRazorPages/Pages**
 
 26. Add the **Details.cs** and **Details.cshtml** existing files to the **Pages/Actors** folder from the following location:
+
       - **Allfiles/Mod01/Labfiles/ActorsRazorPages/Pages**   
-    >**Note:**  That the namespace project name identical to your project name in both files. 
+
+>**Note:**  That the namespace project name identical to your project name in both files. 
 
 27.  In the **Startup.cs**  class add **IData** to the services container as Singleton.
 
 28. Add a link to the **_Layout.cshtml** page by using the following information:
-
+ 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-page=&quot;/Actors/Index&quot;**
     - Content: **Actors**
@@ -191,6 +209,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
 >
+
 ### 	Exercise 2: Exploring a Web API Application
 
 #### Scenario
@@ -223,6 +242,7 @@ The main tasks for this exercise are as follows:
 #### Task 3: Add simple functionality.
 
 1. Add a new folder to the application at the root level by using the following information:
+
    - Folder name: **Models**
  
 2. Add a new model class to the **Models** folder by using the following information:
@@ -237,13 +257,14 @@ The main tasks for this exercise are as follows:
    - Access: **Read and write**
 
 4.   Add a **CakeType** property to the **CakeStore** model class by using the following information:
+ 
      - Scope: **public**
      - Property name: **CakeType**
      - Data type: **string**
      - Access: **Read and write**
 
 5. Add a **Quantity** property to the **CakeStore** model class by using the following information:
-
+ 
    - Scope: **public**
    - Property name: **Quantity**
    - Data type: **integer**
@@ -254,13 +275,13 @@ The main tasks for this exercise are as follows:
 7. Set **public** scope to the new interface.
 
 8. Add the **CakesList** property to the **IData** interface by using the following information:
-
+ 
    - Type: **List&lt;CakeStore&gt;**
    - Name: **CakesList**
    - Access: **Read and write**
 
 9. Add the **CakesInitializeData** method to the **IData** interface by using the following information:
-
+ 
    - Return type: **List&lt;CakeStore&gt;**
    - Name: **CakesInitializeData**
 
@@ -271,15 +292,16 @@ The main tasks for this exercise are as follows:
     - Parameter: an Nullable integer named **Id**
 
 11. Add the **Data.cs** existing file to the **Model** folder from the following location:
+ 
      - **Allfiles/Mod01/Labfiles/CakeStoreApi**
 
 12. Create a new controller for handling **CakeStore** objects by using the following information:
-
+ 
     - Controller name: **CakeStoreApiController**
     - Template: **API Controller - Empty**
  
 13. In the **CakeStoreApiController** class, create a new private object by using the following information:
-
+ 
     - Scope: **private**
     - Class: **IData**
     - Name: **_data**
@@ -287,15 +309,17 @@ The main tasks for this exercise are as follows:
     Instantiate the new object by calling the **IData**  in the constructor.
  
 14. Add a method for the **GetAll** action by using the following information:
+ 
      - Scope: **public**
      - Return Type : **IEnumerable&lt;CakeStore&gt;**
      - View name: **GetAll**
      - Model:  **_data.CakesInitializeData();**
 
-    >**Note**: The **_data** parameter is the private object you just Instantiate.
+>**Note**: The **_data** parameter is the private object you just Instantiate.
 >
 
 15. Add to **GetAll** action **HttpGet**  attribute with the following information : 
+
      - template : **"/api/CakeStore"**
  
 16. Add a method for the **GetById** action by using the following information:
@@ -390,34 +414,39 @@ The main tasks for this exercise are as follows:
    - Class name: **Animal**
 
 7. Add a primary key property to the **Animal** model class by using the following information:
+  
    - Scope: **public**
    - Property name: **Id**
    - Data type: **integer**
    - Access: **Read and write**
   
 8. Add a **Name** property to the **Animal** model class by using the following information:
+  
      - Scope: **public**
      - Property name: **Name**
      - Data type: **string**
      - Access: **Read and write**
 
 9.  Add an **ImageName** property to the **Animal** model class by using the following information:
+
      - Scope: **public**
      - Property name: **ImageName**
      - Data type: **string**
      - Access: **Read and write**
  
 10.  Add an **UniqueInformation** property to the **Animal** model class by using the following information:
-        - Scope: **public**
-        - Property name: **UniqueInformation**
-        - Data type: **string**
-        - Access: **Read and write**
+
+      - Scope: **public**
+      - Property name: **UniqueInformation**
+      - Data type: **string**
+      - Access: **Read and write**
    
 11. Add a **Category** property to the **Animal** model class by using the following information:
-        - Scope: **public**
-        - Property name: **Category**
-        - Data type: **string**
-        - Access: **Read and write**
+ 
+       - Scope: **public**
+       - Property name: **Category**
+       - Data type: **string**
+       - Access: **Read and write**
 
 12. Add a new interface called **IData** to the Models folder in the project.
 
@@ -425,22 +454,23 @@ The main tasks for this exercise are as follows:
 
 14. Add the **AnimalsList** property to the **IData** interface by using the following information:
 
-    - Type: **List&lt;Animal&gt;**
-    - Name: **AnimalsList**
-    - Access: **Read and write**
+     - Type: **List&lt;Animal&gt;**
+     - Name: **AnimalsList**
+     - Access: **Read and write**
 
 15. Add the **AnimalsInitializeData** method to the **IData** interface by using the following information:
 
-    - Return type: **List&lt;Animal&gt;**
-    - Name: **AnimalsInitializeData**
+     - Return type: **List&lt;Animal&gt;**
+     - Name: **AnimalsInitializeData**
 
 16. Add the **GetAnimalById** method to the **IData** interface by using the following information:
 
-    - Return type: **Animal**
-    - Parameter: an Nullable integer named **Id**
-    - Name: **GetAnimalById**
+     - Return type: **Animal**
+     - Parameter: an Nullable integer named **Id**
+     - Name: **GetAnimalById**
 
 17. Add the **Data.cs** existing file to the **Model** folder from the following location:
+ 
      - **Allfiles/Mod01/Labfiles/AnimalsMvc**
 
 
@@ -492,6 +522,7 @@ The main tasks for this exercise are as follows:
 28. If an animal with the right Id is found, pass it to a view called **Details**.
 
 29. Add the **images** existing files to the **images** folder from the following location:
+
     -  **Allfiles/Mod01/Labfiles/AnimalsMvc/Images**     
 
 30.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
@@ -500,10 +531,11 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)***
      - Use a layout page: **Yes**
  
-     >**Note**: Make sure that you have **IndexViewModel** model namespace in the view. 
+>**Note**: Make sure that you have **IndexViewModel** model namespace in the view. 
 >
 
 31. Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
+
      - **Allfiles/Mod01/Labfiles/AnimalsMvc/Views**
 
 32.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
@@ -512,10 +544,11 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)***
      - Use a layout page: **Yes**
  
-     >**Note**: Make sure that you have **Animal** model namespace in the view.
+>**Note**: Make sure that you have **Animal** model namespace in the view.
 
  
 33. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml**  file from the following location:
+ 
      - **Allfiles/Mod01/Labfiles/AnimalsMvc/Views**
 
 34. In the **Shared** folder  inside **_Layout.cshtml** page Add a link using the following information:
@@ -545,3 +578,8 @@ The main tasks for this exercise are as follows:
 
 >**Results**: At the end of this exercise, you will be able to build a simple Mvc application in Visual Studio.
 
+©2016 Microsoft Corporation. All rights reserved.
+
+The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+
+This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.

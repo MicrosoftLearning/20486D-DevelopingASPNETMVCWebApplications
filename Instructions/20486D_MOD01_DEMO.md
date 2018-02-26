@@ -32,7 +32,7 @@
             return View(_dbContext.Photos.ToList());
         }
 ```
->**Note:** This code block sends a list of Photos to the view 
+>**Note:** This code block sends a list of Photos to the view. 
 
 4. In the Solution Explorer pane, expand **Views**, and then expand **Home**.
 
@@ -114,14 +114,14 @@
 
   ```cs
         <div class="photo-display">
-        <img class="photo-display-img" src="@Url.Action("GetImage", "Home", new { PhotoId = item.PhotoID })" />
+             <img class="photo-display-img" src="@Url.Action("GetImage", "Home", new { PhotoId = item.PhotoID })" />
         </div>
 ```
 >**Note:**  The Razor view engine runs this code and renders the Photo Image.
 
 22. On the taskbar, click the **Microsoft Edge** icon.
 
-23. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]**
+23. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]**.
 
     >**Note:** All the photos are displayed in the browser window. 
 
@@ -131,4 +131,8 @@
 
 26. On the **Microsoft Visual Studio** dialog click **Yes** to stop debugging.
 
+©2016 Microsoft Corporation. All rights reserved.
 
+The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+
+This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.
