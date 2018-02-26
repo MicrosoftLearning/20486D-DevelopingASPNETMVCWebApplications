@@ -232,13 +232,13 @@
     using System.IO;
  ```
 
-10. Inside the empty class create a variable as below;
+10. Put the cursor between the opening and the closing brackets of the empty class, press enter, and create the following variable:
 
 ```cs
     string filename;
 ```
 
-11. Below it create a constructor:
+11. Press enter, and below it create a constructor:
 
 ```cs
     public Logger()
