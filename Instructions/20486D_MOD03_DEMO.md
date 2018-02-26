@@ -226,13 +226,7 @@
 
 8. In the **Add New Item** dialog window, inside the **Name** textbox type **Logger**, and press **Add**.
 
-9. Put the cursor at the end of the following code:
-
-```cs 
-    using System.Threading.Tasks;
-```
-
-Press enter, and write the code below:
+9. In the Logger.cs code window, place the mouse cursor at the end of the using System.Threading.Tasks namespace code, press Enter, and then type the following code:
 
 ```cs
     using System.IO;
