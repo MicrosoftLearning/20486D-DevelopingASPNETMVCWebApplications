@@ -6,7 +6,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this) course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
 
 #### Demonstration Steps
@@ -38,13 +38,15 @@
 
 10. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/UrlTest1, and press **Enter**.
 
+    >**Note** : The result returns **Hello World!** from the app.Run.
+
 11. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/UrlTest2, and press **Enter**. 
+
+    >**Note** : The result returns **Hello World!** from the app.Run.
 
 12. In the **Microsoft Edge** window, click **Close**.
 
 13. On the **Debug** Menu, click **Stop Debugging**.
-
-    >**Note** : Notice that no matter what is the url under the **localhost:[port]** domain, the result stays **Hello World!**.
 
 14. Put the cursor at the end of the line above the app.Run, press enter, and Insert the following code:
 
@@ -61,13 +63,15 @@
 
 16. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/UrlTest1, and press enter.
 
+     >**Note** : The result is to **Custom MiddleWare, Path = [URL Path]**, and the app.Run is ignored.
+
 17. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/UrlTest2 , and press enter. 
+
+     >**Note** : The result is to **Custom MiddleWare, Path = [URL Path]**, and the app.Run is ignored.
 
 18. In the **Microsoft Edge** window, click **Close**.
 
 19. On the **Debug** Menu, click **Stop Debugging**.
-
-     >**Note** : Notice that no matter what url under the **localhost:[port]** domain, the result is replaced to **Custom MiddleWare, Path = [URL Path]**, and the app.Run is ignored.
 
 20. Put the cursor at the end of the following code you just typed:
 
@@ -83,14 +87,14 @@
 
 22. On the **DEBUG** menu of the **ConfigureMiddlewaresExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-23. In the **Microsoft Edge** window, click **Close**.
-
-24. On the **Debug** Menu, click **Stop Debugging**.
-
      >**Note** : Now, the result is always: 
      **Custom MiddleWare, Path = [URL Path]**
      **"Hello World!"**
      Because the app.Run is now executed after the app.Use
+
+23. In the **Microsoft Edge** window, click **Close**.
+
+24. On the **Debug** Menu, click **Stop Debugging**.
 
 25. Select the following code:
 
@@ -108,11 +112,11 @@
 
 28. On the **DEBUG** menu of the **ConfigureMiddlewaresExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
+     >**Note** : Now, the app.Use result is gone, and only the app.Run works !
+
 29. In the **Microsoft Edge** window, click **Close**.
 
 30. On the **Debug** Menu, click **Stop Debugging**.
-
-     >**Note** : Now, the app.Use result is gone, and only the app.Run works !
 
 31. Select the following code:
 
@@ -134,7 +138,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this) course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
 #### Demonstration Steps
 
@@ -160,11 +164,15 @@
 
 11. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/HtmlFile.html, and press enter.
 
+     >**Note:** Only the app.Run is executed returns Hello World !
+
 12. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/ImageFile.jpg, and press enter. 
+
+     >**Note:** Only the app.Run is executed returns Hello World !
 
 13. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/NonExistingPath.jpg, and press enter. 
 
-     >**Note:** the app.Run is executed as always, and returns Hello World !
+     >**Note:** Only the app.Run is executed returns Hello World !
 
 14. In the **Microsoft Edge** window, click **Close**.
 
@@ -188,11 +196,15 @@
 
 20. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/HtmlFile.html, and press enter.
 
+     >**Note:** The html file is shown
+
 21. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/ImageFile.jpg, and press enter. 
+
+     >**Note:** The image file is shown
 
 22. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/NonExistingPath.jpg, and press enter. 
 
-     >**Note:** Now the existing files are shown, and the nonexisting path leads to app.Run
+     >**Note:** The nonexisting path leads exentualy to app.Run
 
 23. In the **Microsoft Edge** window, click **Close**.
 
@@ -205,7 +217,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this) course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
 
 #### Demonstration Steps
@@ -302,7 +314,7 @@
 
 24. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-     >**Note:** In the above example we use the log class, that we did **not** create an instance of it. The instance was generated by the asp.net core framework which gave us the instance from the **Configure** method parameter.
+     >**Note:** In the above example we use the log class, that we did **not** create an instance of it. The instance was generated using dependency injection by the asp.net core framework which gave us the instance from the **Configure** method parameter.
 
 25. In the **Microsoft Edge** window, click **Close**.
 
