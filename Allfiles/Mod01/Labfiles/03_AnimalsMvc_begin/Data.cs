@@ -11,29 +11,29 @@ namespace AnimlasMvc.Models
         //Initialize actors list
         public List<Animal> AnimalsInitializeData()
         {
-            AnimalsList = new List<Animal>()
+             AnimalsList = new List<Animal>()
             {
                 new Animal(){
                     Id = 1,
                     Name = "Lion",
                     Category = "Mammal",
-                    UniqueInformation = "white lions do exist, in Timbavati, South Africa. There is a recessive gene in white lions that gives them their unusual color.",
-                    ImageName = "LionPic.jpg"},
+                    UniqueInformation = "white lions exist in South Africa.",
+                    ImageName = "lion.jpg"},
                 new Animal(){Id = 2,
                     Name = "Horse",
                     Category = "Mammal",
-                    UniqueInformation = "A 2010 study revealed some very surprising results about horse intelligence, especially memory. Not only does our equine friend understand our words far better than we have previously anticipated, its memory is at least as good as that of an elephant.",
-                    ImageName = "HorsePic.jpg"},
+                    UniqueInformation = "Acording to previous Studies horses can  understand  words.",
+                    ImageName = "horse.jpg"},
                 new Animal(){Id = 3,
                     Name = "Swan",
                     Category = "Bird",
-                    UniqueInformation = "Swans can fly as fast as 60 miles per hour.",
-                    ImageName = "SwanPic.jpg"},
+                    UniqueInformation = "Swans can fly approximately 60 miles per hour.",
+                    ImageName = "swan.jpg"},
                 new Animal(){Id = 4,
                     Name = "Octopus",
                     Category = "Fish",
-                    UniqueInformation = "Studies have shown that octopuses learn easily, including learning by observation of another octopus.",
-                    ImageName = "OctopusPic.jpg"}
+                    UniqueInformation = "Acording to previous Studies octopus learn easily by observation of another octopus.",
+                    ImageName = "octopus.jpg"}
             };
 
             return AnimalsList;

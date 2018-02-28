@@ -148,11 +148,11 @@ The main tasks for this exercise are as follows:
 
 18. Add the **Data.cs** existing file to the **Model** folder from the following location:
  
-     - **Allfiles/Mod01/Labfiles/ActorsRazorPages**
+     - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin**
 
 19. Add the **images** existing files to the **images** folder inside **wwwroot** folder from the following location:
   
-    -  **Allfiles/Mod01/Labfiles/ActorsRazorPages/Images**     
+    -  **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin/Images**     
 
 20. Inside  the **Pages** folder Add a new folder using the following information:
   
@@ -182,11 +182,11 @@ The main tasks for this exercise are as follows:
 
 25.  Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
  
-     - **Allfiles/Mod01/Labfiles/ActorsRazorPages/Pages**
+     - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin/Pages**
 
 26. Add the **Details.cs** and **Details.cshtml** existing files to the **Pages/Actors** folder from the following location:
 
-      - **Allfiles/Mod01/Labfiles/ActorsRazorPages/Pages**   
+      - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin/Pages**   
 
 >**Note:**  That the namespace project name identical to your project name in both files. 
 
@@ -293,7 +293,7 @@ The main tasks for this exercise are as follows:
 
 11. Add the **Data.cs** existing file to the **Model** folder from the following location:
  
-     - **Allfiles/Mod01/Labfiles/CakeStoreApi**
+     - **Allfiles/Mod01/Labfiles/02_CakeStoreApi_begin**
 
 12. Create a new controller for handling **CakeStore** objects by using the following information:
  
@@ -365,7 +365,7 @@ The main tasks for this exercise are as follows:
 
 3. Add simple functionality.
 
-#### Task 1: Creating a MVC application
+#### Task 1: Creating an MVC application
 1. Start Visual Studio 2017 and create a new Mvc project with the following name **AnimalsMvc** by using the **Web Application (Model-View-Controller)** C# template.
 
 2. Run the new MVC application in Microsoft Edge and review the **Contact** page.
@@ -471,7 +471,7 @@ The main tasks for this exercise are as follows:
 
 17. Add the **Data.cs** existing file to the **Model** folder from the following location:
  
-     - **Allfiles/Mod01/Labfiles/AnimalsMvc**
+     - **Allfiles/Mod01/Labfiles/03_AnimalsMvc_begin**
 
 
 18. Add a new model class to the **Models** folder by using the following information:
@@ -523,7 +523,7 @@ The main tasks for this exercise are as follows:
 
 29. Add the **images** existing files to the **images** folder from the following location:
 
-    -  **Allfiles/Mod01/Labfiles/AnimalsMvc/Images**     
+    -  **Allfiles/Mod01/Labfiles/03_AnimalsMvc_begin/Images**     
 
 30.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
 
@@ -536,7 +536,7 @@ The main tasks for this exercise are as follows:
 
 31. Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
 
-     - **Allfiles/Mod01/Labfiles/AnimalsMvc/Views**
+     - **Allfiles/Mod01/Labfiles/03_AnimalsMvc_begin/Views**
 
 32.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
 
@@ -549,7 +549,7 @@ The main tasks for this exercise are as follows:
  
 33. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml**  file from the following location:
  
-     - **Allfiles/Mod01/Labfiles/AnimalsMvc/Views**
+     - **Allfiles/Mod01/Labfiles/03_AnimalsMvc_begin/Views**
 
 34. In the **Shared** folder  inside **_Layout.cshtml** page Add a link using the following information:
 

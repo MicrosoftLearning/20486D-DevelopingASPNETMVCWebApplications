@@ -13,8 +13,8 @@ namespace ActorsRazorPages.Models
         {
             ActorsList = new List<Actor>()
             {
-                new Actor(){Id = 1,FirstName="Angelina",LastName="Jolie" ,KnownFor="Lara Croft: Tomb Raider",OscarWinner=true,ImageName="angelinajolie.jpg"},
-                new Actor(){Id = 2,FirstName ="Leonardo",LastName="Dicaprio" ,KnownFor="Titanic",OscarWinner=true,ImageName="LeonardoDiCaprio.jpg"}
+                new Actor(){Id = 1,FirstName="Kelly",LastName="Bailey" ,KnownFor="Kelly the great",OscarWinner=true,ImageName="actor.jpg"},
+                new Actor(){Id = 2,FirstName ="Pauline ",LastName="Tapia" ,KnownFor="woman in white",OscarWinner=true,ImageName="actress.jpg"}
             };
 
             return ActorsList;

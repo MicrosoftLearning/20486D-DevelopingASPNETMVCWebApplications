@@ -18,22 +18,22 @@ namespace AnimlasMvc.Models
                     Name = "Lion",
                     Category = "Mammal",
                     UniqueInformation = "white lions exist in South Africa.",
-                    ImageName = "path.JPG"},
+                    ImageName = "lion.jpg"},
                 new Animal(){Id = 2,
                     Name = "Horse",
                     Category = "Mammal",
                     UniqueInformation = "Acording to previous Studies horses can  understand  words.",
-                    ImageName = "path.JPG"},
+                    ImageName = "horse.jpg"},
                 new Animal(){Id = 3,
                     Name = "Swan",
                     Category = "Bird",
                     UniqueInformation = "Swans can fly approximately 60 miles per hour.",
-                    ImageName = "path.JPG"},
+                    ImageName = "swan.jpg"},
                 new Animal(){Id = 4,
                     Name = "Octopus",
                     Category = "Fish",
                     UniqueInformation = "Acording to previous Studies octopus learn easily by observation of another octopus.",
-                    ImageName = "path.JPG"}
+                    ImageName = "octopus.jpg"}
             };
 
             return AnimalsList;

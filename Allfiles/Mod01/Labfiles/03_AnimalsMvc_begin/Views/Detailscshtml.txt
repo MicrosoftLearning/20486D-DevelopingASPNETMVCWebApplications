@@ -25,7 +25,7 @@
     <div style="padding:10px;">
         @if (Model.ImageName != "")
         {
-            <img src="~/images/@Model.ImageName" alt="Sample Image" width="300" />
+            <img src="~/images/@Model.ImageName" alt="Sample Image" height="300" />
         }
 
     </div>
