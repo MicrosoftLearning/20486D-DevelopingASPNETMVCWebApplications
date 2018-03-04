@@ -1,0 +1,46 @@
+﻿@model WorldJourney.Models.HistoricalSite
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link type="text/css" rel="stylesheet" href="~/css/HistoricalSiteStyles.css" />
+</head>
+<body>
+    <div>
+        <h1 class="sitetitle">@ViewBag.Title</h1>
+        <div style="padding:10px;">
+            @if (Model.ImageName != null)
+            {
+                <div>
+                    <img class="photo-display-img" src="@Url.Action("GetImage", "HistoricalSite", new { historicalSiteId = Model.ID })" />
+                </div>
+            }
+        </div>
+        <div class="details">
+            <span class="display-span">
+                <span>Country: </span>
+            </span>
+            <br />
+            <span class="display-field">
+                @Html.DisplayFor(model => model.Country)
+            </span>
+        </div>
+        <div class="details">
+            <span class="display-span">
+                <span>Interesting facts:</span>
+            </span>
+            <br />
+            <span class="display-field">
+                @Html.DisplayFor(model => model.InterestingFacts)
+            </span>
+        </div>
+        <br />
+        <div>
+            @Html.ActionLink("Back to Home page", "Index")
+        </div>
+    </div>
+</body>
+</html>
