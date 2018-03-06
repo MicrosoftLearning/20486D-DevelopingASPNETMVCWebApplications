@@ -130,7 +130,7 @@ a:hover {
 
 .photo-display-img {
     width: 325px;
-    max-height: 325px;
+    max-height: 250px;
     margin:15px 5px 15px 5px;
 }
 

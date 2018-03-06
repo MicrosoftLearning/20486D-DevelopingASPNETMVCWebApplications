@@ -3,12 +3,10 @@ using System.Linq;
 
 namespace AnimlasMvc.Models
 {
-    //This class is used during development to make sure that there is data to display
     public class Data : IData
     {
         public List<Animal> AnimalsList { get; set; }
 
-        //Initialize actors list
         public List<Animal> AnimalsInitializeData()
         {
              AnimalsList = new List<Animal>()
@@ -39,7 +37,6 @@ namespace AnimlasMvc.Models
             return AnimalsList;
         }
 
-        //Get animal by id
         public Animal GetAnimalById(int? id)
         {
             if (id == null)

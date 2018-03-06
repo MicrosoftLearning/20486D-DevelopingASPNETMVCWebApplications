@@ -4,7 +4,7 @@
 
 # Lesson 3: Introduction to ASP.NET Core MVC 
 
-### Demonstration: How to Explore an MVC Core Application
+### Demonstration: How to Explore an ASP.NET Core MVC Application
 
 #### Preparation Steps 
 
@@ -36,9 +36,9 @@
 
 4. In the Solution Explorer pane, expand **Views**, and then expand **Home**.
 
-5. In the Solution Explorer pane, under Photo, click **Index.cshtml**.
+5. In the Solution Explorer pane, expand **Photo**, click **Index.cshtml**.
 
-6. In the Index.cshtml code window, locate the following code.
+6. In the **Index.cshtml** code window, locate the following code.
 
   ```cs
         <div>
@@ -55,13 +55,13 @@
 
 7. On the toolbar of the **PhotoSharingSample – Microsoft Visual Studio** window, click **Microsoft Edge**.
 
-8. In the **http://localhost:[port]/** window, note that the default home page is displayed.
+>**Note:** The default home page is displays.
 
-9. On the taskbar, click the **Microsoft Visual Studio** icon.
+8. On the taskbar, click the **Microsoft Visual Studio** icon.
 
-10. In the **PhotoSharingSample – Microsoft Visual Studio** window, in the Solution Explorer pane, click **Startup.cs**.
+9. In the Solution Explorer pane of the **PhotoSharingSample – Microsoft Visual Studio** window,  click **Startup.cs**.
 
-11. In the Startup.cs code window, locate the following code.
+11. In the **Startup.cs** code window, locate the following code.
 
   ```cs
         app.UseMvcWithDefaultRoute();
@@ -77,25 +77,25 @@
 
 14. On the taskbar, click the **Microsoft Visual Studio** icon.
 
-15. In the **PhotoSharingSample – Microsoft Visual Studio** window, in the Solution Explorer pane, expand **Models**, and then click **Photo.cs**.
+15. n the Solution Explorer pane of the **PhotoSharingSample – Microsoft Visual Studio** window, expand **Models**, and then click **Photo.cs**.
 
-16. In the Photo.cs code window, locate the following code.
+16. In the **Photo.cs** code window, locate the following code.
  ```cs
         [Required]
         public string Title { get; set;}
 ```
    >**Note:** This code block represents the **Title** property for a photo stored in the application.
 
-17. In the Solution Explorer pane, under Controllers, click **HomeController.cs**.
+17. In the Solution Explorer pane, expend **Controllers**, click **HomeController.cs**.
 
-18. In the HomeController.cs code window, locate the following code.
+18. In the **HomeController.cs** code window, locate the following code.
 
   ```cs
         public class HomeController : Controller
 ```
    >**Note:** This code block represents that the **HomeController** class inherits the Controller  base  class which is in the namespace Microsoft.AspNetCore.Mvc.
 
-19. In the HomeController.cs code window, locate the following code.
+19. In the **HomeController.cs** code window, locate the following code.
 
   ```cs
         FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
@@ -110,7 +110,7 @@
 
 20. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-21. In the Index.cshtml code window, locate the following code.
+21. In the **Index.cshtml** code window, locate the following code.
 
   ```cs
         <div class="photo-display">

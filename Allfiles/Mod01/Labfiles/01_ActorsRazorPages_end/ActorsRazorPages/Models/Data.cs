@@ -3,12 +3,10 @@ using System.Linq;
 
 namespace ActorsRazorPages.Models
 {
-    //This class is used during development to make sure that ther is data to display
     public class Data : IData
     {
         public List<Actor> ActorsList { get; set; }
 
-        //Initialize actors list
         public List<Actor> ActorsInitializeData()
         {
             ActorsList = new List<Actor>()
@@ -20,7 +18,6 @@ namespace ActorsRazorPages.Models
             return ActorsList;
         }
 
-        //Get actor by id
         public Actor GetActorById(int? id)
         {
             if (id == null)

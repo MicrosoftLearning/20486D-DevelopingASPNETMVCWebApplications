@@ -3,12 +3,10 @@ using System.Linq;
 
 namespace CakeStoreApi.Models
 {
-    //This class is used during development to make sure that ther is data to display
     public class Data : IData
     {
         public List<CakeStore> CakesList { get; set; }
-
-        //Initialize Cakes list
+		
         public List<CakeStore> CakesInitializeData()
         {
             CakesList = new List<CakeStore>()
@@ -22,7 +20,6 @@ namespace CakeStoreApi.Models
             return CakesList;
         }
 
-        //Get Cake by id
         public CakeStore GetCakeById(int? id)
         {
             if (id == null)

@@ -12,7 +12,6 @@ namespace PhotoSharingSample
         public static void Main(string[] args)
         {
             var host = BuildWebHost(args);
-            //Create database context instance from the dependency injection container
             using (var newScope = host.Services.CreateScope())
             {
                 var scopeServices = newScope.ServiceProvider;

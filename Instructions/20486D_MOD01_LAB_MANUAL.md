@@ -26,7 +26,7 @@ Estimated Time: **90 minutes**
 
 #### Scenario
 
-In this exercise, you will begin by examining the Razor Pages application.
+In this exercise, you will create a simple Razor Pages application and explore its structure.
 
 The main tasks for this exercise are as follows:
 
@@ -214,7 +214,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will begin by examining the Web API  application.
+In this exercise, you will create a simple Web API application and explore its structure.
 
 The main tasks for this exercise are as follows:
 
@@ -355,7 +355,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will begin by examining the MVC   application.
+In this exercise, you will create a simple MVC application and explore its structure.
 
 The main tasks for this exercise are as follows:
 

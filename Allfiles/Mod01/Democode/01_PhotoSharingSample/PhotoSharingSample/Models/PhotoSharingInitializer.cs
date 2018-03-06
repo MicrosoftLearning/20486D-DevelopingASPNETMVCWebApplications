@@ -4,17 +4,13 @@ using System.Linq;
 
 namespace PhotoSharingSample.Models
 {
-    //This class is used during development to insert sample data into the database
     public static class PhotoSharingInitializer
     {
-        //This method puts sample data into the database
         public static void Seed(PhotoSharingDB dbContext)
         {
-            //creates a database if it does not exist
             dbContext.Database.EnsureCreated();
             if (!dbContext.Photos.Any())
             {
-                //Create some photos
                 var photos = new List<Photo>
                 {
                     new Photo {
@@ -74,7 +70,6 @@ namespace PhotoSharingSample.Models
                         CreatedDate = DateTime.Today
                     }
                 };
-                //save to database all the photos
                 photos.ForEach(p => dbContext.Photos.Add(p));
                 dbContext.SaveChanges();
             }

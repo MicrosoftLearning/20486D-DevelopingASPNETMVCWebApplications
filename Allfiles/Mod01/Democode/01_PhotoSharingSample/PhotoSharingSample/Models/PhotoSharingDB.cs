@@ -2,7 +2,6 @@
 
 namespace PhotoSharingSample.Models
 {
-    //This class is used to create a connection between entity classes and the database
     public class PhotoSharingDB : DbContext
     {
         public PhotoSharingDB(DbContextOptions<PhotoSharingDB> options)
@@ -10,7 +9,7 @@ namespace PhotoSharingSample.Models
         {
 
         }
-        //entity class
+
         public DbSet<Photo> Photos { get; set; }
     }
 }
