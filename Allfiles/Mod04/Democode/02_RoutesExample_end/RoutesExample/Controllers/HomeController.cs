@@ -10,13 +10,13 @@ namespace RoutesExample.Controllers
     {
         public IActionResult Index(int id = 50)
         {
-            return Content("This is the Home controller with default param: " + id);
+            return Content($"This is the Home controller with default param: {id}");
         }
 
         [Route("Hello/{name}/{lastName}")]
         public IActionResult Greeting(string name, string lastName)
         {
-            return Content(String.Format("Hello {0}-{1} from module 4 demo 2",name,lastName));
+            return Content($"Hello {name}-{lastName} from module 4 demo 2");
         }
     }
 }

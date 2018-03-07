@@ -1,0 +1,30 @@
+﻿@model WorldJourney.Models.City
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Page"]</title>
+    <link type="text/css" rel="stylesheet" href="~/css/CityStyles.css" />
+</head>
+<body>
+    <div>
+        <h1 class="sitetitle">@ViewBag.Title</h1>
+        <div style="padding:10px;">
+            @if (Model.ImageName != null)
+            {
+                <div>
+                    <img class="photo-display-img" src="@Url.Action("GetImage", "City", new { CityId = Model.ID })" />
+                </div>
+            }
+        </div>
+        <br />
+        <div>
+            <div class="button-left">
+                <button class="button">@Html.ActionLink("Go Back", "Index")</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

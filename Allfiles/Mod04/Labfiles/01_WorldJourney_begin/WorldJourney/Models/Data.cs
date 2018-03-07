@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WorldJourney.Models
 {
-    public class Data : IData
+    public class Data  : IData
     {
         public List<City> CityList { get; set; }
 
