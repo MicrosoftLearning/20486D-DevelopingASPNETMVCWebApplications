@@ -57,7 +57,7 @@
     });
 ```
 
->**Note** The context.Request.Path returns the subpath of the URL after the domain and port, as can be seen in the following pattern: [protocol]://[domain]:[port]/[path]
+>**Note** The value of context.Request.Path.Value is part of the url that contains the subfolders and files. For example: http://localhost:[port]/[**context.Request.Path.Value**]
 
 15. On the **DEBUG** menu of the **ConfigureMiddlewaresExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
@@ -87,10 +87,9 @@
 
 22. On the **DEBUG** menu of the **ConfigureMiddlewaresExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-     >**Note** : Now, the result is always: 
+     >**Note** : Now, the result is: 
      **Custom MiddleWare, Path = [URL Path]**
      **"Hello World!"**
-     Because the app.Run is now executed after the app.Use
 
 23. In the **Microsoft Edge** window, click **Close**.
 
@@ -204,7 +203,7 @@
 
 22. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/NonExistingPath.jpg, and press enter. 
 
-     >**Note:** The nonexisting path leads exentualy to app.Run
+     >**Note:** The nonexisting path leads eventualy to app.Run
 
 23. In the **Microsoft Edge** window, click **Close**.
 
@@ -263,7 +262,7 @@
 ```cs
     filename = $"{DateTime.Now.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
 ```
->**Note:** We save the creation time of the class as file name, so we can create a log file per instance of the **Logger** class.
+>**Note:** Each Logger class instance will create a new log file with its Logger class instance creation date as its name.
 
 13. Put the cursor at the end of the line of the closing bracket of the constructor, press enter twice, and type the following code:
 
@@ -273,7 +272,7 @@
         File.AppendAllText(filename, $"{DateTime.UtcNow}: {logData}");
     }
 ```
->**Note:** We want that each time we try to write a log from the same instance, it will turn to the same file.
+>**Note:** Calling Log from the same Logger instance will turn to the same file.
 
 15. On the Quick Access Toolbar, click **Save**.
 
@@ -314,7 +313,7 @@
 
 24. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-     >**Note:** In the above example we use the log class, that we did **not** create an instance of it. The instance was generated using dependency injection by the asp.net core framework which gave us the instance from the **Configure** method parameter.
+     >**Note:** The log class instance was created by **Dependency Injection**.
 
 25. In the **Microsoft Edge** window, click **Close**.
 
@@ -323,4 +322,4 @@
 27. In the **Solution Explorer**, double click the new created **XXXX-XX-XX--XX-XX-XX.log** file.
 
 28. See the **[DateTime]: Logged Line** text shown inside the file.
-     >**Note:** Notice that this line was written by the Log method that is inside the Logger class.
+     >**Note:** This log line was written by the Log method that is inside the Logger class.
