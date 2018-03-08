@@ -26,9 +26,9 @@ namespace PollBall
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseMvcWithDefaultRoute();
-
+            
             app.Use(async (context, next) =>
             {
                 if (context.Request.Query.ContainsKey("Favorite"))
@@ -36,21 +36,26 @@ namespace PollBall
                     string selectedValue = context.Request.Query["Favorite"];
                     SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue);
                     pollResults.AddVote(selectedGame);
-                    SortedDictionary<SelectedGame, int> gameVotes = pollResults.GetVoteResult();
-                    foreach (KeyValuePair<SelectedGame,int> currentVote in gameVotes)
+
+                    if (env.IsDevelopment())
                     {
-                        await context.Response.WriteAsync($"<p> Game name: {currentVote.Key}, Votes: {currentVote.Value} </p>");
+                        SortedDictionary<SelectedGame, int> gameVotes = pollResults.GetVoteResult();
+                        foreach (KeyValuePair<SelectedGame, int> currentVote in gameVotes)
+                        {
+                            await context.Response.WriteAsync($"<p> Game name: {currentVote.Key}, Votes: {currentVote.Value} </p>");
+                        }
                     }
+                    else await context.Response.WriteAsync($"Thank you for submitting !");
                 }
                 else await next();
             });
 
             app.UseStaticFiles();
-
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");
             });
+
         }
     }
 }
