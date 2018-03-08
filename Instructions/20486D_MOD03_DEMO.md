@@ -262,7 +262,7 @@
 ```cs
     filename = $"{DateTime.Now.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
 ```
->**Note:** Each Logger class instance will create a new log file with its Logger class instance creation date as its name.
+>**Note:** Each Logger class instance will create a new log file. The log file name will be the logger class instance creation date.
 
 13. Put the cursor at the end of the line of the closing bracket of the constructor, press enter twice, and type the following code:
 
