@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollBall", "PollBall\PollBall.csproj", "{0B80E157-D7EE-4B79-8E3B-073A53890FD7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollBall", "PollBall\PollBall.csproj", "{0BF9849F-1E05-4917-917B-1E689A9E72AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0B80E157-D7EE-4B79-8E3B-073A53890FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B80E157-D7EE-4B79-8E3B-073A53890FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B80E157-D7EE-4B79-8E3B-073A53890FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B80E157-D7EE-4B79-8E3B-073A53890FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF9849F-1E05-4917-917B-1E689A9E72AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF9849F-1E05-4917-917B-1E689A9E72AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF9849F-1E05-4917-917B-1E689A9E72AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF9849F-1E05-4917-917B-1E689A9E72AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8F5BBB4E-B8CB-4B3C-85C8-DC883F6461A0}
+		SolutionGuid = {BDA70B6E-7A09-4DEE-8384-6C2426B993D5}
 	EndGlobalSection
 EndGlobal

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PollBall
+namespace PollBall.Services
 {
     public class PollResultsService : IPollResultsService
     {
@@ -25,7 +25,6 @@ namespace PollBall
         public SortedDictionary<SelectedGame, int> GetVoteResult()
         {
             SortedDictionary<SelectedGame, int> sortedSelectionVotes = new SortedDictionary<SelectedGame, int>();
-
             foreach (KeyValuePair<SelectedGame, int> item in selectionVotes)
             {
                 sortedSelectionVotes.Add(item.Key, item.Value);

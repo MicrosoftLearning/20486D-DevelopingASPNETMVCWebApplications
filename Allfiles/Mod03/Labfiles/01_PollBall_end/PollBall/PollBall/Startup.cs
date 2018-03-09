@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using PollBall.Services;
 
 namespace PollBall
 {
@@ -26,12 +27,12 @@ namespace PollBall
             {
                 app.UseDeveloperExceptionPage();
             }
-            
             app.UseMvcWithDefaultRoute();
-            
+
+
             app.Use(async (context, next) =>
             {
-                if (context.Request.Query.ContainsKey("Favorite"))
+                if (context.Request.QueryString.HasValue)
                 {
                     string selectedValue = context.Request.Query["Favorite"];
                     SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue);
@@ -40,6 +41,7 @@ namespace PollBall
                     if (env.IsDevelopment())
                     {
                         SortedDictionary<SelectedGame, int> gameVotes = pollResults.GetVoteResult();
+
                         foreach (KeyValuePair<SelectedGame, int> currentVote in gameVotes)
                         {
                             await context.Response.WriteAsync($"<p> Game name: {currentVote.Key}, Votes: {currentVote.Value} </p>");
@@ -51,11 +53,11 @@ namespace PollBall
             });
 
             app.UseStaticFiles();
+
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");
             });
-
         }
     }
 }

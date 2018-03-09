@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PollBall.Services;
+using System.Text;
 
 namespace PollBall.Controllers
 {
@@ -28,5 +29,7 @@ namespace PollBall.Controllers
 
             return Content(results.ToString());
         }
+
+
     }
 }
