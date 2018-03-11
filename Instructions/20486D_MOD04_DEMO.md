@@ -28,23 +28,23 @@
   ```cs
        using ControllersExample.Models;
 ```
-6. In the **HomeController** code window, in the **Index** action code block, select the following code.
+6. In the **HomeController** class code block, In the **Index** action code block, select the following code.
 
   ```cs
-        return View();
+       return View();
 ```
 7. Replace the selected code with the following code.
 
   ```cs
-        ExampleModel model = new ExampleModel() { Sentence = "Welcome to module 4 demo 1" };
-        return View(model);
+       ExampleModel model = new ExampleModel() { Sentence = "Welcome to module 4 demo 1" };
+       return View(model);
 ```
-8. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code.
+8. Ensure that the cursor is at the end of the **Index** action code block, press Enter, and then type the following code.
 
   ```cs
-        public IActionResult ParamExample(string id)
-        {
-        }
+       public IActionResult ParamExample(string id)
+       {
+       }
 ```
 9. In the **ParamExample** action code block, type the following code.
 
@@ -79,6 +79,7 @@
 
   ```cs
         ViewBag.Message = "View Bag Example";
+        ViewBag.ServerTime = DateTime.Now;
         return View();
 ```
 
@@ -93,31 +94,38 @@
 
   ```cs
         ViewData["Message"] = "View Data Example";
+        ViewData["ServerTime"] = DateTime.Now;
         return View();
 ```
 16. On the **FILE** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Save Controllers\HomeController.cs**.
 
-17. On the **DEBUG** menu of the **ControllersExample - Microsoft Visual Studio** window, click Start Debugging.
-    >**Note:** The text **Welcome to module 4 demo 1** is the action result you added to the **Index** action.
+17. On the DEBUG menu of the **ControllersExample - Microsoft Visual Studio** window, click Start Debugging.
 
-18. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]/home/ParamExample/2**.
-    >**Note:** The text **My param is: 2** is the content result you added in the **ParamExample** action.
+18. In the **http://localhost:[port]** window, note the text **Welcome to module 4 demo 1** is the action result you added to the **Index** action.
 
-19. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]/home/RouteDataExample/4**.
-    >**Note:** The text **Action information: the action is in home controller, the action name is RouteDataExample and the id value is 4** is the content result you 
-    >          added in the **RouteDataExample** action.
+19. In the **http://localhost:[port]** window, write the following Url
+**http://localhost:[port]/home/ParamExample/2**, note the text **My param is: 2** is the content result you added in the **ParamExample** action.
 
-20. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]/home/ViewBagExample**.
-    >**Note:** The text **The Message is: View Bag Example** is the action result you added in the **ViewBagExample** action.
+20. In the **http://localhost:[port]/home/ParamExample/2** window, write the following Url
+**http://localhost:[port]/home/RouteDataExample/4**, note the text **Action information: the action is in home controller, the action name is RouteDataExample and the id value is 4** is the content result you added in the **RouteDataExample** action.
 
-21. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]/home/ViewDataExample**.
-    >**Note:** The text **The Message is: View Data Example** is the action result you added in the **ViewDataExample** action.
+21. In the **http://localhost:[port]/home/RouteDataExample/4** window, write the following Url
+**http://localhost:[port]/home/ViewBagExample**, note the text 
+**The Message is: View Bag Example 
+Server time is: 2/20/2018 1:31:05 PM** 
+is the action result you added in the **ViewBagExample** action.
 
-22. In the Microsoft Edge window, click Close.
+22. In the **http://localhost:[port]/home/ViewBagExample** window, write the following Url
+**http://localhost:[port]/home/ViewDataExample**, note the text 
+**The Message is: View Data Example 
+Server time is: 2/20/2018 1:33:51 PM** 
+is the action result you added in the **ViewDataExample** action.
 
-23. On the **DEBUG** menu of the **ControllersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+23. In the Microsoft Edge window, click Close.
 
-24. On the **FILE** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Exit**.
+24. On the **DEBUG** menu of the **ControllersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+
+25. On the **FILE** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Exit**.
 
 # Lesson 2: Configuring Routes
 
@@ -225,8 +233,8 @@
         app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                        name: "firstRoute",
-                        template: "{controller}/{action}/{num:int}");
+                    name: "firstRoute",
+                    template: "{controller}/{action}/{num:int}");
 
                 routes.MapRoute(
                     name: "secondRoute",
@@ -238,26 +246,27 @@
 
 19. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Save All**.
 
-20. On the **DEBUG** menu of the **RoutesExample - Microsoft Visual Studio** window, click Start Debugging.
-    >**Note:** The text **This is the Home controller with default param: 50** is the action result you added, in the **Index** action inside the **HomeController**.
+20. On the DEBUG menu of the **RoutesExample - Microsoft Visual Studio** window, click Start Debugging.
 
-21. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]/hello/Gerald/Tesch**.
-    >**Note:** The text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added, in the **Greeting** action inside the **HomeController**.
+21. In the **http://localhost:[port]** window, note the text **This is the Home controller with default param: 50** is the action result you added in the **Home** controller in the **Index** action.
 
-22. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]/Calculator/MultByTwo/4**.
-    >**Note:** The result **8** is the action result you added, in the **MultByTwo** action inside the **CalculatorController**.
+22. In the **http://localhost:[port]** window, write the following Url
+**http://localhost:[port]/hello/Gerald/Tesch**, note the text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added in the **Home** controller in the **Greeting** action.
 
-23. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]/Calc/Mult/5/5**.
-    >**Note:** The result **25** is the action result you added, in the **Mult** action inside the **CalculatorController**.
+23. In the **http://localhost:[port]/hello/Gerald/Tesch** window, write the following Url
+**http://localhost:[port]/Calculator/MultByTwo/4**, note the result **8** is the action result you added in the **Calculator** controller in the **MultByTwo** action.
 
-24. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]/Divide/100**.
-    >**Note:** The result **10** is the action result you added, in the **DivideByTen** action inside the **CalculatorController**.
+24. In the **http://localhost:[port]/Calculator/MultByTwo/4** window, write the following Url
+**http://localhost:[port]/Calc/Mult/5/5**, note the result **25** is the action result you added in the **Calculator** controller in the **Mult** action.
 
-25. In the Microsoft Edge window, click Close.
+25. In the **http://localhost:[port]/Calc/Mult/5/5** window, write the following Url
+**http://localhost:[port]/Divide/100**, note the result **10** is the action result you added in the **Calculator** controller in the **DivideByTen** action.
 
-26. On the **DEBUG** menu of the **RoutesExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+26. In the Microsoft Edge window, click Close.
 
-27. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Exit**.
+27. On the **DEBUG** menu of the **RoutesExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+
+28. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Exit**.
 
 # Lesson 3: Writing Action Filters
 
@@ -271,33 +280,31 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the **FiltersExample - Microsoft Visual Studio** window, right-click **Filters** folder, point to **Add**, and then click **class**.
-
-2. In the **Name** box of the **Add New Item – FiltersExample** dialog box, type **CustomActionFilter**, and then click **Add**.
-
+1. In the Solution Explorer pane of the **FiltersExample - Microsoft Visual Studio** window, right-click **Filters** folder, point to Add, and then click **class**
+2. In the **Name** box of the **Add New Item – FiltersExample** dialog box, type **CustomActionFilter**, and then click Add.
 3. In the **CustomActionFilter** class code window, locate the following code.
 
   ```cs
-        using System.Threading.Tasks;
+       using System.Threading.Tasks;
 ```
 4. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
 
   ```cs
-        using System.Diagnostics;
-        using Microsoft.AspNetCore.Mvc;
-        using Microsoft.AspNetCore.Mvc.Filters;
+      using System.Diagnostics;
+      using Microsoft.AspNetCore.Mvc;
+      using Microsoft.AspNetCore.Mvc.Filters;
 ```
 5. In the **CustomActionFilter** class code window, locate the following code.
 
   ```cs
-        public class CustomActionFilter
+       public class CustomActionFilter
 ```
 6.  Append the following code to the existing line of code.
 
   ```cs
-        : ActionFilterAttribute
+       : ActionFilterAttribute
 ```
-7. In the **CustomActionFilter** class code block, press Enter, and then type the following code.
+7. In the **CustomActionFilter** class code block, press Enter and then type the following code.
 
 
   ```cs
@@ -353,7 +360,7 @@
         ContentResult result = (ContentResult)filterContext.Result;
         Debug.WriteLine(string.Format(">>> {0} result is: {1},event fired: OnResultExecuted", actionName, result.Content));
 ```
-15. In the **FiltersExample – Microsoft Visual Studio** window, in the Solution Explorer pane, double-click **HomeController.cs**.
+15. In the **FiltersExample – Microsoft Visual Studio** window, In the Solution Explorer pane, double-click **HomeController.cs**.
 
 16. In the **HomeController** code window, locate the following code.
 
@@ -384,11 +391,11 @@
 ```
 20. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Save All**.
 
-21. On the **DEBUG** menu of the **FiltersExample - Microsoft Visual Studio** window, click Start Debugging.
+21. On the DEBUG menu of the **FiltersExample - Microsoft Visual Studio** window, click Start Debugging.
 
 22. On the taskbar, click the **FiltersExample - Microsoft Visual Studio** icon.
 
-23. In the **Output** pane of the **FiltersExample (Running) - Microsoft Visual Studio** window, click the **Output** tab.
+23. In the Output pane of the **FiltersExample (Running) - Microsoft Visual Studio** window, click the **Output** tab.
 
 24. On the **Output** tab, locate the following line of code.
 
@@ -405,9 +412,3 @@
 26. On the **DEBUG** menu of the **FiltersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
 27. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Exit**.
-
-©2016 Microsoft Corporation. All rights reserved.
-
-The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
-
-This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.

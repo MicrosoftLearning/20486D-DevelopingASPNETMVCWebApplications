@@ -26,7 +26,8 @@ namespace WorldJourney
             }
 
             app.UseStaticFiles();
-
+			
+			app.UseMvcWithDefaultRoute();
         }
     }
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using WorldJourney.Filters;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 using WorldJourney.Models;
+using WorldJourney.Filters;
 
 namespace WorldJourney.Controllers
 {
@@ -23,6 +23,7 @@ namespace WorldJourney.Controllers
         }
 
         [ServiceFilter(typeof(LogActionFilter))]
+        [Route("WorldJourney")]
         public IActionResult Index()
         {
             ViewData["Page"] = "Search city";
