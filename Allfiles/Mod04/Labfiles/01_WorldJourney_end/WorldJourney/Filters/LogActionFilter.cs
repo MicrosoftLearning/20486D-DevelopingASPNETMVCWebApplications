@@ -21,7 +21,7 @@ namespace WorldJourney.Filters
         {
             _environment = environment;
             contentRootPath = _environment.ContentRootPath;
-            logPath = contentRootPath + "\\Log\\";
+            logPath = contentRootPath + "\\LogFile\\";
             fileName = $"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt";
             fullPath = logPath + fileName;
         }

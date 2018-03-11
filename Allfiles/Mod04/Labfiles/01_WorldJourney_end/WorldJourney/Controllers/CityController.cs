@@ -30,7 +30,6 @@ namespace WorldJourney.Controllers
             return View();
         }
 
-        [ServiceFilter(typeof(LogActionFilter))]
         [Route("CityDetails/{id?}")]
         public IActionResult Details(int? id)
         {
