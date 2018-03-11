@@ -60,7 +60,8 @@ Estimated Time: **60 minutes**
 ####	Task 4: Run the application – content of html not displayed
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-2. Close the **Microsoft Edge** window.
+2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+3. Close the **Microsoft Edge** window.
 
 ####	Task 5: Enable working with static files = add use.StaticFiles()
 
@@ -69,8 +70,13 @@ Estimated Time: **60 minutes**
 ####	Task 6 : Run the application – content of html is displayed = optional - change middleware order or change url to nonexistent path and see result .
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-2. Link the **StyleSheet.css** file to the **PollQuestions.html** file.
-3. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
+2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+3. Close the **Microsoft Edge** window.
+4. Link the **StyleSheet.css** file to the **PollQuestions.html** file.
+5. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
+6. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+7. Select the basketball game, and press the **Submit Form** button.
+8. Close the **Microsoft Edge** window.
 
 ####	Task 7: Add html file outside of the wwwroot folder
 
@@ -95,21 +101,28 @@ Estimated Time: **60 minutes**
 ####	Task 2: Run the application .  = Enter the html, make a vote, print the vote result back to the browser without showing the html.
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-2. Close the **Microsoft Edge** window.
-3. Change the working environment from **Development** to **Other**.
-4. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-5. Close the **Microsoft Edge** window.
-6. Change the working environment from **Other** to **Development**.
+2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+3. Select the basketball game, and press the **Submit Form** button.
+4. Close the **Microsoft Edge** window.
+5. Change the working environment from **Development** to **Other**.
+6. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
+7. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+8. Select the basketball game, and press the **Submit Form** button.
+9. Close the **Microsoft Edge** window.
+10. Change the working environment from **Other** to **Development**. 
 
 ####	Task 3: Change the order of middlewares . = Puts the custom middleware before the StaticFiles and after , use next method part of the times.
 
 1. Move the **app.UseStaticFiles** before the custom middleware.
 2. Run the new ASP.Net Core application in **Microsoft Edge**.
-3. Select the basketball game, and press the **Submit Form** button.
-4. Move the **app.UseStaticFiles** between the custom middleware and the app.Run.
-5. Comment the **else** line of code that skips the custom middleware if the favorite parameter is not found.
-6. Run the new ASP.Net Core application in **Microsoft Edge**.
-7. Uncomment the commented code that skips the middleware.
+3. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+4. Select the basketball game, and press the **Submit Form** button.
+5. Close the **Microsoft Edge** window.
+6. Move the **app.UseStaticFiles** between the custom middleware and the app.Run.
+7. Comment the **else** line of code that skips the custom middleware if the favorite parameter is not found.
+8. Run the new ASP.Net Core application in **Microsoft Edge**.
+9. Uncomment the commented code that skips the middleware.
+10. Close the **Microsoft Edge** window. 
 
 
 ### Exercise 3: Using Dependency Injection
@@ -132,11 +145,14 @@ Estimated Time: **60 minutes**
     Tennis
 ```
 4. Create an interface inside the **Services** folder named **lResultsService**.
-5. Fill the interface with the following declarations:
-```cs
-    void AddVote(SelectedGame game);
-    SortedDictionary<SelectedGame, int> GetVoteResult();
-```
+5. Add a method declaration inside the interface using the following information:
+- Name: AddVote
+- Parameter name:  game
+- Parameter Type: SelectedGame
+- Return type: Void
+5. Add a method declaration inside the interface using the following information:
+- Name: GetVoteResult
+- Return type: SortedDictionary<SelectedGame, int>
 
 ####	Task 2: Define an implementation for the service. = Add vote increases a vode in the dictionary by the selected game. GetVoteResult Returns all the votes ordered from high to low.
 
@@ -161,11 +177,11 @@ Estimated Time: **60 minutes**
 ####	Task 4: Run the application. = Enter couple of time to the poll, and see the values of the polls increase from time to time.
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**. 
-2. In the **Microsoft Edge**, go to the **PollQuestions.html** file.
+2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
 3. Select the **Basketball** game, and press the **Submit Form** button.
-4. In the **Microsoft Edge**, go to the **PollQuestions.html** file.
+4. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
 5. Select the **Football** game, and press the **Submit Form** button.
-6. In the **Microsoft Edge**, go to the **PollQuestions.html** file.
+6. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
 7. Select the **Basketball** game, and press the **Submit Form** button.
 8. Close the **Microsoft Edge** window.
 
@@ -187,12 +203,12 @@ Estimated Time: **60 minutes**
 ####	Task 3: Run the application. = Check also changes to the middleware order of the mvc middleware .
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**.
-2. In the **Microsoft Edge**, go to the **PollQuestions.html** file.
+2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
 3. Select the **Basketball** game, and press the **Submit Form** button.
 4. Close the **Microsoft Edge** window.
 5. In the **Startup** class, move the app.Run block **above** the **app.UseMvcWithDefaultRoute();** middleware.
 6. Run the new ASP.Net Core application in **Microsoft Edge**.
-7. In the **Microsoft Edge**, go to the **PollQuestions.html** file.
+7. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
 8. Close the **Microsoft Edge** window.
 9. In the **Startup** class, move the app.Run block to be the last code in the **Configure** method.
 
@@ -205,11 +221,11 @@ Estimated Time: **60 minutes**
 
 1. Replace the current environment to production environment.
 2. Run the new ASP.Net Core application in **Microsoft Edge**.
-3. In the **Microsoft Edge**, go to the **PollQuestions.html** file.
+3. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
 4. Select the **Basketball** game, and press the **Submit Form** button.
-5. In the **Microsoft Edge**, go to the **PollQuestions.html** file.
+5. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
 6. Select the **Football** game, and press the **Submit Form** button.
-7. In the **Microsoft Edge**, go to the **PollQuestions.html** file.
+7. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
 8. Select the **Basketball** game, and press the **Submit Form** button.
 9. In the **Microsoft Edge**, go to the default site path and see the results.
 10. Close the **Microsoft Edge** window.
