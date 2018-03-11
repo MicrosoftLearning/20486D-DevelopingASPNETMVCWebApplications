@@ -109,9 +109,9 @@ The main tasks for this exercise are as follows:
 
 10. Add a method for the **GetImage** action by using the following information:
 
-   - Scope: **public**
-   - Return type: **IActionResult**
-   - Name: **GetImage**
+     - Scope: **public**
+     - Return type: **IActionResult**
+     - Name: **GetImage**
 
 11. If the **city** object is not null, return a **File** result constructed from the **city.ImageName** and **city.ImageMimeType** properties, else return the **HttpNotFound** value.
 
