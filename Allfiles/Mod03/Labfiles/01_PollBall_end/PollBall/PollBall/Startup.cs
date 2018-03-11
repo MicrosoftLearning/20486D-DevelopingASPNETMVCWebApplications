@@ -32,7 +32,7 @@ namespace PollBall
 
             app.Use(async (context, next) =>
             {
-                if (context.Request.QueryString.HasValue)
+                if (context.Request.Query.ContainsKey("Favorite"))
                 {
                     string selectedValue = context.Request.Query["Favorite"];
                     SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue);
