@@ -60,7 +60,8 @@ Estimated Time: **60 minutes**
 ####	Task 4: Run the application – content of html not displayed
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+2. Access the following relative URL:
+-   **/PollQuestions.html**
 3. Close the **Microsoft Edge** window.
 
 ####	Task 5: Enable working with static files = add use.StaticFiles()
@@ -70,11 +71,13 @@ Estimated Time: **60 minutes**
 ####	Task 6 : Run the application – content of html is displayed = optional - change middleware order or change url to nonexistent path and see result .
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+2. Access the following relative URL:
+-   **/PollQuestions.html**
 3. Close the **Microsoft Edge** window.
 4. Link the **StyleSheet.css** file to the **PollQuestions.html** file.
 5. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-6. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+6. Access the following relative URL:
+-   **/PollQuestions.html**
 7. Select the basketball game, and press the **Submit Form** button.
 8. Close the **Microsoft Edge** window.
 
@@ -84,8 +87,9 @@ Estimated Time: **60 minutes**
 
 ####	Task 8: Run the application – content of html outside wwwroot folder not displayed.
 
-1. Run the new ASP.Net Core application in **Microsoft Edge** using the following information:
--   Page Url: http://localhost:[port]/Test.html
+1. Run the new ASP.Net Core application in **Microsoft Edge**:
+2. Access the following relative URL:
+-   **/PollQuestions.html**
 
 ### Exercise 2: Creating Custom Middlewares
 
@@ -101,12 +105,14 @@ Estimated Time: **60 minutes**
 ####	Task 2: Run the application .  = Enter the html, make a vote, print the vote result back to the browser without showing the html.
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+2. Access the following relative URL:
+-   **/PollQuestions.html**
 3. Select the basketball game, and press the **Submit Form** button.
 4. Close the **Microsoft Edge** window.
 5. Change the working environment from **Development** to **Other**.
 6. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-7. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+7. Access the following relative URL:
+-   **/PollQuestions.html**
 8. Select the basketball game, and press the **Submit Form** button.
 9. Close the **Microsoft Edge** window.
 10. Change the working environment from **Other** to **Development**. 
@@ -115,7 +121,8 @@ Estimated Time: **60 minutes**
 
 1. Move the **app.UseStaticFiles** before the custom middleware.
 2. Run the new ASP.Net Core application in **Microsoft Edge**.
-3. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+3. Access the following relative URL:
+-   **/PollQuestions.html**
 4. Select the basketball game, and press the **Submit Form** button.
 5. Close the **Microsoft Edge** window.
 6. Move the **app.UseStaticFiles** between the custom middleware and the app.Run.
@@ -177,11 +184,14 @@ Estimated Time: **60 minutes**
 ####	Task 4: Run the application. = Enter couple of time to the poll, and see the values of the polls increase from time to time.
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**. 
-2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+2. Access the following relative URL:
+-   **/PollQuestions.html**
 3. Select the **Basketball** game, and press the **Submit Form** button.
-4. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+4. Access the following relative URL:
+-   **/PollQuestions.html**
 5. Select the **Football** game, and press the **Submit Form** button.
-6. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+6. Access the following relative URL:
+-   **/PollQuestions.html**
 7. Select the **Basketball** game, and press the **Submit Form** button.
 8. Close the **Microsoft Edge** window.
 
@@ -203,12 +213,14 @@ Estimated Time: **60 minutes**
 ####	Task 3: Run the application. = Check also changes to the middleware order of the mvc middleware .
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**.
-2. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+2. Access the following relative URL:
+-   **/PollQuestions.html**
 3. Select the **Basketball** game, and press the **Submit Form** button.
 4. Close the **Microsoft Edge** window.
 5. In the **Startup** class, move the app.Run block **above** the **app.UseMvcWithDefaultRoute();** middleware.
 6. Run the new ASP.Net Core application in **Microsoft Edge**.
-7. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+7. Access the following relative URL:
+-   **/PollQuestions.html**
 8. Close the **Microsoft Edge** window.
 9. In the **Startup** class, move the app.Run block to be the last code in the **Configure** method.
 
@@ -221,11 +233,14 @@ Estimated Time: **60 minutes**
 
 1. Replace the current environment to production environment.
 2. Run the new ASP.Net Core application in **Microsoft Edge**.
-3. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+3. Access the following relative URL:
+-   **/PollQuestions.html**
 4. Select the **Basketball** game, and press the **Submit Form** button.
-5. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+5. Access the following relative URL:
+-   **/PollQuestions.html**
 6. Select the **Football** game, and press the **Submit Form** button.
-7. In the **Microsoft Edge**, go to the **PollQuestions.html** page.
+7. Access the following relative URL:
+-   **/PollQuestions.html**
 8. Select the **Basketball** game, and press the **Submit Form** button.
 9. In the **Microsoft Edge**, go to the default site path and see the results.
 10. Close the **Microsoft Edge** window.
