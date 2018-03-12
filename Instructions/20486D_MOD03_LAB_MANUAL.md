@@ -31,7 +31,7 @@ Estimated Time: **60 minutes**
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template
 
-1. Start Visual Studio 2017 and create a new ASP.Net Core project by using the  **ASP.NET Core Web Application**  C# template.
+1. Start Visual Studio 2017 and create a new ASP.Net Core project by using the  **ASP.NET Core Web Application** C# template.
 
 ####	Task 2: Run the application
 
@@ -50,12 +50,12 @@ Estimated Time: **60 minutes**
 3. Create a new **HTML Page** by using the following information:
 -   File name: **PollQuestions.html**
 -   Parent Directory: **wwwroot**
-4. inside the **body** element, Create a **p** Element with a **H1** header element inside it. Fill them with guiding text for the user.
-5. Add a **form** Element to the body element with a class named **submitform**:
-6. Create a **div** element inside the **form** element with a class named **MainDiv**.
-7. Create another **div** element inside the **form** element with a class named **SubmitBatch**.
+4. inside the **BODY** element, Create a **P** Element with a **H1** header element inside it. Fill them with guiding text for the user.
+5. Add a **FORM** Element to the body element with a class named **submitform**:
+6. Create a **DIV** element inside the **FORM** element with a class named **MainDiv**.
+7. Create another **DIV** element inside the **FORM** element with a class named **SubmitBatch**.
 8. Inside the **SubmitBatch** div element create a button of type **submit**.
-9. Open the  **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt**  existing file and copy the content into the **div** with the **MainDiv** class you created.
+9. Open the  **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **DIV** with the **MainDiv** class you created.
 
 ####	Task 4: Run the application – content of html not displayed
 
@@ -90,6 +90,8 @@ Estimated Time: **60 minutes**
 1. Run the new ASP.Net Core application in **Microsoft Edge**:
 2. Access the following relative URL:
 -   **/PollQuestions.html**
+3. Close the **Microsoft Edge** window.
+
 
 ### Exercise 2: Creating Custom Middlewares
 
@@ -166,7 +168,7 @@ Estimated Time: **60 minutes**
 1. Create a class named **ResultsService** inside the **Services** folder, and inherit the class from the **lResultsService** interface.
 2. Create the **AddVote** and the **GetVoteResult** method by the interface decleration.
 3. Create a dictionary that contains the vote counts per game.
-4. Implement the **AddVote** method that increase the counts of the dictionary of a game selection that is received as parameter.
+4. Implement the **AddVote** method that increase the counts in the dictionary of a selected game, that is received as parameter to the **AddVote** method.
 5. Implement the **GetVoteResult** method that duplicates the dictionary data to a SortedDictionary.
 
 
@@ -226,7 +228,7 @@ Estimated Time: **60 minutes**
 
 ####	Task 4: Use Dependency Injection in a controller
 
-1. Inject the IPollResultsService into the HomeController's class constructor, and save it to a global variable.
+1. Inject the **IPollResultsService** into the **HomeController's** class constructor, and save it to a global variable.
 2. Inside the **index** action of the **HomeController** class, replace its content with the service results, and return the results with the **Content** method.
 
 ####	Task 5: Run the application. = See poll results
