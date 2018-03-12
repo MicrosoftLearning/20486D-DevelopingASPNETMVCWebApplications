@@ -29,7 +29,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-####	Task 1: Create a new project using the ASP.NET Core Empty project template. 
+####	Task 1: Create a new project using the ASP.NET Core Empty project template
 
 1. Start Visual Studio 2017 and create a new ASP.Net Core project by using the  **ASP.NET Core Web Application**  C# template.
 
@@ -39,7 +39,7 @@ Estimated Time: **60 minutes**
 2. Review the **Startup.cs** and find the source for the page output.
 3. Close the **Microsoft Edge** window.
 
-####	Task 3: Add html file to the wwwroot folder = Instruct the user to create html that have a form with a poll questions and drag images + connect to existing css file .
+####	Task 3: Add html file to the wwwroot folder
 
 1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the **wwwroot** project's folder.
 2. Create a new subfolder, and copy a css file to the new folder by using the following information:
@@ -64,11 +64,11 @@ Estimated Time: **60 minutes**
 -   **/PollQuestions.html**
 3. Close the **Microsoft Edge** window.
 
-####	Task 5: Enable working with static files = add use.StaticFiles()
+####	Task 5: Enable working with static files
 
 1. Add the UseStaticFiles inside the **Configure** method of the **startup** class.
 
-####	Task 6 : Run the application – content of html is displayed = optional - change middleware order or change url to nonexistent path and see result .
+####	Task 6 : Run the application – content of html is displayed
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
 2. Access the following relative URL:
@@ -85,7 +85,7 @@ Estimated Time: **60 minutes**
 
 1. Copy the **Test.html** file from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the project's main directory folder.
 
-####	Task 8: Run the application – content of html outside wwwroot folder not displayed.
+####	Task 8: Run the application – content of html outside wwwroot folder not displayed
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**:
 2. Access the following relative URL:
@@ -96,13 +96,13 @@ Estimated Time: **60 minutes**
 #### Scenario
 
 
-####	Task 1: Create a middleware. = Creates a custom middleware that reads the data from the parameters that results from the poll, and write response to the browser. Call next when there are no parameters . If relevant parameters exist show vote result.
+####	Task 1: Create a middleware
 
 1. Create a custom middleware that checks the value of the **Favorite** parameter. Skip the middleware if the Favorite parameter is missing.
 2.  If the the environment is the development environment, write to the page output the selected value from the form.
 3. If the environment is not the development environemnt thank the user for submitting.
 
-####	Task 2: Run the application .  = Enter the html, make a vote, print the vote result back to the browser without showing the html.
+####	Task 2: Run the application
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
 2. Access the following relative URL:
@@ -117,7 +117,7 @@ Estimated Time: **60 minutes**
 9. Close the **Microsoft Edge** window.
 10. Change the working environment from **Other** to **Development**. 
 
-####	Task 3: Change the order of middlewares . = Puts the custom middleware before the StaticFiles and after , use next method part of the times.
+####	Task 3: Change the order of middlewares
 
 1. Move the **app.UseStaticFiles** before the custom middleware.
 2. Run the new ASP.Net Core application in **Microsoft Edge**.
@@ -136,7 +136,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-####	Task 1:  Define an interface for a service. = selectionVotes dictionary , AddVote method, GetVoteResult method.
+####	Task 1:  Define an interface for a service
 
 1. Create a folder named **Services** in the main project's directory.
 2. In the folder create an enum named **SelectedGame**.
@@ -161,7 +161,7 @@ Estimated Time: **60 minutes**
 - Name: GetVoteResult
 - Return type: SortedDictionary<SelectedGame, int>
 
-####	Task 2: Define an implementation for the service. = Add vote increases a vode in the dictionary by the selected game. GetVoteResult Returns all the votes ordered from high to low.
+####	Task 2: Define an implementation for the service
 
 1. Create a class named **ResultsService** inside the **Services** folder, and inherit the class from the **lResultsService** interface.
 2. Create the **AddVote** and the **GetVoteResult** method by the interface decleration.
@@ -170,7 +170,7 @@ Estimated Time: **60 minutes**
 5. Implement the **GetVoteResult** method that duplicates the dictionary data to a SortedDictionary.
 
 
-####	Task 3: Use dependency injection. = add services.AddSingleton(), Configure method gets the injection and use it to add votes. Then print the vote results to the browser .
+####	Task 3: Use dependency injection
 
 1. In the **startup** class in the **ConfigureServices** add the poll results serivce using the following information:
 - Interace: **lResultsService**
@@ -181,7 +181,7 @@ Estimated Time: **60 minutes**
 4. Inside the custom middleware, only in the development environment, print to the page output the vote results from the service. 
 
 
-####	Task 4: Run the application. = Enter couple of time to the poll, and see the values of the polls increase from time to time.
+####	Task 4: Run the application
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**. 
 2. Access the following relative URL:
@@ -199,18 +199,18 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-####	Task 1: Enable working with MVC. = add use.MVCWithDefaultRoutes(), service.addMVC()
+####	Task 1: Enable working with MVC
 
 1. In the **ConfigureServices** method of the **Startup** class, add the **AddMVC** method.
 2.  In the **Configure** method of the **Startup** class, add the **UseMvcWithDefaultRoute** method above the custom middleware.
 
-####	Task 2: Add a controller. = Add the Home controller and Index action that returns a sample text.
+####	Task 2: Add a controller
 
 1. Create the **Controllers** folder under the project's main directory.
 2. Create a new class named **HomeController** and inherit from **Microsoft.AspNetCore.Mvc.Controller**.
 3. Create a method named **Index** with return type of **IActionResult** inside the class.
 
-####	Task 3: Run the application. = Check also changes to the middleware order of the mvc middleware .
+####	Task 3: Run the application
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**.
 2. Access the following relative URL:
@@ -224,7 +224,7 @@ Estimated Time: **60 minutes**
 8. Close the **Microsoft Edge** window.
 9. In the **Startup** class, move the app.Run block to be the last code in the **Configure** method.
 
-####	Task 4: Use Dependency Injection in a controller. = Add the service as parameter to the constructor. Use its data for the controller, to be able to return string with poll result. Can be enhanced to use a designed view if time permits .
+####	Task 4: Use Dependency Injection in a controller
 
 1. Inject the IPollResultsService into the HomeController's class constructor, and save it to a global variable.
 2. Inside the **index** action of the **HomeController** class, replace its content with the service results, and return the results with the **Content** method.
