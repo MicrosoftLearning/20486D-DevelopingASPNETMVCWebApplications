@@ -16,7 +16,6 @@ After completing  this lab, you will be able to:
 •	Create and use custom Middlewares, and use its context information.
 •	Create and use services with ASP .Net Core Build in Dependency Injection
 •	Using the MVC pattern with a basic controller
-•	To match the code for the right environment using IHostingEnvironment.
 
 
 #### Lab Setup
@@ -31,7 +30,7 @@ Estimated Time: **60 minutes**
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template
 
-1. Start Visual Studio 2017 and create a new ASP.Net Core project by using the  **ASP.NET Core Web Application** C# template.
+1. Start Visual Studio 2017 and create a new ASP.Net Core project by using the **ASP.NET Core Web Application** C# template.
 
 ####	Task 2: Run the application
 
@@ -43,19 +42,19 @@ Estimated Time: **60 minutes**
 
 1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the **wwwroot** project's folder.
 2. Create a new subfolder, and copy a css file to the new folder by using the following information:
--   Parent Directory: **wwwroot**
--   New folder name:  **style**
--   css file to be copied:  **StyleSheet.css**
--   Location of the image:  **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+-   Parent directory of the new directory: **wwwroot**
+-   New folder name: **style**
+-   css file to be copied: **StyleSheet.css**
+-   Source location of the css file: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
 3. Create a new **HTML Page** by using the following information:
 -   File name: **PollQuestions.html**
 -   Parent Directory: **wwwroot**
-4. inside the **BODY** element, Create a **P** Element with a **H1** header element inside it. Fill them with guiding text for the user.
-5. Add a **FORM** Element to the body element with a class named **submitform**:
-6. Create a **DIV** element inside the **FORM** element with a class named **MainDiv**.
-7. Create another **DIV** element inside the **FORM** element with a class named **SubmitBatch**.
+4. inside the **body** element, Create a **p** Element with a **h1** header element inside it. Fill them with guiding text for the user.
+5. Add a **from** Element to the body element with a class named **submitform**:
+6. Create a **div** element inside the **from** element with a class named **MainDiv**.
+7. Create another **div** element inside the **from** element with a class named **SubmitBatch**.
 8. Inside the **SubmitBatch** div element create a button of type **submit**.
-9. Open the  **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **DIV** with the **MainDiv** class you created.
+9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **div** with the **MainDiv** class you created.
 
 ####	Task 4: Run the application – content of html not displayed
 
@@ -100,9 +99,8 @@ Estimated Time: **60 minutes**
 
 ####	Task 1: Create a middleware
 
-1. Create a custom middleware that checks the value of the **Favorite** parameter. Skip the middleware if the Favorite parameter is missing.
-2.  If the the environment is the development environment, write to the page output the selected value from the form.
-3. If the environment is not the development environemnt thank the user for submitting.
+1. Create a custom middleware that checks the value of the **Favorite** parameter that is submitted from the form. Skip the middleware if the **Favorite** parameter is missing.
+2. Write to the page output the selected value from the form.
 
 ####	Task 2: Run the application
 
@@ -111,13 +109,6 @@ Estimated Time: **60 minutes**
 -   **/PollQuestions.html**
 3. Select the basketball game, and press the **Submit Form** button.
 4. Close the **Microsoft Edge** window.
-5. Change the working environment from **Development** to **Other**.
-6. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
-7. Access the following relative URL:
--   **/PollQuestions.html**
-8. Select the basketball game, and press the **Submit Form** button.
-9. Close the **Microsoft Edge** window.
-10. Change the working environment from **Other** to **Development**. 
 
 ####	Task 3: Change the order of middlewares
 
@@ -155,32 +146,32 @@ Estimated Time: **60 minutes**
 ```
 4. Create an interface inside the **Services** folder named **lResultsService**.
 5. Add a method declaration inside the interface using the following information:
-- Name: AddVote
-- Parameter name:  game
-- Parameter Type: SelectedGame
-- Return type: Void
+- Name: **AddVote**
+- Parameter name:  **game**
+- Parameter Type: **SelectedGame**
+- Return type: **Void**
 5. Add a method declaration inside the interface using the following information:
-- Name: GetVoteResult
-- Return type: SortedDictionary<SelectedGame, int>
+- Name: **GetVoteResult**
+- Return type: **SortedDictionary**<**SelectedGame**,**int**>
 
 ####	Task 2: Define an implementation for the service
 
 1. Create a class named **ResultsService** inside the **Services** folder, and inherit the class from the **lResultsService** interface.
-2. Create the **AddVote** and the **GetVoteResult** method by the interface decleration.
+2. Create the **AddVote** and the **GetVoteResult** methods, as defined by the interface decleration.
 3. Create a dictionary that contains the vote counts per game.
-4. Implement the **AddVote** method that increase the counts in the dictionary of a selected game, that is received as parameter to the **AddVote** method.
+4. Implement the **AddVote** method to increase the counts in the dictionary of a selected game by the **game** parameter value.
 5. Implement the **GetVoteResult** method that duplicates the dictionary data to a SortedDictionary.
 
 
 ####	Task 3: Use dependency injection
 
-1. In the **startup** class in the **ConfigureServices** add the poll results serivce using the following information:
+1. In the **startup** class, in the **ConfigureServices**, add the poll results serivce using the following information:
 - Interace: **lResultsService**
 - Implementation: **ResultsService**
 - Add method: **Singleton**
 2. Inject the **lResultsService** interface into the **Configure** method that is inside the **Startup** class using Dependency Injection.
 3. Inside the custom middleware, Add a vote to the service by the selected game that is received as parameter from the **Favorite** parameter. 
-4. Inside the custom middleware, only in the development environment, print to the page output the vote results from the service. 
+4. Inside the custom middleware, print to the page output the vote results from the service. 
 
 
 ####	Task 4: Run the application
@@ -204,7 +195,7 @@ Estimated Time: **60 minutes**
 ####	Task 1: Enable working with MVC
 
 1. In the **ConfigureServices** method of the **Startup** class, add the **AddMVC** method.
-2.  In the **Configure** method of the **Startup** class, add the **UseMvcWithDefaultRoute** method above the custom middleware.
+2. In the **Configure** method of the **Startup** class, add the **UseMvcWithDefaultRoute** method above the custom middleware.
 
 ####	Task 2: Add a controller
 
@@ -233,16 +224,16 @@ Estimated Time: **60 minutes**
 
 ####	Task 5: Run the application. = See poll results
 
-1. Replace the current environment to production environment.
-2. Run the new ASP.Net Core application in **Microsoft Edge**.
-3. Access the following relative URL:
+1. Run the new ASP.Net Core application in **Microsoft Edge**.
+2. Access the following relative URL:
 -   **/PollQuestions.html**
-4. Select the **Basketball** game, and press the **Submit Form** button.
-5. Access the following relative URL:
+3. Select the **Basketball** game, and press the **Submit Form** button.
+4. Access the following relative URL:
 -   **/PollQuestions.html**
-6. Select the **Football** game, and press the **Submit Form** button.
-7. Access the following relative URL:
+5. Select the **Football** game, and press the **Submit Form** button.
+6. Access the following relative URL:
 -   **/PollQuestions.html**
-8. Select the **Basketball** game, and press the **Submit Form** button.
-9. In the **Microsoft Edge**, go to the default site path and see the results.
-10. Close the **Microsoft Edge** window.
+7. Select the **Basketball** game, and press the **Submit Form** button.
+8. Access the following relative URL:
+-   **/**
+9. Close the **Microsoft Edge** window.

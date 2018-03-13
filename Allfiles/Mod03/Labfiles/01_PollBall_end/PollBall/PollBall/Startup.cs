@@ -38,16 +38,12 @@ namespace PollBall
                     SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue);
                     pollResults.AddVote(selectedGame);
 
-                    if (env.IsDevelopment())
-                    {
-                        SortedDictionary<SelectedGame, int> gameVotes = pollResults.GetVoteResult();
+                    SortedDictionary<SelectedGame, int> gameVotes = pollResults.GetVoteResult();
 
-                        foreach (KeyValuePair<SelectedGame, int> currentVote in gameVotes)
-                        {
-                            await context.Response.WriteAsync($"<p> Game name: {currentVote.Key}, Votes: {currentVote.Value} </p>");
-                        }
+                    foreach (KeyValuePair<SelectedGame, int> currentVote in gameVotes)
+                    {
+                        await context.Response.WriteAsync($"<p> Game name: {currentVote.Key}, Votes: {currentVote.Value} </p>");
                     }
-                    else await context.Response.WriteAsync($"Thank you for submitting !");
                 }
                 else await next();
             });
