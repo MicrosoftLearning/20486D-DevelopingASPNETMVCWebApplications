@@ -12,10 +12,10 @@ You are required as their employee to create the ball game survey site to be use
 #### Objectives
 
 After completing  this lab, you will be able to:
-•	Use ASP.Net Core Static Files including html files, image files and css files
+•	Use ASP.Net Core Static Files including html files, image files and css files.
 •	Create and use custom Middlewares, and use its context information.
-•	Create and use services with ASP .Net Core Build in Dependency Injection
-•	Using the MVC pattern with a basic controller
+•	Create and use services with ASP .Net Core Build in Dependency Injection.
+•	Using the MVC pattern with a basic controller.
 
 
 #### Lab Setup
@@ -27,6 +27,15 @@ Estimated Time: **60 minutes**
 ### Exercise 1: Working with Static Files
 
 #### Scenario
+
+To make the poll, the application needs a designed HTML file. The HTML file must move the post data to the server. To transfer the data to the server we will use a web form.
+
+The main tasks for this exercise are as follows: 
+•	Create a static html file with a web form.
+•	Connect it with images and a CSS file.
+•	Add the UseStaticFiles middleware.
+•	Show the html file inside the ASP.Net Core application.
+
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template
 
@@ -91,10 +100,19 @@ Estimated Time: **60 minutes**
 -   **/PollQuestions.html**
 3. Close the **Microsoft Edge** window.
 
+>**Result**: At the end of this exercise, you will be able to add and work with static files inside an asp.net core project.
 
 ### Exercise 2: Creating Custom Middlewares
 
 #### Scenario
+
+The server must receive the clients request and notify the company for the poll submission.
+
+The main tasks for this exercise are as follows: 
+•	Create a custom middleware 
+•	The custom middleware will display the results of the submitted form from the static HTML we created.
+•	If no form was submitted, the custom middleware must not prevent execution of other middlewares.
+
 
 
 ####	Task 1: Create a middleware
@@ -124,10 +142,21 @@ Estimated Time: **60 minutes**
 9. Uncomment the commented code that skips the middleware.
 10. Close the **Microsoft Edge** window. 
 
+>**Result**: At the end of this exercise, you will be able to create a custom middleware and receive webform calls to it.
 
 ### Exercise 3: Using Dependency Injection
 
 #### Scenario
+
+We need to aggregate the votes, and show them for next use. We use services to manage and keep the data.
+
+The main tasks for this exercise are as follows: 
+•	Create a service using the AddSingleton and Dependency Injection.
+•	The service must be able to save a poll data vote.
+•	The service must return the results of all the votes.
+•	The results must be printed to the browser using the custom middleware we created before. 
+
+
 
 ####	Task 1:  Define an interface for a service
 
@@ -188,9 +217,19 @@ Estimated Time: **60 minutes**
 7. Select the **Basketball** game, and press the **Submit Form** button.
 8. Close the **Microsoft Edge** window.
 
+>**Result**: At the end of this exercise, you will be able to create and use a service with **Dependency Injection**.
+
 ### Exercise 4: Injecting Services to Controller
 
 #### Scenario
+
+We need to create a page to show results without submitting a vote. In this time we use an MVC controller to show the results.
+
+The main tasks for this exercise are as follows: 
+•	Create a simple controller to see how it works.
+•	The controller will receive the service data using Dependency Injection.
+•	The controller will print the results to the web browser.
+
 
 ####	Task 1: Enable working with MVC
 
@@ -237,3 +276,5 @@ Estimated Time: **60 minutes**
 8. Access the following relative URL:
 -   **/**
 9. Close the **Microsoft Edge** window.
+
+>**Result**: At the end of this exercise, you will be able to create controller, and inject a service into it with **Dependency Injection**. 
