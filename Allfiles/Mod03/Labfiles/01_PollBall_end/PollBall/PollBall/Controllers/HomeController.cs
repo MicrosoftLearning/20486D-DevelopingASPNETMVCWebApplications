@@ -29,7 +29,5 @@ namespace PollBall.Controllers
 
             return Content(results.ToString());
         }
-
-
     }
 }
