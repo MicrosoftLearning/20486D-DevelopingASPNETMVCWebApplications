@@ -12,10 +12,10 @@ You are required as their employee to create the ball game survey site to be use
 #### Objectives
 
 After completing  this lab, you will be able to:
-•	Use ASP.Net Core Static Files including html files, image files and css files.
-•	Create and use custom Middlewares, and use its context information.
-•	Create and use services with ASP .Net Core Build in Dependency Injection.
-•	Using the MVC pattern with a basic controller.
+-	Use ASP.Net Core Static Files including html files, image files and css files.
+-	Create and use custom Middlewares, and use its context information.
+-	Create and use services with ASP .Net Core Build in Dependency Injection.
+-	Using the MVC pattern with a basic controller.
 
 
 #### Lab Setup
@@ -28,13 +28,14 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-To make the poll, the application needs a designed HTML file. The HTML file must move the post data to the server. To transfer the data to the server we will use a web form.
+
+To make the poll, the application needs a designed HTML file. The HTML file must post the poll results to the server. To transfer the results  to the server we will use a web form.
 
 The main tasks for this exercise are as follows: 
-•	Create a static html file with a web form.
-•	Connect it with images and a CSS file.
-•	Add the UseStaticFiles middleware.
-•	Show the html file inside the ASP.Net Core application.
+-	Create a static html file with a web form.
+-	Connect it with images and a CSS file.
+-	Add the UseStaticFiles middleware.
+-	Show the html file inside the ASP.Net Core application.
 
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template
@@ -59,11 +60,11 @@ The main tasks for this exercise are as follows:
      -   File name: **PollQuestions.html**
      -   Parent Directory: **wwwroot**
 4. inside the **body** element, Create a **p** Element with a **h1** header element inside it. Fill them with guiding text for the user.
-5. Add a **from** Element to the body element with a class named **submitform**:
-6. Create a **div** element inside the **from** element with a class named **MainDiv**.
-7. Create another **div** element inside the **from** element with a class named **SubmitBatch**.
-8. Inside the **SubmitBatch** div element create a button of type **submit**.
-9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **div** with the **MainDiv** class you created.
+5. Add a **from** Element to the body element with a class named **submit-form**:
+6. Create a **div** element inside the **from** element with a class named **main-div**.
+7. Create another **div** element inside the **from** element with a class named **submit-batch**.
+8. Inside the **submit-batch** div element create a button of type **submit**.
+9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **div** with the **main-div** class you created.
 
 ####	Task 4: Run the application – content of html not displayed
 
@@ -109,9 +110,9 @@ The main tasks for this exercise are as follows:
 The server must receive the clients request and notify the company for the poll submission.
 
 The main tasks for this exercise are as follows: 
-•	Create a custom middleware 
-•	The custom middleware will display the results of the submitted form from the static HTML we created.
-•	If no form was submitted, the custom middleware must not prevent execution of other middlewares.
+-	Create a custom middleware 
+-	The custom middleware will display the results of the submitted form from the static HTML we created.
+-	If no form was submitted, the custom middleware must not prevent execution of other middlewares.
 
 
 
@@ -151,10 +152,10 @@ The main tasks for this exercise are as follows:
 We need to aggregate the votes, and show them for next use. We use services to manage and keep the data.
 
 The main tasks for this exercise are as follows: 
-•	Create a service using the AddSingleton and Dependency Injection.
-•	The service must be able to save a poll data vote.
-•	The service must return the results of all the votes.
-•	The results must be printed to the browser using the custom middleware we created before. 
+-	Create a service using the AddSingleton and Dependency Injection.
+-	The service must be able to save a poll data vote.
+-	The service must return the results of all the votes.
+-	The results must be printed to the browser using the custom middleware we created before. 
 
 
 
@@ -226,9 +227,9 @@ The main tasks for this exercise are as follows:
 We need to create a page to show results without submitting a vote. In this time we use an MVC controller to show the results.
 
 The main tasks for this exercise are as follows: 
-•	Create a simple controller to see how it works.
-•	The controller will receive the service data using Dependency Injection.
-•	The controller will print the results to the web browser.
+-	Create a simple controller to see how it works.
+-	The controller will receive the service data using Dependency Injection.
+-	The controller will print the results to the web browser.
 
 
 ####	Task 1: Enable working with MVC
