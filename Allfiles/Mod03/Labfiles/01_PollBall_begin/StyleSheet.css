@@ -6,44 +6,44 @@
     text-align: center;
 }
 
-.submitform {
+.submit-form {
     margin-left: calc(50% - 300px);
     width: 800px;
 }
 
-.submitform .item {
+.submit-form .item {
     clear: left;
     padding: 5%;
     overflow: auto;
 }
 
-.submitform .item .imgitem {
+.submit-form .item .img-item {
     width: 25%;
     float: left;
 }
 
-.submitform .item img {
+.submit-form .item img {
     width: 100%;
 }
 
-.submitform .item .inputitem {
+.submit-form .item .input-item {
     float: left;
     height: inherit;
     margin-top: 7%;
     margin-left: 5%;
 }
 
-.submitform .MainBatch1 {
+.submit-form .main-batch1 {
     float: left;
     width: 50%;
 }
 
-.submitform .MainBatch2 {
+.submit-form .main-batch2 {
     float: right;
     width: 50%;
 }
 
-.submitform .SubmitBatch {
+.submit-form .submit-batch {
     clear: both;
     margin-right:175px;
 }
