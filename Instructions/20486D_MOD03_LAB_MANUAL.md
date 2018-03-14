@@ -199,12 +199,12 @@ The main tasks for this exercise are as follows:
 
 ####	Task 3: Use dependency injection
 
-1. In the **startup** class, in the **ConfigureServices**, add the poll results serivce using the following information:
-     - Interace: **lResultsService**
+1. In the **startup** class, in the **ConfigureServices**, add the poll results service using the following information:
+     - Interface: **lResultsService**
      - Implementation: **ResultsService**
      - Add method: **Singleton**
 2. Inject the **lResultsService** interface into the **Configure** method that is inside the **Startup** class using Dependency Injection.
-3. Inside the custom middleware, Add a vote to the service by the selected game that is received as parameter from the **Favorite** parameter. 
+3. Inside the custom middleware, Add a vote to the service by the selected game that is received from the **Favorite** parameter. 
 4. Inside the custom middleware, print to the page output the vote results from the service. 
 
 
@@ -250,16 +250,11 @@ The main tasks for this exercise are as follows:
 ####	Task 3: Run the application
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**.
-2. Access the following relative URL:
-     -   **/PollQuestions.html**
-3. Select the **Basketball** game, and press the **Submit Form** button.
-4. Close the **Microsoft Edge** window.
-5. In the **Startup** class, move the app.Run block **above** the **app.UseMvcWithDefaultRoute();** middleware.
-6. Run the new ASP.Net Core application in **Microsoft Edge**.
-7. Access the following relative URL:
-     -   **/PollQuestions.html**
-8. Close the **Microsoft Edge** window.
-9. In the **Startup** class, move the app.Run block to be the last code block in the **Configure** method.
+3. Close the **Microsoft Edge** window.
+4. In the **Startup** class, move the **app.Run** block **above** the **app.UseMvcWithDefaultRoute();** middleware.
+5. Run the new ASP.Net Core application in **Microsoft Edge**.
+6. Close the **Microsoft Edge** window.
+7. In the **Startup** class, move the **app.Run** block to be the last code block in the **Configure** method.
 
 ####	Task 4: Use Dependency Injection in a controller
 
