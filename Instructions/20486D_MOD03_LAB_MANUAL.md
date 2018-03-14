@@ -140,12 +140,10 @@ The main tasks for this exercise are as follows:
 6. Move the **app.UseStaticFiles** between the custom middleware and the app.Run.
 7. Comment the **next.Invoke();** line of code that skips the custom middleware if the favorite parameter is not found.
 8. Run the new ASP.Net Core application in **Microsoft Edge**.
-9. Run the new ASP.Net Core application in **Microsoft Edge**.
-10. Access the following relative URL:
+9. Access the following relative URL:
      -   **/PollQuestions.html**
-12. Close the **Microsoft Edge** window.
-13. Uncomment the commented code that skips the middleware.
-14. Close the **Microsoft Edge** window. 
+10. Close the **Microsoft Edge** window.
+11. Uncomment the commented code that skips the middleware.
 
 >**Result**: At the end of this exercise, you will be able to create a custom middleware and receive webform calls to it.
 
