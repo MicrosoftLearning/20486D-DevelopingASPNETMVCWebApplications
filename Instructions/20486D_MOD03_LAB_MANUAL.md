@@ -40,7 +40,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template
 
-1. Start Visual Studio 2017 and create a new ASP.Net Core project by using the **ASP.NET Core Web Application** C# template.
+1. Start Visual Studio 2017 and create a new ASP.Net Core project by using the **ASP.NET Core Web Application** inside the C# template.
 
 ####	Task 2: Run the application
 
@@ -50,7 +50,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 3: Add html file to the wwwroot folder
 
-1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the **wwwroot** project's folder.
+1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the  project's **wwwroot** folder.
 2. Create a new subfolder, and copy a css file to the new folder by using the following information:
      -   Parent directory of the new directory: **wwwroot**
      -   New folder name: **style**
@@ -59,10 +59,10 @@ The main tasks for this exercise are as follows:
 3. Create a new **HTML Page** by using the following information:
      -   File name: **PollQuestions.html**
      -   Parent Directory: **wwwroot**
-4. inside the **body** element, Create a **p** Element with a **h1** header element inside it. Fill them with guiding text for the user.
-5. Add a **from** Element to the body element with a class named **submit-form**:
-6. Create a **div** element inside the **from** element with a class named **main-div**.
-7. Create another **div** element inside the **from** element with a class named **submit-batch**.
+4. inside the **body** element, Create a **p** Element with a **h1** header element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and press **submit query**.
+5. Add a **form** Element to the body element with a class named **submit-form**:
+6. Create a **div** element inside the **form** element with a class named **main-div**.
+7. Create another **div** element inside the **form** element with a class named **submit-batch**.
 8. Inside the **submit-batch** div element create a button of type **submit**.
 9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **div** with the **main-div** class you created.
 
@@ -75,7 +75,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 5: Enable working with static files
 
-1. Add the UseStaticFiles inside the **Configure** method of the **startup** class.
+1. Add the UseStaticFiles method inside the **Configure** method of the **startup** class.
 
 ####	Task 6 : Run the application – content of html is displayed
 
@@ -138,10 +138,14 @@ The main tasks for this exercise are as follows:
 4. Select the basketball game, and press the **Submit Form** button.
 5. Close the **Microsoft Edge** window.
 6. Move the **app.UseStaticFiles** between the custom middleware and the app.Run.
-7. Comment the **else** line of code that skips the custom middleware if the favorite parameter is not found.
+7. Comment the **next.Invoke();** line of code that skips the custom middleware if the favorite parameter is not found.
 8. Run the new ASP.Net Core application in **Microsoft Edge**.
-9. Uncomment the commented code that skips the middleware.
-10. Close the **Microsoft Edge** window. 
+9. Run the new ASP.Net Core application in **Microsoft Edge**.
+10. Access the following relative URL:
+     -   **/PollQuestions.html**
+12. Close the **Microsoft Edge** window.
+13. Uncomment the commented code that skips the middleware.
+14. Close the **Microsoft Edge** window. 
 
 >**Result**: At the end of this exercise, you will be able to create a custom middleware and receive webform calls to it.
 
@@ -149,7 +153,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-We need to aggregate the votes, and show them for next use. We use services to manage and keep the data.
+We need to aggregate the votes, and show them for future use. We use services to manage and keep the data.
 
 The main tasks for this exercise are as follows: 
 -	Create a service using the AddSingleton and Dependency Injection.
@@ -188,9 +192,9 @@ The main tasks for this exercise are as follows:
 
 1. Create a class named **ResultsService** inside the **Services** folder, and inherit the class from the **lResultsService** interface.
 2. Create the **AddVote** and the **GetVoteResult** methods, as defined by the interface decleration.
-3. Create a dictionary that contains the vote counts per game.
+3. Create a dictionary that will contain the vote counts per game.
 4. Implement the **AddVote** method to increase the counts in the dictionary of a selected game by the **game** parameter value.
-5. Implement the **GetVoteResult** method that duplicates the dictionary data to a SortedDictionary.
+5. Implement the **GetVoteResult** method that duplicates the dictionary data to a SortedDictionary, and returns it.
 
 
 ####	Task 3: Use dependency injection
@@ -255,7 +259,7 @@ The main tasks for this exercise are as follows:
 7. Access the following relative URL:
      -   **/PollQuestions.html**
 8. Close the **Microsoft Edge** window.
-9. In the **Startup** class, move the app.Run block to be the last code in the **Configure** method.
+9. In the **Startup** class, move the app.Run block to be the last code block in the **Configure** method.
 
 ####	Task 4: Use Dependency Injection in a controller
 
