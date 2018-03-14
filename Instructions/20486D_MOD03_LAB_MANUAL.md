@@ -51,13 +51,13 @@ The main tasks for this exercise are as follows:
 
 1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the **wwwroot** project's folder.
 2. Create a new subfolder, and copy a css file to the new folder by using the following information:
--   Parent directory of the new directory: **wwwroot**
--   New folder name: **style**
--   css file to be copied: **StyleSheet.css**
--   Source location of the css file: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+     -   Parent directory of the new directory: **wwwroot**
+     -   New folder name: **style**
+     -   css file to be copied: **StyleSheet.css**
+     -   Source location of the css file: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
 3. Create a new **HTML Page** by using the following information:
--   File name: **PollQuestions.html**
--   Parent Directory: **wwwroot**
+     -   File name: **PollQuestions.html**
+     -   Parent Directory: **wwwroot**
 4. inside the **body** element, Create a **p** Element with a **h1** header element inside it. Fill them with guiding text for the user.
 5. Add a **from** Element to the body element with a class named **submitform**:
 6. Create a **div** element inside the **from** element with a class named **MainDiv**.
@@ -69,7 +69,7 @@ The main tasks for this exercise are as follows:
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
 2. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 3. Close the **Microsoft Edge** window.
 
 ####	Task 5: Enable working with static files
@@ -80,12 +80,12 @@ The main tasks for this exercise are as follows:
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
 2. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 3. Close the **Microsoft Edge** window.
 4. Link the **StyleSheet.css** file to the **PollQuestions.html** file.
 5. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
 6. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 7. Select the basketball game, and press the **Submit Form** button.
 8. Close the **Microsoft Edge** window.
 
@@ -97,7 +97,7 @@ The main tasks for this exercise are as follows:
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**:
 2. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 3. Close the **Microsoft Edge** window.
 
 >**Result**: At the end of this exercise, you will be able to add and work with static files inside an asp.net core project.
@@ -124,7 +124,7 @@ The main tasks for this exercise are as follows:
 
 1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
 2. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 3. Select the basketball game, and press the **Submit Form** button.
 4. Close the **Microsoft Edge** window.
 
@@ -133,7 +133,7 @@ The main tasks for this exercise are as follows:
 1. Move the **app.UseStaticFiles** before the custom middleware.
 2. Run the new ASP.Net Core application in **Microsoft Edge**.
 3. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 4. Select the basketball game, and press the **Submit Form** button.
 5. Close the **Microsoft Edge** window.
 6. Move the **app.UseStaticFiles** between the custom middleware and the app.Run.
@@ -175,13 +175,13 @@ The main tasks for this exercise are as follows:
 ```
 4. Create an interface inside the **Services** folder named **lResultsService**.
 5. Add a method declaration inside the interface using the following information:
-- Name: **AddVote**
-- Parameter name:  **game**
-- Parameter Type: **SelectedGame**
-- Return type: **Void**
+     - Name: **AddVote**
+     - Parameter name:  **game**
+     - Parameter Type: **SelectedGame**
+     - Return type: **Void**
 5. Add a method declaration inside the interface using the following information:
-- Name: **GetVoteResult**
-- Return type: **SortedDictionary**<**SelectedGame**,**int**>
+     - Name: **GetVoteResult**
+     - Return type: **SortedDictionary**<**SelectedGame**,**int**>
 
 ####	Task 2: Define an implementation for the service
 
@@ -195,9 +195,9 @@ The main tasks for this exercise are as follows:
 ####	Task 3: Use dependency injection
 
 1. In the **startup** class, in the **ConfigureServices**, add the poll results serivce using the following information:
-- Interace: **lResultsService**
-- Implementation: **ResultsService**
-- Add method: **Singleton**
+     - Interace: **lResultsService**
+     - Implementation: **ResultsService**
+     - Add method: **Singleton**
 2. Inject the **lResultsService** interface into the **Configure** method that is inside the **Startup** class using Dependency Injection.
 3. Inside the custom middleware, Add a vote to the service by the selected game that is received as parameter from the **Favorite** parameter. 
 4. Inside the custom middleware, print to the page output the vote results from the service. 
@@ -207,13 +207,13 @@ The main tasks for this exercise are as follows:
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**. 
 2. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 3. Select the **Basketball** game, and press the **Submit Form** button.
 4. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 5. Select the **Football** game, and press the **Submit Form** button.
 6. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 7. Select the **Basketball** game, and press the **Submit Form** button.
 8. Close the **Microsoft Edge** window.
 
@@ -246,13 +246,13 @@ The main tasks for this exercise are as follows:
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**.
 2. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 3. Select the **Basketball** game, and press the **Submit Form** button.
 4. Close the **Microsoft Edge** window.
 5. In the **Startup** class, move the app.Run block **above** the **app.UseMvcWithDefaultRoute();** middleware.
 6. Run the new ASP.Net Core application in **Microsoft Edge**.
 7. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 8. Close the **Microsoft Edge** window.
 9. In the **Startup** class, move the app.Run block to be the last code in the **Configure** method.
 
@@ -265,16 +265,16 @@ The main tasks for this exercise are as follows:
 
 1. Run the new ASP.Net Core application in **Microsoft Edge**.
 2. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 3. Select the **Basketball** game, and press the **Submit Form** button.
 4. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 5. Select the **Football** game, and press the **Submit Form** button.
 6. Access the following relative URL:
--   **/PollQuestions.html**
+     -   **/PollQuestions.html**
 7. Select the **Basketball** game, and press the **Submit Form** button.
 8. Access the following relative URL:
--   **/**
+     -   **/**
 9. Close the **Microsoft Edge** window.
 
 >**Result**: At the end of this exercise, you will be able to create controller, and inject a service into it with **Dependency Injection**. 
