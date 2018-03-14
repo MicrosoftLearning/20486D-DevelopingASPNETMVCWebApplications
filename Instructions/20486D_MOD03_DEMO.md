@@ -185,7 +185,7 @@
     app.Run(async (context) =>
 ```
 
-18. 3.  Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+18. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 
 ```cs
     app.UseStaticFiles();
@@ -306,7 +306,7 @@
     {
 ```
 
-23. 3.  Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+23. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 
 ```cs
     log.Log("Logged line");
