@@ -45,7 +45,7 @@ namespace PollBall
                         await context.Response.WriteAsync($"<p> Game name: {currentVote.Key}, Votes: {currentVote.Value} </p>");
                     }
                 }
-                else await next();
+                else await next.Invoke();
             });
 
             app.UseStaticFiles();
