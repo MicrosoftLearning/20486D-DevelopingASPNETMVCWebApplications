@@ -233,11 +233,15 @@
 
 6. In the result pane of the **New ASP.NET Core Web Application**  dialog box, click **Empty**, and then click **OK**.
 
-7. In the **Solution Explorer** pane, Right click on the **ConfigureServiceExample** project file, point to **Add**, and click **Class**.
+7. In the Solution Explorer pane of the **ConfigureServiceExample - Microsoft Visual Studio** window,right click on the **ConfigureServiceExample** project file, point to **Add**, and then click **New Folder**.
 
-8. In the **Add New Item** dialog window, inside the **Name** textbox type **Logger**, and press **Add**.
+2.	In the Solution Explorer pane, name the newly created folder as **Services**, and then press Enter.
 
-9. In the Logger.cs code window, place the mouse cursor at the end of the **System.Threading.Tasks** namespace code, press Enter, and then type the following code:
+8. In the **Solution Explorer** pane, right click on the **Services** folder, point to **Add**, and click **Class**.
+
+9. In the **Add New Item** dialog window, inside the **Name** textbox type **Logger**, and press **Add**.
+
+10. In the Logger.cs code window, place the mouse cursor at the end of the **System.Threading.Tasks** namespace code, press Enter, and then type the following code:
 
 ```cs
     using System.IO;
@@ -249,7 +253,7 @@
     string filename;
 ```
 
-11. Press enter, and below it create a constructor:
+11. Place the mouse cursor at the end of the code, press Enter twice, and then type the following code:
 
 ```cs
     public Logger()
@@ -257,14 +261,14 @@
     }
 ```
 
-12. Put the cursor at the end on the line of the constructor opening bracket, press enter, and write the following code:
+12. Place the mouse cursor within the constructor code block you just created, and then type the following code.
 
 ```cs
     filename = $"{DateTime.Now.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
 ```
 >**Note:** Each Logger class instance will create a new log file. The log file name will be the logger class instance creation date.
 
-13. Put the cursor at the end of the line of the closing bracket of the constructor, press enter twice, and type the following code:
+13. Place the cursor at the end of the line of the closing bracket of the constructor, press enter twice, and type the following code:
 
 ```cs
     public void Log(string logData)
