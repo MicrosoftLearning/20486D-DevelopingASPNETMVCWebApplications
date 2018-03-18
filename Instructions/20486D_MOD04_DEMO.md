@@ -65,7 +65,7 @@
         string controller = (string)RouteData.Values["Controller"];
         string action = (string)RouteData.Values["action"];
         string id = (string)RouteData.Values["id"];
-        return Content(string.Format("Action information: the action is in {0} controller, the action name is {1} and the id value is {2}",controller,action,id));
+        return Content($"Action information: the action is in {controller} controller, the action name is {action} and the id value is {id}");
 ```
 
 12. Place the mouse cursor at the end of the **RouteDataExample** action code block, press Enter twice, and then type the following code.
@@ -79,7 +79,6 @@
 
   ```cs
         ViewBag.Message = "View Bag Example";
-        ViewBag.ServerTime = DateTime.Now;
         return View();
 ```
 
@@ -94,7 +93,6 @@
 
   ```cs
         ViewData["Message"] = "View Data Example";
-        ViewData["ServerTime"] = DateTime.Now;
         return View();
 ```
 16. On the **FILE** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Save Controllers\HomeController.cs**.
@@ -111,14 +109,12 @@
 
 21. In the **http://localhost:[port]/home/RouteDataExample/4** window, write the following Url
 **http://localhost:[port]/home/ViewBagExample**, note the text 
-**The Message is: View Bag Example 
-Server time is: 2/20/2018 1:31:05 PM** 
+**The Message is: View Bag Example** 
 is the action result you added in the **ViewBagExample** action.
 
 22. In the **http://localhost:[port]/home/ViewBagExample** window, write the following Url
 **http://localhost:[port]/home/ViewDataExample**, note the text 
-**The Message is: View Data Example 
-Server time is: 2/20/2018 1:33:51 PM** 
+**The Message is: View Data Example** 
 is the action result you added in the **ViewDataExample** action.
 
 23. In the Microsoft Edge window, click Close.
@@ -172,7 +168,7 @@ is the action result you added in the **ViewDataExample** action.
 7. In the **Greeting** action code block, type the following code.
 
   ```cs
-        return Content(String.Format("Hello {0}-{1} from module 4 demo 2",name,lastName));
+        return Content($"Hello {name}-{lastName} from module 4 demo 2");
 ```
 8. In the Solution Explorer pane of the **RoutesExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
 
@@ -358,7 +354,7 @@ is the action result you added in the **ViewDataExample** action.
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
         ContentResult result = (ContentResult)filterContext.Result;
-        Debug.WriteLine(string.Format(">>> {0} result is: {1},event fired: OnResultExecuted", actionName, result.Content));
+        Debug.WriteLine(">>> " + actionName + " result is: "+ result.Content + " ,event fired: OnResultExecuted");
 ```
 15. In the **FiltersExample – Microsoft Visual Studio** window, In the Solution Explorer pane, double-click **HomeController.cs**.
 

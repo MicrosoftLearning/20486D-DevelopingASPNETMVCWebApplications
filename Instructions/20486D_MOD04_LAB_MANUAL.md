@@ -396,7 +396,7 @@ The main tasks for this exercise are as follows:
 
 4. In the **CityController** class, and add the **LogActionFilter** action filter to the **Index** action method.
 
-#### Task 6: Run the application and verify the new filter work.
+#### Task 6: Run the application and verify the new filter works.
 
 1. Save all the changes.
 
