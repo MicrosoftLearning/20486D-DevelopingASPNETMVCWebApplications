@@ -212,10 +212,10 @@ The main tasks for this exercise are as follows:
 2. Access the following relative URL:
      -   **/PollQuestions.html**
 3. Select the **Basketball** game, and press the **Submit Form** button.
-4. Access the following relative URL:
+4. Select the **Basketball** game, access the following relative URL:
      -   **/PollQuestions.html**
 5. Select the **Football** game, and press the **Submit Form** button.
-6. Access the following relative URL:
+6. Select the **Basketball** game, access the following relative URL:
      -   **/PollQuestions.html**
 7. Select the **Basketball** game, and press the **Submit Form** button.
 8. Close the **Microsoft Edge** window.
@@ -265,10 +265,10 @@ The main tasks for this exercise are as follows:
 2. Access the following relative URL:
      -   **/PollQuestions.html**
 3. Select the **Basketball** game, and press the **Submit Form** button.
-4. Access the following relative URL:
+4. Select the **Basketball** game, access the following relative URL:
      -   **/PollQuestions.html**
 5. Select the **Football** game, and press the **Submit Form** button.
-6. Access the following relative URL:
+6. Select the **Basketball** game, access the following relative URL:
      -   **/PollQuestions.html**
 7. Select the **Basketball** game, and press the **Submit Form** button.
 8. Access the following relative URL:
