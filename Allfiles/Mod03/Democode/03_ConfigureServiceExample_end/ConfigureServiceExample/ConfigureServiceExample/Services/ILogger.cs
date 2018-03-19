@@ -1,4 +1,4 @@
-﻿namespace ConfigureServiceExample
+﻿namespace ConfigureServiceExample.Services
 {
     public interface ILogger
     {

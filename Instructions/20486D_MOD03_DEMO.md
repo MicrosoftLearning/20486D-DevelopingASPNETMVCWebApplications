@@ -185,7 +185,7 @@
     app.Run(async (context) =>
 ```
 
-18. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+18. Immediately before the located code, press Enter, then type the following code, and press enter again.
 
 ```cs
     app.UseStaticFiles();
@@ -235,41 +235,37 @@
 
 7. In the Solution Explorer pane of the **ConfigureServiceExample - Microsoft Visual Studio** window,right click on the **ConfigureServiceExample** project file, point to **Add**, and then click **New Folder**.
 
-2.	In the Solution Explorer pane, name the newly created folder as **Services**, and then press Enter.
+8.	In the Solution Explorer pane, name the newly created folder as **Services**, and then press Enter.
 
-8. In the **Solution Explorer** pane, right click on the **Services** folder, point to **Add**, and click **Class**.
+9. In the **Solution Explorer** pane, right click on the **Services** folder, point to **Add**, and click **Class**.
 
-9. In the **Add New Item** dialog window, inside the **Name** textbox type **Logger**, and press **Add**.
+10. In the **Add New Item** dialog window, inside the **Name** textbox type **Logger**, and press **Add**.
 
-10. In the Logger.cs code window, place the mouse cursor at the end of the **System.Threading.Tasks** namespace code, press Enter, and then type the following code:
-
+11. In the Logger.cs code window, place the mouse cursor at the end of the **System.Threading.Tasks** namespace code, press Enter, and then type the following code:
 ```cs
     using System.IO;
+    using ConfigureServiceExample.Services; 
  ```
 
-10. Put the cursor between the opening and the closing brackets of the empty class, press enter, and create the following variable:
-
+12. Put the cursor between the opening and the closing brackets of the empty class, press enter, and create the following variable:
 ```cs
     string filename;
 ```
 
-11. Place the mouse cursor at the end of the code, press Enter twice, and then type the following code:
-
+13. Place the mouse cursor at the end of the code, press Enter twice, and then type the following code:
 ```cs
     public Logger()
     {
     }
 ```
 
-12. Place the mouse cursor within the constructor code block you just created, and then type the following code.
-
+14. Place the mouse cursor within the constructor code block you just created, and then type the following code.
 ```cs
     filename = $"{DateTime.Now.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
 ```
 >**Note:** Each Logger class instance will create a new log file. The log file name will be the logger class instance creation date.
 
-13. Place the cursor at the end of the line of the closing bracket of the constructor, press enter twice, and type the following code:
-
+15. Place the cursor at the end of the line of the closing bracket of the constructor, press enter twice, and type the following code:
 ```cs
     public void Log(string logData)
     {
@@ -278,53 +274,54 @@
 ```
 >**Note:** Calling Log from the same Logger instance will turn to the same file.
 
-15. On the Quick Access Toolbar, click **Save**.
+16. On the Quick Access Toolbar, click **Save**.
 
-16. Right click on the **Logger** class name,  click **Quick Actions and Refactorings...**, and then click **Extract Interface**.
+17. In the **Logger.cs** code window, locate the following code.
+```cs
+public class Logger
+```
 
-17. In the **Extract Interface** dialog window leave all the default values as they are, and press **OK**.
+18. Right click on the **Logger** class name,  click **Quick Actions and Refactorings...**, and then click **Extract Interface**.
 
-18. In the **Solution Explorer** pane, double click the **Startup.cs** file.
+19. In the **Extract Interface** dialog window leave all the default values as they are, and press **OK**.
 
-19. Place the mouse cursor within the  **ConfigureServices**  method block, press enter, and then type the following code.
+20. In the **Solution Explorer** pane, double click the **Startup.cs** file.
+
+21. Place the mouse cursor within the  **ConfigureServices**  method block, press enter, and then type the following code.
 ```cs
     services.AddSingleton<ILogger, Logger>();
 ```
 
-20. In the **Startup.cs** code window, locate the following code, and then select the code.
-
+22. In the **Startup.cs** code window, locate the following code, and then select the code.
 ```cs
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ```
 
- 21. Replace the code you selected with the following code
-
+23. Replace the code you selected with the following code
 ```cs
     public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILogger log)
 ```
 
-22. Inside the **Configure** method, locate the following code:
-
+24. Inside the **Configure** method, locate the following code:
 ```cs
     app.Run(async (context) =>
     {
 ```
 
-23. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
-
+25. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
     log.Log("Logged line");
 ```
 
-24. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-
+26. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
      >**Note:** The log class instance was created by **Dependency Injection**.
 
-25. In the **Microsoft Edge** window, click **Close**.
+27. In the **Microsoft Edge** window, click **Close**.
 
-26. On the **Debug** Menu, click **Stop Debugging**.
+28. On the **Debug** Menu, click **Stop Debugging**.
 
-27. In the **Solution Explorer** pane, double click the new created **XXXX-XX-XX--XX-XX-XX.log** file.
+29. In the **Solution Explorer** pane, double click the new created **XXXX-XX-XX--XX-XX-XX.log** file.
 
-28. See the **[DateTime]: Logged Line** text shown inside the file.
+30. See the **[DateTime]: Logged Line** text shown inside the file.
      >**Note:** This log line was written by the Log method that is inside the Logger class.
+     
