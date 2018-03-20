@@ -61,7 +61,7 @@
 10. Replace the selected code with the following code.
 
   ```cs
-       Restaurant restaurant = new Restaurant() {Id = 2, Name = "My Kitchen 2",Address = "New Brunswick, 2657 Webster Street", Speciality = "Hamburgers", Open = true, Review = 4 }; 
+       Restaurant restaurant = new Restaurant() { Id = 2, Name = "My Kitchen 2", Address = "New Brunswick, 4175 Echo Lane Street", Speciality = "Sushi", Open = true, Review = 3 };
        return View(restaurant);
 ```
 
@@ -126,11 +126,11 @@
 
 22. On the **DEBUG** menu of the **"BindViewsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
 
-       >**Note:** The first way to display the Restaurant properties in the browser window.
+       >**Note:** The browser window displays the first way to render the Restaurant properties.
 
 23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Home/Display** and then press Enter.
 
-      >**Note:** The second way to display the Restaurant properties in the browser window.
+      >**Note:** The browser window displays the second way to render the Restaurant properties.
 
 24. In the Windows Microsoft Edge window, click **Close**.
 

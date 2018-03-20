@@ -18,7 +18,7 @@ namespace BindViewsExample.Controllers
         [Route("Home/Display")]
         public IActionResult AnotherWayToDisplay()
         {
-            Restaurant restaurant = new Restaurant() { Id = 2, Name = "My Kitchen 2", Address = "New Brunswick, 2657 Webster Street", Speciality = "Hamburgers", Open = true, Review = 4 };
+            Restaurant restaurant = new Restaurant() { Id = 2, Name = "My Kitchen 2", Address = "New Brunswick, 4175 Echo Lane Street", Speciality = "Sushi", Open = true, Review = 3 };
             return View(restaurant);
         }
     }
