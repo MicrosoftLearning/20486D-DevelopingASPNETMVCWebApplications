@@ -4,11 +4,11 @@
 
 #### Scenario
 
-You have been asked to add controllers to a new application.
+You  have been asked to add controllers to a new application.
 The controller should include actions that return a view, and that respond when users display a single photo. You should also add an action that returns the photo as a .jpg file to show on a webpage.
-Additionally, you asked to configure routes in a variety of ways.
+Additionally, you are asked to configure routes in a variety of ways.
 
-The members of your development team are new to ASP.NET Core MVC and they find the use of controller actions confusing. Therefore, you need to help them by adding a component that displays action parameters in an external file whenever an action runs. You will add an action filter to achieve this.
+The members of your development team are new to ASP.NET Core MVC and they find the use of controller actions confusing. Therefore, you need to help them by adding a component that displays action parameters in an external file whenever an action runs. You will add an action filter to achieve this
 
 #### Objectives
 
@@ -30,7 +30,7 @@ Estimated Time: **60 minutes**
 In this exercise, you will create the MVC controller that handles user operations. You will also add the following actions:
 
 - _Index_. This action displays the Index view.
-- _Display_.This action takes an ID to find a single City object. It passes the City to the Display view.
+- _Display_.This action takes an ID to find a single City object. It passes the City object to the Display view.
 - _GetImage_. This action returns the photo image from the service as a JPG file.
 
 The main tasks for this exercise are as follows:
@@ -192,7 +192,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-An important design priority for the application is that the visitors should be able to easily and logically locate Cities. To implement these priorities, you have been asked to configure routes using the routing table that enable the entry of user-friendly URLs to access cities.
+An important design priority for the application is that the visitors should be able to easily and logically locate cities. To implement these priorities, you have been asked to configure routes using the routing table that enables the entry of user-friendly URLs to access cities.
 
 The main tasks for this exercise are as follows:
 
@@ -260,7 +260,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In addition to the configure routes using the routing table, you have been asked to configure routes using attributes as well, to enable the entry of user-friendly URLs.
+In addition to configuring routes using the routing table, you have been asked to configure routes using attributes as well, to enable the entry of user-friendly URLs.
 
 The main tasks for this exercise are as follows:
 
