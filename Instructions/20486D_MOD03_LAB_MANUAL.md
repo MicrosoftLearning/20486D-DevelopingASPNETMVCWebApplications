@@ -1,8 +1,8 @@
-﻿# Module 3: Configure Middlewares and Services in ASP.NET Core
+﻿# Module 3: Configure Middleware and Services in ASP.NET Core
 
   
 
-# Lab: Configure Middlewares and Services in ASP.NET Core
+# Lab: Configure Middleware and Services in ASP.NET Core
 
 #### Scenario
 The adventure works company wants to develop a web site relating to a ball game.
@@ -12,10 +12,10 @@ You are required as their employee to create the ball game survey site to be use
 #### Objectives
 
 After completing  this lab, you will be able to:
--	Use ASP.Net Core Static Files including html files, image files and css files.
--	Create and use custom Middlewares, and use its context information.
--	Create and use services with ASP .Net Core Build in Dependency Injection.
--	Using the MVC pattern with a basic controller.
+-	Use ASP.NET Core Static Files including html files, image files and css files.
+-	Create and use custom Middleware, and use its context information.
+-	Create and use services with ASP.NET Core Build in Dependency Injection.
+-	Using an MVC controller.
 
 
 #### Lab Setup
@@ -35,17 +35,18 @@ The main tasks for this exercise are as follows:
 -	Create a static html file with a web form.
 -	Connect it with images and a CSS file.
 -	Add the UseStaticFiles middleware.
--	Show the html file inside the ASP.Net Core application.
+-	Show the html file inside the ASP.NET Core application.
 
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template
 
-1. Start Visual Studio 2017 and create a new ASP.Net Core project by using the **ASP.NET Core Web Application** inside the C# template.
+1. Start Visual Studio 2017 and create a new ASP.NET Core project by using the **ASP.NET Core Web Application** inside the C# template.
 
 ####	Task 2: Run the application
 
-1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
+1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 2. Review the **Startup.cs** and find the source for the page output.
+     > **Note**: **Hello Word !** is shown on your browser.
 3. Close the **Microsoft Edge** window.
 
 ####	Task 3: Add html file to the wwwroot folder
@@ -68,9 +69,10 @@ The main tasks for this exercise are as follows:
 
 ####	Task 4: Run the application – content of html not displayed
 
-1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
+1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 2. Access the following relative URL:
-     -   **/PollQuestions.html**
+     - **/PollQuestions.html**
+     > **Note**: See that **Hello Word !** is still shown, even after we have added an html file and set the url path to it.
 3. Close the **Microsoft Edge** window.
 
 ####	Task 5: Enable working with static files
@@ -79,14 +81,16 @@ The main tasks for this exercise are as follows:
 
 ####	Task 6 : Run the application – content of html is displayed
 
-1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
+1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 2. Access the following relative URL:
-     -   **/PollQuestions.html**
+     - **/PollQuestions.html**
+     > **Note**: See that the file content is shown along with the photos in the subdirectory, but the html content is poorly designed.
 3. Close the **Microsoft Edge** window.
 4. Link the **StyleSheet.css** file to the **PollQuestions.html** file.
-5. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
+5. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 6. Access the following relative URL:
-     -   **/PollQuestions.html**
+     - **/PollQuestions.html**
+     > **Note**: Now the html content is shown along with the css design.
 7. Select the basketball game, and press the **Submit Form** button.
 8. Close the **Microsoft Edge** window.
 
@@ -96,14 +100,15 @@ The main tasks for this exercise are as follows:
 
 ####	Task 8: Run the application – content of html outside wwwroot folder not displayed
 
-1. Run the new ASP.Net Core application in **Microsoft Edge**:
+1. Run the new ASP.NET Core application in **Microsoft Edge**:
 2. Access the following relative URL:
-     -   **/PollQuestions.html**
+     - **/PollQuestions.html**
+     > **Note**: By default, files outside the wwwroot directory are not visible in the browser, so **Hello Word !** from the app.Run is shown.
 3. Close the **Microsoft Edge** window.
 
->**Result**: At the end of this exercise, you will be able to add and work with static files inside an asp.net core project.
+>**Result**: At the end of this exercise, you will be able to add and work with static files inside an ASP.NET Core project.
 
-### Exercise 2: Creating Custom Middlewares
+### Exercise 2: Creating Custom Middleware
 
 #### Scenario
 
@@ -112,7 +117,7 @@ The server must receive the clients request and notify the company for the poll 
 The main tasks for this exercise are as follows: 
 -	Create a custom middleware 
 -	The custom middleware will display the results of the submitted form from the static HTML we created.
--	If no form was submitted, the custom middleware must not prevent execution of other middlewares.
+-	If no form was submitted, the custom middleware must not prevent execution of other middleware.
 
 
 
@@ -123,25 +128,28 @@ The main tasks for this exercise are as follows:
 
 ####	Task 2: Run the application
 
-1. Run the new ASP.Net Core application in **Microsoft Edge** and review the page's output.
+1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 2. Access the following relative URL:
-     -   **/PollQuestions.html**
-3. Select the basketball game, and press the **Submit Form** button.
+     - **/PollQuestions.html**
+3. Select the **Basketball** game, and press the **Submit Form** button.
+     > **Note**: The browser moved to a result page, and the following result is shown: Selected Value is = Basketball.
 4. Close the **Microsoft Edge** window.
 
-####	Task 3: Change the order of middlewares
+####	Task 3: Change the order of middleware
 
 1. Move the **app.UseStaticFiles** before the custom middleware.
-2. Run the new ASP.Net Core application in **Microsoft Edge**.
+2. Run the new ASP.NET Core application in **Microsoft Edge**.
 3. Access the following relative URL:
-     -   **/PollQuestions.html**
-4. Select the basketball game, and press the **Submit Form** button.
+     - **/PollQuestions.html**
+4. Select the **Basketball** game, and press the **Submit Form** button.
+     > **Note**: Now the **UseStaticFiles** middleware executes instead of the custom middleware, and it transfers back to the PollQuestions.html page.
 5. Close the **Microsoft Edge** window.
 6. Move the **app.UseStaticFiles** between the custom middleware and the app.Run.
 7. Comment the **next.Invoke();** line of code that skips the custom middleware if the favorite parameter is not found.
-8. Run the new ASP.Net Core application in **Microsoft Edge**.
+8. Run the new ASP.NET Core application in **Microsoft Edge**.
 9. Access the following relative URL:
-     -   **/PollQuestions.html**
+     - **/PollQuestions.html**
+     > **Note**: Now an empty page is shown, and the UseStaticFiles does not handle the call.
 10. Close the **Microsoft Edge** window.
 11. Uncomment the commented code that skips the middleware.
 
@@ -179,7 +187,7 @@ The main tasks for this exercise are as follows:
 4. Create an interface inside the **Services** folder named **lResultsService**.
 5. Add a method declaration inside the interface using the following information:
      - Name: **AddVote**
-     - Parameter name:  **game**
+     - Parameter name: **game**
      - Parameter Type: **SelectedGame**
      - Return type: **Void**
 5. Add a method declaration inside the interface using the following information:
@@ -208,16 +216,22 @@ The main tasks for this exercise are as follows:
 
 ####	Task 4: Run the application
 
-1. Run the new ASP.Net Core application in **Microsoft Edge**. 
+1. Run the new ASP.NET Core application in **Microsoft Edge**. 
+     > **Note**: Displayed result: **Action was not handled by any middleware. App run is executing. wwwroot folder path:** \[local path to your wwwroot folder\].
 2. Access the following relative URL:
-     -   **/PollQuestions.html**
+     - **/PollQuestions.html**
 3. Select the **Basketball** game, and press the **Submit Form** button.
-4. Select the **Basketball** game, access the following relative URL:
-     -   **/PollQuestions.html**
+     > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1
+4. Access the following relative URL in a new **Microsoft Edge** window:
+     - **/PollQuestions.html**
+     > **Note**: See that in the url, the port number of the new window should be identical to the previous window's port.
 5. Select the **Football** game, and press the **Submit Form** button.
-6. Select the **Basketball** game, access the following relative URL:
-     -   **/PollQuestions.html**
+     > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1
+6. Access the following relative URL in a new **Microsoft Edge** windowL:
+     - **/PollQuestions.html**
+     > **Note**: See that in the url, the port number of the new window should be identical to the previous window's port.
 7. Select the **Basketball** game, and press the **Submit Form** button.
+     > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1
 8. Close the **Microsoft Edge** window.
 
 >**Result**: At the end of this exercise, you will be able to create and use a service with **Dependency Injection**.
@@ -247,32 +261,41 @@ The main tasks for this exercise are as follows:
 
 ####	Task 3: Run the application
 
-1. Run the new ASP.Net Core application in **Microsoft Edge**.
-3. Close the **Microsoft Edge** window.
-4. In the **Startup** class, move the **app.Run** block **above** the **app.UseMvcWithDefaultRoute();** middleware.
-5. Run the new ASP.Net Core application in **Microsoft Edge**.
-6. Close the **Microsoft Edge** window.
-7. In the **Startup** class, move the **app.Run** block to be the last code block in the **Configure** method.
+1. Run the new ASP.NET Core application in **Microsoft Edge**.
+     > **Note**: **Hello from controller** is shown on your browser.
+2. Close the **Microsoft Edge** window.
+3. In the **Startup** class, move the **app.Run** block **above** the **app.UseMvcWithDefaultRoute();** middleware.
+4. Run the new ASP.NET Core application in **Microsoft Edge**.
+     > **Note**: The MVC controller is ignored, and the displayed result is: **Action was not handled by any middleware. App run is executing. wwwroot folder path:** \[local path to your wwwroot folder\].
+5. Close the **Microsoft Edge** window.
+6. In the **Startup** class, move the **app.Run** block to be the last code block in the **Configure** method.
+
 
 ####	Task 4: Use Dependency Injection in a controller
 
 1. Inject the **IPollResultsService** into the **HomeController's** class constructor, and save it to a global variable.
 2. Inside the **index** action of the **HomeController** class, replace its content with the service results, and return the results with the **Content** method.
 
-####	Task 5: Run the application. = See poll results
+####	Task 5: Run the application
 
-1. Run the new ASP.Net Core application in **Microsoft Edge**.
+1. Run the new ASP.NET Core application in **Microsoft Edge**.
 2. Access the following relative URL:
-     -   **/PollQuestions.html**
+     - **/PollQuestions.html**
 3. Select the **Basketball** game, and press the **Submit Form** button.
-4. Select the **Basketball** game, access the following relative URL:
-     -   **/PollQuestions.html**
+     > **Note**: The MVC controller is ignored, and the displayed result is: **Action was not handled by any middleware. App run is executing. wwwroot folder path:** \[local path to your wwwroot folder\].
+4. Access the following relative URL in a new **Microsoft Edge** window:
+     - **/PollQuestions.html**
+     > **Note**: See that in the url, the port number of the new window should be identical to the previous window's port.
 5. Select the **Football** game, and press the **Submit Form** button.
-6. Select the **Basketball** game, access the following relative URL:
-     -   **/PollQuestions.html**
+     > **Note**: The controller now returns the result: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1
+6. Access the following relative URL in a new **Microsoft Edge** window:
+     - **/PollQuestions.html**
+     > **Note**: See that in the url, the port number of the new window should be identical to the previous window's port.
 7. Select the **Basketball** game, and press the **Submit Form** button.
+     > **Note**: The controller now returns the result: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1
 8. Access the following relative URL:
-     -   **/**
+     - **/**
+     > **Note**: The controller now returns the result: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1
 9. Close the **Microsoft Edge** window.
 
 >**Result**: At the end of this exercise, you will be able to create controller, and inject a service into it with **Dependency Injection**. 

@@ -1,8 +1,8 @@
-﻿# Module 3: Configure Middlewares and Services in ASP.NET Core
+﻿# Module 3: Configure Middleware and Services in ASP.NET Core
 
-# Lesson 1: Configure Middlewares
+# Lesson 1: Configure Middleware
 
-### Demonstration: How to Create Custom Middlewares
+### Demonstration: How to Create Custom Middleware
 
 #### Preparation Steps 
 
@@ -19,13 +19,13 @@
 
 4. In the result pane of the **New Project** dialog box, click **ASP.NET Core Web Application**.
 
-5. In the **Name** box, replace **WebApplication1** with **ConfigureMiddlewaresExample**, and then click **OK**.
+5. In the **Name** box, replace **WebApplication1** with **ConfigureMiddlewareExample**, and then click **OK**.
 
-6. In the result pane of the **New ASP.NET Core Web Application**  dialog box, click **Empty**, and then click **OK**.
+6. In the result pane of the **New ASP.NET Core Web Application** dialog box, click **Empty**, and then click **OK**.
 
 7. In the **Solution Explorer** pane, double click on the **Startup.cs** class.
 
-8. Locate the following code:
+8. In the **Startup.cs** code window, locate the following code
 
 ```cs
     app.Run(async (context) =>
@@ -34,7 +34,7 @@
     });
 ```
 
-9. On the **DEBUG** menu of the **Configure Middlewares Example –  Microsoft Visual Studio** window, click **Start Debugging**.
+9. On the **DEBUG** menu of the **Configure Middleware Example –  Microsoft Visual Studio** window, click **Start Debugging**.
 
 10. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/UrlTest1, and press **Enter**.
 
@@ -48,7 +48,7 @@
 
 13. On the **Debug** Menu, click **Stop Debugging**.
 
-14. Locate the following code:
+14. In the **Startup.cs** code window, locate the following code
 ```cs
     if (env.IsDevelopment())
     {
@@ -65,7 +65,7 @@
 ```
 >**Note** The value of context.Request.Path.Value is part of the url that contains the subfolders and files. For example: http://localhost:[port]/[**context.Request.Path.Value**]
 
-16. On the **DEBUG** menu of the **ConfigureMiddlewaresExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+16. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
 17. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/UrlTest1, and press enter.
      >**Note** : The result is to **Custom MiddleWare, Path = [URL Path]**, and the app.Run is ignored.
@@ -77,17 +77,17 @@
 
 20. On the **Debug** Menu, click **Stop Debugging**.
 
-21. Put the cursor at the end of the following code you just typed:
+21. In the **Startup.cs** code window, locate the following code
 ```cs
     await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + Environment.NewLine);
 ```
 
-22.  Press enter and type put the following code:
+22. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
     await next.Invoke();
 ```
 
-23. On the **DEBUG** menu of the **ConfigureMiddlewaresExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+23. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Start Debugging**.
      >**Note** : Now, the result is: 
      **Custom MiddleWare, Path = [URL Path]**
      **"Hello World!"**
@@ -96,7 +96,7 @@
 
 25. On the **Debug** Menu, click **Stop Debugging**.
 
-26. Select the following code:
+26. In the **Startup.cs** code window, locate and select the following code.
 ```cs
     app.Use(async (context, next) =>
     {
@@ -105,11 +105,11 @@
     });
 ```
 
-27. right click, press **Cut**, and remove the empty line that was left.
+27. Right-click the selected code, then press **Cut**, and remove any empty line that were left.
 
 28. Move the cursor right before the end of the Configure method, before the closing brackets, and press paste.
 
-29. On the **DEBUG** menu of the **ConfigureMiddlewaresExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+29. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Start Debugging**.
      >**Note** : Now, the app.Use result is gone, and only the app.Run works !
 
 30. In the **Microsoft Edge** window, click **Close**.
@@ -149,65 +149,68 @@
 
 5. In the **Name** box, replace **WebApplication1** with **StaticFilesExample**.
 
-7.  In the **Location** textbox, write **Allfiles\Mod03\Democode\02_StaticFilesExample_begin**, and then click **OK**. 
+6.  In the **Location** textbox, write **Allfiles\Mod03\Democode\02_StaticFilesExample_begin**, and then click **OK**. 
 
-8. In the result pane of the **New ASP.NET Core Web Application**  dialog box, click **Empty**, and then click **OK**.
+7. In the result pane of the **New ASP.NET Core Web Application** dialog box, click **Empty**, and then click **OK**.
 
-9. In the **Solution Explorer** see that the **wwwroot** folder is empty.
+8. In the **Solution Explorer** see that the **wwwroot** folder is empty.
 
-10. On the **Windows Explorer** copy the **HtmlFile.html** and the **ImageFile.jpg** files from the **Allfiles\Mod03\Democode\02_StaticFilesExample_begin** directory into the **Allfiles\Mod03\Democode\02_StaticFilesExample_begin\StaticFilesExample\StaticFilesExample\wwwroot** directory.
+9.  In the **File Explorer** window, go to **Allfiles\Mod03\Democode\02_StaticFilesExample_begin**.
+    
+10.  In the **02_StaticFilesExample_begin** window, select the **HtmlFile.html** and the **ImageFile.jpg** files.
+ 
+ 11. On the **HtmlFile.html** and **ImageFile.jpg** selected files, press right-click, and then click **Copy**.
+    
+11.  In the **File Explorer** window, go to **Allfiles\Mod03\Democode\02_StaticFilesExample_begin\StaticFilesExample\StaticFilesExample\wwwroot**.
+    
+12.  In the **wwwroot** window, right-click an empty space, and then click **Paste**.
+      >**Note:** In the **Solution Explorer** see that the **wwwroot** folder contains both of the copied files (You might need to expand the wwwroot directory to see the files).
 
-11. In the **Solution Explorer** see that the **wwwroot** folder contains both of the copied files (You might need to click the arrow next to it to see the files in its directory).
+13. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-12. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-
-13. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/HtmlFile.html, and press enter.
-
+14. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/HtmlFile.html, and press enter.
      >**Note:** Only the app.Run is executed returns Hello World !
 
-14. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/ImageFile.jpg, and press enter. 
-
+15. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/ImageFile.jpg, and press enter. 
      >**Note:** Only the app.Run is executed returns Hello World !
 
-15. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/NonExistingPath.jpg, and press enter. 
-
+16. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/NonExistingPath.jpg, and press enter. 
      >**Note:** Only the app.Run is executed returns Hello World !
 
-16. In the **Microsoft Edge** window, click **Close**.
+17. In the **Microsoft Edge** window, click **Close**.
 
-17. On the **Debug** Menu, click **Stop Debugging**.
+18. On the **Debug** Menu, click **Stop Debugging**.
 
-18. In the **Solution Explorer** pane, double click on the **Startup.cs** class.
+19. In the **Solution Explorer** pane, double click on the **Startup.cs** class.
 
-19. In the **Startup.cs** code window, locate the following code:
-
+20. In the **Startup.cs** code window, locate the following code:
 ```cs
-    app.Run(async (context) =>
+    if (env.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
+
 ```
 
-18. Immediately before the located code, press Enter, then type the following code, and press enter again.
-
+21. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
     app.UseStaticFiles();
 ```
 
-19. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+22. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-20. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/HtmlFile.html, and press enter.
-
+23. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/HtmlFile.html, and press enter.
      >**Note:** The html file is shown
 
-21. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/ImageFile.jpg, and press enter. 
-
+24. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/ImageFile.jpg, and press enter. 
      >**Note:** The image file is shown
 
-22. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/NonExistingPath.jpg, and press enter. 
-
+25. In the **Microsoft Edge**, Change the url path to http://localhost:[port]/NonExistingPath.jpg, and press enter. 
      >**Note:** The nonexisting path leads eventualy to app.Run
 
-23. In the **Microsoft Edge** window, click **Close**.
+26. In the **Microsoft Edge** window, click **Close**.
 
-24. On the **Debug** Menu, click **Stop Debugging**.
+27. On the **Debug** Menu, click **Stop Debugging**.
 
 
 # Lesson 2: Configure Services
@@ -231,7 +234,7 @@
 
 5. In the **Name** box, replace **WebApplication1** with **ConfigureServiceExample**, and then click **OK**. 
 
-6. In the result pane of the **New ASP.NET Core Web Application**  dialog box, click **Empty**, and then click **OK**.
+6. In the result pane of the **New ASP.NET Core Web Application** dialog box, click **Empty**, and then click **OK**.
 
 7. In the Solution Explorer pane of the **ConfigureServiceExample - Microsoft Visual Studio** window,right click on the **ConfigureServiceExample** project file, point to **Add**, and then click **New Folder**.
 
@@ -241,18 +244,23 @@
 
 10. In the **Add New Item** dialog window, inside the **Name** textbox type **Logger**, and press **Add**.
 
-11. In the Logger.cs code window, place the mouse cursor at the end of the **System.Threading.Tasks** namespace code, press Enter, and then type the following code:
+11.  In the **Logger.cs** code window, locate the following code.
+```cs
+    using System.Threading.Tasks;
+```
+
+12. 6.  Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
     using System.IO;
     using ConfigureServiceExample.Services; 
  ```
 
-12. Put the cursor between the opening and the closing brackets of the empty class, press enter, and create the following variable:
+12. Place the mouse cursor within the **Logger** class block, press enter, and then type the following code.
 ```cs
     string filename;
 ```
 
-13. Place the mouse cursor at the end of the code, press Enter twice, and then type the following code:
+13. Place the mouse cursor at the end of the **filename** variable, press Enter twice, and then type the following code:
 ```cs
     public Logger()
     {
@@ -265,7 +273,7 @@
 ```
 >**Note:** Each Logger class instance will create a new log file. The log file name will be the logger class instance creation date.
 
-15. Place the cursor at the end of the line of the closing bracket of the constructor, press enter twice, and type the following code:
+15. 7.  Place the mouse cursor at the end of the **Logger** constructor, press Enter twice, and then type the following code.
 ```cs
     public void Log(string logData)
     {
@@ -287,7 +295,7 @@ public class Logger
 
 20. In the **Solution Explorer** pane, double click the **Startup.cs** file.
 
-21. Place the mouse cursor within the  **ConfigureServices**  method block, press enter, and then type the following code.
+21. Place the mouse cursor within the **ConfigureServices** method block, press enter, and then type the following code.
 ```cs
     services.AddSingleton<ILogger, Logger>();
 ```
@@ -320,8 +328,6 @@ public class Logger
 
 28. On the **Debug** Menu, click **Stop Debugging**.
 
-29. In the **Solution Explorer** pane, double click the new created **XXXX-XX-XX--XX-XX-XX.log** file.
-
-30. See the **[DateTime]: Logged Line** text shown inside the file.
-     >**Note:** This log line was written by the Log method that is inside the Logger class.
+29. In the **Solution Explorer** pane, double click the newly created **XXXX-XX-XX--XX-XX-XX.log** file.
+     >**Note:** File text: **[DateTime]: Logged Line**. The text was created by the Log method that is inside the Logger class.
      
