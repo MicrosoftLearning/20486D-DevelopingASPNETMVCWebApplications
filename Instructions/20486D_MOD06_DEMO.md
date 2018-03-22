@@ -138,8 +138,6 @@
 
 26. In the **"BindViewsExample - Microsoft Visual Studio"** window, click **Close**.
 
-# Module 6: Developing Models
-
 # Lesson 2: Working with Forms
 
 ### Demonstration: How to Use Display and Edit Data Annotations
@@ -300,3 +298,135 @@
 
 27. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
 
+# Lesson 3: Validating MVC Applications
+
+### Demonstration: How to Validate User Input with Data Annotations
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
+ https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+
+2. Go to **Allfiles\Mod06\Democode\03_DataAnnotationsValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
+
+#### Demonstration Steps
+
+1. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, expand **Models**, and then click **Person.cs**.
+
+2. In the **Person** class code window, locate the following code.
+
+  ```cs
+      using System.Threading.Tasks;
+```
+3. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
+
+  ```cs
+      using System.ComponentModel.DataAnnotations;
+```
+
+4. In the **Person** code window, place the mouse cursor at the end of the **PersonId** property code, press Enter twice, and then type the following code.
+
+  ```cs
+      [Required(ErrorMessage = "Please enter your first name.")]
+```
+5. Place the mouse cursor at the end of the **FirstName** property code, press Enter twice, and then type the following code.
+
+  ```cs
+      [Required(ErrorMessage = "Please enter your last name.")]
+```
+
+6. Place the mouse cursor at the end of the **LastName** property code, press Enter twice, and then type the following code.
+
+  ```cs
+      [Range(15, 50)]
+```
+
+7. Place the mouse cursor at the end of the **Age** property code, press Enter twice, and then type the following code.
+
+  ```cs
+      [StringLength(10)]
+```
+8. In the Solution Explorer pane, under DataAnnotationsExample, expand **Controllers**, and then click **HomeController.cs**.
+
+9. In the **Details** action code block, select the following code.
+
+  ```cs
+      return View(person);
+```
+10. Replace the selected code with the following code.
+
+  ```cs
+      if (!ModelState.IsValid)
+      {
+          return View("Index", person);
+      }
+      return View(person);
+
+```
+
+11. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**. 
+
+12. In the **Index.cshtml** code window, locate the following code.
+
+  ```cs
+       <!DOCTYPE html>
+```
+13. Place the mouse cursor before the located code, type the following code, and then press Enter.
+
+  ```cs
+       @model DataAnnotationsExample.Models.Person
+```
+14. In the **BODY** element of the Index.cshtml code window, type the following code.
+
+  ```cs
+       <h1>Submit personal information</h1>
+       <div>
+       </div>
+```
+
+15. In the **DIV** element of the Index.cshtml code window, type the following code.
+
+  ```cs
+       <form asp-action="Details">
+            <div asp-validation-summary="All"></div>
+            <br />
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName"/>
+            <span asp-validation-for="FirstName"></span>
+            <br />
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" />
+            <span asp-validation-for="LastName"></span>
+            <br />
+            <label asp-for="Age"></label>
+            <input asp-for="Age"/>
+            <span asp-validation-for="Age"></span>
+            <br />
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description"></textarea>
+            <span asp-validation-for="Description"></span>
+            <br />
+            <input type="submit" value="Submit" />
+        </form>
+```
+>**Note:** This code block generates validation messages to a &lt;form&gt; using ValidationMessage and ValidationSummary Tag Helpers
+
+16. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
+
+17. On the **DEBUG** menu of the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
+
+18. On the **Submit personal information** page, in the **FirstName** box, Leave the field blank.
+
+19. On the **Submit personal information** page, in the **LastName** box, Leave the field blank.
+
+20. On the **Submit personal information** page, in the **Age** box, type _&lt;5&gt;._
+
+21. On the **Submit personal information** page, in the **Description** box, type _&lt;More than ten characters&gt;_, and then click **Submit**.
+
+22. Verify the validation messages.
+
+23. In the Windows Microsoft Edge window, click **Close**.
+
+24. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
+
+25. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
