@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace AnimlasMvc.Models
+namespace AnimalMvc.Models
 {
     public class Data : IData
     {

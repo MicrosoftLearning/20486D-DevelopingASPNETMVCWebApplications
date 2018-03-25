@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AnimlasMvc.Models
+namespace AnimalMvc.Models
 {
     public class IndexViewModel
     {

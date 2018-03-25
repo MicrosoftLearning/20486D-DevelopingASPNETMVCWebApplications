@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using AnimlasMvc.Models;
+using AnimalMvc.Models;
 using System.Collections.Generic;
 
-namespace AnimlasMvc.Controllers
+namespace AnimalMvc.Controllers
 {
     public class AnimalsController : Controller
     {

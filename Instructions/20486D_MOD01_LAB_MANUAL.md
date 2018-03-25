@@ -36,15 +36,15 @@ The main tasks for this exercise are as follows:
 
 3. Add simple functionality.
 
-
 #### Task 1: Creating a Razor Pages application
+
 1. Start Visual Studio 2017 and create a new Razor Pages project with the following name **ActorsRazorPages** by using the **Web Application** C# template.
 
 2. Run the new Razor Pages application in Microsoft Edge and review the **Contact** page.
 
-3. Stop debugging by closing Microsoft Edge.
+3. Stop debugging.
 
-#### Task 2: Explore the application structure.
+#### Task 2: Explore the application structure
 
 1. Open the **Startup.cs** class and verify that mvc service is added to the request execution pipeline.
 
@@ -52,7 +52,7 @@ The main tasks for this exercise are as follows:
 
 3. Verify that the **Site.css** file is used to apply styles to all pages on the site. Note that the **_Layout.cshtml** page is linked to the style sheet.
 
-#### Task 3: Add simple functionality.
+#### Task 3: Add simple functionality
 
 1. Add a new Razor Page to the **Pages** folder using the following information:
  
@@ -169,8 +169,8 @@ The main tasks for this exercise are as follows:
      - Scope: **private**
      - Class: **IData**
      - Name: **_data**
-
-   Instantiate the new object by calling the **IData**  in the constructor.
+     
+     Instantiate the new object by calling the **IData**  in the constructor.
    
 23. Add the **Actors** property to the **Index.cshtml.cs** class by using the following information:
 
@@ -199,18 +199,18 @@ The main tasks for this exercise are as follows:
     - Content: **Actors**
     - End tag: **&lt;/a&gt;&lt;/li&gt;**
 
-#### Task 4: Run the application.
+#### Task 4: Run the application
 
 1. Save all the changes.
 
 2. Run the website, and view the **Test Page** and **Actors** pages you added.
 
-3. Stop debugging by closing Microsoft Edge.
+3. Stop debugging.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
 >
 
-### 	Exercise 2: Exploring a Web API Application
+### Exercise 2: Exploring a Web API Application
 
 #### Scenario
 
@@ -224,22 +224,21 @@ The main tasks for this exercise are as follows:
 
 3. Add simple functionality.
 
-
-#### Task 1: Creating a Web API application.
+#### Task 1: Creating a Web API application
 
 1. Start Visual Studio 2017 and create a new Web API project with the following name **CakeStoreApi** by using the **Web API** C# template.
 
 2. Run the new Web API application in Microsoft Edge and review the **Content** displayed.
 
-3. Stop debugging by closing Microsoft Edge.
+3. Stop debugging.
 
-#### Task 2: Explore the application structure.
+#### Task 2: Explore the application structure
 
 1. Open the **Startup.cs** class and verify that mvc service is added to the request execution pipeline.
 
 2.  Open the  **ValuesController.cs** class inside the **Controller** folder and verify  that the **Get** method return type is Array of String.
 
-#### Task 3: Add simple functionality.
+#### Task 3: Add simple functionality
 
 1. Add a new folder to the application at the root level by using the following information:
 
@@ -340,18 +339,18 @@ The main tasks for this exercise are as follows:
 
 21. In the **Startup.cs**  class add **IData** to the services container as Singleton.
 
-#### Task 4: Run the application.
+#### Task 4: Run the application
 
 1. Save all the changes.
 
 2. Run the website, and view the content you added.
 
-3. Stop debugging by closing Microsoft Edge.
+3. Stop debugging.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
 >
 
-### 	Exercise 3: Exploring an MVC Application
+### Exercise 3: Exploring an MVC Application
 
 #### Scenario
 
@@ -370,9 +369,9 @@ The main tasks for this exercise are as follows:
 
 2. Run the new MVC application in Microsoft Edge and review the **Contact** page.
 
-3. Stop debugging by closing Microsoft Edge.
+3. Stop debugging.
 
-#### Task 2: Explore the application structure.
+#### Task 2: Explore the application structure
 
 1. Open the **Startup.cs** class and verify that mvc service is added to the request execution pipeline.
 
@@ -380,7 +379,8 @@ The main tasks for this exercise are as follows:
 
 3. Verify that the Site.css file is used to apply styles to all pages on the site. Note that the **_Layout.cshtml** page is linked to the style sheet.
 
-#### Task 3: Add simple functionality.
+#### Task 3: Add simple functionality
+
 1. In the **HomeController** class, Add a method for the **TestPage** action by using the following information:
 
    - Scope: **public**
@@ -471,7 +471,7 @@ The main tasks for this exercise are as follows:
 
 17. Add the **Data.cs** existing file to the **Model** folder from the following location:
  
-     - **Allfiles/Mod01/Labfiles/03_AnimalsMvc_begin**
+     - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin**
 
 
 18. Add a new model class to the **Models** folder by using the following information:
@@ -523,7 +523,7 @@ The main tasks for this exercise are as follows:
 
 29. Add the **images** existing files to the **images** folder from the following location:
 
-    -  **Allfiles/Mod01/Labfiles/03_AnimalsMvc_begin/Images**     
+    -  **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Images**     
 
 30.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
 
@@ -536,7 +536,7 @@ The main tasks for this exercise are as follows:
 
 31. Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
 
-     - **Allfiles/Mod01/Labfiles/03_AnimalsMvc_begin/Views**
+     - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Views**
 
 32.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
 
@@ -549,7 +549,7 @@ The main tasks for this exercise are as follows:
  
 33. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml**  file from the following location:
  
-     - **Allfiles/Mod01/Labfiles/03_AnimalsMvc_begin/Views**
+     - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Views**
 
 34. In the **Shared** folder  inside **_Layout.cshtml** page Add a link using the following information:
 
@@ -566,15 +566,15 @@ The main tasks for this exercise are as follows:
 
 37. Run the website, and view the page you added.
 
-38. Stop debugging by closing Microsoft Edge.
+38. Stop debugging.
 
-#### Task 4: Run the application.
+#### Task 4: Run the application
 
 1. Save all the changes.
 
 2. Run the website, and view the **Test Page** and **Animals** pages you added.
 
-3. Stop debugging by closing Microsoft Edge.
+3. Stop debugging.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Mvc application in Visual Studio.
 
