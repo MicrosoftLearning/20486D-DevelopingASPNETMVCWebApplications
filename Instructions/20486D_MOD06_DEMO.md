@@ -179,7 +179,7 @@
 6. Place the mouse cursor at the end of the **Email** property code, press Enter twice, and then type the following code.
 
   ```cs
-      [Display(Name = "Date of birth:")]
+      [Display(Name = "Date birth:")]
       [DataType(DataType.Date)]
 ```
 
@@ -286,9 +286,9 @@
 
 21. On the **Register** page, in the **Email Address** box, type _&lt;An email address of your choice&gt;._
 
-22. On the **Register** page, in the **Date of birth** box, type _&lt;A birthdate of your choice&gt;._
+22. On the **Register** page, in the **Date birth** box, type _&lt;A birthdate of your choice&gt;._
 
-23. On the **Register** page, in the **Password** box, type _&lt;A__password of your choice&gt;_, and then click **Register**.
+23. On the **Register** page, in the **Password** box, type _&lt;A password of your choice&gt;_, and then click **Register**.
 
 24. Verify the newly registered user details.
 
@@ -430,3 +430,109 @@
 24. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
 
 25. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
+
+# Lesson 3: Validating MVC Applications
+
+### Demonstration: How to Add Custom Validations
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
+ https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+
+2. Go to **Allfiles\Mod06\Democode\04_DataAnnotationsCustomValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
+
+#### Demonstration Steps
+
+1. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, right-click **Validators** folder, point to Add, and then click **class**.
+
+2. In the **Name** box of the **Add New Item – DataAnnotationsExample** dialog box, type **AgeValidationAttribute**, and then click Add.
+
+3. In the **AgeValidationAttribute** class code window, locate the following code.
+
+  ```cs
+      using System.Threading.Tasks;
+```
+4. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
+
+  ```cs
+      using DataAnnotationsExample.Models;
+      using System.ComponentModel.DataAnnotations;
+```
+5. In the **AgeValidationAttribute** class code window, locate the following code.
+
+  ```cs
+      public class AgeValidationAttribute
+```
+6.  Append the following code to the existing line of code.
+
+  ```cs
+      : ValidationAttribute
+```
+7. In the **AgeValidationAttribute** class code block, press Enter and then type the following code.
+
+
+  ```cs
+      private int _minYear;
+      public AgeValidationAttribute(int minYear)
+      {
+          _minYear = minYear;
+      }
+```
+8. Ensure that the cursor is at the end of the **AgeValidationAttribute** method code block, press Enter twice, and then type the following code.
+
+  ```cs
+      protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+      {
+      }
+```
+
+9. In the **IsValid** method code block press enter, and type the following code.
+
+  ```cs
+      Person person = (Person)validationContext.ObjectInstance;
+      if (person.Birthdate.Year > _minYear)
+      {
+          return new ValidationResult("Sorry you should be at least 18 years old to submit your personal information");
+      }
+      return ValidationResult.Success;
+```
+>**Note:** This code block Validates person's year of birth
+
+10. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, expand **Models**, and then click **Person.cs**.
+
+11. In the **Person** class code window, locate the following code.
+
+  ```cs
+      using System.Threading.Tasks;
+```
+12. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
+
+  ```cs
+      using DataAnnotationsExample.Validators;
+```
+
+13. In the **Person** code window, place the mouse cursor at the end of the **LastName** property code, press Enter twice, and then type the following code.
+
+  ```cs
+      [AgeValidation(2000)]
+      [DataType(DataType.Date)]
+```
+
+14. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
+
+15. On the **DEBUG** menu of the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
+
+16. On the **Submit personal information** page, in the **Birthdate** box, select _&lt;In the year section greater then 2000&gt;_, and then click **Submit**.
+
+17. Verify the custom validation message.
+
+18. On the **Submit personal information** correct all the fields with the validation message, and then click **Submit**. 
+
+      >**Note:** Verify the newly submitted personal information
+
+19. In the Windows Microsoft Edge window, click **Close**.
+
+20. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
+
+21. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
