@@ -12,57 +12,70 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the  **RazorSyntaxExample - Microsoft Visual Studio**  window, expand **RazorSyntaxExample** project file, right-click  **Controllers**, and then click  **ProductController**.
+1. In the Solution Explorer pane of the **RazorSyntaxExample - Microsoft Visual Studio** window, expand **RazorSyntaxExample** project file, right-click **Controllers**, and then click **ProductController**.
 
-2. In the **ProductController.cs** code window, locate the following code:
+2. In the **ProductController.cs** code window, locate and select the following code. 
 ```cs
-string rice = "Rice";
+    return View();
 ```
 
-3. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+3. Replace the code you selected with the following code
 ```cs
-ViewBag.ProductNames = new List<string>();
-ViewBag.ProductNames.Add(bread);
-ViewBag.ProductNames.Add(rice);
+    ViewBag.ProductPrices = new Dictionary<string,int>();
+    ViewBag.ProductPrices.Add("Bread", 5);
+    ViewBag.ProductPrices.Add("Rice", 3);
+    return View();
 ```
 
 4. In the **ProductController.cs** code window, locate the following code:
 ```cs
-public IActionResult Index()
+    public IActionResult Index()
 ```
 
-5. Right click on the **Index** method name,  click **Add View...**.
+5. Right click on the **Index** method name, and click **Add View...**.
 
 6. In the **Add MVC View** dialog window leave all the default values as they are, and press **OK**.
+>**Note** : See that the Views and the Products folders were created. Inside them there is new file named Index.cshtml.
 
-7. In the Solution Explorer pane of the  **RazorSyntaxExample - Microsoft Visual Studio**  window, expand the **Views** folder, and then expand the **Product** folder.
-
-8. In the Solution Explorer pane of the  **RazorSyntaxExample - Microsoft Visual Studio**  window, click on the **Index.cshtml** file.
-
-9. Inside the  **BODY**  element, type the following code.
+7. Inside the **body** element, type the following code.
 ```cs
-@foreach (string productName in ViewBag.ProductNames)
-{
+    @foreach (KeyValuePair<string, int> ProductPrices in ViewBag.ProductPrices)
+    {  
 
-}
+    }
 ```
 
-10. Inside the  **@foreach**  code block, type the following code.
+8. Inside the **@foreach** code block, type the following code
 ```cs
-<p>
-    <span>
-        Product Name: @productName
-    </span>
-</p>
+    <p>
+       
+    </p>
+```
+
+9. In the **p** element, type the following code.
+```cs
+    <div>
+        Product Name: @ProductPrices.Key
+    </div>
+```
+
+10. In the **p** element, below the **div** element, type the following code.
+```cs
+    <div>
+        Product Price + Tax: @(ProductPrices.Value * 1.2)
+    </div>
 ```
 
 11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
     >**Note** : Displayed results:
     > Product Name: Bread
+    > Product Price + Tax: 6
     > Product Name: Rice
+    > Product Price + Tax: 3.6
     
 12. In the **Microsoft Edge** window, click **Close**.
 
 13. On the **Debug** Menu, click **Stop Debugging**.
+
 
 

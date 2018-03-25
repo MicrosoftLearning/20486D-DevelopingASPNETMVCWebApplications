@@ -10,8 +10,6 @@ namespace RazorSyntaxExample.Controllers
     {
         public IActionResult Index()
         {
-            string bread = "Bread";
-            string rice = "Rice";
             return View();
         }
     }
