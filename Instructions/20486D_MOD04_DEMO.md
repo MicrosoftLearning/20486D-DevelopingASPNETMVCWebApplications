@@ -15,9 +15,9 @@
 
 1. In the Solution Explorer pane of the **ControllersExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
 
-2. In the **Scaffold** dialog box, click **MVC controller - Empty**.
+2. In the **Add Scaffold** dialog box, click **MVC controller - Empty**, and then click **Add**.
 
-3. In the **Controller Name** text box of the **Add Controller** dialog box, type **HomeController**, and then click **Add**.
+3. In the **Controller Name** text box of the **Add Empty MVC Controller** dialog box, type **HomeController**, and then click **Add**.
 
 4. In the **HomeController.cs** code window, locate the following code.
 
@@ -104,7 +104,7 @@
 
 19. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/home/ParamExample/2** and then press Enter, note the text **My param is: 2** is the content result you added in the **ParamExample** action.
 
-20. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/home/RouteDataExample/4*** and then press Enter, note the text **Action information: the action is in home controller, the action name is RouteDataExample and the id value is 4** is the content result you added in the **RouteDataExample** action.
+20. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/home/RouteDataExample/4** and then press Enter, note the text **Action information: the action is in home controller, the action name is RouteDataExample and the id value is 4** is the content result you added in the **RouteDataExample** action.
 
 21. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/home/ViewBagExample** and then press Enter, note the text **The Message is: View Bag Example** 
 is the action result you added in the **ViewBagExample** action.
@@ -132,9 +132,9 @@ is the action result you added in the **ViewDataExample** action.
 
 1. In the Solution Explorer pane of the **RoutesExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
 
-2. In the **Scaffold** dialog box, click **MVC controller - Empty**.
+2. In the **Add Scaffold** dialog box, click **MVC controller - Empty**, and then click **Add**.
 
-3. In the **Controller Name** text box of the **Add Controller** dialog box, type **HomeController**, and then click **Add**.
+3. In the **Controller Name** text box of the **Add Empty MVC Controller** dialog box, type **HomeController**, and then click **Add**.
 
 4. In the **HomeController** class code block, select the following code.
 
@@ -167,9 +167,9 @@ is the action result you added in the **ViewDataExample** action.
 ```
 8. In the Solution Explorer pane of the **RoutesExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
 
-9. In the **Scaffold** dialog box, click **MVC controller - Empty**.
+9. In the **Add Scaffold** dialog box, click **MVC controller - Empty**, and then click **Add**.
 
-10. In the **Controller Name** text box of the **Add Controller** dialog box, type **CalculatorController**, and then click **Add**.
+10. In the **Controller Name** text box of the **Add Empty MVC Controller** dialog box, type **CalculatorController**, and then click **Add**.
 
 11. In the **CalculatorController** class code block, select the following code.
 
@@ -258,6 +258,7 @@ is the action result you added in the **ViewDataExample** action.
 # Lesson 3: Writing Action Filters
 
 ### Demonstration: How to Create and Use Action Filters 
+
 #### Preparation Steps
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
@@ -267,33 +268,37 @@ is the action result you added in the **ViewDataExample** action.
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the **FiltersExample - Microsoft Visual Studio** window, right-click **Filters** folder, point to Add, and then click **class**.
+1. In the **Solution Explorer** pane, right-click **FiltersExample**, point to **Add**, and then click **New Folder**.
 
-2. In the **Name** box of the **Add New Item – FiltersExample** dialog box, type **CustomActionFilter**, and then click Add.
+2. In the **NewFolder** box, type **Filters**, and then press Enter.
 
-3. In the **CustomActionFilter** class code window, locate the following code.
+3. In the **Solution Explorer** pane of the **FiltersExample - Microsoft Visual Studio** window, right-click **Filters**, point to **Add**, and then click **Class**.
+
+4. In the **Name** box of the **Add New Item – FiltersExample** dialog box, type **CustomActionFilter**, and then click Add.
+
+5. In the **CustomActionFilter** class code window, locate the following code.
 
   ```cs
        using System.Threading.Tasks;
 ```
-4. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
+6. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
 
   ```cs
       using System.Diagnostics;
       using Microsoft.AspNetCore.Mvc;
       using Microsoft.AspNetCore.Mvc.Filters;
 ```
-5. In the **CustomActionFilter** class code window, locate the following code.
+7. In the **CustomActionFilter** class code window, locate the following code.
 
   ```cs
        public class CustomActionFilter
 ```
-6.  Append the following code to the existing line of code.
+8.  Append the following code to the existing line of code.
 
   ```cs
        : ActionFilterAttribute
 ```
-7. In the **CustomActionFilter** class code block, press Enter and then type the following code.
+9. In the **CustomActionFilter** class code block, press Enter and then type the following code.
 
 
   ```cs
@@ -301,67 +306,67 @@ is the action result you added in the **ViewDataExample** action.
         {
         }
 ```
-8. In the **OnActionExecuting** action code block, type the following code.
+10. In the **OnActionExecuting** action code block, type the following code.
 
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
         Debug.WriteLine(">>> "+actionName +" started, event fired: OnActionExecuting");
 ```
 
-9. Ensure that the cursor is at the end of the **OnActionExecuting** action code block, press Enter twice, and then type the following code.
+11. Ensure that the cursor is at the end of the **OnActionExecuting** action code block, press Enter twice, and then type the following code.
 
   ```cs
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {            
         }
 ```
-10. In the **OnActionExecuted** action code block, type the following code.
+12. In the **OnActionExecuted** action code block, type the following code.
 
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
         Debug.WriteLine(">>> "+actionName +" finished, event fired: OnActionExecuted");
 ```
-11. Ensure that the cursor is at the end of the **OnActionExecuted** action code block, press Enter twice, and then type the following code.
+13. Ensure that the cursor is at the end of the **OnActionExecuted** action code block, press Enter twice, and then type the following code.
 
   ```cs
         public override void OnResultExecuting(ResultExecutingContext filterContext)
         {   
         }
 ```
-12. In the **OnResultExecuting** action code block, type the following code.
+14. In the **OnResultExecuting** action code block, type the following code.
 
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
         Debug.WriteLine(">>> "+actionName + " before result, event fired: OnResultExecuting");
 ```
 
-13. Ensure that the cursor is at the end of the **OnResultExecuting** action code block, press Enter twice, and then type the following code.
+15. Ensure that the cursor is at the end of the **OnResultExecuting** action code block, press Enter twice, and then type the following code.
 
   ```cs
         public override void OnResultExecuted(ResultExecutedContext filterContext)
         {            
         }
 ```
-14. In the **OnResultExecuted** action code block, type the following code.
+16. In the **OnResultExecuted** action code block, type the following code.
 
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
         ContentResult result = (ContentResult)filterContext.Result;
         Debug.WriteLine(">>> " + actionName + " result is: "+ result.Content + " ,event fired: OnResultExecuted");
 ```
-15. In the **FiltersExample – Microsoft Visual Studio** window, In the Solution Explorer pane, double-click **HomeController.cs**.
+17. In the **FiltersExample – Microsoft Visual Studio** window, In the Solution Explorer pane, double-click **HomeController.cs**.
 
-16. In the **HomeController** code window, locate the following code.
+18. In the **HomeController** code window, locate the following code.
 
   ```cs
         using Microsoft.AspNetCore.Mvc;
 ```
-17. Ensure that the mouse cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code.
+19. Ensure that the mouse cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code.
 
   ```cs
         using FiltersExample.Filters;
 ```
-18. In the **HomeController** class code block, select the following code.
+20. In the **HomeController** class code block, select the following code.
 
   ```cs
         public IActionResult Index()
@@ -369,7 +374,7 @@ is the action result you added in the **ViewDataExample** action.
             return View();
         }
 ```
-19. Replace the selected code with the following code.
+21. Replace the selected code with the following code.
 
   ```cs
         [CustomActionFilter]
@@ -378,15 +383,15 @@ is the action result you added in the **ViewDataExample** action.
             return Content("Welcome to module 4 demo 3");
         }
 ```
-20. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Save All**.
+22. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Save All**.
 
-21. On the DEBUG menu of the **FiltersExample - Microsoft Visual Studio** window, click Start Debugging.
+23. On the DEBUG menu of the **FiltersExample - Microsoft Visual Studio** window, click Start Debugging.
 
-22. On the taskbar, click the **FiltersExample - Microsoft Visual Studio** icon.
+24. On the taskbar, click the **FiltersExample - Microsoft Visual Studio** icon.
 
-23. In the Output pane of the **FiltersExample (Running) - Microsoft Visual Studio** window, click the **Output** tab.
+25. In the Output pane of the **FiltersExample (Running) - Microsoft Visual Studio** window, click the **Output** tab.
 
-24. On the **Output** tab, locate the following line of code.
+26. On the **Output** tab, locate the following line of code.
 
   ```cs
        >>> Index started, event fired: OnActionExecuting
@@ -396,11 +401,11 @@ is the action result you added in the **ViewDataExample** action.
 ```
    >**Note:** In the above output lines, note that this is the CustomActionFilter class methods result. 
 
-25. In the Microsoft Edge window, click Close.
+27. In the Microsoft Edge window, click Close.
 
-26. On the **DEBUG** menu of the **FiltersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+28. On the **DEBUG** menu of the **FiltersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-27. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Exit**.
+29. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Exit**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 

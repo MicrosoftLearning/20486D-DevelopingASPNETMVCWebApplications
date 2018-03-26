@@ -23,7 +23,7 @@ After completing this lab, you will be able to:
 
 Estimated Time: **60 minutes**
 
-### Exercise 1: Adding controllers and actions to an MVC application.
+### Exercise 1: Adding controllers and actions to an MVC application
 
 #### Scenario
 
@@ -188,7 +188,7 @@ The main tasks for this exercise are as follows:
 
 >**Results** : After completing this exercise, you will be able to create MVC controllers that implement common actions for the City model class in the application.
 
-### Exercise 2: Configuring routes by using the routing table.
+### Exercise 2: Configuring routes by using the routing table
 
 #### Scenario
 
@@ -256,7 +256,7 @@ The main tasks for this exercise are as follows:
 
 >**Results** : After completing this exercise, you will be able to Register a new custom route in the request pipeline for the Traveler Controller class in the application.
 
-### Exercise 3: Configuring routes using attributes.
+### Exercise 3: Configuring routes using attributes
 
 #### Scenario
 
@@ -284,7 +284,7 @@ The main tasks for this exercise are as follows:
 
 >**Results** : After completing this exercise, you will be able to add custom routes using attributes for the City Controller in the application.
 
-### Exercise 4: Adding an action filter. 
+### Exercise 4: Adding an action filter
 
 #### Scenario
 
@@ -298,7 +298,7 @@ The main tasks for this exercise are as follows:
 
 3. Add a handler for the OnActionExecuted event.
 
-4. Add a handler for the OnActionExecuted event.
+4. Add a handler for the OnResultExecuted event.
 
 5. Register the Action Filter with the City Controller.
 
