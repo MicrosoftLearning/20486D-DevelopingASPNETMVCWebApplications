@@ -6,19 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HTMLHelpersExample.Controllers
 {
-    public class ViewController : Controller
+    public class MainController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult DifferentControllerAction()
+        public IActionResult Normal()
         {
             return View();
         }
         
-        public IActionResult ChangedPath()
+        public IActionResult RegularWithParameter(string parameter1, string parameter2)
         {
             return View();
         }

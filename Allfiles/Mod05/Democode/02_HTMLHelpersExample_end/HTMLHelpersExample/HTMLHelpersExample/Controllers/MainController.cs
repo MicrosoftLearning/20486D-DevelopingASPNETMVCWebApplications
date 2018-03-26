@@ -6,22 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HTMLHelpersExample.Controllers
 {
-    public class ViewController : Controller
+    public class MainController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult DifferentControllerAction()
+        public IActionResult Normal()
         {
             return View();
         }
-
-        [Route("ChangedPathAction23423234")]
-        public IActionResult ChangedPathAction()
+        
+        public IActionResult RegularWithParameter(string parameter1, string parameter2)
         {
-            return View();
+            return Content($"Parameter1 result: {parameter1} {Environment.NewLine}Parameter2 result: {parameter2}");
         }
     }
 }
