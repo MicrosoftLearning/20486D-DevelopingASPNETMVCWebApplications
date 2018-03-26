@@ -4,7 +4,7 @@
 
 #### Scenario
 
-Your team has chosen ASP.NET MVC Core as the most appropriate ASP.NET programming model to create the photo sharing application for the Adventure Works web application. You need to create a detailed project design for the application, and have been given a set of functional and technical requirements with other information. You have to plan:
+Your team has chosen ASP.NET Core MVC as the most appropriate ASP.NET programming model to create the photo sharing application for the Adventure Works web application. You need to create a detailed project design for the application, and have been given a set of functional and technical requirements with other information. You have to plan:
 
 - An MVC model that you can use to implement the desired functionality.
 - One or more controllers and controller actions that respond to users actions.
@@ -15,7 +15,7 @@ Your team has chosen ASP.NET MVC Core as the most appropriate ASP.NET programmin
 
 After completing this lab, you will be able to:
 
-- Design an ASP.NET MVC Core web application that meets a set of functional requirements.
+- Design an ASP.NET Core MVC web application that meets a set of functional requirements.
 - Record the design in an accurate, precise, and informative manner.
 
 #### Lab Setup
