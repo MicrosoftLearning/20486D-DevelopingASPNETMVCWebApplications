@@ -86,7 +86,7 @@
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
-2. Go to **Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin\RazorSyntaxExample**, and then double-click **HTMLHelpersExample.sln**.
+2. Go to **Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin\HTMLHelpersExample**, and then double-click **HTMLHelpersExample.sln**.
 
 
 #### Demonstration Steps
@@ -165,3 +165,125 @@
      > **Note**:  The Main Controller's RegularWithParameter Action url path is: **http://localhost:[port]/Main/RegularWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
 
 17. In the **Microsoft Edge** window, click **Close**.
+
+
+
+### Demonstration: How to Use Tag Helpers
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+
+2. Go to **Allfiles\Mod05\Democode\03_TagHelpersExample_begin\TagHelpersExample**, and then double-click **TagHelpersExample.sln**.
+
+
+#### Demonstration Steps
+
+1. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Home** folder, and click **Index.cshtml**.
+
+2. In the **Index.cshtml** code window, locate the following code
+```cs
+@{
+    ViewData["Title"] = "Index";
+}
+```
+
+3. Place the mouse cursor before the located code, type the following code, and then press Enter.
+```cs
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+```
+
+4. In the **Index.cshtml** code window, locate the following code.
+```cs
+    <h2>Index Action, Home Controller</h2>
+```
+
+5. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+```cs
+    <a asp-action="Normal" asp-controller="Main">Press the link</a>
+```
+
+6. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Main** folder, and click **Normal.cshtml**.
+
+7. In the **Normal.cshtml** code window, locate the following code
+```cs
+@{
+    ViewData["Title"] = "RegularAction";
+}
+```
+
+8. Place the mouse cursor before the located code, type the following code, and then press Enter.
+```cs
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+```
+
+
+9. In the **Normal.cshtml** code window, locate the following code.
+```cs
+    <h2>Normal Action, Main Controller</h2>
+```
+
+10. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+```cs
+    <a asp-action="Index">Press the link</a>
+```    
+
+11. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Views** folder and the **Main** subfolder, click **Index.cshtml**.
+
+12. In the **Index.cshtml** code window, locate the following code
+```cs
+@{
+    ViewData["Title"] = "Index";
+}
+```
+
+13. Place the mouse cursor before the located code, type the following code, and then press Enter.
+```cs
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+```
+
+14. In the **Index.cs** code window, locate the following code.
+```cs
+    <h2>Index Action, MainController</h2>
+```
+
+15. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+```cs
+   <a asp-action="RegularWithParameter" asp-controller="Main"
+   asp-route-parameter1="Passing a value to the first parameter"
+   asp-route-parameter2="Passing a value to the second parameter">Press the link</a>
+
+```
+
+16. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **MainController.cs**.
+
+17. In the **MainController.cs** code window, locate and select the following code. 
+```cs
+        public IActionResult RegularWithParameter(string parameter1, string parameter2)
+        {
+            return View();
+        }
+```
+
+18. Replace the code you selected with the following code.
+```cs
+    public IActionResult RegularWithParameter(string parameter1, string parameter2)
+    {
+        return Content($"Parameter1 result: {parameter1} {Environment.NewLine}Parameter2 result: {parameter2}");
+    }
+```
+
+19. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+     > **Note**: The Home Controller's index action url path is: **http://localhost:[port]/**
+
+20. In the **Microsoft Edge**, Index page, press the link that leads to the next controller.
+     > **Note**:  The Main Controller's Normal Action url path is: **http://localhost:[port]/Main/Normal**
+
+21. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
+     > **Note**:  The Main Controller's Index Action url path is: **http://localhost:[port]/Main**
+
+22. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
+     > **Note**:  The Main Controller's RegularWithParameter Action url path is: **http://localhost:[port]/Main/RegularWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
+
+23. In the **Microsoft Edge** window, click **Close**.
+

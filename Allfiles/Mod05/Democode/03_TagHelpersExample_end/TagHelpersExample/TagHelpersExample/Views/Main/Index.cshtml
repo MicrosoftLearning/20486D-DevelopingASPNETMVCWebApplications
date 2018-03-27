@@ -1,0 +1,11 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index Action, Main Controller</h2>
+<a asp-action="RegularWithParameter" asp-controller="Main"
+   asp-route-parameter1="Passing a value to the first parameter"
+   asp-route-parameter2="Passing a value to the second parameter">Press the link</a>
+
+
