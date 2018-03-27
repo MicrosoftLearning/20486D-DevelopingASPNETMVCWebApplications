@@ -35,9 +35,9 @@
 5. Right click on the **Index** method name, and click **Add View...**.
 
 6. In the **Add MVC View** dialog window leave all the default values as they are, and press **OK**.
->**Note** : See that the Views and the Products folders were created. Inside them there is new file named Index.cshtml.
+>**Note** : See that the Views and the Product folders were created. Inside them there is new file named Index.cshtml.
 
-7. Inside the **body** element, type the following code.
+7. In the **Index.cshtml** code window, in the **body** element, press enter, and type the following code.
 ```cs
     @foreach (KeyValuePair<string, int> ProductPrices in ViewBag.ProductPrices)
     {  
@@ -52,7 +52,7 @@
     </p>
 ```
 
-9. In the **p** element, type the following code.
+9. In the **p** element, type the following code, and press enter.
 ```cs
     <div>
         Product Name: @ProductPrices.Key
@@ -68,9 +68,9 @@
 
 11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
     >**Note** : Displayed results:
-    > Product Name: Bread
-    > Product Price + Tax: 6
-    > Product Name: Rice
+    > Product Name: Bread, 
+    > Product Price + Tax: 6, 
+    > Product Name: Rice, 
     > Product Price + Tax: 3.6
     
 12. In the **Microsoft Edge** window, click **Close**.
