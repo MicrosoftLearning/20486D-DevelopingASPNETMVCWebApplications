@@ -12,7 +12,7 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the **RazorSyntaxExample - Microsoft Visual Studio** window, expand **RazorSyntaxExample** project file, right-click **Controllers**, and then click **ProductController**.
+1. In the Solution Explorer pane of the **RazorSyntaxExample - Microsoft Visual Studio** window, expand **RazorSyntaxExample** project file, right-click **Controllers**, and then click **ProductController.cs**.
 
 2. In the **ProductController.cs** code window, locate and select the following code. 
 ```cs
