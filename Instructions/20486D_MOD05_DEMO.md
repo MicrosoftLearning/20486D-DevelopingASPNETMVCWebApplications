@@ -100,14 +100,14 @@
 
 3. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
-    <p>@Html.ActionLink("Path: " + Url.Action("Normal", "Main"), "Normal", "Main")</p>
+    <p>@Html.ActionLink("Path: " + Url.Action("Standard", "Main"), "Standard", "Main")</p>
 ```
 
-4. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Main** folder, and click **Normal.cshtml**.
+4. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Main** folder, and click **Standard.cshtml**.
 
-5. In the **Normal.cshtml** code window, locate the following code.
+5. In the **Standard.cshtml** code window, locate the following code.
 ```cs
-    <h2>Normal Action, Main Controller</h2>
+    <h2>Standard Action, Main Controller</h2>
 ```
 
 6. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
@@ -125,7 +125,7 @@
 9. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
 <p>
-    @Html.ActionLink("Path: " + Url.Action("RegularWithParameter"), "RegularWithParameter", "Main",
+    @Html.ActionLink("Path: " + Url.Action("StandardWithParameter"), "StandardWithParameter", "Main",
         new
         {
             parameter1 = "Passing a value to the first parameter",
@@ -138,15 +138,15 @@
 
 11. In the **MainController.cs** code window, locate and select the following code. 
 ```cs
-        public IActionResult RegularWithParameter(string parameter1, string parameter2)
-        {
-            return View();
-        }
+    public IActionResult StandardWithParameter(string parameter1, string parameter2)
+    {
+        return View();
+    }
 ```
 
 12. Replace the code you selected with the following code
 ```cs
-    public IActionResult RegularWithParameter(string parameter1, string parameter2)
+    public IActionResult StandardWithParameter(string parameter1, string parameter2)
     {
         return Content($"Parameter1 result: {parameter1} {Environment.NewLine}Parameter2 result: {parameter2}");
     }
@@ -156,13 +156,13 @@
      > **Note**: The Home Controller's index action url path is: **http://localhost:[port]/**
 
 14. In the **Microsoft Edge**, Index page, press the link that leads to the next controller.
-     > **Note**:  The Main Controller's Normal Action url path is: **http://localhost:[port]/Main/Normal**
+     > **Note**:  The Main Controller's Standard Action url path is: **http://localhost:[port]/Main/Standard**
 
 15. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
      > **Note**:  The Main Controller's Index Action url path is: **http://localhost:[port]/Main**
 
 16. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
-     > **Note**:  The Main Controller's RegularWithParameter Action url path is: **http://localhost:[port]/Main/RegularWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
+     > **Note**:  The Main Controller's StandardWithParameter Action url path is: **http://localhost:[port]/Main/StandardWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
 
 17. In the **Microsoft Edge** window, click **Close**.
 
@@ -200,15 +200,15 @@
 
 5. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
-    <a asp-action="Normal" asp-controller="Main">Press the link</a>
+    <a asp-action="Standard" asp-controller="Main">Press the link</a>
 ```
 
-6. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Main** folder, and click **Normal.cshtml**.
+6. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Main** folder, and click **Standard.cshtml**.
 
-7. In the **Normal.cshtml** code window, locate the following code
+7. In the **Standard.cshtml** code window, locate the following code
 ```cs
 @{
-    ViewData["Title"] = "RegularAction";
+    ViewData["Title"] = "Standard";
 }
 ```
 
@@ -218,9 +218,9 @@
 ```
 
 
-9. In the **Normal.cshtml** code window, locate the following code.
+9. In the **Standard.cshtml** code window, locate the following code.
 ```cs
-    <h2>Normal Action, Main Controller</h2>
+    <h2>Standard Action, Main Controller</h2>
 ```
 
 10. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
@@ -249,7 +249,7 @@
 
 15. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
-   <a asp-action="RegularWithParameter" asp-controller="Main"
+   <a asp-action="StandardWithParameter" asp-controller="Main"
    asp-route-parameter1="Passing a value to the first parameter"
    asp-route-parameter2="Passing a value to the second parameter">Press the link</a>
 
@@ -259,7 +259,7 @@
 
 17. In the **MainController.cs** code window, locate and select the following code. 
 ```cs
-        public IActionResult RegularWithParameter(string parameter1, string parameter2)
+        public IActionResult StandardWithParameter(string parameter1, string parameter2)
         {
             return View();
         }
@@ -267,7 +267,7 @@
 
 18. Replace the code you selected with the following code.
 ```cs
-    public IActionResult RegularWithParameter(string parameter1, string parameter2)
+    public IActionResult StandardWithParameter(string parameter1, string parameter2)
     {
         return Content($"Parameter1 result: {parameter1} {Environment.NewLine}Parameter2 result: {parameter2}");
     }
@@ -277,13 +277,13 @@
      > **Note**: The Home Controller's index action url path is: **http://localhost:[port]/**
 
 20. In the **Microsoft Edge**, Index page, press the link that leads to the next controller.
-     > **Note**:  The Main Controller's Normal Action url path is: **http://localhost:[port]/Main/Normal**
+     > **Note**:  The Main Controller's Standard Action url path is: **http://localhost:[port]/Main/Standard**
 
 21. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
      > **Note**:  The Main Controller's Index Action url path is: **http://localhost:[port]/Main**
 
 22. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
-     > **Note**:  The Main Controller's RegularWithParameter Action url path is: **http://localhost:[port]/Main/RegularWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
+     > **Note**:  The Main Controller's StandardWithParameter Action url path is: **http://localhost:[port]/Main/StandardWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
 
 23. In the **Microsoft Edge** window, click **Close**.
 
