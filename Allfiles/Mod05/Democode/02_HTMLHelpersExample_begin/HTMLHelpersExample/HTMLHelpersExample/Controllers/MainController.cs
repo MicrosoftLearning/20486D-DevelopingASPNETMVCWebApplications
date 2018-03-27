@@ -13,12 +13,12 @@ namespace HTMLHelpersExample.Controllers
             return View();
         }
 
-        public IActionResult Normal()
+        public IActionResult Standard()
         {
             return View();
         }
         
-        public IActionResult RegularWithParameter(string parameter1, string parameter2)
+        public IActionResult StandardWithParameter(string parameter1, string parameter2)
         {
             return View();
         }
