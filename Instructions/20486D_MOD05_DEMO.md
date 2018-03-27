@@ -179,18 +179,18 @@
 
 #### Demonstration Steps
 
-1. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Home** folder, and click **Index.cshtml**.
+1. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Home** folder, and click **Index.cshtml**.
 
 2. In the **Index.cshtml** code window, locate the following code
 ```cs
-@{
-    ViewData["Title"] = "Index";
-}
+    @{
+        ViewData["Title"] = "Index";
+    }
 ```
 
-3. Place the mouse cursor before the located code, type the following code, and then press Enter.
+3. Place the mouse cursor at the line before the located code, and type the following code
 ```cs
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
 4. In the **Index.cshtml** code window, locate the following code.
@@ -203,18 +203,18 @@
     <a asp-action="Standard" asp-controller="Main">Press the link</a>
 ```
 
-6. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Main** folder, and click **Standard.cshtml**.
+6. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Main** folder, and click **Standard.cshtml**.
 
-7. In the **Standard.cshtml** code window, locate the following code
+7. In the **Standard.cshtml** code window, locate the following code.
 ```cs
-@{
-    ViewData["Title"] = "Standard";
-}
+    @{
+        ViewData["Title"] = "Standard";
+    }
 ```
 
-8. Place the mouse cursor before the located code, type the following code, and then press Enter.
+8. Place the mouse cursor at the line before the located code, and type the following code.
 ```cs
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
 
@@ -228,41 +228,41 @@
     <a asp-action="Index">Press the link</a>
 ```    
 
-11. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Views** folder and the **Main** subfolder, click **Index.cshtml**.
+11. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Views** folder and the **Main** subfolder, click **Index.cshtml**.
 
 12. In the **Index.cshtml** code window, locate the following code
 ```cs
-@{
-    ViewData["Title"] = "Index";
-}
+    @{
+        ViewData["Title"] = "Index";
+    }
 ```
 
-13. Place the mouse cursor before the located code, type the following code, and then press Enter.
+13. Place the mouse cursor at the line before the located code, and type the following code.
 ```cs
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
 14. In the **Index.cs** code window, locate the following code.
 ```cs
-    <h2>Index Action, MainController</h2>
+    <h2>Index Action, Main Controller</h2>
 ```
 
 15. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
    <a asp-action="StandardWithParameter" asp-controller="Main"
-   asp-route-parameter1="Passing a value to the first parameter"
-   asp-route-parameter2="Passing a value to the second parameter">Press the link</a>
+       asp-route-parameter1="Passing a value to the first parameter"
+       asp-route-parameter2="Passing a value to the second parameter">Press the link</a>
 
 ```
 
-16. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **MainController.cs**.
+16. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **MainController.cs**.
 
 17. In the **MainController.cs** code window, locate and select the following code. 
 ```cs
-        public IActionResult StandardWithParameter(string parameter1, string parameter2)
-        {
-            return View();
-        }
+    public IActionResult StandardWithParameter(string parameter1, string parameter2)
+    {
+        return View();
+    }
 ```
 
 18. Replace the code you selected with the following code.
@@ -273,7 +273,7 @@
     }
 ```
 
-19. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+19. On the **DEBUG** menu of the **TagHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
      > **Note**: The Home Controller's index action url path is: **http://localhost:[port]/**
 
 20. In the **Microsoft Edge**, Index page, press the link that leads to the next controller.
@@ -283,7 +283,7 @@
      > **Note**:  The Main Controller's Index Action url path is: **http://localhost:[port]/Main**
 
 22. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
-     > **Note**:  The Main Controller's StandardWithParameter Action url path is: **http://localhost:[port]/Main/StandardWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
+     > **Note**:  The parameter values are shown on the screen, and the Main Controller's StandardWithParameter Action url path is: **http://localhost:[port]/Main/StandardWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
 
 23. In the **Microsoft Edge** window, click **Close**.
 
