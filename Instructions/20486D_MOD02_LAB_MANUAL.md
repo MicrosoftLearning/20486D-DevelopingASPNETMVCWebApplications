@@ -151,7 +151,7 @@ The main tasks for this exercise are as follows:
 2. Plan the gallery view.
 
 
-#### Task 1: Define the view.
+#### Task 1: Define the views.
 
 1. Add a controller to the **Table 3: MVC Views** table.
 
