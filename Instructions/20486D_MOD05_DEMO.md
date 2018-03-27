@@ -119,7 +119,7 @@
 
 8. In the **Index.cs** code window, locate the following code.
 ```cs
-    <h2>Index Action, MainController</h2>
+    <h2>Index Action, Main Controller</h2>
 ```
 
 9. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
@@ -162,7 +162,7 @@
      > **Note**:  The Main Controller's Index Action url path is: **http://localhost:[port]/Main**
 
 16. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
-     > **Note**:  The Main Controller's StandardWithParameter Action url path is: **http://localhost:[port]/Main/StandardWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
+     > **Note**:  The parameter values are shown on the screen, and the Main Controller's StandardWithParameter Action url path is: **http://localhost:[port]/Main/StandardWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
 
 17. In the **Microsoft Edge** window, click **Close**.
 
