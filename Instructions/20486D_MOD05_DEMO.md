@@ -66,7 +66,8 @@
 ```
 
 11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-    >**Note** : Product Name: Bread<br>
+    >**Note** : The following is displayed in the browser:<br>
+    > Product Name: Bread<br>
     > Product Price + Tax: 5 * 1.2<br>
     > Product Name: Rice<br>
     > Product Price + Tax: 3 * 1.2
@@ -86,7 +87,8 @@
 ```
 
 11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-    >**Note** : Product Name: Bread<br>
+    >**Note** : The following is displayed in the browser:<br>
+    > Product Name: Bread<br>
     > Product Price + Tax: 6<br>
     > Product Name: Rice<br>
     > Product Price + Tax: 3.6
