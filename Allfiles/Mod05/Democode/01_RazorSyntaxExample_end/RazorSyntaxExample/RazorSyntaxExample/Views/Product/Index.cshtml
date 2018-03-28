@@ -11,14 +11,14 @@
     <title>Index</title>
 </head>
 <body>
-    @foreach (KeyValuePair<string, int> ProductPrices in ViewBag.ProductPrices)
+    @foreach (KeyValuePair<string, int> productPrices in ViewBag.ProductPrices)
     {
     <p>
         <div>
-            Product Name: @ProductPrices.Key
+            Product Name: @productPrices.Key
         </div>
         <div>
-            Product Price + Tax: @(ProductPrices.Value * 1.2)
+            Product Price + Tax: @(productPrices.Value * 1.2)
         </div>
     </p>
     }

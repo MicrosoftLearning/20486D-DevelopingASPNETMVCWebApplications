@@ -14,17 +14,16 @@
 
 1. In the Solution Explorer pane of the **RazorSyntaxExample - Microsoft Visual Studio** window, expand **RazorSyntaxExample** project file, right-click **Controllers**, and then click **ProductController.cs**.
 
-2. In the **ProductController.cs** code window, locate and select the following code. 
+2. In the **ProductController.cs** code window, locate the following code. 
 ```cs
     return View();
 ```
 
-3. Replace the code you selected with the following code
+3. Place the following code before the located code.
 ```cs
     ViewBag.ProductPrices = new Dictionary<string,int>();
     ViewBag.ProductPrices.Add("Bread", 5);
     ViewBag.ProductPrices.Add("Rice", 3);
-    return View();
 ```
 
 4. In the **ProductController.cs** code window, locate the following code:
@@ -35,7 +34,7 @@
 5. Right click on the **Index** method name, and click **Add View...**.
 
 6. In the **Add MVC View** dialog window leave all the default values as they are, and press **OK**.
->**Note** : See that the Views and the Product folders were created. Inside them there is new file named Index.cshtml.
+>**Note** : See that the Index.cshtm file was created inside the new Product subfolder that is inside the new Views folder.
 
 7. In the **Index.cshtml** code window, in the **body** element, press enter, and type the following code.
 ```cs
@@ -45,7 +44,7 @@
     }
 ```
 
-8. Inside the **@foreach** code block, type the following code
+8. Inside the **@foreach** code block, type the following code.
 ```cs
     <p>
        
@@ -62,15 +61,34 @@
 10. In the **p** element, below the **div** element, type the following code.
 ```cs
     <div>
-        Product Price + Tax: @(ProductPrices.Value * 1.2)
+        Product Price + Tax: @ProductPrices.Value * 1.2
     </div>
 ```
 
 11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-    >**Note** : Displayed results:
-    > Product Name: Bread, 
-    > Product Price + Tax: 6, 
-    > Product Name: Rice, 
+    >**Note** : Product Name: Bread<br>
+    > Product Price + Tax: 5 * 1.2<br>
+    > Product Name: Rice<br>
+    > Product Price + Tax: 3 * 1.2
+    
+12. In the **Microsoft Edge** window, click **Close**.
+
+13. On the **Debug** Menu, click **Stop Debugging**.
+
+14. In the **Index.cshtml** code window, locate and select the following code. 
+```cs
+    Product Price + Tax: @ProductPrices.Value * 1.2
+```
+
+10. Replace the code you selected with the following code.
+```cs
+    Product Price + Tax: @(ProductPrices.Value * 1.2)
+```
+
+11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+    >**Note** : Product Name: Bread<br>
+    > Product Price + Tax: 6<br>
+    > Product Name: Rice<br>
     > Product Price + Tax: 3.6
     
 12. In the **Microsoft Edge** window, click **Close**.
