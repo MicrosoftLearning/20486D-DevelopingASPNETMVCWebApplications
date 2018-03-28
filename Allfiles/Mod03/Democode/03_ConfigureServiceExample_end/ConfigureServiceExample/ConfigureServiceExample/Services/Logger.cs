@@ -8,15 +8,15 @@ namespace ConfigureServiceExample.Services
 {
     public class Logger : ILogger
     {
-        string filename;
+        string _filename;
         public Logger()
         {
-            filename = $"{DateTime.Now.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
+            _filename = $"{DateTime.Now.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
         }
 
         public void Log(string logData)
         {
-            File.AppendAllText(filename, $"{DateTime.UtcNow}: {logData}");
+            File.AppendAllText(_filename, $"{DateTime.UtcNow}: {logData}");
         }
     }
 }

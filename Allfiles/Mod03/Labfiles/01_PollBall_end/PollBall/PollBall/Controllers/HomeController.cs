@@ -10,17 +10,17 @@ namespace PollBall.Controllers
 {
     public class HomeController : Controller
     {
-        IPollResultsService pollResults;
+        IPollResultsService _pollResults;
 
         public HomeController(IPollResultsService pollResults)
         {
-            this.pollResults = pollResults;
+            _pollResults = pollResults;
         }
 
         public IActionResult Index()
         {
             StringBuilder results = new StringBuilder();
-            SortedDictionary<SelectedGame, int> voteLista = pollResults.GetVoteResult();
+            SortedDictionary<SelectedGame, int> voteLista = _pollResults.GetVoteResult();
 
             foreach (var gameVotes in voteLista)
             {

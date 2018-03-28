@@ -257,10 +257,10 @@
 
 12. Place the mouse cursor within the **Logger** class block, press enter, and then type the following code.
 ```cs
-    string filename;
+    string _filename;
 ```
 
-13. Place the mouse cursor at the end of the **filename** variable, press Enter twice, and then type the following code:
+13. Place the mouse cursor at the end of the **_filename** variable, press Enter twice, and then type the following code:
 ```cs
     public Logger()
     {
@@ -269,7 +269,7 @@
 
 14. Place the mouse cursor within the constructor code block you just created, and then type the following code.
 ```cs
-    filename = $"{DateTime.Now.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
+    _filename = $"{DateTime.Now.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
 ```
 >**Note:** Each Logger class instance will create a new log file. The log file name will be the logger class instance creation date.
 
