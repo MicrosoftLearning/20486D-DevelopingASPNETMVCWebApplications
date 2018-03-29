@@ -226,111 +226,107 @@
 
 #### Demonstration Steps
 
+
 1. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Home** folder, and click **Index.cshtml**.
 
-2. In the **Index.cshtml** code window, locate the following code
+2. In the **Index.cshtml** code window, locate the following code.
 ```cs
-    @{
-        ViewData["Title"] = "Index";
-    }
+    <body>
 ```
 
-3. Place the mouse cursor at the line before the located code, and type the following code
+3. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
-    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+    <a asp-action="Index" asp-controller="Person">To the person list</a>
 ```
 
-4. In the **Index.cshtml** code window, locate the following code.
+4. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
+
+5. Inside the **PersonController.cs** code window, in the **Index** action, locate the following code. 
 ```cs
-    <h2>Index Action, Home Controller</h2>
+    return View();
 ```
 
-5. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+6. Place the following code before the located code.
 ```cs
-    <a asp-action="Standard" asp-controller="Main">Press the link</a>
+    ViewBag.PersonNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
 ```
 
-6. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Main** folder, and click **Standard.cshtml**.
+7. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Person** folder, and click **Index.cshtml**.
 
-7. In the **Standard.cshtml** code window, locate the following code.
+8. In the **Index.cshtml** code window, locate the following code.
 ```cs
-    @{
-        ViewData["Title"] = "Standard";
-    }
+    <body>
 ```
 
-8. Place the mouse cursor at the line before the located code, and type the following code.
+9. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
-    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-```
-
-
-9. In the **Standard.cshtml** code window, locate the following code.
-```cs
-    <h2>Standard Action, Main Controller</h2>
-```
-
-10. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
-```cs
-    <a asp-action="Index">Press the link</a>
-```    
-
-11. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Views** folder and the **Main** subfolder, click **Index.cshtml**.
-
-12. In the **Index.cshtml** code window, locate the following code
-```cs
-    @{
-        ViewData["Title"] = "Index";
-    }
-```
-
-13. Place the mouse cursor at the line before the located code, and type the following code.
-```cs
-    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-```
-
-14. In the **Index.cs** code window, locate the following code.
-```cs
-    <h2>Index Action, Main Controller</h2>
-```
-
-15. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
-```cs
-   <a asp-action="StandardWithParameter" asp-controller="Main"
-       asp-route-parameter1="Passing a value to the first parameter"
-       asp-route-parameter2="Passing a value to the second parameter">Press the link</a>
-
-```
-
-16. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **MainController.cs**.
-
-17. In the **MainController.cs** code window, locate and select the following code. 
-```cs
-    public IActionResult StandardWithParameter(string parameter1, string parameter2)
+    @foreach (string currentName in ViewBag.PersonNames)
     {
-        return View();
-    }
+    
+	}
 ```
 
-18. Replace the code you selected with the following code.
+10. Place the mouse cursor within the foreach code block you just created, and then type the following code. 
 ```cs
-    public IActionResult StandardWithParameter(string parameter1, string parameter2)
-    {
-        return Content($"Parameter1 result: {parameter1} {Environment.NewLine}Parameter2 result: {parameter2}");
-    }
+    <div>
+        <a asp-action="Details" asp-controller="Person" asp-route-personName="@currentName">@currentName</a>
+    </div>
 ```
 
-19. On the **DEBUG** menu of the **TagHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-     > **Note**: The Home Controller's index action url path is: **http://localhost:[port]/**
+11. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
 
-20. In the **Microsoft Edge**, Index page, press the link that leads to the next controller.
-     > **Note**:  The Main Controller's Standard Action url path is: **http://localhost:[port]/Main/Standard**
+12. Inside the **PersonController.cs** code window, in the **Details** action, locate the following code. 
+```cs
+    return View();
+```
 
-21. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
-     > **Note**:  The Main Controller's Index Action url path is: **http://localhost:[port]/Main**
+13. Place the following code before the located code.
+```cs
+    ViewBag.SelectedPerson = personName;
+```
 
-22. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
-     > **Note**:  The parameter values are shown on the screen, and the Main Controller's StandardWithParameter Action url path is: **http://localhost:[port]/Main/StandardWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
+14. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Person** folder, and click **Details.cshtml**.
 
-23. In the **Microsoft Edge** window, click **Close**.
+15. In the **Details.cshtml** code window, locate the following code.
+```cs
+    <body>
+```
+
+16. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+```cs
+    <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
+```
+
+17. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+```cs
+    <p><a asp-action="Index">Back to person selection list</a></p>
+```
+
+18. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
+
+19. Inside the **PersonController.cs** code window, in the **Details** action, locate and select the following code. 
+```cs
+    return Content("");
+```
+
+20. Replace the code you selected with the following code. 
+```cs
+    return File($"{personName}.jpg", "image/jpeg");
+```
+
+21. On the **DEBUG** menu of the **TagHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+
+22. In the **Microsoft Edge**, Index page, press the link that contains the text **To the person list**.
+     > **Note**:  The link leads to the **Person** controller from the **Home** controller. List of links is shown. Each link contains a text of a person name.
+
+23. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
+     > **Note**:  An image that represent **Michael** is shown.
+
+24. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
+     > **Note**: List of links is shown. Each link contains a text of a person name.
+
+25. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
+     > **Note**:  An image that represent **Elena** is shown.
+
+26. In the **Microsoft Edge** window, click **Close**.
 
