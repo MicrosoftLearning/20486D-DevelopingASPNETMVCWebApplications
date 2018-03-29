@@ -24,15 +24,9 @@ namespace PhotoSharingSample
                    options.UseSqlServer(_configuration.GetConnectionString("PhotoSharingContext")));
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
             app.UseStaticFiles();
-
             app.UseMvcWithDefaultRoute();
         }
     }

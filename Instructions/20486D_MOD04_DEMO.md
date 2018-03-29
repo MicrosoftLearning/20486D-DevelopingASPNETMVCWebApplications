@@ -219,7 +219,8 @@ is the action result you added in the **ViewDataExample** action.
 ```
 17. In the Solution Explorer pane of the **RoutesExample - Microsoft Visual Studio** window, click **Startup.cs**.
 
-18. In the **Configure** method place the mouse cursor after the **app.UseStaticFiles();** method call, press Enter twice, and then type the following code.
+18. In the **Configure** method code block, type the following code. 
+
 ```cs
         app.UseMvc(routes =>
             {
