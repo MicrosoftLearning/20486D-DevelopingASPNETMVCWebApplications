@@ -115,7 +115,13 @@
 
 2. In the **Index.cshtml** code window, locate the following code.
 ```cs
-    <body>
+    <div class="center">
+        <span class="selection">
+            <span class="text">
+                Photos
+            </span>
+        </span>
+        <span class="selection">
 ```
 
 3. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
@@ -139,7 +145,7 @@
 
 8. In the **Index.cshtml** code window, locate the following code.
 ```cs
-    <body>
+    <p class="person text">Please select an employee from the list:</p>
 ```
 
 9. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
@@ -152,7 +158,7 @@
 
 10. Place the mouse cursor within the foreach code block you just created, and then type the following code. 
 ```cs
-    <div>
+    <div class="person selection">
         @Html.ActionLink(currentName, "Details", new { personName = currentName })
     </div>
 ```
@@ -173,7 +179,7 @@
 
 15. In the **Details.cshtml** code window, locate the following code.
 ```cs
-    <body>
+    <div class="center">
 ```
 
 16. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
@@ -183,7 +189,7 @@
 
 17. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
-    <p>@Html.ActionLink("Back to person selection list", "Index")</p>
+    <p class="text">@Html.ActionLink("Back to person selection list", "Index")</p>
 ```
 
 18. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
@@ -200,17 +206,17 @@
 
 21. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-22. In the **Microsoft Edge**, Index page, press the link that contains the text **To the person list**.
-     > **Note**:  The link leads to the **Person** controller from the **Home** controller. List of links is shown. Each link contains a text of a person name.
+22. In the **Microsoft Edge**, Index page, press the link that contains the text **Employees**.
+     > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
 
 23. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
-     > **Note**:  An image that represent **Michael** is shown.
+     > **Note**:  An page that represent **Michael** is shown. The page contains a name and a photo.
 
 24. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
-     > **Note**: List of links is shown. Each link contains a text of a person name.
+     > **Note**: List of links is shown. Each link contains a text of a person's name.
 
 25. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
-     > **Note**:  An image that represent **Elena** is shown.
+     > **Note**:  An page that represent **Elena** is shown. The page contains a name and a photo.
 
 26. In the **Microsoft Edge** window, click **Close**.
 

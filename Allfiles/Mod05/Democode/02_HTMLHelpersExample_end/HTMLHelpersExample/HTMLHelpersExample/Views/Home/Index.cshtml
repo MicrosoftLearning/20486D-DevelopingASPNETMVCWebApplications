@@ -9,8 +9,29 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    @Html.ActionLink("To the person list", "Index", "Person")
+    <h1>Contoso</h1>
+    <div class="center">
+        <span class="selection">
+            <span class="text">
+                Photos
+            </span>
+        </span>
+        <span class="selection">
+            @Html.ActionLink("Employees", "Index", "Person")
+        </span>
+        <span class="selection">
+            <span class="text">
+                Contact Us
+            </span>
+        </span>
+    </div>
+    <br />
+    <br />
+    <div class="text center">
+        Welcome to the contoso main page. Visit the employees page to see out employees.
+    </div>
 </body>
 </html>
