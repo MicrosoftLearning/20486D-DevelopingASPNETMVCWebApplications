@@ -1,0 +1,14 @@
+﻿
+.mainDiv {
+    background-image: url('istock-519553256.jpg');
+    background-size: cover; /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center; /* optional, center the image */
+    width: 300px;
+}
+
+.cardDiv {
+    opacity: 0.5;
+    margin-left: 35px;
+    margin-top: 10px;
+}
