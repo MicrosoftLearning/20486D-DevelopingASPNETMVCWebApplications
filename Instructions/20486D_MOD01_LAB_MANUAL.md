@@ -226,7 +226,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating a Web API application
 
-1. Start Visual Studio 2017 and create a new Web API project with the following name **CakeStoreApi** by using the **Web API** C# template.
+1. Start Visual Studio 2017 and create a new Web API project with the following name **CakeStoreApi** using the **API** C# template.
 
 2. Run the new Web API application in Microsoft Edge and review the **Content** displayed.
 
