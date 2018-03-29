@@ -4,23 +4,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace TagHelpersExample.Controllers
+namespace HTMLHelpersExample.Controllers
 {
     public class PersonController : Controller
     {
         public IActionResult Index()
         {
+            ViewBag.PersonNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
             return View();
         }
 
         public IActionResult Details(string personName)
         {
+            ViewBag.SelectedPerson = personName;
             return View();
         }
 
         public IActionResult GetImage(string personName)
         {
-            return Content("");
+            return File($"{personName}.jpg", "image/jpeg");
         }
     }
 }
