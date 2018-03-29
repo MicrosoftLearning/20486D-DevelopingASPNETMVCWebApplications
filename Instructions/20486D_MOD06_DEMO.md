@@ -80,21 +80,22 @@
 14. In the **BODY** element of the Index.cshtml code window, type the following code.
 
   ```cs
-       <h1>The first way to pass a model from an action to a view</h1>
+       <h1>Restaurant Information</h1>
        <div>
        </div>
+       <p id="remark">The First Way To Pass A Model From An Action To A View</p>
 ```
 
 15. In the **DIV** element of the Index.cshtml code window, type the following code.
 
   ```cs
-       <h4>@Model.Name</h4>
-       <h4>@Model.Address</h4>
-       <h4>@Model.Speciality</h4>
-       <h4>@Model.Open</h4>
-       <h4>@Model.Review</h4>
+       <p>@Model.Name</p>
+       <p>@Model.Address</p>
+       <p>@Model.Speciality</p>
+       <p>@Model.Open</p>
+       <p>@Model.Review</p>
 ```
-   >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you viewed in the model.
+   >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you wrote in the model.
 
 16. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **AnotherWayToDisplay.cshtml**.
 
@@ -111,16 +112,17 @@
 19. In the **BODY** element of the AnotherWayToDisplay.cshtml code window, type the following code.
 
   ```cs
-       <h1>The second way to pass a model from an action to a view</h1>
+       <h1>Restaurant Information</h1>
        <div>
        </div>
+       <p id="remark">The Second Way To Pass A Model From An Action To A View</p>
 ```
 20. In the **DIV** element of the AnotherWayToDisplay.cshtml code window, type the following code.
 
   ```cs
        @Html.EditorForModel()
 ```
-   >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you viewed in the model.
+   >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you wrote in the model.
 
 21. On the **FILE** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Save All**.
 
@@ -253,28 +255,33 @@
 17. In the **DIV** element of the Details.cshtml code window, type the following code.
 
   ```cs
-       <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.FullName)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.FullName)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.Email)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Email)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.Birthdate)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Birthdate)
-            </dd>
-        </dl>
-        <br />
-        <a asp-action="Index">Back to registration</a>
+       <div>
+          <span class="display-prop-name">
+               @Html.DisplayNameFor(model => model.FullName)
+          </span>
+          <br />
+          <span class="display-prop-value">
+               @Html.DisplayFor(model => model.FullName)
+           </span>
+        </div>
+        <div>
+          <span class="display-prop-name">
+               @Html.DisplayNameFor(model => model.Email)
+          </span>
+          <br />
+          <span class="display-prop-value">
+               @Html.DisplayFor(model => model.Email)
+          </span>
+        </div>
+        <div>
+          <span class="display-prop-name">
+               @Html.DisplayNameFor(model => model.Birthdate)
+          </span>
+          <br />
+          <span class="display-prop-value">
+               @Html.DisplayFor(model => model.Birthdate)
+          </span>
+        </div>
 ```
 >**Note:** This code block generates different HTML markup depending on the data type of the property that is being rendered
 
@@ -290,7 +297,7 @@
 
 23. On the **Register** page, in the **Password** box, type _&lt;A password of your choice&gt;_, and then click **Register**.
 
-24. Verify the newly registered user details.
+24. On the **User Details** page, Verify the newly registered user details.
 
 25. In the Windows Microsoft Edge window, click **Close**.
 
@@ -327,11 +334,15 @@
 4. In the **Person** code window, place the mouse cursor at the end of the **PersonId** property code, press Enter twice, and then type the following code.
 
   ```cs
+      [DataType(DataType.Text)]
+      [Display(Name = "Full Name:")]
       [Required(ErrorMessage = "Please enter your first name.")]
 ```
 5. Place the mouse cursor at the end of the **FirstName** property code, press Enter twice, and then type the following code.
 
   ```cs
+      [DataType(DataType.Text)]
+      [Display(Name = "Last Name:")]
       [Required(ErrorMessage = "Please enter your last name.")]
 ```
 
@@ -339,12 +350,14 @@
 
   ```cs
       [Range(15, 50)]
+      [Display(Name = "Age:")]
 ```
 
 7. Place the mouse cursor at the end of the **Age** property code, press Enter twice, and then type the following code.
 
   ```cs
       [StringLength(10)]
+      [Display(Name = "Description:")]
 ```
 8. In the Solution Explorer pane, under DataAnnotationsExample, expand **Controllers**, and then click **HomeController.cs**.
 
@@ -379,7 +392,7 @@
 14. In the **BODY** element of the Index.cshtml code window, type the following code.
 
   ```cs
-       <h1>Submit personal information</h1>
+       <h1>Submit Personal Information</h1>
        <div>
        </div>
 ```
@@ -409,7 +422,7 @@
             <input type="submit" value="Submit" />
         </form>
 ```
->**Note:** This code block generates validation messages to a &lt;form&gt; using ValidationMessage and ValidationSummary Tag Helpers
+>**Note:** This code block generates validation messages to a &lt;form&gt; using ValidationMessage and ValidationSummary Tag Helpers.
 
 16. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
 
@@ -419,11 +432,11 @@
 
 19. On the **Submit personal information** page, in the **LastName** box, Leave the field blank.
 
-20. On the **Submit personal information** page, in the **Age** box, type _&lt;5&gt;._
+20. On the **Submit personal information** page, in the **Age** box, type 5.
 
 21. On the **Submit personal information** page, in the **Description** box, type _&lt;More than ten characters&gt;_, and then click **Submit**.
 
-22. Verify the validation messages.
+22. On the **Submit personal information** page, Verify the validation messages.
 
 23. In the Windows Microsoft Edge window, click **Close**.
 
@@ -446,9 +459,9 @@
 
 1. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, right-click **Validators** folder, point to Add, and then click **class**.
 
-2. In the **Name** box of the **Add New Item – DataAnnotationsExample** dialog box, type **AgeValidationAttribute**, and then click Add.
+2. In the **Name** box of the **Add New Item – DataAnnotationsExample** dialog box, type **InUniversityValidationAttribute**, and then click Add.
 
-3. In the **AgeValidationAttribute** class code window, locate the following code.
+3. In the **InUniversityValidationAttribute** class code window, locate the following code.
 
   ```cs
       using System.Threading.Tasks;
@@ -459,27 +472,18 @@
       using DataAnnotationsExample.Models;
       using System.ComponentModel.DataAnnotations;
 ```
-5. In the **AgeValidationAttribute** class code window, locate the following code.
+5. In the **InUniversityValidationAttribute** class code window, locate the following code.
 
   ```cs
-      public class AgeValidationAttribute
+      public class InUniversityValidationAttribute
 ```
 6.  Append the following code to the existing line of code.
 
   ```cs
       : ValidationAttribute
 ```
-7. In the **AgeValidationAttribute** class code block, press Enter and then type the following code.
 
-
-  ```cs
-      private int _minYear;
-      public AgeValidationAttribute(int minYear)
-      {
-          _minYear = minYear;
-      }
-```
-8. Ensure that the cursor is at the end of the **AgeValidationAttribute** method code block, press Enter twice, and then type the following code.
+7. In the **InUniversityValidationAttribute** class code block, press Enter, and type the following code.
 
   ```cs
       protected override ValidationResult IsValid(object value, ValidationContext validationContext)
@@ -487,55 +491,55 @@
       }
 ```
 
-9. In the **IsValid** method code block press enter, and type the following code.
+8. In the **IsValid** method code block press enter, and type the following code.
 
   ```cs
-      Person person = (Person)validationContext.ObjectInstance;
-      if (person.Birthdate.Year > _minYear)
+      Student student = (Student)validationContext.ObjectInstance;
+      if (!student.UniversityStudent)
       {
-          return new ValidationResult("Sorry you should be at least 18 years old to submit your personal information");
+         return new ValidationResult("Sorry you should be a student in the university to submit");
       }
       return ValidationResult.Success;
 ```
 >**Note:** This code block Validates person's year of birth
 
-10. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, expand **Models**, and then click **Person.cs**.
+9. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, expand **Models**, and then click **Student.cs**.
 
-11. In the **Person** class code window, locate the following code.
+10. In the **Student** class code window, locate the following code.
 
   ```cs
       using System.Threading.Tasks;
 ```
-12. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
+11. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
 
   ```cs
       using DataAnnotationsExample.Validators;
 ```
 
-13. In the **Person** code window, place the mouse cursor at the end of the **LastName** property code, press Enter twice, and then type the following code.
+12. In the **Student** code window, place the mouse cursor at the end of the **Birthdate** property code, press Enter twice, and then type the following code.
 
   ```cs
-      [AgeValidation(2000)]
-      [DataType(DataType.Date)]
+      [Display(Name = "Are you a university student?")]
+      [InUniversityValidation]
 ```
 
-14. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
+13. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
 
-15. On the **DEBUG** menu of the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
+14. On the **DEBUG** menu of the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
 
-16. On the **Submit personal information** page, in the **Birthdate** box, select _&lt;In the year section greater then 2000&gt;_, and then click **Submit**.
+15. On the **Submit personal information** page, in the **Birthdate** box, select _&lt;In the year section greater then 2000&gt;_, and then click **Submit**.
 
-17. Verify the custom validation message.
+16. Verify the custom validation message.
 
-18. On the **Submit personal information** correct all the fields with the validation message, and then click **Submit**. 
+17. On the **Submit personal information** correct all the fields with the validation message, and then click **Submit**. 
 
       >**Note:** Verify the newly submitted personal information
 
-19. In the Windows Microsoft Edge window, click **Close**.
+18. In the Windows Microsoft Edge window, click **Close**.
 
-20. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
+19. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
 
-21. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
+20. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 

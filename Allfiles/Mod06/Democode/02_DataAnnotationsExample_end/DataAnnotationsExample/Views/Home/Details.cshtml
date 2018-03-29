@@ -6,32 +6,38 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
+    <link type="text/css" rel="stylesheet" href="~/css/StyleSheet.css" />
 </head>
 <body>
-    <h1>User details</h1>
+    <h1>User Details</h1>
     <div>
-        <dl class="dl-horizontal">
-            <dt>
+        <div>
+            <span class="display-prop-name">
                 @Html.DisplayNameFor(model => model.FullName)
-            </dt>
-            <dd>
+            </span>
+            <br />
+            <span class="display-prop-value">
                 @Html.DisplayFor(model => model.FullName)
-            </dd>
-            <dt>
+            </span>
+        </div>
+        <div>
+            <span class="display-prop-name">
                 @Html.DisplayNameFor(model => model.Email)
-            </dt>
-            <dd>
+            </span>
+            <br />
+            <span class="display-prop-value">
                 @Html.DisplayFor(model => model.Email)
-            </dd>
-            <dt>
+            </span>
+        </div>
+        <div>
+            <span class="display-prop-name">
                 @Html.DisplayNameFor(model => model.Birthdate)
-            </dt>
-            <dd>
+            </span>
+            <br />
+            <span class="display-prop-value">
                 @Html.DisplayFor(model => model.Birthdate)
-            </dd>
-        </dl>
-        <br />
-        <a asp-action="Index">Back to registration</a>
+            </span>
+        </div>
     </div>
 </body>
 </html>

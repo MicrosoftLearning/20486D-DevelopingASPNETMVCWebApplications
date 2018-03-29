@@ -7,21 +7,22 @@ using DataAnnotationsExample.Validators;
 
 namespace DataAnnotationsExample.Models
 {
-    public class Person
+    public class Student
     {
-        public int PersonId { get; set; }
+        public int StudentId { get; set; }
 
+		[Display(Name = "First Name:")]
         [Required(ErrorMessage = "Please enter your first name.")]
         public string FirstName { get; set; }
 
+		[Display(Name = "Last Name:")]
         [Required(ErrorMessage = "Please enter your last name.")]
         public string LastName { get; set; }
 
-        [AgeValidation(2000)]
+		[Display(Name = "Birthdate:")]
         [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }
 
-        [StringLength(10)]
-        public string Description { get; set; }
+        public bool UniversityStudent { get; set; }
     }
 }

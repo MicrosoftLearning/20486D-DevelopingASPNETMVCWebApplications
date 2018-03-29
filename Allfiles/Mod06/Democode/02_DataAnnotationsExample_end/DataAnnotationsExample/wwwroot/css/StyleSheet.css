@@ -1,0 +1,57 @@
+﻿input {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    width:250px;
+    text-align:center;
+}
+
+label {
+    display: inline-block;
+    width: 180px;
+    margin: 25px 1px 5px 1px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align:left;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 33px;
+    color: darkgreen;
+    text-align:center;
+}
+
+dt, dd {
+    font-size: 28px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    width: 200px;
+    background-color: darkgreen;
+    color: white;
+    margin-top:30px;
+}
+
+form{
+    text-align:center;
+}
+
+.display-prop-name {
+    display: inline-block;
+    width: 350px;
+    margin: 25px 1px 5px 1px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.display-prop-value {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+}
+

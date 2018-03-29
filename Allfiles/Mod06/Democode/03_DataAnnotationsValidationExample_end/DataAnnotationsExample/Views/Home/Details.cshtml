@@ -6,38 +6,47 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
+    <link type="text/css" rel="stylesheet" href="~/css/StyleSheet.css" />
 </head>
 <body>
-    <h1>Personal details</h1>
+    <h1>Personal Information</h1>
     <div>
-        <dl class="dl-horizontal">
-            <dt>
+        <div>
+            <p class="display-prop-name">
                 @Html.DisplayNameFor(model => model.FirstName)
-            </dt>
-            <dd>
+            </p>
+            <br />
+            <p class="display-prop-value">
                 @Html.DisplayFor(model => model.FirstName)
-            </dd>
-            <dt>
+            </p>
+        </div>
+        <div>
+            <p class="display-prop-name">
                 @Html.DisplayNameFor(model => model.LastName)
-            </dt>
-            <dd>
+            </p>
+            <br />
+            <p class="display-prop-value">
                 @Html.DisplayFor(model => model.LastName)
-            </dd>
-            <dt>
+            </p>
+        </div>
+        <div>
+            <p class="display-prop-name">
                 @Html.DisplayNameFor(model => model.Age)
-            </dt>
-            <dd>
+            </p>
+            <br />
+            <p class="display-prop-value">
                 @Html.DisplayFor(model => model.Age)
-            </dd>
-            <dt>
+            </p>
+        </div>
+        <div>
+            <p class="display-prop-name">
                 @Html.DisplayNameFor(model => model.Description)
-            </dt>
-            <dd>
+            </p>
+            <br />
+            <p class="display-prop-value">
                 @Html.DisplayFor(model => model.Description)
-            </dd>
-        </dl>
-        <br />
-        <a asp-action="Index">Go Back</a>
+            </p>
+        </div>
     </div>
 </body>
 </html>

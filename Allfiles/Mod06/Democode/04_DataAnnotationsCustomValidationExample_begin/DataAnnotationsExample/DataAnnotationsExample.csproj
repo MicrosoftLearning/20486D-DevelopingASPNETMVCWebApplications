@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Validators\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>

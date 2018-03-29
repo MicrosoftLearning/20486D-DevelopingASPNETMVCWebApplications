@@ -14,7 +14,7 @@ namespace DataAnnotationsExample.Controllers
             return View();
         }
 
-        public IActionResult Details(Person person)
+        public IActionResult Details(Student person)
         {
             if (!ModelState.IsValid)
             {
