@@ -22,7 +22,6 @@ namespace HTMLHelpersExample.Controllers
 
         public IActionResult GetImage(string personName)
         {
-
             return Content("");
         }
     }

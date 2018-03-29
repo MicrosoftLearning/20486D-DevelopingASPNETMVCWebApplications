@@ -167,7 +167,6 @@
     ViewBag.SelectedPerson = personName;
 ```
 
-
 14. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Person** folder, and click **Details.cshtml**.
 
 15. In the **Details.cshtml** code window, locate the following code.
@@ -197,22 +196,21 @@
     return File($"{personName}.jpg", "image/jpeg");
 ```
 
-
 21. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-22. In the **Microsoft Edge**, Index page, press the link that leads to the next controller.
+22. In the **Microsoft Edge**, Index page, press the link that contains the text **To the person list**.
+     > **Note**:  The link leads to the **Person** controller from the **Home** controller. List of links is shown. Each link contains a text of a person name.
 
 23. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
      > **Note**:  An image that represent **Michael** is shown.
 
-24. In the **Microsoft Edge**, Index page, press the link that contains the text **Back to person selection list**.
+24. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
+     > **Note**: List of links is shown. Each link contains a text of a person name.
 
 25. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
      > **Note**:  An image that represent **Elena** is shown.
 
-27. In the **Microsoft Edge** window, click **Close**.
-
-
+26. In the **Microsoft Edge** window, click **Close**.
 
 
 
