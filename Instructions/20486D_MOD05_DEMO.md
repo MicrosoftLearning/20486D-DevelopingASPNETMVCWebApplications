@@ -111,7 +111,7 @@
 
 #### Demonstration Steps
 
-1. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Home** folder, and click **Index.cshtml**.
+1. On the **Solution Explorer** pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and then click **Index.cshtml**.
 
 2. In the **Index.cshtml** code window, locate the following code.
 ```cs
@@ -123,7 +123,7 @@
     @Html.ActionLink("To the person list", "Index", "Person")
 ```
 
-4. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
+4. On the **Solution Explorer** pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
 
 5. Inside the **PersonController.cs** code window, in the **Index** action, locate the following code. 
 ```cs
@@ -135,7 +135,7 @@
     ViewBag.PersonNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
 ```
 
-7. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Person** folder, and click **Index.cshtml**.
+7. On the **Solution Explorer** pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Person** folder, and then click **Index.cshtml**.
 
 8. In the **Index.cshtml** code window, locate the following code.
 ```cs
@@ -157,7 +157,7 @@
     </div>
 ```
 
-11. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
+11. On the **Solution Explorer** pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
 
 12. Inside the **PersonController.cs** code window, in the **Details** action, locate the following code. 
 ```cs
@@ -169,7 +169,7 @@
     ViewBag.SelectedPerson = personName;
 ```
 
-14. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Person** folder, and click **Details.cshtml**.
+14. On the **Solution Explorer** pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Person** folder, and then click **Details.cshtml**.
 
 15. In the **Details.cshtml** code window, locate the following code.
 ```cs
@@ -186,7 +186,7 @@
     <p>@Html.ActionLink("Back to person selection list", "Index")</p>
 ```
 
-18. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
+18. On the **Solution Explorer** pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
 
 19. Inside the **PersonController.cs** code window, in the **Details** action, locate and select the following code. 
 ```cs
@@ -229,7 +229,7 @@
 #### Demonstration Steps
 
 
-1. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Home** folder, and click **Index.cshtml**.
+1. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
 
 2. In the **Index.cshtml** code window, locate the following code.
 ```cs
@@ -253,7 +253,7 @@
     ViewBag.PersonNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
 ```
 
-7. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Person** folder, and click **Index.cshtml**.
+7. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Person** folder, and click **Index.cshtml**.
 
 8. In the **Index.cshtml** code window, locate the following code.
 ```cs
@@ -287,7 +287,7 @@
     ViewBag.SelectedPerson = personName;
 ```
 
-14. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Person** folder, and click **Details.cshtml**.
+14. On the **Solution Explorer** pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Person** folder, and click **Details.cshtml**.
 
 15. In the **Details.cshtml** code window, locate the following code.
 ```cs
