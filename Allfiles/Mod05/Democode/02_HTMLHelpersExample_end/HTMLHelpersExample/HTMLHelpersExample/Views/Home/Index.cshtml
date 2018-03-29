@@ -1,10 +1,16 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    Layout = null;
 }
 
-<h2>Index Action, Home Controller</h2>
-<p>@Html.ActionLink("Path: " + Url.Action("Standard", "Main"), "Standard", "Main")</p>
+<!DOCTYPE html>
 
-
-
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @Html.ActionLink("To the person list", "Index", "Person")
+</body>
+</html>

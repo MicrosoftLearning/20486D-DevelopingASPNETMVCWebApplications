@@ -16,9 +16,11 @@ namespace HTMLHelpersExample
             services.AddMvc();
         }
         
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
             app.UseMvcWithDefaultRoute();
+
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {

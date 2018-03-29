@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
+    <p><a asp-action="Index">Back to person selection list</a></p>
+</body>
+</html>

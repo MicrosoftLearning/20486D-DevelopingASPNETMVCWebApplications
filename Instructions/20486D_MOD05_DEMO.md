@@ -66,8 +66,7 @@
 ```
 
 11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-    >**Note** : The following is displayed in the browser:<br>
-    > Product Name: Bread<br>
+    >**Note** : Product Name: Bread<br>
     > Product Price + Tax: 5 * 1.2<br>
     > Product Name: Rice<br>
     > Product Price + Tax: 3 * 1.2
@@ -87,8 +86,7 @@
 ```
 
 11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-    >**Note** : The following is displayed in the browser:<br>
-    > Product Name: Bread<br>
+    >**Note** : Product Name: Bread<br>
     > Product Price + Tax: 6<br>
     > Product Name: Rice<br>
     > Product Price + Tax: 3.6
@@ -115,76 +113,107 @@
 
 2. In the **Index.cshtml** code window, locate the following code.
 ```cs
-    <h2>Index Action, Home Controller</h2>
+    <body>
 ```
 
 3. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
-    <p>@Html.ActionLink("Path: " + Url.Action("Standard", "Main"), "Standard", "Main")</p>
+    @Html.ActionLink("To the person list", "Index", "Person")
 ```
 
-4. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Main** folder, and click **Standard.cshtml**.
+4. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
 
-5. In the **Standard.cshtml** code window, locate the following code.
+5. Inside the **PersonController.cs** code window, in the **Index** action, locate the following code. 
 ```cs
-    <h2>Standard Action, Main Controller</h2>
+    return View();
 ```
 
-6. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+6. Place the following code before the located code.
 ```cs
-    <p>@Html.ActionLink("Path: " + Url.Action("Index"), "Index")</p>
-```    
+    ViewBag.PersonNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
+```
 
-7. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Views** folder and the **Main** subfolder, click **Index.cshtml**.
+7. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Person** folder, and click **Index.cshtml**.
 
-8. In the **Index.cs** code window, locate the following code.
+8. In the **Index.cshtml** code window, locate the following code.
 ```cs
-    <h2>Index Action, Main Controller</h2>
+    <body>
 ```
 
 9. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
-<p>
-    @Html.ActionLink("Path: " + Url.Action("StandardWithParameter"), "StandardWithParameter", "Main",
-        new
-        {
-            parameter1 = "Passing a value to the first parameter",
-            parameter2 = "Passing a value to the second parameter"
-        })
-</p>
-```   
-
-10. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **MainController.cs**.
-
-11. In the **MainController.cs** code window, locate and select the following code. 
-```cs
-    public IActionResult StandardWithParameter(string parameter1, string parameter2)
+    @foreach (string currentName in ViewBag.PersonNames)
     {
-        return View();
-    }
+    
+	}
 ```
 
-12. Replace the code you selected with the following code
+10. Place the mouse cursor within the foreach code block you just created, and then type the following code. 
 ```cs
-    public IActionResult StandardWithParameter(string parameter1, string parameter2)
-    {
-        return Content($"Parameter1 result: {parameter1} {Environment.NewLine}Parameter2 result: {parameter2}");
-    }
+    <div>
+        @Html.ActionLink(currentName, "Details", new { personName = currentName })
+    </div>
 ```
 
-13. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-     > **Note**: The Home Controller's index action url path is: **http://localhost:[port]/**
+11. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
 
-14. In the **Microsoft Edge**, Index page, press the link that leads to the next controller.
-     > **Note**:  The Main Controller's Standard Action url path is: **http://localhost:[port]/Main/Standard**
+12. Inside the **PersonController.cs** code window, in the **Details** action, locate the following code. 
+```cs
+    return View();
+```
 
-15. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
-     > **Note**:  The Main Controller's Index Action url path is: **http://localhost:[port]/Main**
+13. Place the following code before the located code.
+```cs
+    ViewBag.SelectedPerson = personName;
+```
 
-16. In the **Microsoft Edge**, Index page, press the link that leads to the next action.
-     > **Note**:  The parameter values are shown on the screen, and the Main Controller's StandardWithParameter Action url path is: **http://localhost:[port]/Main/StandardWithParameter?parameter1=Passing%20a%20value%20to%20the%20first%20parameter&parameter2=Passing%20a%20value%20to%20the%20second%20parameter**
 
-17. In the **Microsoft Edge** window, click **Close**.
+14. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the the **Person** folder, and click **Details.cshtml**.
+
+15. In the **Details.cshtml** code window, locate the following code.
+```cs
+    <body>
+```
+
+16. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+```cs
+    <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
+```
+
+17. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+```cs
+    <p>@Html.ActionLink("Back to person selection list", "Index")</p>
+```
+
+18. On the **Solution Explorer** pane, of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
+
+19. Inside the **PersonController.cs** code window, in the **Details** action, locate and select the following code. 
+```cs
+    return Content("");
+```
+
+20. Replace the code you selected with the following code. 
+```cs
+    return File($"{personName}.jpg", "image/jpeg");
+```
+
+
+21. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+
+22. In the **Microsoft Edge**, Index page, press the link that leads to the next controller.
+
+23. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
+     > **Note**:  An image that represent **Michael** is shown.
+
+24. In the **Microsoft Edge**, Index page, press the link that contains the text **Back to person selection list**.
+
+25. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
+     > **Note**:  An image that represent **Elena** is shown.
+
+27. In the **Microsoft Edge** window, click **Close**.
+
+
+
 
 
 
