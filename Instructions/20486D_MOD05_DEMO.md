@@ -66,7 +66,8 @@
 ```
 
 11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-    >**Note** : Product Name: Bread<br>
+    >**Note** : The following is displayed in the browser:<br>
+    > Product Name: Bread<br>
     > Product Price + Tax: 5 * 1.2<br>
     > Product Name: Rice<br>
     > Product Price + Tax: 3 * 1.2
@@ -80,20 +81,21 @@
     Product Price + Tax: @ProductPrices.Value * 1.2
 ```
 
-10. Replace the code you selected with the following code.
+15. Replace the code you selected with the following code.
 ```cs
     Product Price + Tax: @(ProductPrices.Value * 1.2)
 ```
 
-11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-    >**Note** : Product Name: Bread<br>
+16. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+    >**Note** : The following is displayed in the browser:<br>
+    > Product Name: Bread<br>
     > Product Price + Tax: 6<br>
     > Product Name: Rice<br>
     > Product Price + Tax: 3.6
     
-12. In the **Microsoft Edge** window, click **Close**.
+17. In the **Microsoft Edge** window, click **Close**.
 
-13. On the **Debug** Menu, click **Stop Debugging**.
+18. On the **Debug** Menu, click **Stop Debugging**.
 
 
 # Lesson 2: Using HTML Helpers and Tag Helpers
