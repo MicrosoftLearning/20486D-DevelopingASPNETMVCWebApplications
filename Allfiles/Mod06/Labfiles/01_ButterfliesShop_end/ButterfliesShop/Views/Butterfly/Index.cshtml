@@ -1,0 +1,49 @@
+﻿@model ButterfliesShop.Models.IndexViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="~/css/ButterfliesShopStyles.css" />
+</head>
+<body>
+    <h1 class="main-titel">Butterflies Shop</h1>
+    <p class="into">Welcome to Our Web Store, Enjoy a Wide Variety of Butterflies</p>
+    <p class="into">Our Butterflies in The Shop</p>
+    <br />
+    @foreach (var item in Model.Butterfiles)
+    {
+        <div class="photo-index-card">
+            <h3 class="display-picture-title">
+                "@Html.DisplayFor(modelItem => item.CommonName)"
+            </h3>
+            @if (item.PhotoFileName != null)
+            {
+                <div class="photo-display">
+                    <img class="photo-display-img" src="@Url.Action("GetImage", "Butterfly", new { Id = item.Id })" />
+                </div>
+            }
+            <div>
+                <span class="display-label">
+                    @Html.DisplayNameFor(model => item.ButterflyFamily)
+                </span>
+                <br />
+                <span class="display-field">
+                    @Html.DisplayFor(model => item.ButterflyFamily)
+                </span>
+            </div>
+
+            <div>
+                <span class="display-label">
+                    @Html.DisplayNameFor(model => item.CreatedDate)
+                </span>
+                <span class="display-field">
+                    @Html.DisplayFor(model => item.CreatedDate)
+                </span>
+            </div>
+        </div>
+    }
+</body>
+</html>
