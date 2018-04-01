@@ -339,7 +339,7 @@
 
   ```cs
       [DataType(DataType.Text)]
-      [Display(Name = "Full Name:")]
+      [Display(Name = "First Name:")]
       [Required(ErrorMessage = "Please enter your first name.")]
 ```
 5. Place the mouse cursor at the end of the **FirstName** property code, press Enter twice, and then type the following code.
@@ -430,21 +430,25 @@
 
 17. On the **DEBUG** menu of the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
 
-18. On the **Submit personal information** page, in the **FirstName** box, Leave the field blank.
+18. On the **Submit Personal Information** page, in the **First Name** box, Leave the field blank.
 
-19. On the **Submit personal information** page, in the **LastName** box, Leave the field blank.
+19. On the **Submit Personal Information** page, in the **Last Name** box, Leave the field blank.
 
-20. On the **Submit personal information** page, in the **Age** box, type 5.
+20. On the **Submit Personal Information** page, in the **Age** box, type 5.
 
-21. On the **Submit personal information** page, in the **Description** box, type _&lt;More than ten characters&gt;_, and then click **Submit**.
+21. On the **Submit Personal Information** page, in the **Description** box, type _&lt;More than ten characters&gt;_, and then click **Submit**.
 
-22. On the **Submit personal information** page, Verify the validation messages.
+22. On the **Submit Personal Information** page, Verify the validation messages.
 
-23. In the Microsoft Edge window, click **Close**.
+23. On the **Submit Personal Information** correct all the fields with the validation message, and then click **Submit**. 
 
-24. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
+      >**Note:** Verify the newly submitted personal information.
 
-25. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
+24. In the Microsoft Edge window, click **Close**.
+
+25. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
+
+26. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
 
 # Lesson 3: Validating MVC Applications
 
@@ -533,19 +537,25 @@
 
 16. On the **DEBUG** menu of the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
 
-17. On the **Submit personal information** page, in the **Birthdate** box, select _&lt;In the year section greater then 2000&gt;_, and then click **Submit**.
+17. On the **Submit Student Information** page, in the **First name** box, type _&lt;A first name of your choice&gt;._
 
-18. Verify the custom validation message.
+18. On the **Submit Student Information** page, in the **Last name** box, type _&lt;A last name of your choice&gt;._
 
-19. On the **Submit personal information** correct all the fields with the validation message, and then click **Submit**. 
+19. On the **Submit Student Information** page, in the **BirthDate** box, type _&lt;A birthdate of your choice&gt;._
+
+20. On the **Submit Student Information** page, ensure that **Are you a university student?** checkbox is not selected and then click **Submit**.
+
+21. Verify the custom validation message.
+
+22. On the **Submit Student Information**, ensure that **Are you a university student?** checkbox is selected, and then click **Submit**. 
 
       >**Note:** Verify the newly submitted personal information.
 
-20. In the Microsoft Edge window, click **Close**.
+23. In the Microsoft Edge window, click **Close**.
 
-21. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
+24. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
 
-22. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
+25. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 

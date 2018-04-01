@@ -11,7 +11,7 @@ namespace DataAnnotationsExample.Models
         public int PersonId { get; set; }
 
         [DataType(DataType.Text)]
-        [Display(Name = "Full Name:")]
+        [Display(Name = "First Name:")]
         [Required(ErrorMessage = "Please enter your first name.")]
         public string FirstName { get; set; }
 
