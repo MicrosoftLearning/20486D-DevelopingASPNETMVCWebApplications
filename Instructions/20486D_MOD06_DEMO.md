@@ -13,11 +13,15 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the **BindViewsExample - Microsoft Visual Studio** window, right-click **Models** folder, point to Add, and then click **class**.
+1. In the **Solution Explorer** pane, right-click **BindViewsExample**, point to **Add**, and then click **New Folder**.
 
-2. In the **Name** box of the **Add New Item – BindViewsExample** dialog box, type **Restaurant**, and then click Add.
+2. In the **NewFolder** box, type **Models**, and then press Enter.
 
-3. In the **Restaurant** class code block, press Enter and then type the following code.
+3. In the Solution Explorer pane of the **BindViewsExample - Microsoft Visual Studio** window, right-click **Models** folder, point to Add, and then click **class**.
+
+4. In the **Name** box of the **Add New Item – BindViewsExample** dialog box, type **Restaurant**, and then click Add.
+
+5. In the **Restaurant** class code block, press Enter and then type the following code.
 
 
   ```cs
@@ -28,56 +32,56 @@
        public string Speciality { get; set; }
        public int Review { get; set; }
 ```
-4. In the Solution Explorer pane, under BindViewsExample, expand **Controllers**, and then click **HomeController.cs**.
+6. In the Solution Explorer pane, under BindViewsExample, expand **Controllers**, and then click **HomeController.cs**.
 
-5. In the **HomeController.cs** code window, locate the following code.
+7. In the **HomeController.cs** code window, locate the following code.
 
   ```cs
        using Microsoft.AspNetCore.Mvc;
 ```
-6. Ensure that the mouse cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code.
+8. Ensure that the mouse cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code.
 
   ```cs
        using BindViewsExample.Models;
 ```
 
-7. In the **Index** action code block, select the following code.
+9. In the **Index** action code block, select the following code.
 
   ```cs
        return View();
 ```
-8. Replace the selected code with the following code.
+10. Replace the selected code with the following code.
 
   ```cs
        Restaurant restaurant = new Restaurant() {Id = 1, Name = "My Kitchen 1",Address = "New Brunswick, 2657 Webster Street", Speciality = "Hamburgers", Open = true, Review = 4 }; 
        return View(restaurant);
 ```
-9. In the **AnotherWayToDisplay** action code block, select the following code.
+11. In the **AnotherWayToDisplay** action code block, select the following code.
 
   ```cs
        return View();
 ```
 
-10. Replace the selected code with the following code.
+12. Replace the selected code with the following code.
 
   ```cs
        Restaurant restaurant = new Restaurant() { Id = 2, Name = "My Kitchen 2", Address = "New Brunswick, 4175 Echo Lane Street", Speciality = "Sushi", Open = true, Review = 3 };
        return View(restaurant);
 ```
 
-11. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+13. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-12. In the **Index.cshtml** code window, locate the following code.
+14. In the **Index.cshtml** code window, locate the following code.
 
   ```cs
        <!DOCTYPE html>
 ```
-13. Place the mouse cursor before the located code, type the following code, and then press Enter.
+15. Place the mouse cursor before the located code, type the following code, and then press Enter.
 
   ```cs
        @model BindViewsExample.Models.Restaurant
 ```
-14. In the **BODY** element of the Index.cshtml code window, type the following code.
+16. In the **BODY** element of the Index.cshtml code window, type the following code.
 
   ```cs
        <h1>Restaurant Information</h1>
@@ -86,7 +90,7 @@
        <p id="remark">The First Way To Pass A Model From An Action To A View</p>
 ```
 
-15. In the **DIV** element of the Index.cshtml code window, type the following code.
+17. In the **DIV** element of the Index.cshtml code window, type the following code.
 
   ```cs
        <p>@Model.Name</p>
@@ -97,19 +101,19 @@
 ```
    >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you wrote in the model.
 
-16. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **AnotherWayToDisplay.cshtml**.
+18. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **AnotherWayToDisplay.cshtml**.
 
-17. In the **AnotherWayToDisplay.cshtml** code window, locate the following code.
+19. In the **AnotherWayToDisplay.cshtml** code window, locate the following code.
 
   ```cs
        <!DOCTYPE html>
 ```
-18. Place the mouse cursor before the located code, type the following code, and then press Enter.
+20. Place the mouse cursor before the located code, type the following code, and then press Enter.
 
   ```cs
        @model BindViewsExample.Models.Restaurant
 ```
-19. In the **BODY** element of the AnotherWayToDisplay.cshtml code window, type the following code.
+21. In the **BODY** element of the AnotherWayToDisplay.cshtml code window, type the following code.
 
   ```cs
        <h1>Restaurant Information</h1>
@@ -117,28 +121,28 @@
        </div>
        <p id="remark">The Second Way To Pass A Model From An Action To A View</p>
 ```
-20. In the **DIV** element of the AnotherWayToDisplay.cshtml code window, type the following code.
+21. In the **DIV** element of the AnotherWayToDisplay.cshtml code window, type the following code.
 
   ```cs
        @Html.EditorForModel()
 ```
    >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you wrote in the model.
 
-21. On the **FILE** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Save All**.
+22. On the **FILE** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Save All**.
 
-22. On the **DEBUG** menu of the **"BindViewsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
+23. On the **DEBUG** menu of the **"BindViewsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
 
        >**Note:** The browser window displays the first way to render the Restaurant properties.
 
-23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Home/Display** and then press Enter.
+24. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Home/Display** and then press Enter.
 
       >**Note:** The browser window displays the second way to render the Restaurant properties.
 
-24. In the Windows Microsoft Edge window, click **Close**.
+25. In the Microsoft Edge window, click **Close**.
 
-25. In the **"BindViewsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
+26. In the **"BindViewsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
 
-26. In the **"BindViewsExample - Microsoft Visual Studio"** window, click **Close**.
+27. In the **"BindViewsExample - Microsoft Visual Studio"** window, click **Close**.
 
 # Lesson 2: Working with Forms
 
@@ -231,7 +235,7 @@
             <input type="submit" value="Register" />
         </form>
 ```
->**Note:** This code block generates a &lt;form&gt; Html element using FormTagHelper
+>**Note:** This code block generates a &lt;form&gt; Html element using FormTagHelper.
 
 13. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Details.cshtml**.
 
@@ -283,7 +287,7 @@
           </span>
         </div>
 ```
->**Note:** This code block generates different HTML markup depending on the data type of the property that is being rendered
+>**Note:** This code block generates different HTML markup depending on the data type of the property that is being rendered.
 
 18. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
 
@@ -299,7 +303,7 @@
 
 24. On the **User Details** page, Verify the newly registered user details.
 
-25. In the Windows Microsoft Edge window, click **Close**.
+25. In the Microsoft Edge window, click **Close**.
 
 26. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
 
@@ -366,15 +370,13 @@
   ```cs
       return View(person);
 ```
-10. Replace the selected code with the following code.
+10. Place the mouse cursor before the located code, and type the following code.
 
   ```cs
       if (!ModelState.IsValid)
       {
           return View("Index", person);
       }
-      return View(person);
-
 ```
 
 11. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**. 
@@ -438,7 +440,7 @@
 
 22. On the **Submit personal information** page, Verify the validation messages.
 
-23. In the Windows Microsoft Edge window, click **Close**.
+23. In the Microsoft Edge window, click **Close**.
 
 24. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
 
@@ -457,33 +459,37 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, right-click **Validators** folder, point to Add, and then click **class**.
+1. In the **Solution Explorer** pane, right-click **DataAnnotationsExample**, point to **Add**, and then click **New Folder**.
 
-2. In the **Name** box of the **Add New Item – DataAnnotationsExample** dialog box, type **InUniversityValidationAttribute**, and then click Add.
+2. In the **NewFolder** box, type **Validators**, and then press Enter.
 
-3. In the **InUniversityValidationAttribute** class code window, locate the following code.
+3. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, right-click **Validators** folder, point to Add, and then click **class**.
+
+4. In the **Name** box of the **Add New Item – DataAnnotationsExample** dialog box, type **InUniversityValidationAttribute**, and then click Add.
+
+5. In the **InUniversityValidationAttribute** class code window, locate the following code.
 
   ```cs
       using System.Threading.Tasks;
 ```
-4. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
+6. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
 
   ```cs
       using DataAnnotationsExample.Models;
       using System.ComponentModel.DataAnnotations;
 ```
-5. In the **InUniversityValidationAttribute** class code window, locate the following code.
+7. In the **InUniversityValidationAttribute** class code window, locate the following code.
 
   ```cs
       public class InUniversityValidationAttribute
 ```
-6.  Append the following code to the existing line of code.
+8.  Append the following code to the existing line of code.
 
   ```cs
       : ValidationAttribute
 ```
 
-7. In the **InUniversityValidationAttribute** class code block, press Enter, and type the following code.
+9. In the **InUniversityValidationAttribute** class code block, press Enter, and type the following code.
 
   ```cs
       protected override ValidationResult IsValid(object value, ValidationContext validationContext)
@@ -491,7 +497,7 @@
       }
 ```
 
-8. In the **IsValid** method code block press enter, and type the following code.
+10. In the **IsValid** method code block press enter, and type the following code.
 
   ```cs
       Student student = (Student)validationContext.ObjectInstance;
@@ -501,45 +507,45 @@
       }
       return ValidationResult.Success;
 ```
->**Note:** This code block Validates person's year of birth
+>**Note:** This code block Validates whether the student is a university student.
 
-9. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, expand **Models**, and then click **Student.cs**.
+11. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, expand **Models**, and then click **Student.cs**.
 
-10. In the **Student** class code window, locate the following code.
+12. In the **Student** class code window, locate the following code.
 
   ```cs
       using System.Threading.Tasks;
 ```
-11. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
+13. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
 
   ```cs
       using DataAnnotationsExample.Validators;
 ```
 
-12. In the **Student** code window, place the mouse cursor at the end of the **Birthdate** property code, press Enter twice, and then type the following code.
+14. In the **Student** code window, place the mouse cursor at the end of the **Birthdate** property code, press Enter twice, and then type the following code.
 
   ```cs
       [Display(Name = "Are you a university student?")]
       [InUniversityValidation]
 ```
 
-13. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
+15. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
 
-14. On the **DEBUG** menu of the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
+16. On the **DEBUG** menu of the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
 
-15. On the **Submit personal information** page, in the **Birthdate** box, select _&lt;In the year section greater then 2000&gt;_, and then click **Submit**.
+17. On the **Submit personal information** page, in the **Birthdate** box, select _&lt;In the year section greater then 2000&gt;_, and then click **Submit**.
 
-16. Verify the custom validation message.
+18. Verify the custom validation message.
 
-17. On the **Submit personal information** correct all the fields with the validation message, and then click **Submit**. 
+19. On the **Submit personal information** correct all the fields with the validation message, and then click **Submit**. 
 
-      >**Note:** Verify the newly submitted personal information
+      >**Note:** Verify the newly submitted personal information.
 
-18. In the Windows Microsoft Edge window, click **Close**.
+20. In the Microsoft Edge window, click **Close**.
 
-19. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
+21. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Stop Debugging**.
 
-20. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
+22. In the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Close**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 

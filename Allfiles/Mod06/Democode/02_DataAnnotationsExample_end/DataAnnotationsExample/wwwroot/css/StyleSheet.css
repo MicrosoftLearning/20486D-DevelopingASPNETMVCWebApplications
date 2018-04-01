@@ -22,12 +22,8 @@ h1 {
     text-align:center;
 }
 
-dt, dd {
-    font-size: 28px;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
+div{
+    text-align:center;
 }
 
 input[type=submit] {

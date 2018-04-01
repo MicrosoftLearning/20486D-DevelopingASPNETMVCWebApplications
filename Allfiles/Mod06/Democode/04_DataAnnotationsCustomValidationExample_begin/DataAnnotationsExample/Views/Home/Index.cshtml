@@ -1,4 +1,4 @@
-﻿@model DataAnnotationsExample.Models.Person
+﻿@model DataAnnotationsExample.Models.Student
 
 <!DOCTYPE html>
 
@@ -6,9 +6,10 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="~/css/StyleSheet.css" />
 </head>
 <body>
-    <h1>Submit Personal Information</h1>
+    <h1>Submit student information</h1>
     <div>
         <form asp-action="Details">
             <div asp-validation-summary="All"></div>
@@ -25,9 +26,9 @@
             <input asp-for="Birthdate"/>
             <span asp-validation-for="Birthdate"></span>
             <br />
-            <label asp-for="Description"></label>
-            <textarea asp-for="Description"></textarea>
-            <span asp-validation-for="Description"></span>
+            <label asp-for="UniversityStudent"></label>
+            <input asp-for="UniversityStudent"/>
+            <span asp-validation-for="UniversityStudent"></span>
             <br />
             <input type="submit" value="Submit" />
         </form>

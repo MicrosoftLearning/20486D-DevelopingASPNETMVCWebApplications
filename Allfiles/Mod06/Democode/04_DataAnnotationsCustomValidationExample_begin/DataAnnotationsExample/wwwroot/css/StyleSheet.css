@@ -7,9 +7,13 @@
     margin-top:10px;
 }
 
+div{
+    text-align:center;
+}
+
 label {
     display: inline-block;
-    width: 180px;
+    width: 340px;
     margin: 25px 1px 5px 1px;
     font-weight: bold;
     font-size: 24px;
@@ -34,14 +38,6 @@ h1 {
     text-align:center;
 }
 
-dt, dd {
-    font-size: 28px;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-}
-
 input[type=checkbox] {
     width: 250px;
     height:22px;
@@ -55,10 +51,6 @@ input[type=submit] {
 }
 
 form{
-    text-align:center;
-}
-
-.border {
     text-align:center;
 }
 

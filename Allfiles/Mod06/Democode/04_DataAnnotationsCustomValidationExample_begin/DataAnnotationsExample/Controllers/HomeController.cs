@@ -14,13 +14,13 @@ namespace DataAnnotationsExample.Controllers
             return View();
         }
 
-        public IActionResult Details(Person person)
+        public IActionResult Details(Student student)
         {
             if (!ModelState.IsValid)
             {
-                return View("Index", person);
+                return View("Index", student);
             }
-            return View(person);
+            return View(student);
         }
     }
 }
