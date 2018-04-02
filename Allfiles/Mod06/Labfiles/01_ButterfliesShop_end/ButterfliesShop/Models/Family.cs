@@ -9,7 +9,7 @@ namespace ButterfliesShop.Models
     {
         Grassland,
         Nymphalidae,
-        Pieridae,
+        Danaine,
         Riodinidae
     }
 }

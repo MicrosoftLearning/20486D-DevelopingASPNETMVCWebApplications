@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ButterfliesShop.Models;
+using ButterfliesShop.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -15,7 +15,8 @@ namespace ButterfliesShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<IData, Data>();
+            services.AddSingleton<IDataService, DataService>();
+            services.AddSingleton<IButterfliesQuantityService,ButterfliesQuantityService>();
         }
 
         public void Configure(IApplicationBuilder app)

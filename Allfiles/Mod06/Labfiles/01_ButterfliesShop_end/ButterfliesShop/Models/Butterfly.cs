@@ -1,4 +1,5 @@
 ﻿using ButterfliesShop.Validators;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -20,9 +21,10 @@ namespace ButterfliesShop.Models
         [Display(Name = "Butterfly Family:")]
         public Family ButterflyFamily { get; set; }
 
-        [Display(Name = "Amount in the shop:")]
-        [AmountValidation(10)]
-        public int AmountInShop { get; set; }
+        [Required(ErrorMessage = "Please enter the butterflies quantity")]
+        [Display(Name = "Quantity:")]
+        [MaxButterflyQuantityValidation(50)]
+        public int Quantity { get; set; }
 
         [Display(Name = "Characteristics:")]
         [StringLength(30)]
@@ -33,9 +35,12 @@ namespace ButterfliesShop.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yy}")]
         public DateTime CreatedDate { get; set; }
 
-        [Display(Name ="Picture")]
-        [MaxLength]
-        public string PhotoFileName { get; set; }
+        [Display(Name = "Picture")]
+        public IFormFile PhotoAvatar { get; set; }
+
+        public string ImageName { get; set; }
+
+        public byte[] PhotoFile { get; set; }
 
         [HiddenInput(DisplayValue = false)]
         public string ImageMimeType { get; set; }

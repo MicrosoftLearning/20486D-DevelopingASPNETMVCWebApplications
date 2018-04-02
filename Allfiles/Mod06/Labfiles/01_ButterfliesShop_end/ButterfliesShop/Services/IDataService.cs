@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using ButterfliesShop.Models;
+using System.Collections.Generic;
 
-namespace ButterfliesShop.Models
+namespace ButterfliesShop.Services
 {
-    public interface IData
+    public interface IDataService
     {
         List<Butterfly> ButterfliesList { get; set; }
         List<Butterfly> ButterfliesInitializeData();

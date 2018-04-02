@@ -4,28 +4,43 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using ButterfliesShop.Models;
+using ButterfliesShop.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ButterfliesShop.Controllers
 {
     public class ButterflyController : Controller
     {
-        private IData _data;
-        private List<Butterfly> _butterfliesList;
+        private IDataService _data;
         private IHostingEnvironment _environment;
+        private IButterfliesQuantityService _butterfliesQuantityService;
 
-        public ButterflyController(IData data, IHostingEnvironment environment)
+        public ButterflyController(IDataService data, IHostingEnvironment environment,IButterfliesQuantityService butterfliesQuantityService)
         {
             _data = data;
-            _butterfliesList = _data.ButterfliesInitializeData();
             _environment = environment;
+            _butterfliesQuantityService = butterfliesQuantityService;
+            InitializeButterfliesData();
+        }
+
+        private void InitializeButterfliesData()
+        {
+            if (_data.ButterfliesList == null)
+            {
+                List<Butterfly> butterflies = _data.ButterfliesInitializeData();
+                foreach (var butterfly in butterflies)
+                {
+                    _butterfliesQuantityService.AddButterfliesQuantityData(butterfly);
+                }
+            }
         }
 
         public IActionResult Index()
         {
             IndexViewModel indexViewModel = new IndexViewModel();
-            indexViewModel.Butterfiles = _butterfliesList;
+            indexViewModel.Butterfiles = _data.ButterfliesList;
             return View(indexViewModel);
         }
 
@@ -36,14 +51,28 @@ namespace ButterfliesShop.Controllers
             {
                 string webRootpath = _environment.WebRootPath;
                 string folderPath = "\\images\\";
-                string fullPath = webRootpath + folderPath + requestedButterfly.PhotoFileName;
-                FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
-                byte[] fileBytes;
-                using (BinaryReader br = new BinaryReader(fileOnDisk))
+                string fullPath = webRootpath + folderPath + requestedButterfly.ImageName;
+                if (System.IO.File.Exists(fullPath))
                 {
-                    fileBytes = br.ReadBytes((int)fileOnDisk.Length);
+                    FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
+                    byte[] fileBytes;
+                    using (BinaryReader br = new BinaryReader(fileOnDisk))
+                    {
+                        fileBytes = br.ReadBytes((int)fileOnDisk.Length);
+                    }
+                    return File(fileBytes, requestedButterfly.ImageMimeType);
                 }
-                return File(fileBytes, requestedButterfly.ImageMimeType);
+                else
+                {
+                    if (requestedButterfly.PhotoFile.Length > 0)
+                    {
+                        return File(requestedButterfly.PhotoFile, requestedButterfly.ImageMimeType);
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+                }
             }
             else
             {
@@ -54,6 +83,17 @@ namespace ButterfliesShop.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            var FamiliesList = new List<SelectListItem>();
+            FamiliesList.Add(new SelectListItem
+            {
+                Text = "Select",
+                Value = ""
+            });
+            foreach (Family enumValue in Enum.GetValues(typeof(Family)))
+            {
+                FamiliesList.Add(new SelectListItem { Text = Enum.GetName(typeof(Family), enumValue), Value = enumValue.ToString() });
+            }
+            ViewBag.Families = FamiliesList;
             return View();
         }
 
@@ -62,8 +102,22 @@ namespace ButterfliesShop.Controllers
         {
             if (ModelState.IsValid)
             {
-                _data.AddButterfly(butterfly);
-                return RedirectToAction("Index");
+                Butterfly lastButterfly = _data.ButterfliesList.LastOrDefault();
+                butterfly.CreatedDate = DateTime.Today;
+                if (butterfly.PhotoAvatar != null && butterfly.PhotoAvatar.Length > 0)
+                {
+                    butterfly.ImageMimeType = butterfly.PhotoAvatar.ContentType;
+                    butterfly.ImageName = Path.GetFileName(butterfly.PhotoAvatar.FileName);
+                    butterfly.Id = lastButterfly.Id + 1;
+                    _butterfliesQuantityService.AddButterfliesQuantityData(butterfly);
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        butterfly.PhotoAvatar.CopyTo(memoryStream);
+                        butterfly.PhotoFile = memoryStream.ToArray();
+                    }
+                    _data.AddButterfly(butterfly);
+                    return RedirectToAction("Index");
+                }
             }
             return View(butterfly);
         }

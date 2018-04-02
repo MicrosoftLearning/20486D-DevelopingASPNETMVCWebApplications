@@ -6,11 +6,12 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
+    <link type="text/css" rel="stylesheet" href="~/css/ButterfliesShopStyles.css" />
 </head>
 <body>
     <h1>Add Butterflies to The Shop</h1>
     <div>
-        <form asp-action="Details">
+        <form method="post" enctype="multipart/form-data" asp-action="Create">
             <div asp-validation-summary="All"></div>
             <br />
             <label asp-for="CommonName"></label>
@@ -18,20 +19,19 @@
             <span asp-validation-for="CommonName"></span>
             <br />
             <label asp-for="ButterflyFamily"></label>
-            <input asp-for="ButterflyFamily" />
+            <select asp-for="ButterflyFamily" asp-items="ViewBag.Families"></select>
             <span asp-validation-for="ButterflyFamily"></span>
             <br />
             <label asp-for="Characteristics"></label>
             <input asp-for="Characteristics" />
             <span asp-validation-for="Characteristics"></span>
             <br />
-            <label asp-for="AmountInShop"></label>
-            <input asp-for="AmountInShop" />
-            <span asp-validation-for="AmountInShop"></span>
+            <label asp-for="Quantity"></label>
+            <input asp-for="Quantity" />
+            <span asp-validation-for="Quantity"></span>
             <br />
-            <label asp-for="CreatedDate"></label>
-            <input asp-for="CreatedDate" />
-            <span asp-validation-for="CreatedDate"></span>
+            <input asp-for="PhotoAvatar" type="file" />
+            <br />
             <input type="submit" value="Submit" />
         </form>
     </div>
