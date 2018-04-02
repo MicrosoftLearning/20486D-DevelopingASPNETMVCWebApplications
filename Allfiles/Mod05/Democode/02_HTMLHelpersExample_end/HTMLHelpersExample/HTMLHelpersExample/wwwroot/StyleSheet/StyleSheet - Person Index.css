@@ -1,0 +1,15 @@
+﻿div {
+    border-style: inset;
+    border-color: gray;
+    border-width: 5px;
+    background-color: gray;
+    width: 100px;
+    margin-left: calc(30% - 150px);
+    text-align: center;
+    display: block;
+}
+
+
+p {
+    margin-left: calc(30% - 150px);
+}

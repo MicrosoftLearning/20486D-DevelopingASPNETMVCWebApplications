@@ -9,14 +9,15 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link href="~/StyleSheet.css" rel="stylesheet" />
+    <link href="~/StyleSheet/StyleSheet - General.css" rel="stylesheet" />
+    <link href="~/StyleSheet/StyleSheet - Person Index.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Employees</h1>
-    <p class="person text">Please select an employee from the list:</p>
+    <p>Please select an employee from the list:</p>
     @foreach (string currentName in ViewBag.PersonNames)
     {
-        <div class="person selection">
+        <div>
             @Html.ActionLink(currentName, "Details", new { personName = currentName })
         </div>
     }

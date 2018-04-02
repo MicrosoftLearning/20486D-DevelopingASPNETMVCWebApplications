@@ -19,7 +19,7 @@
             <tr>
                 @for (int j = 0; j < 3; j++)
                 {
-                    @Html.Partial("PrimalNumber");
+                    @Html.Partial("PrimalNumber",j + (i*3));
                 }
             </tr>
         }

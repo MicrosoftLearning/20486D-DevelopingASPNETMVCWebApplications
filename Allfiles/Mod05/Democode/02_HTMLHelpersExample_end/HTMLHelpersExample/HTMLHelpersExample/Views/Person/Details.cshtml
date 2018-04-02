@@ -9,18 +9,19 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
-    <link href="~/StyleSheet.css" rel="stylesheet" />
+    <link href="~/StyleSheet/StyleSheet - General.css" rel="stylesheet" />
+    <link href="~/StyleSheet/StyleSheet - Person Details.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Employee Details</h1>
     <br />
-    <p class="center text">
+    <p>
         Name: @ViewBag.SelectedPerson
     </p>
     <br />
-    <div class="center">
+    <div>
         <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
-        <p class="text">@Html.ActionLink("Back to person selection list", "Index")</p>
+        <p>@Html.ActionLink("Back to person selection list", "Index")</p>
     </div>
 </body>
 </html>
