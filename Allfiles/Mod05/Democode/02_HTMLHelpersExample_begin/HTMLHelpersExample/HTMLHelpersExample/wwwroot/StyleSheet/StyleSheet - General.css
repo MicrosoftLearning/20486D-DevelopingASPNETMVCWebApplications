@@ -1,43 +1,46 @@
 ﻿body {
     background: linear-gradient(to bottom right, DarkBlue 0%, DodgerBlue 100%);
     background-repeat: no-repeat;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 html {
     height: 100%;
 }
 
-h1 {
+
+
+span:first-child, span:last-child {
+    opacity: 0.7;
+}
+
+img, div, nav {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    color: white;
-    opacity: 0.8;
+    display: block;
 }
 
-.text {
-    color: white;
-    opacity: 0.6;
-}
-
-.selection {
+div {
     border-style: inset;
     border-color: gray;
     border-width: 5px;
     background-color: gray;
     width: 100px;
+    
 }
 
-.person {
-    margin-left: 400px;
+
+body > p {
+    color: white;
+    opacity: 0.6;
 }
 
-.center {
+
+
+h1 {
     text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    color: white;
+    opacity: 0.8;
 }
 
 /* unvisited link */
@@ -62,4 +65,22 @@ a:hover {
 a:active {
     color: white;
     opacity: 0.8;
+}
+
+
+span {
+    color: white;
+    border-style: inset;
+    border-color: gray;
+    border-width: 5px;
+    background-color: gray;
+    width: 100px;
+    opacity: 0.8;
+    
+}
+
+    
+
+p {
+    text-align: center;
 }
