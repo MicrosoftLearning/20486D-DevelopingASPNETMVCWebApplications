@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link href="~/StyleSheet/StyleSheet - General.css" rel="stylesheet" />
-    <link href="~/StyleSheet/StyleSheet - Person Details.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Employee Details</h1>
@@ -19,9 +18,7 @@
         Name: @ViewBag.SelectedPerson
     </p>
     <br />
-    <div>
-        <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
-        <p>@Html.ActionLink("Back to person selection list", "Index")</p>
-    </div>
+    <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
+    <p>@Html.ActionLink("Back to person selection list", "Index")</p>
 </body>
 </html>
