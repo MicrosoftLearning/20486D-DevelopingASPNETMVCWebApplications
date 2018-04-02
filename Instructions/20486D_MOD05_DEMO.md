@@ -115,18 +115,16 @@
 
 2. In the **Index.cshtml** code window, locate the following code.
 ```cs
-    <div class="center">
-        <span class="selection">
-            <span class="text">
-                Photos
-            </span>
+    <nav>
+        <span>
+            Photos
         </span>
-        <span class="selection">
+        <span>
 ```
 
 3. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
 ```cs
-    @Html.ActionLink("To the person list", "Index", "Person")
+    @Html.ActionLink("Employees", "Index", "Person")
 ```
 
 4. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
@@ -136,7 +134,7 @@
     return View();
 ```
 
-6. Place the mouse cursor before the located code, type the following code, and then press Enter.
+6. Place the mouse cursor before the located code, and type the following code.
 ```cs
     ViewBag.PersonNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
 ```
@@ -145,7 +143,7 @@
 
 8. In the **Index.cshtml** code window, locate the following code.
 ```cs
-    <p class="person text">Please select an employee from the list:</p>
+    <p>Please select an employee from the list:</p>
 ```
 
 9. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
@@ -158,7 +156,7 @@
 
 10. Place the mouse cursor within the foreach code block you just created, and then type the following code. 
 ```cs
-    <div class="person selection">
+    <div>
         @Html.ActionLink(currentName, "Details", new { personName = currentName })
     </div>
 ```
@@ -170,7 +168,7 @@
     return View();
 ```
 
-13. Place the mouse cursor before the located code, type the following code, and then press Enter.
+13. Place the mouse cursor before the located code, and type the following code.
 ```cs
     ViewBag.SelectedPerson = personName;
 ```
@@ -179,7 +177,8 @@
 
 15. In the **Details.cshtml** code window, locate the following code.
 ```cs
-    <div class="center">
+    </p>
+    <br />
 ```
 
 16. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
@@ -194,7 +193,7 @@
 
 18. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
 
-19. Inside the **PersonController.cs** code window, in the **Details** action, locate and select the following code. 
+19. Inside the **PersonController.cs** code window, in the **GetImage** action, locate and select the following code. 
 ```cs
     return Content("");
 ```
@@ -210,13 +209,13 @@
      > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
 
 23. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
-     > **Note**:  An page that represent **Michael** is shown. The page contains a name and a photo.
+     > **Note**:  A page that represent **Michael** is shown. The page contains a name and a photo.
 
 24. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
      > **Note**: List of links is shown. Each link contains a text of a person's name.
 
 25. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
-     > **Note**:  An page that represent **Elena** is shown. The page contains a name and a photo.
+     > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
 
 26. In the **Microsoft Edge** window, click **Close**.
 
