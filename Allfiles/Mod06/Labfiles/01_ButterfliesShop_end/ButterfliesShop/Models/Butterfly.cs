@@ -19,13 +19,14 @@ namespace ButterfliesShop.Models
 
         [Required(ErrorMessage = "Please select the butterfly family")]
         [Display(Name = "Butterfly Family:")]
-        public Family ButterflyFamily { get; set; }
+        public Family? ButterflyFamily { get; set; }
 
-        [Required(ErrorMessage = "Please enter the butterflies quantity")]
-        [Display(Name = "Quantity:")]
+        [Required(ErrorMessage = "Please select the butterfly quantity")]
+        [Display(Name = "Butterflies Quantity:")]
         [MaxButterflyQuantityValidation(50)]
-        public int Quantity { get; set; }
+        public int? Quantity { get; set; }
 
+        [Required(ErrorMessage = "Please type the characteristics")]
         [Display(Name = "Characteristics:")]
         [StringLength(30)]
         public string Characteristics { get; set; }
@@ -35,14 +36,12 @@ namespace ButterfliesShop.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yy}")]
         public DateTime CreatedDate { get; set; }
 
-        [Display(Name = "Picture")]
+        [Required(ErrorMessage = "Please select the butterflies picture")]
+        [Display(Name = "Butterflies Picture:")]
         public IFormFile PhotoAvatar { get; set; }
 
         public string ImageName { get; set; }
-
         public byte[] PhotoFile { get; set; }
-
-        [HiddenInput(DisplayValue = false)]
         public string ImageMimeType { get; set; }
     }
 }

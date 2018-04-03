@@ -83,17 +83,6 @@ namespace ButterfliesShop.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            var FamiliesList = new List<SelectListItem>();
-            FamiliesList.Add(new SelectListItem
-            {
-                Text = "Select",
-                Value = ""
-            });
-            foreach (Family enumValue in Enum.GetValues(typeof(Family)))
-            {
-                FamiliesList.Add(new SelectListItem { Text = Enum.GetName(typeof(Family), enumValue), Value = enumValue.ToString() });
-            }
-            ViewBag.Families = FamiliesList;
             return View();
         }
 

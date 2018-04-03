@@ -77,7 +77,7 @@ a:hover {
     width: 150px;
     margin: 25px 1px 5px 1px;
     font-weight: bold;
-    font-size:large;
+    font-size: large;
 }
 
 .display-picture-title {
@@ -90,7 +90,7 @@ a:hover {
 .display-field {
     margin-left: auto;
     margin-right: auto;
-    font-size:medium;
+    font-size: medium;
 }
 
 .editor-label {
@@ -117,8 +117,8 @@ a:hover {
     border-style: solid;
     padding: 15px;
     margin: 10px 5px 5px 18px;
-    height: 750px;
-    width: 350px;
+    height: 754px;
+    width: 355px;
     float: left;
 }
 
@@ -128,18 +128,24 @@ a:hover {
     padding: 15px;
 }
 
-.photo-display-img {
-    width: 325px;
-    max-height: 250px;
-    margin:15px 5px 15px 5px;
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-input{
+.photo-display-img {
+    width: 325px;
+    height: 235px;
+    margin: 15px 5px 15px 5px;
+}
+
+input, select, textarea {
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
     width: 250px;
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
 }
 
@@ -167,13 +173,29 @@ ul {
     margin-left: 60px;
 }
 
-input[type=submit] {
-    width: 200px;
-    background-color: darkgreen;
+input[type=submit], button {
+    width: 180px;
+    background-color: #279b1f;
     color: white;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
 }
 
 form {
     text-align: center;
+}
+
+.form-field {
+    max-width: 605px;
+    margin: 0 auto;
+}
+
+.form-field .validation-error,
+.form-field .field-validation-error {
+        display: block;
+        text-align: right;
 }

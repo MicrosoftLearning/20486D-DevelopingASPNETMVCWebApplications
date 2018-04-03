@@ -20,10 +20,15 @@ namespace ButterfliesShop.Validators
         {
             var service = (IButterfliesQuantityService)validationContext.GetService(typeof(IButterfliesQuantityService));
             Butterfly butterfly = (Butterfly)validationContext.ObjectInstance;
-            int quantity = service.GetButterflyFamilyQuantity(butterfly.ButterflyFamily);
-            if (quantity > _maxAmount)
+            if (butterfly.ButterflyFamily != null)
             {
-                return new ValidationResult(string.Format("The store can hold up to {0} butterflies of the same variety currently there are {1}", _maxAmount,quantity));
+                int? quantity = service.GetButterflyFamilyQuantity(butterfly.ButterflyFamily.Value);
+                int? sumQuantity = quantity + butterfly.Quantity;
+                if (sumQuantity > _maxAmount)
+                {
+                    return new ValidationResult(string.Format("The store can hold up to {0} butterflies of the same variety currently there are {1}", _maxAmount, quantity));
+                }
+                return ValidationResult.Success;
             }
             return ValidationResult.Success;
         }

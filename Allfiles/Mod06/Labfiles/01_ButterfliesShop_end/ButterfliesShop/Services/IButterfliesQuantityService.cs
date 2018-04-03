@@ -8,8 +8,7 @@ namespace ButterfliesShop.Services
 {
     public interface IButterfliesQuantityService
     {
-        Dictionary<Family, int> ButterfliesQuantityDictionary { get; set; }
-        int GetButterflyFamilyQuantity(Family family);
+        int? GetButterflyFamilyQuantity(Family family);
         void AddButterfliesQuantityData(Butterfly butterfly);
     }
 }

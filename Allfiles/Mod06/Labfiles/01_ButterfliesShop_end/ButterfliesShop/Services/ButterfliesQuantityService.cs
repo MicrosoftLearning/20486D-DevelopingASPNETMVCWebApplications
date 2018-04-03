@@ -12,33 +12,36 @@ namespace ButterfliesShop.Services
         {
             if (ButterfliesQuantityDictionary == null)
             {
-                ButterfliesQuantityDictionary = new Dictionary<Family, int>();
-            }
-        }
-        public Dictionary<Family, int> ButterfliesQuantityDictionary { get; set; }
-        public void AddButterfliesQuantityData(Butterfly butterfly)
-        {
-            if (ButterfliesQuantityDictionary.ContainsKey(butterfly.ButterflyFamily))
-            {
-                ButterfliesQuantityDictionary[butterfly.ButterflyFamily] += butterfly.Quantity;
-            }
-            else
-            {
-                ButterfliesQuantityDictionary.Add(butterfly.ButterflyFamily, butterfly.Quantity);
+                ButterfliesQuantityDictionary = new Dictionary<Family, int?>();
             }
         }
 
-        public int GetButterflyFamilyQuantity(Family family)
+        private Dictionary<Family, int?> ButterfliesQuantityDictionary { get; set; }
+
+        public void AddButterfliesQuantityData(Butterfly butterfly)
         {
-            int quantity;
+            if (ButterfliesQuantityDictionary.ContainsKey(butterfly.ButterflyFamily.Value))
+            {
+                ButterfliesQuantityDictionary[butterfly.ButterflyFamily.Value] += butterfly.Quantity;
+            }
+            else
+            {
+                ButterfliesQuantityDictionary.Add(butterfly.ButterflyFamily.Value, butterfly.Quantity);
+            }
+        }
+
+        public int? GetButterflyFamilyQuantity(Family family)
+        {
+            int? quantity;
             if (ButterfliesQuantityDictionary.TryGetValue(family, out quantity))
             {
                 return quantity;
             }
             else
             {
-                return 0;
+                ButterfliesQuantityDictionary.Add(family, 0);
             }
+            return 0;
         }
     }
 }
