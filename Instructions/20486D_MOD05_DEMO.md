@@ -207,16 +207,16 @@
 
 21. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-22. In the **Microsoft Edge**, Index page, press the link that contains the text **Employees**.
+22. In the **Microsoft Edge** window, press the link that contains the text **Employees**.
      > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
 
-23. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
+23. In the **Microsoft Edge** window, press the link that mentions **Michael**.
      > **Note**:  A page that represent **Michael** is shown. The page contains a name and a photo.
 
-24. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
+24. In the **Microsoft Edge** window, press the link that contains the text **Back to person selection list**.     
      > **Note**: List of links is shown. Each link contains a text of a person's name.
 
-25. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
+25. In the **Microsoft Edge** window, press the link that mentions **Elena**.
      > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
 
 26. In the **Microsoft Edge** window, click **Close**.
@@ -289,16 +289,16 @@
 
 13. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-14. In the **Microsoft Edge**, Index page, press the link that contains the text **Employees**.
+14. In the **Microsoft Edge** window, press the link that contains the text **Employees**.
      > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
 
-15. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
+15. In the **Microsoft Edge** window, press the link that mentions **Michael**.
      > **Note**:  A page that represent **Michael** is shown. The page contains a name and a photo.
 
-16. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
+16. In the **Microsoft Edge** window, press the link that contains the text **Back to person selection list**.     
      > **Note**: List of links is shown. Each link contains a text of a person's name.
 
-17. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
+17. In the **Microsoft Edge** window, press the link that mentions **Elena**.
      > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
 
 18. In the **Microsoft Edge** window, click **Close**.
@@ -335,16 +335,16 @@
 
 28. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-29. In the **Microsoft Edge**, Index page, press the link that contains the text **Employees**.
+29. In the **Microsoft Edge** window, press the link that contains the text **Employees**.
      > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
 
-30. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
+30. In the **Microsoft Edge** window, press the link that mentions **Michael**.
      > **Note**:  A page that represent **Michael** is shown. The page contains a name and a photo.
 
-31. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
+31. In the **Microsoft Edge** window, press the link that contains the text **Back to person selection list**.     
      > **Note**: List of links is shown. Each link contains a text of a person's name.
 
-32. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
+32. In the **Microsoft Edge** window, press the link that mentions **Elena**.
      > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
 
 33. In the **Microsoft Edge** window, click **Close**.
