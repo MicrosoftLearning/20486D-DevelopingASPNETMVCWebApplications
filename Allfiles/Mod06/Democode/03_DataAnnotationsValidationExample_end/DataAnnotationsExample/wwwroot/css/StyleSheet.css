@@ -68,4 +68,14 @@ form{
     font-size: 24px;
 }
 
+.form-field {
+    max-width: 605px;
+    margin: 0 auto;
+}
+
+.form-field .validation-error,
+.form-field .field-validation-error {
+        display: block;
+        text-align: right;
+}
 

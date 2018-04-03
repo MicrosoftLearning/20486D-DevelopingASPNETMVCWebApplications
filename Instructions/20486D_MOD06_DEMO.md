@@ -404,24 +404,29 @@
   ```cs
        <form asp-action="Details">
             <div asp-validation-summary="All"></div>
-            <br />
-            <label asp-for="FirstName"></label>
-            <input asp-for="FirstName"/>
-            <span asp-validation-for="FirstName"></span>
-            <br />
-            <label asp-for="LastName"></label>
-            <input asp-for="LastName" />
-            <span asp-validation-for="LastName"></span>
-            <br />
-            <label asp-for="Age"></label>
-            <input asp-for="Age"/>
-            <span asp-validation-for="Age"></span>
-            <br />
-            <label asp-for="Description"></label>
-            <textarea asp-for="Description"></textarea>
-            <span asp-validation-for="Description"></span>
-            <br />
-            <input type="submit" value="Submit" />
+            <div class="form-field">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" />
+                <span asp-validation-for="LastName"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Age"></label>
+                <input asp-for="Age" />
+                <span asp-validation-for="Age"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description"></textarea>
+                <span asp-validation-for="Description"></span>
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Submit" />
+            </div>
         </form>
 ```
 >**Note:** This code block generates validation messages to a &lt;form&gt; using ValidationMessage and ValidationSummary Tag Helpers.
