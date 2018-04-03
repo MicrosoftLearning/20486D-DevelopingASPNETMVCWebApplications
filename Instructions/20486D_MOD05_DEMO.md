@@ -243,7 +243,7 @@
     @addTagHelper *, AuthoringTagHelpers
 ```
 
-4. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
+4. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, expand the **Home** folder, and then click **Index.cshtml**.
 
 5. In the **Index.cshtml** code window, locate and select the following code.
 ```cs
@@ -255,7 +255,7 @@
     <a asp-controller="Person" asp-action="Index">Employees</a>
 ```
 
-7. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Person** folder, and click **Index.cshtml**.
+7. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, expand the **Person** folder, and then click **Index.cshtml**.
 
 8. In the **Index.cshtml** code window, locate and select the following code.
 ```cs
@@ -267,7 +267,7 @@
     <a asp-action="Details" asp-route-personName="@currentName">@currentName</a>
 ```
 
-10. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Person** folder, and click **Details.cshtml**.
+10. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, expand the **Person** folder, and then click **Details.cshtml**.
 
 11. In the **Details.cshtml** code window, locate and select the following code.
 ```cs
