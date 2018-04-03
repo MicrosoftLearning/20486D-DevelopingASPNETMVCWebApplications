@@ -240,7 +240,6 @@
 3. In the **_ViewImports.cshtml** code window, type the following code.
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-    @addTagHelper *, AuthoringTagHelpers
 ```
 
 4. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, expand the **Home** folder, and then click **Index.cshtml**.
