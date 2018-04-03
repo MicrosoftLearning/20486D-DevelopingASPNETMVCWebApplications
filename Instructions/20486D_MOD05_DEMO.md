@@ -236,74 +236,74 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the **TagHelpersExample – Microsoft Visual Studio** window, right-click on the **Views** folder, point to **Add**, and then click **New Item**.
+1. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
 
-2. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
-
-3. In the **Index.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
+2. In the **Index.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-4. In the **Index.cshtml** code window, locate and select the following code.
+3. In the **Index.cshtml** code window, locate and select the following code.
 ```cs
     @Html.ActionLink("Employees", "Index", "Person")
 ```
 
-5. Replace the code you selected with the following code.
+4. Replace the code you selected with the following code.
 ```cs
     <a asp-controller="Person" asp-action="Index">Employees</a>
 ```
 
-6. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, expand the **Person** folder, and then click **Index.cshtml**.
+5. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, expand the **Person** folder, and then click **Index.cshtml**.
 
-7. In the **Index.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
+6. In the **Index.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-8. In the **Index.cshtml** code window, locate and select the following code.
+7. In the **Index.cshtml** code window, locate and select the following code.
 ```cs
     @Html.ActionLink(currentName, "Details", new { personName = currentName })
 ```
 
-9. Replace the code you selected with the following code.
+8. Replace the code you selected with the following code.
 ```cs
     <a asp-action="Details" asp-route-personName="@currentName">@currentName</a>
 ```
 
-10. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, in the **Person** folder, click **Details.cshtml**.
+9. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, in the **Person** folder, click **Details.cshtml**.
 
-11. In the **Details.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
+10. In the **Details.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-12. In the **Details.cshtml** code window, locate and select the following code.
+11. In the **Details.cshtml** code window, locate and select the following code.
 ```cs
     @Html.ActionLink("Back to person selection list", "Index")
 ```
 
-13. Replace the code you selected with the following code.
+12. Replace the code you selected with the following code.
 ```cs
     <a asp-action="Index">Back to person selection list</a>
 ```
 
-14. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+13. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-15. In the **Microsoft Edge**, Index page, press the link that contains the text **Employees**.
+14. In the **Microsoft Edge**, Index page, press the link that contains the text **Employees**.
      > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
 
-16. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
+15. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
      > **Note**:  A page that represent **Michael** is shown. The page contains a name and a photo.
 
-17. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
+16. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
      > **Note**: List of links is shown. Each link contains a text of a person's name.
 
-18. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
+17. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
      > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
 
-19. In the **Microsoft Edge** window, click **Close**.
+18. In the **Microsoft Edge** window, click **Close**.
+
+19. In the Solution Explorer pane of the **TagHelpersExample – Microsoft Visual Studio** window, right-click on the **Views** folder, point to **Add**, and then click **New Item**.
 
 20. In the **Web** category of the **Add New Item – TagHelpersExample** dialog box, click **Razor View Imports**, and then click Add.
 
@@ -350,3 +350,4 @@
 33. In the **Microsoft Edge** window, click **Close**.
 
 34. In the **Web** category of the **Add New Item – TagHelpersExample** dialog box, click **Razor View Imports**, and then click Add. 
+
