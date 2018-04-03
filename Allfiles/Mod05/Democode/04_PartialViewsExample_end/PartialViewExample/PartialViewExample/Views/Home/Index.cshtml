@@ -12,14 +12,14 @@
     <link href="StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Credit Card List</h1>
+    <h1>Person Card List</h1>
     <table>
-        @for (int i = 0; i < 5; i++)
+        @for (int rowIndex = 0; rowIndex < ViewBag.Rows; rowIndex++)
         {
             <tr>
-                @for (int j = 0; j < 3; j++)
+                @for (int columnIndex = 0; columnIndex < ViewBag.Columns; columnIndex++)
                 {
-                    @Html.Partial("PrimalNumber",j + (i*3));
+                    @Html.Partial("_CardDesign", (object)(columnIndex + (rowIndex * ViewBag.Columns)));
                 }
             </tr>
         }
