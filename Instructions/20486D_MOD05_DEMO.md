@@ -152,7 +152,7 @@
     @foreach (string currentName in ViewBag.PersonNames)
     {
     
-}
+    }
 ```
 
 10. Place the mouse cursor within the foreach code block you just created, and then type the following code. 
