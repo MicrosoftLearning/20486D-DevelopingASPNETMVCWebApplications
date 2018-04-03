@@ -305,7 +305,7 @@
 
 19. In the Solution Explorer pane of the **TagHelpersExample – Microsoft Visual Studio** window, right-click on the **Views** folder, point to **Add**, and then click **New Item**.
 
-20. In the **Web** category of the **Add New Item – TagHelpersExample** dialog box, click **Razor View Imports**, and then click Add.
+20. In the **Web** category of the **Add New Item – TagHelpersExample** dialog box, click **Razor View Imports**, and then click **Add**.
 
 21. In the **_ViewImports.cshtml** code window, type the following code.
 ```cs
@@ -348,6 +348,4 @@
      > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
 
 33. In the **Microsoft Edge** window, click **Close**.
-
-34. In the **Web** category of the **Add New Item – TagHelpersExample** dialog box, click **Razor View Imports**, and then click Add. 
 
