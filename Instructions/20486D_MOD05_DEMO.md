@@ -233,107 +233,67 @@
 
 #### Demonstration Steps
 
+1. In the Solution Explorer pane of the **TagHelpersExample – Microsoft Visual Studio** window, right-click on the **Views** folder, point to **Add**, and then click **New Item**.
 
-1. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
+2. In the **Web** category of the **Add New Item – TagHelpersExample** dialog box, click **Razor View Imports**, and then click Add.
 
-2. In the **Index.cshtml** code window, locate the following code.
+3. In the **_ViewImports.cshtml** code window, type the following code.
 ```cs
-    <body>
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+    @addTagHelper *, AuthoringTagHelpers
 ```
 
-3. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+4. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
+
+5. In the **Index.cshtml** code window, locate and select the following code.
 ```cs
-    <a asp-action="Index" asp-controller="Person">To the person list</a>
+    @Html.ActionLink("Employees", "Index", "Person")
 ```
 
-4. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
-
-5. Inside the **PersonController.cs** code window, in the **Index** action, locate the following code. 
+6. Replace the code you selected with the following code.
 ```cs
-    return View();
-```
-
-6. Place the mouse cursor before the located code, type the following code, and then press Enter.
-```cs
-    ViewBag.PersonNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
+    <a asp-controller="Person" asp-action="Index">Employees</a>
 ```
 
 7. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Person** folder, and click **Index.cshtml**.
 
-8. In the **Index.cshtml** code window, locate the following code.
+8. In the **Index.cshtml** code window, locate and select the following code.
 ```cs
-    <body>
+    @Html.ActionLink(currentName, "Details", new { personName = currentName })
 ```
 
-9. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+9. Replace the code you selected with the following code.
 ```cs
-    @foreach (string currentName in ViewBag.PersonNames)
-    {
-    
-	}
+    <a asp-action="Details" asp-route-personName="@currentName">@currentName</a>
 ```
 
-10. Place the mouse cursor within the foreach code block you just created, and then type the following code. 
+10. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Person** folder, and click **Details.cshtml**.
+
+11. In the **Details.cshtml** code window, locate and select the following code.
 ```cs
-    <div>
-        <a asp-action="Details" asp-controller="Person" asp-route-personName="@currentName">@currentName</a>
-    </div>
+    @Html.ActionLink("Back to person selection list", "Index")
 ```
 
-11. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
-
-12. Inside the **PersonController.cs** code window, in the **Details** action, locate the following code. 
+12. Replace the code you selected with the following code.
 ```cs
-    return View();
+    <a asp-action="Index">Back to person selection list</a>
 ```
 
-13. Place the mouse cursor before the located code, type the following code, and then press Enter.
-```cs
-    ViewBag.SelectedPerson = personName;
-```
+13. On the **DEBUG** menu of the **TagHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-14. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Person** folder, and click **Details.cshtml**.
-
-15. In the **Details.cshtml** code window, locate the following code.
-```cs
-    <body>
-```
-
-16. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
-```cs
-    <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
-```
-
-17. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
-```cs
-    <p><a asp-action="Index">Back to person selection list</a></p>
-```
-
-18. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Controllers** folder, click **PersonController.cs**.
-
-19. Inside the **PersonController.cs** code window, in the **Details** action, locate and select the following code. 
-```cs
-    return Content("");
-```
-
-20. Replace the code you selected with the following code. 
-```cs
-    return File($"{personName}.jpg", "image/jpeg");
-```
-
-21. On the **DEBUG** menu of the **TagHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-
-22. In the **Microsoft Edge**, Index page, press the link that contains the text **To the person list**.
+14. In the **Microsoft Edge**, Index page, press the link that contains the text **To the person list**.
      > **Note**:  The link leads to the **Person** controller from the **Home** controller. List of links is shown. Each link contains a text of a person name.
 
-23. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
+15. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
      > **Note**:  An image that represent **Michael** is shown.
 
-24. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
+16. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
      > **Note**: List of links is shown. Each link contains a text of a person name.
 
-25. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
+17. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
      > **Note**:  An image that represent **Elena** is shown.
 
-26. In the **Microsoft Edge** window, click **Close**.
+18. In the **Microsoft Edge** window, click **Close**.
+
+
 
