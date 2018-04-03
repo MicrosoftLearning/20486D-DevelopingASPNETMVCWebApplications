@@ -279,19 +279,19 @@
     <a asp-action="Index">Back to person selection list</a>
 ```
 
-13. On the **DEBUG** menu of the **TagHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+13. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-14. In the **Microsoft Edge**, Index page, press the link that contains the text **To the person list**.
-     > **Note**:  The link leads to the **Person** controller from the **Home** controller. List of links is shown. Each link contains a text of a person name.
+14. In the **Microsoft Edge**, Index page, press the link that contains the text **Employees**.
+     > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
 
 15. In the **Microsoft Edge**, Index page, press the link that mentions **Michael**.
-     > **Note**:  An image that represent **Michael** is shown.
+     > **Note**:  A page that represent **Michael** is shown. The page contains a name and a photo.
 
 16. In the **Microsoft Edge**, Details page, press the link that contains the text **Back to person selection list**.     
-     > **Note**: List of links is shown. Each link contains a text of a person name.
+     > **Note**: List of links is shown. Each link contains a text of a person's name.
 
 17. In the **Microsoft Edge**, Index page, press the link that mentions **Elena**.
-     > **Note**:  An image that represent **Elena** is shown.
+     > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
 
 18. In the **Microsoft Edge** window, click **Close**.
 
