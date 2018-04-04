@@ -349,3 +349,68 @@
 
 33. In the **Microsoft Edge** window, click **Close**.
 
+# Lesson 3: How to Create and Use Partial Views
+
+### Demonstration: How to Create and Use Partial Views
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+
+2. Go to **Allfiles\Mod05\Democode\04_PartialViewExample_begin\PartialViewExample**, and then double-click **PartialViewExample.sln**.
+
+
+#### Demonstration Steps
+
+1. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and then click **Index.cshtml**.
+
+2. In the **Index.cshtml** code window, locate the following code.
+```cs
+    int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
+```
+
+3. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+```cs
+    Html.Partial("_CardDesign", cardIndex);
+```
+
+4.  In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New  Folder**.
+
+5.  In the Solution Explorer pane, name thenewly created  folder  as **Shared**, and then press Enter.
+```cs
+    Html.Partial("_CardDesign", cardIndex);
+```
+
+6. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **View...**.
+    
+7.  In the **Add MVC View** dialog window, In the view name textbox, type: **_CardDesign**.
+
+8. In the **Add MVC View** dialog window, verify that the **Create as a partial view** checkbox is marked, and press **Add**.
+
+9. In the **_CardDesign.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
+```cs
+    @model int
+    @inject PartialViewExample.Services.IPersonProvider PersonList
+```
+
+10. In the **_CardDesign.cshtml** code window, locate the following code.
+```cs
+    @*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+    *@
+```
+
+11. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+```cs
+    <td>
+        <div>First Name: @PersonList[Model].FirstName</div>
+        <div>Last Name: @PersonList[Model].LastName</div>
+        <div>Residence: @PersonList[Model].Address</div>
+        <div>Phone: @PersonList[Model].PhoneNumber</div>
+    </td>
+```
+
+12. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+     > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, adress, and a phone.
+     
+13. In the **Microsoft Edge** window, click **Close**.
