@@ -20,7 +20,7 @@
                 @for (int columnIndex = 0; columnIndex < ViewBag.Columns; columnIndex++)
                 {
                     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
-                    Html.Partial("_CardDesign", cardIndex);
+                    @Html.Partial("_CardDesign", cardIndex);
                 }
             </tr>
         }

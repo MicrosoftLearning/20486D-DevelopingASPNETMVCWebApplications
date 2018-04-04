@@ -362,7 +362,7 @@
 
 #### Demonstration Steps
 
-1. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and then click **Index.cshtml**.
+1. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
 
 2. In the **Index.cshtml** code window, locate the following code.
 ```cs
@@ -371,33 +371,30 @@
 
 3. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
-    Html.Partial("_CardDesign", cardIndex);
+    @Html.Partial("_CardDesign", cardIndex);
 ```
 
 4.  In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New  Folder**.
 
 5.  In the Solution Explorer pane, name thenewly created  folder  as **Shared**, and then press Enter.
-```cs
-    Html.Partial("_CardDesign", cardIndex);
-```
 
-6. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **View...**.
+6. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Shared**, point to **Add**, and then click **View...**.
     
-7.  In the **Add MVC View** dialog window, In the view name textbox, type: **_CardDesign**.
+7.  In the **Add MVC View** dialog window, In the **View name** textbox, type: **_CardDesign**.
 
 8. In the **Add MVC View** dialog window, verify that the **Create as a partial view** checkbox is marked, and press **Add**.
 
-9. In the **_CardDesign.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
+9. In the **_CardDesign.cshtml** code window, locate and **delete** the following code.
+```cs
+    @*
+        For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+    *@
+```
+
+10. In the **_CardDesign.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
 ```cs
     @model int
     @inject PartialViewExample.Services.IPersonProvider PersonList
-```
-
-10. In the **_CardDesign.cshtml** code window, locate the following code.
-```cs
-    @*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-    *@
 ```
 
 11. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
@@ -414,3 +411,4 @@
      > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, adress, and a phone.
      
 13. In the **Microsoft Edge** window, click **Close**.
+
