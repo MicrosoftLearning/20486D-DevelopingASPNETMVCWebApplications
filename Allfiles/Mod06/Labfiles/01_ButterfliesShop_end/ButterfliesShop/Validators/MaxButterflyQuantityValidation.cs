@@ -1,10 +1,10 @@
-﻿using ButterfliesShop.Models;
-using ButterfliesShop.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using ButterfliesShop.Models;
+using ButterfliesShop.Services;
+using System.ComponentModel.DataAnnotations;
 
 namespace ButterfliesShop.Validators
 {
@@ -26,7 +26,7 @@ namespace ButterfliesShop.Validators
                 int? sumQuantity = quantity + butterfly.Quantity;
                 if (sumQuantity > _maxAmount)
                 {
-                    return new ValidationResult(string.Format("The store can hold up to {0} butterflies of the same variety currently there are {1}", _maxAmount, quantity));
+                    return new ValidationResult(string.Format("The store can hold up to {0} butterflies of the same family currently there are {1}", _maxAmount, quantity));
                 }
                 return ValidationResult.Success;
             }

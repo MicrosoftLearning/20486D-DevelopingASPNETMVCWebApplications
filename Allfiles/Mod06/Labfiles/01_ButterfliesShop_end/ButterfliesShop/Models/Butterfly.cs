@@ -1,11 +1,11 @@
-﻿using ButterfliesShop.Validators;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
+using ButterfliesShop.Validators;
+
 
 namespace ButterfliesShop.Models
 {
@@ -21,9 +21,9 @@ namespace ButterfliesShop.Models
         [Display(Name = "Butterfly Family:")]
         public Family? ButterflyFamily { get; set; }
 
+        [MaxButterflyQuantityValidation(50)]
         [Required(ErrorMessage = "Please select the butterfly quantity")]
         [Display(Name = "Butterflies Quantity:")]
-        [MaxButterflyQuantityValidation(50)]
         public int? Quantity { get; set; }
 
         [Required(ErrorMessage = "Please type the characteristics")]

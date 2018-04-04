@@ -435,9 +435,9 @@
 
 17. On the **DEBUG** menu of the **"DataAnnotationsExample - Microsoft Visual Studio"** window, click **Start Debugging**.
 
-18. On the **Submit Personal Information** page, in the **First Name** box, Leave the field blank.
+18. On the **Submit Personal Information** page, in the **First Name** box, leave the field blank.
 
-19. On the **Submit Personal Information** page, in the **Last Name** box, Leave the field blank.
+19. On the **Submit Personal Information** page, in the **Last Name** box, leave the field blank.
 
 20. On the **Submit Personal Information** page, in the **Age** box, type 5.
 
