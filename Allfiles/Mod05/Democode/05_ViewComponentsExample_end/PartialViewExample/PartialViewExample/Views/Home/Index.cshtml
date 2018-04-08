@@ -1,4 +1,7 @@
-﻿
+﻿@using System.Threading.Tasks
+@using System.Collections
+@using Microsoft.AspNetCore.Html
+
 @{
     Layout = null;
 }
@@ -20,7 +23,8 @@
                 @for (int columnIndex = 0; columnIndex < ViewBag.Columns; columnIndex++)
                 {
                     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
-                    @Html.Partial("_CardDesign", cardIndex);
+                    
+                    @await Component.InvokeAsync("PersonCard", cardIndex);
                 }
             </tr>
         }
