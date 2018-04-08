@@ -392,7 +392,7 @@
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-8. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New  Folder**.
+8. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New Folder**.
 
 9. In the Solution Explorer pane, name the newly created  folder as **Shared**, and then press Enter.
 
@@ -431,4 +431,84 @@
 17. In the **Microsoft Edge** window, click **Close**.
 
 
+# Lesson 3: How to Create and Use Partial Views
 
+### Demonstration: How to Create and Use View Components
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+
+2. Go to **Allfiles\Mod05\Democode\05_ViewComponentsExample_begin\ViewComponentExample**, and then double-click **ViewComponentExample.sln**.
+
+
+#### Demonstration Steps
+
+1. In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, right-click the **ViewComponentExample** project file, point to **Add**, and then click **New Folder**.
+
+2. In the Solution Explorer pane, name the newly created  folder as **ViewComponents**, and then press Enter.
+
+3.	In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, right-click **ViewComponents** folder, point to **Add**, and then click **Class**.
+
+4.	In the **Add New Item - ViewComponentExample** dialog box, in the **Name** text box, type **PersonCardViewComponent**, and then click **Add**.
+
+5. In the **HomeController.cs** code window, locate the following code.
+```cs
+    using System.Threading.Tasks;
+``` 
+
+6. Place the mouse cursor at the end of the code, press Enter, and type the following code
+```cs
+    using Microsoft.AspNetCore.Mvc;
+```
+
+7. In the **PersonCardViewComponent.cs** code window, locate and select the following code.
+```cs
+    public class PersonCardViewComponent
+```
+
+8. Replace the code you selected with the following code.
+```cs
+    public class PersonCardViewComponent : ViewComponent
+```
+
+9.	In the **PersonCardViewComponent.cs** code window, place the mouse cursor within the **PersonCardViewComponent** class code block, and then type the following code. 
+```cs
+    public async Task<IViewComponentResult> InvokeAsync(int id)
+    {
+        return View("CardDesign", id);
+    }
+```
+
+10. In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, expand the **Views** folder, right-click the **Shared** folder, point to **Add**, and then click **New Folder**.
+
+11. In the Solution Explorer pane, name the newly created  folder as **Components**, and then press Enter.
+
+12. In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, right-click the **Components** folder you just created, point to **Add**, and then click **New Folder**.
+
+13. In the Solution Explorer pane, name the newly created  folder as **PersonCard**, and then press Enter.
+
+14. Inside the **Components** folder, right-click the **_CardDesign.cshtml** file, and then click **Cut**.
+
+15. Right-click the **PersonCard.cshtml** folder you just created, and then click **Paste**.
+
+16. Right-click the **_CardDesign.cshtml** file you just moved, and then click **Rename**.
+
+17.  In the Solution Explorer pane, name the renamed file as **CardDesign.cshtml**, and then press Enter.
+
+18. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, expand the **Home** folder, and then click **Index.cshtml**.
+
+19. In the **Index.cshtml** code window, locate and select the following code.
+```cs
+    @Html.Partial("_CardDesign", cardIndex);
+```
+
+20. Replace the code you selected with the following code.
+```cs
+    @await Component.InvokeAsync("PersonCard", cardIndex);
+```
+
+21. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+     > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, adress, and a phone.
+     
+22. In the **Microsoft Edge** window, click **Close**.
