@@ -452,7 +452,7 @@
 
 4.	In the **Add New Item - ViewComponentExample** dialog box, in the **Name** text box, type **PersonCardViewComponent**, and then click **Add**.
 
-5. In the **HomeController.cs** code window, locate the following code.
+5. In the **PersonCardViewComponent.cs** code window, locate the following code.
 ```cs
     using System.Threading.Tasks;
 ``` 
