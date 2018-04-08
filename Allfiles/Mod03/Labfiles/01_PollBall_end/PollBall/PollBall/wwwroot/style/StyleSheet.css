@@ -1,0 +1,49 @@
+﻿body {
+    background-image: url("../images/grass.jpg");
+    background-repeat: repeat;
+    color: darkgray;
+    align-content: center;
+    text-align: center;
+}
+
+.submit-form {
+    margin-left: calc(50% - 300px);
+    width: 800px;
+}
+
+.submit-form .item {
+    clear: left;
+    padding: 5%;
+    overflow: auto;
+}
+
+.submit-form .item .img-item {
+    width: 25%;
+    float: left;
+}
+
+.submit-form .item img {
+    width: 100%;
+}
+
+.submit-form .item .input-item {
+    float: left;
+    height: inherit;
+    margin-top: 7%;
+    margin-left: 5%;
+}
+
+.submit-form .main-batch1 {
+    float: left;
+    width: 50%;
+}
+
+.submit-form .main-batch2 {
+    float: right;
+    width: 50%;
+}
+
+.submit-form .submit-batch {
+    clear: both;
+    margin-right:175px;
+}

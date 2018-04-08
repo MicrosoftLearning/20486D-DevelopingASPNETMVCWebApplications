@@ -1,0 +1,11 @@
+﻿@model int
+@inject PartialViewExample.Services.IPersonProvider PersonList
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<td>
+    <div>First Name: @PersonList[Model].FirstName</div>
+    <div>Last Name: @PersonList[Model].LastName</div>
+    <div>Residence: @PersonList[Model].Address</div>
+    <div>Phone: @PersonList[Model].PhoneNumber</div>
+</td>
