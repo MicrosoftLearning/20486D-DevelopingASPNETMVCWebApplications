@@ -364,7 +364,7 @@
 
 1. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Services** folder, and then click **Person.cs**.
 
-2. In the **Person.cs** code window, Place the mouse cursor within the **Person** constructor code block, and then type the following code. 
+2. In the **Person.cs** code window, place the mouse cursor within the **Person** constructor code block, and then type the following code. 
 ```cs
     FirstName = firstName;
     LastName = lastName;
@@ -374,11 +374,11 @@
 
 3. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, in the **Services** folder, click **PersonProvider.cs**.
 
-4. In the **PersonProvider.cs** code window, Place the mouse cursor within the **PersonProvider** constructor code block, and then type the following code. 
+4. In the **PersonProvider.cs** code window, place the mouse cursor within the **PersonProvider** constructor code block, and then type the following code. 
 ```cs
     personList = PersonInitializer();
 ```
-> **Note**: Now the persons created within the PersonInitializer method are returned to the person list member. The person list is retrieved using the classe's indexer.
+> **Note**: Now the persons created within the PersonInitializer method are returned to the **PersonList** member. The **PersonList** member is retrieved using the classe's indexer.
 
 5. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
 
@@ -392,13 +392,13 @@
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-8.  In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New  Folder**.
+8. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New  Folder**.
 
-9.  In the Solution Explorer pane, name thenewly created  folder  as **Shared**, and then press Enter.
+9. In the Solution Explorer pane, name the newly created  folder as **Shared**, and then press Enter.
 
 10. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Shared**, point to **Add**, and then click **View...**.
     
-11.  In the **Add MVC View** dialog window, In the **View name** textbox, type: **_CardDesign**.
+11. In the **Add MVC View** dialog window, In the **View name** textbox, type: **_CardDesign**.
 
 12. In the **Add MVC View** dialog window, verify that the **Create as a partial view** checkbox is marked, and press **Add**.
 
