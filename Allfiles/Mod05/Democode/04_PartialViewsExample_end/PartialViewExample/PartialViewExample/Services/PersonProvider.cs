@@ -25,9 +25,9 @@ namespace PartialViewExample.Services
         private List<Person> PersonInitializer()
         {
             List<Person> personList = new List<Person>();
-            personList.Add(new Person("Miguel", "Santos", "Av. Mem de Sá, Rio de Janeiro", "+55-21-4647-82755"));
+            personList.Add(new Person("Miguel", "Santos", "R. Falet, Rio de Janeiro", "+55-21-4647-82755"));
             personList.Add(new Person("Seo-yun", "Song", "Dorim-dong, Seoul", "+82-2-319-9284"));
-            personList.Add(new Person("Berat", "Arslan", "Beştelsiz Mahallesi, Istanbu", " +90-211-229-82133"));
+            personList.Add(new Person("Berat", "Arslan", "Beştelsiz Mahallesi, Istanbul", " +90-211-229-82133"));
             personList.Add(new Person("Olivia", "Smith", "Oakwood Village, Toronto", " +1-416-336-87206"));
             personList.Add(new Person("Emily", "Jones", "Sycamore Ave, Los Angeles", "+1-213-416-11922"));
             personList.Add(new Person("Noam", "Cohen", "Shalom Aleichem, Tel Aviv", "+972-3-551-42811"));

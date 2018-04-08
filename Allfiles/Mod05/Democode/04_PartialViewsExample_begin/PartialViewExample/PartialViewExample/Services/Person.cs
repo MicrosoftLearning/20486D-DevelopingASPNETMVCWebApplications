@@ -14,10 +14,7 @@ namespace PartialViewExample.Services
 
         public Person(string firstName, string lastName, string address, string phoneNumber)
         {
-            FirstName = firstName;
-            LastName = lastName;
-            Address = address;
-            PhoneNumber = phoneNumber;
+
         }
 
     }

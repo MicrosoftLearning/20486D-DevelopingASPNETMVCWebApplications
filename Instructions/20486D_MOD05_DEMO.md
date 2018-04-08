@@ -362,42 +362,65 @@
 
 #### Demonstration Steps
 
-1. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
+1. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Services** folder, and then click **Person.cs**.
 
-2. In the **Index.cshtml** code window, locate the following code.
+2. In the **Person.cs** code window, Place the mouse cursor within the **Person** constructor code block, and then type the following code. 
+```cs
+    FirstName = firstName;
+    LastName = lastName;
+    Address = address;
+    PhoneNumber = phoneNumber;
+```
+
+3. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, in the **Services** folder, click **PersonProvider.cs**.
+
+4. In the **PersonProvider.cs** code window, Place the mouse cursor within the **PersonProvider** constructor code block, and then type the following code. 
+```cs
+    personList = PersonInitializer();
+```
+> **Note**: Now the persons created within the PersonInitializer method are returned to the person list member. The person list is retrieved using the classe's indexer.
+
+5. In the **PersonProvider.cs** code window, Right click on the **PersonProvider** class name,  click **Quick Actions and Refactorings...**, and then click **Extract Interface**.
+
+6. In the **Extract Interface** dialog window leave all the default values as they are, and press **OK**.
+    > **Note**: A new code window is opened showing the newly created interface code. The interface contains an indexer as an array of Persons.
+
+7. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
+
+8. In the **Index.cshtml** code window, locate the following code.
 ```cs
     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
 ```
 
-3. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+9. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-4.  In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New  Folder**.
+10.  In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New  Folder**.
 
-5.  In the Solution Explorer pane, name thenewly created  folder  as **Shared**, and then press Enter.
+11.  In the Solution Explorer pane, name thenewly created  folder  as **Shared**, and then press Enter.
 
-6. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Shared**, point to **Add**, and then click **View...**.
+12. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Shared**, point to **Add**, and then click **View...**.
     
-7.  In the **Add MVC View** dialog window, In the **View name** textbox, type: **_CardDesign**.
+13.  In the **Add MVC View** dialog window, In the **View name** textbox, type: **_CardDesign**.
 
-8. In the **Add MVC View** dialog window, verify that the **Create as a partial view** checkbox is marked, and press **Add**.
+14. In the **Add MVC View** dialog window, verify that the **Create as a partial view** checkbox is marked, and press **Add**.
 
-9. In the **_CardDesign.cshtml** code window, locate and **delete** the following code.
+15. In the **_CardDesign.cshtml** code window, locate and **delete** the following code.
 ```cs
     @*
         For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
     *@
 ```
 
-10. In the **_CardDesign.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
+16. In the **_CardDesign.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
 ```cs
     @model int
     @inject PartialViewExample.Services.IPersonProvider PersonList
 ```
 
-11. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+17. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     <td>
         <div>First Name: @PersonList[Model].FirstName</div>
@@ -407,8 +430,9 @@
     </td>
 ```
 
-12. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+18. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
      > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, adress, and a phone.
      
-13. In the **Microsoft Edge** window, click **Close**.
+19. In the **Microsoft Edge** window, click **Close**.
+
 
