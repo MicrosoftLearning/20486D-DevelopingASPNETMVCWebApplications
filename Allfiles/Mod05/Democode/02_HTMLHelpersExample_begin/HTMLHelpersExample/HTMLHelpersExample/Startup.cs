@@ -18,9 +18,9 @@ namespace HTMLHelpersExample
         
         public void Configure(IApplicationBuilder app)
         {
-            app.UseMvcWithDefaultRoute();
-
             app.UseStaticFiles();
+
+            app.UseMvcWithDefaultRoute();
 
             app.Run(async (context) =>
             {
