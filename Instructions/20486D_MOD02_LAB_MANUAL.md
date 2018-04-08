@@ -106,9 +106,8 @@ You need to recommend a set of MVC controllers that are required to implement a 
 
 The main tasks for this exercise are as follows:
 
-1. Plan the photo controller.
-
-2. Plan the comment controller.
+-   Plan the photo controller.
+-   Plan the comment controller.
 
 
 #### Task 1: Plan the photo controller.
@@ -144,9 +143,8 @@ You need to recommend a set of MVC views that are required to implement a photo 
 
 The main tasks for this exercise are as follows:
 
-1. Plan the single photo view.
-
-2. Plan the gallery view.
+-   Plan the single photo view.
+-   Plan the gallery view.
 
 
 #### Task 1: Define the views.
@@ -203,17 +201,16 @@ You need to recommend a web server and database server configuration that is req
 
 The main tasks for this exercise are as follows:
 
-1. Hosting options.
-
-2. Choose a data store.
+-   Hosting options.
+-   Choose a data store.
 
 #### Task 1: Hosting options.
 
-- Based on your reading of the **InitialInvestigation** document, add a description of the web server arrangements that are suited to host the photo sharing application.
+1. Based on your reading of the **InitialInvestigation** document, add a description of the web server arrangements that are suited to host the photo sharing application.
 
 #### Task 2: Choose a data store.
 
-- Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements that are suited to host the photo sharing application.
+2. Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements that are suited to host the photo sharing application.
 
    >**Results**: After completing this exercise, you will be able to create proposals for hosting arrangements.
 
