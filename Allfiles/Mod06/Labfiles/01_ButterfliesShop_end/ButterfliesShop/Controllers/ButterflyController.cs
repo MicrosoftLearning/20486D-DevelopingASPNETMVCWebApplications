@@ -106,6 +106,7 @@ namespace ButterfliesShop.Controllers
                     _data.AddButterfly(butterfly);
                     return RedirectToAction("Index");
                 }
+                return View(butterfly);
             }
             return View(butterfly);
         }
