@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using PartialViewExample.Services;
 
-namespace PartialViewExample
+namespace ViewComponentExample
 {
     public class Startup
     {
