@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PartialViewExample.Services
 {
-    public class PersonProvider
+    public class PersonProvider : IPersonProvider
     {
         public Person this[int index]
         {
