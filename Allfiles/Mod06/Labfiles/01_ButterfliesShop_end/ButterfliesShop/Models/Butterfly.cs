@@ -26,9 +26,9 @@ namespace ButterfliesShop.Models
         [Display(Name = "Butterflies Quantity:")]
         public int? Quantity { get; set; }
 
+        [StringLength(50)]
         [Required(ErrorMessage = "Please type the characteristics")]
         [Display(Name = "Characteristics:")]
-        [StringLength(30)]
         public string Characteristics { get; set; }
 
         [DataType(DataType.DateTime)]
