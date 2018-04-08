@@ -31,9 +31,7 @@ You need to recommend an MVC model that is required to implement a photo sharing
 The main tasks for this exercise are as follows:
 
 -   Examine the initial investigation.
-
 -   Plan the photo model class.
-
 -   Plan the comment model class.
 
 
