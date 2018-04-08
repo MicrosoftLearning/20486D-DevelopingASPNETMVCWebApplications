@@ -382,7 +382,7 @@
 
 5. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
 
-6. In the **Index.cshtml** code window, locate the following code.
+6. In the **Index.cshtml** code window, place the mouse cursor within the inner **for** code block, and then type the following code. 
 ```cs
     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
 ```
