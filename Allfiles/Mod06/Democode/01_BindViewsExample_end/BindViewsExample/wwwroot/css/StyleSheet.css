@@ -1,0 +1,24 @@
+﻿body {
+    font-size: 28px;
+    text-align: center;
+}
+
+input {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 33px;
+    color: darkblue;
+}
+
+p {
+    font-size: 28px;
+}
+
+#remark {
+    color: steelblue;
+}
