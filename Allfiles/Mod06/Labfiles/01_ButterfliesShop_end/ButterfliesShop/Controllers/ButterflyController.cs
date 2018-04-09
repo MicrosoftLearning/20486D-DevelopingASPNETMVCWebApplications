@@ -39,7 +39,7 @@ namespace ButterfliesShop.Controllers
         public IActionResult Index()
         {
             IndexViewModel indexViewModel = new IndexViewModel();
-            indexViewModel.Butterfiles = _data.ButterfliesList;
+            indexViewModel.Butterflies = _data.ButterfliesList;
             return View(indexViewModel);
         }
 

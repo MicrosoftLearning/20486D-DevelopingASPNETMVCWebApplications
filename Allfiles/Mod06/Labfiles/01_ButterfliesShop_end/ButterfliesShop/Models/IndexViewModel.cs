@@ -7,6 +7,6 @@ namespace ButterfliesShop.Models
 {
     public class IndexViewModel
     {
-        public List<Butterfly> Butterfiles { get; set; }
+        public List<Butterfly> Butterflies { get; set; }
     }
 }
