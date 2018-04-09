@@ -1,6 +1,6 @@
 ﻿# Module 3: Configure Middleware and Services in ASP.NET Core
 
-# Lesson 1: Configure Middleware
+# Lesson 1: Configuring Middleware
 
 ### Demonstration: How to Create Custom Middleware
 
@@ -56,7 +56,7 @@
     }
 ```
 
-15. Place the mouse cursor at the end of the code, press Enter twice, and then type the following code:
+15. Place the mouse cursor at the end of the code, press Enter twice, and then type the following code.
 ```cs
     app.Use(async (context, next) =>
     {
@@ -77,12 +77,12 @@
 
 20. On the **Debug** Menu, click **Stop Debugging**.
 
-21. In the **Startup.cs** code window, locate the following code
+21. In the **Startup.cs** code window, locate the following code.
 ```cs
     await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + Environment.NewLine);
 ```
 
-22. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+22. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     await next.Invoke();
 ```
@@ -96,7 +96,7 @@
 
 25. On the **Debug** Menu, click **Stop Debugging**.
 
-26. In the **Startup.cs** code window, locate and select the following code.
+26. In the **Startup.cs** code window, select the following code.
 ```cs
     app.Use(async (context, next) =>
     {
@@ -116,7 +116,7 @@
 
 31. On the **Debug** Menu, click **Stop Debugging**.
 
-32. Select the following code:
+32. Select the following code.
 ```cs
     app.Run(async (context) =>
     {
@@ -131,11 +131,14 @@
 35. On the Quick Access Toolbar, click **Save**.
 
 
+# Lesson 1: Configuring Middleware
+
 ### Demonstration: How to Work with Static Files
 
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+
 
 #### Demonstration Steps
 
@@ -183,7 +186,7 @@
 
 19. In the **Solution Explorer** pane, double click on the **Startup.cs** class.
 
-20. In the **Startup.cs** code window, locate the following code:
+20. In the **Startup.cs** code window, locate the following code.
 ```cs
     if (env.IsDevelopment())
     {
@@ -192,7 +195,7 @@
 
 ```
 
-21. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+21. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     app.UseStaticFiles();
 ```
@@ -213,7 +216,7 @@
 27. On the **Debug** Menu, click **Stop Debugging**.
 
 
-# Lesson 2: Configure Services
+# Lesson 2: Configuring Services
 
 ### Demonstration: How to Use Dependency Injection
 
@@ -249,7 +252,7 @@
     using System.Threading.Tasks;
 ```
 
-12. 6.  Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+12. 6.  Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     using System.IO;
     using ConfigureServiceExample.Services; 
@@ -260,7 +263,7 @@
     string _filename;
 ```
 
-13. Place the mouse cursor at the end of the **_filename** variable, press Enter twice, and then type the following code:
+13. Place the mouse cursor at the end of the **_filename** variable, press Enter twice, and then type the following code.
 ```cs
     public Logger()
     {
@@ -277,7 +280,7 @@
 ```cs
     public void Log(string logData)
     {
-        File.AppendAllText(filename, $"{DateTime.UtcNow}: {logData}");
+        File.AppendAllText(_filename, $"{DateTime.UtcNow}: {logData}");
     }
 ```
 >**Note:** Calling Log from the same Logger instance will turn to the same file.
@@ -300,23 +303,23 @@ public class Logger
     services.AddSingleton<ILogger, Logger>();
 ```
 
-22. In the **Startup.cs** code window, locate the following code, and then select the code.
+22. In the **Startup.cs** code window, select the following code, and then select the code.
 ```cs
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ```
 
-23. Replace the code you selected with the following code
+23. Replace the code you selected with the following code.
 ```cs
     public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILogger log)
 ```
 
-24. Inside the **Configure** method, locate the following code:
+24. Inside the **Configure** method, locate the following code.
 ```cs
     app.Run(async (context) =>
     {
 ```
 
-25. Place the mouse cursor at the end of the code, press Enter, and then type the following code:
+25. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     log.Log("Logged line");
 ```

@@ -40,11 +40,11 @@ The main tasks for this exercise are as follows:
 -	Show the html file inside the ASP.NET Core application.
 
 
-####	Task 1: Create a new project using the ASP.NET Core Empty project template
+####	Task 1: Create a new project using the ASP.NET Core Empty project template.
 
 1. Start Visual Studio 2017 and create a new ASP.NET Core project by using the **ASP.NET Core Web Application** inside the C# template.
 
-####	Task 2: Run the application
+####	Task 2: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
@@ -53,7 +53,7 @@ The main tasks for this exercise are as follows:
 
 3. Close the **Microsoft Edge** window.
 
-####	Task 3: Add html file to the wwwroot folder
+####	Task 3: Add html file to the wwwroot folder.
 
 1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the  project's **wwwroot** folder.
 
@@ -71,7 +71,7 @@ The main tasks for this exercise are as follows:
 
 4. inside the **body** element, Create a **p** Element with a **h1** header element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and press **submit query**.
 
-5. Add a **form** Element to the body element with a class named **submit-form**:
+5. Add a **form** Element to the body element with a class named **submit-form**.
 
 6. Create a **div** element inside the **form** element with a class named **main-div**.
 
@@ -81,7 +81,7 @@ The main tasks for this exercise are as follows:
 
 9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **div** with the **main-div** class you created.
 
-####	Task 4: Run the application – content of html not displayed
+####	Task 4: Run the application – content of html not displayed.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
@@ -157,7 +157,7 @@ The main tasks for this exercise are as follows:
 
 2. Write to the page output the selected value from the form.
 
-####	Task 2: Run the application
+####	Task 2: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
@@ -322,13 +322,13 @@ The main tasks for this exercise are as follows:
 -	The controller will print the results to the web browser.
 
 
-####	Task 1: Enable working with MVC
+####	Task 1: Enable working with MVC.
 
 1. In the **ConfigureServices** method of the **Startup** class, add the **AddMVC** method.
 
 2. In the **Configure** method of the **Startup** class, add the **UseMvcWithDefaultRoute** method above the custom middleware.
 
-####	Task 2: Add a controller
+####	Task 2: Add a controller.
 
 1. Create the **Controllers** folder under the project's main directory.
 
@@ -336,7 +336,7 @@ The main tasks for this exercise are as follows:
 
 3. Create a method named **Index** with return type of **IActionResult** inside the class.
 
-####	Task 3: Run the application
+####	Task 3: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge**.
      > **Note**: **Hello from controller** is shown on your browser.
@@ -353,13 +353,13 @@ The main tasks for this exercise are as follows:
 6. In the **Startup** class, move the **app.Run** block to be the last code block in the **Configure** method.
 
 
-####	Task 4: Use Dependency Injection in a controller
+####	Task 4: Use Dependency Injection in a controller.
 
 1. Inject the **IPollResultsService** into the **HomeController's** class constructor, and save it to a global variable.
 
 2. Inside the **index** action of the **HomeController** class, replace its content with the service results, and return the results with the **Content** method.
 
-####	Task 5: Run the application
+####	Task 5: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge**.
 
