@@ -1,12 +1,13 @@
 ﻿html {
-    background-image: url('BrownNoise.jpg');
+    background-image: url('images\brown-bg.jpg');
     background-position: center center;
 }
+
 td {
-    background-image: url('istock-519553256.jpg');
-    background-size: cover; 
+    background-image: url('images\parchment.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
     width: 300px;
 }
 

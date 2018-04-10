@@ -349,7 +349,7 @@
 
 33. In the **Microsoft Edge** window, click **Close**.
 
-# Lesson 3: How to Create and Use Partial Views
+# Lesson 3: Reusing Code in Views
 
 ### Demonstration: How to Create and Use Partial Views
 
@@ -376,13 +376,22 @@
 
 4. In the **PersonProvider.cs** code window, place the mouse cursor within the **PersonProvider** constructor code block, and then type the following code. 
 ```cs
-    personList = PersonInitializer();
+    _personList = PersonInitializer();
 ```
-> **Note**: Now the persons created within the PersonInitializer method are returned to the **PersonList** member. The **PersonList** member is retrieved using the classe's indexer.
+> **Note**: Now the list of people is created within the PersonInitializer method and are returned to the **_personList** member. The **personList** member is retrieved using the classe's indexer.
 
 5. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
 
-6. In the **Index.cshtml** code window, place the mouse cursor within the inner **for** code block, and then type the following code. 
+6. In the **Index.cshtml** code window, locate the following code.
+```cs
+    @for (int rowIndex = 0; rowIndex < ViewBag.Rows; rowIndex++)
+        {
+            <tr>
+                @for (int columnIndex = 0; columnIndex < ViewBag.Columns; columnIndex++)
+                {
+```
+
+6. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
 ```
@@ -398,7 +407,7 @@
 
 10. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Shared**, point to **Add**, and then click **View...**.
     
-11. In the **Add MVC View** dialog window, In the **View name** textbox, type: **_CardDesign**.
+11. In the **Add MVC View** dialog window, in the **View name** textbox, type: **_CardDesign**.
 
 12. In the **Add MVC View** dialog window, verify that the **Create as a partial view** checkbox is marked, and press **Add**.
 
@@ -426,12 +435,12 @@
 ```
 
 16. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-     > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, adress, and a phone.
+     > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, address, and a phone.
      
 17. In the **Microsoft Edge** window, click **Close**.
 
 
-# Lesson 3: How to Create and Use Partial Views
+# Lesson 3: Reusing Code in Views
 
 ### Demonstration: How to Create and Use View Components
 
@@ -509,6 +518,6 @@
 ```
 
 21. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-     > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, adress, and a phone.
+     > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, address, and a phone.
      
 22. In the **Microsoft Edge** window, click **Close**.

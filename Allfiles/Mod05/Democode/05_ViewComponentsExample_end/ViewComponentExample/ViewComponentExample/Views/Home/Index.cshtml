@@ -1,7 +1,4 @@
-﻿@using System.Threading.Tasks
-@using System.Collections
-@using Microsoft.AspNetCore.Html
-
+﻿
 @{
     Layout = null;
 }
@@ -12,7 +9,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link href="StyleSheet.css" rel="stylesheet" />
+    <link href="css\StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Person Card List</h1>
@@ -23,7 +20,6 @@
                 @for (int columnIndex = 0; columnIndex < ViewBag.Columns; columnIndex++)
                 {
                     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
-                    
                     @await Component.InvokeAsync("PersonCard", cardIndex);
                 }
             </tr>

@@ -7,15 +7,15 @@ namespace PartialViewExample.Services
 {
     public class PersonProvider : IPersonProvider
     {
+        List<Person> _personList;
+
         public Person this[int index]
         {
             get
             {
-                return personList[index];
+                return _personList[index];
             }
         }
-
-        List<Person> personList;
 
         public PersonProvider()
         {
