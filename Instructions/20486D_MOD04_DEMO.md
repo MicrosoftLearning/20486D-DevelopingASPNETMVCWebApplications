@@ -112,7 +112,7 @@ is the action result you added in the **ViewBagExample** action.
 22. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/home/ViewDataExample** and then press Enter, note the text **The Message is: View Data Example** 
 is the action result you added in the **ViewDataExample** action.
 
-23. In the Microsoft Edge window, click Close.
+23. In the Microsoft Edge window, click **Close**.
 
 24. On the **DEBUG** menu of the **ControllersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
@@ -234,7 +234,7 @@ is the action result you added in the **ViewDataExample** action.
                     defaults: new { controller = "Home", action = "Index" });
             });
 ```
->**Note:** This code block represents a custom routes
+>**Note:** This code block represents a custom routes.
 
 19. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Save All**.
 
@@ -250,7 +250,7 @@ is the action result you added in the **ViewDataExample** action.
 
 25. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Divide/100** and then press Enter, note the result **10** is the action result you added in the **Calculator** controller in the **DivideByTen** action.
 
-26. In the Microsoft Edge window, click Close.
+26. In the Microsoft Edge window, click **Close**.
 
 27. On the **DEBUG** menu of the **RoutesExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
@@ -402,7 +402,7 @@ is the action result you added in the **ViewDataExample** action.
 ```
    >**Note:** In the above output lines, note that this is the CustomActionFilter class methods result. 
 
-27. In the Microsoft Edge window, click Close.
+27. In the Microsoft Edge window, click **Close**.
 
 28. On the **DEBUG** menu of the **FiltersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 

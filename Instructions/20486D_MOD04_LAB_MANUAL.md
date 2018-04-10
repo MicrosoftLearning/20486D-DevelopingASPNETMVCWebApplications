@@ -8,7 +8,7 @@ You  have been asked to add controllers to a new application.
 The controller should include actions that return a view, and that respond when users display a single photo. You should also add an action that returns the photo as a .jpg file to show on a webpage.
 Additionally, you are asked to configure routes in a variety of ways.
 
-The members of your development team are new to ASP.NET Core MVC and they find the use of controller actions confusing. Therefore, you need to help them by adding a component that displays action parameters in an external file whenever an action runs. You will add an action filter to achieve this
+The members of your development team are new to ASP.NET Core MVC and they find the use of controller actions confusing. Therefore, you need to help them by adding a component that displays action parameters in an external file whenever an action runs. You will add an action filter to achieve this.
 
 #### Objectives
 
@@ -54,15 +54,21 @@ The main tasks for this exercise are as follows:
 1. Open the WorldJourney.sln file from the following location:
 **Allfiles\Mod04\Labfiles\01_WorldJourney_begin**
 
-2. Create a new controller using the following information:
+2. Create a new top-level folder, in the **WorldJourney** project by using the following information:
+
+   - Folder name: **Controllers**
+
+3. Create a new controller using the following information:
 
    - Controller name: **HomeController**
    - Template: **MVC controller - Empty**
+   - Folder: **Controllers**
 
-3. Create a new controller for handling **City** objects by using the following information:
+4. Create a new controller for handling **City** objects by using the following information:
 
    - Controller name: **CityController**
    - Template: **MVC controller - Empty**
+   - Folder: **Controllers**
 
 #### Task 2: Add an action to a controller.
 
@@ -206,6 +212,7 @@ The main tasks for this exercise are as follows:
 
    - Controller name: **TravelerController**
    - Template: **MVC controller - Empty**
+   - Folder: **Controllers**
 
 2. Edit the code in the **Index** action by using the following information:
 
