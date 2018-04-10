@@ -1,6 +1,6 @@
-## Module 4: Developing Controllers
+# Module 4: Developing Controllers
 
-## Lab: Developing Controllers
+# Lab: Developing Controllers
 
 #### Scenario
 

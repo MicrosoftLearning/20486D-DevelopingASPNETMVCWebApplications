@@ -1,6 +1,4 @@
-﻿
-
-# Module 1: Exploring ASP.NET Core MVC
+﻿# Module 1: Exploring ASP.NET Core MVC
 
 # Lesson 3: Introduction to ASP.NET Core MVC 
 
