@@ -30,10 +30,11 @@ You need to recommend an MVC model that is required to implement a photo sharing
 
 The main tasks for this exercise are as follows:
 
--   Examine the initial investigation.
--   Plan the photo model class.
--   Plan the comment model class.
+1. Examine the initial investigation.
 
+2. Plan the photo model class.
+
+3. Plan the comment model class.
 
 #### Task 1: Examine the initial investigation.
 
@@ -106,9 +107,9 @@ You need to recommend a set of MVC controllers that are required to implement a 
 
 The main tasks for this exercise are as follows:
 
--   Plan the photo controller.
--   Plan the comment controller.
+1. Plan the photo controller.
 
+2. Plan the comment controller.
 
 #### Task 1: Plan the photo controller.
 
@@ -143,9 +144,9 @@ You need to recommend a set of MVC views that are required to implement a photo 
 
 The main tasks for this exercise are as follows:
 
--   Plan the single photo view.
--   Plan the gallery view.
+1. Plan the single photo view.
 
+2. Plan the gallery view.
 
 #### Task 1: Define the views.
 
@@ -201,8 +202,9 @@ You need to recommend a web server and database server configuration that is req
 
 The main tasks for this exercise are as follows:
 
--   Hosting options.
--   Choose a data store.
+1. Hosting options.
+
+2. Choose a data store.
 
 #### Task 1: Hosting options.
 

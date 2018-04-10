@@ -18,12 +18,9 @@ After completing  this lab, you will be able to:
 -	Create and use services with ASP.NET Core Build in Dependency Injection.
 -	Using an MVC controller.
 
-
 #### Lab Setup
 
 Estimated Time: **75 minutes**
-
-
 
 ### Exercise 1: Working with Static Files
 
@@ -34,11 +31,13 @@ To make the poll, the application needs a designed HTML file. The HTML file must
 
 The main tasks for this exercise are as follows: 
 
--	Create a static html file with a web form.
--	Connect it with images and a CSS file.
--	Add the UseStaticFiles middleware.
--	Show the html file inside the ASP.NET Core application.
+1. Create a static html file with a web form.
 
+2. Connect it with images and a CSS file.
+
+3. Add the UseStaticFiles middleware.
+
+4. Show the html file inside the ASP.NET Core application.
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template
 
@@ -145,11 +144,11 @@ The server must receive the clients request and notify the company for the poll 
 
 The main tasks for this exercise are as follows: 
 
--	Create a custom middleware 
--	The custom middleware will display the results of the submitted form from the static HTML we created.
--	If no form was submitted, the custom middleware must not prevent execution of other middleware.
+1. Create a custom middleware 
 
+2. The custom middleware will display the results of the submitted form from the static HTML we created.
 
+3. If no form was submitted, the custom middleware must not prevent execution of other middleware.
 
 ####	Task 1: Create a middleware
 
@@ -210,12 +209,13 @@ We need to aggregate the votes, and show them for future use. We use services to
 
 The main tasks for this exercise are as follows: 
 
--	Create a service using the AddSingleton and Dependency Injection.
--	The service must be able to save a poll data vote.
--	The service must return the results of all the votes.
--	The results must be printed to the browser using the custom middleware we created before. 
+1. Create a service using the AddSingleton and Dependency Injection.
 
+2. The service must be able to save a poll data vote.
 
+3. The service must return the results of all the votes.
+
+4. The results must be printed to the browser using the custom middleware we created before. 
 
 ####	Task 1:  Define an interface for a service
 
@@ -317,10 +317,11 @@ We need to create a page to show results without submitting a vote. In this time
 
 The main tasks for this exercise are as follows: 
 
--	Create a simple controller to see how it works.
--	The controller will receive the service data using Dependency Injection.
--	The controller will print the results to the web browser.
+1. Create a simple controller to see how it works.
 
+2. The controller will receive the service data using Dependency Injection.
+
+3. The controller will print the results to the web browser.
 
 ####	Task 1: Enable working with MVC
 
