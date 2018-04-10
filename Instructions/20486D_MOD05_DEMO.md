@@ -202,7 +202,7 @@
 
 20. Replace the code you selected with the following code. 
 ```cs
-    return File($"{personName}.jpg", "image/jpeg");
+    return File($"@"\images\{personName.ToLower()}.jpg", "image/jpeg");
 ```
 
 21. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.

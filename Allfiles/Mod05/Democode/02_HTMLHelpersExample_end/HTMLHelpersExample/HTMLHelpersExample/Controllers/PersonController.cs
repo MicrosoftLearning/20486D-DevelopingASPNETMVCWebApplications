@@ -22,7 +22,7 @@ namespace HTMLHelpersExample.Controllers
 
         public IActionResult GetImage(string personName)
         {
-            return File($"{personName}.jpg", "image/jpeg");
+            return File($@"\images\{personName.ToLower()}.jpg", "image/jpeg");
         }
     }
 }
