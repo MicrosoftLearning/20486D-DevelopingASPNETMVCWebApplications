@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You are planning to create and code an MVC model that implements your plan for butterflies in the butterflies shop application. The model includes properties that describe butterfly. The model must enable the application to store uploaded butterflies.
+You are planning to create and code an MVC model that implements your plan for butterflies in the butterflies’ shop application. The model includes properties that describe butterfly. The model must enable the application to store uploaded butterflies.
 
 #### Objectives
 
@@ -28,7 +28,7 @@ Estimated Time: **60 minutes**
 In this exercise, you will:
 
 - Add model classes to the web application.
-- _Create (GET)_.This action creates a new Butterfly object and passes it to the Create view, which displays a form that the visitor can use to upload a butterfly and describe it.
+- _Create (GET)_. This action creates a new Butterfly object and passes it to the Create view, which displays a form that the visitor can use to upload a butterfly and describe it.
 - _Create (POST)_. This action receives a butterfly object from the Create view and saves the details.
 
 The main tasks for this exercise are as follows:
@@ -204,6 +204,8 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
+In this exercise, you will:
+
 - Add Display and Edit data annotations to a butterfly model.
 - Add Display Helpers to the Index view.
 - Add Form Helpers and Editor Helpers to the Create view.
@@ -349,6 +351,8 @@ The main tasks for this exercise are as follows:
 ### Exercise 3: Adding Validation
 
 #### Scenario
+
+In this exercise, you will:
 
 - Add validation data annotations to a butterfly model.
 - Add validation Helpers to the Create view.
