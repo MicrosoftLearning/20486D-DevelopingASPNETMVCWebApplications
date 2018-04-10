@@ -92,11 +92,11 @@ The main tasks for this exercise are as follows:
 
 3. Close the **Microsoft Edge** window.
 
-####	Task 5: Enable working with static files
+####	Task 5: Enable working with static files.
 
 1. Add the UseStaticFiles method inside the **Configure** method of the **startup** class.
 
-####	Task 6 : Run the application – content of html is displayed
+####	Task 6 : Run the application – content of html is displayed.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
@@ -120,13 +120,13 @@ The main tasks for this exercise are as follows:
 
 8. Close the **Microsoft Edge** window.
 
-####	Task 7: Add html file outside of the wwwroot folder
+####	Task 7: Add html file outside of the wwwroot folder.
 
 1. Copy the **Test.html** file from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the project's main directory folder.
 
-####	Task 8: Run the application – content of html outside wwwroot folder not displayed
+####	Task 8: Run the application – content of html outside wwwroot folder not displayed.
 
-1. Run the new ASP.NET Core application in **Microsoft Edge**:
+1. Run the new ASP.NET Core application in **Microsoft Edge**.
 
 2. Access the following relative URL:
 
@@ -170,7 +170,7 @@ The main tasks for this exercise are as follows:
 
 4. Close the **Microsoft Edge** window.
 
-####	Task 3: Change the order of middleware
+####	Task 3: Change the order of middleware.
 
 1. Move the **app.UseStaticFiles** before the custom middleware.
 
@@ -185,7 +185,7 @@ The main tasks for this exercise are as follows:
 
 5. Close the **Microsoft Edge** window.
 
-6. Move the **app.UseStaticFiles** between the custom middleware and the app.Run.
+6. Move the **app.UseStaticFiles** between the custom middleware and the **app.Run**.
 
 7. Comment the **next.Invoke();** line of code that skips the custom middleware if the favorite parameter is not found.
 
@@ -217,7 +217,7 @@ The main tasks for this exercise are as follows:
 
 
 
-####	Task 1:  Define an interface for a service
+####	Task 1:  Define an interface for a service.
 
 1. Create a folder named **Services** in the main project's directory.
 
@@ -249,7 +249,7 @@ The main tasks for this exercise are as follows:
      - Name: **GetVoteResult**
      - Return type: **SortedDictionary**<**SelectedGame**,**int**>
 
-####	Task 2: Define an implementation for the service
+####	Task 2: Define an implementation for the service.
 
 1. Create a class named **ResultsService** inside the **Services** folder, and inherit the class from the **lResultsService** interface.
 
@@ -262,7 +262,7 @@ The main tasks for this exercise are as follows:
 5. Implement the **GetVoteResult** method that duplicates the dictionary data to a SortedDictionary, and returns it.
 
 
-####	Task 3: Use dependency injection
+####	Task 3: Use dependency injection.
 
 1. In the **startup** class, in the **ConfigureServices**, add the poll results service using the following information:
 
@@ -277,7 +277,7 @@ The main tasks for this exercise are as follows:
 4. Inside the custom middleware, print to the page output the vote results from the service. 
 
 
-####	Task 4: Run the application
+####	Task 4: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge**. 
      > **Note**: Displayed result: **Action was not handled by any middleware. App run is executing. wwwroot folder path:** \[local path to your wwwroot folder\].

@@ -25,7 +25,7 @@
 
 7. In the **Solution Explorer** pane, double click on the **Startup.cs** class.
 
-8. In the **Startup.cs** code window, locate the following code
+8. In the **Startup.cs** code window, locate the following code.
 
 ```cs
     app.Run(async (context) =>
@@ -46,9 +46,9 @@
 
 12. In the **Microsoft Edge** window, click **Close**.
 
-13. On the **Debug** Menu, click **Stop Debugging**.
+13. On the **DEBUG** Menu, click **Stop Debugging**.
 
-14. In the **Startup.cs** code window, locate the following code
+14. In the **Startup.cs** code window, locate the following code.
 ```cs
     if (env.IsDevelopment())
     {
@@ -75,7 +75,7 @@
 
 19. In the **Microsoft Edge** window, click **Close**.
 
-20. On the **Debug** Menu, click **Stop Debugging**.
+20. On the **DEBUG** Menu, click **Stop Debugging**.
 
 21. In the **Startup.cs** code window, locate the following code.
 ```cs
@@ -94,7 +94,7 @@
 
 24. In the **Microsoft Edge** window, click **Close**.
 
-25. On the **Debug** Menu, click **Stop Debugging**.
+25. On the **DEBUG** Menu, click **Stop Debugging**.
 
 26. In the **Startup.cs** code window, select the following code.
 ```cs
@@ -114,7 +114,7 @@
 
 30. In the **Microsoft Edge** window, click **Close**.
 
-31. On the **Debug** Menu, click **Stop Debugging**.
+31. On the **DEBUG** Menu, click **Stop Debugging**.
 
 32. Select the following code.
 ```cs
@@ -182,7 +182,7 @@
 
 17. In the **Microsoft Edge** window, click **Close**.
 
-18. On the **Debug** Menu, click **Stop Debugging**.
+18. On the **DEBUG** Menu, click **Stop Debugging**.
 
 19. In the **Solution Explorer** pane, double click on the **Startup.cs** class.
 
@@ -213,7 +213,7 @@
 
 26. In the **Microsoft Edge** window, click **Close**.
 
-27. On the **Debug** Menu, click **Stop Debugging**.
+27. On the **DEBUG** Menu, click **Stop Debugging**.
 
 
 # Lesson 2: Configuring Services
@@ -252,31 +252,31 @@
     using System.Threading.Tasks;
 ```
 
-12. 6.  Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+12. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     using System.IO;
     using ConfigureServiceExample.Services; 
  ```
 
-12. Place the mouse cursor within the **Logger** class block, press enter, and then type the following code.
+13. Place the mouse cursor within the **Logger** class block, press enter, and then type the following code.
 ```cs
     string _filename;
 ```
 
-13. Place the mouse cursor at the end of the **_filename** variable, press Enter twice, and then type the following code.
+14. Place the mouse cursor at the end of the **_filename** variable, press Enter twice, and then type the following code.
 ```cs
     public Logger()
     {
     }
 ```
 
-14. Place the mouse cursor within the constructor code block you just created, and then type the following code.
+15. Place the mouse cursor within the constructor code block you just created, and then type the following code.
 ```cs
     _filename = $"{DateTime.Now.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
 ```
 >**Note:** Each Logger class instance will create a new log file. The log file name will be the logger class instance creation date.
 
-15. 7.  Place the mouse cursor at the end of the **Logger** constructor, press Enter twice, and then type the following code.
+16. Place the mouse cursor at the end of the **Logger** constructor, press Enter twice, and then type the following code.
 ```cs
     public void Log(string logData)
     {
@@ -285,52 +285,52 @@
 ```
 >**Note:** Calling Log from the same Logger instance will turn to the same file.
 
-16. On the Quick Access Toolbar, click **Save**.
+17. On the Quick Access Toolbar, click **Save**.
 
-17. In the **Logger.cs** code window, locate the following code.
+18. In the **Logger.cs** code window, locate the following code.
 ```cs
 public class Logger
 ```
 
-18. Right click on the **Logger** class name,  click **Quick Actions and Refactorings...**, and then click **Extract Interface**.
+19. Right click on the **Logger** class name,  click **Quick Actions and Refactorings...**, and then click **Extract Interface**.
 
-19. In the **Extract Interface** dialog window leave all the default values as they are, and press **OK**.
+20. In the **Extract Interface** dialog window leave all the default values as they are, and press **OK**.
 
-20. In the **Solution Explorer** pane, double click the **Startup.cs** file.
+21. In the **Solution Explorer** pane, double click the **Startup.cs** file.
 
-21. Place the mouse cursor within the **ConfigureServices** method block, press enter, and then type the following code.
+22. Place the mouse cursor within the **ConfigureServices** method block, press enter, and then type the following code.
 ```cs
     services.AddSingleton<ILogger, Logger>();
 ```
 
-22. In the **Startup.cs** code window, select the following code, and then select the code.
+23. In the **Startup.cs** code window, select the following code, and then select the code.
 ```cs
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ```
 
-23. Replace the code you selected with the following code.
+24. Replace the code you selected with the following code.
 ```cs
     public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILogger log)
 ```
 
-24. Inside the **Configure** method, locate the following code.
+25. Inside the **Configure** method, locate the following code.
 ```cs
     app.Run(async (context) =>
     {
 ```
 
-25. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+26. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     log.Log("Logged line");
 ```
 
-26. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+27. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
      >**Note:** The log class instance was created by **Dependency Injection**.
 
-27. In the **Microsoft Edge** window, click **Close**.
+28. In the **Microsoft Edge** window, click **Close**.
 
-28. On the **Debug** Menu, click **Stop Debugging**.
+29. On the **DEBUG** Menu, click **Stop Debugging**.
 
-29. In the **Solution Explorer** pane, double click the newly created **XXXX-XX-XX--XX-XX-XX.log** file.
+30. In the **Solution Explorer** pane, double click the newly created **XXXX-XX-XX--XX-XX-XX.log** file.
      >**Note:** File text: **[DateTime]: Logged Line**. The text was created by the Log method that is inside the Logger class.
      
