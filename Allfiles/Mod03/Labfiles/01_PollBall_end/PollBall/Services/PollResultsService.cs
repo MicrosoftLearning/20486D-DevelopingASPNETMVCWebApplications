@@ -7,25 +7,25 @@ namespace PollBall.Services
 {
     public class PollResultsService : IPollResultsService
     {
-        private Dictionary<SelectedGame, int> selectionVotes { get; set; }
+        private Dictionary<SelectedGame, int> SelectionVotes { get; set; }
 
         public PollResultsService()
         {
-            selectionVotes = new Dictionary<SelectedGame, int>();
+            SelectionVotes = new Dictionary<SelectedGame, int>();
         }
 
         public void AddVote(SelectedGame game)
         {
-            if (selectionVotes.ContainsKey(game))
-                selectionVotes[game]++;
+            if (SelectionVotes.ContainsKey(game))
+                SelectionVotes[game]++;
             else
-                selectionVotes.Add(game, 1);
+                SelectionVotes.Add(game, 1);
         }
 
         public SortedDictionary<SelectedGame, int> GetVoteResult()
         {
             SortedDictionary<SelectedGame, int> sortedSelectionVotes = new SortedDictionary<SelectedGame, int>();
-            foreach (KeyValuePair<SelectedGame, int> item in selectionVotes)
+            foreach (KeyValuePair<SelectedGame, int> item in SelectionVotes)
             {
                 sortedSelectionVotes.Add(item.Key, item.Value);
             }
