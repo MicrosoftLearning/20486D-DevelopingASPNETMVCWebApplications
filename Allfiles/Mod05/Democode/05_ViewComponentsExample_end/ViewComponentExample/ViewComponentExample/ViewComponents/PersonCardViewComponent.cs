@@ -8,7 +8,7 @@ namespace PartialViewExample.ViewComponents
 {
     public class PersonCardViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync(int id)
+        public IViewComponentResult Invoke(int id)
         {
             return View("CardDesign", id);
         }

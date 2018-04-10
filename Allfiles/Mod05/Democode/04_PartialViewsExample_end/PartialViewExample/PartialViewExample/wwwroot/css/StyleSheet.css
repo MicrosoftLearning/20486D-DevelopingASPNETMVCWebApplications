@@ -1,10 +1,10 @@
 ﻿html {
-    background-image: url('images\brown-bg.jpg');
+    background-image: url('../images/brown-bg.jpg');
     background-position: center center;
 }
 
 td {
-    background-image: url('images\parchment.jpg');
+    background-image: url('../images/parchment.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

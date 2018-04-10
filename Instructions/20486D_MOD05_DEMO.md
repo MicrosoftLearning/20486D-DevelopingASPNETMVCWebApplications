@@ -483,7 +483,7 @@
 
 9.	In the **PersonCardViewComponent.cs** code window, place the mouse cursor within the **PersonCardViewComponent** class code block, and then type the following code. 
 ```cs
-    public async Task<IViewComponentResult> InvokeAsync(int id)
+    public IViewComponentResult Invoke(int id)
     {
         return View("CardDesign", id);
     }
