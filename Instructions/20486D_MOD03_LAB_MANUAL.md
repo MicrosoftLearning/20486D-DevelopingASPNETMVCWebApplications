@@ -30,11 +30,11 @@ Estimated Time: **75 minutes**
 #### Scenario
 
 
-To make the poll, the application needs a designed HTML file. The HTML file must post the poll results to the server. To transfer the results  to the server we will use a web form.
+To make the poll, the application needs a designed HTML file. The HTML file must post the poll results to the server. To transfer the results  to the server we will use a HTML form.
 
 The main tasks for this exercise are as follows: 
 
-1. Create a static html file with a web form.
+1. Create a static html file with a HTML form.
 2. Connect it with images and a CSS file.
 3. Add the UseStaticFiles middleware.
 4. Show the html file inside the ASP.NET Core application.
