@@ -23,25 +23,25 @@
         <Canvas HorizontalAlignment="Left" Height="190" Margin="41,121,0,0" VerticalAlignment="Top" Width="150" Background="#FF96AFCF">
             <Label Content="Title" Canvas.Left="21" Canvas.Top="10"/>
             <Label Content="By: Owner" Canvas.Left="21" Canvas.Top="41"/>
-            <Image Height="100" Canvas.Left="21" Canvas.Top="67" Width="100" Source="NoImage.jpg"/>
+            <Image Height="100" Canvas.Left="21" Canvas.Top="67" Width="100" Source="photo.jpg"/>
             <Label Content="Created On: Date" Canvas.Left="21" Canvas.Top="167"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="190" Margin="41,325,0,0" VerticalAlignment="Top" Width="150" Background="#FF96AFCF">
             <Label Content="Title" Canvas.Left="21" Canvas.Top="10"/>
             <Label Content="By: Owner" Canvas.Left="21" Canvas.Top="41"/>
-            <Image Height="100" Canvas.Left="21" Canvas.Top="67" Width="100" Source="NoImage.jpg"/>
+            <Image Height="100" Canvas.Left="21" Canvas.Top="67" Width="100" Source="photo.jpg"/>
             <Label Content="Created On: Date" Canvas.Left="21" Canvas.Top="167"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="190" Margin="224,325,0,0" VerticalAlignment="Top" Width="150" Background="#FF96AFCF">
             <Label Content="Title" Canvas.Left="21" Canvas.Top="10"/>
             <Label Content="By: Owner" Canvas.Left="21" Canvas.Top="41"/>
-            <Image Height="100" Canvas.Left="21" Canvas.Top="67" Width="100" Source="NoImage.jpg"/>
+            <Image Height="100" Canvas.Left="21" Canvas.Top="67" Width="100" Source="photo.jpg"/>
             <Label Content="Created On: Date" Canvas.Left="21" Canvas.Top="167"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="190" Margin="224,121,0,0" VerticalAlignment="Top" Width="150" Background="#FF96AFCF">
             <Label Content="Title" Canvas.Left="21" Canvas.Top="10"/>
             <Label Content="By: Owner" Canvas.Left="21" Canvas.Top="41"/>
-            <Image Height="100" Canvas.Left="21" Canvas.Top="67" Width="100" Source="NoImage.jpg"/>
+            <Image Height="100" Canvas.Left="21" Canvas.Top="67" Width="100" Source="photo.jpg"/>
             <Label Content="Created On: Date" Canvas.Left="21" Canvas.Top="167"/>
         </Canvas>
 
