@@ -17,7 +17,7 @@ namespace DesignProject
 
         public string Title
         {
-            get => default(int);
+            get => default(string);
             set
             {
             }
@@ -25,7 +25,7 @@ namespace DesignProject
 
         public byte PhotoFile
         {
-            get => default(int);
+            get => default(byte);
             set
             {
             }
@@ -33,7 +33,7 @@ namespace DesignProject
 
         public string Description
         {
-            get => default(int);
+            get => default(string);
             set
             {
             }
@@ -41,7 +41,7 @@ namespace DesignProject
 
         public System.DateTime CreatedDate
         {
-            get => default(int);
+            get => default(System.DateTime);
             set
             {
             }
@@ -49,7 +49,7 @@ namespace DesignProject
 
         public string Owner
         {
-            get => default(int);
+            get => default(string);
             set
             {
             }
