@@ -4,7 +4,7 @@
 
 #### Scenario
 
-Your team has chosen ASP.NET MVC Core as the most appropriate ASP.NET programming model to create the photo sharing application for the Adventure Works web application. You need to create a detailed project design for the application, and have been given a set of functional and technical requirements with other information. You have to plan:
+Your team has chosen ASP.NET Core MVC as the most appropriate ASP.NET programming model to create the photo sharing application for the Adventure Works web application. You need to create a detailed project design for the application, and have been given a set of functional and technical requirements with other information. You have to plan:
 
 - An MVC model that you can use to implement the desired functionality.
 - One or more controllers and controller actions that respond to users actions.
@@ -15,7 +15,7 @@ Your team has chosen ASP.NET MVC Core as the most appropriate ASP.NET programmin
 
 After completing this lab, you will be able to:
 
-- Design an ASP.NET MVC Core web application that meets a set of functional requirements.
+- Design an ASP.NET Core MVC web application that meets a set of functional requirements.
 - Record the design in an accurate, precise, and informative manner.
 
 #### Lab Setup
@@ -40,38 +40,62 @@ The main tasks for this exercise are as follows:
 
 1. Open the **InitialInvestigation** document by using the following information:
 
-   - File location: **Allfiles\Mod02\Labfiles**
+   - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
 
 2. Enable the **Navigation Pane** feature.
+
 3. Read the contents of the Introduction section.
+
 4. Read the contents of the General Description section.
-5. Read the Use Cases section and then examine the **Use Case Summary** diagram.
+
+5. Read the Use Cases section, and then examine the **Use Case Summary** diagram.
+
 6. Close the **InitialInvestigation** document.
 
 #### Task 2: Plan the photo model class.
 
-1. Open the **DetailedPlanningDocument** document and locate the MVC Model section.
+1. Open the **DetailedPlanningDocument** document, and locate the MVC Model section.
+
+   - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+
 2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model**.
+
 3. Add properties to the model class you created in **Table 1: MVC Model**. The model class will have many properties
-4. Add data types to the photo properties. Each property will have one and only one data type.
-5. Merge the rows in the **Model Class** and **Description** columns and save the document.
+
+4. Add data types to the photo properties. Each property will have one, and only one data type.
+
+5. Merge the rows in the **Model Class** and **Description** columns, and save the document.
+
 6. Create a **WPF Project** in visual studio.
+
 7. Add a **Class Diagram** template to the project.
+
 8. Add a new **Class** to the class diagram.
+
 9. Add attributes to the new Class shape for each of the properties you planned for the photos.
+
 10. Save the created diagram.
+
 
 #### Task 3: Plan the comment model class.
 
-1. Open the **DetailedPlanningDocument** document and locate the MVC Model section.
+1. Open the **DetailedPlanningDocument** document, and locate the MVC Model section.
+
 2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model**.
+
 3. Add properties to the model class you created in **Table 1: MVC Model**.
+
 4. Add data types to the comment properties.
+
 5. Merge the rows in the **Model Class** and the **Description** columns, and then save the document.
+
 7. Add a new **Class** to the class diagram.
+
 8. Add attributes to the new Class shape for each of the properties you planned for comments.
+
 9. Connect the two classes with association object.
-10. The association created a property,  in the photo class. Change its return type to List<Comment> and change the property back to "collection association" in the class diagram.
+
+10. The association created a property,  in the photo class. Change its return type to List<Comment>, and change the property back to "collection association" in the class diagram.
 
    >**Results** : After completing this exercise, you will be able to create proposals for a model, and configure the properties and data types of the model classes.
 
@@ -89,21 +113,28 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Plan the photo controller.
 
-1. Open the **DetailedPlanningDocument** document and locate the MVC Controllers section.
+1. Open the **DetailedPlanningDocument** document, and locate the MVC Controllers section.
 
 2. Based on your reading of the **InitialInvestigation** document, add a controller for photos in **Table 2: MVC Controllers**.
+
 3. Add actions to the controller for photos in **Table 2: MVC Controllers**.
+
 4. Add descriptions for each of the actions you have planned.
-5. Merge rows in the **Controller** column and save the document.
+
+5. Merge rows in the **Controller** column, and save the document.
+
 
 #### Task 2: Plan the comment controller.
 
 1. Based on your reading of the **InitialInvestigation** document, add a controller for photos in **Table 2: MVC Controllers**.
-2. Add actions to the controller for comments in **Table 2: MVC Controllers**.
-3. Add descriptions for each of the actions you have planned.
-4. Merge rows in the **Controller** column and save the document.
 
-   >**Results** : After completing this exercise, you will be able to create proposals for controllers and configure their properties and data types.
+2. Add actions to the controller for comments in **Table 2: MVC Controllers**.
+
+3. Add descriptions for each of the actions you have planned.
+
+4. Merge rows in the **Controller** column, and save the document.
+
+   >**Results** : After completing this exercise, you will be able to create proposals for controllers, and configure their properties and data types.
 
 ### Exercise 3: Planning Views
 
@@ -117,34 +148,49 @@ The main tasks for this exercise are as follows:
 
 2. Plan the gallery view.
 
-#### Task 1: Define the view.
+#### Task 1: Define the views.
 
 1. Add a controller to the **Table 3: MVC Views** table.
+
 2. Add the required views to the Controllers.
+
 3. Add a description to the views.
-4. Merge rows in the **Controller** column and save the document.
+
+4. Merge rows in the **Controller** column, and save the document.
 
 
 #### Task 2: Design the single photo view.
 
 1. Create a new **WPF Window** with the name **SinglePhotoView**.
+
 2. Drag a **label** as header.
+
 3. Drag a **Canvas**, and put inside it **buttons**, as the site menu according the the use cases defined.
-4. **Design** the canvas and buttons so they will look well.
+
+4. **Design** the canvas, and buttons so they will look well.
+
 5. Drag below it **labels** that show the photo properties as needed. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
-6. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\Mod02\Labfiles\NoImage.jpg** to be shown instead of real photos).
-7. Drag **Canvas** for the comments and fill it with **Labels** according to the comment properties. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
+
+6. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\Mod02\Labfiles\01_DesignProject_begin\NoImage.jpg** to be shown instead of real photos).
+
+7. Drag **Canvas** for the comments, and fill it with **Labels** according to the comment properties. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
+
 8. Add a **TextBlock** which supports underline to represend a link, and fill it with the text **Add Comment**.
 
 
 #### Task 3: Design the gallery view.
 
-Create a new **WPF Window** with the name **PhotoGalleryView**.
-7. Drag a **label** as header.
-8. Drag a **Canvas**, and put inside it **buttons**, to be used as the site menu according the the use cases defined.
-9. **Design** the canvas and buttons so they will look well.
-10. Drag a **canvas** below the menu and fill it with the photo, and properties that should be shown for a list of photos in the home page.
-11. Copy the canvas multiple times for each image, as an image list.
+1. Create a new **WPF Window** with the name **PhotoGalleryView**.
+
+2. Drag a **label** as header.
+
+3. Drag a **Canvas**, and put inside it **buttons**, to be used as the site menu according the the use cases defined.
+
+4. **Design** the canvas and buttons so they will look well.
+
+5. Drag a **canvas** below the menu, and fill it with the photo and properties that should be shown for a list of photos in the home page.
+
+6. Copy the canvas multiple times for each image, as an image list.
 
    >**Results** : After completing this exercise, you will create proposals for views and their layouts.
 
@@ -162,11 +208,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Hosting options.
 
-- Based on your reading of the **InitialInvestigation** document, add a description of the web server arrangements that are suited to host the photo sharing application.
+1. Based on your reading of the **InitialInvestigation** document, add a description of the web server arrangements that are suited to host the photo sharing application.
 
 #### Task 2: Choose a data store.
 
-- Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements that are suited to host the photo sharing application.
+2. Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements that are suited to host the photo sharing application.
 
    >**Results**: After completing this exercise, you will be able to create proposals for hosting arrangements.
 
