@@ -39,7 +39,7 @@ namespace DesignProject
             }
         }
 
-        public object CreatedDate
+        public System.DateTime CreatedDate
         {
             get => default(int);
             set
