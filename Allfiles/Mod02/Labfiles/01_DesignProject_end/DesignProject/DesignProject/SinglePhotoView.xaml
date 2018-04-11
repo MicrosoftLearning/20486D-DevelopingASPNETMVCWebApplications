@@ -21,13 +21,13 @@
         <Label Content="Photo Description...." HorizontalAlignment="Left" Margin="78,488,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2" Width="300" Height="157"/>
         <Label Content="Comments" HorizontalAlignment="Left" Margin="78,659,0,0" VerticalAlignment="Top"/>
         <Canvas HorizontalAlignment="Left" Height="130" Margin="78,692,0,0" VerticalAlignment="Top" Width="300" Background="#FF96AFCF">
-            <Label Content="From:" Canvas.Left="10" Canvas.Top="10"/>
-            <Label Content="Subject:" Canvas.Left="12" Canvas.Top="41"/>
-            <Label Content="Body:" Canvas.Left="12" Canvas.Top="72"/>
+            <Label Content="From:" Canvas.Left="12" Canvas.Top="14"/>
+            <Label Content="Subject:" Canvas.Left="12" Canvas.Top="44"/>
+            <Label Content="Body:" Canvas.Left="12" Canvas.Top="74"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="130" Margin="78,837,0,0" VerticalAlignment="Top" Width="300" Background="#FF96AFCF">
-            <Label Content="From:" Canvas.Left="10" Canvas.Top="10"/>
-            <Label Content="Subject:" Canvas.Left="12" Canvas.Top="41"/>
+            <Label Content="From:" Canvas.Left="12" Canvas.Top="10"/>
+            <Label Content="Subject:" Canvas.Left="12" Canvas.Top="40"/>
             <Label Content="Body:" Canvas.Left="12" Canvas.Top="72"/>
         </Canvas>
         <TextBlock HorizontalAlignment="Left" Margin="78,1006,0,0" TextWrapping="Wrap" Text="Add a Comment" VerticalAlignment="Top" Foreground="Blue" TextDecorations="Underline"/>
