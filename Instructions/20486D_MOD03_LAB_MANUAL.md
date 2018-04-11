@@ -1,6 +1,5 @@
 ﻿# Module 3: Configure Middleware and Services in ASP.NET Core
 
-
 # Lab: Configure Middleware and Services in ASP.NET Core
 
 #### Scenario
@@ -13,7 +12,7 @@ You are required as their employee to create the ball game survey site to be use
 
 After completing  this lab, you will be able to:
 
--	Use ASP.NET Core Static Files including html files, image files and css files.
+-	Use ASP.NET Core Static Files including HTML files, image files and css files.
 -	Create and use custom Middleware, and use its context information.
 -	Create and use services with ASP.NET Core Build in Dependency Injection.
 -	Using an MVC controller.
@@ -40,11 +39,11 @@ The main tasks for this exercise are as follows:
 4.	Display an HTML file from within an ASP.NET Core application.
 
 
-####	Task 1: Create a new project using the ASP.NET Core Empty project template
+#### Task 1: Create a new project using the ASP.NET Core Empty project template.
 
 1. Start Visual Studio 2017 and create a new ASP.NET Core project by using the **ASP.NET Core Web Application** inside the C# template.
 
-####	Task 2: Run the application
+#### Task 2: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
@@ -53,7 +52,7 @@ The main tasks for this exercise are as follows:
 
 3. Close the **Microsoft Edge** window.
 
-####	Task 3: Add html file to the wwwroot folder
+#### Task 3: Add HTML file to the wwwroot folder.
 
 1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the  project's **wwwroot** folder.
 
@@ -81,29 +80,29 @@ The main tasks for this exercise are as follows:
 
 9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **div** with the **main-div** class you created.
 
-####	Task 4: Run the application – content of html not displayed
+#### Task 4: Run the application – content of HTML not displayed.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
 2. Access the following relative URL:
    
      - **/PollQuestions.html**
-     > **Note**: See that **Hello Word !** is still shown, even after we have added an html file and set the url path to it.
+     > **Note**: See that **Hello Word !** is still shown, even after we have added an HTML file and set the url path to it.
 
 3. Close the **Microsoft Edge** window.
 
-####	Task 5: Enable working with static files
+#### Task 5: Enable working with static files.
 
 1. Add the UseStaticFiles method inside the **Configure** method of the **startup** class.
 
-####	Task 6 : Run the application – content of html is displayed
+#### Task 6 : Run the application – content of HTML is displayed.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
 2. Access the following relative URL:
    
      - **/PollQuestions.html**
-     > **Note**: See that the file content is shown along with the photos in the subdirectory, but the html content is poorly designed.
+     > **Note**: See that the file content is shown along with the photos in the subdirectory, but the HTML content is poorly designed.
 
 3. Close the **Microsoft Edge** window.
 
@@ -114,17 +113,17 @@ The main tasks for this exercise are as follows:
 6. Access the following relative URL:
 
      - **/PollQuestions.html**
-     > **Note**: Now the html content is shown along with the css design.
+     > **Note**: Now the HTML content is shown along with the css design.
 
 7. Select the basketball game, and press the **Submit Form** button.
 
 8. Close the **Microsoft Edge** window.
 
-####	Task 7: Add html file outside of the wwwroot folder
+#### Task 7: Add HTML file outside of the wwwroot folder.
 
 1. Copy the **Test.html** file from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the project's main directory folder.
 
-####	Task 8: Run the application – content of html outside wwwroot folder not displayed
+#### Task 8: Run the application – content of HTML outside wwwroot folder not displayed.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge**:
 
@@ -151,13 +150,13 @@ The main tasks for this exercise are as follows:
 
 3.	If no form was submitted, the custom middleware should not prevent the execution of other middleware.
 
-####	Task 1: Create a middleware
+#### Task 1: Create a middleware.
 
 1. Create a custom middleware that checks the value of the **Favorite** parameter that is submitted from the form. Skip the middleware if the **Favorite** parameter is missing.
 
 2. Write to the page output the selected value from the form.
 
-####	Task 2: Run the application
+#### Task 2: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
@@ -170,7 +169,7 @@ The main tasks for this exercise are as follows:
 
 4. Close the **Microsoft Edge** window.
 
-####	Task 3: Change the order of middleware
+#### Task 3: Change the order of middleware.
 
 1. Move the **app.UseStaticFiles** before the custom middleware.
 
@@ -216,7 +215,7 @@ The main tasks for this exercise are as follows:
 
 3.	Print the result to our browser by using the custom middleware we have created.
 
-####	Task 1:  Define an interface for a service
+#### Task 1:  Define an interface for a service.
 
 1. Create a folder named **Services** in the main project's directory.
 
@@ -248,7 +247,7 @@ The main tasks for this exercise are as follows:
      - Name: **GetVoteResult**
      - Return type: **SortedDictionary**<**SelectedGame**,**int**>
 
-####	Task 2: Define an implementation for the service
+#### Task 2: Define an implementation for the service.
 
 1. Create a class named **ResultsService** inside the **Services** folder, and inherit the class from the **lResultsService** interface.
 
@@ -261,7 +260,7 @@ The main tasks for this exercise are as follows:
 5. Implement the **GetVoteResult** method that duplicates the dictionary data to a SortedDictionary, and returns it.
 
 
-####	Task 3: Use dependency injection
+#### Task 3: Use dependency injection.
 
 1. In the **startup** class, in the **ConfigureServices**, add the poll results service using the following information:
 
@@ -276,7 +275,7 @@ The main tasks for this exercise are as follows:
 4. Inside the custom middleware, print to the page output the vote results from the service. 
 
 
-####	Task 4: Run the application
+#### Task 4: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge**. 
      > **Note**: Displayed result: **Action was not handled by any middleware. App run is executing. wwwroot folder path:** \[local path to your wwwroot folder\].
@@ -323,13 +322,13 @@ The main tasks for this exercise are as follows:
 3.	The controller will print the results to the web browser.
 
 
-####	Task 1: Enable working with MVC
+#### Task 1: Enable working with MVC.
 
 1. In the **ConfigureServices** method of the **Startup** class, add the **AddMVC** method.
 
 2. In the **Configure** method of the **Startup** class, add the **UseMvcWithDefaultRoute** method above the custom middleware.
 
-####	Task 2: Add a controller
+#### Task 2: Add a controller.
 
 1. Create the **Controllers** folder under the project's main directory.
 
@@ -337,7 +336,7 @@ The main tasks for this exercise are as follows:
 
 3. Create a method named **Index** with return type of **IActionResult** inside the class.
 
-####	Task 3: Run the application
+#### Task 3: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge**.
      > **Note**: **Hello from controller** is shown on your browser.
@@ -354,13 +353,13 @@ The main tasks for this exercise are as follows:
 6. In the **Startup** class, move the **app.Run** block to be the last code block in the **Configure** method.
 
 
-####	Task 4: Use Dependency Injection in a controller
+#### Task 4: Use Dependency Injection in a controller.
 
 1. Inject the **IPollResultsService** into the **HomeController's** class constructor, and save it to a global variable.
 
 2. Inside the **index** action of the **HomeController** class, replace its content with the service results, and return the results with the **Content** method.
 
-####	Task 5: Run the application
+#### Task 5: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge**.
 

@@ -1,6 +1,6 @@
-﻿## Module 1: Exploring ASP.NET Core MVC
+﻿# Module 1: Exploring ASP.NET Core MVC
 
-## Lab: Exploring ASP.NET Core MVC 
+# Lab: Exploring ASP.NET Core MVC 
 
 #### Scenario
 
@@ -36,7 +36,7 @@ The main tasks for this exercise are as follows:
 
 3. Add simple functionality.
 
-#### Task 1: Creating a Razor Pages application
+#### Task 1: Creating a Razor Pages application.
 
 1. Start Visual Studio 2017 and create a new Razor Pages project with the following name **ActorsRazorPages** by using the **Web Application** C# template.
 
@@ -44,7 +44,7 @@ The main tasks for this exercise are as follows:
 
 3. Stop debugging.
 
-#### Task 2: Explore the application structure
+#### Task 2: Explore the application structure.
 
 1. Open the **Startup.cs** class and verify that mvc service is added to the request execution pipeline.
 
@@ -52,7 +52,7 @@ The main tasks for this exercise are as follows:
 
 3. Verify that the **Site.css** file is used to apply styles to all pages on the site. Note that the **_Layout.cshtml** page is linked to the style sheet.
 
-#### Task 3: Add simple functionality
+#### Task 3: Add simple functionality.
 
 1. Add a new Razor Page to the **Pages** folder using the following information:
  
@@ -199,7 +199,7 @@ The main tasks for this exercise are as follows:
     - Content: **Actors**
     - End tag: **&lt;/a&gt;&lt;/li&gt;**
 
-#### Task 4: Run the application
+#### Task 4: Run the application.
 
 1. Save all the changes.
 
@@ -224,7 +224,7 @@ The main tasks for this exercise are as follows:
 
 3. Add simple functionality.
 
-#### Task 1: Creating a Web API application
+#### Task 1: Creating a Web API application.
 
 1. Start Visual Studio 2017 and create a new Web API project with the following name **CakeStoreApi** using the **API** C# template.
 
@@ -232,13 +232,13 @@ The main tasks for this exercise are as follows:
 
 3. Stop debugging.
 
-#### Task 2: Explore the application structure
+#### Task 2: Explore the application structure.
 
 1. Open the **Startup.cs** class and verify that mvc service is added to the request execution pipeline.
 
 2.  Open the  **ValuesController.cs** class inside the **Controller** folder and verify  that the **Get** method return type is Array of String.
 
-#### Task 3: Add simple functionality
+#### Task 3: Add simple functionality.
 
 1. Add a new folder to the application at the root level by using the following information:
 
@@ -339,7 +339,7 @@ The main tasks for this exercise are as follows:
 
 21. In the **Startup.cs**  class add **IData** to the services container as Singleton.
 
-#### Task 4: Run the application
+#### Task 4: Run the application.
 
 1. Save all the changes.
 
@@ -364,14 +364,15 @@ The main tasks for this exercise are as follows:
 
 3. Add simple functionality.
 
-#### Task 1: Creating an MVC application
+#### Task 1: Creating an MVC application.
+
 1. Start Visual Studio 2017 and create a new Mvc project with the following name **AnimalsMvc** by using the **Web Application (Model-View-Controller)** C# template.
 
 2. Run the new MVC application in Microsoft Edge and review the **Contact** page.
 
 3. Stop debugging.
 
-#### Task 2: Explore the application structure
+#### Task 2: Explore the application structure.
 
 1. Open the **Startup.cs** class and verify that mvc service is added to the request execution pipeline.
 
@@ -379,7 +380,7 @@ The main tasks for this exercise are as follows:
 
 3. Verify that the Site.css file is used to apply styles to all pages on the site. Note that the **_Layout.cshtml** page is linked to the style sheet.
 
-#### Task 3: Add simple functionality
+#### Task 3: Add simple functionality.
 
 1. In the **HomeController** class, Add a method for the **TestPage** action by using the following information:
 
@@ -568,7 +569,7 @@ The main tasks for this exercise are as follows:
 
 38. Stop debugging.
 
-#### Task 4: Run the application
+#### Task 4: Run the application.
 
 1. Save all the changes.
 
