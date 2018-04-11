@@ -1,6 +1,6 @@
 ﻿html {
     /*background: filter(url('istock-497944862.jpg'), blur(5px));*/
-    background-image: linear-gradient(rgba(47,79,79,0.75),rgba(47,79,79,0.75)), url(iStock-497944862.jpg);
+    background-image: linear-gradient(rgba(47,79,79,0.75),rgba(47,79,79,0.75)), url('../images/block.jpg');
     background-position: center center;
     background-repeat: repeat-y;
     background-size: cover;
@@ -19,9 +19,6 @@ img {
     height: 100px;
 }
 
-
-
-
 div {
     border-color: aqua;
     background-color: aqua;
@@ -34,7 +31,6 @@ div {
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
-
 
 h2 {
     color: rgb(124,165,40);
