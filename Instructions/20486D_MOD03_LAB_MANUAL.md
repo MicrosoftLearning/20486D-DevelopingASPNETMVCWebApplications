@@ -11,9 +11,9 @@ The Adventure Works Company wants to develop a web site about ball games. For th
 
 After completing this lab, you will be able to: 
 
--	Use ASP.NET Core Static Files including html files, image files and CSS files.
+-	Use ASP.NET Core Static Files including HTML files, image files and CSS files.
 -	Create and use custom Middleware, and use its context information.
--	Create and use services with ASP.NET Core Build in Dependency Injection.
+-	Create and use services with ASP.NET Core Built-in Dependency Injection.
 -	Use an ASP.NET Core MVC controller.
 
 
@@ -54,12 +54,12 @@ The main tasks for this exercise are as follows:
 
 1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the  project's **wwwroot** folder.
 
-2. Create a new subfolder, and copy a css file to the new folder by using the following information:
+2. Create a new subfolder, and copy a CSS file to the new folder by using the following information:
 
      -   Parent directory of the new directory: **wwwroot**
      -   New folder name: **style**
-     -   css file to be copied: **StyleSheet.css**
-     -   Source location of the css file: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+     -   CSS file to be copied: **StyleSheet.css**
+     -   Source location of the CSS file: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
 
 3. Create a new **HTML Page** by using the following information:
 
@@ -85,7 +85,7 @@ The main tasks for this exercise are as follows:
 2. Access the following relative URL:
    
      - **/PollQuestions.html**
-     > **Note**: See that **Hello Word !** is still shown, even after we have added an html file and set the url path to it.
+     > **Note**: See that **Hello Word !** is still shown, even after we have added an HTML file and set the url path to it.
 
 3. Close the **Microsoft Edge** window.
 
@@ -100,7 +100,7 @@ The main tasks for this exercise are as follows:
 2. Access the following relative URL:
    
      - **/PollQuestions.html**
-     > **Note**: See that the file content is shown along with the photos in the subdirectory, but the html content is poorly designed.
+     > **Note**: See that the file content is shown along with the photos in the subdirectory, but the HTML content is poorly designed.
 
 3. Close the **Microsoft Edge** window.
 
@@ -111,7 +111,7 @@ The main tasks for this exercise are as follows:
 6. Access the following relative URL:
 
      - **/PollQuestions.html**
-     > **Note**: Now the html content is shown along with the css design.
+     > **Note**: Now the HTML content is shown along with the CSS design.
 
 7. Select the basketball game, and press the **Submit Form** button.
 
@@ -144,7 +144,7 @@ The main tasks for this exercise are as follows:
 
 1. Create a custom middleware
 2. The custom middleware will display the results of the submitted form from the static HTML we created
-3. If no form was submitted, the custom middleware should not preventthe execution of other middleware
+3. If no form was submitted, the custom middleware should not prevent the execution of other middleware
 
 
 
