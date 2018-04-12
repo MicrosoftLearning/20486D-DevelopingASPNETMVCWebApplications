@@ -72,7 +72,7 @@ The main tasks for this exercise are as follows:
 
 8. Add a new **Class** to the class diagram.
 
-9. Add attributes to the new Class shape for each of the properties you planned for the photos.
+9. Add attributes to the new **Photo** class diagram for each of the properties you planned for the photo class.
 
 10. Fix the properties return values in the **Photo** class, to match the property types.
 
