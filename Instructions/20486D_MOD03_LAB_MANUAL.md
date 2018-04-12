@@ -50,7 +50,7 @@ The main tasks for this exercise are as follows:
 
 3. Close the **Microsoft Edge** window.
 
-####	Task 3: Add html file to the wwwroot folder.
+####	Task 3: Add HTML file to the wwwroot folder.
 
 1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the  project's **wwwroot** folder.
 
@@ -66,26 +66,26 @@ The main tasks for this exercise are as follows:
      -   File name: **PollQuestions.html**
      -   Parent Directory: **wwwroot**
 
-4. inside the **body** element, Create a **p** Element with a **h1** header element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and press **submit query**.
+4. inside the **BODY** element, Create a **P** Element with a **H1** element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and press **submit query**.
 
-5. Add a **form** Element to the body element with a class named **submit-form**.
+5. Add a **FORM** element to the **BODY** element with a class named **submit-form**.
 
-6. Create a **div** element inside the **form** element with a class named **main-div**.
+6. Create a **DIV** element inside the **FORM** element with a class named **main-div**.
 
-7. Create another **div** element inside the **form** element with a class named **submit-batch**.
+7. Create another **DIV** element inside the **FORM** element with a class named **submit-batch**.
 
-8. Inside the **submit-batch** div element create a button of type **submit**.
+8. Inside the **submit-batch** **DIV** element create a button of type **SUBMIT**.
 
-9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **div** with the **main-div** class you created.
+9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **DIV** with the **main-div** class you created.
 
-####	Task 4: Run the application – content of html not displayed.
+####	Task 4: Run the application – content of HTML not displayed.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
 2. Access the following relative URL:
    
      - **/PollQuestions.html**
-     > **Note**: See that **Hello Word !** is still shown, even after we have added an HTML file and set the url path to it.
+     > **Note**: See that **Hello Word !** is still shown, even after we have added an HTML file and set the URL path to it.
 
 3. Close the **Microsoft Edge** window.
 
@@ -93,14 +93,14 @@ The main tasks for this exercise are as follows:
 
 1. Add the UseStaticFiles method inside the **Configure** method of the **startup** class.
 
-####	Task 6 : Run the application – content of html is displayed.
+####	Task 6 : Run the application – content of HTML is displayed.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
 2. Access the following relative URL:
    
      - **/PollQuestions.html**
-     > **Note**: See that the file content is shown along with the photos in the subdirectory, but the HTML content is poorly designed.
+     > **Note**: See that the file content is shown with the photos in the subdirectory, but the HTML content is poorly designed.
 
 3. Close the **Microsoft Edge** window.
 
@@ -111,17 +111,17 @@ The main tasks for this exercise are as follows:
 6. Access the following relative URL:
 
      - **/PollQuestions.html**
-     > **Note**: Now the HTML content is shown along with the CSS design.
+     > **Note**: Now the HTML content is shown with the CSS design.
 
 7. Select the basketball game, and press the **Submit Form** button.
 
 8. Close the **Microsoft Edge** window.
 
-####	Task 7: Add html file outside of the wwwroot folder.
+####	Task 7: Add HTML file outside of the wwwroot folder.
 
 1. Copy the **Test.html** file from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the project's main directory folder.
 
-####	Task 8: Run the application – content of html outside wwwroot folder not displayed.
+####	Task 8: Run the application – content of HTML outside wwwroot folder not displayed.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge**.
 
@@ -288,7 +288,7 @@ The main tasks for this exercise are as follows:
 4. Access the following relative URL in a new **Microsoft Edge** window:
 
      - **/PollQuestions.html**
-     > **Note**: See that in the url, the port number of the new window should be identical to the previous window's port.
+     > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
 5. Select the **Football** game, and press the **Submit Form** button.
      > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1
@@ -296,7 +296,7 @@ The main tasks for this exercise are as follows:
 6. Access the following relative URL in a new **Microsoft Edge** windowL:
 
      - **/PollQuestions.html**
-     > **Note**: See that in the url, the port number of the new window should be identical to the previous window's port.
+     > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
 7. Select the **Basketball** game, and press the **Submit Form** button.
      > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1
@@ -370,7 +370,7 @@ The main tasks for this exercise are as follows:
 4. Access the following relative URL in a new **Microsoft Edge** window:
 
      - **/PollQuestions.html**
-     > **Note**: See that in the url, the port number of the new window should be identical to the previous window's port.
+     > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
 5. Select the **Football** game, and press the **Submit Form** button.
      > **Note**: The controller now returns the result: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1
@@ -378,7 +378,7 @@ The main tasks for this exercise are as follows:
 6. Access the following relative URL in a new **Microsoft Edge** window:
 
      - **/PollQuestions.html**
-     > **Note**: See that in the url, the port number of the new window should be identical to the previous window's port.
+     > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
 7. Select the **Basketball** game, and press the **Submit Form** button.
      > **Note**: The controller now returns the result: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1
