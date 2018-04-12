@@ -74,7 +74,9 @@ The main tasks for this exercise are as follows:
 
 9. Add attributes to the new Class shape for each of the properties you planned for the photos.
 
-10. Save the created diagram.
+10. Fix the properties return values in the **Photo** class, to match the property types.
+
+11. Save the created diagram.
 
 
 #### Task 3: Plan the comment model class.
@@ -89,13 +91,15 @@ The main tasks for this exercise are as follows:
 
 5. Merge the rows in the **Model Class** and the **Description** columns, and then save the document.
 
-7. Add a new **Class** to the class diagram.
+7. Add a new **Class** to the class diagram and name it **Comment**.
 
-8. Add attributes to the new Class shape for each of the properties you planned for comments.
+8. Add attributes to the new **Comment** class diagram for each of the properties you planned for the comment.
 
 9. Connect the two classes with association object.
 
 10. The association created a property,  in the photo class. Change its return type to List<Comment>, and change the property back to "collection association" in the class diagram.
+
+11. Fix the properties return values in the **Photo** class, to match the property types.
 
    >**Results** : After completing this exercise, you will be able to create proposals for a model, and configure the properties and data types of the model classes.
 
@@ -144,9 +148,11 @@ You need to recommend a set of MVC views that are required to implement a photo 
 
 The main tasks for this exercise are as follows:
 
-1. Plan the single photo view.
+1. Define the views.
 
-2. Plan the gallery view.
+2. Design the single photo view.
+
+3. Design the gallery view.
 
 #### Task 1: Define the views.
 
@@ -171,7 +177,7 @@ The main tasks for this exercise are as follows:
 
 5. Drag below it **labels** that show the photo properties as needed. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
 
-6. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\Mod02\Labfiles\01_DesignProject_begin\NoImage.jpg** to be shown instead of real photos).
+6. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\Mod02\Labfiles\01_DesignProject_begin\photo.jpg** to be shown instead of real photos).
 
 7. Drag **Canvas** for the comments, and fill it with **Labels** according to the comment properties. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
 

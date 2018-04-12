@@ -14,7 +14,7 @@
             <Button Content="Add a Photo" Canvas.Left="195" Canvas.Top="10" Width="75" Background="#FF1F477D" Foreground="White"/>
             <Button Content="Slideshow" Canvas.Left="289" Canvas.Top="10" Width="75" Background="#FF1F477D" Foreground="White"/>
         </Canvas>
-        <Label Content="&quot;Title&quot;" HorizontalAlignment="Left" Margin="51,124,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Title" HorizontalAlignment="Left" Margin="51,124,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="By: Owner" HorizontalAlignment="Left" Margin="58,166,0,0" VerticalAlignment="Top"/>
         <Image HorizontalAlignment="Left" Height="244" Margin="58,197,0,0" VerticalAlignment="Top" Width="404" Source="photo.jpg"/>
         <Label Content="Description" HorizontalAlignment="Left" Margin="78,457,0,0" VerticalAlignment="Top"/>
