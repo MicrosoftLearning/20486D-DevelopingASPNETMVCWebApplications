@@ -66,7 +66,7 @@ The main tasks for this exercise are as follows:
      -   File name: **PollQuestions.html**
      -   Parent Directory: **wwwroot**
 
-4. Inside the **BODY** element, Create a **P** Element with a **H1** element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and press **submit query**.
+4. Inside the **BODY** element, Create a **P** Element with a **H1** element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and click the **submit query**.
 
 5. Add a **FORM** element to the **BODY** element with a class named **submit-form**.
 
