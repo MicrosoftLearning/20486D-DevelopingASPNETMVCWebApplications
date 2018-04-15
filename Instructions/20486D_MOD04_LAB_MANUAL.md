@@ -47,7 +47,7 @@ The main tasks for this exercise are as follows:
 
 6. Use a service in the city controller.
 
-7. Store information in a ViewBag property.
+7. Store information in a **ViewBag** property.
 
 #### Task 1: Add controllers to an MVC application.
 
@@ -115,9 +115,9 @@ The main tasks for this exercise are as follows:
 
 10. Add a method for the **GetImage** action by using the following information:
 
-     - Scope: **public**
-     - Return type: **IActionResult**
-     - Name: **GetImage**
+       - Scope: **public**
+       - Return type: **IActionResult**
+       - Name: **GetImage**
 
 11. If the **city** object is not null, return a **File** result constructed from the **city.ImageName** and **city.ImageMimeType** properties, else return the **HttpNotFound** value.
 
@@ -139,9 +139,11 @@ The main tasks for this exercise are as follows:
 
 1. In the **CityController** delete the following private objects:
 
-     -  private **City city**
-     -  private **City requestedCity**
-     -  private **string fullPath**
+   - Scope: **private**
+   - Property names: **city**, **requestedCity**, **fullPath**
+   - Data type for the city: **City**
+   - Data type for the requestedCity: **City**
+   - Data type for fullPath: **string**
 
 2. In the **CityController** class, create a new private object using the following information:
 
@@ -186,7 +188,7 @@ The main tasks for this exercise are as follows:
 
     - Path: **/City/index**
 
-3. on the Earth image click the **London** area.
+3. On the Earth image click the **London** area.
 
 4. Display an image.
 
@@ -226,7 +228,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application
+2. Start debugging the application.
 
     >**Note:** The new **Index** action View result, in the **Traveler** Controller, is not displayed.
 
@@ -236,16 +238,16 @@ The main tasks for this exercise are as follows:
 
 1. In the **Startup.cs** class, replce the **app.UseMvcWithDefaultRoute** with custom routes with the following information: 
 
-    - name: **TravelerRoute**
-    - template: **{controller}/{action}/{name}**
-    - defaults: **controller = "Traveler", action = "Index", name = "Katie Bruce"**
+    - Name: **TravelerRoute**
+    - Template: **{controller}/{action}/{name}**
+    - Defaults: **controller = "Traveler", action = "Index", name = "Katie Bruce"**
 
 2. In the  **TravelerRoute** custom route add defaults to the controller, action, and name parameters.
 
 3. In the **Startup.cs** class, add another custom routes with the following informatin: 
 
-    - name: **defaultRoute**
-    - template: **{controller}/{action}/{id?}**
+    - Name: **defaultRoute**
+    - Template: **{controller}/{action}/{id?}**
 
 4. In the  **defaultRoute** custom route add defaults to the controller, action, and name parameters.
 
@@ -255,7 +257,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application
+2. Start debugging the application.
 
     >**Note:** The browser displays the **Index** action view result, in the **Traveler** Controller.
 
@@ -283,7 +285,7 @@ The main task for this exercise is as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application
+2. Start debugging the application.
 
   >**Note:** Verify that the new routes work.
 
@@ -407,7 +409,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application
+2. Start debugging the application.
 
 3. Navigate to the following location:
 

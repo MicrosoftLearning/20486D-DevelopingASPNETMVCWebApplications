@@ -98,7 +98,7 @@
 ```
 16. On the **FILE** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Save Controllers\HomeController.cs**.
 
-17. On the DEBUG menu of the **ControllersExample - Microsoft Visual Studio** window, click Start Debugging.
+17. On the **DEBUG** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
       >**Note:** The text **Welcome to module 4 demo 1** is the action result you added to the **Index** action.
 
@@ -238,7 +238,7 @@ is the action result you added in the **ViewDataExample** action.
 
 19. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Save All**.
 
-20. On the DEBUG menu of the **RoutesExample - Microsoft Visual Studio** window, click Start Debugging.
+20. On the **DEBUG** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
       >**Note:**  The text **This is the Home controller with default param: 50** is the action result you added in the **Home** controller in the **Index** action.
 
@@ -275,7 +275,7 @@ is the action result you added in the **ViewDataExample** action.
 
 3. In the **Solution Explorer** pane of the **FiltersExample - Microsoft Visual Studio** window, right-click **Filters**, point to **Add**, and then click **Class**.
 
-4. In the **Name** box of the **Add New Item – FiltersExample** dialog box, type **CustomActionFilter**, and then click Add.
+4. In the **Name** box of the **Add New Item – FiltersExample** dialog box, type **CustomActionFilter**, and then click **Add**.
 
 5. In the **CustomActionFilter** class code window, locate the following code.
 
@@ -386,13 +386,15 @@ is the action result you added in the **ViewDataExample** action.
 ```
 22. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Save All**.
 
-23. On the DEBUG menu of the **FiltersExample - Microsoft Visual Studio** window, click Start Debugging.
+23. On the **DEBUG** menu of the **FiltersExample - Microsoft Visual Studio** window, point to **Windows** and, then click **Output**.
 
-24. On the taskbar, click the **FiltersExample - Microsoft Visual Studio** icon.
+24. On the **DEBUG** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-25. In the Output pane of the **FiltersExample (Running) - Microsoft Visual Studio** window, click the **Output** tab.
+25. On the taskbar, click the **FiltersExample - Microsoft Visual Studio** icon.
 
-26. On the **Output** tab, locate the following line of code.
+26. In the Output pane of the **FiltersExample (Running) - Microsoft Visual Studio** window, click the **Output** tab.
+
+27. On the **Output** tab, locate the following line of code.
 
   ```cs
        >>> Index started, event fired: OnActionExecuting
@@ -400,13 +402,13 @@ is the action result you added in the **ViewDataExample** action.
        >>> Indexbefore result, event fired: OnResultExecuting
        >>> Index result is: Welcome to module 4 demo 3,event fired: OnResultExecuted
 ```
-   >**Note:** In the above output lines, note that this is the CustomActionFilter class methods result. 
+   >**Note:** In the above output lines, note that this is the **CustomActionFilter** class methods result. 
 
-27. In the Microsoft Edge window, click **Close**.
+28. In the Microsoft Edge window, click **Close**.
 
-28. On the **DEBUG** menu of the **FiltersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+29. On the **DEBUG** menu of the **FiltersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-29. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Exit**.
+30. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Exit**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 
