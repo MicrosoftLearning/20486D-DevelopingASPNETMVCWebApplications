@@ -66,7 +66,7 @@ The main tasks for this exercise are as follows:
      -   File name: **PollQuestions.html**
      -   Parent Directory: **wwwroot**
 
-4. inside the **BODY** element, Create a **P** Element with a **H1** element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and press **submit query**.
+4. Inside the **BODY** element, Create a **P** Element with a **H1** element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and press **submit query**.
 
 5. Add a **FORM** element to the **BODY** element with a class named **submit-form**.
 
@@ -128,7 +128,7 @@ The main tasks for this exercise are as follows:
 2. Access the following relative URL:
 
      - **/PollQuestions.html**
-     > **Note**: By default, files outside the wwwroot directory are not visible in the browser, so **Hello Word !** from the app.Run is shown.
+     > **Note**: By default, files outside the wwwroot directory are not visible in the browser, so **Hello Word !** from the **app.Run** is shown.
 
 3. Close the **Microsoft Edge** window.
 
@@ -283,7 +283,7 @@ The main tasks for this exercise are as follows:
      - **/PollQuestions.html**
 
 3. Select the **Basketball** game, and press the **Submit Form** button.
-     > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1
+     > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1.
 
 4. Access the following relative URL in a new **Microsoft Edge** window:
 
@@ -291,7 +291,7 @@ The main tasks for this exercise are as follows:
      > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
 5. Select the **Football** game, and press the **Submit Form** button.
-     > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1
+     > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1.
 
 6. Access the following relative URL in a new **Microsoft Edge** windowL:
 
@@ -299,7 +299,7 @@ The main tasks for this exercise are as follows:
      > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
 7. Select the **Basketball** game, and press the **Submit Form** button.
-     > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1
+     > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1.
 
 8. Close the **Microsoft Edge** window.
 
@@ -373,7 +373,7 @@ The main tasks for this exercise are as follows:
      > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
 5. Select the **Football** game, and press the **Submit Form** button.
-     > **Note**: The controller now returns the result: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1
+     > **Note**: The controller now returns the result: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1.
 
 6. Access the following relative URL in a new **Microsoft Edge** window:
 
@@ -381,12 +381,12 @@ The main tasks for this exercise are as follows:
      > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
 7. Select the **Basketball** game, and press the **Submit Form** button.
-     > **Note**: The controller now returns the result: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1
+     > **Note**: The controller now returns the result: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1.
 
 8. Access the following relative URL:
 
      - **/**
-     > **Note**: The controller now returns the result: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1
+     > **Note**: The controller now returns the result: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1.
 
 9. Close the **Microsoft Edge** window.
 
