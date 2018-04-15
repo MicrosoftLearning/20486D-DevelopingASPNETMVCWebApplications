@@ -13,9 +13,9 @@ namespace WorldJourney.Models
         {
             CityList = new List<City>()
             {
-                new City(){ID = 1,CityName = "New York ",ImageName = "NewYork.jpg",ImageMimeType = "image/jpeg"},
-                new City(){ID = 3,CityName = "Chicago",ImageName = "Chicago.jpg", ImageMimeType = "image/jpeg"},
-                new City(){ID = 2,CityName = "London",ImageName = "London.jpg",ImageMimeType = "image/jpeg"}
+                new City(){ID = 1,CityName = "New York ",ImageName = "new-york.jpg",ImageMimeType = "image/jpeg"},
+                new City(){ID = 3,CityName = "Chicago",ImageName = "chicago.jpg", ImageMimeType = "image/jpeg"},
+                new City(){ID = 2,CityName = "London",ImageName = "london.jpg",ImageMimeType = "image/jpeg"}
             };
             return CityList;
         }
