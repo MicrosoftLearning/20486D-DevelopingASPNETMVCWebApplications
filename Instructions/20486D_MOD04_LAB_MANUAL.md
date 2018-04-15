@@ -52,7 +52,7 @@ The main tasks for this exercise are as follows:
 #### Task 1: Add controllers to an MVC application.
 
 1. Open the WorldJourney.sln file from the following location:
-**Allfiles\Mod04\Labfiles\01_WorldJourney_begin**
+**Allfiles\Mod04\Labfiles\01_WorldJourney_begin**.
 
 2. Create a new top-level folder, in the **WorldJourney** project by using the following information:
 

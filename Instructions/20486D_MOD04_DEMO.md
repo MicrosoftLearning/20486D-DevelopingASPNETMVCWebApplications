@@ -355,7 +355,7 @@ is the action result you added in the **ViewDataExample** action.
         ContentResult result = (ContentResult)filterContext.Result;
         Debug.WriteLine(">>> " + actionName + " result is: "+ result.Content + " ,event fired: OnResultExecuted");
 ```
-17. In the **FiltersExample – Microsoft Visual Studio** window, In the Solution Explorer pane, double-click **HomeController.cs**.
+17. In the **FiltersExample – Microsoft Visual Studio** window, expand **Controllers**, and then click **HomeController.cs**.
 
 18. In the **HomeController** code window, locate the following code.
 
