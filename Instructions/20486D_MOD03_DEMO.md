@@ -36,11 +36,11 @@
 
 9. On the **DEBUG** menu of the **Configure Middleware Example –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-10. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/UrlTest1, and press **Enter**.
+10. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/UrlTest1, and press Enter.
 
     >**Note** : The result returns **Hello World!** from the **app.Run**.
 
-11. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/UrlTest2, and press **Enter**. 
+11. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/UrlTest2, and press Enter. 
 
     >**Note** : The result returns **Hello World!** from the **app.Run**.
 
@@ -105,7 +105,7 @@
     });
 ```
 
-27. Right-click on the selected code, then press **Cut**, and remove any empty lines that were left.
+27. Right-click on the selected code, then click **Cut**, and remove any empty lines that were left.
 
 28. In the **Startup.cs** code window, locate the following code.
 ```cs
@@ -117,14 +117,14 @@
 
 29. Place the mouse cursor at the end of the code, press Enter, right-click the specified location, and click **Paste**.
 
-31. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+30. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Start Debugging**.
      >**Note** : Now, the **app.Use** result is gone, and only the **app.Run** works !
 
-32. In the **Microsoft Edge** window, click **Close**.
+31. In the **Microsoft Edge** window, click **Close**.
 
-33. On the **DEBUG** Menu, click **Stop Debugging**.
+32. On the **DEBUG** Menu, click **Stop Debugging**.
 
-34. Select the following code.
+33. Select the following code.
 ```cs
     app.Run(async (context) =>
     {
@@ -132,9 +132,9 @@
     });
 ```
 
-35. right-click, press **Cut**, and remove any empty lines that were left.
+34. right-click, click **Cut**, and remove any empty lines that were left.
 
-36. In the **Startup.cs** code window, locate the following code.
+35. In the **Startup.cs** code window, locate the following code.
 ```cs
     app.Use(async (context, next) =>
     {
@@ -220,10 +220,10 @@
 22. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
 23. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/HtmlFile.html, and press Enter.
-     >**Note:** The HTML file is shown
+     >**Note:** The HTML file is shown.
 
 24. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/ImageFile.jpg, and press Enter. 
-     >**Note:** The image file is shown
+     >**Note:** The image file is shown.
 
 25. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/NonExistingPath.jpg, and press Enter. 
      >**Note:** The nonexisting path leads eventualy to **app.Run**.
@@ -256,7 +256,7 @@
 
 6. In the result pane of the **New ASP.NET Core Web Application** dialog box, click **Empty**, and then click **OK**.
 
-7. In the Solution Explorer pane of the **ConfigureServiceExample - Microsoft Visual Studio** window, right-click on the **ConfigureServiceExample** project file, point to **Add**, and then click **New Folder**.
+7. In the Solution Explorer pane of the **ConfigureServiceExample - Microsoft Visual Studio** window, right-click on the **ConfigureServiceExample**, point to **Add**, and then click **New Folder**.
 
 8.	In the Solution Explorer pane, name the newly created folder as **Services**, and then press Enter.
 
