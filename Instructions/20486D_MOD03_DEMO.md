@@ -132,7 +132,7 @@
     });
 ```
 
-34. right-click, click **Cut**, and remove any empty lines that were left.
+34. Right-click, click **Cut**, and remove any empty lines that were left.
 
 35. In the **Startup.cs** code window, locate the following code.
 ```cs
