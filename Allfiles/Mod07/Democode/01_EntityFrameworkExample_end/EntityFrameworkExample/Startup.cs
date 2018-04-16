@@ -24,7 +24,7 @@ namespace EntityFrameworkExample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PersonContext>(options =>
-                    options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+                    options.UseInMemoryDatabase("PersonDB"));
 
             services.AddMvc();
         }

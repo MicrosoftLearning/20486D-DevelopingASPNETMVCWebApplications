@@ -96,10 +96,8 @@
 
   ```cs
       services.AddDbContext<PersonContext>(options =>
-             options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+             options.UseInMemoryDatabase("PersonDB"));
 ```
-
->**Note:** Verify the **DefaultConnection**. In the Solution Explorer pane, under EntityFrameworkExample, **appsettings.json** file.
 
 17. In the Solution Explorer pane, under EntityFrameworkExample, expand **Controllers**, and then click **PersonController.cs**.
 
