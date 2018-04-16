@@ -116,7 +116,7 @@
 
 22. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/home/ViewBagExample**, and then press Enter.
 
-      >**Note:** The the text **The Message is: View Bag Example** is the action result you added in the **ViewBagExample** action.
+      >**Note:** The text **The Message is: View Bag Example** is the action result you added in the **ViewBagExample** action.
 
 23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/home/ViewDataExample**, and then press Enter.
 
