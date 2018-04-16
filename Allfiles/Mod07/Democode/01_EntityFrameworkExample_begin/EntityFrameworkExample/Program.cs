@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 namespace EntityFrameworkExample
 {
     public class Program
-    {
+    { 
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();

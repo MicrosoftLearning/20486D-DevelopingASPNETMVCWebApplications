@@ -16,18 +16,6 @@ namespace EntityFrameworkExample.Controllers
         public PersonController(PersonContext context)
         {
             _context = context;
-            Initialize();
-        }
-
-        private void Initialize()
-        {
-            _context.Database.EnsureCreated();
-            if (!_context.People.Any())
-            {
-                _context.Add(new Person() { FirstName = "Tara", LastName = "Brewer", City = "Ocala", Address = "317 Long Street" });
-                _context.Add(new Person() { FirstName = "Andrew", LastName = "Tippett", City = "Anaheim", Address = "3163 Nickel Road" });
-                _context.SaveChanges();
-            }
         }
 
         public IActionResult Index()

@@ -17,7 +17,7 @@
 
 2. In the **NewFolder** box, type **Data**, and then press Enter.
 
-3. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, right-click **Data** folder, point to Add, and then click **class**.
+3. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, right-click **Data** folder, point to Add, and then click **Class**.
 
 4. In the **Name** box of the **Add New Item – EntityFrameworkExample** dialog box, type **PersonContext**, and then click Add.
 
@@ -53,6 +53,44 @@
       }
 
       public DbSet<Person> People { get; set; }
+```
+10. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, right-click **Data** folder, point to Add, and then click **class**.
+
+4. In the **Name** box of the **Add New Item – EntityFrameworkExample** dialog box, type **DbInitializer**, and then click Add.
+
+5. In the **DbInitializer** class code window, locate the following code.
+
+  ```cs
+      using System.Threading.Tasks;
+```
+6. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
+
+  ```cs
+      using EntityFrameworkExample.Models;   
+```
+7. In the **DbInitializer** class code block, press Enter and then type the following code.
+
+  ```cs
+      public static void Initialize(PersonContext context)
+      {
+          context.Database.EnsureCreated();
+          if (context.People.Any())
+          {
+                return; 
+          }
+
+          var people = new Person[]
+          {
+          new Person { FirstName = "Tara", LastName = "Brewer", City = "Ocala", Address = "317 Long Street" },
+          new Person { FirstName = "Andrew", LastName = "Tippett", City = "Anaheim", Address = "3163 Nickel Road" }
+          };
+
+          foreach (Person p in people)
+          {
+             context.People.Add(p);
+          }
+          context.SaveChanges();
+      } 
 ```
 
 10. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Startup.cs**.
@@ -98,6 +136,46 @@
       services.AddDbContext<PersonContext>(options =>
              options.UseInMemoryDatabase("PersonDB"));
 ```
+10. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Program.cs**.
+
+11. In the **Program** class code window, locate the following code.
+
+  ```cs
+      using Microsoft.Extensions.Logging;
+```
+12. Ensure that the mouse cursor is at the end of the  **Microsoft.Extensions.Logging** namespace, press Enter, and then type the following code.
+
+  ```cs
+      using Microsoft.Extensions.DependencyInjection;
+      using EntityFrameworkExample.Data;
+```
+
+13. In the **Program** class code block, select the following code.
+
+  ```cs
+      BuildWebHost(args).Run();
+```
+
+23. Replace the selected code with the following code.
+
+  ```cs
+      var host = BuildWebHost(args);
+      using (var scope = host.Services.CreateScope())
+      {
+          var services = scope.ServiceProvider;
+          try
+          {
+              var context = services.GetRequiredService<PersonContext>();
+              DbInitializer.Initialize(context);
+          }
+          catch (Exception ex)
+          {
+              var logger = services.GetRequiredService<ILogger<Program>>();
+              logger.LogError(ex, "An error occurred while seeding the database.");
+          }
+      }
+      host.Run();
+```
 
 17. In the Solution Explorer pane, under EntityFrameworkExample, expand **Controllers**, and then click **PersonController.cs**.
 
@@ -129,16 +207,6 @@
          Initialize();
       }
 
-      private void Initialize()
-      {
-         _context.Database.EnsureCreated();
-         if (!_context.People.Any())
-         {
-             _context.Add(new Person() { FirstName = "Tara", LastName = "Brewer", City = "Ocala", Address = "317 Long Street" });
-             _context.Add(new Person() { FirstName = "Andrew", LastName = "Tippett", City = "Anaheim", Address = "3163 Nickel Road" });
-             _context.SaveChanges();
-         }
-      }
 ```
 
 >**Note:** This code block represents initialization sample data into the database.
