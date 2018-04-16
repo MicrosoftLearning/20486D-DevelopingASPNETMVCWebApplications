@@ -1,5 +1,4 @@
-﻿@model string
-@inject CitiesDetails.Services.ICityProvider CityProvider
+﻿@inject CitiesDetails.Services.ICityProvider CityProvider
 @{
     Layout = null;
 }
@@ -14,10 +13,10 @@
 </head>
 <body>
     <div>
-        <h2>@CityProvider[Model]._city</h2>
-        <p>Country: @CityProvider[Model]._country</p>
-        <p>Area Code: @CityProvider[Model]._timeZone</p>
-        <span><img src="@Url.Action("GetImage", new {cityName = @Model })" /></span>
+        <h2>@CityProvider[ViewBag.City]._city</h2>
+        <p>Country: @CityProvider[ViewBag.City]._country</p>
+        <p>Area Code: @CityProvider[ViewBag.City]._timeZone</p>
+        <span><img src="@Url.Action("GetImage", new {cityName = ViewBag.City })" /></span>
         @Html.Partial("_CityPopulation", @CityProvider[Model]._cityPopulation)
         <a asp-action="Index">Back</a>
     </div>
