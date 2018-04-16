@@ -1,0 +1,9 @@
+﻿@using CitiesDetails.Services
+@model CityPopulation
+@inject ICityProvider CityProvider
+
+
+<p><h3>City Population(@Model._year)</h3></p>
+<p>City: @Model._city</p>
+<p>Urban: @Model._urban</p>
+<p>Metro: @Model._metro</p>

@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Select City</h1>
+    @await Component.InvokeAsync("City", "Madrid")
+    @await Component.InvokeAsync("City", "London")
+    @await Component.InvokeAsync("City", "Rome")
+</body>
+</html>
