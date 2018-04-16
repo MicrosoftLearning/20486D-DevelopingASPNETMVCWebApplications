@@ -83,7 +83,7 @@
 15. In the **ViewBagExample** action code block, type the following code.
 
   ```cs
-        ViewBag.Message = "View Bag Example";
+        ViewBag.Message = "ViewBag Example";
         return View();
 ```
 
@@ -97,7 +97,7 @@
 17. In the **ViewDataExample** action code block, type the following code.
 
   ```cs
-        ViewData["Message"] = "View Data Example";
+        ViewData["Message"] = "ViewData Example";
         return View();
 ```
 18. On the **FILE** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Save HomeController.cs**.
@@ -116,11 +116,11 @@
 
 22. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/home/ViewBagExample**, and then press Enter.
 
-      >**Note:** The text **The Message is: View Bag Example** is the action result you added in the **ViewBagExample** action.
+      >**Note:** The text **The Message is: ViewBag Example** is the action result you added in the **ViewBagExample** action.
 
 23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/home/ViewDataExample**, and then press Enter.
 
-      >**Note:** The text **The Message is: View Data Example** is the action result you added in the **ViewDataExample** action.
+      >**Note:** The text **The Message is: ViewData Example** is the action result you added in the **ViewDataExample** action.
 
 24. In the Microsoft Edge window, click **Close**.
 
@@ -256,13 +256,18 @@
 
       >**Note:**  The text **This is the Home controller with default param: 50** is the action result you added in the **Home** controller in the **Index** action.
 
-23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/hello/Gerald/Tesch** and then press Enter, note the text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added in the **Home** controller in the **Greeting** action.
+23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/hello/Gerald/Tesch** and then press Enter.
 
-24. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Calculator/MultByTwo/4** and then press Enter, note the result **8** is the action result you added in the **Calculator** controller in the **MultByTwo** action.
+      >**Note:**  The text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added in the **Home** controller in the **Greeting** action.
 
-25. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Calc/Mult/5/5** and then press Enter, note the result **25** is the action result you added in the **Calculator** controller in the **Mult** action.
+24. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Calculator/MultByTwo/4** and then press Enter.
+      >**Note:**  The result **8** is the action result you added in the **Calculator** controller in the **MultByTwo** action.
 
-26. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Divide/100** and then press Enter, note the result **10** is the action result you added in the **Calculator** controller in the **DivideByTen** action.
+25. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Calc/Mult/5/5** and then press Enter.
+      >**Note:**  The result **25** is the action result you added in the **Calculator** controller in the **Mult** action.
+
+26. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Divide/100** and then press Enter.
+      >**Note:**  The result **10** is the action result you added in the **Calculator** controller in the **DivideByTen** action.
 
 27. In the Microsoft Edge window, click **Close**.
 

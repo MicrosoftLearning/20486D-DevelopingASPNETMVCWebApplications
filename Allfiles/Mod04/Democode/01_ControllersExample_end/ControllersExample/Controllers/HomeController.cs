@@ -27,13 +27,13 @@ namespace ControllersExample.Controllers
 
         public IActionResult ViewBagExample()
         {
-            ViewBag.Message = "View Bag Example";
+            ViewBag.Message = "ViewBag Example";
             return View();
         }
 
         public IActionResult ViewDataExample()
         {
-            ViewData["Message"] = "View Data Example";
+            ViewData["Message"] = "ViewData Example";
             return View();
         }
     }
