@@ -78,19 +78,19 @@ The main tasks for this exercise are as follows:
    - **Microsoft.AspNetCore.Hosting**
    - **WorldJourney.Models**
 
-2. In the **CityController** class, create a new private object using the following information:
+2. In the **CityController** class, create a new object using the following information:
 
    - Scope: **private**
    - Class: **City**
    - Name: **city**
 
-3. In the **CityController** class, create a new private object using the following information:
+3. In the **CityController** class, create a new object using the following information:
 
    - Scope: **private**
    - Class: **City**
    - Name: **requestedCity** 
 
-4. In the **CityController** class, create a new private object using the following information:
+4. In the **CityController** class, create a new object using the following information:
 
    - Scope: **private** 
    - Data type: **string**
@@ -107,7 +107,7 @@ The main tasks for this exercise are as follows:
    - Return Type: **IActionResult**
    - Name: **Details**
 
-7. In the **Details** action code block, add code to find a single **city** object from its **ID**.
+7. In the **Details** action code block, add code to find a single **City** object from its **ID**.
 
 8. If no city with the right ID is found, return the **HttpNotFound** value.
 
@@ -119,7 +119,7 @@ The main tasks for this exercise are as follows:
        - Return type: **IActionResult**
        - Name: **GetImage**
 
-11. If the **city** object is not null, return a **File** result constructed from the **city.ImageName** and **city.ImageMimeType** properties, else return the **HttpNotFound** value.
+11. If the **City** object is not null, return a **File** result constructed from the **city.ImageName** and **city.ImageMimeType** properties, else return the **HttpNotFound** value.
 
 #### Task 3: Change an action to get a parameter.
 
@@ -137,7 +137,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Use a service.
 
-1. In the **CityController** delete the following private objects:
+1. In the **CityController** delete the following objects:
 
    - Scope: **private**
    - Property names: **city**, **requestedCity**, **fullPath**
@@ -145,7 +145,7 @@ The main tasks for this exercise are as follows:
    - Data type for the requestedCity: **City**
    - Data type for fullPath: **string**
 
-2. In the **CityController** class, create a new private object using the following information:
+2. In the **CityController** class, create a new object using the following information:
 
    - Scope: **private**
    - Class: **IData**
@@ -153,7 +153,7 @@ The main tasks for this exercise are as follows:
    
     Instantiate the new object by calling the **CityController** constructor.
 
-3. In the **CityController** class, create a new private object using the following information:
+3. In the **CityController** class, create a new object using the following information:
 
    - Scope: **private**
    - Class: **IHostingEnvironment**
@@ -327,7 +327,7 @@ The main tasks for this exercise are as follows:
 
 3. Ensure that the **LogActionFilter** class inherits from the **ActionFilterAttribute** class.
 
-4. In the **LogActionFilter** class, create a new private object using the following information:
+4. In the **LogActionFilter** class, create a new object using the following information:
 
    - Scope: **private**
    - Class: **IHostingEnvironment**
@@ -335,7 +335,7 @@ The main tasks for this exercise are as follows:
 
     Instantiate the new object by calling the **LogActionFilter** constructor.
 
-5. In the **LogActionFilter** class, create a new private object using the following information:
+5. In the **LogActionFilter** class, create a new object using the following information:
 
    - Scope: **private**
    - Data type: **string**
@@ -343,7 +343,7 @@ The main tasks for this exercise are as follows:
 
     Instantiate the new object by calling the **LogActionFilter** constructor.
 
-6. In the **LogActionFilter** class, create a new private object using the following information:
+6. In the **LogActionFilter** class, create a new object using the following information:
 
    - Scope: **private**
    - Data type: **string**
@@ -351,7 +351,7 @@ The main tasks for this exercise are as follows:
 
     Instantiate the new object by calling the **LogActionFilter** constructor.
 
-7. In the **LogActionFilter** class, create a new private object using the following information:
+7. In the **LogActionFilter** class, create a new object using the following information:
 
    - Scope: **private**
    - Data type: **string**
@@ -359,7 +359,7 @@ The main tasks for this exercise are as follows:
 
     Instantiate the new object by calling the **LogActionFilter** constructor.
 
-8. In the **LogActionFilter** class, create a new private object using the following information:
+8. In the **LogActionFilter** class, create a new object using the following information:
 
    - Scope: **private**
    - Data type: **string**
