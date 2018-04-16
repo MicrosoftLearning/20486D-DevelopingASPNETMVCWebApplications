@@ -44,7 +44,7 @@
        ExampleModel model = new ExampleModel() { Sentence = "Welcome to module 4 demo 1" };
        return View(model);
 ```
-10. Ensure that the cursor is at the end of the **Index** action code block, press Enter, and then type the following code.
+10. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code.
 
   ```cs
        public IActionResult ParamExample(string id)
