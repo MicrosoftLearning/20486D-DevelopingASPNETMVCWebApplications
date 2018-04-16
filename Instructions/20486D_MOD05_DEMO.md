@@ -8,7 +8,7 @@
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
-2. Go to **Allfiles\Mod05\Democode\01_RazorSyntaxExample_begin\RazorSyntaxExample**, and then double-click **RazorSyntaxExample.sln**.
+2. Go to **Allfiles\Mod05\Democode\01_RazorSyntaxExample_begin**, and then double-click **RazorSyntaxExample.sln**.
 
 #### Demonstration Steps
 
@@ -106,7 +106,7 @@
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
-2. Go to **Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin\HTMLHelpersExample**, and then double-click **HTMLHelpersExample.sln**.
+2. Go to **Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin**, and then double-click **HTMLHelpersExample.sln**.
 
 
 #### Demonstration Steps
@@ -231,7 +231,7 @@
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
-2. Go to **Allfiles\Mod05\Democode\03_TagHelpersExample_begin\TagHelpersExample**, and then double-click **TagHelpersExample.sln**.
+2. Go to **Allfiles\Mod05\Democode\03_TagHelpersExample_begin**, and then double-click **TagHelpersExample.sln**.
 
 
 #### Demonstration Steps
@@ -357,7 +357,7 @@
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
-2. Go to **Allfiles\Mod05\Democode\04_PartialViewExample_begin\PartialViewExample**, and then double-click **PartialViewExample.sln**.
+2. Go to **Allfiles\Mod05\Democode\04_PartialViewExample_begin**, and then double-click **PartialViewExample.sln**.
 
 
 #### Demonstration Steps
@@ -448,7 +448,7 @@
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
-2. Go to **Allfiles\Mod05\Democode\05_ViewComponentsExample_begin\ViewComponentExample**, and then double-click **ViewComponentExample.sln**.
+2. Go to **Allfiles\Mod05\Democode\05_ViewComponentsExample_begin**, and then double-click **ViewComponentExample.sln**.
 
 
 #### Demonstration Steps
