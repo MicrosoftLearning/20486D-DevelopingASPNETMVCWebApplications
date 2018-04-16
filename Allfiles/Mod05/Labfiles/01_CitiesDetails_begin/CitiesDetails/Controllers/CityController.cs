@@ -6,22 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CitiesDetails.Controllers
 {
-    public class HomeController : Controller
+    public class CityController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Details(string city)
+        public IActionResult Details()
         {
-            ViewBag.City = city;
             return View();
         }
 
         public IActionResult GetImage(string cityName)
         {
-            return File($@"\images\{cityName.ToLower()}.jpg", "image/jpeg");
+            return Content(cityName);
         }
     }
 }

@@ -1,0 +1,25 @@
+﻿@inject CitiesDetails.Services.ICityProvider CityProvider
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @{ string cityName = ViewBag.City; }
+        <h2>@CityProvider[cityName]._city</h2>
+        <p>Country: @CityProvider[cityName]._country</p>
+        <p>Area Code: @CityProvider[cityName]._timeZone</p>
+        <span><img src="@Url.Action("GetImage", new {cityName = cityName })" /></span>
+        @Html.Partial("_CityPopulation", CityProvider[cityName]._cityPopulation)
+        <a asp-action="ShowCities">Back</a>
+    </div>
+</body>
+</html>

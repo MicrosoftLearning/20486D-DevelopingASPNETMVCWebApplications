@@ -21,7 +21,14 @@ namespace CitiesDetails
         public void Configure(IApplicationBuilder app)
         {
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                name: "Default",
+                template: "{controller}/{action}",
+                defaults: new { controller = "City", action = "ShowCities" });
+            });
 
             app.Run(async (context) =>
             {
