@@ -15,7 +15,7 @@ namespace CitiesDetails.Controllers
 
         public IActionResult Details(string city)
         {
-            return View((object)city);
+            return View(model: city);
         }
 
         public IActionResult GetImage(string cityName)

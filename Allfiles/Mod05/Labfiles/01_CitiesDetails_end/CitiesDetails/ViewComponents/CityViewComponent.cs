@@ -8,7 +8,7 @@ namespace CitiesDetails.ViewComponents
 {
     public class CityViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync(string cityName)
+        public IViewComponentResult Invoke(string cityName)
         {
             return View("SelectCity", cityName);
         }

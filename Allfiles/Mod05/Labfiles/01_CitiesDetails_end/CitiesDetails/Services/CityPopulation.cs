@@ -12,7 +12,7 @@ namespace CitiesDetails.Services
         public int _urban;
         public int _metro;
 
-        public CityPopulation(int city, int urban, int metro, int year)
+        public CityPopulation(int year, int city, int urban, int metro)
         {
             _year = year;
             _city = city;
