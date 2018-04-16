@@ -100,7 +100,7 @@
         ViewData["Message"] = "View Data Example";
         return View();
 ```
-18. On the **FILE** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Save Controllers\HomeController.cs**.
+18. On the **FILE** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Save HomeController.cs**.
 
 19. On the **DEBUG** menu of the **ControllersExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
