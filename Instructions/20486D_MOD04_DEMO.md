@@ -254,7 +254,7 @@
 
       >**Note:**  The text **This is the Home controller with default param: 50** is the action result you added in the **Home** controller in the **Index** action.
 
-23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/hello/Gerald/Tesch** and then press Enter.
+23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Hello/Gerald/Tesch** and then press Enter.
 
       >**Note:**  The text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added in the **Home** controller in the **Greeting** action.
 
