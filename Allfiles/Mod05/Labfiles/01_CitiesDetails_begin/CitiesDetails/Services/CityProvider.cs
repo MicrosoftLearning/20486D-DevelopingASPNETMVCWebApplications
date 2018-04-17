@@ -20,6 +20,7 @@ namespace CitiesDetails.Services
 
         public CityProvider()
         {
+            _cityList = CityInitializer();
         }
 
         private Dictionary<string, CityDetails> CityInitializer()
@@ -33,12 +34,12 @@ namespace CitiesDetails.Services
 
         public IEnumerator<KeyValuePair<string, CityDetails>> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return ((IEnumerable<KeyValuePair<string, CityDetails>>)_cityList).GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return ((IEnumerable<KeyValuePair<string, CityDetails>>)_cityList).GetEnumerator();
         }
     }
 }
