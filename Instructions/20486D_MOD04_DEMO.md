@@ -148,7 +148,7 @@
 
 4. In the **Add Scaffold** dialog box, click **MVC controller - Empty**, and then click **Add**.
 
-5. In the **Controller Name** text box of the **Add Empty MVC Controller** dialog box, type **HomeController**, and then click **Add**.
+5. In the **Controller name:** text box of the **Add Empty MVC Controller** dialog box, type **HomeController**, and then click **Add**.
 
 6. In the **HomeController** class code block, select the following code.
 
