@@ -1,4 +1,6 @@
-﻿@{
+﻿@using CitiesDetails.Services
+@inject CitiesDetails.Services.ICityProvider CityProvider
+@{
     Layout = null;
 }
 
@@ -12,8 +14,9 @@
 </head>
 <body>
     <h1>Select City</h1>
-    @await Component.InvokeAsync("City", "Madrid")
-    @await Component.InvokeAsync("City", "London")
-    @await Component.InvokeAsync("City", "Paris")
+    @foreach (KeyValuePair<string, CityDetails> item in CityProvider)
+    {
+        @await Component.InvokeAsync("City", item.Key)
+    }
 </body>
 </html>

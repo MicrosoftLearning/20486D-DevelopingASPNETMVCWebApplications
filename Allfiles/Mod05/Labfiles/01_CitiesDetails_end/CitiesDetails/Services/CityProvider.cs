@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -31,5 +32,14 @@ namespace CitiesDetails.Services
             return _cityList;
         }
 
+        public IEnumerator<KeyValuePair<string, CityDetails>> GetEnumerator()
+        {
+            return ((IEnumerable<KeyValuePair<string, CityDetails>>)_cityList).GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable<KeyValuePair<string, CityDetails>>)_cityList).GetEnumerator();
+        }
     }
 }
