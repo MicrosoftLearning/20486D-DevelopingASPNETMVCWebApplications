@@ -183,7 +183,7 @@
 
 11. In the **Add Scaffold** dialog box, click **MVC controller - Empty**, and then click **Add**.
 
-12. In the **Controller Name** text box of the **Add Empty MVC Controller** dialog box, type **CalculatorController**, and then click **Add**.
+12. In the **Controller name** text box of the **Add Empty MVC Controller** dialog box, type **CalculatorController**, and then click **Add**.
 
 13. In the **CalculatorController** class code block, select the following code.
 
