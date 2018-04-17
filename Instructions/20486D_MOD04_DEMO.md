@@ -169,15 +169,15 @@
 8. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code.
 
   ```cs
-        [Route("Hello/{name}/{lastName}")]
-        public IActionResult Greeting(string name, string lastName)
+        [Route("Hello/{FirstName}/{LastName}")]
+        public IActionResult Greeting(string firstName, string lastName)
         {
         }
 ```
 9. In the **Greeting** action code block, type the following code.
 
   ```cs
-        return Content($"Hello {name}-{lastName} from module 4 demo 2");
+        return Content($"Hello {firstName} {lastName} from module 4 demo 2");
 ```
 10. In the Solution Explorer pane of the **RoutesExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
 
@@ -253,25 +253,41 @@
 22. On the **DEBUG** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
       >**Note:**  The text **This is the Home controller with default param: 50** is the action result you added in the **Home** controller in the **Index** action.
+      > This is the result of convention based route.
+
 
 23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Hello/Gerald/Tesch** and then press Enter.
 
-      >**Note:**  The text **Hello Gerald-Tesch from module 4 demo 2** is the action result you added in the **Home** controller in the **Greeting** action.
+      >**Note:**  The text **Hello Gerald Tesch from module 4 demo 2** is the action result you added in the **Home** controller in the **Greeting** action.
+      > This is the result of attribute based route.
 
 24. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Calculator/MultByTwo/4** and then press Enter.
       >**Note:**  The result **8** is the action result you added in the **Calculator** controller in the **MultByTwo** action.
+      > This is the result of convention based route.
 
 25. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Calc/Mult/5/5** and then press Enter.
       >**Note:**  The result **25** is the action result you added in the **Calculator** controller in the **Mult** action.
+      > This is the result of attribute based route.
 
-26. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Divide/100** and then press Enter.
+26. 27. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Calc/Mult/7/a** and then press Enter.
+      >**Note:**  The result **HTTP 404 error** is the action result you added in the **Calculator** controller in the **DivideByTen** action.
+      > This is the result of writing Url not according to the convention defined in the attribute based route.
+
+
+27. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Divide/100** and then press Enter.
       >**Note:**  The result **10** is the action result you added in the **Calculator** controller in the **DivideByTen** action.
+      > This is the result of attribute based route.
 
-27. In the Microsoft Edge window, click **Close**.
+28. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Divide** and then press Enter.
+      >**Note:**  The result **0** is the action result you added in the **Calculator** controller in the **DivideByTen** action.
+      > This is the result of writing Url not according to the convention defined in the attribute based route.
 
-28. On the **DEBUG** menu of the **RoutesExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-29. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Exit**.
+29. In the Microsoft Edge window, click **Close**.
+
+30. On the **DEBUG** menu of the **RoutesExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+
+31. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Exit**.
 
 # Lesson 3: Writing Action Filters
 
