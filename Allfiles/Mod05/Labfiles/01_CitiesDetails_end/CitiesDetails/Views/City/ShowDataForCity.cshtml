@@ -1,4 +1,5 @@
 ﻿@inject CitiesDetails.Services.ICityProvider CityProvider
+
 @{
     Layout = null;
 }
@@ -13,12 +14,11 @@
 </head>
 <body>
     <div>
-        @{ string cityName = ViewBag.City; }
-        <h2>@CityProvider[cityName]._city</h2>
-        <p>Country: @CityProvider[cityName]._country</p>
-        <p>Area Code: @CityProvider[cityName]._timeZone</p>
-        <span><img src="@Url.Action("GetImage", new {cityName = cityName })" /></span>
-        @Html.Partial("_CityPopulation", CityProvider[cityName]._cityPopulation)
+        <h2>@CityProvider[ViewBag.City]._city</h2>
+        <p>Country: @CityProvider[ViewBag.City]._country</p>
+        <p>Area Code: @CityProvider[ViewBag.City]._timeZone</p>
+        <span><img src="@Url.Action("GetImage", new {cityName = ViewBag.City })" /></span>
+        @Html.Partial("_CityPopulation", CityProvider[(string)ViewBag.City]._cityPopulation)
         <a asp-action="ShowCities">Back</a>
     </div>
 </body>

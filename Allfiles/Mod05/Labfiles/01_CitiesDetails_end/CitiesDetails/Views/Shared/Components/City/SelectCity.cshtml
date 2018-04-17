@@ -1,5 +1,8 @@
 ﻿@model string
+
 <div>
-    <h2><a asp-action="ShowDataForCity" asp-route-city=@Model>@Model</a></h2>
-    <img src="@Url.Action("GetImage", new {cityName = @Model })"/>
+    <h2>
+        <a asp-action="ShowDataForCity" asp-route-city=@Model>@Model</a>
+    </h2>
+    <img src="@Url.Action("GetImage", new {cityName = @Model })" />
 </div>
