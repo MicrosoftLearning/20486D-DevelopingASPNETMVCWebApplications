@@ -8,19 +8,19 @@ namespace CitiesDetails.Services
 {
     public class CityProvider : ICityProvider
     {
-        Dictionary<string, CityDetails> _cityList;
+        Dictionary<string, CityDetails> _cities;
 
         public CityDetails this[string name]
         {
             get
             {
-                return _cityList[name];
+                return _cities[name];
             }
         }
 
         public CityProvider()
         {
-            _cityList = CityInitializer();
+            _cities = CityInitializer();
         }
 
         private Dictionary<string, CityDetails> CityInitializer()
@@ -34,12 +34,12 @@ namespace CitiesDetails.Services
 
         public IEnumerator<KeyValuePair<string, CityDetails>> GetEnumerator()
         {
-            return ((IEnumerable<KeyValuePair<string, CityDetails>>)_cityList).GetEnumerator();
+            return _cities.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((IEnumerable<KeyValuePair<string, CityDetails>>)_cityList).GetEnumerator();
+            return _cities.GetEnumerator();
         }
     }
 }
