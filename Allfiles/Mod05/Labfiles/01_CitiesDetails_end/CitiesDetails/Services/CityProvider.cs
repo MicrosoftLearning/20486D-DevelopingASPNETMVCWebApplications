@@ -34,12 +34,12 @@ namespace CitiesDetails.Services
 
         public IEnumerator<KeyValuePair<string, CityDetails>> GetEnumerator()
         {
-            return ((IEnumerable<KeyValuePair<string, CityDetails>>)_cities).GetEnumerator();
+            return _cities.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((IEnumerable<KeyValuePair<string, CityDetails>>)_cities).GetEnumerator();
+            return _cities.GetEnumerator();
         }
     }
 }
