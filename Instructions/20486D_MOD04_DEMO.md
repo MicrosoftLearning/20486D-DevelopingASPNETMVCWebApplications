@@ -248,8 +248,6 @@
                     defaults: new { controller = "Home", action = "Index" });
             });
 ```
->**Note:** This code block represents a custom routes.
-
 21. On the **FILE** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Save All**.
 
 22. On the **DEBUG** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Start Debugging**.
