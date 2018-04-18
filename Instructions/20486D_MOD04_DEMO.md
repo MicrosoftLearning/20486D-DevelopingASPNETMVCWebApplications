@@ -419,7 +419,9 @@
 
 26. In the Output pane of the **FiltersExample (Running) - Microsoft Visual Studio** window, click the **Output** tab.
 
-27. On the **Output** tab, locate the following lines of code.
+27. In the **Show output from:** text box of the **Output** tab, select **Debug**.
+
+28. On the **Output** tab, locate the following lines of code.
 
   ```cs
        >>> Index started, event fired: OnActionExecuting
@@ -430,11 +432,11 @@
    >**Note:** In the above output lines, note that this printed sentences is the result of **CustomActionFilter** class. 
 
 
-28. In the Microsoft Edge window, click **Close**.
+29. In the Microsoft Edge window, click **Close**.
 
-29. On the **DEBUG** menu of the **FiltersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+30. On the **DEBUG** menu of the **FiltersExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-30. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Exit**.
+31. On the **FILE** menu of the **FiltersExample - Microsoft Visual Studio** window, click **Exit**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 
