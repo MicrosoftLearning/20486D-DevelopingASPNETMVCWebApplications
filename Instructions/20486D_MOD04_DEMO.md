@@ -419,15 +419,16 @@
 
 26. In the Output pane of the **FiltersExample (Running) - Microsoft Visual Studio** window, click the **Output** tab.
 
-27. On the **Output** tab, locate the following line of code.
+27. On the **Output** tab, locate the following lines of code.
 
   ```cs
        >>> Index started, event fired: OnActionExecuting
        >>> Index finished, event fired: OnActionExecuted
-       >>> Indexbefore result, event fired: OnResultExecuting
+       >>> Index before result, event fired: OnResultExecuting
        >>> Index result is: Welcome to module 4 demo 3,event fired: OnResultExecuted
 ```
-   >**Note:** In the above output lines, note that this is the **CustomActionFilter** class methods result. 
+   >**Note:** In the above output lines, note that this printed sentences is the result of **CustomActionFilter** class. 
+
 
 28. In the Microsoft Edge window, click **Close**.
 
