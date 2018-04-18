@@ -324,7 +324,7 @@
   ```cs
        : ActionFilterAttribute
 ```
-9. In the **CustomActionFilter** class code block, press Enter and then type the following code.
+9. In the **CustomActionFilter** class code block, press Enter, and then type the following code.
 
 
   ```cs
