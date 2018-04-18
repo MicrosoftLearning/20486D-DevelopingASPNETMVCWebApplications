@@ -252,24 +252,24 @@
 
 22. On the **DEBUG** menu of the **RoutesExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-      >**Note:** The browser window displays the text **This is the Home controller with default param: 50**. You reached the **Index** action of **Home** controller because of a convention based route.
+      >**Note:** The browser window displays the text **This is the Home controller with default param: 50**. You reached the **Index** action of **Home** controller because of a convention-based route.
 
 23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Hello/Gerald/Tesch** and then press Enter.
 
-      >**Note:**  The browser window displays the text **Hello Gerald Tesch from module 4 demo 2**. You reached the **Greeting** action of the **Home**  controller because of an attribute based route.
+      >**Note:**  The browser window displays the text **Hello Gerald Tesch from module 4 demo 2**. You reached the **Greeting** action of the **Home**  controller because of an attribute-based route.
 
 
 24. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Calculator/MultByTwo/4** and then press Enter.
       >**Note:**  The browser window displays **8**. You reached the **MultByTwo** action of the **Calculator** controller because of a
-      convention based route.
+      convention-based route.
 
 25. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Calc/Mult/5/5** and then press Enter.
-      >**Note:** The browser window displays **25**. You reached the **Mult** action of the **Calculator** controller because of an attribute based route.
+      >**Note:** The browser window displays **25**. You reached the **Mult** action of the **Calculator** controller because of an attribute-based route.
 
 
 26. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Divide/100** and then press Enter.
       >**Note:**  The browser window displays **10**. You reached the **DivideByTen** action of the **Calculator** controller because of 
-      an attribute based route.
+      an attribute-based route.
 
 
 27. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Divide** and then press Enter.
