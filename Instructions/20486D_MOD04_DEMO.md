@@ -273,7 +273,7 @@
 
 
 27. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Divide** and then press Enter.
-      >**Note:**  The browser window displays **0**. Because no value was provided to **param** element it received the value **0**. 
+      >**Note:**  The browser window displays **0**. Because no value was provided to **param** it received the value **0**. 
 
 28. In the Microsoft Edge window, click **Close**.
 
