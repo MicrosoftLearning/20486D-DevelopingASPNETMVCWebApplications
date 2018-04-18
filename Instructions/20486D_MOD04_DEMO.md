@@ -336,7 +336,7 @@
 
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
-        Debug.WriteLine(">>> "+actionName +" started, event fired: OnActionExecuting");
+        Debug.WriteLine(">>> " + actionName + " started, event fired: OnActionExecuting");
 ```
 
 11. Ensure that the cursor is at the end of the **OnActionExecuting** action code block, press Enter twice, and then type the following code.
@@ -350,7 +350,7 @@
 
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
-        Debug.WriteLine(">>> "+actionName +" finished, event fired: OnActionExecuted");
+        Debug.WriteLine(">>> " + actionName + " finished, event fired: OnActionExecuted");
 ```
 13. Ensure that the cursor is at the end of the **OnActionExecuted** action code block, press Enter twice, and then type the following code.
 
@@ -363,7 +363,7 @@
 
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
-        Debug.WriteLine(">>> "+actionName + " before result, event fired: OnResultExecuting");
+        Debug.WriteLine(">>> " + actionName + " before result, event fired: OnResultExecuting");
 ```
 
 15. Ensure that the cursor is at the end of the **OnResultExecuting** action code block, press Enter twice, and then type the following code.
@@ -378,7 +378,7 @@
   ```cs
         string actionName = filterContext.ActionDescriptor.RouteValues["action"];
         ContentResult result = (ContentResult)filterContext.Result;
-        Debug.WriteLine(">>> " + actionName + " result is: "+ result.Content + " ,event fired: OnResultExecuted");
+        Debug.WriteLine(">>> " + actionName + " result is: " + result.Content + " ,event fired: OnResultExecuted");
 ```
 17. In the **FiltersExample – Microsoft Visual Studio** window, expand **Controllers**, and then click **HomeController.cs**.
 
