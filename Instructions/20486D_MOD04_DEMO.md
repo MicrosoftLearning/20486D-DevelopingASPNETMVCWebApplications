@@ -19,7 +19,7 @@
 
 3. In the Solution Explorer pane of the **ControllersExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
 
-4. In the **Add Scaffold** dialog box, click **MVC controller - Empty**, and then click **Add**.
+4. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
 5. In the **Controller name** text box of the **Add Empty MVC Controller** dialog box, type **HomeController**, and then click **Add**.
 
@@ -146,7 +146,7 @@
 
 3. In the Solution Explorer pane of the **RoutesExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
 
-4. In the **Add Scaffold** dialog box, click **MVC controller - Empty**, and then click **Add**.
+4. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
 5. In the **Controller name** text box of the **Add Empty MVC Controller** dialog box, type **HomeController**, and then click **Add**.
 
@@ -169,7 +169,7 @@
 8. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code.
 
   ```cs
-        [Route("Hello/{FirstName}/{LastName}")]
+        [Route("Hello/{firstName}/{lastName}")]
         public IActionResult Greeting(string firstName, string lastName)
         {
         }
@@ -181,7 +181,7 @@
 ```
 10. In the Solution Explorer pane of the **RoutesExample - Microsoft Visual Studio** window, right-click **Controllers** folder, point to  **Add**, and then click **Controller**.
 
-11. In the **Add Scaffold** dialog box, click **MVC controller - Empty**, and then click **Add**.
+11. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
 12. In the **Controller name** text box of the **Add Empty MVC Controller** dialog box, type **CalculatorController**, and then click **Add**.
 
