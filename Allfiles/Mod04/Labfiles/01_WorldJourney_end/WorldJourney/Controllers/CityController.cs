@@ -44,10 +44,10 @@ namespace WorldJourney.Controllers
         }
 
         [Route("CityImage/{CityId?}")]
-        public IActionResult GetImage(int? CityId)
+        public IActionResult GetImage(int? cityId)
         {
             ViewData["Message"] = "display Image";
-            City requestedCity = _data.GetCityById(CityId);
+            City requestedCity = _data.GetCityById(cityId);
             if (requestedCity != null)
             {
                 string webRootpath = _environment.WebRootPath;
