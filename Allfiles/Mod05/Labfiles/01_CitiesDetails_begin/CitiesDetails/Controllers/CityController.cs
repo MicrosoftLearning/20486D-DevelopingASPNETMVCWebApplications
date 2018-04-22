@@ -8,6 +8,11 @@ namespace CitiesDetails.Controllers
 {
     public class CityController : Controller
     {
+        public CityController()
+        {
+         
+        }
+
         public IActionResult ShowCities()
         {
             return View();

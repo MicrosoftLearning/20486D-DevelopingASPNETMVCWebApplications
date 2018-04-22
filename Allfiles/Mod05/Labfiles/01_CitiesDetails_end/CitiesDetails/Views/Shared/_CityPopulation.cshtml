@@ -1,6 +1,8 @@
-﻿@model CitiesDetails.Services.CityPopulation
+﻿@{ 
+    CitiesDetails.Services.CityPopulation population = ViewBag.City._cityPopulation;
+}
 
-<p><h3>City Population(@Model._year)</h3></p>
-<p>City: @Model._city</p>
-<p>Urban: @Model._urban</p>
-<p>Metro: @Model._metro</p>
+<p><h3>City Population(@population._year)</h3></p>
+<p>City: @population._city</p>
+<p>Urban: @population._urban</p>
+<p>Metro: @population._metro</p>

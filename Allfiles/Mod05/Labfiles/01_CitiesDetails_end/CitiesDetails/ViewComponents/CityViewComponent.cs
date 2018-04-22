@@ -10,7 +10,8 @@ namespace CitiesDetails.ViewComponents
     {
         public IViewComponentResult Invoke(string cityName)
         {
-            return View("SelectCity", cityName);
+            ViewBag.CurrentCityName = cityName;
+            return View("SelectCity");
         }
     }
 }
