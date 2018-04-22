@@ -4,8 +4,8 @@
 
 #### Scenario
 
-You  have been asked to add controllers to a new application.
-The controller should include actions that return a view, and that respond when users display a single photo. You should also add an action that returns the photo as a .jpg file to show on a webpage.
+You have been asked to add controllers to a new application.
+The controllers should include actions that return a view. You should also add an action that returns the photo as a .jpg file to show on a webpage.
 Additionally, you are asked to configure routes in a variety of ways.
 
 The members of your development team are new to ASP.NET Core MVC and they find the use of controller actions confusing. Therefore, you need to help them by adding a component that displays action parameters in an external file whenever an action runs. You will add an action filter to achieve this.
@@ -29,9 +29,9 @@ Estimated Time: **60 minutes**
 
 In this exercise, you will create the MVC controller that handles user operations. You will also add the following actions:
 
-- _Index_. This action displays the Index view.
-- _Display_.This action takes an ID to find a single City object. It passes the City object to the Display view.
-- _GetImage_. This action returns the photo image from the service as a JPG file.
+- _Index_ . This action displays the Index view.
+- _Display_ .This action takes an ID to find a single City object. It passes the City object to the Display view.
+- _GetImage_ . This action returns the photo image from the service as a JPG file.
 
 The main tasks for this exercise are as follows:
 
@@ -70,7 +70,7 @@ The main tasks for this exercise are as follows:
    - Template: **MVC controller - Empty**
    - Folder: **Controllers**
 
-#### Task 2: Add an action to a controller.
+#### Task 2: Add actions to a controller.
 
 1. In the **CityController** class, Add **using** statements to the controller for the following namespaces:
 
@@ -78,50 +78,32 @@ The main tasks for this exercise are as follows:
    - **Microsoft.AspNetCore.Hosting**
    - **WorldJourney.Models**
 
-2. In the **CityController** class, create a new object using the following information:
-
-   - Scope: **private**
-   - Class: **City**
-   - Name: **city**
-
-3. In the **CityController** class, create a new object using the following information:
-
-   - Scope: **private**
-   - Class: **City**
-   - Name: **requestedCity** 
-
-4. In the **CityController** class, create a new object using the following information:
-
-   - Scope: **private** 
-   - Data type: **string**
-   - Name: **fullPath**  
-
-5. Edit the code in the **Index** action by Saving the following  parameter Key and value in the **ViewData** dictionary to use it later in the view.
+2. Edit the code in the **Index** action by Saving the following  parameter Key and value in the **ViewData** dictionary to use it later in the view.
 
     - Key: **Page**
     - Value: **Search city**
 
-6. Add a method for the **Details** action by using the following information:
+3. Add a method for the **Details** action by using the following information:
 
    - Scope: **public**
    - Return Type: **IActionResult**
    - Name: **Details**
 
-7. In the **Details** action code block, add code to find a single **City** object from its **ID**.
+4. In the **Details** action code block, add code to find a single **City** object from its **ID**.
 
-8. If no city with the right ID is found, return the **HttpNotFound** value.
+5. If no city with the right ID is found, return the **HttpNotFound** value.
 
-9. If a city with the right ID is found, pass it to a view called **Details**.
+6. If a city with the right ID is found, pass it to a view called **Details**.
 
-10. Add a method for the **GetImage** action by using the following information:
+7. Add a method for the **GetImage** action by using the following information:
 
        - Scope: **public**
        - Return type: **IActionResult**
        - Name: **GetImage**
 
-11. If the **City** object is not null, return a **File** result constructed from the **city.ImageName** and **city.ImageMimeType** properties, else return the **HttpNotFound** value.
+8. If the **City** object is not null, return a **File** result constructed from the **city.ImageName** and **city.ImageMimeType** properties, else return the **HttpNotFound** value.
 
-#### Task 3: Change an action to get a parameter.
+#### Task 3: Change actions to get a parameter.
 
 1. Edit the code in the **Details** action by using the following information:
 
@@ -137,15 +119,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Use a service.
 
-1. In the **CityController** delete the following objects:
-
-   - Scope: **private**
-   - Property names: **city**, **requestedCity**, **fullPath**
-   - Data type for the city: **City**
-   - Data type for the requestedCity: **City**
-   - Data type for fullPath: **string**
-
-2. In the **CityController** class, create a new object using the following information:
+1. In the **CityController** class, create a new object using the following information:
 
    - Scope: **private**
    - Class: **IData**
@@ -153,7 +127,7 @@ The main tasks for this exercise are as follows:
    
     Instantiate the new object by calling the **CityController** constructor.
 
-3. In the **CityController** class, create a new object using the following information:
+2. In the **CityController** class, create a new object using the following information:
 
    - Scope: **private**
    - Class: **IHostingEnvironment**
@@ -161,18 +135,19 @@ The main tasks for this exercise are as follows:
 
     Instantiate the new object by calling the **CityController** constructor.
 
-4. Edit the code in the **Details** action by using the following information:
+3. Edit the code in the **Details** action by using the following information:
 
    - Return class: **View**
    - View name: **Details**
    - Model: **_data.GetCityById(id)**
  
-5. Edit the code in the **GetImage** action by using the following information:
+4. Edit the code in the **GetImage** action by using the following information:
 
    - Return class: **View**
    - View name: **GetImage**
    - Model: **_data.GetCityById(id)**
  
+5. In the **GetImage** action, initialize the fullPath object, in order to refer to the name of the image under the images directory.
 
 #### Task 6: Store the result in a ViewBag property.
 
@@ -184,17 +159,13 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application and access the following relative path:
+2. Start debugging the application.
 
-    - Path: **/City/index**
-
-3. On the Earth image click the **London** area.
-
-4. Display an image.
+3. On the Earth image click the **London** area, note the red arrow in the centre of the Earth image.
 
 5. Stop debugging.
 
->**Results** : After completing this exercise, you will be able to create MVC controllers that implement common actions for the City model class in the application.
+>**Results** : After completing this exercise, you will be able to create MVC controllers that implements common actions for the City model class in the application. 
 
 ### Exercise 2: Configuring Routes by Using the Routing Table
 
@@ -206,7 +177,7 @@ The main tasks for this exercise are as follows:
 
 1. Create a Traveler controller.
 
-2. Register a new custom route in the request pipeline.
+2. Register new custom routes in the request pipeline.
 
 #### Task 1: Add a controller with an action.
 
@@ -230,11 +201,15 @@ The main tasks for this exercise are as follows:
 
 2. Start debugging the application.
 
-    >**Note:** The new **Index** action View result, in the **Traveler** Controller, is not displayed.
+3. In the **Microsoft Edge** window, request the relative URL.
 
-3. Stop debugging.
+   - URL: **/Traveler/Index**
 
-#### Task 3: Register a new route with the routing table.
+      >**Note:** In the next task you will register a new route with the routing table, therefore you will not need to manually write the **Traveler** URL in the address bar of the **Microsoft Edge** window.
+
+4. Stop debugging.
+
+#### Task 3: Register new routes with the routing table.
 
 1. In the **Startup.cs** class, replce the **app.UseMvcWithDefaultRoute** with custom routes with the following information: 
 
@@ -242,16 +217,13 @@ The main tasks for this exercise are as follows:
     - Template: **{controller}/{action}/{name}**
     - Defaults: **controller = "Traveler", action = "Index", name = "Katie Bruce"**
 
-2. In the  **TravelerRoute** custom route add defaults to the controller, action, and name parameters.
-
-3. In the **Startup.cs** class, add another custom routes with the following informatin: 
+2. In the **Startup.cs** class, add another custom routes with the following informatin: 
 
     - Name: **defaultRoute**
     - Template: **{controller}/{action}/{id?}**
+    - Defaults: **controller = "Home", action = "Index"**
 
-4. In the  **defaultRoute** custom route add defaults to the controller, action, and name parameters.
-
-5. In the  **defaultRoute** custom route add constraints to the **id** parameter.
+3. In the  **defaultRoute** custom route add constraints to the **id** parameter, the id parameter can be any digit, range from 0 to 9.
 
 #### Task 4: Run the application and verify the new route works.
 
@@ -259,11 +231,11 @@ The main tasks for this exercise are as follows:
 
 2. Start debugging the application.
 
-    >**Note:** The browser displays the **Index** action view result, in the **Traveler** Controller.
+    >**Note:** The browser displays the **Index** action view result, inside the **Traveler** Controller. The name shown in the title comes from the new Registered route with the routing table named **TravelerRoute**.
 
 3. Stop debugging.
 
->**Results** : After completing this exercise, you will be able to Register a new custom route in the request pipeline for the Traveler Controller class in the application.
+>**Results** : After completing this exercise, you will be able to register new custom routes in the request pipeline for Controllers in the application.
 
 ### Exercise 3: Configuring Routes Using Attributes
 
@@ -277,9 +249,9 @@ The main task for this exercise is as follows:
 
 #### Task 1: Apply custom routes to a controller using attributes.
 
-1. In the **CityController** class, add custom routes using attribute to the **Index** action method.
+1. In the **CityController** class, add custom route using attribute to the **Index** action method.
 
-2. In the **CityController** class, add custom routes using attribute to the **Details** action method.
+2. In the **CityController** class, add custom route using attribute to the **Details** action method.
 
 #### Task 2: Run the application and verify the new routes work.
 
@@ -291,7 +263,7 @@ The main task for this exercise is as follows:
 
 3. Stop debugging.
 
->**Results** : After completing this exercise, you will be able to add custom routes using attributes for the City Controller in the application.
+>**Results** : After completing this exercise, you will be able to add custom routes using attributes for the **City** Controller in the application.
 
 ### Exercise 4: Adding an Action Filter
 
