@@ -14,6 +14,7 @@ namespace CitiesDetails.Services
 
         public CityPopulation(int year, int city, int urban, int metro)
         {
+
         }
     }
 }

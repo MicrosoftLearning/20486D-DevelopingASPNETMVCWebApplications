@@ -14,6 +14,7 @@ namespace CitiesDetails.Services
 
         public CityDetails(string country, string city, string timeZone, CityPopulation cityPopulation)
         {
+
         }
     }
 }

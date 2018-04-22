@@ -20,7 +20,7 @@ namespace CitiesDetails.Services
 
         public CityProvider()
         {
-            _cities = CityInitializer();
+
         }
 
         private Dictionary<string, CityDetails> CityInitializer()
