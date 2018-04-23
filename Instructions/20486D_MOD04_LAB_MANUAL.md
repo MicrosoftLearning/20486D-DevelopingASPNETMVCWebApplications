@@ -399,7 +399,7 @@ The main tasks for this exercise are as follows:
 
     - **Allfiles\Mod04\Labfiles\01_WorldJourney_begin\WorldJourney\LogFile**
 
-    >**Note:** The **Text file** displays the new filter result.
+>**Note:** The **Text file** displays the new filter result.
 
 8. Stop debugging and close Microsoft Visual Studio.
 
