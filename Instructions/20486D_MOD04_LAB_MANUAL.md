@@ -5,7 +5,7 @@
 #### Scenario
 
 You have been asked to add controllers to a new application.
-The controllers should include actions that return a view. You should also add an action that returns the photo as a .jpg file to show on a webpage.
+The controllers should include actions that return a view, also add an action that return the photo as a .jpg file to show on a webpage and an action that redirects to another action in another controller.
 Additionally, you are asked to configure routes in a variety of ways.
 
 The members of your development team are new to ASP.NET Core MVC and they find the use of controller actions confusing. Therefore, you need to help them by adding a component that displays action parameters in an external file whenever an action runs. You will add an action filter to achieve this.
@@ -125,7 +125,7 @@ The main tasks for this exercise are as follows:
    - Class: **IData**
    - Name: **_data** 
    
-    Instantiate the new object by calling the **CityController** constructor.
+    Initialize the new object in the **CityController** constructor with the value **IData data**.
 
 2. In the **CityController** class, create a new object using the following information:
 
@@ -133,7 +133,7 @@ The main tasks for this exercise are as follows:
    - Class: **IHostingEnvironment**
    - Name: **_environment** 
 
-    Instantiate the new object by calling the **CityController** constructor.
+    Initialize the new object in the **CityController** constructor with the value **IHostingEnvironment environment** .
 
 3. Edit the code in the **Details** action by using the following information:
 
@@ -163,7 +163,7 @@ The main tasks for this exercise are as follows:
 
 3. On the Earth image click the **London** area, note the red arrow in the centre of the Earth image.
 
-5. Stop debugging.
+4. Stop debugging.
 
 >**Results** : After completing this exercise, you will be able to create MVC controllers that implements common actions for the City model class in the application. 
 
@@ -205,7 +205,7 @@ The main tasks for this exercise are as follows:
 
    - URL: **/Traveler/Index**
 
-      >**Note:** In the next task you will register a new route with the routing table, therefore you will not need to manually write the **Traveler** URL in the address bar of the **Microsoft Edge** window.
+    >**Note:** In the next task you will register a new route with the routing table, therefore you will not need to manually write the **Traveler** URL in the address bar of the **Microsoft Edge** window.
 
 4. Stop debugging.
 
@@ -259,9 +259,13 @@ The main task for this exercise is as follows:
 
 2. Start debugging the application.
 
-  >**Note:** Verify that the new routes work.
+3. Using the **Developer Tools**, move your cursor over the **Go Next** button and and check the **href** attribute value in the **a** tag.
 
-3. Stop debugging.
+4. Click the **Go Next** button.
+
+5. On the Earth image click the **London** area, note the red arrow in the centre of the Earth image.
+
+6. Stop debugging.
 
 >**Results** : After completing this exercise, you will be able to add custom routes using attributes for the **City** Controller in the application.
 
@@ -305,7 +309,7 @@ The main tasks for this exercise are as follows:
    - Class: **IHostingEnvironment**
    - Name: **_environment** 
 
-    Instantiate the new object by calling the **LogActionFilter** constructor.
+    Initialize the new object in the **LogActionFilter** constructor with the value **IHostingEnvironment environment**.
 
 5. In the **LogActionFilter** class, create a new object using the following information:
 
@@ -313,7 +317,7 @@ The main tasks for this exercise are as follows:
    - Data type: **string**
    - Name: **contentRootPath** 
 
-    Instantiate the new object by calling the **LogActionFilter** constructor.
+    Initialize the new object in the **LogActionFilter** constructor with the value **_environment.ContentRootPath**.
 
 6. In the **LogActionFilter** class, create a new object using the following information:
 
@@ -321,7 +325,7 @@ The main tasks for this exercise are as follows:
    - Data type: **string**
    - Name: **logPath** 
 
-    Instantiate the new object by calling the **LogActionFilter** constructor.
+    Initialize the new object in the **LogActionFilter** constructor with the value **contentRootPath + "\\LogFile\\"**.
 
 7. In the **LogActionFilter** class, create a new object using the following information:
 
@@ -329,7 +333,7 @@ The main tasks for this exercise are as follows:
    - Data type: **string**
    - Name: **fileName** 
 
-    Instantiate the new object by calling the **LogActionFilter** constructor.
+    Initialize the new object in the **LogActionFilter** constructor with the value **$"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt"**.
 
 8. In the **LogActionFilter** class, create a new object using the following information:
 
@@ -337,7 +341,7 @@ The main tasks for this exercise are as follows:
    - Data type: **string**
    - Name: **fullPath** 
 
-    Instantiate the new object by calling the **LogActionFilter** constructor.   
+    Initialize the new object in the **LogActionFilter** constructor with the value **logPath + fileName**.   
 
 #### Task 2: Add a handler for the OnActionExecuting event.
 
@@ -383,13 +387,21 @@ The main tasks for this exercise are as follows:
 
 2. Start debugging the application.
 
-3. Navigate to the following location:
+3. Click the **Go Next** button. 
 
-    - **Allfiles\Mod04\Labfiles\01_WorldJourney_begin\WorldJourney\Log**
+4. On the Earth image click the **London** area, note the red arrow in the centre of the Earth image.
 
-4. Verify the **external file** created and display the new filter result.
+5. Click the **Go Back** button.
 
-5. Stop debugging and close Microsoft Visual Studio.
+6. Stop debugging.
+
+7. Navigate to the following location:
+
+    - **Allfiles\Mod04\Labfiles\01_WorldJourney_begin\WorldJourney\LogFile**
+
+    >**Note:** The **Text file** displays the new filter result.
+
+8. Stop debugging and close Microsoft Visual Studio.
 
 >**Results** : After completing this exercise, you should have created an action filter class that logs the details of actions, controllers, and parameters to external file whenever an action is called.
 
