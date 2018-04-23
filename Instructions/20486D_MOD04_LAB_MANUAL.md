@@ -147,7 +147,7 @@ The main tasks for this exercise are as follows:
    - View name: **GetImage**
    - Model: **_data.GetCityById(id)**
  
-5. In the **GetImage** action, initialize the fullPath object, in order to refer to the name of the image under the images directory.
+5. In the **GetImage** action, initialize the fullPath object, in order to refer to the name of the image under the **images** directory.
 
 #### Task 6: Store the result in a ViewBag property.
 
@@ -204,8 +204,6 @@ The main tasks for this exercise are as follows:
 3. In the **Microsoft Edge** window, request the relative URL.
 
    - URL: **/Traveler/Index**
-
-    >**Note:** In the next task you will register a new route with the routing table, therefore you will not need to manually write the **Traveler** URL in the address bar of the **Microsoft Edge** window.
 
 4. Stop debugging.
 
