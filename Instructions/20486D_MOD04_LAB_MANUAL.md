@@ -229,7 +229,7 @@ The main tasks for this exercise are as follows:
 
 2. Start debugging the application.
 
-    >**Note:** The browser displays the **Index** action view result, inside the **Traveler** Controller. The name shown in the title comes from the new Registered route with the routing table named **TravelerRoute**.
+    >**Note:** The browser displays the **Index** action view result, inside the **Traveler** Controller. The name shown in the title comes from the new registered route in the routing table named **TravelerRoute**.
 
 3. Stop debugging.
 
@@ -247,9 +247,9 @@ The main task for this exercise is as follows:
 
 #### Task 1: Apply custom routes to a controller using attributes.
 
-1. In the **CityController** class, add custom route using attribute to the **Index** action method.
+1. In the **CityController** class, add a custom route using attribute to the **Index** action method.
 
-2. In the **CityController** class, add custom route using attribute to the **Details** action method.
+2. In the **CityController** class, add a custom route using attribute to the **Details** action method.
 
 #### Task 2: Run the application and verify the new routes work.
 
@@ -261,9 +261,11 @@ The main task for this exercise is as follows:
 
 4. Click the **Go Next** button.
 
-5. On the Earth image click the **London** area, note the red arrow in the centre of the Earth image.
+5. Using the **Developer Tools**, move your cursor over the **Earth** image and check the **href** attribute value in the **area** tag.
 
-6. Stop debugging.
+6. On the Earth image click the **London** area, note the red arrow in the centre of the Earth image.
+
+7. Stop debugging.
 
 >**Results** : After completing this exercise, you will be able to add custom routes using attributes for the **City** Controller in the application.
 
