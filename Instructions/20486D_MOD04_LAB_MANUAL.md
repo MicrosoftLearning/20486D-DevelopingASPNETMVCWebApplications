@@ -209,7 +209,7 @@ The main tasks for this exercise are as follows:
 
 4. Stop debugging.
 
-#### Task 3: Register new routes with the routing table.
+#### Task 3: Register new routes in the routing table.
 
 1. In the **Startup.cs** class, replce the **app.UseMvcWithDefaultRoute** with custom routes with the following information: 
 
