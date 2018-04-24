@@ -1,6 +1,6 @@
-﻿# Module 3: Configure Middleware and Services in ASP.NET Core
+﻿# Module 3: Configuring Middleware and Services in ASP.NET Core
 
-# Lab: Configure Middleware and Services in ASP.NET Core
+# Lab: Configuring Middleware and Services in ASP.NET Core
 
 #### Scenario
 The Adventure Works Company wants to develop a web site about ball games. For this, the company needs to perform a survey to determine the popularity of different ball games. As their employee you are required to create a survey site to be used by the company.
