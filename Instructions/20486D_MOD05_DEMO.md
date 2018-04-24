@@ -33,7 +33,7 @@
 
 5. Right click on the **Index** method name, and click **Add View...**.
 
-6. In the **Add MVC View** dialog window  verify that none of the checkboxes are selected, and press **Add**.
+6. In the **Add MVC View** dialog window  verify that none of the checkboxes are selected, and click**Add**.
 >**Note** : See that **Index.cshtm** was created inside the new Product subfolder that is inside **Views** folder.
 
 7. In the **Index.cshtml** code window, in the **BODY** element, press Enter, and type the following code.
