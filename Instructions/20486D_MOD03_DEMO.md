@@ -19,7 +19,7 @@
 
 4. In the result pane of the **New Project** dialog box, click **ASP.NET Core Web Application**.
 
-5. In the **Name** box, replace **WebApplication1** with **ConfigureMiddlewareExample**, and then click **OK**.
+5. In the **Name** box, type **ConfigureMiddlewareExample**, and then click **OK**.
 
 6. In the result pane of the **New ASP.NET Core Web Application** dialog box, click **Empty**, and then click **OK**.
 
