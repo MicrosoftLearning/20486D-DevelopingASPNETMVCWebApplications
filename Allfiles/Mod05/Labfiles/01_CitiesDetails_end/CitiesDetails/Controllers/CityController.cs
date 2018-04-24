@@ -29,7 +29,7 @@ namespace CitiesDetails.Controllers
 
         public IActionResult GetImage(string cityName)
         {
-            return File($@"\images\{cityName}.jpg", "image/jpeg");
+            return File($@"images\{cityName}.jpg", "image/jpeg");
         }
     }
 }
