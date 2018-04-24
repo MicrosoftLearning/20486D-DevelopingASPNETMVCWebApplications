@@ -13,9 +13,9 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane, under EntityFrameworkExample, expand **Data**, and then click **PersonContext.cs**.
+1. In the Solution Explorer pane, under **EntityFrameworkExample**, expand **Data**, and then click **PersonContext.cs**.
 
-2. In the **PersonContext** class code window, locate the following code.
+2. In the **PersonContext.cs** code window, locate the following code.
 
   ```cs
       using System.Threading.Tasks;
@@ -26,7 +26,7 @@
       using EntityFrameworkExample.Models;
       using Microsoft.EntityFrameworkCore;    
 ```
-4. In the **PersonContext** class code window, locate the following code.
+4. In the **PersonContext.cs** code window, locate the following code.
 
   ```cs
       public class PersonContext
@@ -37,7 +37,7 @@
       : DbContext
 ```
 
-6. In the **PersonContext** class code block, press Enter and then type the following code.
+6. In the **PersonContext.cs** code block, press Enter, and then type the following code.
 
 
   ```cs
@@ -49,9 +49,9 @@
       public DbSet<Person> People { get; set; }
 ```
  
-7. In the Solution Explorer pane, under EntityFrameworkExample, under **Data**, click **DbInitializer.cs**.
+7. In the Solution Explorer pane, under **EntityFrameworkExample**, under **Data**, click **DbInitializer.cs**.
 
-8. In the **DbInitializer** class code window, locate the following code.
+8. In the **DbInitializer.cs** code window, locate the following code.
 
   ```cs
       using System.Threading.Tasks;
@@ -61,7 +61,7 @@
   ```cs
       using EntityFrameworkExample.Models;   
 ```
-10. In the **DbInitializer** class code block, press Enter and then type the following code.
+10. In the **DbInitializer.cs** code block, press Enter and then type the following code.
 
   ```cs
       public static void Initialize(PersonContext context)
@@ -88,7 +88,7 @@
 
 11. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Startup.cs**.
 
-12. In the **Startup** class code window, locate the following code.
+12. In the **Startup.cs** code window, locate the following code.
 
   ```cs
       using Microsoft.Extensions.DependencyInjection;
@@ -101,7 +101,7 @@
       using Microsoft.EntityFrameworkCore; 
 ```
 
-14. In the **Startup** class code window, locate the following code.
+14. In the **Startup.cs** code window, locate the following code.
 
   ```cs
       public void ConfigureServices(IServiceCollection services)
@@ -131,7 +131,7 @@
 ```
 18. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Program.cs**.
 
-19. In the **Program** class code window, locate the following code.
+19. In the **Program.cs** code window, locate the following code.
 
   ```cs
       using Microsoft.Extensions.Logging;
@@ -143,7 +143,7 @@
       using EntityFrameworkExample.Data;
 ```
 
-21. In the **Program** class code block, select the following code.
+21. In the **Program.cs** code block, select the following code.
 
   ```cs
       BuildWebHost(args).Run();
@@ -170,9 +170,9 @@
       host.Run();
 ```
 
-23. In the Solution Explorer pane, under EntityFrameworkExample, expand **Controllers**, and then click **PersonController.cs**.
+23. In the Solution Explorer pane, under **EntityFrameworkExample**, expand **Controllers**, and then click **PersonController.cs**.
 
-24. In the **PersonController** code window, locate the following code.
+24. In the **PersonController.cs** code window, locate the following code.
 
   ```cs
       using Microsoft.AspNetCore.Mvc;
@@ -184,7 +184,7 @@
       using EntityFrameworkExample.Models;
 ```
 
-26. In the **PersonController** code window, locate the following code.
+26. In the **PersonController.cs** code window, locate the following code.
 
   ```cs
       public IActionResult Index()
@@ -201,7 +201,7 @@
 
 ```
 
-28. In the **PersonController** class code block, In the **Index** action code block, select the following code.
+28. In the **PersonController.cs** code block, in the **Index** action code block, select the following code.
 
   ```cs
        return View();
@@ -260,17 +260,17 @@
 
 36. On the **FILE** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Save All**.
 
-37. On the DEBUG menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click Start Debugging.
+37. On the **DEBUG** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-      >**Note:** The browser window displays the Index.cshtml page.
+      >**Note:** The browser window displays the **Index.cshtml** page.
 
-38. In the Microsoft Edge window, click **Create New Person**.
+38. In the **Microsoft Edge** window, click **Create New Person**.
 
-39. In the Microsoft Edge window, select a person of your choice and, click **Edit**.
+39. In the **Microsoft Edge** window, select a person of your choice and, click **Edit**.
 
-40. In the Microsoft Edge window, select a person of your choice and, click **Delete**.
+40. In the **Microsoft Edge** window, select a person of your choice and, click **Delete**.
 
-41. In the Microsoft Edge window, click **Close**.
+41. In the **Microsoft Edge** window, click **Close**.
 
 42. On the **DEBUG** menu of the **EntityFrameworkExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
@@ -289,9 +289,9 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane, under EntityFrameworkExample, expand **Repositories**, and then click **IRepository.cs**.
+1. In the Solution Explorer pane, under **EntityFrameworkExample**, expand **Repositories**, and then click **IRepository.cs**.
 
-2. In the **IRepository** code window, locate the following code.
+2. In the **IRepository.cs** code window, locate the following code.
 
   ```cs
       using System.Threading.Tasks;
@@ -302,7 +302,7 @@
       using EntityFrameworkExample.Models;
 ```
 
-4. In the **IRepository** code block, press Enter and then type the following code.
+4. In the **IRepository.cs** code block, press Enter, and then type the following code.
 
   ```cs
       IEnumerable<Person> GetPeople();
@@ -311,9 +311,9 @@
       void UpdatePerson(int id);
 ```
 
-5. In the Solution Explorer pane, under EntityFrameworkExample, under **Repositories**, click **MyRepository.cs**.
+5. In the Solution Explorer pane, under **EntityFrameworkExample**, under **Repositories**, click **MyRepository.cs**.
 
-6. In the **MyRepository** code window, locate the following code.
+6. In the **MyRepository.cs** code window, locate the following code.
 
   ```cs
       using System.Threading.Tasks;
@@ -324,7 +324,7 @@
       using EntityFrameworkExample.Data;
       using EntityFrameworkExample.Models;
 ```
-8. In the **MyRepository** class code window, locate the following code.
+8. In the **MyRepository.cs** code window, locate the following code.
 
   ```cs
       public class MyRepository
@@ -335,7 +335,7 @@
       : IRepository
 ```
 
-10. In the **MyRepository** code block, press Enter and then type the following code.
+10. In the **MyRepository.cs** code block, press Enter, and then type the following code.
 
   ```cs
       private PersonContext _context;
@@ -389,7 +389,7 @@
 
 15. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Startup.cs**.
 
-16. In the **Startup** class code window, locate the following code.
+16. In the **Startup.cs** code window, locate the following code.
 
   ```cs
       using Microsoft.Extensions.Configuration;
@@ -402,7 +402,7 @@
       using EntityFrameworkExample.Repositories;
 ```
 
-18. In the **Startup** class code window, locate the following code.
+18. In the **Startup.cs** code window, locate the following code.
 
   ```cs
       services.AddMvc();
@@ -416,11 +416,11 @@
       services.AddTransient<IRepository, MyRepository>();
 ```
 
->**Note:** Verify the **DefaultConnection**. In the Solution Explorer pane, under EntityFrameworkExample, **appsettings.json** file.
+>**Note:** Verify in the Solution Explorer pane, under **EntityFrameworkExample**, the **appsettings.json** contains the **DefaultConnection** string.
 
-20. In the Solution Explorer pane, under EntityFrameworkExample, expand **Controllers**, and then click **PersonController.cs**.
+20. In the Solution Explorer pane, under **EntityFrameworkExample**, expand **Controllers**, and then click **PersonController.cs**.
 
-21. In the **PersonController** code window, locate the following code.
+21. In the **PersonController.cs** code window, locate the following code.
 
   ```cs
       using Microsoft.AspNetCore.Mvc;
@@ -431,7 +431,7 @@
       using EntityFrameworkExample.Repositories;
 ```
 
-23. In the **PersonController** code window, locate the following code.
+23. In the **PersonController.cs** code window, locate the following code.
 
   ```cs
       public IActionResult Index()
@@ -448,7 +448,7 @@
 
 ```
 
-25. In the **PersonController** class code block, In the **Index** action code block, select the following code.
+25. In the **PersonController.cs** code block, in the **Index** action code block, select the following code.
 
   ```cs
        return View();
@@ -502,17 +502,17 @@
 
 33. On the **FILE** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Save All**.
 
-34. On the DEBUG menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click Start Debugging.
+34. On the **DEBUG** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-      >**Note:** The browser window displays the Index.cshtml page.
+      >**Note:** The browser window displays the **Index.cshtml** page.
 
-35. In the Microsoft Edge window, click **Create New Person**.
+35. In the **Microsoft Edge** window, click **Create New Person**.
 
-36. In the Microsoft Edge window, select a person of your choice and, click **Edit**.
+36. In the **Microsoft Edge** window, select a person of your choice, and click **Edit**.
 
-37. In the Microsoft Edge window, select a person of your choice and, click **Delete**.
+37. In the **Microsoft Edge** window, select a person of your choice, and click **Delete**.
 
-38. In the Microsoft Edge window, click **Close**.
+38. In the **Microsoft Edge** window, click **Close**.
 
 39. On the **DEBUG** menu of the **EntityFrameworkExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
