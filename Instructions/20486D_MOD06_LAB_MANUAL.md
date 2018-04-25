@@ -100,22 +100,22 @@ The main tasks for this exercise are as follows:
 
 10. Add another image property to the **Butterfly** model class and store the MIME type of image by using the following information:
 
-   - Scope: **public**
-   - Property names: **PhotoFile**, **ImageMimeType**
-   - Data type for the image: **byte []**
-   - Data type for MIME type: **string**
-   - Access: **Read and write**
+     - Scope: **public**
+     - Property names: **PhotoFile**, **ImageMimeType**
+     - Data type for the image: **byte []**
+     - Data type for MIME type: **string**
+     - Access: **Read and write**
    
 11. Add a new model class to the **ButterfliesShop** project by using the following information:
 
-   - Class name: **IndexViewModel**
+    - Class name: **IndexViewModel**
 
 12. Add a Butterflies property to the IndexViewModel model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **Butterflies**
-   - Data type: **List&lt;Butterfly&gt;**
-   - Access: **Read and write**
+     - Scope: **public**
+     - Property name: **Butterflies**
+     - Data type: **List&lt;Butterfly&gt;**
+     - Access: **Read and write**
 
 #### Task 2: Use the model in a view.
 
@@ -157,9 +157,9 @@ The main tasks for this exercise are as follows:
 
 2. Add a method for the **Index** action by using the following information:
 
-- Scope: **public**
-- Return Type: **IActionResult**
-- Name: **Index**
+   - Scope: **public**
+    - Return Type: **IActionResult**
+    - Name: **Index**
 
 3. Within the **Index** action code block, initiate IndexViewModel Butterflies property with ButterfliesList method from the IDataService interface.
 
@@ -381,7 +381,7 @@ The main tasks for this exercise are as follows:
 
 4. Add validation data annotations to the **Butterfly** model class to ensure that the users complete the **Characteristics** text box and type a string with a length shorter than 50 characters.
 
-6. Add a validation data annotation to the **Butterfly** model class to ensure that the users complete the PhotoAvatar field.
+5. Add a validation data annotation to the **Butterfly** model class to ensure that the users complete the PhotoAvatar field.
 
 #### Task 2: Add validation helpers to a view.
 
@@ -430,7 +430,7 @@ The main tasks for this exercise are as follows:
 
 5. Correct all the fields with the validation message, and then click the **Submit** button.
 
-5. Verify the details of the newly added butterfly.
+6. Verify the details of the newly added butterfly.
 
 #### Task 5: Add custom validation.
 
@@ -493,7 +493,7 @@ The main tasks for this exercise are as follows:
 
 5. Correct the **Butterflies Quantity** field, add the **Butterflies Picture** once again, and then click the **Submit** button.
 
-5. Verify the details of the newly added butterfly.
+6. Verify the details of the newly added butterfly.
 
 >**Results**: After completing this exercise, you should have created a ButterfliesShop application in which users can submit to the shop variety of butterflies.
 

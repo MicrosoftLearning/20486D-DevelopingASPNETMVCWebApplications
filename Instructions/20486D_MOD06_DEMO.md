@@ -134,7 +134,7 @@
 
        >**Note:** The browser window displays the first way to render the Restaurant properties.
 
-25. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Home/Display** and then press Enter.
+25. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Home/Display**, and then press Enter.
 
       >**Note:** The browser window displays the second way to render the Restaurant properties.
 
@@ -185,7 +185,7 @@
 6. Place the mouse cursor at the end of the **Email** property code, press Enter twice, and then type the following code.
 
   ```cs
-      [Display(Name = "Date Birth:")]
+      [Display(Name = BirthDate:")]
       [DataType(DataType.Date)]
 ```
 
@@ -297,13 +297,13 @@
 
 21. On the **Register** page, in the **Email Address** text box, type _&lt;An email address of your choice&gt;._
 
-22. On the **Register** page, in the **Date Birth** text box, choose _&lt;A birthdate of your choice&gt;._
+22. On the **Register** page, in the **BirthDate** text box, choose _&lt;A birthdate of your choice&gt;._
 
 23. On the **Register** page, in the **Password** text box, type _&lt;A password of your choice&gt;_, and then click **Register**.
 
 24. On the **User Details** page, Verify the newly registered user details.
 
-25. In the Microsoft Edge window, click **Close**.
+25. In the **Microsoft Edge** window, click **Close**.
 
 26. In the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Stop Debugging**.
 
@@ -429,7 +429,7 @@
             </div>
         </form>
 ```
->**Note:** This code block generates validation messages to a &lt;form&gt; using ValidationMessage and ValidationSummary Tag Helpers.
+>**Note:** This code block generates validation messages to a &lt;form&gt; using ValidationMessage, and ValidationSummary Tag Helpers.
 
 16. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
 
@@ -441,7 +441,7 @@
 
 20. On the **Submit Personal Information** page, in the **Age** text box, type 5.
 
-21. On the **Submit Personal Information** page, in the **Description** box, type _&lt;More than ten characters&gt;_, and then click the **Submit** button.
+21. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;More than ten characters&gt;_, and then click the **Submit** button.
 
 22. On the **Submit Personal Information** page, Verify the validation messages.
 
@@ -546,13 +546,13 @@
 
 18. On the **Submit Student Information** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
 
-19. On the **Submit Student Information** page, in the **Birthdate** text box, choose _&lt;A birthdate of your choice&gt;._
+19. On the **Submit Student Information** page, in the **BirthDate** text box, choose _&lt;A birthdate of your choice&gt;._
 
-20. On the **Submit Student Information** page, ensure that **Are you a university student?** checkbox is not selected and then click the **Submit** button.
+20. On the **Submit Student Information** page, ensure that **Are you a university student?** checkbox is not selected, and then click the **Submit** button.
 
 21. Verify the custom validation message.
 
-22. On the **Submit Student Information**, ensure that **Are you a university student?** checkbox is selected, and then click **Submit**. 
+22. On the **Submit Student Information**, ensure that **Are you a university student?** checkbox is selected, and then click the **Submit** button. 
 
       >**Note:** Verify the newly submitted personal information.
 
