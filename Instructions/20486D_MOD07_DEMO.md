@@ -61,7 +61,7 @@
   ```cs
       using EntityFrameworkExample.Models;   
 ```
-10. In the **DbInitializer.cs** code block, press Enter and then type the following code.
+10. In the **DbInitializer.cs** code block, press Enter, and then type the following code.
 
   ```cs
       public static void Initialize(PersonContext context)
@@ -266,9 +266,9 @@
 
 38. In the **Microsoft Edge** window, click **Create New Person**.
 
-39. In the **Microsoft Edge** window, select a person of your choice and, click **Edit**.
+39. In the **Microsoft Edge** window, select a person of your choice, and click **Edit**.
 
-40. In the **Microsoft Edge** window, select a person of your choice and, click **Delete**.
+40. In the **Microsoft Edge** window, select a person of your choice, and click **Delete**.
 
 41. In the **Microsoft Edge** window, click **Close**.
 
@@ -416,7 +416,7 @@
       services.AddTransient<IRepository, MyRepository>();
 ```
 
->**Note:** Verify in the Solution Explorer pane, under **EntityFrameworkExample**, the **appsettings.json** contains the **DefaultConnection** string.
+>**Note:** Verify in the Solution Explorer pane, under **EntityFrameworkExample**, the appsettings.json that contains the **DefaultConnection** string.
 
 20. In the Solution Explorer pane, under **EntityFrameworkExample**, expand **Controllers**, and then click **PersonController.cs**.
 
