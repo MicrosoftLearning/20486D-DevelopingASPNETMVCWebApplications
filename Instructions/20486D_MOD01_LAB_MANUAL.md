@@ -361,7 +361,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating an MVC application.
 
-1. Start Visual Studio 2017, and create a new Mvc project with the following name **AnimalsMvc** by using the **Web Application (Model-View-Controller)** C# template.
+1. Start Visual Studio 2017, and create a new MVC project with the following name **AnimalsMvc** by using the **Web Application (Model-View-Controller)** C# template.
 
 2. Run the new MVC application in **Microsoft Edge** window, and review **Contact** page.
 
