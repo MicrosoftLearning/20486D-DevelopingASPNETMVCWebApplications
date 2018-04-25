@@ -311,7 +311,7 @@ The main tasks for this exercise are as follows:
      - View name: **GetAll**
      - Model:  **_data.CakesInitializeData();**
 
-    >**Note**: The **_data** parameter is the private object you just Instantiate.
+>**Note**: The **_data** parameter is the private object you just Instantiate.
 
 15. Add to **GetAll** action **HttpGet**  attribute with the following information : 
 
