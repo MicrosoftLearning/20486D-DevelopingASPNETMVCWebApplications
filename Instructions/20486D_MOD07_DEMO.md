@@ -413,7 +413,7 @@
       services.AddDbContext<PersonContext>(options =>
                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
-      services.AddTransient<IRepository, MyRepository>();
+      services.AddScoped<IRepository, MyRepository>();
 ```
 
 >**Note:** Verify in the Solution Explorer pane, under **EntityFrameworkExample**, the appsettings.json that contains the **DefaultConnection** string.
