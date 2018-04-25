@@ -29,10 +29,10 @@
 3. In the **HomeController.cs** code window, locate the following code.
 
   ```cs
-        public IActionResult Index()
-        {
-            return View(_dbContext.Photos.ToList());
-        }
+       public IActionResult Index()
+       {
+          return View(_dbContext.Photos.ToList());
+       }
 ```
 
 >**Note:** This code block sends a list of Photos to the view. 
@@ -44,15 +44,15 @@
 6. In the **Index.cshtml** code window, locate the following code.
 
   ```cs
-        <div>
-        <span class="display-label">
-            @Html.DisplayNameFor(model => model.Description):
-        </span>
-        <br />
-        <span class="display-field">
-             @Html.DisplayFor(model => item.Description)
-        </span>
-        </div>
+       <div>
+       <span class="display-label">
+           @Html.DisplayNameFor(model => model.Description):
+       </span>
+       <br />
+       <span class="display-field">
+           @Html.DisplayFor(model => item.Description)
+       </span>
+       </div>
 ```
 
 >**Note:** This code block represents the View that renders the home page.
@@ -68,7 +68,7 @@
 11. In the **Startup.cs** code window, locate the following code.
 
   ```cs
-        app.UseMvcWithDefaultRoute();
+       app.UseMvcWithDefaultRoute();
 ```
 
 >**Note:** This code block represents the default route that forwards requests to the specified controller.
@@ -85,9 +85,9 @@
 
 16. In the **Photo.cs** code window, locate the following code.
 
- ```cs
-        [Required]
-        public string Title { get; set;}
+  ```cs
+       [Required]
+       public string Title { get; set;}
 ```
 
 >**Note:** This code block represents the **Title** property for a photo stored in the application.
@@ -97,7 +97,7 @@
 18. In the **HomeController.cs** code window, locate the following code.
 
   ```cs
-        public class HomeController : Controller
+       public class HomeController : Controller
 ```
 
 >**Note:** This code block represents that the **HomeController.cs** inherits the Controller  base  class which is in the namespace **Microsoft.AspNetCore.Mvc**.
@@ -105,13 +105,13 @@
 19. In the **HomeController.cs** code window, locate the following code.
 
   ```cs
-        FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
-        byte[] fileBytes;
-        using (BinaryReader br = new BinaryReader(fileOnDisk))
-        {
-              fileBytes = br.ReadBytes((int)fileOnDisk.Length);
-        }
-        return File(fileBytes, requestedPhoto.ImageMimeType);
+       FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
+       byte[] fileBytes;
+       using (BinaryReader br = new BinaryReader(fileOnDisk))
+       {
+           fileBytes = br.ReadBytes((int)fileOnDisk.Length);
+       }
+       return File(fileBytes, requestedPhoto.ImageMimeType);
 ```
 
 >**Note:** This code block represents the **GetImage** action of the **PhotoController.cs**.
@@ -121,9 +121,9 @@
 21. In the **Index.cshtml** code window, locate the following code.
 
   ```cs
-        <div class="photo-display">
-             <img class="photo-display-img" src="@Url.Action("GetImage", "Home", new { PhotoId = item.PhotoID })" />
-        </div>
+       <div class="photo-display">
+          <img class="photo-display-img" src="@Url.Action("GetImage", "Home", new { PhotoId = item.PhotoID })" />
+       </div>
 ```
 
 >**Note:** The Razor view engine runs this code and renders the **Photo** Image.

@@ -50,7 +50,7 @@ The main tasks for this exercise are as follows:
 
 2. Verify that the **Index.cshtml** and the **Contact.cshtml** are linked to the same layout.
 
-3. Verify that the **Site.css** is used to apply styles to all pages on the site, note **_Layout.cshtml** is linked to the style sheet.
+3. Verify that the **site.css** is used to apply styles to all pages on the site, note **_Layout.cshtml** is linked to the style sheet.
 
 #### Task 3: Add simple functionality.
 
@@ -373,7 +373,7 @@ The main tasks for this exercise are as follows:
 
 2. Verify **Index.cshtml** and **Contact.cshtml** are linked to the same layout.
 
-3. Verify that the Site.css is used to apply styles to all pages on the site, note **_Layout.cshtml** is linked to the style sheet.
+3. Verify that the **site.css** is used to apply styles to all pages on the site, note **_Layout.cshtml** is linked to the style sheet.
 
 #### Task 3: Add simple functionality.
 
@@ -527,7 +527,7 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)***
      - Use a layout page: **Yes**
  
-    >**Note**: Verify **IndexViewModel** model namespace in the view. 
+>**Note**: Verify **IndexViewModel** model namespace in the view. 
 
 31. Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml** from the following location:
 
@@ -539,7 +539,7 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)***
      - Use a layout page: **Yes**
  
-    >**Note**: Verify **Animal** model namespace in the view.
+>**Note**: Verify **Animal** model namespace in the view.
 
 33. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
  
