@@ -171,7 +171,7 @@ The main tasks for this exercise are as follows:
 
 2. Run the website, and view the page you added.
 
-3. Stop debugging by closing Microsoft Edge.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
 ####  Task 5: Write a GET action that accepts the new model information.
 
@@ -192,7 +192,7 @@ The main tasks for this exercise are as follows:
    - Name: **Create**
    - Parameters: a **Photo** object called **photo**.
 
-2. Add code to the **Create** action that creates a new butterfly and sets its **CreatedDate** property to today&#39;s date.
+2. Add code to the **Create** action that saves the accepted new butterfly parameters and sets its **CreatedDate** property to today&#39;s date.
 
 3. Add the **butterfly** object to the ButterfliesList from the IDataService interface, and then redirect to the **Index** action.
 
@@ -238,7 +238,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Update an action to return FileContentResult.
 
-1. In the **GetImage** action, If the **Butterfly** object is not null, return a **File** result constructed from the **Butterfly.PhotoFile** and **Butterfly.ImageMimeType** properties, else return the **NotFound** value.
+1. In the **GetImage** action, initialize the fullPath object, in order to refer to the name of the image under the images directory.
+
+2. In the **GetImage** action, If the **fullPath**  is exists, return a **File** result constructed from the **Butterfly.PhotoFile** and **Butterfly.ImageMimeType** properties, else return the **NotFound** value.
 
 #### Task 3: Add Display Helpers.
 
@@ -336,7 +338,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Run the web application in non-debugging mode.
+2. Run the web application in **non-debugging** mode.
 
 3. On the **Add Butterflies to The Shop** page, Create a new butterfly with the following credentials:
 
@@ -347,6 +349,8 @@ The main tasks for this exercise are as follows:
     - Butterflies Picture: **_&lt;A butterfly picture of your choice&gt;_**
 
 4. Verify the details of the newly added butterfly.
+
+5. **Stop debugging** by closing **Microsoft Edge**.
 
 >**Results** : After completing this exercise, you will be able to add data annotations for the Butterfly model class in the application, also add tag helpers to views. 
 
@@ -422,7 +426,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Run the web application in non-debugging mode.
+2. Run the web application in **non-debugging** mode.
 
 3. On the **Add Butterflies to The Shop** page, leave all the fields blank, and click the **Submit** button.
 
@@ -431,6 +435,8 @@ The main tasks for this exercise are as follows:
 5. Correct all the fields with the validation message, and then click the **Submit** button.
 
 6. Verify the details of the newly added butterfly.
+
+7. **Stop debugging** by closing **Microsoft Edge**.
 
 #### Task 5: Add custom validation.
 
@@ -479,21 +485,25 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Run the web application in non-debugging mode.
+2. Run the web application in **non-debugging** mode.
 
-3. On the **Add Butterflies to The Shop** page, Create a new butterfly with the following credentials:
+3. Click the **Add Butteflies** button.
+
+4. On the **Add Butterflies to The Shop** page, Create a new butterfly with the following credentials:
 
     - Common Name: **_&lt;A butterfly common name of your choice&gt;_**
     - Butterfly Family: **_&lt;A butterfly family of your choice&gt;_**
     - Characteristics: **_&lt;A butterfly characteristics of your choice&gt;_**
-    - Butterflies Quantity: **leave the field blank.**
+    - Butterflies Quantity: **type 60**
     - Butterflies Picture: **_&lt;A butterfly picture of your choice&gt;_**
 
-4. Verify the custom validation messages.
+5. Verify the custom validation messages.
 
-5. Correct the **Butterflies Quantity** field, add the **Butterflies Picture** once again, and then click the **Submit** button.
+6. Correct the **Butterflies Quantity** field, add the **Butterflies Picture** once again, and then click the **Submit** button.
 
-6. Verify the details of the newly added butterfly.
+7. Verify the details of the newly added butterfly.
+
+8. **Stop debugging** and close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you should have created a ButterfliesShop application in which users can submit to the shop variety of butterflies.
 
