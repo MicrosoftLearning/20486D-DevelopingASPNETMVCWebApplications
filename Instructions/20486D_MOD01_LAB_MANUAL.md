@@ -42,7 +42,7 @@ The main tasks for this exercise are as follows:
 
 2. Run the new Razor Pages application in**Microsoft Edge**, and review the **Contact** page.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
 #### Task 2: Explore the application structure.
 
@@ -203,7 +203,7 @@ The main tasks for this exercise are as follows:
 
 2. Run the website, and view the **Test Page** and **Actors** pages you added.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
 
@@ -227,7 +227,7 @@ The main tasks for this exercise are as follows:
 
 2. Run the new Web API application in **Microsoft Edge** window, and review the **Content** displayed.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
 #### Task 2: Explore the application structure.
 
@@ -341,7 +341,7 @@ The main tasks for this exercise are as follows:
 
 2. Run the website, and view the content you added.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
 
@@ -365,7 +365,7 @@ The main tasks for this exercise are as follows:
 
 2. Run the new MVC application in **Microsoft Edge** window, and review **Contact** page.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
 #### Task 2: Explore the application structure.
 
@@ -560,7 +560,7 @@ The main tasks for this exercise are as follows:
 
 37. Run the website, and view the page you added.
 
-38. Stop debugging.
+38. **Stop debugging** by closing **Microsoft Edge**.
 
 #### Task 4: Run the application.
 
@@ -568,7 +568,7 @@ The main tasks for this exercise are as follows:
 
 2. Run the website, and view the **Test Page** and **Animals** pages you added.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
 >**Results**: At the end of this exercise, you will be able to build a simple MVC application in Visual Studio.
 
