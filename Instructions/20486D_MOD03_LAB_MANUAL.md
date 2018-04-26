@@ -199,9 +199,9 @@ We need to aggregate the votes and store them for future use. We will use servic
 
 The main tasks for this exercise are as follows: 
 
-1.	Configure a service using **AddSingleton** to be used with Dependency Injection
-2.	Update our service to be able to store poll result data
-3.	Print the result to our browser by using the custom middleware we have created 
+1.	Configure a service using **AddSingleton** to be used with Dependency Injection.
+2.	Update our service to be able to store poll result data.
+3.	Print the result to our browser by using the custom middleware we have created. 
 
 ####	Task 1:  Define an interface for a service.
 
