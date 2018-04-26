@@ -304,9 +304,9 @@ In this case we will use an MVC controller to show the results.
 
 The main tasks for this exercise are as follows: 
 
-1.	Create a simple controller to see how it works
-2.	Pass and use a service reference to the controller by using Dependency Injection
-3.	The controller will print the results to the web browser
+1.	Create a simple controller to see how it works.
+2.	Pass and use a service reference to the controller by using Dependency Injection.
+3.	The controller will print the results to the web browser.
 
 
 ####	Task 1: Enable working with MVC.
