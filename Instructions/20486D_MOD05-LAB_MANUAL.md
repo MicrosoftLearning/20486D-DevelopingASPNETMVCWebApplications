@@ -3,27 +3,38 @@
 # Lab: Developing Views 
 
 #### Scenario
-
+To construct the user interface of the cities details application, your development team decided to add views. You have been asked to create the views to render a response to a browser.
 
 #### Objectives
 
-After completing this lab, you will be able to: 
+After completing this lab, you will be able to:
 
--	Use ASP.NET Core Static Files including HTML files, image files and CSS files.
--	Create and use custom Middleware, and use its context information.
--	Create and use services with ASP.NET Core Built-in Dependency Injection.
--	Use an ASP.NET Core MVC controller.
+-	Add an MVC view to a web application.
+-	Use Razor to differentiate server-side code from HTML.
+-	Write HTML and tag helpers in a view.
+-	Add partial views and view components.
 
 
 #### Lab Setup
 
-Estimated Time: **75 minutes**
+Estimated Time: **60 minutes**
 
 
 
 ## Exercise 1: Working with Static Files
 
-###	Task 1: Add a view to show a list of all the cities, as retrieved by the ShowCities action.
+#### Scenario
+
+In order to create the site, an index and a detail pages must be created. The index page will show a list of cities, and the details page will show the details on each one of the cities.
+
+The main tasks for this exercise are as follows:
+
+1.	Create an index page for cities.
+2.	Create a details page for a city.
+3.	Create links between the index and detail pages.
+
+
+####	Task 1: Add a view to show a list of all the cities, as retrieved by the ShowCities action.
 
 1. Open the **CitiesDetails.sln** file using the following information: 
 -   Path: **Allfiles\Mod05\Labfiles\01_CitiesDetails_begin**
@@ -48,14 +59,14 @@ Estimated Time: **75 minutes**
       > **Note**: The city name lays inside the dictionary item key.
 
 
-###	Task 2: Run the application.
+####	Task 2: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
      > **Note**: A list of city names is shown.
 
 2. Close the **Microsoft Edge** window.
 
-###	Task 3: Add a view to show data for a city, as returned by the ShowDataForCity action.
+####	Task 3: Add a view to show data for a city, as returned by the ShowDataForCity action.
 
 1. In the **CityController** class, Add **using** statements to the model for the following namespaces:
 
@@ -98,7 +109,7 @@ Estimated Time: **75 minutes**
  -   File extension: jpg
  -   Content type: image/jpeg
 
-###	Task 4: Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
+####	Task 4: Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
 
 1. In the **ShowDataForCity** view, below the **SPAN** add a **BR** element.
 
@@ -110,7 +121,7 @@ Estimated Time: **75 minutes**
 4. In the **_ViewImports** view add a **addTagHelper** using the following information:
  -    Namespace: Microsoft.AspNetCore.Mvc.TagHelpers
 
-###	Task 5: Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action.
+####	Task 5: Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action.
 
 1. In the **ShowCities** view, replace the city name text with an **H2** element.
 
@@ -122,7 +133,7 @@ Estimated Time: **75 minutes**
  -    Parameter value: City name
       > **Note**: The **@item.Key** contains the city name.
 
-###	Task 6: Run the application.
+####	Task 6: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
      > **Note**: A list of city names is shown. Each city name is a link to the details page.
@@ -138,7 +149,19 @@ Estimated Time: **75 minutes**
 
 ##	Exercise 2: Adding a partial view
 
-###	Task 1: Add a partial view.
+
+#### Scenario
+
+The population details of the city is quite big and should be grouped as a subgroup in the details page.
+
+The main tasks for this exercise are as follows:
+
+1.	Create a new partial page for the city population.
+2.	Use the partial page using an HTML helper.
+
+
+
+####	Task 1: Add a partial view.
 
 1. Create a new folder, in the **CitiesDetails** project by using the following information:
 
@@ -175,13 +198,13 @@ Estimated Time: **75 minutes**
 11. In the **_CityPopulation** view, Add a **P** element, set its content to title of your choice, followed by the **_metro** property from the **population** variable.
 
 
-###	Task 2: Use the partial view in the ShowDataForCity view.
+####	Task 2: Use the partial view in the ShowDataForCity view.
 
 1. In the **ShowDataForCity** view, below the **SPAN** element, add an **A** element using the following information:  
 -   Target page: **_CityPopulation**.
 -   Tag helper: Html.Partial
 
-###	Task 3: Run the application.
+####	Task 3: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
      > **Note**: A list links are shown for each one of the 3 cities.
@@ -193,7 +216,18 @@ Estimated Time: **75 minutes**
 
 ##	Exercise 3: Adding a view component
 
-###	Task 1: Add a view component class.
+
+#### Scenario
+
+The **ShowCities** page shows onle a simple list of links to the **CityDetailsPage**. We will use **ViewCoponents** to show more details on each city in the **ShowCities** page.
+
+The main tasks for this exercise are as follows:
+
+1.	Create a new view component for partial details of each city.
+2.	Use the view components using an HTML helper.
+
+
+####	Task 1: Add a view component class.
 
 1. Create a new top-level folder, in the **CitiesDetails** project by using the following information:
 
@@ -222,7 +256,7 @@ Estimated Time: **75 minutes**
 
 7. In the **Invoke** method code block, return the **SelectCity** view.
 
-###	Task 2: Add a view component view.
+####	Task 2: Add a view component view.
 
 1. Create a new folder, in the **CitiesDetails** project by using the following information:
 
@@ -257,7 +291,7 @@ Estimated Time: **75 minutes**
  -  Helper parameter: **CurrentCityName** property from the **ViewBag**.
 
 
-###	Task 3: Use the view component.
+####	Task 3: Use the view component.
 
 1. In the **ShowCities.cshtml** view, replace the content of the **foreach** loop, with a view component invocation using the following information:
 -   Target partial view: **City**
@@ -265,7 +299,7 @@ Estimated Time: **75 minutes**
 -   Parameter Value: city name
 The **@item.Key** contains the city name.
 
-###	Task 4: Run the application.
+####	Task 4: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
      > **Note**: A list of regions which contains a header link and an image is shown for each one of the 3 cities.
