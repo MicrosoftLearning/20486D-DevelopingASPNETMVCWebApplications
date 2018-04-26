@@ -295,7 +295,7 @@ The main tasks for this exercise are as follows:
 
 >**Result**: At the end of this exercise, you will be able to create and use a service with **Dependency Injection**.
 
-### Exercise 4: Injecting Services to Controller
+### Exercise 4: Injecting a Service to a Controller
 
 #### Scenario
 
