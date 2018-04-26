@@ -136,9 +136,9 @@ The server must receive the client’s request and notify the company for the po
 
 The main tasks for this exercise are as follows: 
 
-1. Create a custom middleware
-2. The custom middleware will display the results of the submitted form from the static HTML we created
-3. If no form was submitted, the custom middleware should not prevent the execution of other middleware
+1. Create a custom middleware.
+2. The custom middleware will display the results of the submitted form from the static HTML we created.
+3. If no form was submitted, the custom middleware should not prevent the execution of other middleware.
 
 ####	Task 1: Create a middleware.
 
