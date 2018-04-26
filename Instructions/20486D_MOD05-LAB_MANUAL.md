@@ -29,9 +29,12 @@ In order to create the site, an index and a detail pages must be created. The in
 
 The main tasks for this exercise are as follows:
 
-1.	Create an index page for cities
-2.	Create a details page for a city
-3.	Create links between the index and detail pages
+1.	Add a view to show a list of all the cities, as retrieved by the ShowCities action
+2.	Run the application
+3.	Add a view to show data for a city, as returned by the ShowDataForCity action
+4.	Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action
+5.	Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action
+6.	Run the application
 
 
 ####	Task 1: Add a view to show a list of all the cities, as retrieved by the ShowCities action.
@@ -156,8 +159,9 @@ The population details of the city is quite big and should be grouped as a subgr
 
 The main tasks for this exercise are as follows:
 
-1.	Create a new partial page for the city population
-2.	Use the partial page using an HTML helper
+1.	Add a partial view
+2.	Use the partial view in the **ShowDataForCity** view
+3.	Run the application
 
 
 
@@ -223,8 +227,10 @@ The **ShowCities** page shows onle a simple list of links to the **CityDetailsPa
 
 The main tasks for this exercise are as follows:
 
-1.	Create a new view component for partial details of each city
-2.	Use the view components using an HTML helper
+1.	Add a view component class
+2.	Add a view component view
+3.	Use the view component
+4.	Run the application
 
 
 ####	Task 1: Add a view component class.
