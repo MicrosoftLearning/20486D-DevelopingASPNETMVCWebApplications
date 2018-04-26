@@ -1,8 +1,6 @@
-﻿# Module 3: Configure Middleware and Services in ASP.NET Core
+﻿# Module 3: Configuring Middleware and Services in ASP.NET Core
 
-  
-
-# Lab: Configure Middleware and Services in ASP.NET Core
+# Lab: Configuring Middleware and Services in ASP.NET Core
 
 #### Scenario
 The Adventure Works Company wants to develop a web site about ball games. For this, the company needs to perform a survey to determine the popularity of different ball games. As their employee you are required to create a survey site to be used by the company.
@@ -11,17 +9,14 @@ The Adventure Works Company wants to develop a web site about ball games. For th
 
 After completing this lab, you will be able to: 
 
--	Use ASP.NET Core Static Files including HTML files, image files and CSS files.
--	Create and use custom Middleware, and use its context information.
--	Create and use services with ASP.NET Core Built-in Dependency Injection.
--	Use an ASP.NET Core MVC controller.
-
+-	Use ASP.NET Core static files including HTML files, image files and CSS files.
+-	Create and use a custom Middleware, and use its context information.
+-	Create and use services with ASP.NET Core built-in Dependency Injection.
+-	Inject services to an ASP.NET Core MVC controller.
 
 #### Lab Setup
 
 Estimated Time: **75 minutes**
-
-
 
 ### Exercise 1: Working with Static Files
 
@@ -31,11 +26,10 @@ To create the poll, the application needs a styled HTML page. The HTML page must
 
 The main tasks for this exercise are as follows: 
 
-1.	Create a static HTML page with an HTML form
-2.	Add images and a CSS file
-3.	Add the **UseStaticFiles** middleware
-4.	Display an HTML file from within an ASP.NET Core application
-
+1.	Create a static HTML page with an HTML form.
+2.	Add images and a CSS file.
+3.	Add the **UseStaticFiles** middleware.
+4.	Display an HTML file from within an ASP.NET Core application.
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template.
 
@@ -50,7 +44,7 @@ The main tasks for this exercise are as follows:
 
 3. Close the **Microsoft Edge** window.
 
-####	Task 3: Add HTML file to the wwwroot folder.
+####	Task 3: Add an HTML file to the wwwroot folder.
 
 1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the  project's **wwwroot** folder.
 
@@ -117,7 +111,7 @@ The main tasks for this exercise are as follows:
 
 8. Close the **Microsoft Edge** window.
 
-####	Task 7: Add HTML file outside of the wwwroot folder.
+####	Task 7: Add an HTML file outside of the wwwroot folder.
 
 1. Copy the **Test.html** file from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the project's main directory folder.
 
@@ -142,11 +136,9 @@ The server must receive the client’s request and notify the company for the po
 
 The main tasks for this exercise are as follows: 
 
-1. Create a custom middleware
-2. The custom middleware will display the results of the submitted form from the static HTML we created
-3. If no form was submitted, the custom middleware should not prevent the execution of other middleware
-
-
+1. Create a custom middleware.
+2. The custom middleware will display the results of the submitted form from the static HTML we created.
+3. If no form was submitted, the custom middleware should not prevent the execution of other middleware.
 
 ####	Task 1: Create a middleware.
 
@@ -207,11 +199,9 @@ We need to aggregate the votes and store them for future use. We will use servic
 
 The main tasks for this exercise are as follows: 
 
-1.	Configure a service using **AddSingleton** to be used with Dependency Injection
-2.	Update our service to be able to store poll result data
-3.	Print the result to our browser by using the custom middleware we have created 
-
-
+1.	Configure a service using **AddSingleton** to be used with Dependency Injection.
+2.	Update our service to be able to store poll result data.
+3.	Print the result to our browser by using the custom middleware we have created. 
 
 ####	Task 1:  Define an interface for a service.
 
@@ -305,7 +295,7 @@ The main tasks for this exercise are as follows:
 
 >**Result**: At the end of this exercise, you will be able to create and use a service with **Dependency Injection**.
 
-### Exercise 4: Injecting Services to Controller
+### Exercise 4: Injecting a Service to a Controller
 
 #### Scenario
 
@@ -314,9 +304,9 @@ In this case we will use an MVC controller to show the results.
 
 The main tasks for this exercise are as follows: 
 
-1.	Create a simple controller to see how it works
-2.	Pass and use a service reference to the controller by using Dependency Injection
-3.	The controller will print the results to the web browser
+1.	Create a simple controller to see how it works.
+2.	Pass and use a service reference to the controller by using Dependency Injection.
+3.	The controller will print the results to the web browser.
 
 
 ####	Task 1: Enable working with MVC.

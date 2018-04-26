@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Page"]</title>
+    <link type="text/css" rel="stylesheet" href="~/css/CityStyles.css" />
+</head>
+<body>
+    <h1 class="main-titel">Welcome to my journey</h1>
+    <h3 class="into">Help me search for Cities around the world</h3>
+    <h5 class="into">Search and double-click for New York, London and Chicago on the Earth image</h5>
+    <div>
+        <img class="worldmap" src="~/images/world.jpg" usemap="#worldmap" />
+    </div>
+    <map name="worldmap">
+        <area alt="New York" shape="circle" coords="262,153,50" href="@Url.Action("Details", "City", new { id = 1 })">
+        <area alt="London" shape="circle" coords="336,301,50" href="@Url.Action("Details", "City", new { id = 2 })">
+        <area alt="Chicago" shape="circle" coords="198,207,50" href="@Url.Action("Details", "City", new { id = 3 })">
+    </map>
+</body>
+</html>

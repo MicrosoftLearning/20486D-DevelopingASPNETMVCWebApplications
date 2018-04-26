@@ -1,0 +1,42 @@
+﻿@model DataAnnotationsExample.Models.Student
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="~/css/StyleSheet.css" />
+</head>
+<body>
+    <h1>Submit Student Information</h1>
+    <div>
+        <form asp-action="Details">
+            <div asp-validation-summary="All"></div>
+            <div class="form-field">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" />
+                <span asp-validation-for="LastName"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Birthdate"></label>
+                <input asp-for="Birthdate" />
+                <span asp-validation-for="Birthdate"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="UniversityStudent"></label>
+                <input asp-for="UniversityStudent" />
+                <span asp-validation-for="UniversityStudent"></span>
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PhotoSharingSample.Models.Photo>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home page</title>
+
+    <link type="text/css" rel="stylesheet" href="~/css/PhotoSharingStyles.css" />
+</head>
+<body>
+    <h1 class="main-titel">Photos Unlimited</h1>
+    <p class="into">Join, upload, share, and comment instantly. Bring your photographic vision to everyone.</p>
+    <p class="into">Our latest Photos</p>
+    <br />
+    @foreach (var item in Model)
+    {
+        <div class="photo-index-card">
+            <h3 class="display-picture-title">
+                "@Html.DisplayFor(modelItem => item.Title)"
+            </h3>
+            @if (item.PhotoFileName != null)
+            {
+                <div class="photo-display">
+                    <img class="photo-display-img" src="@Url.Action("GetImage", "Home", new { PhotoId = item.PhotoID })" />
+                </div>
+            }
+
+            <div>
+                <span class="display-label">
+                    @Html.DisplayNameFor(model => model.Description):
+                </span>
+                <br />
+                <span class="display-field">
+                    @Html.DisplayFor(model => item.Description)
+                </span>
+            </div>
+
+            <div>
+                <span class="display-label">
+                    @Html.DisplayNameFor(model => model.CreatedDate):
+                </span>
+                <span class="display-field">
+                    @Html.DisplayFor(model => item.CreatedDate)
+                </span>
+            </div>
+        </div>
+    }
+</body>
+</html>

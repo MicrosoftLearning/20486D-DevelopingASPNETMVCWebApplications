@@ -25,7 +25,7 @@ namespace DesignProject
 
         public string Owner
         {
-            get => default(int);
+            get => default(string);
             set
             {
             }
@@ -33,7 +33,7 @@ namespace DesignProject
 
         public string Subject
         {
-            get => default(int);
+            get => default(string);
             set
             {
             }
@@ -41,7 +41,7 @@ namespace DesignProject
 
         public string Body
         {
-            get => default(int);
+            get => default(string);
             set
             {
             }
