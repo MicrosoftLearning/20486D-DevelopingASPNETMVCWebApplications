@@ -39,8 +39,9 @@ The main tasks for this exercise are as follows:
 
 ####	Task 1: Add a view to show a list of all the cities, as retrieved by the ShowCities action.
 
-1. Open the **CitiesDetails.sln** file using the following information: 
--   Path: **Allfiles\Mod05\Labfiles\01_CitiesDetails_begin**
+1. Open the  **PhotoSharingApplication**  solution from the following location:
+
+-   File location:  **Allfiles\Mod05\Labfiles\01_CitiesDetails_begin**
 
 2. In the **CityProvider** service constructor, initialize the **_cities** variable with the **CityInitializer** method results.
 
@@ -48,17 +49,25 @@ The main tasks for this exercise are as follows:
 
 4. In **CityPopulation** class, assign the class members of the **CityPopulation** class with the values received from the constructor.
 
-5. Add a view that corresponds to the **ShowCities** action of the **CityController**, and inject the **ICityProvider** into the view.
+5. Add a new view to the application by using the following information:
+
+    - Parent folder: **/Views/City**
+    - Name of the view: **ShowCities.cshtml**
+    - Clear the **Use a layout or master page** check box.
 
 6. In the **ShowCities** view, Add **using** statements to the model for the following namespaces:
 
--   **@using CitiesDetails.Services**
+-   **CitiesDetails.Services**
 
-7. In the **ShowCities** view, add a link to the **~/css/StyleSheet.css** css file.
+7. To link the new style sheet, add a  **link**  element to the  **ShowCities.cshtml**  file by using the following information:
 
-8. Create a new **foreach** code block that loops through all the cities in the **CitiesProvider** indexer list.
+-   Type:  **text/css**
+-   Relation:  **stylesheet**
+-   Href:  **~/css/StyleSheet.css**
+
+9. Create a new **foreach** code block that loops through all the cities in the **CitiesProvider** indexer list.
     
-9. In the **foreach** code block, add a **P** element to display the city name property from the model.
+10. In the **foreach** code block, add a **P** element to display the city name property from the model.
       > **Note**: The city name lays inside the dictionary item key.
 
 
@@ -83,30 +92,38 @@ The main tasks for this exercise are as follows:
 
 5. Use the **city** parameter as index of the **_cities** class member, and save the value to **ViewBag.City**.
 
-6. Add a view that corresponds to the **ShowDataForCity** action of the **CityController**.
+6. Add a new view to the application by using the following information:
+
+    - Parent folder: **/Views/City**
+    - Name of the view: **ShowDataForCity.cshtml**
+    - Clear the **Use a layout or master page** check box.
 
 7. Inject the **ICityProvider** into the **ShowDataForCity** view.
 
-8. In the **ShowDataForCity** view, add a link to the **~/css/StyleSheet.css** css file.
+8. To link the new style sheet, add a  **link**  element to the  **ShowDataForCity.cshtml**  file by using the following information:
 
-9. In the **BODY** element, Create a **DIV** element.
+-   Type:  **text/css**
+-   Relation:  **stylesheet**
+-   Href:  **~/css/StyleSheet.css**
 
-10. In the **DIV** element, Add a **H2** element to display the **_city** property from the **ViewBag.City**.
+10. In the **BODY** element, Create a **DIV** element.
 
-11. In the **DIV** element, below the **H2** element, add a **P** element, set its content to title of your choice, followed by the **country** property from the **ViewBag.City**.
+11. In the **DIV** element, Add a **H2** element to display the **_city** property from the **ViewBag.City**.
 
-12. In the **DIV** element, below the **P** element, add another **P** element, set its content to title of your choice, followed by the **timezone** property from the **ViewBag.City**.
+12. In the **DIV** element, below the **H2** element, add a **P** element, set its content to title of your choice, followed by the **country** property from the **ViewBag.City**.
 
-13. In the **DIV** element, below the last **P** element, add a **SPAN** element.
+13. In the **DIV** element, below the **P** element, add another **P** element, set its content to title of your choice, followed by the **timezone** property from the **ViewBag.City**.
 
-14. Within the **SPAN** element, render an **IMG** tag.
+14. In the **DIV** element, below the last **P** element, add a **SPAN** element.
 
-15. In the **IMG** element, add a **SRC** property using the following information:
+15. Within the **SPAN** element, render an **IMG** tag.
+
+16. In the **IMG** element, add a **SRC** property using the following information:
  -   Html helper: Url.Action
  -  Target action: **GetImage**
  -  Helper parameter: **_city** property from the **ViewBag.City**.
      
-16. In the **CityController** class, in the **GetImage** action replace the method's return value to **File** using the following information:
+17. In the **CityController** class, in the **GetImage** action replace the method's return value to **File** using the following information:
  -   File path: images\
  -   File name: **cityName** parameter value
  -   File extension: jpg
@@ -121,8 +138,9 @@ The main tasks for this exercise are as follows:
  -   Target page: **ShowCities**.
 
 3. Add an **MVC View Imports Page** with the name of **_ViewImports**.
-4. In the **_ViewImports** view add a **addTagHelper** using the following information:
- -    Namespace: Microsoft.AspNetCore.Mvc.TagHelpers
+4. In the  **_ViewImports**  file, Add  **addTagHelper**  statements to the file for the following namespaces:
+
+-   **Namespace: Microsoft.AspNetCore.Mvc.TagHelpers**
 
 ####	Task 5: Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action.
 
