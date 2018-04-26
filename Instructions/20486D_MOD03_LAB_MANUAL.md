@@ -26,12 +26,10 @@ To create the poll, the application needs a styled HTML page. The HTML page must
 
 The main tasks for this exercise are as follows: 
 
-1.	Create a static HTML page with an HTML form
-2.	Add images and a CSS file
-3.	Add the **UseStaticFiles** middleware
-4.	Display an HTML file from within an ASP.NET Core application
-
+1.	Create a static HTML page with an HTML form.
 2.	Add images and a CSS file.
+3.	Add the **UseStaticFiles** middleware.
+4.	Display an HTML file from within an ASP.NET Core application.
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template.
 
