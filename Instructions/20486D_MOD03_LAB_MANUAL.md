@@ -44,7 +44,7 @@ The main tasks for this exercise are as follows:
 
 3. Close the **Microsoft Edge** window.
 
-####	Task 3: Add HTML file to the wwwroot folder.
+####	Task 3: Add an HTML file to the wwwroot folder.
 
 1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the  project's **wwwroot** folder.
 
