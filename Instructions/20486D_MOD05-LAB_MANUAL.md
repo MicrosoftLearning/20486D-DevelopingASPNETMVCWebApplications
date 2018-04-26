@@ -9,10 +9,10 @@ To construct the user interface of the cities details application, your developm
 
 After completing this lab, you will be able to:
 
--	Add an MVC view to a web application.
--	Use Razor to differentiate server-side code from HTML.
--	Write HTML and tag helpers in a view.
--	Add partial views and view components.
+-	Add an MVC view to a web application
+-	Use Razor to differentiate server-side code from HTML
+-	Write HTML and tag helpers in a view
+-	Add partial views and view components
 
 
 #### Lab Setup
@@ -29,9 +29,9 @@ In order to create the site, an index and a detail pages must be created. The in
 
 The main tasks for this exercise are as follows:
 
-1.	Create an index page for cities.
-2.	Create a details page for a city.
-3.	Create links between the index and detail pages.
+1.	Create an index page for cities
+2.	Create a details page for a city
+3.	Create links between the index and detail pages
 
 
 ####	Task 1: Add a view to show a list of all the cities, as retrieved by the ShowCities action.
@@ -156,8 +156,8 @@ The population details of the city is quite big and should be grouped as a subgr
 
 The main tasks for this exercise are as follows:
 
-1.	Create a new partial page for the city population.
-2.	Use the partial page using an HTML helper.
+1.	Create a new partial page for the city population
+2.	Use the partial page using an HTML helper
 
 
 
@@ -223,8 +223,8 @@ The **ShowCities** page shows onle a simple list of links to the **CityDetailsPa
 
 The main tasks for this exercise are as follows:
 
-1.	Create a new view component for partial details of each city.
-2.	Use the view components using an HTML helper.
+1.	Create a new view component for partial details of each city
+2.	Use the view components using an HTML helper
 
 
 ####	Task 1: Add a view component class.
