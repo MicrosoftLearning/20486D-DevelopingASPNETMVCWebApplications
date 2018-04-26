@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Cupcakes.Data;
 using Cupcakes.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cupcakes.Repositories
 {
@@ -18,8 +20,18 @@ namespace Cupcakes.Repositories
 
         public void CreateCupcake(Cupcake cupcake)
         {
-            _context.Add(cupcake);
-            _context.SaveChangesAsync();
+            if (cupcake.PhotoAvatar != null && cupcake.PhotoAvatar.Length > 0)
+            {
+                cupcake.ImageMimeType = cupcake.PhotoAvatar.ContentType;
+                cupcake.ImageName = Path.GetFileName(cupcake.PhotoAvatar.FileName);
+                using (var memoryStream = new MemoryStream())
+                {
+                    cupcake.PhotoAvatar.CopyTo(memoryStream);
+                    cupcake.PhotoFile = memoryStream.ToArray();
+                }
+                _context.Add(cupcake);
+                _context.SaveChanges();
+            }
         }
 
         public bool CupcakeExists(int id)
@@ -31,12 +43,14 @@ namespace Cupcakes.Repositories
         {
             var cupcake = _context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id);
             _context.Cupcakes.Remove(cupcake);
-            _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
         public Cupcake GetCupcakeById(int id)
         {
-            return _context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id);
+            return _context.Cupcakes.Include(b => b.Bakery)
+                                    .AsNoTracking()
+                .SingleOrDefault(c => c.CupcakeId == id);
         }
 
         public IEnumerable<Cupcake> GetCupcakes()
@@ -44,10 +58,17 @@ namespace Cupcakes.Repositories
             return _context.Cupcakes.ToList();
         }
 
-        public void UpdateCupcake(Cupcake cupcake)
+        public IQueryable<Bakery> PopulateBakeriesDropDownList()
         {
-            _context.Update(cupcake);
-            _context.SaveChangesAsync();
+            var BakeriesQuery = from b in _context.Bakeries
+                                orderby b.BakeryName
+                                select b;
+            return BakeriesQuery;
+        }
+
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
         }
     }
 }

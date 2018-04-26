@@ -12,7 +12,8 @@ namespace Cupcakes.Repositories
         Cupcake GetCupcakeById(int id);
         void CreateCupcake(Cupcake cupcake);
         void DeleteCupcake(int id);
-        void UpdateCupcake(Cupcake cupcake);
+        void SaveChanges();
         bool CupcakeExists(int id);
+        IQueryable<Bakery> PopulateBakeriesDropDownList();
     }
 }
