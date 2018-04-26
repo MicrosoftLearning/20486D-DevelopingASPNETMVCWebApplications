@@ -9,10 +9,10 @@ The Adventure Works Company wants to develop a web site about ball games. For th
 
 After completing this lab, you will be able to: 
 
--	Use ASP.NET Core Static Files including HTML files, image files and CSS files.
--	Create and use custom Middleware, and use its context information.
--	Create and use services with ASP.NET Core Built-in Dependency Injection.
--	Use an ASP.NET Core MVC controller.
+-	Use ASP.NET Core static files including HTML files, image files and CSS files.
+-	Create and use a custom Middleware, and use its context information.
+-	Create and use services with ASP.NET Core built-in Dependency Injection.
+-	Inject services to an ASP.NET Core MVC controller.
 
 #### Lab Setup
 
