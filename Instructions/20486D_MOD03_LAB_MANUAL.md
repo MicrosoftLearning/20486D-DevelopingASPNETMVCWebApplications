@@ -111,7 +111,7 @@ The main tasks for this exercise are as follows:
 
 8. Close the **Microsoft Edge** window.
 
-####	Task 7: Add HTML file outside of the wwwroot folder.
+####	Task 7: Add an HTML file outside of the wwwroot folder.
 
 1. Copy the **Test.html** file from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the project's main directory folder.
 
