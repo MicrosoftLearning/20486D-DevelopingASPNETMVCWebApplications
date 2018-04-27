@@ -272,7 +272,7 @@ The main tasks for this exercise are as follows:
 
      - **/PollQuestions.html**
 
-3. Select the **Basketball** game, and press the **Submit Form** button.
+3. Select the **Basketball** game, and then press the **Submit Form** button.
      > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1.
 
 4. Access the following relative URL in a new **Microsoft Edge** window:
@@ -283,7 +283,7 @@ The main tasks for this exercise are as follows:
 5. Select the **Football** game, and press the **Submit Form** button.
      > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1.
 
-6. Access the following relative URL in a new **Microsoft Edge** windowL:
+6. Access the following relative URL in a new **Microsoft Edge** window:
 
      - **/PollQuestions.html**
      > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
