@@ -46,7 +46,7 @@
 
 12. In the **Microsoft Edge** window, click **Close**.
 
-13. On the **DEBUG** Menu, click **Stop Debugging**.
+13. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 14. In the **Startup.cs** code window, locate the following code.
 ```cs
@@ -75,7 +75,7 @@
 
 19. In the **Microsoft Edge** window, click **Close**.
 
-20. On the **DEBUG** Menu, click **Stop Debugging**.
+20. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 21. In the **Startup.cs** code window, locate the following code.
 ```cs
@@ -94,7 +94,7 @@
 
 24. In the **Microsoft Edge** window, click **Close**.
 
-25. On the **DEBUG** Menu, click **Stop Debugging**.
+25. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 26. In the **Startup.cs** code window, select the following code.
 ```cs
@@ -122,7 +122,7 @@
 
 31. In the **Microsoft Edge** window, click **Close**.
 
-32. On the **DEBUG** Menu, click **Stop Debugging**.
+32. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 33. Select the following code.
 ```cs
@@ -178,7 +178,7 @@
 
 9.  In the **File Explorer** window, go to **Allfiles\Mod03\Democode\02_StaticFilesExample_begin**.
     
-10.  In the **02_StaticFilesExample_begin** window, select the **HtmlFile.html** and the **ImageFile.jpg** files.
+10.  In the **02_StaticFilesExample_begin** window, select the **html_file.html** and the **image_file.jpg** files.
  
 11. Right-click the selected files, press right-click, and then click **Copy**.
     
@@ -189,18 +189,18 @@
 
 14. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-15. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/HtmlFile.html, and then press Enter.
+15. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/html_file.html, and then press Enter.
      >**Note**: Only the **app.Run** is executed returns **Hello World** !
 
-16. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/ImageFile.jpg, and then press Enter. 
+16. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/image_file.jpg, and then press Enter. 
      >**Note**: Only the **app.Run** is executed returns **Hello World** !
 
-17. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/NonExistingPath.jpg, and then press Enter. 
+17. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/nonexisting_path.jpg, and then press Enter. 
      >**Note**: Only the **app.Run** is executed returns **Hello World** !
 
 18. In the **Microsoft Edge** window, click **Close**.
 
-19. On the **DEBUG** Menu, click **Stop Debugging**.
+19. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Stop Debugging**
 
 20. In the **Solution Explorer** pane, click **Startup.cs**.
 
@@ -220,18 +220,18 @@
 
 23. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-24. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/HtmlFile.html, and then press Enter.
+24. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/html_file.html, and then press Enter.
      >**Note**: The HTML file is shown.
 
-25. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/ImageFile.jpg, and then press Enter. 
+25. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/image_file.jpg, and then press Enter. 
      >**Note**: The image file is shown.
 
-26. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/NonExistingPath.jpg, and then press Enter. 
+26. In the **Microsoft Edge**, Change the URL path to http://localhost:[port]/nonexisting_path.jpg, and then press Enter. 
      >**Note**: The nonexisting path leads eventualy to **app.Run**.
 
 27. In the **Microsoft Edge** window, click **Close**.
 
-28. On the **DEBUG** Menu, click **Stop Debugging**.
+28. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 29. On the **FILE** menu of the **StaticFilesExample - Microsoft Visual Studio** window, click **Exit**.
 
@@ -346,7 +346,7 @@ public class Logger
 
 28. In the **Microsoft Edge** window, click **Close**.
 
-29. On the **DEBUG** Menu, click **Stop Debugging**.
+29. On the **DEBUG** menu of the **ConfigureServiceExample –  Microsoft Visual Studio** window, click **Stop Debugging**
 
 30. In the **Solution Explorer** pane, double click the newly created **XXXX-XX-XX--XX-XX-XX.log** file.
      >**Note**: File text: **[DateTime]: Logged Line**. The text was created by the Log method that is inside the Logger class.
