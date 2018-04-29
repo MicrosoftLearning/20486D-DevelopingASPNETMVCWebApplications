@@ -26,7 +26,7 @@ namespace ConfigureMiddlewareExample
             }
             app.Use(async (context, next) =>
             {
-                await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + Environment.NewLine);
+                await context.Response.WriteAsync("Custom MiddleWare, Path = " + context.Request.Path.Value + "<br />");
                 await next.Invoke();
             });
             app.Run(async (context) =>
