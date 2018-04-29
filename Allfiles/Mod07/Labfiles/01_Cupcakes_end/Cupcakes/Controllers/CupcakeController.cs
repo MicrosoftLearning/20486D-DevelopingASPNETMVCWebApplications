@@ -61,7 +61,7 @@ namespace Cupcakes.Controllers
 
         public IActionResult Edit(int id)
         {
-            var cupcake = _repository.GetCupcakeById(id);
+            Cupcake cupcake = _repository.GetCupcakeById(id);
             if (cupcake == null)
             {
                 return NotFound();
@@ -74,7 +74,7 @@ namespace Cupcakes.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditPost(int id)
         {
-            Cupcake cupcakeToUpdate = _repository.GetCupcakeById(id);
+            var cupcakeToUpdate = _repository.GetCupcakeById(id);
             if (await TryUpdateModelAsync<Cupcake>(
                 cupcakeToUpdate,
                 "",
