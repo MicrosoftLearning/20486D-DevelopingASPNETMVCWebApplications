@@ -52,7 +52,7 @@ namespace PollBall
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Action was not handled by any middleware. App run is executing. wwwroot folder path: " + env.WebRootPath);
+                await context.Response.WriteAsync("Action was not handled by any middleware. app.run is executing. wwwroot folder path: " + env.WebRootPath);
             });
         }
     }

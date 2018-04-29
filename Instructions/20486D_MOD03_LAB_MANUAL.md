@@ -51,13 +51,13 @@ The main tasks for this exercise are as follows:
 2. Create a new subfolder, and copy a CSS file to the new folder by using the following information:
 
      -   Parent directory of the new directory: **wwwroot**
-     -   New folder name: **style**
-     -   CSS file to be copied: **StyleSheet.css**
+     -   New folder name: **css**
+     -   CSS file to be copied: **style.css**
      -   Source location of the CSS file: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
 
 3. Create a new **HTML Page** by using the following information:
 
-     -   File name: **PollQuestions.html**
+     -   File name: **poll_questions.html**
      -   Parent Directory: **wwwroot**
 
 4. Inside the **BODY** element, Create a **P** Element with a **H1** element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and click the **submit query**.
@@ -70,7 +70,7 @@ The main tasks for this exercise are as follows:
 
 8. Inside the **submit-batch** **DIV** element create a button of type **SUBMIT**.
 
-9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\Html Text.txt** existing file and copy the content into the **DIV** with the **main-div** class you created.
+9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\html_text.txt** existing file and copy the content into the **DIV** with the **main-div** class you created.
 
 ####	Task 4: Run the application – content of HTML not displayed.
 
@@ -78,7 +78,7 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
    
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
      > **Note**: See that **Hello Word !** is still shown, even after we have added an HTML file and set the URL path to it.
 
 3. Close the **Microsoft Edge** window.
@@ -93,27 +93,27 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
    
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
      > **Note**: See that the file content is shown with the photos in the subdirectory, but the HTML content is poorly designed.
 
 3. Close the **Microsoft Edge** window.
 
-4. Link the **StyleSheet.css** file to the **PollQuestions.html** file.
+4. Link the **style.css** file to the **poll_questions.html** file.
 
 5. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
 6. Access the following relative URL:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
      > **Note**: Now the HTML content is shown with the CSS design.
 
-7. Select the basketball game, and press the **Submit Form** button.
+7. Select the basketball game, and click the **Submit Form** button.
 
 8. Close the **Microsoft Edge** window.
 
 ####	Task 7: Add an HTML file outside of the wwwroot folder.
 
-1. Copy the **Test.html** file from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the project's main directory folder.
+1. Copy the **test.html** file from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the project's main directory folder.
 
 ####	Task 8: Run the application – content of HTML outside wwwroot folder not displayed.
 
@@ -121,7 +121,7 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
      > **Note**: By default, files outside the wwwroot directory are not visible in the browser, so **Hello Word !** from the **app.Run** is shown.
 
 3. Close the **Microsoft Edge** window.
@@ -152,9 +152,9 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
 
-3. Select the **Basketball** game, and press the **Submit Form** button.
+3. Select the **Basketball** game, and click the **Submit Form** button.
      > **Note**: The browser moved to a result page, and the following result is shown: Selected Value is = Basketball.
 
 4. Close the **Microsoft Edge** window.
@@ -167,10 +167,10 @@ The main tasks for this exercise are as follows:
 
 3. Access the following relative URL:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
 
-4. Select the **Basketball** game, and press the **Submit Form** button.
-     > **Note**: Now the **UseStaticFiles** middleware executes instead of the custom middleware, and it transfers back to the PollQuestions.html page.
+4. Select the **Basketball** game, and click the **Submit Form** button.
+     > **Note**: Now the **UseStaticFiles** middleware executes instead of the custom middleware, and it transfers back to the poll_questions.html page.
 
 5. Close the **Microsoft Edge** window.
 
@@ -182,7 +182,7 @@ The main tasks for this exercise are as follows:
 
 9. Access the following relative URL:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
      > **Note**: Now an empty page is shown, and the UseStaticFiles does not handle the call.
 
 10. Close the **Microsoft Edge** window.
@@ -221,14 +221,14 @@ The main tasks for this exercise are as follows:
     Tennis
 ```
 
-4. Create an interface inside the **Services** folder named **lResultsService**.
+4. Create an interface inside the **Services** folder named **lPollResultsService**.
 
 5. Add a method declaration inside the interface using the following information:
 
      - Name: **AddVote**
      - Parameter name: **game**
      - Parameter Type: **SelectedGame**
-     - Return type: **Void**
+     - Return type: **void**
 
 5. Add a method declaration inside the interface using the following information:
 
@@ -237,7 +237,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 2: Define an implementation for the service.
 
-1. Create a class named **ResultsService** inside the **Services** folder, and inherit the class from the **lResultsService** interface.
+1. Create a class named **PollResultsService** inside the **Services** folder, and implement the class from the **lPollResultsService** interface.
 
 2. Create the **AddVote** and the **GetVoteResult** methods, as defined by the interface decleration.
 
@@ -252,11 +252,11 @@ The main tasks for this exercise are as follows:
 
 1. In the **startup** class, in the **ConfigureServices**, add the poll results service using the following information:
 
-     - Interface: **lResultsService**
-     - Implementation: **ResultsService**
+     - Interface: **lPollResultsService**
+     - Implementation: **PollResultsService**
      - Add method: **Singleton**
 
-2. Inject the **lResultsService** interface into the **Configure** method that is inside the **Startup** class using Dependency Injection.
+2. Inject the **lPollResultsService** interface into the **Configure** method that is inside the **Startup** class using Dependency Injection.
 
 3. Inside the custom middleware, Add a vote to the service by the selected game that is received from the **Favorite** parameter. 
 
@@ -270,25 +270,25 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
 
-3. Select the **Basketball** game, and press the **Submit Form** button.
+3. Select the **Basketball** game, and then click the **Submit Form** button.
      > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1.
 
 4. Access the following relative URL in a new **Microsoft Edge** window:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
      > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
-5. Select the **Football** game, and press the **Submit Form** button.
+5. Select the **Football** game, and click the **Submit Form** button.
      > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1.
 
-6. Access the following relative URL in a new **Microsoft Edge** windowL:
+6. Access the following relative URL in a new **Microsoft Edge** window:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
      > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
-7. Select the **Basketball** game, and press the **Submit Form** button.
+7. Select the **Basketball** game, and click the **Submit Form** button.
      > **Note**: The browser moved to a result page, and the following result is shown: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1.
 
 8. Close the **Microsoft Edge** window.
@@ -319,7 +319,7 @@ The main tasks for this exercise are as follows:
 
 1. Create the **Controllers** folder under the project's main directory.
 
-2. Create a new class named **HomeController** and inherit from **Microsoft.AspNetCore.Mvc.Controller**.
+2. Create a new class named **HomeController** and implement from **Microsoft.AspNetCore.Mvc.Controller**.
 
 3. Create a method named **Index** with return type of **IActionResult** inside the class.
 
@@ -352,25 +352,25 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
 
-3. Select the **Basketball** game, and press the **Submit Form** button.
+3. Select the **Basketball** game, and click the **Submit Form** button.
      > **Note**: The MVC controller is ignored, and the displayed result is: **Action was not handled by any middleware. App run is executing. wwwroot folder path:** \[local path to your wwwroot folder\].
 
 4. Access the following relative URL in a new **Microsoft Edge** window:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
      > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
-5. Select the **Football** game, and press the **Submit Form** button.
+5. Select the **Football** game, and click the **Submit Form** button.
      > **Note**: The controller now returns the result: Game name: Basketball, Votes: 1 Game name: Football, Votes: 1.
 
 6. Access the following relative URL in a new **Microsoft Edge** window:
 
-     - **/PollQuestions.html**
+     - **/poll_questions.html**
      > **Note**: See that in the URL, the port number of the new window should be identical to the previous window's port.
 
-7. Select the **Basketball** game, and press the **Submit Form** button.
+7. Select the **Basketball** game, and click the **Submit Form** button.
      > **Note**: The controller now returns the result: Game name: Basketball, Votes: 2 Game name: Football, Votes: 1.
 
 8. Access the following relative URL:

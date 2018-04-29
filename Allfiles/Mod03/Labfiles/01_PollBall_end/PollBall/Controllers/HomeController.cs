@@ -20,9 +20,9 @@ namespace PollBall.Controllers
         public IActionResult Index()
         {
             StringBuilder results = new StringBuilder();
-            SortedDictionary<SelectedGame, int> voteLista = _pollResults.GetVoteResult();
+            SortedDictionary<SelectedGame, int> voteList = _pollResults.GetVoteResult();
 
-            foreach (var gameVotes in voteLista)
+            foreach (var gameVotes in voteList)
             {
                 results.Append($"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}");
             }
