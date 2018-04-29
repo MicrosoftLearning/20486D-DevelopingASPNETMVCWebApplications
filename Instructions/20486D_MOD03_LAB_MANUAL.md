@@ -35,14 +35,14 @@ The main tasks for this exercise are as follows:
 
 1. Start Visual Studio 2017 and create a new ASP.NET Core project by using the **ASP.NET Core Web Application** inside the C# template.
 
+2. Review the **Startup.cs** and find the source for the page output.
+
 ####	Task 2: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
+     > **Note**: **Hello Word !** is shown in the browser.
 
-2. Review the **Startup.cs** and find the source for the page output.
-     > **Note**: **Hello Word !** is shown on your browser.
-
-3. Close the **Microsoft Edge** window.
+2. Close the **Microsoft Edge** window.
 
 ####	Task 3: Add an HTML file to the wwwroot folder.
 
@@ -317,11 +317,13 @@ The main tasks for this exercise are as follows:
 
 ####	Task 2: Add a controller.
 
-1. Create the **Controllers** folder under the project's main directory.
+1. Create a new controller using the following information:
 
-2. Create a new class named **HomeController** and implement from **Microsoft.AspNetCore.Mvc.Controller**.
+-   Controller name:  **HomeController**
+-   Template:  **MVC controller - Empty**
+-   Folder:  **Controllers**
 
-3. Create a method named **Index** with return type of **IActionResult** inside the class.
+2. Verify the the index action returns a content with the text **Hello from controller**.
 
 ####	Task 3: Run the application.
 
