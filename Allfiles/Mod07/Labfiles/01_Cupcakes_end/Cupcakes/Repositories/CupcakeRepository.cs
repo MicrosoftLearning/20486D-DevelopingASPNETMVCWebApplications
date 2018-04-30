@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 using Cupcakes.Data;
 using Cupcakes.Models;
 using Microsoft.EntityFrameworkCore;
@@ -34,11 +34,6 @@ namespace Cupcakes.Repositories
             }
         }
 
-        public bool CupcakeExists(int id)
-        {
-            return _context.Cupcakes.Any(c => c.CupcakeId == id);
-        }
-
         public void DeleteCupcake(int id)
         {
             var cupcake = _context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id);
@@ -49,7 +44,6 @@ namespace Cupcakes.Repositories
         public Cupcake GetCupcakeById(int id)
         {
             return _context.Cupcakes.Include(b => b.Bakery)
-                                    .AsNoTracking()
                 .SingleOrDefault(c => c.CupcakeId == id);
         }
 

@@ -1,8 +1,8 @@
-﻿using Cupcakes.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Cupcakes.Models;
 
 namespace Cupcakes.Repositories
 {
@@ -13,7 +13,6 @@ namespace Cupcakes.Repositories
         void CreateCupcake(Cupcake cupcake);
         void DeleteCupcake(int id);
         void SaveChanges();
-        bool CupcakeExists(int id);
         IQueryable<Bakery> PopulateBakeriesDropDownList();
     }
 }

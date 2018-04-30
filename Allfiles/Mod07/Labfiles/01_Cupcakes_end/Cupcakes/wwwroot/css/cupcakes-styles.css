@@ -1,10 +1,9 @@
 ﻿body {
-    background: #ffffff;
+    background: #80DEEA;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 15px;
     font-weight: 200;
     color: rgb(85, 85, 85);
-    background-image: linear-gradient(#d5c776 100%, #cccccc);
 }
 
 .main-titel {
@@ -17,9 +16,9 @@
 
 .into {
     color: #321919;
-    font-size: 25px;
     font-family: "Libre Baskerville", serif;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: bolder;
     text-align: center;
 }
 
@@ -117,7 +116,7 @@ a:hover {
     border-style: solid;
     padding: 15px;
     margin: 10px 5px 5px 18px;
-    height: 420px;
+    height: 400px;
     width: 355px;
     float: left;
 }
@@ -175,12 +174,11 @@ ul {
 
 input[type=submit], button {
     width: 180px;
-    background-color: #de7575;
+    background: #0097A7;
     color: white;
     margin-top: 20px;
     margin-bottom: 15px;
     font-size: 22px;
-    font-weight: bold;
     height: 40px;
     text-align: center;
 }

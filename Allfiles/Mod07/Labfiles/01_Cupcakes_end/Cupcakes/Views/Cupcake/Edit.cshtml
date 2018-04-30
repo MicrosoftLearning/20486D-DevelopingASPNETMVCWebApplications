@@ -7,10 +7,10 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Edit</title>
-    <link type="text/css" rel="stylesheet" href="~/css/CupcakesStyles.css" />
+    <link type="text/css" rel="stylesheet" href="~/css/cupcakes-styles.css" />
 </head>
 <body>
-    <h1 class="main-titel">Add Cupcake to The Shop</h1>
+    <h1 class="main-titel">Edit Cupcake</h1>
     <div>
         <form method="post" enctype="multipart/form-data" asp-action="Edit">
             <div asp-validation-summary="ModelOnly"></div>
@@ -44,6 +44,12 @@
                 <label asp-for="Price"></label>
                 <input asp-for="Price" />
                 <span asp-validation-for="Price"></span>
+            </div>
+            <div>
+                <input type="hidden" asp-for="ImageMimeType" />
+                <input type="hidden" asp-for="ImageName" />
+                @Html.HiddenFor(c => c.PhotoAvatar)
+                @Html.HiddenFor(c => c.PhotoFile)
             </div>
             <div class="form-field">
                 <input type="submit" value="Save" />

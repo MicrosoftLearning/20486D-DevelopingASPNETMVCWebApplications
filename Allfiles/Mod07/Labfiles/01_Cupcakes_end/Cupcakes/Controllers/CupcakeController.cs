@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Cupcakes.Data;
+using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 using Cupcakes.Models;
 using Cupcakes.Repositories;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,8 +14,8 @@ namespace Cupcakes.Controllers
 {
     public class CupcakeController : Controller
     {
-        private ICupcakeRepository _repository;
         private IHostingEnvironment _environment;
+        private ICupcakeRepository _repository;
 
         public CupcakeController(ICupcakeRepository repository, IHostingEnvironment environment)
         {
@@ -36,10 +35,10 @@ namespace Cupcakes.Controllers
             {
                 return NotFound();
             }
-
             return View(cupcake);
         }
-
+		
+        [HttpGet, ActionName("Create")]
         public IActionResult Create()
         {
             PopulateBakeriesDropDownList();
@@ -59,6 +58,7 @@ namespace Cupcakes.Controllers
             return View(cupcake);
         }
 
+        [HttpGet, ActionName("Edit")]
         public IActionResult Edit(int id)
         {
             Cupcake cupcake = _repository.GetCupcakeById(id);
@@ -80,7 +80,6 @@ namespace Cupcakes.Controllers
                 "",
                 c => c.BakeryId, c => c.CupcakeType, c => c.Description, c => c.GlutenFree, c => c.Price))
             {
-
                 _repository.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
@@ -88,6 +87,7 @@ namespace Cupcakes.Controllers
             return View(cupcakeToUpdate);
         }
 
+        [HttpGet, ActionName("Delete")]
         public IActionResult Delete(int id)
         {
             var cupcake = _repository.GetCupcakeById(id);
@@ -105,13 +105,14 @@ namespace Cupcakes.Controllers
             _repository.DeleteCupcake(id);
             return RedirectToAction(nameof(Index));
         }
-
-        private void PopulateBakeriesDropDownList(object selectedbakery = null)
+		
+		
+		private void PopulateBakeriesDropDownList(object selectedbakery = null)
         {
             var bakeries = _repository.PopulateBakeriesDropDownList();
             ViewBag.BakeryID = new SelectList(bakeries.AsNoTracking(), "BakeryId", "BakeryName", selectedbakery);
         }
-
+		
         public IActionResult GetImage(int id)
         {
             Cupcake requestedcupcake = _repository.GetCupcakeById(id);
