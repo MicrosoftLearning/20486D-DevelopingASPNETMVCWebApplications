@@ -12,7 +12,7 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the **RazorSyntaxExample - Microsoft Visual Studio** window, expand **RazorSyntaxExample**, expand **Controllers** folder,  and then click **ProductController.cs**.
+1. In the Solution Explorer pane of the **RazorSyntaxExample - Microsoft Visual Studio** window, under **RazorSyntaxExample**, expand **Controllers** folder,  and then click **ProductController.cs**.
 
 2. In the **ProductController.cs** code window, locate the following code. 
 ```cs
@@ -31,10 +31,10 @@
     public IActionResult Index()
 ```
 
-5. Right click on the **Index** method name, and click **Add View...**.
+5. Right click on the **Index** method name, and then click **Add View...**.
 
-6. In the **Add MVC View** dialog window  verify that none of the checkboxes are selected, and click**Add**.
->**Note** : See that **Index.cshtm** was created inside the new Product subfolder that is inside **Views** folder.
+6. In the **Add MVC View** dialog window  verify that none of the checkboxes are selected, and then click **Add**.
+>**Note** : **Index.cshtm** was created under the **Product** folder that is under the **Views** folder.
 
 7. In the **Index.cshtml** code window, in the **BODY** element, press Enter, and type the following code.
 ```cs
@@ -44,7 +44,7 @@
     }
 ```
 
-8. Inside the **@foreach** code block, type the following code.
+8. In the **@foreach** code block, type the following code.
 ```cs
     <p>
        
@@ -66,7 +66,7 @@
 ```
 
 11. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-    >**Note** : The following is displayed in the browser:<br>
+    >**Note** : The following text is displayed in the browser:<br>
     > Product Name: Bread<br>
     > Product Price + Tax: 5 * 1.2<br>
     > Product Name: Rice<br>
@@ -87,7 +87,7 @@
 ```
 
 16. On the **DEBUG** menu of the **RazorSyntaxExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-    >**Note** : The following is displayed in the browser:<br>
+    >**Note** : The following text is displayed in the browser:<br>
     > Product Name: Bread<br>
     > Product Price + Tax: 6<br>
     > Product Name: Rice<br>
@@ -111,11 +111,11 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane, under Views, expand **Shared**, and then click **_Layout.cshtml.**
+1. In the Solution Explorer pane, under **Views**, expand **Shared**, and then click **_Layout.cshtml.**
 
-1. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, expand **Views**, then expand **Home**, and click **Index.cshtml**.
+2. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Views**, then expand **Home**, and then click **Index.cshtml**.
 
-2. In the **Index.cshtml** code window, locate the following code.
+3. In the **Index.cshtml** code window, locate the following code.
 ```cs
     <nav>
         <span>
@@ -124,32 +124,32 @@
         <span>
 ```
 
-3. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+4. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     @Html.ActionLink("Employees", "Index", "Person")
 ```
 
-4. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under the **Controllers**, click **PersonController.cs**.
+5. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Controllers**, click **PersonController.cs**.
 
-5. Inside the **PersonController.cs** code window, locate the following code. 
+6. In the **PersonController.cs** code window, locate the following code. 
 ```cs
     public IActionResult Index()
     {
 ```
 
-6. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+7. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     ViewBag.PersonNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
 ```
 
-7. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Views**, expand **Person**, and then click **Index.cshtml**.
+8. In the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Views**, expand **Person**, and then click **Index.cshtml**.
 
-8. In the **Index.cshtml** code window, locate the following code.
+9. In the **Index.cshtml** code window, locate the following code.
 ```cs
     <p>Please select an employee from the list:</p>
 ```
 
-9. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+10. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     @foreach (string currentName in ViewBag.PersonNames)
     {
@@ -157,73 +157,73 @@
     }
 ```
 
-10. Place the mouse cursor within the foreach code block you just created, and then type the following code. 
+11. Place the mouse cursor within the foreach code block you just created, and then type the following code. 
 ```cs
     <div>
         @Html.ActionLink(currentName, "Details", new { personName = currentName })
     </div>
 ```
 
-11. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Controllers**, click **PersonController.cs**.
+12. In the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Controllers**, click **PersonController.cs**.
 
-12. Inside the **PersonController.cs** code window, in the **Details** action, locate the following code. 
+13. In the **PersonController.cs** code window, locate the following code. 
 ```cs
     public IActionResult Details(string personName)
     {
 ```
 
-13. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+14. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     ViewBag.SelectedPerson = personName;
 ```
 
-14. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Views**, under **Person**, and click **Details.cshtml**.
+15. In the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Views**, under **Person**, and click **Details.cshtml**.
 
-15. In the **Details.cshtml** code window, locate the following code.
+16. In the **Details.cshtml** code window, locate the following code.
 ```cs
     </p>
     <br />
 ```
 
-16. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+17. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
 ```
 
-17. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+18. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     <p class="text">@Html.ActionLink("Back to person selection list", "Index")</p>
 ```
 
-18. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Controllers**, click **PersonController.cs**.
+19. In the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Controllers**, click **PersonController.cs**.
 
-19. Inside the **PersonController.cs** code window, in the **GetImage** action, select the following code. 
+20. In the **PersonController.cs** code window, in the **GetImage** action, select the following code. 
 ```cs
     return Content("");
 ```
 
-20. Replace the selected code with the following code. 
+21. Replace the selected code with the following code. 
 ```cs
     return File($"@"\images\{personName.ToLower()}.jpg", "image/jpeg");
 ```
 
-21. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+22. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-22. In the **Microsoft Edge** window, click the **Employees** link.
-     > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
+23. In the **Microsoft Edge** window, click the **Employees** link.
+     > **Note**:  The link leads to the employees page which contains list of links. Each link contains text of a person's name.
 
-23. In the **Microsoft Edge** window, click the **Michael** link.
-     > **Note**:  A page that represent **Michael** is shown. The page contains a name and a photo.
+24. In the **Microsoft Edge** window, click the **Michael** link.
+     > **Note**:  A page that represents **Michael** is shown. The page contains a name and a photo.
 
-24. In the **Microsoft Edge** window, press the **Back to person selection list** link.     
-     > **Note**: List of links is shown. Each link contains a text of a person's name.
+25. In the **Microsoft Edge** window, press the **Back to person selection list** link.     
+     > **Note**: List of links is shown. In each link there is a person's name.
 
-25. In the **Microsoft Edge** window, press the **Elena** link .
-     > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
+26. In the **Microsoft Edge** window, press the **Elena** link .
+     > **Note**:  A page that represents **Elena** is shown. The page contains a name and a photo.
 
-26. In the **Microsoft Edge** window, click **Close**.
+27. In the **Microsoft Edge** window, click **Close**.
 
-27. On the **DEBUG** Menu, click **Stop Debugging**.
+28. On the **DEBUG** Menu, click **Stop Debugging**.
 
 
 # Lesson 2: Using HTML Helpers and Tag Helpers
@@ -239,7 +239,7 @@
 
 #### Demonstration Steps
 
-1. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, expand the **Views** folder, then expand the **Home** folder, and click **Index.cshtml**.
+1. In the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Views**, expand the **Home**, and then click **Index.cshtml**.
 
 2. In the **Index.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
 ```cs
@@ -256,7 +256,7 @@
     <a asp-controller="Person" asp-action="Index">Employees</a>
 ```
 
-5. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, expand the **Person** folder, and then click **Index.cshtml**.
+5. In the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under **Views**, expand **Person**, and then click **Index.cshtml**.
 
 6. In the **Index.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
 ```cs
@@ -292,17 +292,17 @@
 
 13. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-14. In the **Microsoft Edge** window, press the **Employees** link .
+14. In the **Microsoft Edge** window, click the **Employees** link .
      > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
 
-15. In the **Microsoft Edge** window, press the **Michael** link .
-     > **Note**:  A page that represent **Michael** is shown. The page contains a name and a photo.
+15. In the **Microsoft Edge** window, click the **Michael** link .
+     > **Note**:  A page that represents **Michael** is shown. The page contains a name and a photo.
 
 16. In the **Microsoft Edge** window, press the **Back to person selection list** link .     
-     > **Note**: List of links is shown. Each link contains a text of a person's name.
+     > **Note**: List of links is shown. In each link there is a person's name.
 
 17. In the **Microsoft Edge** window, press the **Elena** link.
-     > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
+     > **Note**:  A page that represents **Elena** is shown. The page contains a name and a photo.
 
 18. In the **Microsoft Edge** window, click **Close**.
 
@@ -317,40 +317,40 @@
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-23. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under **Views**, under **Home**, click **Index.cshtml**.
+23. In the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under **Views**, under **Home**, click **Index.cshtml**.
 
-24. In the **Index.cshtml** code window, **delete** the following code.
+24. In the **Index.cshtml** code window, delete the following code.
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-25. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under **Views**, under **Person**, click **Index.cshtml**.
+25. In the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under **Views**, under **Person**, click **Index.cshtml**.
 
-26. In the **Index.cshtml** code window, **delete** the following code.
+26. In the **Index.cshtml** code window, delete the following code.
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-27. On the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, in the **Person** folder, click **Details.cshtml**.
+27. In the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, in the **Views** folder, in the **Person** folder, click **Details.cshtml**.
 
-28. In the **Details.cshtml** code window, **delete** the following code.
+28. In the **Details.cshtml** code window, delete the following code.
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
 29. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
-30. In the **Microsoft Edge** window, press the **Employees** link.
-     > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
+30. In the **Microsoft Edge** window, click the **Employees** link.
+     > **Note**:  The link leads to the employees page which contains list of links. In each link there is a person's name.
 
-31. In the **Microsoft Edge** window, press the **Michael** link.
-     > **Note**:  A page that represent **Michael** is shown. The page contains a name and a photo.
+31. In the **Microsoft Edge** window, click the **Michael** link.
+     > **Note**:  A page that represents **Michael** is shown. The page contains a name and a photo.
 
-32. In the **Microsoft Edge** window, press the **Back to person selection list** link.     
-     > **Note**: List of links is shown. Each link contains a text of a person's name.
+32. In the **Microsoft Edge** window, click the **Back to person selection list** link.     
+     > **Note**: List of links is shown. In each link there is a person's name.
 
-33. In the **Microsoft Edge** window, press the **Elena** link.
-     > **Note**:  A page that represent **Elena** is shown. The page contains a name and a photo.
+33. In the **Microsoft Edge** window, click the **Elena** link.
+     > **Note**:  A page that represents **Elena** is shown. The page contains a name and a photo.
 
 34. In the **Microsoft Edge** window, click **Close**.
 
@@ -369,7 +369,7 @@
 
 #### Demonstration Steps
 
-1. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand **Services**, and then click **Person.cs**.
+1. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand **Services**, and then click **Person.cs**.
 
 2. In the **Person.cs** code window, place the mouse cursor within the **Person** constructor code block, and then type the following code. 
 ```cs
@@ -379,15 +379,15 @@
     PhoneNumber = phoneNumber;
 ```
 
-3. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, under **Services**, click **PersonProvider.cs**.
+3. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, under **Services**, click **PersonProvider.cs**.
 
 4. In the **PersonProvider.cs** code window, place the mouse cursor within the **PersonProvider** constructor code block, and then type the following code. 
 ```cs
     _personList = PersonInitializer();
 ```
-> **Note**: Now the list of people is created within the PersonInitializer method and returned to the **_personList** member. The **personList** member is retrieved using the classe's indexer.
+> **Note**: The list of people is created within the PersonInitializer method. The PersonInitializer  returns the list to the **_personList** class member. The **_personList** class member is retrieved using the classe's indexer.
 
-5. On the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+5. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
 6. In the **Index.cshtml** code window, locate the following code.
 ```cs
@@ -398,40 +398,40 @@
                 {
 ```
 
-6. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+7. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
 ```
 
-7. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+8. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-8. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New Folder**.
+9. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New Folder**.
 
-9. In the Solution Explorer pane, name the newly created  folder as **Shared**, and then press Enter.
+10. In the Solution Explorer pane, rename **New Folder** as **Shared**, and then press Enter.
 
-10. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Shared**, point to **Add**, and then click **View...**.
+11. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Shared**, point to **Add**, and then click **View...**.
     
-11. In the **Add MVC View** dialog window, in the **View name** textbox, type: **_CardDesign**.
+12. In the **Add MVC View** dialog window, in the **View name** textbox, type: **_CardDesign**.
 
-12. In the **Add MVC View** dialog window, verify that the **Create as a partial view** checkbox is marked, and click **Add**.
+13. In the **Add MVC View** dialog window, verify that the **Create as a partial view** checkbox is marked, and then click **Add**.
 
-13. In the **_CardDesign.cshtml** code window, **delete** the following code.
+14. In the **_CardDesign.cshtml** code window, delete the following code.
 ```cs
     @*
         For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
     *@
 ```
 
-14. In the **_CardDesign.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
+15. In the **_CardDesign.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
 ```cs
     @model int
     @inject PartialViewExample.Services.IPersonProvider PersonList
 ```
 
-15. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
+16. Place the mouse cursor at the end of the code, press Enter, and then type the following code.
 ```cs
     <td>
         <div>First Name: @PersonList[Model].FirstName</div>
@@ -441,12 +441,12 @@
     </td>
 ```
 
-16. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
+17. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
      > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, address, and a phone.
      
-17. In the **Microsoft Edge** window, click **Close**.
+18. In the **Microsoft Edge** window, click **Close**.
 
-18. On the **Debug** Menu, click **Stop Debugging**.
+19. On the **Debug** Menu, click **Stop Debugging**.
 
 # Lesson 3: Reusing Code in Views
 
@@ -463,7 +463,7 @@
 
 1. In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, right-click the **ViewComponentExample**, point to **Add**, and then click **New Folder**.
 
-2. In the Solution Explorer pane, name the newly created  folder as **ViewComponents**, and then press Enter.
+2. In the Solution Explorer pane, rename **New Folder** as **ViewComponents**, and then press Enter.
 
 3.	In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, right-click **ViewComponents**, point to **Add**, and then click **Class**.
 
@@ -474,7 +474,7 @@
     using System.Threading.Tasks;
 ``` 
 
-6. Place the mouse cursor at the end of the code, press Enter, and type the following code
+6. Place the mouse cursor at the end of the located code, press Enter, and then type the following code
 ```cs
     using Microsoft.AspNetCore.Mvc;
 ```
@@ -499,21 +499,21 @@
 
 10. In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, expand **Views**, right-click **Shared**, point to **Add**, and then click **New Folder**.
 
-11. In the Solution Explorer pane, name the newly created  folder as **Components**, and then press Enter.
+11. In the Solution Explorer pane, rename **New Folder** as **Components**, and then press Enter.
 
 12. In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, right-click the **Components** folder you just created, point to **Add**, and then click **New Folder**.
 
-13. In the Solution Explorer pane, name the newly created  folder as **PersonCard**, and then press Enter.
+13. In the Solution Explorer pane, rename **New Folder** as **PersonCard**, and then press Enter.
 
-14. In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, in the **Shared** folder, right-click **_CardDesign.cshtml** file, and then click **Cut**.
+14. In the Solution Explorer pane of the **ViewComponentExample - Microsoft Visual Studio** window, under **Shared**, right-click **_CardDesign.cshtml** file, and then click **Cut**.
 
-15. Right-click the **PersonCard** you just created, and then click **Paste**.
+15. Right-click the **PersonCard** folder you just created, and then click **Paste**.
 
-16. Right-click the **_CardDesign.cshtml** you just pasted, and then click **Rename**.
+16. Right-click the **_CardDesign.cshtml** view you just pasted, and then click **Rename**.
 
 17. In the Solution Explorer pane, replace **_CardDesign.cshtml** with **CardDesign.cshtml**, and then press Enter.
 
-18. In the Solution Explorer pane, of the **ViewComponentExample - Microsoft Visual Studio** window, in the **Views**, expand the **Home**, and then click **Index.cshtml**.
+18. In the Solution Explorer pane, of the **ViewComponentExample - Microsoft Visual Studio** window, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
 19. In the **Index.cshtml** code window, select the following code.
 ```cs
