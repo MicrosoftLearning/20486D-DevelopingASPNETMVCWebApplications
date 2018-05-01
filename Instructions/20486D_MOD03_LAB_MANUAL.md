@@ -52,8 +52,6 @@ The main tasks for this exercise are as follows:
 -   Name: **Configure**
 -   Parameter Type: **IApplicationBuilder**
 -   Parameter Name: **app**
--   Parameter Type: **IHostingEnvironment**
--   Parameter Name: **env**
 
 3. Add an **app.Run** middleware within the **Configure** method that prints the "Hello World!" text into the browser.
 
@@ -67,14 +65,14 @@ The main tasks for this exercise are as follows:
 
 ####	Task 3: Add an HTML file to the wwwroot folder.
 
-1. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the  project's **wwwroot** folder.
-
-2. Create a new subfolder, and copy a CSS file to the new folder by using the following information:
+1. Create a new subfolder, and copy a CSS file to the new folder by using the following information:
 
      -   Parent directory of the new directory: **wwwroot**
      -   New folder name: **css**
      -   CSS file to be copied: **style.css**
      -   Source location of the CSS file: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+
+2. Copy the **images** folder from the **Allfiles\Mod03\Labfiles\01_PollBall_begin** path to the  project's **wwwroot** folder.
 
 3. Create a new **HTML Page** by using the following information:
 
@@ -111,7 +109,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 5: Enable working with static files.
 
-1. Add the **UseStaticFiles** method inside the **Configure** method of the **startup** class.
+1. In the **Startup** class,  add the **UseStaticFiles** method call in the **Configure** method, just before the app.use call.
 
 ####	Task 6 : Run the application – content of HTML is displayed.
 
@@ -125,19 +123,23 @@ The main tasks for this exercise are as follows:
 
 4.  Stop debugging.
 
-5. Link the **style.css** file to the **poll_questions.html** file.
+6. To link the new style sheet, add a  **link**  element to the  **poll_questions.html**  file by using the following information:
 
-6. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
+-   Type:  **text/css**
+-   Relation:  **stylesheet**
+-   Href:  **~/css/style.css**
 
-7.  Start the  **PollBall**  project with debugging.
+7. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
 
-8. Access the following relative URL:
+8.  Start the  **PollBall**  project with debugging.
+
+9. Access the following relative URL: 
    
      - **/poll_questions.html**
 
-9.  Verify that the **poll_questions.html** file content is displayed in the browser with design from the **style.css** file.
+10.  Verify that the **poll_questions.html** file content is displayed in the browser with design from the **style.css** file.
 
-10.  Stop debugging. 
+11.  Stop debugging. 
 
 ####	Task 7: Add an HTML file outside of the wwwroot folder.
 
@@ -207,7 +209,7 @@ The main tasks for this exercise are as follows:
 
 7. Move the **app.UseStaticFiles** between the custom middleware and the **app.Run**.
 
-8. Comment the **next.Invoke();** line of code that skips the custom middleware if the favorite parameter is not found.
+8. Comment the **next.Invoke();** line of code that skips the custom middleware if the request query does not contains the favorite parameter.
 
 9.  Start the  **PollBall**  project with debugging.
 
@@ -221,7 +223,7 @@ The main tasks for this exercise are as follows:
 
 13. Uncomment the **next.Invoke();** method call.
 
->**Result**: At the end of this exercise, you will be able to create a custom middleware and receive webform calls to it.
+>**Result**: At the end of this exercise, you will be able to create a custom middleware and receive HTML form calls to it.
 
 ### Exercise 3: Using Dependency Injection
 
@@ -275,6 +277,8 @@ The main tasks for this exercise are as follows:
 
      - Name: **GetVoteResult**
      - Return type: **SortedDictionary**<**SelectedGame**,**int**>
+
+6. Change the inteface scope to **public**.
 
 ####	Task 2: Define an implementation for the service.
 

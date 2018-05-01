@@ -21,7 +21,7 @@ namespace PollBall
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IPollResultsService pollResults)
+        public void Configure(IApplicationBuilder app, IPollResultsService pollResults)
         {
             app.Use(async (context, next) =>
             {
@@ -30,12 +30,7 @@ namespace PollBall
                     string selectedValue = context.Request.Query["favorite"];
                     SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue);
                     pollResults.AddVote(selectedGame);
-                    SortedDictionary<SelectedGame, int> gameVotes = pollResults.GetVoteResult();
-
-                    foreach (KeyValuePair<SelectedGame, int> currentVote in gameVotes)
-                    {
-                        await context.Response.WriteAsync($"<p> Game name: {currentVote.Key}, Votes: {currentVote.Value} </p>");
-                    }
+                    await context.Response.WriteAsync($"Thank you for submitting the poll");
                 }
                 else await next.Invoke();
             });
