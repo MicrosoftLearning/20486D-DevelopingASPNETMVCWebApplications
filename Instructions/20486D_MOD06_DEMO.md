@@ -75,12 +75,21 @@
   ```cs
        <!DOCTYPE html>
 ```
-15. Place the mouse cursor before the located code, type the following code, and then press Enter.
+15. Place the mouse cursor before the < (less than), press Enter, press the Up Arrow Key, and then type the following code.
 
   ```cs
        @model BindViewsExample.Models.Restaurant
 ```
-16. In the **BODY** element of the **Index.cshtml** code window, type the following code.
+
+16. The final content of the **Index.cshtml** file should be as shown below.
+
+  ```cs
+       @model BindViewsExample.Models.Restaurant
+
+       <!DOCTYPE html>
+```
+
+17. In the **BODY** element of the **Index.cshtml** code window, type the following code.
 
   ```cs
        <h1>Restaurant Information</h1>
@@ -89,7 +98,7 @@
        <p id="remark">The First Way To Pass A Model From An Action To A View</p>
 ```
 
-17. In the **DIV** element of the **Index.cshtml** code window, type the following code.
+18. In the **DIV** element of the **Index.cshtml** code window, type the following code.
 
   ```cs
        <p>@Model.Name</p>
@@ -100,19 +109,28 @@
 ```
    >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you wrote in the model.
 
-18. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **AnotherWayToDisplay.cshtml**.
+19. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **AnotherWayToDisplay.cshtml**.
 
-19. In the **AnotherWayToDisplay.cshtml** code window, locate the following code.
+20. In the **AnotherWayToDisplay.cshtml** code window, locate the following code.
 
   ```cs
        <!DOCTYPE html>
 ```
-20. Place the mouse cursor before the located code, type the following code, and then press Enter.
+21. Place the mouse cursor before the < (less than), press Enter, press the Up Arrow Key, and then type the following code.
 
   ```cs
        @model BindViewsExample.Models.Restaurant
 ```
-21. In the **BODY** element of the **AnotherWayToDisplay.cshtml** code window, type the following code.
+
+22. The final content of the **AnotherWayToDisplay.cshtml** file should be as shown below.
+
+  ```cs
+       @model BindViewsExample.Models.Restaurant
+
+       <!DOCTYPE html>
+```
+
+23. In the **BODY** element of the **AnotherWayToDisplay.cshtml** code window, type the following code.
 
   ```cs
        <h1>Restaurant Information</h1>
@@ -120,28 +138,28 @@
        </div>
        <p id="remark">The Second Way To Pass A Model From An Action To A View</p>
 ```
-22. In the **DIV** element of the **AnotherWayToDisplay.cshtml** code window, type the following code.
+24. In the **DIV** element of the **AnotherWayToDisplay.cshtml** code window, type the following code.
 
   ```cs
        @Html.EditorForModel()
 ```
    >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you wrote in the model.
 
-23. On the **FILE** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Save All**.
+25. On the **FILE** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Save All**.
 
-24. On the **DEBUG** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Start Debugging**.
+26. On the **DEBUG** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
        >**Note:** The browser window displays the first way to render the Restaurant properties.
 
-25. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Home/Display**, and then press Enter.
+27. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Home/Display**, and then press Enter.
 
       >**Note:** The browser window displays the second way to render the Restaurant properties.
 
-26. In the **Microsoft Edge** window, click **Close**.
+28. In the **Microsoft Edge** window, click **Close**.
 
-27. In the **BindViewsExample - Microsoft Visual Studio** window, click **Stop Debugging**.
+29. In the **BindViewsExample - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-28. In the **BindViewsExample - Microsoft Visual Studio** window, click **Close**.
+30. In the **BindViewsExample - Microsoft Visual Studio** window, click **Close**.
 
 # Lesson 2: Working with Forms
 
@@ -202,12 +220,21 @@
   ```cs
        <!DOCTYPE html>
 ```
-10. Place the mouse cursor before the located code, type the following code, and then press Enter.
+10. Place the mouse cursor before the < (less than), press Enter, press the Up Arrow Key, and then type the following code.
 
   ```cs
        @model DataAnnotationsExample.Models.User
 ```
-11. In the **BODY** element of the **Index.cshtml** code window, type the following code.
+
+11. The final content of the **Index.cshtml** file should be as shown below.
+
+  ```cs
+       @model DataAnnotationsExample.Models.User
+
+       <!DOCTYPE html>
+```
+
+12. In the **BODY** element of the **Index.cshtml** code window, type the following code.
 
   ```cs
        <h1>Create an account</h1>
@@ -215,7 +242,7 @@
        </div>
 ```
 
-12. In the **DIV** element of the **Index.cshtml** code window, type the following code.
+13. In the **DIV** element of the **Index.cshtml** code window, type the following code.
 
   ```cs
        <form asp-action="Details" method="post">
@@ -236,26 +263,35 @@
 ```
 >**Note:** This code block generates a &lt;form&gt; **HTML** element using FormTagHelper.
 
-13. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Details.cshtml**.
+14. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Details.cshtml**.
 
-14. In the **Details.cshtml** code window, locate the following code.
+15. In the **Details.cshtml** code window, locate the following code.
 
   ```cs
        <!DOCTYPE html>
 ```
-15. Place the mouse cursor before the located code, type the following code, and then press Enter.
+16. Place the mouse cursor before the < (less than), press Enter, press the Up Arrow Key, and then type the following code.
 
   ```cs
        @model DataAnnotationsExample.Models.User
 ```
-16. In the **BODY** element of the **Details.cshtml** code window, type the following code.
+
+17. The final content of the **Details.cshtml** file should be as shown below.
+
+  ```cs
+       @model DataAnnotationsExample.Models.User
+
+       <!DOCTYPE html>
+```
+
+18. In the **BODY** element of the **Details.cshtml** code window, type the following code.
 
   ```cs
        <h1>User Details</h1>
        <div>
        </div>
 ```
-17. In the **DIV** element of the **Details.cshtml** code window, type the following code.
+19. In the **DIV** element of the **Details.cshtml** code window, type the following code.
 
   ```cs
        <div>
@@ -288,25 +324,25 @@
 ```
 >**Note:** This code block generates different HTML markup depending on the data type of the property that is being rendered.
 
-18. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
+20. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
 
-19. On the **DEBUG** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Start Debugging**.
+21. On the **DEBUG** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-20. On the **Register** page, in the **Full Name** text box, type _&lt;A full name of your choice&gt;._
+22. On the **Register** page, in the **Full Name** text box, type _&lt;A full name of your choice&gt;._
 
-21. On the **Register** page, in the **Email Address** text box, type _&lt;An email address of your choice&gt;._
+23. On the **Register** page, in the **Email Address** text box, type _&lt;An email address of your choice&gt;._
 
-22. On the **Register** page, in the **BirthDate** text box, choose _&lt;A birthdate of your choice&gt;._
+24. On the **Register** page, in the **BirthDate** text box, choose _&lt;A birthdate of your choice&gt;._
 
-23. On the **Register** page, in the **Password** text box, type _&lt;A password of your choice&gt;_, and then click **Register**.
+25. On the **Register** page, in the **Password** text box, type _&lt;A password of your choice&gt;_, and then click **Register**.
 
-24. On the **User Details** page, Verify the newly registered user details.
+26. On the **User Details** page, Verify the newly registered user details.
 
-25. In the **Microsoft Edge** window, click **Close**.
+27. In the **Microsoft Edge** window, click **Close**.
 
-26. In the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Stop Debugging**.
+28. In the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-27. In the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Close**.
+29. In the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Close**.
 
 # Lesson 3: Validating MVC Applications
 
@@ -385,12 +421,21 @@
   ```cs
        <!DOCTYPE html>
 ```
-13. Place the mouse cursor before the located code, type the following code, and then press Enter.
+13. Place the mouse cursor before the < (less than), press Enter, press the Up Arrow Key, and then type the following code.
 
   ```cs
        @model DataAnnotationsExample.Models.Person
 ```
-14. In the **BODY** element of the **Index.cshtml** code window, type the following code.
+
+14. The final content of the **Index.cshtml** file should be as shown below.
+
+  ```cs
+       @model DataAnnotationsExample.Models.Person
+
+       <!DOCTYPE html>
+```
+
+15. In the **BODY** element of the **Index.cshtml** code window, type the following code.
 
   ```cs
        <h1>Submit Personal Information</h1>
@@ -398,7 +443,7 @@
        </div>
 ```
 
-15. In the **DIV** element of the **Index.cshtml** code window, type the following code.
+16. In the **DIV** element of the **Index.cshtml** code window, type the following code.
 
   ```cs
        <form asp-action="Details">
@@ -430,29 +475,29 @@
 ```
 >**Note:** This code block generates validation messages to a &lt;form&gt; using ValidationMessage, and ValidationSummary Tag Helpers.
 
-16. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
+17. On the **FILE** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Save All**.
 
-17. On the **DEBUG** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Start Debugging**.
+18. On the **DEBUG** menu of the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-18. On the **Submit Personal Information** page, in the **First Name** text box, leave the field blank.
+19. On the **Submit Personal Information** page, in the **First Name** text box, leave the field blank.
 
-19. On the **Submit Personal Information** page, in the **Last Name** text box, leave the field blank.
+20. On the **Submit Personal Information** page, in the **Last Name** text box, leave the field blank.
 
-20. On the **Submit Personal Information** page, in the **Age** text box, type 5.
+21. On the **Submit Personal Information** page, in the **Age** text box, type 5.
 
-21. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;More than ten characters&gt;_, and then click the **Submit** button.
+22. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;More than ten characters&gt;_, and then click the **Submit** button.
 
-22. On the **Submit Personal Information** page, Verify the validation messages.
+23. On the **Submit Personal Information** page, Verify the validation messages.
 
-23. On the **Submit Personal Information** correct all the fields with the validation message, and then click the **Submit** button. 
+24. On the **Submit Personal Information** correct all the fields with the validation message, and then click the **Submit** button. 
 
       >**Note:** Verify the newly submitted personal information.
 
-24. In the **Microsoft Edge** window, click **Close**.
+25. In the **Microsoft Edge** window, click **Close**.
 
-25. In the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Stop Debugging**.
+26. In the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-26. In the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Close**.
+27. In the **DataAnnotationsExample - Microsoft Visual Studio** window, click **Close**.
 
 # Lesson 3: Validating MVC Applications
 
