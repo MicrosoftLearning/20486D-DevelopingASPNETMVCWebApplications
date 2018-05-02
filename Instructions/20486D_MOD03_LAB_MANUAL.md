@@ -76,7 +76,7 @@ The main tasks for this exercise are as follows:
 
 3. Create a new **HTML Page** by using the following information:
 
-     -   File name: **poll_questions.html**
+     -   File name: **poll-questions.html**
      -   Parent Directory: **wwwroot**
 
 4. Inside the **BODY** element, Create a **P** Element with a **H1** element inside it. Fill them with guiding text for the user. The text should guide the user to select his favorite game from the list in the poll and click the **submit query**.
@@ -93,7 +93,7 @@ The main tasks for this exercise are as follows:
 
 8. Inside the **submit-batch** **DIV** element create a button of type **SUBMIT**.
 
-9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\html_text.txt** existing file and copy the content into the **DIV** with the **main-div** class you created.
+9. Open the **Allfiles\Mod03\Labfiles\01_PollBall_begin\html-text.txt** existing file and copy the content into the **DIV** with the **main-div** class you created.
 
 ####	Task 4: Run the application – content of HTML not displayed.
 
@@ -101,7 +101,7 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 2.  Verify that **Hello Word !** is displayed in the browser.
 
@@ -117,13 +117,13 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
-3.  Verify that the **poll_questions.html** file content is displayed in the browser.
+3.  Verify that the **poll-questions.html** file content is displayed in the browser.
 
 4.  Stop debugging.
 
-6. To link the new style sheet, add a  **link**  element to the  **poll_questions.html**  file by using the following information:
+6. To link the new style sheet, add a  **link**  element to the  **poll-questions.html**  file by using the following information:
 
 -   Type:  **text/css**
 -   Relation:  **stylesheet**
@@ -135,9 +135,9 @@ The main tasks for this exercise are as follows:
 
 9. Access the following relative URL: 
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
-10.  Verify that the **poll_questions.html** file content is displayed in the browser with design from the **style.css** file.
+10.  Verify that the **poll-questions.html** file content is displayed in the browser with design from the **style.css** file.
 
 11.  Stop debugging. 
 
@@ -151,7 +151,7 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 3.  Verify that the **Hello Word !** text is displayed in the browser.
 
@@ -183,7 +183,7 @@ The main tasks for this exercise are as follows:
 
 2. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 3. Select the **Basketball**  radio button, and click the **Submit Form** button.
 
@@ -199,11 +199,11 @@ The main tasks for this exercise are as follows:
 
 3. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 4. Select the **Basketball** radio button, and click the **Submit Form** button.
 
-5.  Verify that the **poll_questions.html** file content is displayed in the browser, and that the browser did not load a different page.
+5.  Verify that the **poll-questions.html** file content is displayed in the browser, and that the browser did not load a different page.
 
 6.  Stop debugging. 
 
@@ -215,7 +215,7 @@ The main tasks for this exercise are as follows:
 
 10. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 11.  Verify that a blank page is displayed.
 
@@ -316,7 +316,7 @@ The main tasks for this exercise are as follows:
 
 3. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 4. Select the **Basketball**  radio button, and click the **Submit Form** button.
 
@@ -325,7 +325,7 @@ The main tasks for this exercise are as follows:
 
 6. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 7. Select the **Football**  radio button, and click the **Submit Form** button.
 
@@ -335,7 +335,7 @@ The main tasks for this exercise are as follows:
 
 9. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 10. Select the **Basketball**  radio button, and click the **Submit Form** button.
 
@@ -385,7 +385,7 @@ Start the  **PollBall**  project with debugging.
 
 10. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 11.  Verify that the **Hello from controller** text is displayed in the browser.
 
@@ -416,7 +416,7 @@ Start the  **PollBall**  project with debugging.
 
 3. Access the following relative URL:
 
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 4. Select the **Basketball**  radio button, and click the **Submit Form** button.
 
@@ -425,7 +425,7 @@ Start the  **PollBall**  project with debugging.
 
 6. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 7. Select the **Football**  radio button, and click the **Submit Form** button.
 
@@ -435,7 +435,7 @@ Start the  **PollBall**  project with debugging.
 
 9. Access the following relative URL:
    
-     - **/poll_questions.html**
+     - **/poll-questions.html**
 
 10. Select the **Basketball**  radio button, and click the **Submit Form** button.
 
