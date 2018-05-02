@@ -23,7 +23,6 @@
 
 5. In the **Restaurant.cs** code block, press Enter, and then type the following code.
 
-
   ```cs
        public int Id { get; set; }
        public string Name { get; set; }
