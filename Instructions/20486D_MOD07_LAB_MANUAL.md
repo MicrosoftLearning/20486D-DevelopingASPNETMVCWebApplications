@@ -254,21 +254,21 @@ The main tasks for this exercise are as follows:
 
 5. Create a new list of **Bakery** objects in the **Initialize** method. The list should contain four Bakery objects with the following properties:
 
-   - BakeryName: _&lt;A bakery name of your choice&gt;_
-   - Address: _&lt;An address of your choice&gt;_
-   - Quantity:  _&lt;A quantity of your choice&gt;_
+   - BakeryName: **_&lt;A bakery name of your choice&gt;_**
+   - Address: **_&lt;An address of your choice&gt;_**
+   - Quantity:  **_&lt;A quantity of your choice&gt;_**
 
 5. Add each **Bakery** object in the **Bakeries** list to the Entity Framework context, and then save the changes to the context.
 
 6. Create a new list of Cupcake objects in the **Initialize** method. The list should contain four **Cupcake** objects with the following properties:
 
-   - CupcakeType: _&lt;A cupcake tyoe of your choice&gt;_
-   - Description: _&lt;A description of your choice&gt;_
+   - CupcakeType: **_&lt;A cupcake tyoe of your choice&gt;_**
+   - Description: **_&lt;A description of your choice&gt;_**
    - GlutenFree: **Choose if the cupcake is gluten-free**
-   - Price: _&lt;A price of your choice&gt;_
+   - Price: **_&lt;A price of your choice&gt;_**
    - BakeryId: **1**, **2**, **3**, **4**
-   - ImageMimeType: **image/jpeg**, **chocolate-cupcake.jpg**, **pink-cupcake.jpg**, **turquoise-cupcake.jpg**
-   - ImageName: **birthday-cupcake.jpg** , 
+   - ImageMimeType: **image/jpeg**
+   - ImageName: **birthday-cupcake.jpg** , **chocolate-cupcake.jpg**, **pink-cupcake.jpg**, **turquoise-cupcake.jpg**
 
 7. Add each **Cupcake** object in the **cupcakes** list to the Entity Framework context, and then save the changes to the context.
 
