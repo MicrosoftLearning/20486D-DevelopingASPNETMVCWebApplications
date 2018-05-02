@@ -211,14 +211,14 @@ The main tasks for this exercise are as follows:
 
 2. Add a new class named **CupcakeContext** to the **Data** folder and ensure that the new class inherits the **System.Data.Entity.DbContext** class.
 
-2. In the **CupcakeContext** class, Add **using** statements to the model for the following namespaces:
+3. In the **CupcakeContext** class, Add **using** statements to the model for the following namespaces:
 
    - **Cupcakes.Models**
    - **Microsoft.EntityFrameworkCore**
 
-3. Initialize the DbContextOptions<CupcakeContext> options, in the **CupcakeContext** constructor, and derive from DbContext base constructor the value **options**.
+4. Initialize the DbContextOptions<CupcakeContext> options, in the **CupcakeContext** constructor, and derive from DbContext base constructor the value **options**.
 
-4. Add public **DbSet** properties, Cupcake and Bakery to enable Entity Framework create database tables called Cupcakes and Bakeries.
+5. Add public **DbSet** properties, Cupcake and Bakery to enable Entity Framework create database tables called Cupcakes and Bakeries.
 
 #### Task 3: Set up Entity Framework to use an In Memory database.
 
@@ -353,10 +353,10 @@ The main tasks for this exercise are as follows:
 
 12. In the **CupcakeRepository** class, Add **using** statements to the model for the following namespaces:
 
-   - **System.IO**
-   - **Cupcakes.Data**  
-   - **Cupcakes.Models**
-   - **Microsoft.EntityFrameworkCore**
+      - **System.IO**
+      - **Cupcakes.Data**  
+      - **Cupcakes.Models**
+      - **Microsoft.EntityFrameworkCore**
 
 13. Ensure that the **CupcakeRepository** class implements the **ICupcakeRepository** interface.
 
@@ -453,7 +453,7 @@ The main tasks for this exercise are as follows:
 
 2. Within the **Create** method, call the **PopulateBakeriesDropDownList** method to send the **ViewBag** object with parameters to the view.
 
-2. In the **CupcakeController** class, Add another method for the **Create** action by using the following information:
+3. In the **CupcakeController** class, Add another method for the **Create** action by using the following information:
 
       - HTTP verb: **HTTP Post**
       - Scope: **public**
@@ -461,9 +461,9 @@ The main tasks for this exercise are as follows:
       - Name: **Create**
       - Parameters: a **Cupcake** object called **cupcake**.
 
-3.  Within the **Create** method, if the **ModelState.IsValid** is valid, call the **CreateCupcake** from the repository, and redirect to action **Index**.
+4.  Within the **Create** method, if the **ModelState.IsValid** is valid, call the **CreateCupcake** from the repository, and redirect to action **Index**.
 
-4. If **ModelState.IsValid** is not valid, pass the **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and the **Cupcake** object to a view called **Create**.
+5. If **ModelState.IsValid** is not valid, pass the **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and the **Cupcake** object to a view called **Create**.
 
 5. In the **CupcakeController** class, Add a method for the **Edit** action by using the following information:
 
@@ -481,11 +481,11 @@ The main tasks for this exercise are as follows:
 
 9. In the **CupcakeController** class, Add another method for the **Edit** action by using the following information:
 
-       - HTTP verb: **HTTP Post**
-       - Scope: **public**
-       - Return type: **IActionResult**
-       - Name: **EditPost**
-       - Parameter: One integer called **Id**
+     - HTTP verb: **HTTP Post**
+     - Scope: **public**
+     - Return type: **IActionResult**
+     - Name: **EditPost**
+     - Parameter: One integer called **Id**
 
 10. Within the **Edit** method, call the **GetCupcakeById** from the repository, with the accepted **id**, and call the **Async** method **TryUpdateModelAsync** with the following information: 
 
@@ -538,21 +538,21 @@ The main tasks for this exercise are as follows:
     - Price: **_&lt;A cupcake price of your choice&gt;_**
     - Cupcake Picture: **_&lt;A cupcake picture of your choice&gt;_**
 
-4. Verify the details of the newly added cupcake.
+5. Verify the details of the newly added cupcake.
 
-5. Select a cupcake of your choice, click **Details**, verify the cupcake details, and then click **Back to List**.
+6. Select a cupcake of your choice, click **Details**, verify the cupcake details, and then click **Back to List**.
 
-6. Select a cupcake of your choice, and then click **Edit**.
+7. Select a cupcake of your choice, and then click **Edit**.
 
-7. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
+8. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
 
     - Price: **_&lt;A cupcake price of your choice&gt;_**
 
-8. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake details, and then click **Back to List**.
+9. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake details, and then click **Back to List**.
 
-9. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake deleted.
+10. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake deleted.
 
-10. **Stop debugging**.
+11. **Stop debugging**.
 
 >**Results** : After completing this exercise, you will be able to use Entity Framework Core to retrieve and store data through a Repository in the **CupcakeController**. 
 
@@ -606,9 +606,9 @@ The main tasks for this exercise are as follows:
 
 >**Note:** Verify the newly added folder **Migrations**.
 
-9. In the command Line window, Enter the command that will apply the migration to the database.
+8. In the command Line window, Enter the command that will apply the migration to the database.
 
-10. In the **SQL Server Object Explorer**, verify the **BakeriesDb** tables.
+9. In the **SQL Server Object Explorer**, verify the **BakeriesDb** tables.
 
 #### Task 4: Run the application.
 
@@ -627,21 +627,21 @@ The main tasks for this exercise are as follows:
     - Price: **_&lt;A cupcake price of your choice&gt;_**
     - Cupcake Picture: **_&lt;A cupcake picture of your choice&gt;_**
 
-4. Verify the details of the newly added cupcake.
+5. Verify the details of the newly added cupcake.
 
-5. Select a cupcake of your choice, click **Details**, verify the cupcake details, and then click **Back to List**.
+6. Select a cupcake of your choice, click **Details**, verify the cupcake details, and then click **Back to List**.
 
-6. Select a cupcake of your choice, and then click **Edit**.
+7. Select a cupcake of your choice, and then click **Edit**.
 
-7. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
+8. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
 
     - Price: **_&lt;A cupcake price of your choice&gt;_**
 
-8. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake details, and then click **Back to List**.
+9. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake details, and then click **Back to List**.
 
-9. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake deleted.
+10. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake deleted.
 
-10. **Stop debugging**, and **close** Microsoft Visual Studio.
+11. **Stop debugging**, and **close** Microsoft Visual Studio.
 
 >**Results**: After completing this exercise, you should have created a Cupcakes shop application in which users can submit, edit, delete and View cupcales details.
 
