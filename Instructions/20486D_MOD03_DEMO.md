@@ -121,7 +121,7 @@
     });
 ```
 
-34. Place the mouse cursor at the end of the located code, press Enter twice, right-click the specified location, and then click **Paste**.
+34. Place the mouse cursor at the end of the located code, press Enter twice, right-click at the cursor location, and then click  **Paste**.
      >**Note**: It is recommended to remove the empty lines that were created during the **Cut** and **Paste** processes.
 
 35. On the **FILE** menu of the **ConfigureMiddlewareExample - Microsoft Visual Studio** window, click **Save All**.
