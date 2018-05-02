@@ -27,12 +27,19 @@ To create the poll, the application needs a styled HTML page. The HTML page must
 The main tasks for this exercise are as follows: 
 
 1.	Create a new project using the ASP.NET Core Empty project template
+
 2.	Run the application
+
 3.	Add an HTML file to the wwwroot folder
+
 4.	Run the application – content of HTML not displayed
+
 5.	Enable working with static files
+
 6.	Run the application – content of HTML is displayed
+
 7.	Add an HTML file outside of the wwwroot folder
+
 8.	Run the application – content of HTML outside wwwroot folder not displayed
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template.
@@ -168,7 +175,9 @@ The server must receive the client’s request and notify the company for the po
 The main tasks for this exercise are as follows: 
 
 1. Create a middleware
+
 2. Run the application
+
 3. Change the order of middleware
 
 ####	Task 1: Create a middleware.
@@ -233,9 +242,12 @@ We need to aggregate the votes and store them for future use. We will use servic
 
 The main tasks for this exercise are as follows: 
 
-1.	Define an interface for a service
+1. Define an interface for a service
+
 2.	Define an implementation for the service
+
 3.	Use dependency injection
+
 4.	Run the application
 
 ####	Task 1:  Define an interface for a service.
@@ -357,9 +369,13 @@ In this case we will use an MVC controller to show the results.
 The main tasks for this exercise are as follows: 
 
 1.	Enable working with MVC
+
 2.	Add a controller
+
 3.	Run the application
+
 4.	Use Dependency Injection in a controller
+
 5.	Run the application
 
 
