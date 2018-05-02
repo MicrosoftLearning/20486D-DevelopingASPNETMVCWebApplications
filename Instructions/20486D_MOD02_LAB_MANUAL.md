@@ -1,13 +1,13 @@
-﻿# Module 2: Designing ASP.NET Core MVC Web Applications
+# Module 2: Designing ASP.NET Core MVC Web Applications
 
 # Lab: Designing ASP.NET Core MVC Web Applications
 
 #### Scenario
 
-Your team has chosen ASP.NET Core MVC as the most appropriate ASP.NET programming model to create the photo sharing application for the Adventure Works web application. You need to create a detailed project design for the application, and have been given a set of functional and technical requirements with other information. You have to plan:
+Your team has chosen ASP.NET Core MVC as the appropriate ASP.NET programming model to create the photo sharing application for the Adventure Works web application. You need to create a detailed project design for the application. You have been given a set of functional and technical requirements with other information to help you get started. You have to plan for:
 
 - An MVC model that you can use to implement the desired functionality.
-- One or more controllers and controller actions that respond to users actions.
+- One or more controllers and controller actions that respond to users' actions.
 - A set of views to implement the user interface.
 - The locations for hosting and data storage.
 
@@ -26,9 +26,9 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-You need to recommend an MVC model that is required to implement a photo sharing application. You will propose model classes based on the results of an initial investigation into the requirements.
+You have to recommend an MVC model to implement a photo sharing application. You propose the model classes based on the results of an initial investigation into the requirements.
 
-The main tasks for this exercise are as follows:
+The main tasks for this exercise are:
 
 1. Examine the initial investigation.
 
@@ -38,41 +38,37 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Examine the initial investigation.
 
-1. Open the **InitialInvestigation** document by using the following information:
-
-   - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+1. From, **Allfiles\Mod02\Labfiles\01_DesignProject_begin**, open the **InitialInvestigation** file.
 
 2. Enable the **Navigation Pane** feature.
 
-3. Read the contents of the Introduction section.
+3. Read the **Introduction** section.
 
-4. Read the contents of the General Description section.
+4. Read the **General Description** section.
 
-5. Read the Use Cases section, and then examine the **Use Case Summary** diagram.
+5. Read the **Use Cases** section, and then examine the **Use Case Summary** diagram.
 
-6. Close the **InitialInvestigation** document.
+6. Close the **InitialInvestigation** file.
 
 #### Task 2: Plan the photo model class.
 
-1. Open the **DetailedPlanningDocument** document, and locate the MVC Model section.
+1. From **Allfiles\Mod02\Labfiles\01_DesignProject_begin**, ppen the **DetailedPlanningDocument** file, and locate the **MVC Model** section.
 
-   - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+2. After reading the **InitialInvestigation** file, add and describe a model class for photos in **Table 1: MVC Model**.
 
-2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model**.
-
-3. Add properties to the model class you created in **Table 1: MVC Model**. The model class will have many properties
+3. Add properties to the model class you created in **Table 1: MVC Model**. The model class will have many properties.
 
 4. Add data types to the photo properties. Each property will have one, and only one data type.
 
 5. Merge the rows in the **Model Class** and **Description** columns, and save the document.
 
-6. Create a **WPF Project** in visual studio.
+6. In Visual Studio, create a **WPF Project**.
 
 7. Add a **Class Diagram** template to the project.
 
 8. Add a new **Class** to the class diagram.
 
-9. Add attributes to the new **Photo** class diagram for each of the properties you planned for the photo class.
+9. For each of the properties that you planned for the **photo** class, add attributes to the new **Photo** class diagram.
 
 10. Fix the properties return values in the **Photo** class, to match the property types.
 
@@ -81,13 +77,13 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Plan the comment model class.
 
-1. Open the **DetailedPlanningDocument** document, and locate the MVC Model section.
+1. Open the **DetailedPlanningDocument** file, and locate the **MVC Model** section.
 
-2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model**.
+2. Based on your reading of the **InitialInvestigation** file, add and describe a model class for photos in **Table 1: MVC Model**.
 
-3. Add properties to the model class you created in **Table 1: MVC Model**.
+3. To the model class you created in **Table 1: MVC Model**, add properties.
 
-4. Add data types to the comment properties.
+4. Add data types to the **comment** property.
 
 5. Merge the rows in the **Model Class** and the **Description** columns, and then save the document.
 
@@ -95,9 +91,9 @@ The main tasks for this exercise are as follows:
 
 8. Add attributes to the new **Comment** class diagram for each of the properties you planned for the comment.
 
-9. Connect the two classes with association object.
+9. Connect the two classes with an association object.
 
-10. The association created a property,  in the photo class. Change its return type to List<Comment>, and change the property back to "collection association" in the class diagram.
+10. The association creates a property  in the **photo** class. Change its return type to **List<Comment>**, and in the class diagram, change the property back to **collection association**.
 
 11. Fix the properties return values in the **Photo** class, to match the property types.
 
@@ -107,9 +103,9 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-You need to recommend a set of MVC controllers that are required to implement a photo sharing application. You will propose controllers based on the results of an initial investigation into the requirements.
+You have to recommend a set of MVC controllers that are required to implement a photo sharing application. You propose controllers based on the results of an initial investigation into the requirements.
 
-The main tasks for this exercise are as follows:
+The main tasks for this exercise are:
 
 1. Plan the photo controller.
 
@@ -117,24 +113,24 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Plan the photo controller.
 
-1. Open the **DetailedPlanningDocument** document, and locate the MVC Controllers section.
+1. Open the **DetailedPlanningDocument** file, and locate the **MVC Controllers** section.
 
 2. Based on your reading of the **InitialInvestigation** document, add a controller for photos in **Table 2: MVC Controllers**.
 
-3. Add actions to the controller for photos in **Table 2: MVC Controllers**.
+3. In **Table 2: MVC Controllers**, add actions to the controller for photos.
 
-4. Add descriptions for each of the actions you have planned.
+4. For each of the actions, add descriptions.
 
-5. Merge rows in the **Controller** column, and save the document.
+5. Merge the rows in the **Controller** column, and save the document.
 
 
 #### Task 2: Plan the comment controller.
 
-1. Based on your reading of the **InitialInvestigation** document, add a controller for photos in **Table 2: MVC Controllers**.
+1. Based on your reading of the **InitialInvestigation** document, add the **comments** controller in **Table 2: MVC Controllers**.
 
-2. Add actions to the controller for comments in **Table 2: MVC Controllers**.
+2. In **Table 2: MVC Controllers**, add actions to the **comments** controller.
 
-3. Add descriptions for each of the actions you have planned.
+3. For each of the actions, add descriptions.
 
 4. Merge rows in the **Controller** column, and save the document.
 
@@ -144,9 +140,9 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-You need to recommend a set of MVC views that are required to implement a photo sharing application. You will propose views based on the results of an initial investigation into the requirement.
+You have to recommend a set of MVC views that are required to implement a photo sharing application. You propose views based on the results of an initial investigation into the requirement.
 
-The main tasks for this exercise are as follows:
+The main tasks for this exercise are:
 
 1. Define the views.
 
@@ -158,43 +154,42 @@ The main tasks for this exercise are as follows:
 
 1. Add a controller to the **Table 3: MVC Views** table.
 
-2. Add the required views to the Controllers.
+2. To the controllers, add the required views.
 
-3. Add a description to the views.
+3. To the views, add descriptions.
 
 4. Merge rows in the **Controller** column, and save the document.
 
 
 #### Task 2: Design the single photo view.
 
-1. Create a new **WPF Window** with the name **SinglePhotoView**.
+1. Create a new **WPF Window** and name it **SinglePhotoView**.
 
-2. Drag a **label** as header.
+2. For the header, add a label.
 
-3. Drag a **Canvas**, and put inside it **buttons**, as the site menu according the the use cases defined.
+3. For the site menu, according the the use cases defined, add a canvas, and place buttons inside it.
 
-4. **Design** the canvas, and buttons so they will look well.
+4. Design the canvas and buttons so they look good.
 
-5. Drag below it **labels** that show the photo properties as needed. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
+5. Below it, add labels to display the photo properties. (Replace **photo name** with  **Title**, **owner name** with **Owner**, **date value** with **Date**, etc.).
 
-6. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\Mod02\Labfiles\01_DesignProject_begin\photo.jpg** to be shown instead of real photos).
+6. Add an **Image** object and maximize it. (Use the **Allfiles\Mod02\Labfiles\01_DesignProject_begin\photo.jpg** file as a placeholder, to be shown instead of real photos).
 
-7. Drag **Canvas** for the comments, and fill it with **Labels** according to the comment properties. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
+7. For the comments, add a canvas. Fill it with as many labels as required for the comment properties. (Replace **photo name** with  **Title**, **owner name** with **Owner**, **date value** with **Date**, etc.).
 
-8. Add a **TextBlock** which supports underline to represend a link, and fill it with the text **Add Comment**.
-
+8. Add a textblock that supports underline to represent a link, and inside it type **Add Comment**.
 
 #### Task 3: Design the gallery view.
 
-1. Create a new **WPF Window** with the name **PhotoGalleryView**.
+1. Create a new **WPF Window** and name it **PhotoGalleryView**.
 
-2. Drag a **label** as header.
+2. For the header, add a label.
 
-3. Drag a **Canvas**, and put inside it **buttons**, to be used as the site menu according the the use cases defined.
+3. For the site menu, according the the use cases defined, add a canvas, and place buttons inside it.
 
-4. **Design** the canvas and buttons so they will look well.
+4. Design the canvas and buttons so they look good.
 
-5. Drag a **canvas** below the menu, and fill it with the photo and properties that should be shown for a list of photos in the home page.
+5. Below the menu, add a canvas. Fill it with the photo and properties that should be shown for a list of photos in the home page.
 
 6. Copy the canvas multiple times for each image, as an image list.
 
@@ -204,9 +199,9 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-You need to recommend a web server and database server configuration that is required to implement a photo sharing application. You will propose details based on the results of an initial investigation into the requirements.
+You have to recommend a web server and database server configuration that is required to implement a photo sharing application. You propose details based on the results of an initial investigation into the requirements.
 
-The main tasks for this exercise are as follows:
+The main tasks for this exercise are:
 
 1. Hosting options.
 
@@ -222,7 +217,7 @@ The main tasks for this exercise are as follows:
 
    >**Results**: After completing this exercise, you will be able to create proposals for hosting arrangements.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 
