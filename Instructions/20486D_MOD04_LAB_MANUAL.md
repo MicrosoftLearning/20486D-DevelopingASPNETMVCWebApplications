@@ -35,19 +35,19 @@ In this exercise, you will create the MVC controller that handles user operation
 
 The main tasks for this exercise are as follows:
 
-1. Create City and Home controllers.
+1. Add controllers to an MVC application.
 
-2. Create the Index action in both controllers.
+2. Add actions to a controller.
 
-3. Create the Details action in the city controller.
+3. Change actions to get a parameter.
 
-4. Create the GetImage action in the city controller.
+4. Change an action to redirect to another action in another controller.
 
-5. Change the index action in Home Controller to redirect to index action in the city controller.
+5. Use a service.
 
-6. Use a service in the city controller.
+6. Store the result in a ViewBag property.
 
-7. Store information in a **ViewBag** property.
+7. Run the application.
 
 #### Task 1: Add controllers to an MVC application.
 
@@ -175,9 +175,13 @@ An important design priority for the application is that the visitors should be 
 
 The main tasks for this exercise are as follows:
 
-1. Create a Traveler controller.
+1. Add a controller with an action.
 
-2. Register new custom routes in the request pipeline.
+2. Run the application.
+
+3. Register new routes in the routing table.
+
+4. Run the application and verify the new route works.
 
 #### Task 1: Add a controller with an action.
 
@@ -285,7 +289,9 @@ The main tasks for this exercise are as follows:
 
 4. Add a handler for the OnResultExecuted event.
 
-5. Register the Action Filter with the City Controller.
+5. Apply the action filter to the controller action.
+
+6. Run the application and verify the new filter works.
 
 #### Task 1: Add an action filter class.
 

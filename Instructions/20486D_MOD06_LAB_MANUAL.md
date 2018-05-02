@@ -33,11 +33,17 @@ In this exercise, you will:
 
 The main tasks for this exercise are as follows:
 
-1. Add new MVC models.
+1. Create a new model.
 
-2. Write the Create action for GET HTTP verb.
+2. Use the model in a view.
 
-3. Write the Create action for POST HTTP verb.
+3. Pass the model from the controller to a view.
+
+4. Run the application.
+
+5. Write a GET action that accepts the new model information.
+
+6. Write a POST action that accepts the model.
 
 #### Task 1: Create a new model.
 
@@ -212,9 +218,18 @@ In this exercise, you will:
 
 The main tasks for this exercise are as follows:
 
-1. Add data annotations to a model.
+1. Add display and edit data annotations to a model.
 
-2. Complete the Index display view.
+2. Update an action to return FileContentResult.
+
+3. Add Display Helpers.
+
+4. Add Form Helpers.
+
+5. Add Editor Helpers.
+
+6. Run the application.
+
 
 #### Task 1: Add display and edit data annotations to a model.
 
@@ -361,13 +376,18 @@ In this exercise, you will:
 
 The main tasks for this exercise are as follows:
 
-1. Add Validation data annotations to a model.
+1. Add validation data annotations to a model.
 
-2. Complete the Create display view.
+2. Add validation helpers to a view.
 
-3. Add ModelState.IsValid property in a controller.
+3. Using the ModelState.IsValid property in a controller.
 
-4. Add custom validation.
+4. Run the application.
+
+5. Add custom validation.
+
+6. Run the application.
+
 
 #### Task 1: Add validation data annotations to a model.
 
