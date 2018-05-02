@@ -21,6 +21,7 @@ namespace Cupcakes.Models
         [StringLength(50, MinimumLength = 4)]
         [Required]
         public string Address { get; set; }
+
         public virtual ICollection<Cupcake> Cupcakes { get; set; }
     }
 }

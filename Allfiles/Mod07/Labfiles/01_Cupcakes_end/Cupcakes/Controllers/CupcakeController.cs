@@ -14,8 +14,8 @@ namespace Cupcakes.Controllers
 {
     public class CupcakeController : Controller
     {
-        private IHostingEnvironment _environment;
         private ICupcakeRepository _repository;
+        private IHostingEnvironment _environment;
 
         public CupcakeController(ICupcakeRepository repository, IHostingEnvironment environment)
         {
@@ -37,8 +37,8 @@ namespace Cupcakes.Controllers
             }
             return View(cupcake);
         }
-		
-        [HttpGet, ActionName("Create")]
+
+        [HttpGet]
         public IActionResult Create()
         {
             PopulateBakeriesDropDownList();
@@ -46,8 +46,7 @@ namespace Cupcakes.Controllers
         }
 
         [HttpPost, ActionName("Create")]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("CupcakeId,BakeryId,CupcakeType,Description,GlutenFree,Price,PhotoAvatar")] Cupcake cupcake)
+        public IActionResult CreatePost(Cupcake cupcake)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +57,7 @@ namespace Cupcakes.Controllers
             return View(cupcake);
         }
 
-        [HttpGet, ActionName("Edit")]
+        [HttpGet]
         public IActionResult Edit(int id)
         {
             Cupcake cupcake = _repository.GetCupcakeById(id);
@@ -71,7 +70,6 @@ namespace Cupcakes.Controllers
         }
 
         [HttpPost, ActionName("Edit")]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditPost(int id)
         {
             var cupcakeToUpdate = _repository.GetCupcakeById(id);
@@ -87,7 +85,7 @@ namespace Cupcakes.Controllers
             return View(cupcakeToUpdate);
         }
 
-        [HttpGet, ActionName("Delete")]
+        [HttpGet]
         public IActionResult Delete(int id)
         {
             var cupcake = _repository.GetCupcakeById(id);
@@ -99,20 +97,18 @@ namespace Cupcakes.Controllers
         }
 
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
             _repository.DeleteCupcake(id);
             return RedirectToAction(nameof(Index));
         }
-		
-		
-		private void PopulateBakeriesDropDownList(object selectedbakery = null)
+
+        private void PopulateBakeriesDropDownList(int? selectedBakery = null)
         {
             var bakeries = _repository.PopulateBakeriesDropDownList();
-            ViewBag.BakeryID = new SelectList(bakeries.AsNoTracking(), "BakeryId", "BakeryName", selectedbakery);
+            ViewBag.BakeryID = new SelectList(bakeries.AsNoTracking(), "BakeryId", "BakeryName", selectedBakery);
         }
-		
+
         public IActionResult GetImage(int id)
         {
             Cupcake requestedcupcake = _repository.GetCupcakeById(id);

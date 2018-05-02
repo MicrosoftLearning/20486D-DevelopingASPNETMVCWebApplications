@@ -33,12 +33,16 @@ namespace Cupcakes.Models
         [NotMapped]
         [Display(Name = "Cupcake Picture:")]
         public IFormFile PhotoAvatar { get; set; }
+
         public string ImageName { get; set; }
+
         public byte[] PhotoFile { get; set; }
+
         public string ImageMimeType { get; set; }
 
         [Required(ErrorMessage = "Please select a bakery")]
         public int? BakeryId { get; set; }
+
         public virtual Bakery Bakery { get; set; }
     }
 }

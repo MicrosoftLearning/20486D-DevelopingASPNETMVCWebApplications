@@ -9,7 +9,7 @@ namespace Cupcakes.Data
 {
     public class CupcakeContext : DbContext
     {
-        public CupcakeContext(DbContextOptions<CupcakeContext> options) :base(options)
+        public CupcakeContext(DbContextOptions<CupcakeContext> options) : base(options)
         {
         }
 
