@@ -11,7 +11,7 @@ You are planning to create and code an MVC model that implements your plan for c
 After completing this lab, you will be able to:
 
 - Add new models to the application and add properties to the model.
-- Adding Entity Framework Core to the application.
+- Add a class that derives from DbContext
 - Use Entity Framework Core to Retrieve and Store Data in the application.
 - Use Repository in the project.
 - Use Visual Studio to create a new Microsoft SQL database and connect to the database.
@@ -221,24 +221,17 @@ The main tasks for this exercise are as follows:
 
 3. Initialize the DbContextOptions<CupcakeContext> options, in the **CupcakeContext** constructor, and derive from DbContext base constructor the value **options**.
 
-4. Add public **DbSet** properties to Cupcake and Bakery to enable Entity Framework to create database tables called Cupcakes and Bakeries.
+4. Add public **DbSet** properties, Cupcake and Bakery to enable Entity Framework create database tables called Cupcakes and Bakeries.
 
 #### Task 3: Set up Entity Framework to use an In Memory database.
 
-1. In the **Program** class, Add **using** statements to the model for the following namespaces:
-
-   - **Cupcakes.Data**
-   - **Microsoft.Extensions.DependencyInjection**
-
-2.  exercise 1 task 3 step 5 
-
-3. In the **Startup** class, Add **using** statements to the model for the following namespaces:
+1. In the **Startup** class, Add **using** statements to the model for the following namespaces:
 
    - **Microsoft.Extensions.Configuration**
    - **Cupcakes.Data**
    - **Microsoft.EntityFrameworkCore**
 
-4. In the **Startup** class, create a new object using the following information:
+2. In the **Startup** class, create a new object using the following information:
 
    - Scope: **private**
    - Class: **IConfiguration**
@@ -246,7 +239,7 @@ The main tasks for this exercise are as follows:
 
     Initialize the new object in the **Startup** constructor with the value **IConfiguration configuration**.
 
-5. In the **ConfigureServices** method, initialize the **CupcakeContext** to use an **in memory database**.
+3. In the **ConfigureServices** method, initialize the **CupcakeContext** to use an **in memory database**.
 
 #### Task 4: Using an initializer to populate the database.
 
@@ -282,6 +275,13 @@ The main tasks for this exercise are as follows:
 
 7. Add each **Cupcake** object in the **cupcakes** list to the Entity Framework context, and then save the changes to the context.
 
+8. In the **Program** class, Add **using** statements to the model for the following namespaces:
+
+   - **Cupcakes.Data**
+   - **Microsoft.Extensions.DependencyInjection**
+
+9.  In the **Program** class, add code to initialize the **DbInitializer** with test data.
+
 >**Results** : After completing this exercise, you will be able to add Entity Framework Core to the Cupcake Shop application. 
 
 ### Exercise 2: Use Entity Framework Core to Retrieve and Store Data
@@ -293,7 +293,7 @@ In this exercise, you will:
 - Add a repository to the application.
 - Use the repository in the controller.
 - Retrieve cupcakes and bakeries data.
-
+- Manipulating cupcakes and bakeries data.
 
 The main tasks for this exercise are as follows:
 
@@ -372,7 +372,7 @@ The main tasks for this exercise are as follows:
 
 14. In the **CupcakeRepository** class, implement the **GetCupcakes** method from the **ICupcakeRepository** interface and return a **Cupcake** collection.
 
-15. In the **CupcakeRepository** class, implement the **PopulateBakeriesDropDownList** method from the **ICupcakeRepository** interface and return a **Bakery** collection.
+15. In the **CupcakeRepository** class, implement the **PopulateBakeriesDropDownList** method from the **ICupcakeRepository** interface, order by **BakeryName** and return a **Bakery** collection.
 
 16. In the **CupcakeRepository** class, implement the **SaveChanges** method from the **ICupcakeRepository** interface.
 
@@ -564,11 +564,16 @@ The main tasks for this exercise are as follows:
 
 In this exercise, you will:
 
+- Connecting to a Microsoft SQL Server database.
+- Use the repository in the controller.
+- Retrieve cupcakes and bakeries data.
+- Manipulating cupcakes and bakeries data.
+
 The main tasks for this exercise are as follows:
 
 1. Connecting to a Microsoft SQL Server.
 
-2. Specifying a connection string in a configuration file. 
+2. Create an app Settings File, and specifying a connection string.
 
 3. Use Migrations.
 
@@ -595,33 +600,15 @@ The main tasks for this exercise are as follows:
 
 4. In the address bar type **cmd**, and press Enter.
 
-5. In the command Line window, type the following code.
+5. In the command Line window, verify that the **Entity Framework tools** for the command-line interface provided correctly in Microsoft.EntityFrameworkCore.Tools.DotNet.
 
-  ```cs
-     dotnet ef
-```
+6. In the command Line window, verify that the Database name is identical to the name in the **appsettings.json** file.
 
-6. In the command Line window, type the following code.
-
-  ```cs
-     dotnet ef dbcontext info
-```
-
-7. In the command Line window, verify that the **Database name** is identical to the name in the **appsettings.json** file.
-
-8. In the command Line window, type the following code.
-
-  ```cs
-     dotnet ef migrations add InitialCreate
-```
+7. In the command Line window, Enter the command that will create the database from scratch.
 
 >**Note:** Verify the newly added folder **Migrations**.
 
-9. In the command Line window, type the following code.
-
-  ```cs
-     dotnet ef database update
-```
+9. In the command Line window, Enter the command that will apply the migration to the database.
 
 10. In the **SQL Server Object Explorer**, verify the **BakeriesDb** tables.
 
@@ -660,3 +647,8 @@ The main tasks for this exercise are as follows:
 
 >**Results**: After completing this exercise, you should have created a Cupcakes shop application in which users can submit, edit, delete and View cupcales details.
 
+©2016 Microsoft Corporation. All rights reserved.
+
+The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+
+This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.
