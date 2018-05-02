@@ -11,9 +11,9 @@ You are planning to create and code an MVC model that implements your plan for c
 After completing this lab, you will be able to:
 
 - Add new models to the application and add properties to the model.
-- Add a class that derives from DbContext
-- Use Entity Framework Core to Retrieve and Store Data in the application.
+- Add a class that derives from DbContext.
 - Use Repository in the project.
+- Use Entity Framework Core to Retrieve and Store Data in the application.
 - Use Visual Studio to create a new Microsoft SQL database and connect to the database.
 - Use Migrations in the application.
 
@@ -44,7 +44,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create model classes.
 
-1. Open the ButterfliesShop.sln file from the following location:
+1. Open the Cupcakes.sln file from the following location:
 **Allfiles\Mod07\Labfiles\01_Cupcakes_begin**.
 
 2. Create a new class for the Cupcake model by using the following information:
@@ -90,7 +90,7 @@ The main tasks for this exercise are as follows:
 
    - Scope: **public**
    - Property name: **Price**
-   - Data type: **double**
+   - Data type: Nullable **double**
    - Access: **Read and write**
 
 9. Add an image property to the **Cupcake** model class and store the image name by using the following information:
@@ -103,49 +103,50 @@ The main tasks for this exercise are as follows:
 
 10. Add another image property to the **Cupcake** model class and store the MIME type of image by using the following information:
 
-   - Scope: **public**
-   - Property names: **PhotoFile**, **ImageMimeType**
-   - Data type for the image: **byte []**
-   - Data type for MIME type: **string**
-   - Access: **Read and write**
+       - Scope: **public**
+       - Property names: **PhotoFile**, **ImageMimeType**
+       - Data type for the image: **byte []**
+       - Data type for MIME type: **string**
+       - Access: **Read and write**
 
-11. Add a new property to the **Cupcake** model class to retrieve the cupcake for a given bakeryId by using the following information: 
+11. Add a new property to the **Cupcake** model class to retrieve the bakery for a given bakeryId by using the following information: 
 
-   - Scope: **public**
-   - Property name: **BakeryId**
-   - Property type: Nullable **int**
-   - Access: **Read and write**
+       - Scope: **public**
+       - Property name: **BakeryId**
+       - Property type: Nullable **int**
+       - Access: **Read and write**
 
-12. Add a new property to the **Cupcake** model class to retrieve the cupcake for a given bakery by using the following information:
+12. Add a new property to the **Cupcake** model class to retrieve the bakery by using the following information:
 
-   - Scope: **public**
-   - Property name: **Bakery**
-   - Property type: **Bakery**
-   - Access: **Read and write**
+       - Scope: **public**
+       - Property name: **Bakery**
+       - Property type: **Bakery**
+       - Access: **Read and write**
+       - Include the **virtual** keyword
 
-13. Add a Key attribute to the **Cupcake** model class to ensure that the CupcakeId property is a key property and the corresponding column to a PrimaryKey column in the database.
+13. Add a Key attribute to the **Cupcake** model class to ensure that the CupcakeId property is a key property and corresponding column to a PrimaryKey column in the database.
 
-14. Add a display data annotation to the **Cupcake** model class to ensure that the CupcakeType property is displayed with the name, **Cupcake Type:**.
+14. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the CupcakeType field.
 
-15. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the CupcakeType field.
+15. Add a display data annotation to the **Cupcake** model class to ensure that the CupcakeType property is displayed with the name, **Cupcake Type:** .
 
-16. Add a display data annotation to the **Cupcake** model class to ensure that the Description  property is displayed with the name, **Description:**.
+16. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the Description field.
 
-17. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the Description field.
+17. Add a display data annotation to the **Cupcake** model class to ensure that the Description  property is displayed with the name, **Description:** .
 
-18. Add a display data annotation to the **Cupcake** model class to ensure that the GlutenFree property is displayed with the name, **Gluten Free:**.
+18. Add a display data annotation to the **Cupcake** model class to ensure that the GlutenFree property is displayed with the name, **Gluten Free:** .
 
 19. Add validation data annotations to the **Cupcake** model class to ensure that the users complete the Price text box and type an int not greater than 15 Digits.
 
 20. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the Price field.
 
-21. Add a display data annotation to the **Cupcake** model class to ensure that the Price property is displayed with the name, **Price:**.
+21. Add a DataType annotation to the **Cupcake** model class to ensure that the Price property is displayed as Currency.
 
-22. Add a DataType annotation to the **Cupcake** model class to ensure that the Price property is displayed as Currency.
+22. Add a display data annotation to the **Cupcake** model class to ensure that the Price property is displayed with the name, **Price:** .
 
 23. Add a data annotation to the **Cupcake** model class to ensure that the PhotoAvatar property wont be created corresponding column in a database table.
 
-24. Add a display data annotation to the **Cupcake** model class to ensure that the PhotoAvatar  property is displayed with the name, **Cupcake Picture:**.
+24. Add a display data annotation to the **Cupcake** model class to ensure that the PhotoAvatar  property is displayed with the name, **Cupcake Picture:** .
 
 25. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the BakeryId field.
 
@@ -156,55 +157,51 @@ The main tasks for this exercise are as follows:
 
 27. In the **Bakery** class, Add **using** statements to the model for the following namespaces:
 
-   - **System.ComponentModel.DataAnnotations**
+    - **System.ComponentModel.DataAnnotations**
 
 28. Add a primary key property to the Bakery model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **BakeryId**
-   - Data type: **integer**
-   - Access: **Read and write**
+      - Scope: **public**
+      - Property name: **BakeryId**
+      - Data type: **integer**
+      - Access: **Read and write**
 
 29. Add a BakeryName property to the Bakery model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **BakeryName**
-   - Data type: **string**
-   - Access: **Read and write**
+       - Scope: **public**
+      - Property name: **BakeryName**
+       - Data type: **string**
+       - Access: **Read and write**
 
 30. Add a Quantity property to the Bakery model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **Quantity**
-   - Data type: **int**
-   - Access: **Read and write**
+       - Scope: **public**
+      - Property name: **Quantity**
+      - Data type: **int**
+      - Access: **Read and write**
 
 31. Add a Address property to the Bakery model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **Address**
-   - Data type: **string**
-   - Access: **Read and write**
+       - Scope: **public**
+       - Property name: **Address**
+       - Data type: **string**
+       - Access: **Read and write**
 
 32. Add a new property to the **Bakery** model class to retrieve cupcakes for a given bakery by using the following information:
 
-   - Scope: **public**
-   - Property name: **Cupcakes**
-   - Data type: a collection of **Cupcake**
-   - Access : **Read and write**
-   - Include the **virtual** keyword
+       - Scope: **public**
+       - Property name: **Cupcakes**
+       - Data type: a collection of **Cupcake**
+       - Access : **Read and write**
+       - Include the **virtual** keyword
 
-33. Add a Key attribute to the **Bakery** model class to ensure that the BakeryId  property is a key property and the corresponding column to a PrimaryKey column in the database.
+33. Add a Key attribute to the **Bakery** model class to ensure that the BakeryId  property is a key property and corresponding column to a PrimaryKey column in the database.
 
 34. Add validation data annotations to the **Bakery** model class to ensure that the users complete the BakeryName text box and type a string with a length shorter than 50 characters.
 
-35. Add a validation data annotation to the **Bakery** model class to ensure that the users complete the BakeryName field.
+35. Add validation data annotations to the **Cupcake** model class to ensure that the users complete the Quantity text box and type an int not greater than 40 Digits.
 
-36. Add validation data annotations to the **Cupcake** model class to ensure that the users complete the a text box and type an int not greater than 40 Digits.
-
-37. Add validation data annotations to the **Bakery** model class to ensure that the users complete the Address  text box and type a string with a length shorter than 50 characters.
-
-38. Add a validation data annotation to the **Bakery** model class to ensure that the users complete the Address field.
+36. Add validation data annotations to the **Bakery** model class to ensure that the users complete the Address text box and type a string with a length shorter than 50 characters.
 
 #### Task 2: Create a class that derives from DbContext.
 
@@ -255,15 +252,15 @@ The main tasks for this exercise are as follows:
 
    - Parameter: a CupcakeContext named **context**
 
-5. Create a new list of **Bakery** objects in the **Initialize** method. The list should contain four Bakery object with the following properties:
+5. Create a new list of **Bakery** objects in the **Initialize** method. The list should contain four Bakery objects with the following properties:
 
-   - BakeryName: **Gluteus Free**, **Cupcakes Break**, **Cupcakes Ahead**, **Sugar**
+   - BakeryName: _&lt;A bakery name of your choice&gt;_
    - Address: _&lt;An address of your choice&gt;_
    - Quantity:  _&lt;A quantity of your choice&gt;_
 
 5. Add each **Bakery** object in the **Bakeries** list to the Entity Framework context, and then save the changes to the context.
 
-6. Create a new list of Cupcake objects in the **Initialize** method. The list should contain four **Cupcake** object with the following properties:
+6. Create a new list of Cupcake objects in the **Initialize** method. The list should contain four **Cupcake** objects with the following properties:
 
    - CupcakeType: _&lt;A cupcake tyoe of your choice&gt;_
    - Description: _&lt;A description of your choice&gt;_
@@ -299,7 +296,7 @@ The main tasks for this exercise are as follows:
 
 1. Create a repository.  
 
-2. Create a controller.
+2. Update a controller to use a repository.
 
 3. Use Entity Framework to retrieve data.
 
@@ -333,54 +330,61 @@ The main tasks for this exercise are as follows:
 7. Add the **CreateCupcake** method to the **ICupcakeRepository** interface by using the following information:
 
    - Return type: **void**
-   - Parameter: **Cupcake**
+   - Parameter: a **Cupcake** object called **cupcake**.
    - Name: **CreateCupcake**
 
 8.  Add the **DeleteCupcake** method to the **ICupcakeRepository** interface by using the following information:
 
-   - Return type: **void**
-   - Parameter: an integer named **Id**
-   - Name: **DeleteCupcake**
+    - Return type: **void**
+    - Parameter: an integer named **Id**
+    - Name: **DeleteCupcake**
 
 9. Add the **SaveChanges** method to the **ICupcakeRepository** interface by using the following information:
 
-   - Return type: **void**
-   - Name: **SaveChanges**
+    - Return type: **void**
+    - Name: **SaveChanges**
 
 10. Add the **PopulateBakeriesDropDownList** method to the **ICupcakeRepository** interface by using the following information:
 
-   - Type: **IQueryable&lt;Bakery&gt;**
-   - Name: **PopulateBakeriesDropDownList**
+     - Type: **IQueryable&lt;Bakery&gt;**
+     - Name: **PopulateBakeriesDropDownList**
 
 11. Add a new class named **CupcakeRepository** to the **Repositories** folder.
 
-12. Ensure that the **CupcakeRepository** class implements the **ICupcakeRepository** interface.
+12. In the **CupcakeRepository** class, Add **using** statements to the model for the following namespaces:
 
-13. In the **CupcakeRepository** class, create a new object using the following information:
+   - **System.IO**
+   - **Cupcakes.Data**  
+   - **Cupcakes.Models**
+   - **Microsoft.EntityFrameworkCore**
 
-   - Scope: **private**
-   - Class: **CupcakeContext**
-   - Name: **context**
+13. Ensure that the **CupcakeRepository** class implements the **ICupcakeRepository** interface.
+
+14. In the **CupcakeRepository** class, create a new object using the following information:
+
+       - Scope: **private**
+       - Class: **CupcakeContext**
+       - Name: **context**
 
     Initialize the new object in the **CupcakeRepository** constructor with the value **CupcakeContext _context**.
 
-13. In the **CupcakeRepository** class, implement the **CreateCupcake** method from the **ICupcakeRepository** interface.
+15. In the **CupcakeRepository** class, implement the **CreateCupcake** method from the **ICupcakeRepository** interface.
 
-12. In the **CupcakeRepository** class, implement the **DeleteCupcake** property from the **ICupcakeRepository** interface.
+16. In the **CupcakeRepository** class, implement the **DeleteCupcake** property from the **ICupcakeRepository** interface.
 
-13. In the **CupcakeRepository** class, implement the **GetCupcakeById** method from the **ICupcakeRepository** interface return the **Cupcake** object with requested **Id**.
+17. In the **CupcakeRepository** class, implement the **GetCupcakeById** method from the **ICupcakeRepository** interface return the **Cupcake** object with requested **Id**.
 
-14. In the **CupcakeRepository** class, implement the **GetCupcakes** method from the **ICupcakeRepository** interface and return a **Cupcake** collection.
+18. In the **CupcakeRepository** class, implement the **GetCupcakes** method from the **ICupcakeRepository** interface and return a **Cupcake** collection.
 
-15. In the **CupcakeRepository** class, implement the **PopulateBakeriesDropDownList** method from the **ICupcakeRepository** interface, order by **BakeryName** and return a **Bakery** collection.
+19. In the **CupcakeRepository** class, implement the **PopulateBakeriesDropDownList** method from the **ICupcakeRepository** interface, order by **BakeryName** and return a **Bakery** collection.
 
-16. In the **CupcakeRepository** class, implement the **SaveChanges** method from the **ICupcakeRepository** interface.
+20. In the **CupcakeRepository** class, implement the **SaveChanges** method from the **ICupcakeRepository** interface.
 
-17. In the **Startup** class, Add **using** statements to the model for the following namespaces:
+21. In the **Startup** class, Add **using** statements to the model for the following namespaces:
 
-   - **Cupcakes.Repositories**
+       - **Cupcakes.Repositories**
 
-18. In the **Startup** class add **CupcakeRepository** to the services container as **Transient**.
+22. In the **Startup** class add **CupcakeRepository** to the services container as **Transient**.
 
 #### Task 2: Update a controller to use a repository.
 
@@ -423,7 +427,7 @@ The main tasks for this exercise are as follows:
    - Name: **Details**
    - Parameters: One integer called **id**
 
-3. Within the **Details** action code block, add code to find a single **Cupcake** object from its **Id**.
+3. Within the **Details** action code block, add code to find a single **Cupcake** object from the accepted **id**.
 
 4. If no **Cupcake** with the right Id is found, return the **NotFound** value.
 
@@ -434,7 +438,7 @@ The main tasks for this exercise are as follows:
    - Scope: **public**
    - Return Type: **void**
    - Name: **PopulateBakeriesDropDownList**
-   - Parameters: **object selectedbakery = null**
+   - Parameter: **int? selectedBakery = null**
 
 7. Within the **PopulateBakeriesDropDownList** method code block, add code to get **IQueryable&lt;Bakery&gt;** using the the following method from the repository **PopulateBakeriesDropDownList**, and store the result in a **ViewBag**.
 
@@ -451,23 +455,17 @@ The main tasks for this exercise are as follows:
 
 2. In the **CupcakeController** class, Add another method for the **Create** action by using the following information:
 
-  - HTTP verb: **HTTP Post**
-  - Scope: **public**
-  - Return type: **IActionResult**
-  - Name: **Create**
-  - Parameters: **Bind** to the relevant properties from the **Cupcake** model, a **Cupcake** object called **cupcake**.
+      - HTTP verb: **HTTP Post**
+      - Scope: **public**
+      - Return type: **IActionResult**
+      - Name: **Create**
+      - Parameters: a **Cupcake** object called **cupcake**.
 
 3.  Within the **Create** method, if the **ModelState.IsValid** is valid, call the **CreateCupcake** from the repository, and redirect to action **Index**.
 
-4. If **ModelState.IsValid** is not valid, call the **PopulateBakeriesDropDownList** method with the following information: 
+4. If **ModelState.IsValid** is not valid, pass the **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and the **Cupcake** object to a view called **Create**.
 
-  - Parameter: **cupcake.BakeryId**
-
-5. Add code to the **Create** action, immediately after the code you just added, call to the **create** view with the following information: 
-
-  - Parameter: **cupcake**
-
-6. In the **CupcakeController** class, Add a method for the **Edit** action by using the following information:
+5. In the **CupcakeController** class, Add a method for the **Edit** action by using the following information:
 
    - HTTP verb: **HTTP Get**
    - Scope: **public**
@@ -475,53 +473,53 @@ The main tasks for this exercise are as follows:
    - Name: **Edit**
    - Parameter: One integer called **id**
 
-7. Within the **Edit** method, call the **GetCupcakeById** from the repository, with the accepted **id**.
+6. Within the **Edit** method, call the **GetCupcakeById** from the repository, with the accepted **id**.
 
-8. If no **Cupcake** with the right Id is found, return the **NotFound** value.
+7. If no **Cupcake** with the right Id is found, return the **NotFound** value.
 
-9. If a **Cupcake** with the right Id is found, pass the **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and **Cupcake** object to a view called **Edit**.
+8. Otherwise, pass the **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and **Cupcake** object to a view called **Edit**.
 
-10. In the **CupcakeController** class, Add another method for the **Edit** action by using the following information:
+9. In the **CupcakeController** class, Add another method for the **Edit** action by using the following information:
 
-   - HTTP verb: **HTTP Post**
-   - Scope: **public**
-   - Return type: **IActionResult**
-   - Name: **EditPost**
-   - Parameter: One integer called **Id**
+       - HTTP verb: **HTTP Post**
+       - Scope: **public**
+       - Return type: **IActionResult**
+       - Name: **EditPost**
+       - Parameter: One integer called **Id**
 
-11. Within the **Edit** method, call the **GetCupcakeById** from the repository, with the accepted **id**, and call the **Async** method **TryUpdateModelAsync** with the following information: 
+10. Within the **Edit** method, call the **GetCupcakeById** from the repository, with the accepted **id**, and call the **Async** method **TryUpdateModelAsync** with the following information: 
 
-   - First parameter: a **Cupcake** with the accepted **id**
-   - Second parameter: **empty string**
-   - Lambda  expression: **c =&gt; c.BakeryId** , **c =&gt; c.CupcakeType**, **c =&gt; c.Description**, **c =&gt; c.GlutenFree**,**c =&gt; c.Price** 
+       - First parameter: a **Cupcake** with the accepted **id**
+       - Second parameter: **empty string**
+       - Lambda  expression: **c =&gt; c.BakeryId** , **c =&gt; c.CupcakeType**, **c =&gt; c.Description**, **c =&gt; c.GlutenFree**,**c =&gt; c.Price** 
 
-12. If the **TryUpdateModelAsync** method returns true, call the **SaveChanges** from the repository, and redirect to action **Index**.
+11. If the **TryUpdateModelAsync** method returns true, call the **SaveChanges** from the repository, and redirect to action **Index**.
 
-13. Otherwise, pass the **Cupcake** with the accepted **id** with the following parameter **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and **Cupcake** object to a view called **Edit**.
+12. Otherwise, pass the **Cupcake** with the accepted **id** with the following parameter **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and **Cupcake** object to a view called **Edit**.
 
-14. In the **CupcakeController** class, Add a method for the **Delete** action by using the following information:
+13. In the **CupcakeController** class, Add a method for the **Delete** action by using the following information:
 
-   - HTTP verb: **HTTP Get**
-   - Scope: **public**
-   - Return type: **IActionResult**
-   - Name: **Delete**
-   - Parameter: One integer called **id**
+       - HTTP verb: **HTTP Get**
+       - Scope: **public**
+       - Return type: **IActionResult**
+       - Name: **Delete**
+       - Parameter: One integer called **id**
 
-15. Within the **Delete** method, call the **GetCupcakeById** from the repository, with the accepted **id**.
+14. Within the **Delete** method, call the **GetCupcakeById** from the repository, with the accepted **id**.
 
-16. If no **Cupcake** with the right Id is found, return the **NotFound** value.
+15. If no **Cupcake** with the right Id is found, return the **NotFound** value.
 
-17. If a **Cupcake** with the right Id is found, pass the **cupcake.BakeryId** to the view called **Delete**.
+16. Otherwise, pass the **cupcake.BakeryId** to the view called **Delete**.
 
-18. In the **CupcakeController** class, Add another method for the **Delete** action by using the following information:
+17. In the **CupcakeController** class, Add another method for the **Delete** action by using the following information:
 
-   - HTTP verb: **HTTP Post**
-   - Scope: **public**
-   - Return type: **IActionResult**
-   - Name: **DeleteConfirmed**
-   - Parameter: One integer called **Id**
+       - HTTP verb: **HTTP Post**
+       - Scope: **public**
+       - Return type: **IActionResult**
+       - Name: **DeleteConfirmed**
+       - Parameter: One integer called **Id**
 
-19. Within the **Delete** method, call the **DeleteCupcake** from the repository, with the accepted **id**, and redirect to action **Index**.
+18. Within the **Delete** method, call the **DeleteCupcake** from the repository, with the accepted **id**, and redirect to action **Index**.
 
 #### Task 5: Run the application.
 
@@ -585,14 +583,14 @@ The main tasks for this exercise are as follows:
 
 1. Add a new top-level **App Settings File** to the **Cupcakes** project.
 
-2. In the **App Settings File** json file, edit the **DefaultConnection** to the correct **Database** name.
+2. In the **App Settings File** json file, edit the **DefaultConnection** to the **Database** name of your choice.
 
 #### Task 3: Use Migrations.
 
 1. In the **Cupcakes.csproj** file, add the **Microsoft.EntityFrameworkCore.Tools.DotNet** package to the DotNetCliToolReference collection using the following information:
 
-  - Include: **Microsoft.EntityFrameworkCore.Tools.DotNet**
-  - Version: **2.0.0**
+      - Include: **Microsoft.EntityFrameworkCore.Tools.DotNet**
+      - Version: **2.0.0**
 
 2. Save all the changes.
 
