@@ -138,15 +138,11 @@
 
 >**Note:** The Razor view engine runs this code and renders the **Photo** Image.
 
-20. On the **DEBUG** menu of the **PhotoSharingSample - Microsoft Visual Studio** window, click **Start Debugging**.
+20. In the **Microsoft Edge** window, click **Close**.
 
-    >**Note:** The browser displays all the photos. 
+21. In the **PhotoSharingSample (Running) – Microsoft Visual Studio** window, click **Close**.
 
-21. In the **Microsoft Edge** window, click **Close**.
-
-22. In the **PhotoSharingSample (Running) – Microsoft Visual Studio** window, click **Close**.
-
-23. On the **Microsoft Visual Studio** dialog click **Yes** to **stop debugging**.
+22. On the **Microsoft Visual Studio** dialog click **Yes** to **stop debugging**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 
