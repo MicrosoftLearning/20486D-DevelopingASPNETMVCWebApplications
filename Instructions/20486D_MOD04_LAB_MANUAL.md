@@ -247,7 +247,9 @@ In addition to configuring routes using the routing table, you have been asked t
 
 The main task for this exercise is as follows:
 
-1. Add custom routes to a City controller using attributes.
+1. Apply custom routes to a controller using attributes.
+
+2. Run the application and verify the new routes work.
 
 #### Task 1: Apply custom routes to a controller using attributes.
 
