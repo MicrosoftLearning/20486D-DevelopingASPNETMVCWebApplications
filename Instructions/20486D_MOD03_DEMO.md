@@ -27,7 +27,7 @@
 
 8. In the **Startup.cs** code window, delete the **Configure** method with its content.
 
-9. In the **Startup.cs** code window, place the cursor within the **Startup** class code block,  bellow the **ConfigureServices** method, and then type the following code.
+9. In the **Startup.cs** code window, place the mosue cursor within the **Startup** class code block,  bellow the **ConfigureServices** method, and then type the following code.
 
 ```cs
     public void Configure(IApplicationBuilder app)
@@ -53,7 +53,7 @@
 
 14. In the **Microsoft Edge** window, click **Close**.
 
-15. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
+15. On the **DEBUG** menu of the **ConfigureMiddlewareExample  (Running) –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 16. In the **Startup.cs** code window, locate the following code.
 ```cs
@@ -61,7 +61,7 @@
     {
 ```
 
-17. Place the cursor after the { (opening brackets) sign, press Enter, type the following code, and then press Enter again.
+17. Place the mouse cursor after the { (opening brackets) sign, press Enter, type the following code, and then press Enter again.
 ```cs
     app.Use(async (context, next) =>
     {
@@ -81,7 +81,7 @@
 
 22. In the **Microsoft Edge** window, click **Close**.
 
-23. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
+23. On the **DEBUG** menu of the **ConfigureMiddlewareExample  (Running) –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 24. In the **Startup.cs** code window, locate the following code.
 ```cs
@@ -100,7 +100,7 @@
 
 28. In the **Microsoft Edge** window, click **Close**.
 
-29. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
+29. On the **DEBUG** menu of the **ConfigureMiddlewareExample  (Running) –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 30. In the **Startup.cs** code window, select the following code.
 ```cs
@@ -131,7 +131,7 @@
 
 36. In the **Microsoft Edge** window, click **Close**.
 
-37. On the **DEBUG** menu of the **ConfigureMiddlewareExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
+37. On the **DEBUG** menu of the **ConfigureMiddlewareExample  (Running) –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 38. In the **Startup.cs** code window, select the following code.
 ```cs
@@ -141,7 +141,7 @@
     });
 ```
 
-39. Right-click on the selected code, and then click **Cut**.
+39. Right-click the selected code, and then click **Cut**.
 
 40. In the **Startup.cs** code window, locate the following code.
 ```cs
@@ -184,13 +184,13 @@
 6.  In the **Location** textbox, write **Allfiles\Mod03\Democode\02_StaticFilesExample_begin**, and then click **OK**. 
 
 7. In the result pane of the **New ASP.NET Core Web Application - StaticFilesExample** dialog box, click **Empty**, and then click **OK**.
-      >**Note**: In the **Solution Explorer** ensure that the **wwwroot** folder is empty.
+      >**Note**: In the **Solution Explorer** pane, of the **StaticFilesExample - Microsoft Visual Studio** window, notice the **wwwroot** folder is empty.
 
 8.  In the **File Explorer** window, go to **Allfiles\Mod03\Democode\02_StaticFilesExample_begin**.
     
 9.  In the **02_StaticFilesExample_begin** window, select the **html-file.html** and the **image-file.jpg** files.
  
-10. Right-click the selected files, press right-click, and then click **Copy**.
+10. Right-click the selected files, and then click **Copy**.
     
 11.  In the **File Explorer** window, go to **Allfiles\Mod03\Democode\02_StaticFilesExample_begin\StaticFilesExample\StaticFilesExample\wwwroot**.
     
@@ -201,7 +201,7 @@
 
 14. In the **Startup.cs** code window, delete the **Configure** method with its content.
 
-15. In the **Startup.cs** code window, place the cursor within the **Startup** class code block,  bellow the **ConfigureServices** method, and then type the following code.
+15. In the **Startup.cs** code window, place the mouse cursor within the **Startup** class code block,  bellow the **ConfigureServices** method, and then type the following code.
 ```cs
     public void Configure(IApplicationBuilder app)
     {
@@ -226,7 +226,7 @@
 
 21. In the **Microsoft Edge** window, click **Close**.
 
-22. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Stop Debugging**
+22. On the **DEBUG** menu of the **StaticFilesExample  (Running) –  Microsoft Visual Studio** window, click **Stop Debugging**
 
 23. In the **Solution Explorer** pane, click **Startup.cs**.
 
@@ -236,7 +236,7 @@
     {
 ```
 
-25. Place the cursor after the { (opening brackets) sign, press Enter, type the following code, and then press Enter again.
+25. Place the mouse cursor after the { (opening brackets) sign, press Enter, type the following code, and then press Enter again.
 ```cs
     app.UseStaticFiles();
 ```
@@ -245,18 +245,18 @@
 27. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
 28. In the **Microsoft Edge** window, Change the URL path to http://localhost:[port]/html-file.html, and then press Enter.
-     >**Note**: The HTML file content is displayed in the browser.
+     >**Note**: The browser displays the HTML file content.
 
 29. In the **Microsoft Edge** window, Change the URL path to http://localhost:[port]/image-file.jpg, and then press Enter. 
-     >**Note**: The image file is displayed in the browser.
+     >**Note**: The browser displays the image file.
 
 30. In the **Microsoft Edge** window, Change the URL path to http://localhost:[port]/nonexisting-path.jpg, and then press Enter. 
-     >**Note**: The UseStaticFiles middleware cannot find a file by the supplied request path, and calls the next middleware in the pipline. The next middleware is app.Run. Therefore "This text was generated by the app.Run middleware." is displayed in the browser.
+     >**Note**: The UseStaticFiles middleware cannot find a file by the supplied request path, and calls the next middleware in the pipline. The next middleware is app.Run. Therefore the browser displays "This text was generated by the app.Run middleware".
      
 
 31. In the **Microsoft Edge** window, click **Close**.
 
-32. On the **DEBUG** menu of the **StaticFilesExample –  Microsoft Visual Studio** window, click **Stop Debugging**.
+32. On the **DEBUG** menu of the **StaticFilesExample  (Running) –  Microsoft Visual Studio** window, click **Stop Debugging**.
 
 33. On the **FILE** menu of the **StaticFilesExample - Microsoft Visual Studio** window, click **Exit**.
 
@@ -281,13 +281,13 @@
 
 5. In the **Name** box, type **ConfigureServiceExample**, and then click **OK**.
 
-6. In the result pane of the **New ASP.NET Core Web Application - ConfigureServiceExample ** dialog box, click **Empty**, and then click **OK**.
+6. In the result pane of the **New ASP.NET Core Web Application - ConfigureServiceExample** dialog box, click **Empty**, and then click **OK**.
 
-7. In the **Solution Explorer** pane, of the **ConfigureServiceExample - Microsoft Visual Studio** window, click **Startup.cs**.
+7. In the **Solution Explorer** pane of the **ConfigureServiceExample - Microsoft Visual Studio** window, click **Startup.cs**.
 
 8. In the **Startup.cs** code window, delete the **Configure** method with it's content.
 
-9. In the **Startup.cs** code window, place the cursor within the **Startup** class code block,  bellow the **ConfigureServices** method, and then type the following code.
+9. In the **Startup.cs** code window, place the mouse cursor within the **Startup** class code block,  bellow the **ConfigureServices** method, and then type the following code.
 ```cs
     public void Configure(IApplicationBuilder app)
     {
@@ -298,13 +298,13 @@
     }
 ```
 
-10. In the Solution Explorer pane of the **ConfigureServiceExample - Microsoft Visual Studio** window, right-click on the **ConfigureServiceExample**, point to **Add**, and then click **New Folder**.
+10. In the Solution Explorer pane of the **ConfigureServiceExample - Microsoft Visual Studio** window, right-click the **ConfigureServiceExample**, point to **Add**, and then click **New Folder**.
 
-11.	In the Solution Explorer pane, name the newly created folder as **Services**, and then press Enter.
+11.	In the **NewFolder** box, type **Services**, and then press Enter.
 
 12. In the Solution Explorer pane, right-click **Services**, point to **Add**, and then click **Class**.
 
-13. In the **Add New Item** dialog window, in the **Name** box type **Logger**, and then press **Add**.
+13. In the **Name** box of the **Add New Item – ConfigureServiceExample** dialog box, type **Logger.cs**, and then click **Add**
 
 14.  In the **Logger.cs** code window, locate the following code.
 ```cs
@@ -328,7 +328,7 @@
     }
 ```
 
-18. Place the mouse cursor within the constructor code block you just created, press Enter, and then type the following code.
+18. Place the mouse cursor within the **Logger** constructor code block you just created, press Enter, and then type the following code.
 ```cs
     _fileName = $"{DateTime.UtcNow.ToString("yyyy-dd-MM--HH-mm-ss")}.log";
 ```
@@ -348,11 +348,11 @@
 public class Logger
 ```
 
-22. Right-click on the **Logger** class name,  click **Quick Actions and Refactorings...**, and then click **Extract Interface**.
+22. Right-click the **Logger** class name,  click **Quick Actions and Refactorings...**, and then click **Extract Interface**.
 
-23. In the **Extract Interface** dialog window, leave all the default values as they are, and then click **OK**.
+23. In the **Extract Interface** dialog window, and then click **OK**.
 
-24. In the **Solution Explorer** pane, double click the **Startup.cs**.
+24. In the **Solution Explorer** pane, double click **Startup.cs**.
 
 25. In the **Logger.cs** code window, locate the following code.
 ```cs
@@ -374,7 +374,7 @@ public class Logger
     public void Configure(IApplicationBuilder app)
 ```
 
-29. Replace the code you selected with the following code.
+29. Replace the selected code with the following code.
 ```cs
     public void Configure(IApplicationBuilder app, ILogger log)
 ```
@@ -385,18 +385,19 @@ public class Logger
     {
 ```
 
-31. Place the cursor after the { (opening brackets) sign, press Enter, and then type the following code.
+31. Place the mouse cursor after the { (opening brackets) sign, press Enter, and then type the following code.
 ```cs
     log.Log("Logged line");
 ```
 32. On the **FILE** menu of the **ConfigureServiceExample- Microsoft Visual Studio** window, click **Save All**.
 
 33. On the **DEBUG** menu of the **ConfigureServiceExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-     >**Note**: A log file was created in the project main directory by the **Logger** constructor.
+     >**Note**: The browser displays "XXX". <br/>
+    In the **Solution Explorer** pane, in the project main directory, a log file created by the **Logger** constructor. 
 
 34. In the **Microsoft Edge** window, click **Close**.
 
-35. On the **DEBUG** menu of the **ConfigureServiceExample –  Microsoft Visual Studio** window, click **Stop Debugging**
+35. On the **DEBUG** menu of the **ConfigureServiceExample  (Running) –  Microsoft Visual Studio** window, click **Stop Debugging**
 
 36. In the **Solution Explorer** pane, double click the newly created **XXXX-XX-XX--XX-XX-XX.log** file.
      >**Note**: An instance of the **Logger** class generated a log file and a text within it. The generated text in the file is: "[DateTime]: Logged Line".
