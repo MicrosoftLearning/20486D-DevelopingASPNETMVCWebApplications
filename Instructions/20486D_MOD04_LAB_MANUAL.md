@@ -245,9 +245,11 @@ The main tasks for this exercise are as follows:
 
 In addition to configuring routes using the routing table, you have been asked to configure routes using attributes as well, to enable the entry of user-friendly URLs.
 
-The main task for this exercise is as follows:
+The main tasks for this exercise is as follows:
 
-1. Add custom routes to a City controller using attributes.
+1. Apply custom routes to a controller using attributes.
+
+2. Run the application and verify the new routes work.
 
 #### Task 1: Apply custom routes to a controller using attributes.
 
