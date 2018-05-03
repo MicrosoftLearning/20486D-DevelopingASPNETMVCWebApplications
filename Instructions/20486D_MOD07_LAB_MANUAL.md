@@ -4,7 +4,8 @@
 
 #### Scenario
 
-You are planning to create and code an MVC model that implements your plan for cupcakes and bakeries, in the application. The model must store data in a Microsoft SQL database and include properties that describe cupcakes, bakeries, and their content. The model must enable the application to store uploaded cupcakes, edit their properties, view their detailes, and delete them in response to user requests.
+You are planning to create and code an MVC models that implements your plan for cupcakes and bakeries, in the application. To connect the application to a data store, your development team has decided to use Entity Framework. You have been asked to create a class that derives from a DbContext class, and then use the class to retrieve data from the data store and store data in the data store.
+The application enables to store uploaded cupcakes, edit their properties, view their details, and delete them in response to user requests.
 
 #### Objectives
 
@@ -30,7 +31,7 @@ In this exercise, you will:
 - Add a Cupcake model, and a Bakery model.
 - Add a CupcakeContext class.
 - Set CupcakeContext as an In Memory database.
-- Add a Dbinitializer class, and populate the database.
+- Add a Dbinitializer class and populate the database.
 
 The main tasks for this exercise are as follows:
 
@@ -571,7 +572,7 @@ The main tasks for this exercise are as follows:
 
 1. Connecting to a Microsoft SQL Server.
 
-2. Create an app Settings File, and specifying a connection string.
+2. Create an app Settings File and specifying a connection string.
 
 3. Use Migrations.
 
