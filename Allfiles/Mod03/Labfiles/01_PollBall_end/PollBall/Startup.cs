@@ -30,6 +30,7 @@ namespace PollBall
                     string selectedValue = context.Request.Query["favorite"];
                     SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue, true);
                     pollResults.AddVote(selectedGame);
+
                     await context.Response.WriteAsync($"Thank you for submitting the poll");
                 }
                 else await next.Invoke();
