@@ -21,14 +21,14 @@ namespace PollBall
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IPollResultsService pollResults)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IPollResultsService pollResults)
         {
             app.Use(async (context, next) =>
             {
                 if (context.Request.Query.ContainsKey("favorite"))
                 {
                     string selectedValue = context.Request.Query["favorite"];
-                    SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue);
+                    SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue, true);
                     pollResults.AddVote(selectedGame);
                     await context.Response.WriteAsync($"Thank you for submitting the poll");
                 }

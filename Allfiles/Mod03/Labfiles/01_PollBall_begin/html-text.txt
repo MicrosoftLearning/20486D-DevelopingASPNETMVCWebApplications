@@ -1,36 +1,36 @@
  <div class="main-batch1">
         <div class="item">
             <div class="img-item"><img src="images\basketball.png" /></div>
-            <div class="input-item"><input type="radio" name="favorite" value="basketball"> Basketball</div>
+            <div class="input-item"><input type="radio" name="favorite" value="basketball"> basketball</div>
         </div>
         <div class="item">
             <div class="img-item"><img src="images\football.png" /></div>
-            <div class="input-item"><input type="radio" name="favorite" value="football"> Football</div>
+            <div class="input-item"><input type="radio" name="favorite" value="football"> football</div>
         </div>
         <div class="item">
             <div class="img-item"><img src="images\soccer.png" /></div>
-            <div class="input-item"><input type="radio" name="favorite" value="soccer"> Soccer</div>
+            <div class="input-item"><input type="radio" name="favorite" value="soccer"> soccer</div>
         </div>
         <div class="item">
             <div class="img-item"><img src="images\vollyball.png" /></div>
-            <div class="input-item"><input type="radio" name="favorite" value="vollyball"> Vollyball</div>
+            <div class="input-item"><input type="radio" name="favorite" value="vollyball"> vollyball</div>
         </div>
     </div>
     <div class="main-batch2">
         <div class="item">
             <div class="img-item"><img src="images\billiard.png" /></div>
-            <div class="input-item"><input type="radio" name="favorite" value="billiard"> Billiard</div>
+            <div class="input-item"><input type="radio" name="favorite" value="billiard"> billiard</div>
         </div>
         <div class="item">
             <div class="img-item"><img src="images\golf.png" /></div>
-            <div class="input-item"><input type="radio" name="favorite" value="golf"> Golf</div>
+            <div class="input-item"><input type="radio" name="favorite" value="golf"> golf</div>
         </div>
         <div class="item">
             <div class="img-item"><img src="images\hockey.png" /></div>
-            <div class="input-item"><input type="radio" name="favorite" value="hockey"> Air Hockey</div>
+            <div class="input-item"><input type="radio" name="favorite" value="hockey"> hockey</div>
         </div>
         <div class="item">
             <div class="img-item"><img src="images\tennis.png" /></div>
-            <div class="input-item"><input type="radio" name="favorite" value="tennis"> Tennis</div>
+            <div class="input-item"><input type="radio" name="favorite" value="tennis"> tennis</div>
         </div>
     </div>
