@@ -8,11 +8,11 @@
 
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
-2. Navigate to **Allfiles/Mod01/Democode/PhotoSharingSample**, and then open the **PhotoSharingSample.sln**.
+2. Navigate to **Allfiles/Mod01/Democode/01_PhotoSharingSample**, and then open the **PhotoSharingSample.sln**.
 
-3. Run the **PhotoSharingSample.sln** application.
+3. On the **DEBUG** menu of the **PhotoSharingSample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-4. In the Address bar of the **Microsoft Edge** window, note the port number that appears after http://localhost:[port] You will use the port number during this demonstration.
+4. In the Address bar of the **Microsoft Edge** window, note the port number that appears in the end of the following URL "http://localhost:[port]", You will use the port number during this demonstration.
 
 5. In the **Microsoft Edge** window, click **Close**.
 
@@ -37,53 +37,51 @@
 
 >**Note:** This code block sends a list of Photos to the view. 
 
-4. In the Solution Explorer pane, expand **Views**, and then expand **Home**.
+4. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-5. In the Solution Explorer pane, expand **Photo**, and then click **Index.cshtml**.
-
-6. In the **Index.cshtml** code window, locate the following code.
+5. In the **Index.cshtml** code window, locate the following code.
 
   ```cs
        <div>
-       <span class="display-label">
-           @Html.DisplayNameFor(model => model.Description):
-       </span>
-       <br />
-       <span class="display-field">
-           @Html.DisplayFor(model => item.Description)
-       </span>
+            <span class="display-label">
+                @Html.DisplayNameFor(model => model.Description):
+            </span>
+            <br />
+            <span class="display-field">
+                @Html.DisplayFor(model => item.Description)
+            </span>
        </div>
 ```
 
 >**Note:** This code block represents the View that renders the home page.
 
-7. On the toolbar of the **PhotoSharingSample – Microsoft Visual Studio** window, click **Microsoft Edge**.
+6. On the **DEBUG** menu of the **PhotoSharingSample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-    >**Note:** The default home page is displays.
+    >**Note:** The browser displays the default home page, the **Index** action result inside the **Home** Controller.
 
-8. On the taskbar, click the **Microsoft Visual Studio** icon.
+7. On the taskbar, click the **Microsoft Visual Studio** icon.
 
-9. In the Solution Explorer pane of the **PhotoSharingSample – Microsoft Visual Studio** window,  click **Startup.cs**.
+8. In the Solution Explorer pane of the **PhotoSharingSample – Microsoft Visual Studio** window,  click **Startup.cs**.
 
-11. In the **Startup.cs** code window, locate the following code.
+9. In the **Startup.cs** code window, locate the following code.
 
   ```cs
        app.UseMvcWithDefaultRoute();
 ```
 
->**Note:** This code block represents the default route that forwards requests to the specified controller.
+>**Note:** This code block adds MVC to the request execution pipeline, with a default route which contains the following template: '{controller=Home}/{action=Index}/{id?}'.
 
-12. On the taskbar, click the **Microsoft Edge** icon.
+10. On the taskbar, click the **Microsoft Edge** icon.
 
-13. In the Address bar of the **Microsoft Edge** window, type the URL **http://localhost:[port]/home/index**, and then click **Go to**.
+11. In the Address bar of the **Microsoft Edge** window, type the URL **http://localhost:[port]/home/index**, and then press Enter.
 
-    >**Note:** The browser window displays the Home page of the **http://localhost:[port]/home/index** web application.
+    >**Note:** The browser window displays the Home page of the **PhotoSharingSample** web application.
 
-14. On the taskbar, click the **Microsoft Visual Studio** icon.
+12. On the taskbar, click the **Microsoft Visual Studio** icon.
 
-15. In the Solution Explorer pane of the **PhotoSharingSample – Microsoft Visual Studio** window, expand **Models**, and then click **Photo.cs**.
+13. In the Solution Explorer pane of the **PhotoSharingSample – Microsoft Visual Studio** window, expand **Models**, and then click **Photo.cs**.
 
-16. In the **Photo.cs** code window, locate the following code.
+14. In the **Photo.cs** code window, locate the following code.
 
   ```cs
        [Required]
@@ -92,33 +90,45 @@
 
 >**Note:** This code block represents the **Title** property for a photo stored in the application.
 
-17. In the Solution Explorer pane, expend **Controllers**, and then click **HomeController.cs**.
+15. In the Solution Explorer pane, expend **Controllers**, and then click **HomeController.cs**.
 
-18. In the **HomeController.cs** code window, locate the following code.
+16. In the **HomeController.cs** code window, locate the following code.
 
   ```cs
        public class HomeController : Controller
 ```
 
->**Note:** This code block represents that the **HomeController.cs** inherits the Controller  base  class which is in the namespace **Microsoft.AspNetCore.Mvc**.
+>**Note:** This code block represents that the **HomeController** inherits the Controller base class which is in the namespace **Microsoft.AspNetCore.Mvc**.
 
-19. In the **HomeController.cs** code window, locate the following code.
+17. In the **HomeController.cs** code window, locate the following code.
 
   ```cs
-       FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
-       byte[] fileBytes;
-       using (BinaryReader br = new BinaryReader(fileOnDisk))
+       Photo requestedPhoto = _dbContext.Photos.FirstOrDefault(p => p.PhotoID == PhotoId);
+       if (requestedPhoto != null)
        {
-           fileBytes = br.ReadBytes((int)fileOnDisk.Length);
+            string webRootpath = _environment.WebRootPath;
+            string folderPath = "\\images\\";
+            string fullPath = webRootpath + folderPath + requestedPhoto.PhotoFileName;
+
+            FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
+            byte[] fileBytes;
+            using (BinaryReader br = new BinaryReader(fileOnDisk))
+            {
+                fileBytes = br.ReadBytes((int)fileOnDisk.Length);
+            }
+            return File(fileBytes, requestedPhoto.ImageMimeType);
        }
-       return File(fileBytes, requestedPhoto.ImageMimeType);
+       else
+       {
+            return NotFound();
+       }
 ```
 
->**Note:** This code block represents the **GetImage** action of the **PhotoController.cs**.
+>**Note:** This code block represents the **GetImage** action of the **HomeController.cs**.
 
-20. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+18. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-21. In the **Index.cshtml** code window, locate the following code.
+19. In the **Index.cshtml** code window, locate the following code.
 
   ```cs
        <div class="photo-display">
@@ -128,17 +138,15 @@
 
 >**Note:** The Razor view engine runs this code and renders the **Photo** Image.
 
-22. On the taskbar, click the **Microsoft Edge** icon.
+20. On the **DEBUG** menu of the **PhotoSharingSample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-23. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]**.
+    >**Note:** The browser displays all the photos. 
 
-    >**Note:** All the photos are displayed in the browser window. 
+21. In the **Microsoft Edge** window, click **Close**.
 
-24. In the **Microsoft Edge** window, click **Close**.
+22. In the **PhotoSharingSample (Running) – Microsoft Visual Studio** window, click **Close**.
 
-25. In the **PhotoSharingSample (Running) – Microsoft Visual Studio** window, click **Close**.
-
-26. On the **Microsoft Visual Studio** dialog click **Yes** to **stop debugging**.
+23. On the **Microsoft Visual Studio** dialog click **Yes** to **stop debugging**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 
