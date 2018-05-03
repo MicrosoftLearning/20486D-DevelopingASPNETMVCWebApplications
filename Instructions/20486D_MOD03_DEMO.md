@@ -122,7 +122,6 @@
 ```
 
 33. Place the mouse cursor at the end of the located code, press Enter twice, right-click at the cursor location, and then click  **Paste**.
-     >**Note**: In order to format the code, it is recommended to remove the empty lines that were created after the **Cut** and **Paste** actions.
      
 34. On the **FILE** menu of the **ConfigureMiddlewareExample - Microsoft Visual Studio** window, click **Save All**.
      
@@ -153,7 +152,6 @@
 ```
 
 41. Place the mouse cursor at the end of the located code, press Enter twice, right-click at the cursor location, and then click **Paste**.
-     >**Note**: In order to format the code, it is recommended to remove the empty lines that were created after the **Cut** and **Paste** actions.
 
 42. On the **FILE** menu of the **ConfigureMiddlewareExample - Microsoft Visual Studio** window, click **Save All**.
 
