@@ -31,7 +31,7 @@
        public string Speciality { get; set; }
        public int Review { get; set; }
 ```
-6. In the Solution Explorer pane, under BindViewsExample, expand **Controllers**, and then click **HomeController.cs**.
+6. In the Solution Explorer pane, under **BindViewsExample**, expand **Controllers**, and then click **HomeController.cs**.
 
 7. In the **HomeController.cs** code window, locate the following code.
 
@@ -75,7 +75,7 @@
   ```cs
        <!DOCTYPE html>
 ```
-15. Place the mouse cursor before the < (less than), press Enter, press the Up Arrow Key, and then type the following code.
+15. Place the mouse cursor before the < (less than) sign, press Enter, press the Up Arrow Key, and then type the following code.
 
   ```cs
        @model BindViewsExample.Models.Restaurant
@@ -107,7 +107,7 @@
        <p>@Model.Open</p>
        <p>@Model.Review</p>
 ```
-   >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you wrote in the model.
+   >**Note:** The Razor view engine runs this code and renders the Restaurant properties that was wrote in the model.
 
 19. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **AnotherWayToDisplay.cshtml**.
 
@@ -116,7 +116,7 @@
   ```cs
        <!DOCTYPE html>
 ```
-21. Place the mouse cursor before the < (less than), press Enter, press the Up Arrow Key, and then type the following code.
+21. Place the mouse cursor before the < (less than) sign, press Enter, press the Up Arrow Key, and then type the following code.
 
   ```cs
        @model BindViewsExample.Models.Restaurant
@@ -143,7 +143,7 @@
   ```cs
        @Html.EditorForModel()
 ```
-   >**Note:** The Razor view engine runs this code and renders the Restaurant properties that you wrote in the model.
+   >**Note:** The Razor view engine runs this code and renders the Restaurant properties that was wrote in the model.
 
 25. On the **FILE** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Save All**.
 
@@ -220,7 +220,7 @@
   ```cs
        <!DOCTYPE html>
 ```
-10. Place the mouse cursor before the < (less than), press Enter, press the Up Arrow Key, and then type the following code.
+10. Place the mouse cursor before the < (less than) sign, press Enter, press the Up Arrow Key, and then type the following code.
 
   ```cs
        @model DataAnnotationsExample.Models.User
@@ -270,7 +270,7 @@
   ```cs
        <!DOCTYPE html>
 ```
-16. Place the mouse cursor before the < (less than), press Enter, press the Up Arrow Key, and then type the following code.
+16. Place the mouse cursor before the < (less than) sign, press Enter, press the Up Arrow Key, and then type the following code.
 
   ```cs
        @model DataAnnotationsExample.Models.User
