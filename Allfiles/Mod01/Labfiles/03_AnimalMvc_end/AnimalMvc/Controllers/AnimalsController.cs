@@ -6,7 +6,7 @@ namespace AnimalMvc.Controllers
 {
     public class AnimalsController : Controller
     {
-        private static IData _tempData;
+        private IData _tempData;
         public AnimalsController(IData tempData)
         {
             _tempData = tempData;

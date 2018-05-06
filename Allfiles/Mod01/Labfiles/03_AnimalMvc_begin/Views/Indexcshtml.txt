@@ -1,3 +1,10 @@
+@model AnimalMvc.Models.IndexViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
 <table class="table">
     <thead>
         <tr>
