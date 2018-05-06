@@ -6,9 +6,9 @@
 
 You are working as a junior developer at Adventure Works. You have been asked by a senior developer to investigate the possibility of creating a web-based ASP.NET Core MVC application for your organization's customers, similar to one that the senior developer has seen on the Internet. Such an application will promote a community of cyclists who use Adventure Works equipment, and the community members will be able to share their experiences. This initiative is intended to increase the popularity of Adventure Works Cycles, and thereby to increase sales. You have been asked to begin the planning of the application. You have also been asked to examine programming models available to ASP.NET Core  developers. To do this, you need to create basic web applications written with three different models: Razor Pages , Web API , and MVC. Your manager has asked you to report on the following specific questions for each programming model:
 
-- How does the developer add Mvc Services to the Web Application?
-- How does the developer add  Mvc to the request execution pipeline?
-- How does the developer add a new page to the application and apply the layout and styles to it?
+- How does the developer add MVC Services to the Web Application?
+- How does the developer add  MVC to the request execution pipeline?
+- How does the developer add a new page to the application applying the layout and styles to it?
 
 #### Objectives
 
@@ -26,7 +26,7 @@ Estimated Time: **90 minutes**
 
 #### Scenario
 
-In this exercise, you will create a simple Razor Pages application and explore its structure.
+In this exercise, you will create a simple Razor Pages application, and explore its structure.
 
 The main tasks for this exercise are as follows:
 
@@ -36,39 +36,39 @@ The main tasks for this exercise are as follows:
 
 3. Add simple functionality.
 
-#### Task 1: Creating a Razor Pages application
+#### Task 1: Creating a Razor Pages application.
 
 1. Start Visual Studio 2017 and create a new Razor Pages project with the following name **ActorsRazorPages** by using the **Web Application** C# template.
 
-2. Run the new Razor Pages application in Microsoft Edge and review the **Contact** page.
+2. Run the new Razor Pages application in**Microsoft Edge**, and review the **Contact** page.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
-#### Task 2: Explore the application structure
+#### Task 2: Explore the application structure.
 
-1. Open the **Startup.cs** class and verify that mvc service is added to the request execution pipeline.
+1. Open the **Startup.cs** and verify that MVC service is added to the request execution pipeline.
 
-2. Verify that the **Index.cshtml** page and the **Contact.cshtml** page are linked to the same layout.
+2. Verify that the **Index.cshtml** and the **Contact.cshtml** are linked to the same layout.
 
-3. Verify that the **Site.css** file is used to apply styles to all pages on the site. Note that the **_Layout.cshtml** page is linked to the style sheet.
+3. Verify that the **site.css** is used to apply styles to all pages on the site, note **_Layout.cshtml** is linked to the style sheet.
 
-#### Task 3: Add simple functionality
+#### Task 3: Add simple functionality.
 
 1. Add a new Razor Page to the **Pages** folder using the following information:
  
     - Razor Page name: **TestPage.cshtml**
     - Use a layout page: **checked** 
 
-2. Add a **ViewData**  
+2. Add a **ViewData**:  
 
     - ViewData Key: **Title**
     - ViewData Value : **"Test Page"**
 
-3. Add an **H1** element to the TestPage.cshtml page by using the following information:
+3. Add an **H1** element to the TestPage.cshtml by using the following information:
 
     - Content: **This is a Test Page**
 
-4. Add a link to the **_Layout.cshtml** page by using the following information:
+4. Add a link to the **_Layout.cshtml** by using the following information:
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-page=&quot;/TestPage&quot;**
@@ -146,7 +146,7 @@ The main tasks for this exercise are as follows:
     - Name: **GetActorById**
     - Parameter: an Nullable integer named **Id**
 
-18. Add the **Data.cs** existing file to the **Model** folder from the following location:
+18. Add **Data.cs** to the **Model** folder from the following location:
  
      - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin**
 
@@ -164,7 +164,7 @@ The main tasks for this exercise are as follows:
     - Name: **Index**
     - Use a layout page: **checked**
   
-22.  In the **Index.cshtml.cs** class, create a new private object using the following information:
+22.  In the **Index.cshtml.cs**, create a new private object using the following information:
  
      - Scope: **private**
      - Class: **IData**
@@ -172,7 +172,7 @@ The main tasks for this exercise are as follows:
      
      Instantiate the new object by calling the **IData**  in the constructor.
    
-23. Add the **Actors** property to the **Index.cshtml.cs** class by using the following information:
+23. Add the **Actors** property to the **Index.cshtml.cs** by using the following information:
 
     - Type: **List&lt;Actor&gt;**
     - Name: **Actors**
@@ -180,41 +180,38 @@ The main tasks for this exercise are as follows:
 
 24. In  the  **Index.cshtml.cs** class  inside **OnGet** method  initiate **Actors** property  with **ActorsInitializeData** method from the IData interface.
 
-25.  Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
+25.  Open **Indexcshtml.txt** and copy the content into the **Index.cshtml** from the following location:
  
      - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin/Pages**
 
-26. Add the **Details.cs** and **Details.cshtml** existing files to the **Pages/Actors** folder from the following location:
+26. Add the **Details.cs** and **Details.cshtml** to the **Pages/Actors** folder from the following location:
 
       - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin/Pages**   
 
->**Note:**  That the namespace project name identical to your project name in both files. 
+27.  In the **Startup.cs** add **IData** to the services container as Singleton.
 
-27.  In the **Startup.cs**  class add **IData** to the services container as Singleton.
-
-28. Add a link to the **_Layout.cshtml** page by using the following information:
+28. Add a link to the **_Layout.cshtml** by using the following information:
  
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-page=&quot;/Actors/Index&quot;**
     - Content: **Actors**
     - End tag: **&lt;/a&gt;&lt;/li&gt;**
 
-#### Task 4: Run the application
+#### Task 4: Run the application.
 
 1. Save all the changes.
 
 2. Run the website, and view the **Test Page** and **Actors** pages you added.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
->
 
 ### Exercise 2: Exploring a Web API Application
 
 #### Scenario
 
-In this exercise, you will create a simple Web API application and explore its structure.
+In this exercise, you will create a simple Web API application, and explore its structure.
 
 The main tasks for this exercise are as follows:
 
@@ -224,21 +221,21 @@ The main tasks for this exercise are as follows:
 
 3. Add simple functionality.
 
-#### Task 1: Creating a Web API application
+#### Task 1: Creating a Web API application.
 
 1. Start Visual Studio 2017 and create a new Web API project with the following name **CakeStoreApi** using the **API** C# template.
 
-2. Run the new Web API application in Microsoft Edge and review the **Content** displayed.
+2. Run the new Web API application in **Microsoft Edge** window, and review the **Content** displayed.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
-#### Task 2: Explore the application structure
+#### Task 2: Explore the application structure.
 
-1. Open the **Startup.cs** class and verify that mvc service is added to the request execution pipeline.
+1. Open the **Startup.cs**, and verify that MVC service is added to the request execution pipeline.
 
-2.  Open the  **ValuesController.cs** class inside the **Controller** folder and verify  that the **Get** method return type is Array of String.
+2.  Open the  **ValuesController.cs** inside the **Controller** folder, and verify  that the **Get** method return type is Array of String.
 
-#### Task 3: Add simple functionality
+#### Task 3: Add simple functionality.
 
 1. Add a new folder to the application at the root level by using the following information:
 
@@ -290,7 +287,7 @@ The main tasks for this exercise are as follows:
     - Name: **GetCakeById**
     - Parameter: an Nullable integer named **Id**
 
-11. Add the **Data.cs** existing file to the **Model** folder from the following location:
+11. Add the **Data.cs** to the **Model** folder from the following location:
  
      - **Allfiles/Mod01/Labfiles/02_CakeStoreApi_begin**
 
@@ -299,7 +296,7 @@ The main tasks for this exercise are as follows:
     - Controller name: **CakeStoreApiController**
     - Template: **API Controller - Empty**
  
-13. In the **CakeStoreApiController** class, create a new private object by using the following information:
+13. In the **CakeStoreApiController**, create a new private object by using the following information:
  
     - Scope: **private**
     - Class: **IData**
@@ -315,7 +312,6 @@ The main tasks for this exercise are as follows:
      - Model:  **_data.CakesInitializeData();**
 
 >**Note**: The **_data** parameter is the private object you just Instantiate.
->
 
 15. Add to **GetAll** action **HttpGet**  attribute with the following information : 
 
@@ -337,24 +333,23 @@ The main tasks for this exercise are as follows:
 20. Add to **GetById** action **HttpGet**  attribute with the following information : 
      - template : **"/api/CakeStore/{id}"**
 
-21. In the **Startup.cs**  class add **IData** to the services container as Singleton.
+21. In the **Startup.cs** add **IData** to the services container as Singleton.
 
-#### Task 4: Run the application
+#### Task 4: Run the application.
 
 1. Save all the changes.
 
 2. Run the website, and view the content you added.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
->
 
 ### Exercise 3: Exploring an MVC Application
 
 #### Scenario
 
-In this exercise, you will create a simple MVC application and explore its structure.
+In this exercise, you will create a simple MVC application, and explore its structure.
 
 The main tasks for this exercise are as follows:
 
@@ -364,24 +359,25 @@ The main tasks for this exercise are as follows:
 
 3. Add simple functionality.
 
-#### Task 1: Creating an MVC application
-1. Start Visual Studio 2017 and create a new Mvc project with the following name **AnimalsMvc** by using the **Web Application (Model-View-Controller)** C# template.
+#### Task 1: Creating an MVC application.
 
-2. Run the new MVC application in Microsoft Edge and review the **Contact** page.
+1. Start Visual Studio 2017, and create a new MVC project with the following name **AnimalsMvc** by using the **Web Application (Model-View-Controller)** C# template.
 
-3. Stop debugging.
+2. Run the new MVC application in **Microsoft Edge** window, and review **Contact** page.
 
-#### Task 2: Explore the application structure
+3. **Stop debugging** by closing **Microsoft Edge**.
 
-1. Open the **Startup.cs** class and verify that mvc service is added to the request execution pipeline.
+#### Task 2: Explore the application structure.
 
-2. Verify that the **Index.cshtml** page and the **Contact.cshtml** page are linked to the same layout.
+1. Open the **Startup.cs**, and verify that MVC service is added to the request execution pipeline.
 
-3. Verify that the Site.css file is used to apply styles to all pages on the site. Note that the **_Layout.cshtml** page is linked to the style sheet.
+2. Verify **Index.cshtml** and **Contact.cshtml** are linked to the same layout.
 
-#### Task 3: Add simple functionality
+3. Verify that the **site.css** is used to apply styles to all pages on the site, note **_Layout.cshtml** is linked to the style sheet.
 
-1. In the **HomeController** class, Add a method for the **TestPage** action by using the following information:
+#### Task 3: Add simple functionality.
+
+1. In the **HomeController** Add a method for the **TestPage** action by using the following information:
 
    - Scope: **public**
    - Return Class: **IActionResult**
@@ -395,11 +391,11 @@ The main tasks for this exercise are as follows:
     - Scaffold template: **Empty (without model)**  
     - Use a layout page: **checked**
  
-4. Add an **H1** element to the **TestPage.cshtml** page by using the following information:
+4. Add an **H1** element to the **TestPage.cshtml** by using the following information:
 
     - Content: **This is a Test Page**
 
-5. In the **Shared** folder  inside **_Layout.cshtml** page Add a link using the following information:
+5. In the **Shared** folder  inside **_Layout.cshtml** add a link using the following information:
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**
@@ -492,7 +488,7 @@ The main tasks for this exercise are as follows:
 
 21.   Add **using** statement to the controller for the **Models** namespaces.
 
-22. In the **AnimalsController** class, create a new private object by using the following information:
+22. In the **AnimalsController.cs** create a new private object by using the following information:
 
     - Scope: **private**
     - Class: **IData**
@@ -531,10 +527,9 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)***
      - Use a layout page: **Yes**
  
->**Note**: Make sure that you have **IndexViewModel** model namespace in the view. 
->
+>**Note**: Verify **IndexViewModel** model namespace in the view. 
 
-31. Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml**  file from the following location:
+31. Open the **Indexcshtml.txt** existing file and copy the content into the **Index.cshtml** from the following location:
 
      - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Views**
 
@@ -544,14 +539,13 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)***
      - Use a layout page: **Yes**
  
->**Note**: Make sure that you have **Animal** model namespace in the view.
+>**Note**: Verify **Animal** model namespace in the view.
 
- 
-33. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml**  file from the following location:
+33. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
  
      - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Views**
 
-34. In the **Shared** folder  inside **_Layout.cshtml** page Add a link using the following information:
+34. In the **Shared** folder  inside **_Layout.cshtml** Add a link using the following information:
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**
@@ -560,23 +554,23 @@ The main tasks for this exercise are as follows:
     - Content: **Animals**
     - End tag: **&lt;/a&gt;&lt;/li&gt;** 
 
-35. In the **Startup.cs**  class add **IData** to the services container as Singleton.
+35. In the **Startup.cs** add **IData** to the services container as Singleton.
 
 36. Save all the changes.
 
 37. Run the website, and view the page you added.
 
-38. Stop debugging.
+38. **Stop debugging** by closing **Microsoft Edge**.
 
-#### Task 4: Run the application
+#### Task 4: Run the application.
 
 1. Save all the changes.
 
 2. Run the website, and view the **Test Page** and **Animals** pages you added.
 
-3. Stop debugging.
+3. **Stop debugging** by closing **Microsoft Edge**.
 
->**Results**: At the end of this exercise, you will be able to build a simple Mvc application in Visual Studio.
+>**Results**: At the end of this exercise, you will be able to build a simple MVC application in Visual Studio.
 
 ©2016 Microsoft Corporation. All rights reserved.
 

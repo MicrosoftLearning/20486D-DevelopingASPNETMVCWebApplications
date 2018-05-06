@@ -13,10 +13,10 @@ namespace RoutesExample.Controllers
             return Content($"This is the Home controller with default param: {id}");
         }
 
-        [Route("Hello/{name}/{lastName}")]
-        public IActionResult Greeting(string name, string lastName)
+        [Route("Hello/{firstName}/{lastName}")]
+        public IActionResult Greeting(string firstName, string lastName)
         {
-            return Content($"Hello {name}-{lastName} from module 4 demo 2");
+            return Content($"Hello {firstName} {lastName} from module 4 demo 2");
         }
     }
 }
