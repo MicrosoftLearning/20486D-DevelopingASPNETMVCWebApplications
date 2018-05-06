@@ -40,11 +40,17 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating a Razor Pages application.
 
-1. Start Visual Studio 2017 and create a new Razor Pages project with the following name **ActorsRazorPages** by using the **Web Application** C# template.
+1. Start Visual Studio 2017, and create a new MVC project with the following information:
+
+    - Name: **ActorsRazorPages**
+    - Location: **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin**
+    - Solution name: **ActorsRazorPages**
+    - Create directory for the solution: **True**
+    - Project template: **Web Application**
 
 2. Run the new Razor Pages application in **Microsoft Edge**, and review the **Contact** page.
 
-3. **Stop debugging** by closing **Microsoft Edge**.
+3. **Stop debugging**.
 
 #### Task 2: Explore the application structure.
 
@@ -191,7 +197,7 @@ The main tasks for this exercise are as follows:
 
 25. In the **Index.cshtml.cs** class inside **OnGet** method  initiate **Actors** property  with **ActorsInitializeData** method from the IData interface.
 
-26. Delete the content code block in the **Index.cshtml**.
+26. Delete the content in the **Index.cshtml**.
 
 27. Open **Indexcshtml.txt** and copy the all the content into the **Index.cshtml** from the following location:
  
@@ -242,7 +248,13 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating a Web API application.
 
-1. Start Visual Studio 2017 and create a new Web API project with the following name **CakeStoreApi** using the **API** C# template.
+1. Start Visual Studio 2017, and create a new MVC project with the following information:
+
+    - Name: **CakeStoreApi**
+    - Location: **Allfiles/Mod01/Labfiles/02_CakeStoreApi_begin**
+    - Solution name: **CakeStoreApi**
+    - Create directory for the solution: **True**
+    - Project template: **API**
 
 #### Task 2: Explore the application structure.
 
@@ -254,7 +266,7 @@ The main tasks for this exercise are as follows:
 
 4. Run the website, and view the content in the browser.
 
-5. **Stop debugging** by closing **Microsoft Edge**.
+5. **Stop debugging**.
 
 #### Task 3: Add simple functionality.
 
@@ -334,11 +346,14 @@ The main tasks for this exercise are as follows:
      - Scope: **public**
      - Return Type : **IEnumerable&lt;CakeStore&gt;**
      - Name: **GetAll**
-     - Model:  **_data.CakesInitializeData()**
+
+16. Within the **GetAll** method, return the following information :
+
+    - **_data.CakesInitializeData()**
 
 >**Note**: The **_data** field is the private object you just Instantiate.
 
-16. Add to **GetAll** action **HttpGet**  attribute with the following information : 
+16. Add to **GetAll** action **HttpGet**  attribute with the following information: 
 
      - template : **"/api/CakeStore"**
  
@@ -351,9 +366,9 @@ The main tasks for this exercise are as follows:
 
 18. Within the **GetById** action code block, add code to find a single **Cake** object from its **Id**.
 
-19. If no Cake with the right Id is found, return the **NotFound** value.
+19. If no Cake with the right Id is found, return NotFoundResult using the **NotFound** method.
 
-20. If a Cake with the right Id is found, pass it to a new ObjectResult.
+20. If a Cake with the right Id is found, return a new object result containing the cake object.
 
 21. Add to **GetById** action **HttpGet**  attribute with the following information : 
      - template : **"/api/CakeStore/{id}"**
@@ -400,11 +415,17 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating an MVC application.
 
-1. Start Visual Studio 2017, and create a new MVC project with the following name **AnimalsMvc** by using the **Web Application (Model-View-Controller)** C# template.
+1. Start Visual Studio 2017, and create a new MVC project with the following information:
+
+    - Name: **AnimalsMvc**
+    - Location: **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin**
+    - Solution name: **AnimalsMvc**
+    - Create directory for the solution: **True**
+    - Project template: **Web Application (Model-View-Controller)**
 
 2. Run the new MVC application in **Microsoft Edge** window, and review **Contact** page.
 
-3. **Stop debugging** by closing **Microsoft Edge**.
+3. **Stop debugging**.
 
 #### Task 2: Explore the application structure.
 
@@ -547,7 +568,7 @@ The main tasks for this exercise are as follows:
      - Name: **Index**
      - Model: **_tempData.AnimalsInitializeData()**
 
-23. In the Index action, initiate the **Animals** property from the IndexViewModel with the view **Model**, pass the **animals** list to the **Index** view.
+23. In the Index action, initiate the **Animals** property from the IndexViewModel with the view **Model**, and return the **animals** list to the **Index** view.
 
 24. Add a method for the **Details** action by using the following information:
 
@@ -558,9 +579,9 @@ The main tasks for this exercise are as follows:
 
 25. Within the **Details** action code block, add code to find a single **Animal** object from its **Id**.
 
-26. If no animal with the right Id is found, return the **NotFound** value.
+26. If no animal with the right Id is found, return NotFoundResult using the **NotFound** method.
 
-27. If an animal with the right Id is found, pass it to a view called **Details**.
+27. If an animal with the right Id is found, and return the **Animal** object to the **Details** view.
 
 28. Add the **images** existing files to the **images** folder from the following location:
 
@@ -572,7 +593,7 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)**
      - Use a layout page: **Yes**
  
-30. Delete the content code block in the **Index.cshtml**.
+30. Delete the content in the **Index.cshtml**.
 
 31. Open the **Indexcshtml.txt** existing file and copy all the content into the **Index.cshtml** from the following location:
 
@@ -584,7 +605,7 @@ The main tasks for this exercise are as follows:
      - Scaffold template: **Empty (without model)***
      - Use a layout page: **Yes**
  
-33. Delete the content code block in the **Details.cshtml**.
+33. Delete the content in the **Details.cshtml**.
 
 34. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
  
