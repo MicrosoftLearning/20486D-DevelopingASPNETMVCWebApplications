@@ -110,10 +110,10 @@ The main tasks for this exercise are as follows:
 
 10.  Add a **LastName** property to the **Actor** model class by using the following information:
 
-    - Scope: **public**
-    - Property name: **LastName**
-    - Data type: **string**
-    - Access: **Read and write**
+     - Scope: **public**
+     - Property name: **LastName**
+     - Data type: **string**
+     - Access: **Read and write**
 
 11. Add a **KnownFor** property to the **Actor** model class by using the following information:
 
@@ -360,7 +360,7 @@ The main tasks for this exercise are as follows:
 
 22. In the **Startup.cs**, add **using** statements to the controller for the following namespaces
 
-   - **CakeStoreApi.Models**
+      - **CakeStoreApi.Models**
 
 23. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
 
@@ -542,10 +542,10 @@ The main tasks for this exercise are as follows:
  
 22. Add a method for the **Index** action by using the following information:
 
-   - Scope: **public**
-   - Return Type: **IActionResult**
-   - Name: **Index**
-   - Model: **_tempData.AnimalsInitializeData()**
+     - Scope: **public**
+     - Return Type: **IActionResult**
+     - Name: **Index**
+     - Model: **_tempData.AnimalsInitializeData()**
 
 23. In the Index action, initiate the **Animals** property from the IndexViewModel with the view **Model**, pass the **animals** list to the **Index** view.
 
