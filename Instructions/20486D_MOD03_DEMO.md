@@ -361,7 +361,7 @@ public class Logger
 
 26. In the **Solution Explorer** pane, double click **Startup.cs**.
 
-27. In the **Startup** code window, locate the following code.
+27. In the **Startup.cs** code window, locate the following code.
 ```cs
     using Microsoft.Extensions.DependencyInjection;
 ```
