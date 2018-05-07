@@ -9,10 +9,10 @@ The Adventure Works Company wants to develop a web site about ball games. For th
 
 After completing this lab, you will be able to: 
 
--	Use ASP.NET Core static files including HTML files, image files and CSS files
--	Create and use a custom Middleware, and use its context information
--	Create and use services with ASP.NET Core built-in Dependency Injection
--	Inject services to an ASP.NET Core MVC controller
+-	Use ASP.NET Core static files including HTML files, image files and CSS files.
+-	Create and use a custom Middleware, and use its context information.
+-	Create and use services with ASP.NET Core built-in Dependency Injection.
+-	Inject a service to an ASP.NET Core MVC controller.
 
 #### Lab Setup
 
@@ -22,25 +22,25 @@ Estimated Time: **75 minutes**
 
 #### Scenario
 
-To create the poll, the application needs a styled HTML page. The HTML page must then post the poll results to the server. To transfer the results to the server we will use an HTML form.
+To create the poll, the application needs a styled HTML page. The HTML page must then post the poll results to the server. To transfer the results to the server you will use an HTML form.
 
 The main tasks for this exercise are as follows: 
 
-1.	Create a new project using the ASP.NET Core Empty project template
+1.	Create a new project using the ASP.NET Core Empty project template.
 
-2.	Run the application
+2.	Run the application.
 
-3.	Add an HTML file to the wwwroot folder
+3.	Add an HTML file to the wwwroot folder.
 
-4.	Run the application – content of HTML not displayed
+4.	Run the application – content of HTML not displayed.
 
-5.	Enable working with static files
+5.	Enable working with static files.
 
-6.	Run the application – content of HTML is displayed
+6.	Run the application – content of HTML is displayed.
 
-7.	Add an HTML file outside of the wwwroot folder
+7.	Add an HTML file outside of the wwwroot folder.
 
-8.	Run the application – content of HTML outside wwwroot folder not displayed
+8.	Run the application – content of HTML outside wwwroot folder not displayed.
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template.
 
@@ -174,11 +174,11 @@ The server must receive the client’s request and notify the company for the po
 
 The main tasks for this exercise are as follows: 
 
-1. Create a middleware
+1. Create a middleware.
 
-2. Run the application
+2. Run the application.
 
-3. Change the order of middleware
+3. Change the order of middleware.
 
 ####	Task 1: Create a middleware.
 
@@ -244,17 +244,17 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-We need to aggregate the votes and store them for future use. We will use services in order to manage and preserve the data.
+You will need to aggregate the votes and store them for future use. You will use services in order to manage and preserve the data.
 
 The main tasks for this exercise are as follows: 
 
-1. Define an interface for a service
+1. Define an interface for a service.
 
-2.	Define an implementation for the service
+2.	Define an implementation for the service.
 
-3.	Use dependency injection
+3.	Use Dependency Injection.
 
-4.	Run the application
+4.	Run the application.
 
 ####	Task 1:  Define an interface for a service.
 
@@ -392,20 +392,19 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-We need to create a page to show results without submitting a vote.
-In this case we will use an MVC controller to show the results.
+In this exercise you will create an ASP.NET Core MVC controller to display the poll results. 
 
 The main tasks for this exercise are as follows: 
 
-1.	Enable working with MVC
+1.	Enable working with MVC.
 
-2.	Add a controller
+2.	Add a controller.
 
-3.	Run the application
+3.	Run the application.
 
-4.	Use Dependency Injection in a controller
+4.	Use Dependency Injection in a controller.
 
-5.	Run the application
+5.	Run the application.
 
 
 ####	Task 1: Enable working with MVC.
