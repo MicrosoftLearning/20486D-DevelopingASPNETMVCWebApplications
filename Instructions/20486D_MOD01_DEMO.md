@@ -26,7 +26,7 @@
 
 2. In the Solution Explorer pane, under **PhotoSharingSample**, expand **Controllers**, and then click **HomeController.cs**.
 
-3. In the **HomeController.cs** code window, locate the following code.
+3. In the **HomeController.cs** code window, locate the following code:
 
   ```cs
        public IActionResult Index()
@@ -39,7 +39,7 @@
 
 4. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-5. In the **Index.cshtml** code window, locate the following code.
+5. In the **Index.cshtml** code window, locate the following code:
 
   ```cs
        <div>
@@ -57,13 +57,13 @@
 
 6. On the **DEBUG** menu of the **PhotoSharingSample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-    >**Note:** The browser displays the default home page, the **Index** action result inside the **Home** Controller.
-
+    >**Note:** The browser displays the default home page, You reached the **Index** action of **Home** controller.  
+    
 7. On the taskbar, click the **Microsoft Visual Studio** icon.
 
 8. In the Solution Explorer pane of the **PhotoSharingSample – Microsoft Visual Studio** window,  click **Startup.cs**.
 
-9. In the **Startup.cs** code window, locate the following code.
+9. In the **Startup.cs** code window, locate the following code:
 
   ```cs
        app.UseMvcWithDefaultRoute();
@@ -81,7 +81,7 @@
 
 13. In the Solution Explorer pane of the **PhotoSharingSample – Microsoft Visual Studio** window, expand **Models**, and then click **Photo.cs**.
 
-14. In the **Photo.cs** code window, locate the following code.
+14. In the **Photo.cs** code window, locate the following code:
 
   ```cs
        [Required]
@@ -90,9 +90,9 @@
 
 >**Note:** This code block represents the **Title** property for a photo stored in the application.
 
-15. In the Solution Explorer pane, expend **Controllers**, and then click **HomeController.cs**.
+15. In the Solution Explorer pane, under **Controllers**, click **HomeController.cs**.
 
-16. In the **HomeController.cs** code window, locate the following code.
+16. In the **HomeController.cs** code window, locate the following code:
 
   ```cs
        public class HomeController : Controller
@@ -100,7 +100,7 @@
 
 >**Note:** This code block represents that the **HomeController** inherits the Controller base class which is in the namespace **Microsoft.AspNetCore.Mvc**.
 
-17. In the **HomeController.cs** code window, locate the following code.
+17. In the **HomeController.cs** code window, locate the following code:
 
   ```cs
        Photo requestedPhoto = _dbContext.Photos.FirstOrDefault(p => p.PhotoID == PhotoId);
@@ -126,9 +126,9 @@
 
 >**Note:** This code block represents the **GetImage** action of the **HomeController.cs**.
 
-18. In the Solution Explorer pane, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+18. In the Solution Explorer pane, under **Views**, under **Home**, click **Index.cshtml**.
 
-19. In the **Index.cshtml** code window, locate the following code.
+19. In the **Index.cshtml** code window, locate the following code:
 
   ```cs
        <div class="photo-display">
