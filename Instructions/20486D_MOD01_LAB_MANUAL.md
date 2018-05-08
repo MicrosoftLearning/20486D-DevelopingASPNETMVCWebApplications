@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
     - Create directory for the solution: **True**
     - Project template: **Web Application**
 
-2. Run the new Razor Pages application in **Microsoft Edge**, and review the **Contact** page.
+2. Run the new Razor Pages application in **Microsoft Edge**, and view the **Contact** page.
 
 3. **Stop debugging**.
 
@@ -60,9 +60,9 @@ The main tasks for this exercise are as follows:
 
 3. Verify that **_ViewStart.cshtml** is linked to **_Layout.cshtml**.
 
-4. Verify that **Contact.cshtml** not linked to .css file.
+4. Verify that **Contact.cshtml** is not linked to .css file.
 
-5. Verify that **_Layout.cshtml**, in the **HEAD** element linked to **site.css** file.
+5. Verify that **_Layout.cshtml** is in the **HEAD** element linked to **site.css** file.
 
 6. Open the **site.css** style sheet.
 
@@ -72,16 +72,16 @@ The main tasks for this exercise are as follows:
  
     - Razor Page name: **TestPage.cshtml**
 
-2. Add a **ViewData** to the TestPage.cshtml by using the following information: 
+2. Add a **ViewData** to the **TestPage.cshtml** by using the following information: 
 
     - ViewData Key: **Title**
     - ViewData Value : **"Test Page"**
 
-3. Add an **H1** element to the TestPage.cshtml by using the following information:
+3. Add an **H1** element to the **TestPage.cshtml** by using the following information:
 
     - Content: **@ViewData["Title"]**
 
-4. Add an **H2** element to the TestPage.cshtml by using the following information:
+4. Add an **H2** element to the **TestPage.cshtml** by using the following information:
 
     - Content: **This is a Test Page**
 
@@ -100,7 +100,7 @@ The main tasks for this exercise are as follows:
 
    - Class name: **Actor**
 
-8. Add an **Id** property to the **Actor** model class by using the following information:
+8. Add an **ID** property to the **Actor** model class by using the following information:
 
    - Scope: **public**
    - Property name: **Id**
@@ -195,7 +195,7 @@ The main tasks for this exercise are as follows:
     - Name: **Actors**
     - Access: **Read and write**
 
-25. In the **Index.cshtml.cs** class inside **OnGet** method  initiate **Actors** property  with **ActorsInitializeData** method from the IData interface.
+25. In the **Index.cshtml.cs** class inside **OnGet** method initiate **Actors** property  with **ActorsInitializeData** method from the IData interface.
 
 26. Delete the content in the **Index.cshtml**.
 
@@ -224,7 +224,7 @@ The main tasks for this exercise are as follows:
 
 3. View the **Test Page** and **Actors** pages you added.
 
-4. In the Actors window, click on the **Details** button, and verify that the Site.css file is used to apply style.
+4. In the Actors window, click on the **Details** button, and then verify that the **Site.css** file is used to apply style.
 
 5. Close the Microsoft Edge window, and the Visual Studio application.
 
@@ -262,11 +262,11 @@ The main tasks for this exercise are as follows:
 
 2. In the **Startup.cs**, verify that MVC is added to the request execution pipeline.
 
-3.  Open the  **ValuesController.cs** inside the **Controller** folder, and verify  that the **Get** method returns **value1**, and **value2**.
+3.  Open the  **ValuesController.cs** inside the **Controller** folder, and verify  that the **Get** method returns **value1** and **value2**.
 
-4. Run the website, and view the content in the browser.
+4. Run the website in Microsoft Edge, and view the content in the browser.
 
-5. **Stop debugging**.
+5. **Stop Debugging**.
 
 #### Task 3: Add simple functionality.
 
@@ -339,7 +339,7 @@ The main tasks for this exercise are as follows:
     - Class: **IData**
     - Name: **_data**
 
-    Initialize the new object in the **CakeStoreApiController** constructor with the value **IData data**.
+    Initialize the new field in the **CakeStoreApiController** constructor with the value **IData data**.
  
 15. Add a method for the **GetAll** action by using the following information:
  
@@ -353,45 +353,45 @@ The main tasks for this exercise are as follows:
 
 >**Note**: The **_data** field is the private object you just Instantiate.
 
-16. Add to **GetAll** action **HttpGet**  attribute with the following information: 
+17. Add to **GetAll** action **HttpGet**  attribute with the following information: 
 
      - template : **"/api/CakeStore"**
  
-17. Add a method for the **GetById** action by using the following information:
+18. Add a method for the **GetById** action by using the following information:
 
      - Scope: **public**
      - Return Type: **IActionResult**
      - Name: **GetById**
      - Parameters: One Nullable  integer called **id**
 
-18. Within the **GetById** action code block, add code to find a single **Cake** object from its **Id**.
+19. Within the **GetById** action code block, add code to find a single **Cake** object from its **Id**.
 
-19. If no Cake with the right Id is found, return NotFoundResult using the **NotFound** method.
+20. If no Cake with the right Id is found, return NotFoundResult using the **NotFound** method.
 
-20. If a Cake with the right Id is found, return a new object result containing the cake object.
+21. If a Cake with the right Id is found, return a new object result containing the cake object.
 
-21. Add to **GetById** action **HttpGet**  attribute with the following information : 
+22. Add to **GetById** action **HttpGet**  attribute with the following information : 
      - template : **"/api/CakeStore/{id}"**
 
-22. In the **Startup.cs**, add **using** statements to the controller for the following namespaces
+23. In the **Startup.cs**, add **using** statements to the controller for the following namespaces
 
       - **CakeStoreApi.Models**
 
-23. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
+24. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
 
 #### Task 4: Run the application.
 
 1. Save all the changes.
 
-2. **Start debugging** the application.
+2. **Start Debugging** the application.
 
-3. In the Microsoft Edge window, request the relative URL.
+3. In the **Microsoft Edge** window, request the relative URL.
 
-    - URL: /api/CakeStore
+    - URL: **/api/CakeStore**
 
-4. In the Microsoft Edge window, request the relative URL.
+4. In the **Microsoft Edge** window, request the relative URL.
 
-    - URL: /api/CakeStore/1
+    - URL: **/api/CakeStore/1**
 
 5. Close the Microsoft Edge window, and the Visual Studio application.
 
@@ -423,9 +423,9 @@ The main tasks for this exercise are as follows:
     - Create directory for the solution: **True**
     - Project template: **Web Application (Model-View-Controller)**
 
-2. Run the new MVC application in **Microsoft Edge** window, and review **Contact** page.
+2. Run the new MVC application in **Microsoft Edge** window, and view **Contact** page.
 
-3. **Stop debugging**.
+3. **Stop Debugging**.
 
 #### Task 2: Explore the application structure.
 
@@ -441,6 +441,8 @@ The main tasks for this exercise are as follows:
 
 6. Open the **site.css** style sheet.
 
+    >**Note:** This is the CSS **style sheet** file that applied in the **Layout.cshtml**.
+
 #### Task 3: Add simple functionality.
 
 1. In the **HomeController** Add a method for the **TestPage** action by using the following information:
@@ -455,7 +457,7 @@ The main tasks for this exercise are as follows:
     - Scaffold template: **Empty (without model)**  
     - Use a layout page: **checked**
  
-3. Add an **H1** element to the **TestPage.cshtml** by using the following information:
+3. Add an **H3** element to the **TestPage.cshtml** by using the following information:
 
     - Content: **This is a Test Page**
 
@@ -473,7 +475,7 @@ The main tasks for this exercise are as follows:
 
    - Class name: **Animal**
 
-6. Add an **Id** property to the **Animal** model class by using the following information:
+6. Add an **ID** property to the **Animal** model class by using the following information:
   
    - Scope: **public**
    - Property name: **Id**
@@ -559,7 +561,7 @@ The main tasks for this exercise are as follows:
     - Class: **IData**
     - Name: **_tempData**
 
-    Initialize the new object in the **AnimalsController** constructor with the value **IData data**.
+    Initialize the new field in the **AnimalsController** constructor with the value **IData data**.
  
 22. Add a method for the **Index** action by using the following information:
 
@@ -568,7 +570,7 @@ The main tasks for this exercise are as follows:
      - Name: **Index**
      - Model: **_tempData.AnimalsInitializeData()**
 
-23. In the Index action, initiate the **Animals** property from the IndexViewModel with the view **Model**, and return the **animals** list to the **Index** view.
+23. In the **Index** action, initiate the **Animals** property from the **IndexViewModel** with the view **Model**, and return the **animals** list to the **Index** view.
 
 24. Add a method for the **Details** action by using the following information:
 
@@ -579,9 +581,9 @@ The main tasks for this exercise are as follows:
 
 25. Within the **Details** action code block, add code to find a single **Animal** object from its **Id**.
 
-26. If no animal with the right Id is found, return NotFoundResult using the **NotFound** method.
+26. If no animal with the right Id is found, return **NotFoundResult** using the **NotFound** method.
 
-27. If an animal with the right Id is found, and return the **Animal** object to the **Details** view.
+27. If an animal with the right Id is found, return the **Animal** object to the **Details** view.
 
 28. Add the **images** existing files to the **images** folder from the following location:
 
@@ -602,7 +604,7 @@ The main tasks for this exercise are as follows:
 32.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
 
      - Name: **Details**
-     - Scaffold template: **Empty (without model)***
+     - Scaffold template: **Empty (without model)**
      - Use a layout page: **Yes**
  
 33. Delete the content in the **Details.cshtml**.
@@ -626,13 +628,13 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. **Start debugging** the application.
+2. **Start Debugging** the application.
 
 3. View the **Test Page** and **Animals** pages you added.
 
-4. In the Animals window, click on the **Details** button, and verify that the Site.css file is used to apply style.
+4. In the **Animals** window, click on the **Details** button, and verify that the Site.css file is used to apply style.
 
-5. Close the Microsoft Edge window, and the Visual Studio application.
+5. Close the **Microsoft Edge** window and the Visual Studio application.
 
 >**Results**: At the end of this exercise, you will be able to build a simple MVC application in Visual Studio.
 
