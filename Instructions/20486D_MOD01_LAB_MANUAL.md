@@ -199,7 +199,7 @@ The main tasks for this exercise are as follows:
 
 26. Delete the content in the **Index.cshtml**.
 
-27. Open **Indexcshtml.txt** and copy the all the content into the **Index.cshtml** from the following location:
+27. Open **Indexcshtml.txt** and copy all the content into the **Index.cshtml** from the following location:
  
      - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin/Pages**
 
