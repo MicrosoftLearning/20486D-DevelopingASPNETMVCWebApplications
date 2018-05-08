@@ -4,17 +4,13 @@
 
 #### Scenario
 
-You are working as a junior developer at Adventure Works. You have been asked by a senior developer to investigate the possibility of creating a web-based ASP.NET Core MVC application for your organization's customers, similar to one that the senior developer has seen on the Internet. Such an application will promote a community of cyclists who use Adventure Works equipment, and the community members will be able to share their experiences. This initiative is intended to increase the popularity of Adventure Works Cycles, and thereby to increase sales. You have been asked to begin the planning of the application. You have also been asked to examine programming models available to ASP.NET Core  developers. To do this, you need to create basic web applications written with three different models: Razor Pages , Web API , and MVC. Your manager has asked you to report on the following specific questions for each programming model:
-
-- How does the developer add MVC Services to the Web Application?
-- How does the developer add  MVC to the request execution pipeline?
-- How does the developer add a new page to the application applying the layout and styles to it?
+You are working as a junior developer at Adventure Works. You have been asked by a senior developer to investigate the possibility of creating a web-based ASP.NET Core MVC application for your organization's customers, similar to one that the senior developer has seen on the Internet. Such an application will promote a community of cyclists who use Adventure Works equipment, and the community members will be able to share their experiences. This initiative is intended to increase the popularity of Adventure Works Cycles, and thereby to increase sales. You have been asked to begin the planning of the application. You have also been asked to examine programming models available to ASP.NET Core  developers. To do this, you need to create basic web applications written with three different models: Razor Pages , Web API , and MVC. 
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
-- Describe and compare the three programming models available in ASP.NET Core.
+- Describe and compare the three programming models available —Razor Pages, Web API, and MVC.
 - Describe the structure of each web application developed in the three programming models —Razor Pages , Web API , and MVC.
 - Select an appropriate programming model for a given set of web application requirements.
 
