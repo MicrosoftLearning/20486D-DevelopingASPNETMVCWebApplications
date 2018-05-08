@@ -142,7 +142,7 @@
 
 21. In the **PhotoSharingSample (Running) – Microsoft Visual Studio** window, click **Close**.
 
-22. On the **Microsoft Visual Studio** dialog click **Yes** to **stop debugging**.
+22. On the **Microsoft Visual Studio** dialog click **Yes** to **Stop Debugging**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 
