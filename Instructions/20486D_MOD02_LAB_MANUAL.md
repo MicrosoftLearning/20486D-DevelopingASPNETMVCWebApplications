@@ -104,14 +104,36 @@ The main tasks for this exercise are as follows:
 11. Create a new  **Class Diagram**  in the main project's directory by using the following information:
 -   File name:  **ModelDesign**
 
-12. Drag a new **Class** object to the class diagram using the following information:
+12. In **ModelDesign.cd**, Drag a new **Class** object to the class diagram using the following information:
 -   Class name:  **Photo**
 
-13. Add attributes to the new **Photo** class diagram for each of the properties you planned for the photo class. For each attribute define a name and a type.
+13. In the **Photo** class diagram, add a property using the following information:
+-   Property name:  **PhotoID**
+-   Data type:  **Integer**
 
-14. In **Photo.cs**, change the properties return values to match the property types.
+14. Add a property using the following information:
+-   Property name:  **Title**
+-   Data type:  **String**
 
-15. Save the created diagram.
+15. Add a property using the following information:
+-   Property name:  **PhotoFile**
+-   Data type:  **Binary**
+
+16. Add a property using the following information:
+-   Property name:  **Description**
+-   Data type:  **String**
+
+17. Add a property using the following information:
+-   Property name:  **CreatedDate**
+-   Data type:  **Date**
+
+18. Add a property using the following information:
+-   Property name:  **Owner**
+-   Data type:  **Integer**
+
+19. In **Photo.cs**, change the properties return values to match the property types.
+
+20. Save the created diagram.
 
 
 #### Task 3: Plan the comment model class.
@@ -151,20 +173,38 @@ The main tasks for this exercise are as follows:
 
 9. Merge all the rows in the **Model Class** and **Description** columns that belong to the **Comment** class, and save the document.
 
-10. In **ModelDesign.cd**, drag a new **Class** object to the class diagram using the following information:
+10. In **ModelDesign.cd**, Drag a new **Class** object to the class diagram using the following information:
 -   Class name:  **Comment**
 
-11. Add attributes to the new **Photo** class diagram for each of the properties you planned for the photo class. For each attribute define a name and a type.
+11. In the **Comment** class diagram, add a property using the following information:
+-   Property name:  **CommentID**
+-   Data type:  **Integer**
 
-12. In **Comment.cs**, change the properties return values to match the property types.
+12. Add a property using the following information:
+-   Property name:  **User**
+-   Data type:  **String**
 
-13. In **ModelDesign.cd**, drag, a new association object, and connect the two classes with it.
+13. Add a property using the following information:
+-   Property name:  **Subject**
+-   Data type:  **String**
 
-14. The association created a property,  in the photo class. In **Comment.cs**, change its return type to List<Comment>.
+14. Add a property using the following information:
+-   Property name:  **Body**
+-   Data type:  **String**
 
-15.  In **ModelDesign.cd**, change the property back to "collection association".
+15. Add a property using the following information:
+-   Property name:  **PhotoID**
+-   Data type:  **Integer**
 
-16. Save the created diagram.
+16. In **Comment.cs**, change the properties return values to match the property types.
+
+17. In **ModelDesign.cd**, drag, a new association object, and connect the two classes with it.
+
+18. The association created a property,  in the photo class. In **Comment.cs**, change its return type to List<Comment>.
+
+20.  In **ModelDesign.cd**, change the property back to "collection association".
+
+21. Save the created diagram.
 
    >**Results** : After completing this exercise, you will be able to create proposals for a model, and configure the properties and data types of the model classes.
 
@@ -310,16 +350,20 @@ The main tasks for this exercise are as follows:
 1. Create a new  **Window (WPF)**  in the main project's directory by using the following information:
 -   File name:  **SinglePhotoView**
 
-2. Modify the main window properties using the following information:
+2. Open the **Properties** window.
+
+3. Open the **Document Outline** window.
+
+4. Modify the main window properties using the following information:
 -   Width:  **500**
 -   Height:  **1100**
 -   WindowStyle:  **None**
 
-3. Drag a **Label** to the top left corner of the screen and use following information:
+5. Drag a **Label** to the top left corner of the screen and use following information:
 -   Content:  **Adventure Works Photo Sharing**
 -   Text size: **20 px**
 
-4. Drag a **Canvas** below the label and use following information:
+6. Drag a **Canvas** below the label and use following information:
 -   Background style:  **Solid color brush**
 -   Background R:  **150**
 -   Background G:  **175**
@@ -327,7 +371,7 @@ The main tasks for this exercise are as follows:
 -   Width:  **400**
 -   Width:  **40**
 
-5. Drag a **Button** into the canvas and use following information:
+7. Drag a **Button** into the canvas and use following information:
 -   Content:  **Home**
 -   Background style:  **Solid color brush**
 -   Background R:  **150**
@@ -338,32 +382,32 @@ The main tasks for this exercise are as follows:
 -   Foreground G:  **175**
 -   Foreground B:  **207**
 
-6. Copy the button and paste it to the right side of the previous button. Change its content to **Gallery**.
+8. Copy the button and paste it to the right side of the previous button. Change its content to **Gallery**.
 
-7. Paste the button again, and place it to the right side of the last pasted button. Change its content to **Photo**.
+9. Paste the button again, and place it to the right side of the last pasted button. Change its content to **Photo**.
 
-8. Paste the button again, and place it to the right side of the last pasted button. Change its content to **Slideshow**.
+10. Paste the button again, and place it to the right side of the last pasted button. Change its content to **Slideshow**.
 
-9. Drag a **Label** below the left side of the canvas and use following information:
+11. Drag a **Label** below the left side of the canvas and use following information:
 -   Content:  **Title**
 -   Text size:  **20 px**
 
-10. Drag a **Label** below the last created label and use following information:
+12. Drag a **Label** below the last created label and use following information:
 -   Content: **By: Owner**
 
-11. Add existing item to the current project main directory using the following information:
+13. Add existing item to the current project main directory using the following information:
  -   File path: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
  -   File name: **photo.jpg**
 
-12. Drag an **Image** below the last created label and use following information:
+14. Drag an **Image** below the last created label and use following information:
 -   Source: **photo.jpg**
 -   Width: **400**
 -   Height: **240**
 
-13. Drag a **Label** below the left side of the image and use following information:
+15. Drag a **Label** below the left side of the image and use following information:
 -   Content:  **Description:**
 
-14. Drag a **Label** below the last created label and use following information:
+16. Drag a **Label** below the last created label and use following information:
 -   Content:  **Photo Description...**
 -   Width: **300**
 -   Height: **150**
@@ -373,10 +417,10 @@ The main tasks for this exercise are as follows:
 -   BorderBrush B:  **0**
 -   Border Thickness: **2 (In each one of the 4 boxes)**
 
-15. Drag a **Label** below the left side of the canvas and use following information:
+17. Drag a **Label** below the left side of the canvas and use following information:
 -   Content:  **Comments:**
 
-16. Drag a **Canvas** below the label and use following information:
+18. Drag a **Canvas** below the label and use following information:
 -   Width: **300**
 -   Height: **130**
 -   Forground style:  **Solid color brush**
@@ -384,20 +428,20 @@ The main tasks for this exercise are as follows:
 -   Forground G:  **175**
 -   Forground B:  **207**
 
-17. Drag a **Label** into the top left corner of the canvas and use following information:
+19. Drag a **Label** into the top left corner of the canvas and use following information:
 -   Content:  **From:**
 
-18. Drag a **Label** into the canvas, below the last created label and use following information:
+20. Drag a **Label** into the canvas, below the last created label and use following information:
 -   Content:  **Subject:**
 
-19. Drag a **Label** into the canvas, below the last created label and use following information:
+21. Drag a **Label** into the canvas, below the last created label and use following information:
 -   Content:  **Body:**
 
-20. Copy the canvas we created and filled with labels.
+22. Copy the canvas we created and filled with labels.
 
-21. Paste the canvas below the last copied canvas.
+23. Paste the canvas below the last copied canvas.
 
-22. Drag a **TextBlock** below the left side of the canvas and use following information:
+24. Drag a **TextBlock** below the left side of the canvas and use following information:
 -   Content:  **Add a Comment**
 -   Foreground style:  **Solid Color Brush**
 -   Foreground R:  **0**
@@ -451,7 +495,7 @@ The main tasks for this exercise are as follows:
 
 13. Paste another canvas below the last pasted canvas.
 
-12. Paste the canvas to the left of the last pasted canvas.
+14. Paste the canvas to the left of the last pasted canvas.
 
    >**Results** : After completing this exercise, you will create proposals for views and their layouts.
 
