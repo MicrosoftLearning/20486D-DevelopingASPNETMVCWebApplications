@@ -12,7 +12,7 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane of the **RazorSyntaxExample - Microsoft Visual Studio** window, under **RazorSyntaxExample**, expand **Controllers** folder,  and then click **ProductController.cs**.
+1. In the **Solution Explorer** pane of the **RazorSyntaxExample - Microsoft Visual Studio** window, under **RazorSyntaxExample**, expand **Controllers**,  and then click **ProductController.cs**.
 
 2. In the **ProductController.cs** code window, locate the following code. 
 ```cs
@@ -31,10 +31,10 @@
     public IActionResult Index()
 ```
 
-5. Right click on the **Index** method name, and then click **Add View...**.
+5. Right click on the **Index** method name, and then click **Add View...** .
 
 6. In the **Add MVC View** dialog window  verify that none of the checkboxes are selected, and then click **Add**.
->**Note** : **Index.cshtm** was created under the **Product** folder that is under the **Views** folder.
+>**Note** : **Index.cshtml** was created under the **Product** folder that is under the **Views** folder.
 
 7. In the **Index.cshtml** code window, in the **BODY** element, press Enter, and type the following code.
 ```cs
@@ -204,7 +204,7 @@
 
 21. Replace the selected code with the following code. 
 ```cs
-    return File($"@"\images\{personName.ToLower()}.jpg", "image/jpeg");
+    return File($@"\images\{personName.ToLower()}.jpg", "image/jpeg"); 
 ```
 
 22. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
