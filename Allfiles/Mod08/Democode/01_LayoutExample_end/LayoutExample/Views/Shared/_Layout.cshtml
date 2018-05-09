@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <environment>
+        <link type="text/css" rel="stylesheet" href="~/css/style-layout-example.css" />
+    </environment>
+</head>
+<body>
+    <div>
+        <h1>Welcome to the University</h1>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        @RenderSection("footer", required: false)
+    </footer>
+</body>
+</html>
