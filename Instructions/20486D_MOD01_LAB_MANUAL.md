@@ -10,7 +10,7 @@ You are working as a junior developer at Adventure Works. You have been asked by
 
 After completing this lab, you will be able to:
 
-- Describe and compare the three programming models available —Razor Pages, Web API, and MVC.
+- Describe and compare the three programming models —Razor Pages, Web API, and MVC.
 - Describe the structure of each web application developed in the three programming models —Razor Pages , Web API , and MVC.
 - Select an appropriate programming model for a given set of web application requirements.
 
@@ -40,13 +40,11 @@ The main tasks for this exercise are as follows:
 
     - Name: **ActorsRazorPages**
     - Location: **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin**
-    - Solution name: **ActorsRazorPages**
-    - Create directory for the solution: **True**
     - Project template: **Web Application**
 
 2. Run the new Razor Pages application in **Microsoft Edge**, and view the **Contact** page.
 
-3. **Stop debugging**.
+3. **Stop Debugging**.
 
 #### Task 2: Explore the application structure.
 
@@ -216,7 +214,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. **Start debugging** the application.
+2. **Start Debugging** the application.
 
 3. View the **Test Page** and **Actors** pages you added.
 
@@ -248,8 +246,6 @@ The main tasks for this exercise are as follows:
 
     - Name: **CakeStoreApi**
     - Location: **Allfiles/Mod01/Labfiles/02_CakeStoreApi_begin**
-    - Solution name: **CakeStoreApi**
-    - Create directory for the solution: **True**
     - Project template: **API**
 
 #### Task 2: Explore the application structure.
@@ -389,7 +385,7 @@ The main tasks for this exercise are as follows:
 
     - URL: **/api/CakeStore/1**
 
-5. Close the Microsoft Edge window, and the Visual Studio application.
+5. Close the **Microsoft Edge** window, and the Visual Studio application.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
 
@@ -415,8 +411,6 @@ The main tasks for this exercise are as follows:
 
     - Name: **AnimalsMvc**
     - Location: **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin**
-    - Solution name: **AnimalsMvc**
-    - Create directory for the solution: **True**
     - Project template: **Web Application (Model-View-Controller)**
 
 2. Run the new MVC application in **Microsoft Edge** window, and view **Contact** page.
@@ -451,13 +445,19 @@ The main tasks for this exercise are as follows:
 
     - Name: **TestPage**
     - Scaffold template: **Empty (without model)**  
-    - Use a layout page: **checked**
- 
-3. Add an **H3** element to the **TestPage.cshtml** by using the following information:
 
+3. Select the folowing code:
+
+  ```cs
+		<h2>TestPage</h2>
+```
+4. Replace the code you selected with the following code:
+
+    - Start tag: **&lt;h2&gt;**
     - Content: **This is a Test Page**
+    - End tag: **&lt;/h2&gt;**
 
-4. In the **Shared** folder  inside **_Layout.cshtml** add a link using the following information:
+5. In the **Shared** folder  inside **_Layout.cshtml** add a link using the following information:
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**
@@ -466,92 +466,91 @@ The main tasks for this exercise are as follows:
     - Content: **Test Page**
     - End tag: **&lt;/a&gt;&lt;/li&gt;**
 
- 
-5. Add a new model class to the **Models** folder by using the following information:
+6. Add a new model class to the **Models** folder by using the following information:
 
    - Class name: **Animal**
 
-6. Add an **ID** property to the **Animal** model class by using the following information:
+7. Add an **ID** property to the **Animal** model class by using the following information:
   
    - Scope: **public**
    - Property name: **Id**
    - Data type: **int**
    - Access: **Read and write**
   
-7. Add a **Name** property to the **Animal** model class by using the following information:
+8. Add a **Name** property to the **Animal** model class by using the following information:
   
      - Scope: **public**
      - Property name: **Name**
      - Data type: **string**
      - Access: **Read and write**
 
-8.  Add an **ImageName** property to the **Animal** model class by using the following information:
+9.  Add an **ImageName** property to the **Animal** model class by using the following information:
 
      - Scope: **public**
      - Property name: **ImageName**
      - Data type: **string**
      - Access: **Read and write**
  
-9.  Add an **UniqueInformation** property to the **Animal** model class by using the following information:
+10.  Add an **UniqueInformation** property to the **Animal** model class by using the following information:
 
       - Scope: **public**
       - Property name: **UniqueInformation**
       - Data type: **string**
       - Access: **Read and write**
    
-10. Add a **Category** property to the **Animal** model class by using the following information:
+11. Add a **Category** property to the **Animal** model class by using the following information:
  
        - Scope: **public**
        - Property name: **Category**
        - Data type: **string**
        - Access: **Read and write**
 
-11. Add a new interface called **IData** to the Models folder in the project.
+12. Add a new interface called **IData** to the Models folder in the project.
 
-12. Set **public** scope to the new interface.
+13. Set **public** scope to the new interface.
 
-13. Add the **AnimalsList** property to the **IData** interface by using the following information:
+14. Add the **AnimalsList** property to the **IData** interface by using the following information:
 
      - Type: **List&lt;Animal&gt;**
      - Name: **AnimalsList**
      - Access: **Read and write**
 
-14. Add the **AnimalsInitializeData** method to the **IData** interface by using the following information:
+15. Add the **AnimalsInitializeData** method to the **IData** interface by using the following information:
 
      - Return type: **List&lt;Animal&gt;**
      - Name: **AnimalsInitializeData**
 
-15. Add the **GetAnimalById** method to the **IData** interface by using the following information:
+16. Add the **GetAnimalById** method to the **IData** interface by using the following information:
 
      - Return type: **Animal**
      - Parameter: an Nullable integer named **Id**
      - Name: **GetAnimalById**
 
-16. Add the **Data.cs** existing file to the **Model** folder from the following location:
+17. Add the **Data.cs** existing file to the **Model** folder from the following location:
  
      - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin**
 
-17. Add a new model class to the **Models** folder by using the following information:
+18. Add a new model class to the **Models** folder by using the following information:
 
     - Class name: **IndexViewModel**
 
-18. Add a **Animals** property to the **IndexViewModel** model class by using the following information:
+19. Add a **Animals** property to the **IndexViewModel** model class by using the following information:
  
     - Scope: **public**
     - Property name: **Animals**
     - Data type: **List&lt;Animal&gt;**
     - Access: **Read and write**
 
-19. Add a new controller to the **AnimalsMvc** project by using the following information:
+20. Add a new controller to the **AnimalsMvc** project by using the following information:
 
      - Controller name: **AnimalsController**
      - Template: **MVC Controller - Empty**
 
-20. Add **using** statement to the controller for the **Models** namespaces.
+21. Add **using** statement to the controller for the **Models** namespaces.
 
-21. In the **AnimalsController**, delete the **Index** method code block.
+22. In the **AnimalsController**, delete the **Index** method code block.
 
-21. In the **AnimalsController.cs** create a new private field by using the following information:
+23. In the **AnimalsController.cs** create a new private field by using the following information:
 
     - Scope: **private**
     - Class: **IData**
@@ -559,57 +558,55 @@ The main tasks for this exercise are as follows:
 
     Initialize the new field in the **AnimalsController** constructor with the value **IData data**.
  
-22. Add a method for the **Index** action by using the following information:
+24. Add a method for the **Index** action by using the following information:
 
      - Scope: **public**
      - Return Type: **IActionResult**
      - Name: **Index**
      - Model: **_tempData.AnimalsInitializeData()**
 
-23. In the **Index** action, initiate the **Animals** property from the **IndexViewModel** with the view **Model**, and return the **animals** list to the **Index** view.
+25. In the **Index** action, initiate the **Animals** property from the **IndexViewModel** with the view **Model**, and return the **animals** list to the **Index** view.
 
-24. Add a method for the **Details** action by using the following information:
+26. Add a method for the **Details** action by using the following information:
 
     - Scope: **public**
     - Return Type: **IActionResult**
     - Name: **Details**
     - Parameters: One nullable integer called **id**
 
-25. Within the **Details** action code block, add code to find a single **Animal** object from its **Id**.
+27. Within the **Details** action code block, add code to find a single **Animal** object from its **Id**.
 
-26. If no animal with the right Id is found, return **NotFoundResult** using the **NotFound** method.
+28. If no animal with the right Id is found, return **NotFoundResult** using the **NotFound** method.
 
-27. If an animal with the right Id is found, return the **Animal** object to the **Details** view.
+29. If an animal with the right Id is found, return the **Animal** object to the **Details** view.
 
-28. Add the **images** existing files to the **images** folder from the following location:
+30. Add the **images** existing files to the **images** folder from the following location:
 
     -  **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Images**     
 
-29.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
+31.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
 
      - Name: **Index**
      - Scaffold template: **Empty (without model)**
-     - Use a layout page: **Yes**
  
-30. Delete the content in the **Index.cshtml**.
+32. Delete the content in the **Index.cshtml**.
 
-31. Open the **Indexcshtml.txt** existing file and copy all the content into the **Index.cshtml** from the following location:
+33. Open the **Indexcshtml.txt** existing file and copy all the content into the **Index.cshtml** from the following location:
 
      - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Views**
 
-32.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
+34.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
 
      - Name: **Details**
      - Scaffold template: **Empty (without model)**
-     - Use a layout page: **Yes**
  
-33. Delete the content in the **Details.cshtml**.
+35. Delete the content in the **Details.cshtml**.
 
-34. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
+36. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
  
      - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Views**
 
-35. In the **Shared** folder  inside **_Layout.cshtml** Add a link using the following information:
+37. In the **Shared** folder  inside **_Layout.cshtml** Add a link using the following information:
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**
@@ -618,7 +615,7 @@ The main tasks for this exercise are as follows:
     - Content: **Animals**
     - End tag: **&lt;/a&gt;&lt;/li&gt;** 
 
-36. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
+38. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
 
 #### Task 4: Run the application.
 
