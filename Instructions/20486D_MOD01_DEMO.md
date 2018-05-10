@@ -57,7 +57,7 @@
 
 6. On the **DEBUG** menu of the **PhotoSharingSample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-    >**Note:** The browser displays the default home page, You reached the **Index** action of **Home** controller.  
+    >**Note:** The browser displays the default home page. You reached the **Index** action of **Home** controller.  
     
 7. On the taskbar, click the **Microsoft Visual Studio** icon.
 
