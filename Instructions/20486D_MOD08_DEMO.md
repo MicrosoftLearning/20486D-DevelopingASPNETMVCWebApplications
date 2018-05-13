@@ -33,9 +33,7 @@
 8. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
 
   ```cs
-       <environment>
-           <link type="text/css" rel="stylesheet" href="~/css/style-layout-example.css" />
-       </environment>
+       <link type="text/css" rel="stylesheet" href="~/css/style-layout-example.css" />
 ```
 9. In the **_Layout.cshtml** file, locate the following code:
 
