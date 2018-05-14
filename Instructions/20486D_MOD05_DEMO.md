@@ -109,7 +109,6 @@
 
 2. Go to **Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin**, and then double-click **HTMLHelpersExample.sln**.
 
-
 #### Demonstration Steps
 
 1. In the **Solution Explorer** pane, under **Views**, expand **Shared**, and then click **_Layout.cshtml.**
@@ -205,7 +204,7 @@
 
 21. Replace the selected code with the following code:
 ```cs
-    return File($@"\images\{personName.ToLower()}.jpg", "image/jpeg"); 
+    return File($@"\images\{personName.ToLower()}.jpg", "image/jpeg");    
 ```
 
 22. On the **FILE** menu of the **HTMLHelpersExample – Microsoft Visual Studio** window, click **Save All**.
@@ -366,7 +365,6 @@
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
 2. Go to **Allfiles\Mod05\Democode\04_PartialViewExample_begin**, and then double-click **PartialViewExample.sln**.
-
 
 #### Demonstration Steps
 
