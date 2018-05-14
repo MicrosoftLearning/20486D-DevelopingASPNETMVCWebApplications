@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using AnimalMvc.Models;
+using AnimalsMvc.Models;
 
-namespace AnimalMvc.Controllers
+namespace AnimalsMvc.Controllers
 {
     public class HomeController : Controller
     {

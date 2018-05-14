@@ -36,10 +36,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating a Razor Pages application.
 
-1. Start Visual Studio 2017, and create a new MVC project with the following information:
+1. Start Visual Studio 2017, and create a new ASP.NET Core Web Application project with the following information:
 
     - Name: **ActorsRazorPages**
-    - Location: **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin**
+    - Location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
     - Project template: **Web Application**
 
 2. Run the new Razor Pages application in **Microsoft Edge**, and view the **Contact** page.
@@ -62,7 +62,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Add simple functionality.
 
-1. Add a new Razor Page to the **Pages** folder using the following information:
+1. Add a new **Razor Page** to the **Pages** folder using the following information:
  
     - Razor Page name: **TestPage.cshtml**
 
@@ -79,7 +79,7 @@ The main tasks for this exercise are as follows:
 
     - Content: **This is a Test Page**
 
-5. Add a link to the **_Layout.cshtml** by using the following information:
+5. Add a link to the **_Layout.cshtml**, in the **UL** element, by using the following information:
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-page=&quot;/TestPage&quot;**
@@ -159,11 +159,11 @@ The main tasks for this exercise are as follows:
 
 19. Add **Data.cs** to the **Model** folder from the following location:
  
-     - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin**
+     - **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
 
 20. Add the **images** existing files to the **images** folder inside **wwwroot** folder from the following location:
   
-    -  **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin/Images**     
+    -  **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin/Images**     
 
 21. Inside  the **Pages** folder Add a new folder using the following information:
   
@@ -173,8 +173,14 @@ The main tasks for this exercise are as follows:
 
     - Folder: **Pages/Actors**
     - Name: **Index**
-  
-23.  In the **Index.cshtml.cs**, create a new private object using the following information:
+
+23. In the **Index.cshtml.cs** code window, delete the **OnGet** function code.
+
+24. In the **Index.cshtml.cs** code window, add **using** statements for the following namespaces:
+
+    - **ActorsRazorPages.Models**
+
+23. In the **Index.cshtml.cs**, create a new private object using the following information:
  
      - Scope: **private**
      - Class: **IData**
@@ -189,21 +195,30 @@ The main tasks for this exercise are as follows:
     - Name: **Actors**
     - Access: **Read and write**
 
+24. Add a the **OnGet** method, to the **Index.cshtml.cs** using the following information:
+
+    - Return type: **void**
+    - Name: **OnGet**
+
 25. In the **Index.cshtml.cs** class inside **OnGet** method initiate **Actors** property  with **ActorsInitializeData** method from the IData interface.
 
 26. Delete the content in the **Index.cshtml**.
 
 27. Open **Indexcshtml.txt** and copy all the content into the **Index.cshtml** from the following location:
  
-     - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin/Pages**
+     - **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
 
 28. Add the **Details.cs** and **Details.cshtml** to the **Pages/Actors** folder from the following location:
 
-      - **Allfiles/Mod01/Labfiles/01_ActorsRazorPages_begin/Pages**   
+      - **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**   
+
+28. In the **Startup.cs** code window , add **using** statements for the following namespaces:
+
+    - **ActorsRazorPages.Models**
 
 29.  In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
 
-30. Add a link to the **_Layout.cshtml** by using the following information:
+30. Add a link to the **_Layout.cshtml**, in the **UL** element, by using the following information:
  
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-page=&quot;/Actors/Index&quot;**
@@ -242,7 +257,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating a Web API application.
 
-1. Start Visual Studio 2017, and create a new MVC project with the following information:
+1. Start Visual Studio 2017, and create a new ASP.NET Core Web Application project with the following information:
 
     - Name: **CakeStoreApi**
     - Location: **Allfiles/Mod01/Labfiles/02_CakeStoreApi_begin**
@@ -314,7 +329,7 @@ The main tasks for this exercise are as follows:
 
 11. Add the **Data.cs** to the **Model** folder from the following location:
  
-     - **Allfiles/Mod01/Labfiles/02_CakeStoreApi_begin**
+     - **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
 
 12. Create a new controller for handling **CakeStore** objects by using the following information:
  
@@ -365,7 +380,7 @@ The main tasks for this exercise are as follows:
 22. Add to **GetById** action **HttpGet**  attribute with the following information : 
      - template : **"/api/CakeStore/{id}"**
 
-23. In the **Startup.cs**, add **using** statements to the controller for the following namespaces
+23. In the **Startup.cs**, add **using** statements to the controller for the following namespaces:
 
       - **CakeStoreApi.Models**
 
@@ -407,10 +422,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating an MVC application.
 
-1. Start Visual Studio 2017, and create a new MVC project with the following information:
+1. Start Visual Studio 2017, and create a new ASP.NET Core Web Application project with the following information:
 
     - Name: **AnimalsMvc**
-    - Location: **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin**
+    - Location: **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin**
     - Project template: **Web Application (Model-View-Controller)**
 
 2. Run the new MVC application in **Microsoft Edge** window, and view **Contact** page.
@@ -457,7 +472,7 @@ The main tasks for this exercise are as follows:
     - Content: **This is a Test Page**
     - End tag: **&lt;/h2&gt;**
 
-5. In the **Shared** folder  inside **_Layout.cshtml** add a link using the following information:
+5. Add a link to the **_Layout.cshtml**, in the **UL** element, by using the following information:
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**
@@ -528,7 +543,7 @@ The main tasks for this exercise are as follows:
 
 17. Add the **Data.cs** existing file to the **Model** folder from the following location:
  
-     - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin**
+     - **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin**
 
 18. Add a new model class to the **Models** folder by using the following information:
 
@@ -546,7 +561,9 @@ The main tasks for this exercise are as follows:
      - Controller name: **AnimalsController**
      - Template: **MVC Controller - Empty**
 
-21. Add **using** statement to the controller for the **Models** namespaces.
+21. Add **using** statements to the controller for the following namespaces:
+
+      - **AnimalMvc.Models**
 
 22. In the **AnimalsController**, delete the **Index** method code block.
 
@@ -582,7 +599,7 @@ The main tasks for this exercise are as follows:
 
 30. Add the **images** existing files to the **images** folder from the following location:
 
-    -  **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Images**     
+    -  **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Images**     
 
 31.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
 
@@ -604,9 +621,9 @@ The main tasks for this exercise are as follows:
 
 36. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
  
-     - **Allfiles/Mod01/Labfiles/03_AnimalMvc_begin/Views**
+     - **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
-37. In the **Shared** folder  inside **_Layout.cshtml** Add a link using the following information:
+37. Add a link to the **_Layout.cshtml**, in the **UL** element, by using the following information
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**

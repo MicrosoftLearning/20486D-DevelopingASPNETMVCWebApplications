@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using AnimalMvc.Models;
+using AnimalsMvc.Models;
 
-namespace AnimalMvc
+namespace AnimalsMvc
 {
     public class Startup
     {

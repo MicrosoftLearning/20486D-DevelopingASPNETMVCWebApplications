@@ -1,4 +1,5 @@
-@model AnimalMvc.Models.IndexViewModel
+@model AnimalsMvc.Models.IndexViewModel
+
 @{
     ViewData["Title"] = "Index";
 }

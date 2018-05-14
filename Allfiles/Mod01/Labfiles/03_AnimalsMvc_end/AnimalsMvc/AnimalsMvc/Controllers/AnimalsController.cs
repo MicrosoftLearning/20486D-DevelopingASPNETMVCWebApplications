@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using AnimalMvc.Models;
+using AnimalsMvc.Models;
 using System.Collections.Generic;
 
 namespace AnimalMvc.Controllers

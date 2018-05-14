@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AnimalMvc.Models
+namespace AnimalsMvc.Models
 {
     public class Animal
     {

@@ -1,4 +1,4 @@
-﻿@model AnimalMvc.Models.Animal
+@model AnimalsMvc.Models.Animal
 
 @{
     ViewData["Title"] = "Details";
