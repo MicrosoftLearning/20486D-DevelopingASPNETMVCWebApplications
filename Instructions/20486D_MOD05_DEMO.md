@@ -113,7 +113,7 @@
 
 1. In the Solution Explorer pane, under **Views**, expand **Shared**, and then click **_Layout.cshtml.**
 
-2. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Views**, then expand **Home**, and then click **Index.cshtml**.
+2. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
 3. In the **Index.cshtml** code window, locate the following code.
 ```cs
@@ -129,7 +129,7 @@
     @Html.ActionLink("Employees", "Index", "Person")
 ```
 
-5. On the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Controllers**, click **PersonController.cs**.
+5. In the Solution Explorer pane of the **HTMLHelpersExample - Microsoft Visual Studio** window, under **Controllers**, click **PersonController.cs**.
 
 6. In the **PersonController.cs** code window, locate the following code. 
 ```cs
@@ -210,16 +210,16 @@
 22. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
 23. In the **Microsoft Edge** window, click the **Employees** link.
-     > **Note**:  The link leads to the employees page which contains list of links. Each link contains text of a person's name.
+     > **Note**: The browser displays a list of links, each link is a person's name.
 
 24. In the **Microsoft Edge** window, click the **Michael** link.
-     > **Note**:  A page that represents **Michael** is shown. The page contains a name and a photo.
+     > **Note**:  The browser displays the person's name and photo.
 
-25. In the **Microsoft Edge** window, press the **Back to person selection list** link.     
-     > **Note**: List of links is shown. In each link there is a person's name.
+25. In the **Microsoft Edge** window, click the **Back to person selection list** link.     
+     > **Note**: The browser displays a list of links, each link is a person's name.
 
-26. In the **Microsoft Edge** window, press the **Elena** link .
-     > **Note**:  A page that represents **Elena** is shown. The page contains a name and a photo.
+26. In the **Microsoft Edge** window, click the **Elena** link .
+     > **Note**:  The browser displays the person's name and photo.
 
 27. In the **Microsoft Edge** window, click **Close**.
 
@@ -239,7 +239,7 @@
 
 #### Demonstration Steps
 
-1. In the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Views**, expand the **Home**, and then click **Index.cshtml**.
+1. In the Solution Explorer pane, of the **TagHelpersExample - Microsoft Visual Studio** window, under the **Views**, expand **Home**, and then click **Index.cshtml**.
 
 2. In the **Index.cshtml** code window, place the mouse cursor at the beginning of the document, and then type the following code. 
 ```cs
@@ -293,16 +293,16 @@
 13. On the **DEBUG** menu of the **HTMLHelpersExample –  Microsoft Visual Studio** window, click **Start Debugging**.
 
 14. In the **Microsoft Edge** window, click the **Employees** link .
-     > **Note**:  The link leads to the employees page which contains list of links. Each link contains a text of a person's name.
+     > **Note**: The browser displays a list of links, each link is a person's name.
 
 15. In the **Microsoft Edge** window, click the **Michael** link .
-     > **Note**:  A page that represents **Michael** is shown. The page contains a name and a photo.
+     > **Note**:  The browser displays the person's name and photo.
 
-16. In the **Microsoft Edge** window, press the **Back to person selection list** link .     
-     > **Note**: List of links is shown. In each link there is a person's name.
+16. In the **Microsoft Edge** window, click the **Back to person selection list** link .     
+     > **Note**: The browser displays a list of links, each link is a person's name.
 
-17. In the **Microsoft Edge** window, press the **Elena** link.
-     > **Note**:  A page that represents **Elena** is shown. The page contains a name and a photo.
+17. In the **Microsoft Edge** window, click the **Elena** link.
+     > **Note**:  The browser displays the person's name and photo.
 
 18. In the **Microsoft Edge** window, click **Close**.
 
@@ -344,13 +344,13 @@
      > **Note**:  The link leads to the employees page which contains list of links. In each link there is a person's name.
 
 31. In the **Microsoft Edge** window, click the **Michael** link.
-     > **Note**:  A page that represents **Michael** is shown. The page contains a name and a photo.
+     > **Note**:  The browser displays the person's name and photo.
 
 32. In the **Microsoft Edge** window, click the **Back to person selection list** link.     
-     > **Note**: List of links is shown. In each link there is a person's name.
+     > **Note**: The browser displays a list of links, each link is a person's name.
 
 33. In the **Microsoft Edge** window, click the **Elena** link.
-     > **Note**:  A page that represents **Elena** is shown. The page contains a name and a photo.
+     > **Note**:  The browser displays the person's name and photo.
 
 34. In the **Microsoft Edge** window, click **Close**.
 
@@ -385,7 +385,7 @@
 ```cs
     _personList = PersonInitializer();
 ```
-> **Note**: The list of people is created within the PersonInitializer method. The PersonInitializer  returns the list to the **_personList** class member. The **_personList** class member is retrieved using the classe's indexer.
+> **Note**: The **PersonInitializer** creates and populates and list of people, and then returns the list into the **_personList** class member. You can access the list through the class indexer.
 
 5. In the Solution Explorer pane of the **PartialViewExample - Microsoft Visual Studio** window, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
@@ -526,7 +526,7 @@
 ```
 
 21. On the **DEBUG** menu of the **ViewComponentExample –  Microsoft Visual Studio** window, click **Start Debugging**.
-     > **Note**:  A table with cards is show. Each card contains information of a person including: First name, last name, address, and a phone.
+     > **Note**:  A table with cards is show. Each card contains information of a person including: First name, Last name, Address, and a Phone.
      
 22. In the **Microsoft Edge** window, click **Close**.
 
