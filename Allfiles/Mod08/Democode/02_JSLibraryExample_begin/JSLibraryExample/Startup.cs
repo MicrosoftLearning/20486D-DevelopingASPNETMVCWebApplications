@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+
 using Microsoft.Extensions.DependencyInjection;
 
 namespace JSLibraryExample
@@ -18,8 +18,6 @@ namespace JSLibraryExample
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseStaticFiles();
-
             app.UseMvcWithDefaultRoute();
         }
     }
