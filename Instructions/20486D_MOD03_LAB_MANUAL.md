@@ -92,7 +92,7 @@ New folder name: **css**
 
 5. Inside the **P** element, create an **H1** element with the following text: "Favorite ball game poll".
 
-6. Under the **H1** element, in the **P** element, add the following text: "Please select your favorite ball game and then press submit. The poll is anonymouse and does not contain names."
+6. Under the **H1** element, in the **P** element, add the following text: "Please select your favorite ball game and then press submit. The poll is anonymous and does not contain names."
 
 6. Below the **P** element, add a **FORM** element with the class name "submit-form".
 
@@ -193,7 +193,7 @@ The main tasks for this exercise are as follows:
      - Name: **selectedValue**
      - Value: **"favorite" query parameter**
 
-5. If the favorite query parameter exists in the request, print **Selected Value is = ** with the value of the ** selectedValue** variable to the browser using the **WriteAsync** method.
+5. If the "favorite" query parameter exists in the request, print **Selected Value is = ** with the value of the ** selectedValue** variable to the browser using the **WriteAsync** method.
 
 
 ####	Task 2: Run the application.
@@ -226,7 +226,7 @@ The main tasks for this exercise are as follows:
 
 7. Move the **app.UseStaticFiles** between the **app.Use** middleware and the **app.Run**.
 
-8. Comment out the code that present the case that the favorite query parameter does not exist.
+8. Comment out the code that present the case that the "favorite" query parameter does not exist.
 
 9. Start debugging the **PollBall** application.
 
@@ -237,7 +237,7 @@ The main tasks for this exercise are as follows:
 
 12. Stop debugging. 
 
-13. Uncomment the code that present the case that the favorite query parameter does not exist.
+13. Uncomment the code that present the case that the "favorite" query parameter does not exist.
 
 >**Result**: At the end of this exercise, you will be able to create a custom middleware and receive HTML form calls to it.
 
