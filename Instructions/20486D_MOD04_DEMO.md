@@ -1,4 +1,4 @@
-# Module 4: Developing Controllers**
+# Module 4: Developing Controllers
 
 # Lesson 1: Writing Controllers and Actions
 
