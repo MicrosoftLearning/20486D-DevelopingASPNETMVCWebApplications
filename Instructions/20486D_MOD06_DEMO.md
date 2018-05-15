@@ -101,11 +101,15 @@
 18. In the **DIV** element of the **Index.cshtml** code window, type the following code.
 
   ```cs
-       <p>@Model.Name</p>
-       <p>@Model.Address</p>
-       <p>@Model.Speciality</p>
-       <p>@Model.Open</p>
-       <p>@Model.Review</p>
+       <p><b>Name</b>: @Model.Name</p>
+       <hr />
+       <p><b>Address</b>: @Model.Address</p>
+       <hr />
+       <p><b>Speciality</b>: @Model.Speciality</p>
+       <hr />
+       <p><b>Is Open</b>: @Model.Open</p>
+       <hr />
+       <p><b>Rating</b>: @Model.Review</p>
 ```
    >**Note:** The Razor view engine runs this code and renders the Restaurant properties that was wrote in the model.
 
