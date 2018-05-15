@@ -35,19 +35,19 @@ In this exercise, you will create the MVC controller that handles user operation
 
 The main tasks for this exercise are as follows:
 
-1. Create the **City** and **Home** controllers.
+1. Add controllers to an MVC application.
 
-2. Create the **Index** action in both controllers.
+2. Add actions to a controller.
 
-3. Create the **Details** action in the **City** controller.
+3. Change actions to get a parameter.
 
-4. Create the **GetImage** action in the **City** controller.
+4. Change an action to redirect to another action in another controller.
 
-5. Change the **Index** action in the **Home** controller to redirect to the **Index** action in the **City** controller.
+5. Use a service.
 
-6. Use a service in the **City** controller.
+6. Store the result in a ViewBag property.
 
-7. Store information in a **ViewBag** property.
+7. Run the application.
 
 #### Task 1: Add controllers to an MVC application.
 
@@ -159,9 +159,13 @@ An important design priority for the application is that the visitors should be 
 
 The main tasks for this exercise are as follows:
 
-1. Create a **Traveler** controller.
+1. Add a controller with an action.
 
-2. Register new custom routes in the request pipeline.
+2. Run the application.
+
+3. Register new routes in the routing table.
+
+4. Run the application and verify the new route works.
 
 #### Task 1: Add a controller with an action.
 
@@ -219,9 +223,11 @@ The main tasks for this exercise are as follows:
 
 In addition to configuring routes by using the routing table, you have been asked to configure routes by using attributes as well, to enable the entry of user-friendly URLs.
 
-The main task for this exercise is as follows:
+The main tasks for this exercise is as follows:
 
--  Add custom routes to a **City** controller by using attributes.
+1. Apply custom routes to a controller using attributes.
+
+2. Run the application and verify the new routes work.
 
 #### Task 1: Apply custom routes to a controller using attributes.
 
@@ -263,7 +269,9 @@ The main tasks for this exercise are as follows:
 
 4. Add a handler for the **OnResultExecuted** event.
 
-5. Register the **Action** filter with the **City** controller.
+5. Apply the action filter to the controller action.
+
+6. Run the application and verify the new filter works.
 
 #### Task 1: Add an action filter class.
 
