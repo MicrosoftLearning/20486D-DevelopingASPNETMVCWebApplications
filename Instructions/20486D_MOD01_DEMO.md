@@ -53,7 +53,7 @@
        </div>
 ```
 
->**Note:** This code block represents the View that renders the home page.
+>**Note:** This code block represents part of the View that renders the home page.
 
 6. On the **DEBUG** menu of the **PhotoSharingSample - Microsoft Visual Studio** window, click **Start Debugging**.
 
