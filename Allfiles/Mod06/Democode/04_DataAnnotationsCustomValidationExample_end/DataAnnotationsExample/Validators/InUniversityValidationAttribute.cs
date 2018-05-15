@@ -14,7 +14,7 @@ namespace DataAnnotationsExample.Validators
             Student student = (Student)validationContext.ObjectInstance;
             if (!student.UniversityStudent)
             {
-                return new ValidationResult("Sorry you should be a student in the university to submit");
+                return new ValidationResult("Sorry you must be an student of the university in order to  submit");
             }
             return ValidationResult.Success;
         }
