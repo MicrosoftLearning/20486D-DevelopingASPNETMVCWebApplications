@@ -42,18 +42,10 @@
 5. In the **Index.cshtml** code window, locate the following code:
 
   ```cs
-       <div>
-            <span class="display-label">
-                @Html.DisplayNameFor(model => model.Description):
-            </span>
-            <br />
-            <span class="display-field">
-                @Html.DisplayFor(model => item.Description)
-            </span>
-       </div>
+       @model IEnumerable<PhotoSharingSample.Models.Photo>
 ```
 
->**Note:** This code block represents part of the View that renders the home page.
+>**Note:** This code block represents how the view accept the list of photo from the Index action.
 
 6. On the **DEBUG** menu of the **PhotoSharingSample - Microsoft Visual Studio** window, click **Start Debugging**.
 
@@ -124,7 +116,7 @@
        }
 ```
 
->**Note:** This code block represents the **GetImage** action of the **HomeController.cs**.
+>**Note:** This code block represents the **GetImage** action of the **HomeController** class.
 
 18. In the Solution Explorer pane, under **Views**, under **Home**, click **Index.cshtml**.
 
