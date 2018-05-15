@@ -74,7 +74,7 @@
     
 12. In the **Microsoft Edge** window, click **Close**.
 
-13. On the **DEBUG** Menu, click **Stop Debugging**.
+13. On the **DEBUG** menu of the **RazorSyntaxExample (Running) – Microsoft Visual Studio** window, click **Stop Debugging**.
 
 14. In the **Index.cshtml** code window, select the following code:
 ```cs
@@ -290,7 +290,7 @@
     <a asp-action="Index">Back to person selection list</a>
 ```
 
-13. On the **DEBUG** menu of the **HTMLHelpersExample – Microsoft Visual Studio** window, click **Start Debugging**.
+13. On the **DEBUG** menu of the **TagHelpersExample – Microsoft Visual Studio** window, click **Start Debugging**.
 
 14. In the **Microsoft Edge** window, click the **Employees** link.
     >**Note**: The browser displays a list of links, each link is a person's name.
@@ -306,7 +306,7 @@
 
 18. In the **Microsoft Edge** window, click **Close**.
 
-19. On the **Debug** Menu, click **Stop Debugging**.
+19. On the **DEBUG** menu of the **TagHelpersExample (Running) – Microsoft Visual Studio** window, click **Stop Debugging**.
 
 20. In the **Solution Explorer** pane of the **TagHelpersExample – Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New Item**.
 
@@ -338,7 +338,7 @@
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-29. On the **DEBUG** menu of the **HTMLHelpersExample – Microsoft Visual Studio** window, click **Start Debugging**.
+29. On the **DEBUG** menu of the **TagHelpersExample – Microsoft Visual Studio** window, click **Start Debugging**.
 
 30. In the **Microsoft Edge** window, click the **Employees** link.
     >**Note**: The link leads to the employees page which contains list of links. In each link there is a person's name.
@@ -354,7 +354,7 @@
 
 34. In the **Microsoft Edge** window, click **Close**.
 
-35. On the **Debug** Menu, click **Stop Debugging**.
+35. On the **DEBUG** menu of the **TagHelpersExample (Running) – Microsoft Visual Studio** window, click **Stop Debugging**.
 
 # Lesson 3: Reusing Code in Views
 
@@ -384,7 +384,7 @@
 ```cs
     _personList = PersonInitializer();
 ```
-    >**Note**: The **PersonInitializer** creates and populates a list of people, then returns the list into the **_personList** class member. You can access the list through the class indexer.
+>**Note**: The **PersonInitializer** creates and populates a list of people, then returns the list into the **_personList** class member. You can access the list through the class indexer.
 
 5. In the **Solution Explorer** pane of the **PartialViewExample - Microsoft Visual Studio** window, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
@@ -440,12 +440,12 @@
     </td>
 ```
 
-17. On the **DEBUG** menu of the **HTMLHelpersExample – Microsoft Visual Studio** window, click **Start Debugging**.
+17. On the **DEBUG** menu of the **PartialViewExample – Microsoft Visual Studio** window, click **Start Debugging**.
     >**Note**: A table with cards is show. Each card contains information of a person including: First name, last name, address, and a phone.
      
 18. In the **Microsoft Edge** window, click **Close**.
 
-19. On the **Debug** Menu, click **Stop Debugging**.
+19. On the **DEBUG** menu of the **PartialViewExample (Running) – Microsoft Visual Studio** window, click **Stop Debugging**.
 
 # Lesson 3: Reusing Code in Views
 
@@ -528,4 +528,4 @@
      
 22. In the **Microsoft Edge** window, click **Close**.
 
-23. On the **Debug** Menu, click **Stop Debugging**.
+23. On the **DEBUG** menu of the **ViewComponentExample (Running) – Microsoft Visual Studio** window, click **Stop Debugging**.
