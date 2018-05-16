@@ -382,7 +382,7 @@ The main tasks for this exercise are as follows:
 22. Add to **GetById** action **HttpGet**  attribute with the following information : 
      - template : **"/api/CakeStore/{id}"**
 
-23. In the **Startup.cs**, add **using** statement to the controller for the following namespace:
+23. In the **Startup.cs**, add **using** statement for the following namespace:
 
       - **CakeStoreApi.Models**
 
