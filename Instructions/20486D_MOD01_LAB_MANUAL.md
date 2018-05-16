@@ -34,7 +34,7 @@ The main tasks for this exercise are as follows:
 
 4. Run the application.
 
-#### Task 1: Creating a Razor Pages application.
+#### Task 1: Creating a Razor Pages application
 
 1. Start Visual Studio 2017, and create a new ASP.NET Core Web Application project with the following information:
 
@@ -46,7 +46,7 @@ The main tasks for this exercise are as follows:
 
 3. Stop Debugging.
 
-#### Task 2: Explore the application structure.
+#### Task 2: Explore the application structure
 
 1. Open **Startup.cs** and verify that MVC service is added to the service container.
 
@@ -60,7 +60,7 @@ The main tasks for this exercise are as follows:
 
 6. Open the **site.css** style sheet.
 
-#### Task 3: Add simple functionality.
+#### Task 3: Add simple functionality
 
 1. Add a new **Razor Page** to the **Pages** folder using the following information:
  
@@ -225,11 +225,11 @@ The main tasks for this exercise are as follows:
     - Content: **Actors**
     - End tag: **&lt;/a&gt;&lt;/li&gt;**
 
-#### Task 4: Run the application.
+#### Task 4: Run the application
 
 1. Save all the changes.
 
-2. **Start Debugging** the application.
+2. Start Debugging the application.
 
 3. View the **Test Page** and **Actors** pages you added.
 
@@ -257,7 +257,7 @@ The main tasks for this exercise are as follows:
 
 4. Run the application.
 
-#### Task 1: Creating a Web API application.
+#### Task 1: Creating a Web API application
 
 1. Start Visual Studio 2017, and create a new ASP.NET Core Web Application project with the following information:
 
@@ -265,7 +265,7 @@ The main tasks for this exercise are as follows:
     - Location: **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
     - Project template: **API**
 
-#### Task 2: Explore the application structure.
+#### Task 2: Explore the application structure
 
 1. Open **Startup.cs** and verify that MVC service is added to the service container.
 
@@ -277,7 +277,7 @@ The main tasks for this exercise are as follows:
 
 5. Stop Debugging.
 
-#### Task 3: Add simple functionality.
+#### Task 3: Add simple functionality
 
 1. Add a new folder to the application at the root level by using the following information:
 
@@ -388,11 +388,11 @@ The main tasks for this exercise are as follows:
 
 24. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
 
-#### Task 4: Run the application.
+#### Task 4: Run the application
 
 1. Save all the changes.
 
-2. **Start Debugging** the application, and access the following relative path:
+2. Start Debugging the application, and access the following relative path:
 
     - Path: **/api/CakeStore**
 
@@ -420,7 +420,7 @@ The main tasks for this exercise are as follows:
 
 4. Run the application.
 
-#### Task 1: Creating an MVC application.
+#### Task 1: Creating an MVC application
 
 1. Start Visual Studio 2017, and create a new ASP.NET Core Web Application project with the following information:
 
@@ -432,7 +432,7 @@ The main tasks for this exercise are as follows:
 
 3. Stop Debugging.
 
-#### Task 2: Explore the application structure.
+#### Task 2: Explore the application structure
 
 1. Open **Startup.cs** and verify that MVC service is added to the service container.
 
@@ -448,7 +448,7 @@ The main tasks for this exercise are as follows:
 
     >**Note:** This is the CSS **style sheet** file that applied in the **Layout.cshtml**.
 
-#### Task 3: Add simple functionality.
+#### Task 3: Add simple functionality
 
 1. In the **HomeController** Add a method for the **TestPage** action by using the following information:
 
@@ -627,11 +627,11 @@ The main tasks for this exercise are as follows:
 
 37. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
 
-#### Task 4: Run the application.
+#### Task 4: Run the application
 
 1. Save all the changes.
 
-2. **Start Debugging** the application.
+2. Start Debugging the application.
 
 3. View the **Test Page** and **Animals** pages you added.
 
