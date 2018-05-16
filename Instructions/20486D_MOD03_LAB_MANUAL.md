@@ -198,7 +198,7 @@ The main tasks for this exercise are as follows:
     - Name: **selectedValue**
     - Value: **"favorite" query parameter**
 
-5. If the "favorite" query parameter exists in the request, print **Selected Value is = ** with the value of the ** selectedValue** variable to the browser using the **WriteAsync** method.
+5. If the "favorite" query parameter exists in the request, print **Selected Value is: ** with the value of the ** selectedValue** variable to the browser using the **WriteAsync** method.
 
 ####	Task 2: Run the application.
 
@@ -210,7 +210,7 @@ The main tasks for this exercise are as follows:
 3. Select the **Basketball** radio button, and click the **Submit Query** button.
 
 4. Verify that the browser displays the text:<br>
-"Selected Value is = Basketball"
+"Selected Value is: Basketball"
 
 5. Stop debugging. 
 
