@@ -590,7 +590,7 @@ The main tasks for this exercise are as follows:
 
 28. If no animal with the right Id is found, return **NotFoundResult** using the **NotFound** method.
 
-29. If an animal with the right Id is found, return **ViewResult** using the view method passing it the **Animal** object as a parameter.
+29. If an animal with the right Id is found, return **ViewResult** using the **View** method passing it the **Animal** object as a parameter.
 
 30. Add the **images** existing files to the **images** folder from the following location:
 
