@@ -460,7 +460,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **TestPage**
     - Scaffold template: **Empty (without model)**  
-    - Use a layout page: **_Layout.cshtml**
+    - Use a layout page: **True**
 
 3. In the **TestPage.cshtml** replace the content, in the **H2** element with the following code:
 
@@ -532,7 +532,7 @@ The main tasks for this exercise are as follows:
 15. Add the **GetAnimalById** method to the **IData** interface by using the following information:
 
      - Return type: **Animal**
-     - Parameter: an Nullable integer named **Id**
+     - Parameter: an Nullable integer named **id**
      - Name: **GetAnimalById**
 
 16. Add the **Data.cs** existing file to the **Model** folder from the following location:
@@ -599,7 +599,7 @@ The main tasks for this exercise are as follows:
 
      - Name: **Index**
      - Scaffold template: **Empty (without model)**
-     - Use a layout page: **_Layout.cshtml**
+     - Use a layout page: **True**
  
 31. Delete the content in the **Index.cshtml**.
 
@@ -611,7 +611,7 @@ The main tasks for this exercise are as follows:
 
      - Name: **Details**
      - Scaffold template: **Empty (without model)**
-     - Use a layout page: **_Layout.cshtml**
+     - Use a layout page: **True**
  
 34. Delete the content in the **Details.cshtml**.
 
