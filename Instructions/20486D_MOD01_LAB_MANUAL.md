@@ -233,9 +233,11 @@ The main tasks for this exercise are as follows:
 
 3. View the **Test Page** and **Actors** pages you added.
 
-4. In the Actors window, click on the **Details** button, and then verify that the **Site.css** file is used to apply style.
+4. In the Actors window, click on the **Details** link.
 
-5. Close the Microsoft Edge window, and the Visual Studio application.
+5. Verify that the **site.css** file is used to apply style to all the pages.
+
+6. Close the Microsoft Edge window, and the Visual Studio application.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
 
@@ -633,7 +635,7 @@ The main tasks for this exercise are as follows:
 
 3. View the **Test Page** and **Animals** pages you added.
 
-4. In the **Animals** window, click on the **Details** button, and verify that the Site.css file is used to apply style.
+4. In the **Animals** window, click on the **Details** link, and verify that the Site.css file is used to apply style.
 
 5. Close the **Microsoft Edge** window and the Visual Studio application.
 
