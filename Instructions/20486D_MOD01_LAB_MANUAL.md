@@ -155,7 +155,7 @@ The main tasks for this exercise are as follows:
 
     - Return type: **Actor**
     - Name: **GetActorById**
-    - Parameter: an Nullable integer named **Id**
+    - Parameter: an Nullable integer named **id**
 
 19. Add **Data.cs** to the **Model** folder from the following location:
  
