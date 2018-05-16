@@ -446,7 +446,7 @@ The main tasks for this exercise are as follows:
 
 6. Open the **site.css** style sheet.
 
-    >**Note:** This is the CSS **style sheet** file that applied in the **Layout.cshtml**.
+    >**Note:** This is the CSS **style sheet** file that applied in the **_Layout.cshtml**.
 
 #### Task 3: Add simple functionality
 
@@ -460,6 +460,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **TestPage**
     - Scaffold template: **Empty (without model)**  
+    - Use a layout page: **_Layout.cshtml**
 
 3. In the **TestPage.cshtml** replace the content, in the **H2** element with the following code:
 
@@ -598,6 +599,7 @@ The main tasks for this exercise are as follows:
 
      - Name: **Index**
      - Scaffold template: **Empty (without model)**
+     - Use a layout page: **_Layout.cshtml**
  
 31. Delete the content in the **Index.cshtml**.
 
@@ -609,6 +611,7 @@ The main tasks for this exercise are as follows:
 
      - Name: **Details**
      - Scaffold template: **Empty (without model)**
+     - Use a layout page: **_Layout.cshtml**
  
 34. Delete the content in the **Details.cshtml**.
 
