@@ -45,7 +45,7 @@
        @model IEnumerable<PhotoSharingSample.Models.Photo>
 ```
 
->**Note:** This code block represents how the view accept the list of photo from the Index action.
+>**Note:** This code block represents how the view accepts the list of Photos from the Index action.
 
 6. On the **DEBUG** menu of the **PhotoSharingSample - Microsoft Visual Studio** window, click **Start Debugging**.
 
