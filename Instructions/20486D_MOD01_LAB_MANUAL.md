@@ -579,7 +579,7 @@ The main tasks for this exercise are as follows:
 
 25. Initiate the **Animals** property of the **indexViewModel** with the list of animals returned by the **AnimalsInitializeData** method of the **IData** parameter initialized in the constructor.
 
-26. return **ViewResult** using the **View** method passing it the **indexViewModel** as a parameter. 
+26. Return **ViewResult** using the **View** method passing it the **indexViewModel** as a parameter. 
 
 27. Add a method for the **Details** action by using the following information:
 
