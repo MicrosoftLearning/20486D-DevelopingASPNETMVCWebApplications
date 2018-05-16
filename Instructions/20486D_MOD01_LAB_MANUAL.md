@@ -79,7 +79,7 @@ The main tasks for this exercise are as follows:
 
     - Content: **This is a Test Page**
 
-5. Add a link to the **_Layout.cshtml**, in the **UL** element, by using the following information:
+5. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information:
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-page=&quot;/TestPage&quot;**
@@ -186,7 +186,7 @@ The main tasks for this exercise are as follows:
      - Class: **IData**
      - Name: **_data**
      
-     Initialize the new object in the **Index.cshtml.cs** constructor with the value **IData data**.
+     Initialize the new field in the **Index.cshtml.cs** constructor with the value of the **data** parameter.
    
 26. Add the **Actors** property to the **Index.cshtml.cs** by using the following information:
 
@@ -218,7 +218,7 @@ The main tasks for this exercise are as follows:
 
 33.  In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
 
-34. Add a link to the **_Layout.cshtml**, in the **UL** element, by using the following information:
+34. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information:
  
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-page=&quot;/Actors/Index&quot;**
@@ -346,7 +346,7 @@ The main tasks for this exercise are as follows:
     - Class: **IData**
     - Name: **_data**
 
-    Initialize the new field in the **CakeStoreApiController** constructor with the value **IData data**.
+    Initialize the new field in the **CakeStoreApiController** constructor with the value of the  **data** parameter.
  
 15. Add a method for the **GetAll** action by using the following information:
  
@@ -463,7 +463,7 @@ The main tasks for this exercise are as follows:
 
     - Content: **This is a Test Page**
 
-4. Add a link to the **_Layout.cshtml**, in the **UL** element, by using the following information:
+4. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information:
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**
@@ -564,7 +564,7 @@ The main tasks for this exercise are as follows:
     - Class: **IData**
     - Name: **_tempData**
 
-    Initialize the new field in the **AnimalsController** constructor with the value **IData data**.
+    Initialize the new field in the **AnimalsController** constructor with the value of the **data** parameter.
  
 23. Add a method for the **Index** action by using the following information:
 
@@ -614,7 +614,7 @@ The main tasks for this exercise are as follows:
  
      - **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
-36. Add a link to the **_Layout.cshtml**, in the **UL** element, by using the following information
+36. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**
