@@ -180,7 +180,7 @@ The main tasks for this exercise are as follows:
 
     - **ActorsRazorPages.Models**
 
-25. In the **Index.cshtml.cs**, create a new private object using the following information:
+25. In the **Index.cshtml.cs**, create a new field object using the following information:
  
      - Scope: **private**
      - Class: **IData**
