@@ -577,7 +577,7 @@ The main tasks for this exercise are as follows:
 
 24. In the **Index** action, create a new instance of type **IndexViewModel**.
 
-25. Initiate the **Animals** property from the **IndexViewModel** with the **AnimalsInitializeData** method from the **IData** parameter initialized in the constructor,  and then return the **animals** list to the **Index** view.
+25. Initiate the **Animals** property of the **IndexViewModel** with the **AnimalsInitializeData** method from the **IData** parameter initialized in the constructor,  and then return the **animals** list to the **Index** view.
 
 26. Add a method for the **Details** action by using the following information:
 
@@ -590,7 +590,7 @@ The main tasks for this exercise are as follows:
 
 28. If no animal with the right Id is found, return **NotFoundResult** using the **NotFound** method.
 
-29. If an animal with the right Id is found, return the **Animal** object to the **Details** view.
+29. If an animal with the right Id is found, return **ViewResult** using the view method passing it the **Animal** object as a parameter.
 
 30. Add the **images** existing files to the **images** folder from the following location:
 
