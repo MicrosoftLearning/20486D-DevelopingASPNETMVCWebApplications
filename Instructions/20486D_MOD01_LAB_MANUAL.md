@@ -157,7 +157,7 @@ The main tasks for this exercise are as follows:
     - Name: **GetActorById**
     - Parameter: an Nullable integer named **id**
 
-19. Add **Data.cs** to the **Model** folder from the following location:
+19. Add **Data.cs** to the **Models** folder from the following location:
  
      - **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
 
