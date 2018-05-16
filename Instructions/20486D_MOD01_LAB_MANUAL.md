@@ -575,52 +575,54 @@ The main tasks for this exercise are as follows:
      - Return Type: **IActionResult**
      - Name: **Index**
 
-24. In the **Index** action, create a new instance of type **IndexViewModel**.
+24. In the **Index** action, create a new instance named **indexViewModel** of type **IndexViewModel**.
 
-25. Initiate the **Animals** property of the **IndexViewModel** with the **AnimalsInitializeData** method from the **IData** parameter initialized in the constructor,  and then return the **animals** list to the **Index** view.
+25. Initiate the **Animals** property of the **indexViewModel** with the list of animals returned by the **AnimalsInitializeData** method of the **IData** parameter initialized in the constructor.
 
-26. Add a method for the **Details** action by using the following information:
+26. return **ViewResult** using the **View** method passing it the **indexViewModel** as a parameter. 
+
+27. Add a method for the **Details** action by using the following information:
 
     - Scope: **public**
     - Return Type: **IActionResult**
     - Name: **Details**
     - Parameters: One nullable integer called **id**
 
-27. Within the **Details** action code block, add code to find a single **Animal** object from its **Id**.
+28. Within the **Details** action code block, add code to find a single **Animal** object from its **Id**.
 
-28. If no animal with the right Id is found, return **NotFoundResult** using the **NotFound** method.
+29. If no animal with the right Id is found, return **NotFoundResult** using the **NotFound** method.
 
-29. If an animal with the right Id is found, return **ViewResult** using the **View** method passing it the **Animal** object as a parameter.
+30. If an animal with the right Id is found, return **ViewResult** using the **View** method passing it the **Animal** object as a parameter.
 
-30. Add the **images** existing files to the **images** folder from the following location:
+31. Add the **images** existing files to the **images** folder from the following location:
 
     -  **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Images**     
 
-31.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
+32.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
 
      - Name: **Index**
      - Scaffold template: **Empty (without model)**
      - Use a layout page: **True**
  
-32. Delete the content in the **Index.cshtml**.
+33. Delete the content in the **Index.cshtml**.
 
-33. Open the **Indexcshtml.txt** existing file and copy all the content into the **Index.cshtml** from the following location:
+34. Open the **Indexcshtml.txt** existing file and copy all the content into the **Index.cshtml** from the following location:
 
      - **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
-34.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
+35.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
 
      - Name: **Details**
      - Scaffold template: **Empty (without model)**
      - Use a layout page: **True**
  
-35. Delete the content in the **Details.cshtml**.
+36. Delete the content in the **Details.cshtml**.
 
-36. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
+37. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
  
      - **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
-37. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information
+38. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**
@@ -629,7 +631,7 @@ The main tasks for this exercise are as follows:
     - Content: **Animals**
     - End tag: **&lt;/a&gt;&lt;/li&gt;** 
 
-38. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
+39. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
 
 #### Task 4: Run the application
 
