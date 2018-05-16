@@ -77,7 +77,7 @@ The main tasks for this exercise are as follows:
 ####	Task 2: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
-    > **Note**: The browser displays a list of the city names.
+    > **Note**: The browser displays a list of city names.
 
 2. Close the **Microsoft Edge** window.
 
@@ -157,13 +157,13 @@ The main tasks for this exercise are as follows:
     - Target page: **ShowDataForCity**
     - Parameter name: **City**
     - Parameter value: City name
-        
+  
     > **Note**: The key of the  **CityProvider** item contains the city name.
 
 ####	Task 6: Run the application.
 
 1. Run the new ASP.NET Core application in **Microsoft Edge** and review the page's output.
-    > **Note**: The browser displays a list of the city names is shown, each name is a link to its city's details page.
+    > **Note**: The browser displays a list of city names, each name is a link to its city's details page.
 
 2.  In the **Microsoft Edge** window, click the **London** link.
     > **Note**: The browser displays the city's name, details, mini map and a **Back** link.
