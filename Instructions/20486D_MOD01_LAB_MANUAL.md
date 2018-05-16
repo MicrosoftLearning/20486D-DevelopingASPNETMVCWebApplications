@@ -44,7 +44,7 @@ The main tasks for this exercise are as follows:
 
 2. Run the new Razor Pages application in **Microsoft Edge**, and view the **Contact** page.
 
-3. **Stop Debugging**.
+3. Stop Debugging.
 
 #### Task 2: Explore the application structure.
 
@@ -271,11 +271,11 @@ The main tasks for this exercise are as follows:
 
 2. In the **Startup.cs**, verify that MVC is added to the request execution pipeline.
 
-3.  Open the  **ValuesController.cs** inside the **Controller** folder, and verify  that the **Get** method returns **value1** and **value2**.
+3.  Open the  **ValuesController.cs** inside the **Controllers** folder, and verify  that the **Get** method returns **value1** and **value2**.
 
 4. Run the website in Microsoft Edge, and view the content in the browser.
 
-5. **Stop Debugging**.
+5. Stop Debugging.
 
 #### Task 3: Add simple functionality.
 
@@ -308,7 +308,7 @@ The main tasks for this exercise are as follows:
    - Data type: **integer**
    - Access: **Read and write**
  
-6. Add a new interface called **IData** to the Models folder in the project.
+6. Add a new interface called **IData** to the **Models** folder in the project.
 
 7. Set **public** scope to the new interface.
 
@@ -327,9 +327,9 @@ The main tasks for this exercise are as follows:
 
     - Return type: **CakeStore**
     - Name: **GetCakeById**
-    - Parameter: an Nullable integer named **Id**
+    - Parameter: an Nullable integer named **id**
 
-11. Add the **Data.cs** to the **Model** folder from the following location:
+11. Add the **Data.cs** to the **Models** folder from the following location:
  
      - **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
 
@@ -430,7 +430,7 @@ The main tasks for this exercise are as follows:
 
 2. Run the new MVC application in **Microsoft Edge** window, and view **Contact** page.
 
-3. **Stop Debugging**.
+3. Stop Debugging.
 
 #### Task 2: Explore the application structure.
 
