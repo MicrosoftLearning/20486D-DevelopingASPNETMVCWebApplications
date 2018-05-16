@@ -90,7 +90,7 @@
        public class HomeController : Controller
 ```
 
->**Note:** This code block represents that the **HomeController** inherits the Controller base class which is in the namespace **Microsoft.AspNetCore.Mvc**.
+>**Note:** This code block represents that the **HomeController** inherits from the Controller base class which is in the namespace **Microsoft.AspNetCore.Mvc**.
 
 17. In the **HomeController.cs** code window, locate the following code:
 
