@@ -176,7 +176,7 @@ The main tasks for this exercise are as follows:
 
 23. In the **Index.cshtml.cs** code window, delete the **OnGet** function code.
 
-24. In the **Index.cshtml.cs** code window, add **using** statements for the following namespaces:
+24. In the **Index.cshtml.cs** code window, add **using** statement for the following namespace:
 
     - **ActorsRazorPages.Models**
 
@@ -212,7 +212,7 @@ The main tasks for this exercise are as follows:
 
       - **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**   
 
-32. In the **Startup.cs** code window , add **using** statements for the following namespaces:
+32. In the **Startup.cs** code window , add **using** statement for the following namespace:
 
     - **ActorsRazorPages.Models**
 
@@ -338,7 +338,7 @@ The main tasks for this exercise are as follows:
     - Controller name: **CakeStoreApiController**
     - Template: **API Controller - Empty**
  
-13. Add **using** statements to the controller for the following namespaces
+13. Add **using** statement to the controller for the following namespace:
 
     - **CakeStoreApi.Models**
 
@@ -382,7 +382,7 @@ The main tasks for this exercise are as follows:
 22. Add to **GetById** action **HttpGet**  attribute with the following information : 
      - template : **"/api/CakeStore/{id}"**
 
-23. In the **Startup.cs**, add **using** statements to the controller for the following namespaces:
+23. In the **Startup.cs**, add **using** statement to the controller for the following namespace:
 
       - **CakeStoreApi.Models**
 
@@ -554,7 +554,7 @@ The main tasks for this exercise are as follows:
      - Controller name: **AnimalsController**
      - Template: **MVC Controller - Empty**
 
-20. Add **using** statements to the controller for the following namespaces:
+20. Add **using** statement to the controller for the following namespace:
 
       - **AnimalMvc.Models**
 
