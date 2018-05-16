@@ -186,7 +186,7 @@ The main tasks for this exercise are as follows:
      - Class: **IData**
      - Name: **_data**
      
-     Initialize the new field in the **Index.cshtml.cs** constructor with the value of the **data** parameter.
+     Initialize the new field in the **Index.cshtml.cs** constructor with the value of the **IData** parameter.
    
 26. Add the **Actors** property to the **Index.cshtml.cs** by using the following information:
 
@@ -348,7 +348,7 @@ The main tasks for this exercise are as follows:
     - Class: **IData**
     - Name: **_data**
 
-    Initialize the new field in the **CakeStoreApiController** constructor with the value of the  **data** parameter.
+    Initialize the new field in the **CakeStoreApiController** constructor with the value of the **IData** parameter.
  
 15. Add a method for the **GetAll** action by using the following information:
  
@@ -567,59 +567,60 @@ The main tasks for this exercise are as follows:
     - Class: **IData**
     - Name: **_tempData**
 
-    Initialize the new field in the **AnimalsController** constructor with the value of the **data** parameter.
+    Initialize the new field in the **AnimalsController** constructor with the value of the **IData** parameter.
  
 23. Add a method for the **Index** action by using the following information:
 
      - Scope: **public**
      - Return Type: **IActionResult**
      - Name: **Index**
-     - Model: **_tempData.AnimalsInitializeData()**
 
-24. In the **Index** action, initiate the **Animals** property from the **IndexViewModel** with the view **Model**, and return the **animals** list to the **Index** view.
+24. In the **Index** action, create a new instance of type **IndexViewModel**.
 
-25. Add a method for the **Details** action by using the following information:
+25. Initiate the **Animals** property from the **IndexViewModel** with the **AnimalsInitializeData** method from the **IData** parameter initialized in the constructor,  and then return the **animals** list to the **Index** view.
+
+26. Add a method for the **Details** action by using the following information:
 
     - Scope: **public**
     - Return Type: **IActionResult**
     - Name: **Details**
     - Parameters: One nullable integer called **id**
 
-26. Within the **Details** action code block, add code to find a single **Animal** object from its **Id**.
+27. Within the **Details** action code block, add code to find a single **Animal** object from its **Id**.
 
-27. If no animal with the right Id is found, return **NotFoundResult** using the **NotFound** method.
+28. If no animal with the right Id is found, return **NotFoundResult** using the **NotFound** method.
 
-28. If an animal with the right Id is found, return the **Animal** object to the **Details** view.
+29. If an animal with the right Id is found, return the **Animal** object to the **Details** view.
 
-29. Add the **images** existing files to the **images** folder from the following location:
+30. Add the **images** existing files to the **images** folder from the following location:
 
     -  **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Images**     
 
-30.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
+31.  Add a new view to the **Index** action in the **AnimalsController** by using the following information:
 
      - Name: **Index**
      - Scaffold template: **Empty (without model)**
      - Use a layout page: **True**
  
-31. Delete the content in the **Index.cshtml**.
+32. Delete the content in the **Index.cshtml**.
 
-32. Open the **Indexcshtml.txt** existing file and copy all the content into the **Index.cshtml** from the following location:
+33. Open the **Indexcshtml.txt** existing file and copy all the content into the **Index.cshtml** from the following location:
 
      - **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
-33.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
+34.  Add a new view to the **Details** action in the **AnimalsController** by using the following information:
 
      - Name: **Details**
      - Scaffold template: **Empty (without model)**
      - Use a layout page: **True**
  
-34. Delete the content in the **Details.cshtml**.
+35. Delete the content in the **Details.cshtml**.
 
-35. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
+36. Open the **Detailscshtml.txt** existing file and copy the content into the **Details.cshtml** from the following location:
  
      - **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
-36. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information
+37. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information
 
     - Start tag: **&lt;li&gt;<a**
     - Attribute: **asp-area=&quot;&quot;**
@@ -628,7 +629,7 @@ The main tasks for this exercise are as follows:
     - Content: **Animals**
     - End tag: **&lt;/a&gt;&lt;/li&gt;** 
 
-37. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
+38. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
 
 #### Task 4: Run the application
 
@@ -638,13 +639,15 @@ The main tasks for this exercise are as follows:
 
 3. View the **Test Page** and **Animals** pages you added.
 
-4. In the **Animals** window, click on the **Details** link, and verify that the Site.css file is used to apply style.
+4. In the **Animals** window, click on the **Details** link.
 
-5. Close the **Microsoft Edge** window and the Visual Studio application.
+5. Verify that the **site.css** file is used to apply style to all the pages.
+
+6. Close the **Microsoft Edge** window and the Visual Studio application.
 
 >**Results**: At the end of this exercise, you will be able to build a simple MVC application in Visual Studio.
 
-©2016 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 
