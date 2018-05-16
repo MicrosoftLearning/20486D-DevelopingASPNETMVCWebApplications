@@ -54,7 +54,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Plan the photo model class.
 
-1. Open the **DetailedPlanningDocument** document, and locate the MVC Model section.
+1. Open the **DetailedPlanningDocument** document, and locate the "MVC Model" section.
     - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
 
 2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model** using the following information:
@@ -141,13 +141,13 @@ The main tasks for this exercise are as follows:
 
 23. In the **Description** property, change the property return type to **string**.
 
-25. In the **CreatedDate** property, change the property return type to **DateTime**.
+24. In the **CreatedDate** property, change the property return type to **DateTime**.
 
-26. Save the created diagram.
+25. Save the created diagram.
 
 #### Task 3: Plan the comment model class.
 
-1. Open the **DetailedPlanningDocument** document, and locate the MVC Model section.
+1. In the **DetailedPlanningDocument**, locate the "MVC Model" section.
 
 2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for comments in **Table 1: MVC Model** using the following information:
     - Class name: **Comment**
@@ -185,43 +185,44 @@ The main tasks for this exercise are as follows:
 10. In **ModelDesign.cd**, drag a new **Class** object to the class diagram using the following information:
     - Class name: **Comment**
 
-11. In the **Comment** class diagram, add a property using the following information:
+11. In **ModelDesign.cd**, connect the **Photo** class to the **Comment** class using the association object from the toolbox.
+
+12. Change the association name to **PhotoComments**.
+
+13. In **Photo.cs**, change the **PhotoComments** property type to List<Comment>.
+
+14. In **Photo.cs**, change the **PhotoComments** property return type to List<Comment>.
+
+15. In **ModelDesign.cd**, change the **PhotoComments** property to **Show as Collection Association**.
+
+16. In the **Comment** class diagram, add a property using the following information:
     - Property name: **CommentID**
     - Data type: **int**
 
-12. Add a property using the following information:
+17. Add a property using the following information:
     - Property name: **User**
     - Data type: **string**
 
-13. Add a property using the following information:
+18. Add a property using the following information:
     - Property name: **Subject**
     - Data type: **string**
 
-14. Add a property using the following information:
+19. Add a property using the following information:
     - Property name: **Body**
     - Data type: **string**
 
-15. Add a property using the following information:
+20. Add a property using the following information:
     - Property name: **PhotoID**
     - Data type: **int**
 
-16. In **Comment.cs**, in the **User** property, change the property return type to **string**.
+21. In **Comment.cs**, in the **User** property, change the property return type to **string**.
 
-17. In the **Subject** property, change the property return type to **string**.
+22. In the **Subject** property, change the property return type to **string**.
 
-18. In the **Body** property, change the property return type to **string**.
-
-19. In **ModelDesign.cd**, connect the **Photo** class to the **Comment** class using the association object from the toolbox.
-
-20. Change the association name to **PhotoComments**.
-
-21. In **Photo.cs**, change the **PhotoComments** property type to List<Comment>.
-
-22. In **Photo.cs**, change the **PhotoComments** property return type to List<Comment>.
-
-23. In **ModelDesign.cd**, change the **PhotoComments** property to **Show as Collection Association**.
+23. In the **Body** property, change the property return type to **string**.
 
 24. Save the created diagram.
+
 
 >**Results** : After completing this exercise, you will be able to create proposals for a model, and configure the properties and data types of the model classes.
 
@@ -239,7 +240,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Plan the photo controller.
 
-1. Open the **DetailedPlanningDocument** document, and locate the MVC Controllers section.
+1. In the **DetailedPlanningDocument**, locate the "MVC Controllers" section.
 
 2. Based on your reading of the **InitialInvestigation** document, add and describe a controller for photos in **Table 2: MVC Controllers** using the following information:
     - Controller name: **PhotoController**
@@ -283,25 +284,27 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Plan the comment controller.
 
-1. Based on your reading of the **InitialInvestigation** document, add and describe a controller for comments in **Table 2: MVC Controllers** using the following information:
+1. In the **DetailedPlanningDocument**, locate the "MVC Controllers" section.
+
+2. Based on your reading of the **InitialInvestigation** document, add and describe a controller for comments in **Table 2: MVC Controllers** using the following information:
     - Controller name: **CommentController**
 
-2. In **Table 2: MVC Controllers**, add an action using the following information:
+3. In **Table 2: MVC Controllers**, add an action using the following information:
     - Controller name: **CommentController**
     - Action name: **DisplayComments (GET)**
     - Action description: **This action runs when the user clicks the “Add a Comment” link in the DisplayPhoto view. The action creates a new instance of the Comment model class and sets its PhotoID to be the ID of the current Photo. It passes this new comment to the AddComment view**
 
-3. In **Table 2: MVC Controllers**, add an action using the following information:
+4. In **Table 2: MVC Controllers**, add an action using the following information:
     - Controller name: **CommentController**
     - Action name: **AddComment (GET)**
     - Action description: **This action runs when the user clicks “Submit” in the AddComment view. The action saves the details of the new comment in the database and redirects the user to the DisplayPhoto view**
 
-4. In **Table 2: MVC Controllers**, add an action using the following information:
+5. In **Table 2: MVC Controllers**, add an action using the following information:
     - Controller name: **CommentController**
     - Action name: **AddComment (POST)**
     - Action description: **This action runs when the user clicks the “Add a Comment” link in the DisplayPhoto view. The action creates a new instance of the Comment model class and sets its PhotoID to be the ID of the current Photo. It passes this new comment to the AddComment view**
 
-5. Merge all the rows in the **Controller** column that belong to the **CommentController** controller, and save the document.
+6. Merge all the rows in the **Controller** column that belong to the **CommentController** controller, and save the document.
 
 >**Results** : After completing this exercise, you will be able to create proposals for controllers, and configure their properties and data types.
 
@@ -327,22 +330,22 @@ The main tasks for this exercise are as follows:
 2. In **Table 3: MVC Views**, add a view using the following information:
     - Controller name: **PhotoController**
     - View name: **DisplayGallery**
-    - Action description: **This view displays a collection of Photos at thumbnail size. For each photo the Title, Owner, and Created Date values are displayed**
+    - Action description: **This view displays a collection of photos in the thumbnail size. For each photo the Title, Owner, and Created Date values are displayed.**
 
 3. In **Table 3: MVC Views**, add a view using the following information:
     - Controller name: **PhotoController**
     - View name: **DisplayPhoto**
-    - Action description: **This view displays a single Photo at full size. The Title and Owner are displayed above the photo. The Photo Description, Created Date, and other values are displayed beneath the photo. Under these details, all the Comments for the current Photo are listed, with an “Add a Comment” link**
+    - Action description: **This view displays a single photo in full size. The Title and Owner values appear above the photo. The Photo Description, Created Date, and other values appear beneath the photo. Under these details, all the comments for the current photo are listed with an “Add a Comment” link**
 
 4. In **Table 3: MVC Views**, add a view using the following information:
     - Controller name: **PhotoController**
     - View name: **AddPhoto**
-    - Action description: **This view displays a form with which the user can upload and describe a new Photo**
+    - Action description: **This view displays a form that the user can use to upload and describe a new photo**
 
 5. In **Table 3: MVC Views**, add a view using the following information:
     - Controller name: **PhotoController**
     - View name: **DeletePhoto**
-    - Action description: **This view displays a form with which the user can confirm a Photo deletion. The view displays details of the current Photo, such as its Title and Description**
+    - Action description: **This view displays a form that the user can use to confirm the deletion of a photo. The view displays details of the current photo such as its title and description**
 
 6. Merge all the rows in the **Controller** column that belong to the **PhotoController** controller, and save the document.
 
@@ -375,11 +378,11 @@ The main tasks for this exercise are as follows:
     - Height: **1100**
     - WindowStyle: **None**
 
-5. Drag a **Label** from the **Toolbox** to the top left corner of the screen and use following information:
+5. Drag a **Label** from the Toolbox to the top left corner of the screen using the following information:
     - Content: **Adventure Works Photo Sharing**
     - Text size: **20 px**
 
-6. Drag a **Canvas** below the label and use following information:
+6. Drag a **Canvas** below the label and set its properties using the following information:
     - Background style: **Solid color brush**
     - Background R: **150**
     - Background G: **175**
@@ -387,7 +390,7 @@ The main tasks for this exercise are as follows:
     - Width: **400**
     - Height: **40**
 
-7. Drag a **Button** into the left side of the canvas and use following information:
+7. Select the canvas and drag a **Button** into the left side of it, set its properties using the following information:
     - Content: **Home**
     - Background style: **Solid color brush**
     - Background R: **31**
@@ -398,32 +401,32 @@ The main tasks for this exercise are as follows:
     - Foreground G: **255**
     - Foreground B: **255**
 
-8. Copy the button and paste it to the right side of the previous button. Change its content to **Gallery**.
+8. Copy the **Button** and paste it to the right side of the previous button. Change its content to **Gallery**.
 
-9. Paste the button again, and place it to the right side of the last pasted button. Change its content to **Photo**.
+9. Paste the **Button** again, and place it to the right side of the last pasted button. Change its content to **Photo**.
 
-10. Paste the button again, and place it to the right side of the last pasted button. Change its content to **Slideshow**.
+10. Paste the **Button** again, and place it to the right side of the last pasted button. Change its content to **Slideshow**.
 
-11. Drag a **Label** below the left side of the canvas and use following information:
+11. Drag a **Label** below the left side of the canvas using the following information:
     - Content: **Title**
     - Text size: **20 px**
 
-12. Drag a **Label** below the last created label and use following information:
+12. Drag a **Label** below the last created label using the following information:
     - Content: **By: Owner**
 
-13. Add existing item to the current project main directory using the following information:
+13. Add an existing item to the current project main directory using the following information:
     - File path: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
     - File name: **photo.jpg**
 
-14. Drag an **Image** below the last created label and use following information:
+14. Drag an **Image** below the last created label using the following information:
     - Source: **photo.jpg**
     - Width: **400**
     - Height: **240**
 
-15. Drag a **Label** below the left side of the image and use following information:
+15. Drag a **Label** below the left side of the image using the following information:
     - Content: **Description:**
 
-16. Drag a **Label** below the last created label and use following information:
+16. Drag a **Label** below the last created label using the following information:
     - Content: **Photo Description...**
     - Width: **300**
     - Height: **150**
@@ -433,10 +436,10 @@ The main tasks for this exercise are as follows:
     - BorderBrush B: **0**
     - Border Thickness: **2 (In each one of the 4 boxes)**
 
-17. Drag a **Label** below the left side of the canvas and use following information:
+17. Drag a **Label** below the left side of the canvas using the following information:
     - Content: **Comments:**
 
-18. Drag a **Canvas** below the label and use following information:
+18. Drag a **Canvas** below the label using the following information:
     - Width: **300**
     - Height: **130**
     - Background style: **Solid color brush**
@@ -444,20 +447,18 @@ The main tasks for this exercise are as follows:
     - Background G: **175**
     - Background B: **207**
 
-19. Drag a **Label** into the top left corner of the canvas and use following information:
+19. Select the canvas, and drag a **Label** into the top left corner of it. Set its properties using the following information:
     - Content: **From:**
 
-20. Drag a **Label** into the canvas, below the last created label and use following information:
+20. Select the canvas, and drag a **Label** into it. Place it below the last created label, and set it properties using the following information:
     - Content: **Subject:**
 
-21. Drag a **Label** into the canvas, below the last created label and use following information:
+21. Select the canvas, and drag a **Label** into it. Place it below the last created label, and set it properties using the following information:
     - Content: **Body:**
 
-22. Copy the canvas we created and filled with labels.
+22. Copy the Canvas, and paste it below the last copied canvas.
 
-23. Paste the canvas below the last copied canvas.
-
-24. Drag a **TextBlock** below the left side of the canvas and use following information:
+23. Drag a **TextBlock** below the left side of the canvas using the following information:
     - Content: **Add a Comment**
     - Foreground style: **Solid Color Brush**
     - Foreground R: **0**
@@ -475,43 +476,42 @@ The main tasks for this exercise are as follows:
     - Height: **600**
     - WindowStyle: **None**
 
-3. Drag a **Label** to the top left corner of the screen and use following information:
+3. Drag a **Label** to the top left corner of the screen using the following information:
     - Content: **Adventure Works Photo Sharing**
     - Text size: **20 px**
 
 4. In the **SinglePhotoView.xaml** copy the canvas that contains 4 buttons.
 
-5. In the **PhotoGalleryView.xaml** paste the canvas below the label.
+5. In the **PhotoGalleryView.xaml** paste the canvas, and place it below the label.
 
-6. Drag a **Canvas** below the last created canvas and use following information:
+6. Drag a **Canvas** below the last created canvas using the following information:
     - Width: **150**
     - Height: **190**
-    - Background style: **None**
     - Background R: **150**
     - Background G: **175**
     - Background B: **207**
 
-7. Drag a **Label** into the to left corner of the canvas and use following information:
+7. Select the canvas, and drag a **Label** into it. Place it in the left corner of the canvas, and set it properties using the following information:
     - Content: **Title**
 
-8. Drag a **Label** into the canvas below the label and use following information:
+8. Select the canvas, and drag a **Label** into it. Place it in the canvas, below the previous Label, and set it properties using the following information:
     - Content: **By: Owner**
 
-9. Drag a **Image** into the canvas below the label and use following information:
+9. Select the canvas, and drag a **Image** into it. Place it in the canvas, below the previous Label, and set it properties using the following information:
     - Source: **photo.jpg**
     - Width: **100**
     - Height: **100**
 
-10. Drag a **Label** below the last created image and use following information:
+10. Select the canvas, and drag a **Label** into it. Place it in the canvas, below the Image, and set it properties using the following information:
     - Content: **Created On: Date**
 
 11. Copy the canvas that contains the image.
 
-12. Paste the canvas to the right side of the copied canvas.
+12. Paste the canvas in the right side of the copied canvas.
 
 13. Paste another canvas below the last pasted canvas.
 
-14. Paste the canvas to the left of the last pasted canvas.
+14. Paste another canvas to the left of the last pasted canvas.
 
 >**Results** : After completing this exercise, you will create proposals for views and their layouts.
 
@@ -530,11 +530,13 @@ The main tasks for this exercise are as follows:
 #### Task 1: Hosting options.
 
 1. Based on your reading of the **InitialInvestigation** document, add a description of the web server arrangements using the following information:
+
     - Description: **The author recommends using Microsoft Azure to host the Photo Sharing application. Microsoft Azure can host any ASP.NET website, including the ASP.NET Core MVC application proposed in this document. Scaling is very simple because Microsoft, not Adventure Works, is responsible for adding server resources at times of high traffic. Costs are minimal: they depend on the amount of data served to visitors but it is not necessary to maintain our own hardware.**
 
 #### Task 2: Choose a data store.
 
 2. Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements using the following information:
+
     - Description: **DetailedPlanningDocument(docx) - Microsoft Word** window, type **The author recommends using SQL Database, within Microsoft Azure, to host the Photo Sharing application underlying database. As for the web server, this recommendation ensures high-availability hosting for the database with good value for money. This makes particular sense if the web site is hosted in Microsoft Azure.**
 
 
