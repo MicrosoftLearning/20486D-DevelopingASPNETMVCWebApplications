@@ -1,0 +1,117 @@
+﻿body {
+    color: #130606;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif, serif;
+    font-weight: 200;
+}
+
+.main-titel {
+    color: #009cba;
+    font-family: 'Times New Roman', Times, serif, serif;
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 5px #6d6565;
+}
+
+.into {
+    color: rgb(85, 85, 85);
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif, serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.sitetitle {
+    color:#130606;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif, serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 1px rgb(128, 128, 128);
+}
+
+.worldmap {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:1000px;
+    width: 1000px;
+    border-color: rgb(85, 85, 85);
+    border-width: 5px;
+    border-style: solid;
+}
+
+.display-span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.details {
+    text-align:center;
+    margin:25px 5px 15px 5px;
+}
+
+.display-field {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    text-align: right;
+}
+
+.photo-display-img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: rgb(85, 85, 85);
+    border-width: 1px;
+    border-style: groove;
+}
+
+.photo-index-card {
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin: 15px;
+    height: 250px;
+    width: 355px;
+    float: left;
+    box-shadow: 0 0 10px #686868;
+    border-radius: 5px;
+}
+
+.photo-img {
+    width: 350px;
+    margin: 10px 5px 15px 5px;
+}
+
+.button {
+    width: 95px;
+    height: 45px;
+    background: #bdb5b5;
+    color: aliceblue;
+    font-size: 15px;
+    float: inherit;
+    margin: 10px;
+}
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button-center a {
+    width: 100px;
+    text-align: center;
+    background-color: #0ba9c7;
+    padding: 20px;
+    font-size: 20px;
+    display: block;
+    color: white;
+    border: 3px solid #d4d4d4;
+    border-radius: 5px;
+    margin: 50px auto;
+}

@@ -1,0 +1,43 @@
+﻿@model AnimalsMvc.Models.Animal
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Animal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UniqueInformation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UniqueInformation)
+        </dd>
+    </dl>
+
+    <div style="padding:10px;">
+        @if (Model.ImageName != "")
+        {
+            <img src="~/images/@Model.ImageName" alt="Sample Image" height="300" />
+        }
+
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
