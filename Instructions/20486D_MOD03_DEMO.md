@@ -194,8 +194,6 @@
  
 10. Right-click the selected files, and then click **Copy**.
 
-
-
 12.  In the **wwwroot** window, right-click an empty space, and then click **Paste**. 
     >**Note**: In the **Solution Explorer** pane of the **StaticFilesExample - Microsoft Visual Studio** window, ensure that the **wwwroot** folder contains the both copied files (You might need to expand the wwwroot directory to see the files).
 
