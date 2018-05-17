@@ -1,5 +1,6 @@
-﻿body{
-    text-align:center;
+﻿body {
+    text-align: center;
+    font-family: Arial;
 }
 
 table {
@@ -8,29 +9,38 @@ table {
 }
 
 h1 {
-    color: #800000;
+    color: #015072;
     font-size: 35px;
-    font-family: "Libre Baskerville", serif;
     font-weight: bold;
 }
 
 a {
     display: inline-block;
-    font-size:22px;
-    margin:20px;
+    font-size: 22px;
+    margin: 20px;
+    color:#108d9e;
 }
 
 
 
 th {
-    color: #000000;
+    color: #fff;
     font-size: 23px;
-    font-family: "Libre Baskerville", serif;
     font-weight: bold;
-     padding-right:24px;
+    padding:15px;
+
 }
 
 td {
     font-size: 22px;
     padding-right:15px;
+}
+
+thead {
+    background-color: #2486b6;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #e0e0e0;
 }
