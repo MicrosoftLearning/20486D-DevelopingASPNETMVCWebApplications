@@ -5,11 +5,12 @@
     font-weight: 200;
     color: rgb(85, 85, 85);
     background-image: linear-gradient(#afeeee 15%, #000000 );
+    max-width:1240px;
+    margin:0 auto;
 }
 
 .main-title {
     color: #321919;
-    font-family: "Libre Baskerville", serif;
     font-size: 60px;
     font-weight: bolder;
     text-align: center;
@@ -18,7 +19,6 @@
 .into {
     color: #800000;
     font-size: 25px;
-    font-family: "Libre Baskerville", serif;
     font-weight: bold;
     text-align: center;
 }
