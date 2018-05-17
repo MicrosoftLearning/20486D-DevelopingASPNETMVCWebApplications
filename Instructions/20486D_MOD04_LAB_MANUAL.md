@@ -49,7 +49,7 @@ The main tasks for this exercise are as follows:
 
 7. Run the application.
 
-#### Task 1: Add controllers to an MVC application.
+#### Task 1: Add controllers to an MVC application
 
 1. From **Allfiles\Mod04\Labfiles\01_WorldJourney_begin**, open the **WorldJourney.sln**.
 
@@ -65,7 +65,7 @@ The main tasks for this exercise are as follows:
    - Template: **MVC controller - Empty**
    - Folder: **Controllers**
 
-#### Task 2: Add actions to a controller.
+#### Task 2: Add actions to a controller
 
 1. In the **CityController** class, add the **using** statements to the controller for the following namespaces:
    - **System.IO**
@@ -94,7 +94,7 @@ The main tasks for this exercise are as follows:
 
 8. If the **City** object is not null, return a **File** result constructed from the **city.ImageName** and **city.ImageMimeType** properties, else return the **HttpNotFound** value.
 
-#### Task 3: Change actions to get a parameter.
+#### Task 3: Change actions to get a parameter
 
 1. Edit the code in the **Details** action with the following information:
     - Parameter: A Nullable integer named **Id**
@@ -102,11 +102,11 @@ The main tasks for this exercise are as follows:
 2. Edit the code in the **GetImage** action with the following information:
     - Parameter: A Nullable integer named **CityId**
 
-#### Task 4: Change an action to redirect to another action in another controller.
+#### Task 4: Change an action to redirect to another action in another controller
 
 - In the **HomeController** class, edit the code in the **Index** action, and redirect the user to the **Index** action of the **City** controller.
 
-#### Task 5: Use a service.
+#### Task 5: Use a service
 
 1. In the **CityController** class, create a new object with the following information:
    - Scope: **private**
@@ -134,12 +134,12 @@ The main tasks for this exercise are as follows:
  
 5. In the **GetImage** action, initialize the **fullPath** object to refer to the name of the image under the **images** directory.
 
-#### Task 6: Store the result in a ViewBag property.
+#### Task 6: Store the result in a ViewBag property
 
 -   In **CityController.cs**, edit the code in the **Index** action by saving the following **Title** parameter value in the **ViewBag** collection to use it later in the view.
     - Value: **city.CityName**
 
-#### Task 7: Run the application.
+#### Task 7: Run the application
 
 1. Save all the changes.
 
@@ -167,7 +167,7 @@ The main tasks for this exercise are as follows:
 
 4. Run the application and verify the new route works.
 
-#### Task 1: Add a controller with an action.
+#### Task 1: Add a controller with an action
 
 1. Create a new controller with the following information:
    - Controller name: **TravelerController**
@@ -180,7 +180,7 @@ The main tasks for this exercise are as follows:
 3. Edit the code in the **Index** action by saving the **VisiterName** parameter value in the **ViewBag** collection to use it later in the view.
     - Value: **name**
 
-#### Task 2: Run the application.
+#### Task 2: Run the application
 
 1. Save all the changes.
 
@@ -191,7 +191,7 @@ The main tasks for this exercise are as follows:
 
 4. Stop debugging.
 
-#### Task 3: Register new routes in the routing table.
+#### Task 3: Register new routes in the routing table
 
 1. In the **Startup.cs** class, replace **app.UseMvcWithDefaultRoute** with custom routes with the following information: 
     - Name: **TravelerRoute**
@@ -205,7 +205,7 @@ The main tasks for this exercise are as follows:
 
 3. In the  **defaultRoute** custom route, add constraints to the **id** parameter. The **id** parameter can be any number between 0 and 9.
 
-#### Task 4: Run the application and verify the new route works.
+#### Task 4: Run the application and verify the new route works
 
 1. Save all the changes.
 
@@ -229,13 +229,13 @@ The main tasks for this exercise is as follows:
 
 2. Run the application and verify the new routes work.
 
-#### Task 1: Apply custom routes to a controller using attributes.
+#### Task 1: Apply custom routes to a controller using attributes
 
 1. In the **CityController** class, add a custom route by using attribute to the **Index** action method.
 
 2. In the **CityController** class, add a custom route by using attribute to the **Details** action method.
 
-#### Task 2: Run the application and verify the new routes work.
+#### Task 2: Run the application and verify the new routes work
 
 1. Save all the changes.
 
@@ -273,7 +273,7 @@ The main tasks for this exercise are as follows:
 
 6. Run the application and verify the new filter works.
 
-#### Task 1: Add an action filter class.
+#### Task 1: Add an action filter class
 
 1. Create a new class for the action filter with the following information:
    - Name: **LogActionFilter**
@@ -322,7 +322,7 @@ The main tasks for this exercise are as follows:
 
     Initialize the new object in the **LogActionFilter** constructor with the **logPath + fileName** value.   
 
-#### Task 2: Add a handler for the OnActionExecuting event.
+#### Task 2: Add a handler for the OnActionExecuting event
 
 1. In the **LogActionFilter** action filter, override the **OnActionExecuting** event handler.
 
@@ -330,7 +330,7 @@ The main tasks for this exercise are as follows:
 
 3. In the **OnActionExecuting** event handler, create and write the names of the action and the controller to an external file.
 
-#### Task 3: Add a handler for the OnActionExecuted event.
+#### Task 3: Add a handler for the OnActionExecuted event
 
 1. In the **LogActionFilter** action filter, override the **OnActionExecuted** event handler.
 
@@ -338,7 +338,7 @@ The main tasks for this exercise are as follows:
 
 3. In the **OnActionExecuting** event handler, write to an external file the names of the action and the controller.
 
-#### Task 4: Add a handler for the OnResultExecuted event.
+#### Task 4: Add a handler for the OnResultExecuted event
 
 1. In the **LogActionFilter** action filter, override the **OnResultExecuted** event handler.
 
@@ -346,7 +346,7 @@ The main tasks for this exercise are as follows:
 
 3. In the **OnResultExecuted** event handler, write the parameters of action, controller and viewData to an external file.
 
-#### Task 5: Apply the action filter to the controller action.
+#### Task 5: Apply the action filter to the controller action
 
 1. Add the **using** statements to the **Startup.cs** class for the following namespaces:
    - **WorldJourney.Filters**
@@ -358,7 +358,7 @@ The main tasks for this exercise are as follows:
 
 4. In the **CityController** class, add the **LogActionFilter** action filter to the **Index** action method.
 
-#### Task 6: Run the application and verify the new filter works.
+#### Task 6: Run the application and verify the new filter works
 
 1. Save all the changes.
 
