@@ -188,14 +188,14 @@
 7. In the result pane of the **New ASP.NET Core Web Application - StaticFilesExample** dialog box, click **Empty**, and then click **OK**.
     >**Note**: In the **Solution Explorer** pane of the **StaticFilesExample - Microsoft Visual Studio** window, notice the **wwwroot** folder is empty.
 
-8.  In the **File Explorer** window, go to **Allfiles\Mod03\Democode\02_StaticFilesExample_begin**.
-        >**Note**: In
+8.  In the **File Explorer** window, go to **Allfiles\Mod03\Democode\02_StaticFilesExample_begin**
+
 9.  In the **02_StaticFilesExample_begin** window, select the **html-file.html** and the **image-file.jpg** files.
-     >**Note**: In
+ 
 10. Right-click the selected files, and then click **Copy**.
-    >**Note**: In
-11.  In the **File Explorer** window, go to **Allfiles\Mod03\Democode\02_StaticFilesExample_begin\StaticFilesExample\StaticFilesExample\wwwroot**.
-    >**Note**: In
+
+
+
 12.  In the **wwwroot** window, right-click an empty space, and then click **Paste**. 
     >**Note**: In the **Solution Explorer** pane of the **StaticFilesExample - Microsoft Visual Studio** window, ensure that the **wwwroot** folder contains the both copied files (You might need to expand the wwwroot directory to see the files).
 
