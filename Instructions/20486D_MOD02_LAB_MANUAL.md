@@ -245,37 +245,37 @@ The main tasks for this exercise are as follows:
 2. Based on your reading of the **InitialInvestigation** document, add and describe a controller for photos in **Table 2: MVC Controllers** using the following information:
     - Controller name: **PhotoController**
 
-3. In **Table 1: MVC Model**, add an action using the following information:
+3. In **Table 2: MVC Controllers**, add an action using the following information:
     - Controller name: **PhotoController**
     - Action name: **DisplayGallery (GET)**
     - Action description: **The action runs when the user requests the photo gallery page. The action obtains all the photos from the database and passes them to the DisplayGallery view**
 
-4. In **Table 1: MVC Model**, add an action using the following information:
+4. In **Table 2: MVC Controllers**, add an action using the following information:
     - Controller name: **PhotoController**
     - Action name: **DisplayRecent (GET)**
     - Action description: **This action is similar to the DisplayGallery action except that only the most recent photos are obtained from the database. This smaller collection of photos is passed to the DisplayGallery view**
 
-5. In **Table 1: MVC Model**, add an action using the following information:
+5. In **Table 2: MVC Controllers**, add an action using the following information:
     - Controller name: **PhotoController**
     - Action name: **DisplayPhoto (GET)**
     - Action description: **This action runs when the user clicks a “Details” link for a photo in a gallery. The action obtains full details of a single photo from the database and passes it to the DisplayPhoto view**
 
-6. In **Table 1: MVC Model**, add an action using the following information:
+6. In **Table 2: MVC Controllers**, add an action using the following information:
     - Controller name: **PhotoController**
     - Action name: **AddPhoto (GET)**
     - Action description: **This action runs when the user clicks a “Add a Photo” link. The action creates a new instance of the Photo model class and passes it to the AddPhoto view**
 
-7. In **Table 1: MVC Model**, add an action using the following information: 
+7. In **Table 2: MVC Controllers**, add an action using the following information: 
     - Controller name: **PhotoController**
     - Action name: **AddPhoto (POST)**
     - Action description: **This action runs when the user clicks “Save” in the AddPhoto view. The action saves the file and details of the new Photo to the database and redirects the user to the DisplayGallery view**
 
-8. In **Table 1: MVC Model**, add an action using the following information:
+8. In **Table 2: MVC Controllers**, add an action using the following information:
     - Controller name: **PhotoController**
     - Action name: **DeletePhoto (GET)**
     - Action description: **This action runs when the user clicks a “Delete this Photo” link in the DisplayPhoto view. The action displays the DeletePhoto view, which requests confirmation for the deletion**
 
-9. In **Table 1: MVC Model**, add an action using the following information:
+9. In **Table 2: MVC Controllers**, add an action using the following information:
     - Controller name: **PhotoController**
     - Action name: **DeletePhoto (POST)**
     - Action description: **This action runs when the user clicks “Delete” in the DeletePhoto view. The action deletes the current Photo, with its associate Comments, from the database and redirects the user to the DisplayGallery view**
