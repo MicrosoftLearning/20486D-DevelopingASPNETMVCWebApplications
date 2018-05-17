@@ -10,8 +10,8 @@
     <link type="text/css" rel="stylesheet" href="~/css/cupcakes-styles.css" />
 </head>
 <body>
-    <h1 class="main-titel">Edit Cupcake</h1>
-    <div>
+    <div class="container">
+        <h1 class="main-titel">Edit Cupcake</h1>
         <form method="post" enctype="multipart/form-data" asp-action="Edit">
             <div asp-validation-summary="ModelOnly"></div>
             <input type="hidden" asp-for="CupcakeId" />
@@ -22,7 +22,6 @@
                 </select>
                 <span asp-validation-for="BakeryId"></span>
             </div>
-
             <div class="form-field">
                 <label asp-for="CupcakeType"></label>
                 <select asp-for="CupcakeType" asp-items="Html.GetEnumSelectList<CupcakeType>()">

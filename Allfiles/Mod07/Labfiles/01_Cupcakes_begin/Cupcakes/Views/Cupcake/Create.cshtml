@@ -10,11 +10,10 @@
     <link type="text/css" rel="stylesheet" href="~/css/cupcakes-styles.css" />
 </head>
 <body>
-    <h1 class="main-titel">Add Cupcake to The Shop</h1>
-    <div>
+    <div class="container">
+        <h1 class="main-titel">Add Cupcake to The Shop</h1>
         <form method="post" enctype="multipart/form-data" asp-action="Create">
             <div asp-validation-summary="All"></div>
-
             <div class="form-field">
                 <label asp-for="Bakery"></label>
                 <select asp-for="BakeryId" asp-items="ViewBag.BakeryID">
@@ -22,7 +21,6 @@
                 </select>
                 <span asp-validation-for="BakeryId"></span>
             </div>
-
             <div class="form-field">
                 <label asp-for="CupcakeType"></label>
                 <select asp-for="CupcakeType" asp-items="Html.GetEnumSelectList<CupcakeType>()">
