@@ -6,8 +6,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
- https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 2. Go to **Allfiles\Mod08\Democode\01_LayoutExample_begin**, and then double-click **LayoutExample.sln**.
 
@@ -295,7 +294,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 2. Go to **Allfiles\Mod08\Democode\02_JSLibraryExample_begin**, and then double-click **JSLibraryExample.sln**.
 
@@ -529,6 +528,155 @@
 44. On the **DEBUG** menu of the **JSLibraryExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
 45. On the **FILE** menu of the **JSLibraryExample - Microsoft Visual Studio** window, click **Exit**.
+
+
+# Lesson 3: Using jQuery
+
+### Demonstration: How to Modify HTML Elements using jQuery
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+
+2. Go to **Allfiles\Mod08\Democode\03_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
+
+#### Demonstration Steps
+
+1. In the **JQueryExample - Microsoft Visual Studio** window, in the **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+
+2. In the **NewFolder** text box, type **js**, and then press Enter.
+
+3. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+
+4. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+
+5. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **jquery-functions**, and then click **Add**.
+
+6. In the **jquery-functions** code window, type the following code: 
+  ```cs
+       var passingGrade = 55;
+       $(function () {
+           $("#jqueryButton").click(function (event) {
+                var firstGrade = parseInt($("#studentGrade1").text());
+                var secondGrade = parseInt($("#studentGrade2").text());
+                var thirdGrade = parseInt($("#studentGrade3").text());
+
+                if (firstGrade > PassingGrade) {
+                    $("#studentGrade1").addClass("goodGrade");
+                } else {
+                    $("#studentGrade1").addClass("badGrade");
+                }
+
+                if (secondGrade > PassingGrade) {
+                    $("#studentGrade2").addClass("goodGrade");
+                } else {
+                    $("#studentGrade2").addClass("badGrade");
+                }
+
+                if (thirdGrade > PassingGrade) {
+                    $("#studentGrade3").addClass("goodGrade");
+                } else {
+                    $("#studentGrade3").addClass("badGrade");
+                }
+           });
+       });
+```
+
+7. In the **JQueryExample - Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
+
+8. In the **_Layout.cshtml** file, locate the following code:
+  ```cs
+       <link href="~/css/style-jquery-example.css" rel="stylesheet" />
+```
+
+9. Place the cursor after the **>** (greater than) sign of the **link** tag, press Enter, and then type the following code: 
+  ```cs
+       <script src="~/js/jquery-functions.js"></script>
+```
+
+10. In the **JQueryExample - Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Controllers**, and then click **GradeBookController.cs**.
+
+11. In the **GradeBookController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+  ```cs
+       public IActionResult Index()
+```
+
+12. In the **Add MVC View** dialog box, ensure that the name in the **View name** box is **Index**.
+
+13. In the **Template** selector, ensure that the template in the **Template** box is **Empty(without model)**.
+
+14. In the **Add MVC View** dialog box, ensure that the **Use a layout page** check box is selected, and then click **Add**.
+
+15. In the **Index.cshtml** code window, select the following code:
+  ```cs
+       <h2>Index</h2>
+```
+
+16. Replace the selected code with the following code: 
+  ```cs
+       <div>
+          <table>
+             <thead>
+             </thead>
+             <tbody>
+             </tbody>
+          </table>
+       </div>
+       <button id="jqueryButton">Apply JQuery</button>
+```
+
+17. Place the cursor in the **THEAD** element, press Enter, and then type the following code: 
+  ```cs
+       <tr>
+           <th>
+              Student Name
+           </th>
+           <th>
+              Total Grade
+           </th>
+           <th>
+              Graduation Project Grade
+           </th>
+           <th>
+              Performance - Percentage
+           </th>
+           <th></th>
+       </tr>
+```
+
+18. Place the cursor in the **TBODY** element, press Enter, and then type the following code: 
+  ```cs
+       <tr>
+           <td>Thomas M. Hacker</td>
+           <td id="studentGrade1">90</td>
+           <td>93</td>
+           <td>95</td>
+       </tr>
+       <tr>
+           <td>Patrick J. Lazo</td>
+           <td id="studentGrade2">50</td>
+           <td>53</td>
+           <td>51</td>
+       </tr>
+       <tr>
+           <td>Helen D. Miller</td>
+           <td id="studentGrade3">85</td>
+           <td>91</td>
+           <td>95</td>
+       </tr>
+```
+
+19. On the **FILE** menu of the **JQueryExample - Microsoft Visual Studio** window, click **Save All**.
+
+20. On the **DEBUG** menu of the **JQueryExample - Microsoft Visual Studio** window, click **Start Debugging**.
+
+      >**Note:** In the Microsoft Edge window, click **Apply JQuery** button to verify that **jQuery** function implemented correctly in the application.
+      
+21. In the **Microsoft Edge** window, click **Close**.
+
+22. On the **DEBUG** menu of the **JQueryExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+
+23. On the **FILE** menu of the **JQueryExample - Microsoft Visual Studio** window, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
