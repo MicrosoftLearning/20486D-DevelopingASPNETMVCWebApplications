@@ -40,9 +40,10 @@ button {
     height: 45px;
     background: #bdb5b5;
     color: aliceblue;
-    font-size: 15px;
+    font-size: 18px;
     float: inherit;
     margin: 10px;
+    font-weight:bold;
 }
 
 .goodGrade {

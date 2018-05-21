@@ -561,19 +561,19 @@
                 var secondGrade = parseInt($("#studentGrade2").text());
                 var thirdGrade = parseInt($("#studentGrade3").text());
 
-                if (firstGrade > PassingGrade) {
+                if (firstGrade > passingGrade) {
                     $("#studentGrade1").addClass("goodGrade");
                 } else {
                     $("#studentGrade1").addClass("badGrade");
                 }
 
-                if (secondGrade > PassingGrade) {
+                if (secondGrade > passingGrade) {
                     $("#studentGrade2").addClass("goodGrade");
                 } else {
                     $("#studentGrade2").addClass("badGrade");
                 }
 
-                if (thirdGrade > PassingGrade) {
+                if (thirdGrade > passingGrade) {
                     $("#studentGrade3").addClass("goodGrade");
                 } else {
                     $("#studentGrade3").addClass("badGrade");
@@ -614,6 +614,9 @@
 
 16. Replace the selected code with the following code: 
   ```cs
+       <h1>Students GradeBook</h1>
+       <h2>Course Name: Mathematics and Computer Science</h2>
+
        <div>
           <table>
              <thead>
