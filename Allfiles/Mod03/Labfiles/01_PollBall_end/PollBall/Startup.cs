@@ -31,7 +31,7 @@ namespace PollBall
                     SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue, true);
                     pollResults.AddVote(selectedGame);
 
-                    await context.Response.WriteAsync($"Thank you for submitting the poll");
+                    await context.Response.WriteAsync($"Thank you for submitting the poll.");
                 }
                 else await next.Invoke();
             });
