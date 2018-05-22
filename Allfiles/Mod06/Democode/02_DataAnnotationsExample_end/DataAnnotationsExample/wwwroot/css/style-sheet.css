@@ -3,7 +3,7 @@
     margin-right: auto;
     font-size: 24px;
     width:250px;
-    text-align:center;
+    text-align:left;
 }
 
 label {
@@ -30,7 +30,8 @@ input[type=submit] {
     width: 200px;
     background-color: darkgreen;
     color: white;
-    margin-top:30px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 form{

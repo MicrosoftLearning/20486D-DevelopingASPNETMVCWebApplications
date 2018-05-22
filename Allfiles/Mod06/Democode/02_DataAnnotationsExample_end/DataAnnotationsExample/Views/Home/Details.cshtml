@@ -11,33 +11,27 @@
 <body>
     <h1>User Details</h1>
     <div>
-        <div>
-            <span class="display-prop-name">
-                @Html.DisplayNameFor(model => model.FullName)
-            </span>
-            <br />
-            <span class="display-prop-value">
-                @Html.DisplayFor(model => model.FullName)
-            </span>
-        </div>
-        <div>
-            <span class="display-prop-name">
-                @Html.DisplayNameFor(model => model.Email)
-            </span>
-            <br />
-            <span class="display-prop-value">
-                @Html.DisplayFor(model => model.Email)
-            </span>
-        </div>
-        <div>
-            <span class="display-prop-name">
-                @Html.DisplayNameFor(model => model.Birthdate)
-            </span>
-            <br />
-            <span class="display-prop-value">
-                @Html.DisplayFor(model => model.Birthdate)
-            </span>
-        </div>
+        <span class="display-prop-name">
+            @Html.DisplayNameFor(model => model.FullName)
+        </span>
+        <br />
+        <span class="display-prop-value">
+            @Html.DisplayFor(model => model.FullName)
+        </span>
+        <span class="display-prop-name">
+            @Html.DisplayNameFor(model => model.Email)
+        </span>
+        <br />
+        <span class="display-prop-value">
+            @Html.DisplayFor(model => model.Email)
+        </span>
+        <span class="display-prop-name">
+            @Html.DisplayNameFor(model => model.Birthdate)
+        </span>
+        <br />
+        <span class="display-prop-value">
+            @Html.DisplayFor(model => model.Birthdate)
+        </span>
     </div>
 </body>
 </html>

@@ -168,7 +168,7 @@
 
 6. Place the cursor at the end of the **Email** property code, press Enter twice, and then type the following code:
   ```cs
-      [Display(Name = BirthDate:")]
+      [Display(Name = "Birthdate:")]
       [DataType(DataType.Date)]
 ```
 
@@ -187,13 +187,6 @@
 10. Place the cursor before the < (less than) sign, press Enter, press the Up Arrow Key, and then type the following code:
   ```cs
        @model DataAnnotationsExample.Models.User
-```
-
-11. The final content of the **Index.cshtml** file should be as shown below.
-  ```cs
-       @model DataAnnotationsExample.Models.User
-
-       <!DOCTYPE html>
 ```
 
 12. In the **BODY** element of the **Index.cshtml** code window, type the following code:
@@ -221,7 +214,6 @@
             <input type="submit" value="Register" />
         </form>
 ```
->**Note:** This code block generates a &lt;form&gt; **HTML** element using FormTagHelper.
 
 14. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, and then click **Details.cshtml**.
 
@@ -235,13 +227,6 @@
        @model DataAnnotationsExample.Models.User
 ```
 
-17. The final content of the **Details.cshtml** file should be as shown below.
-  ```cs
-       @model DataAnnotationsExample.Models.User
-
-       <!DOCTYPE html>
-```
-
 18. In the **BODY** element of the **Details.cshtml** code window, type the following code:
 
   ```cs
@@ -251,33 +236,27 @@
 ```
 19. In the **DIV** element of the **Details.cshtml** code window, type the following code:
   ```cs
-       <div>
-          <span class="display-prop-name">
-               @Html.DisplayNameFor(model => model.FullName)
-          </span>
-          <br />
-          <span class="display-prop-value">
-               @Html.DisplayFor(model => model.FullName)
-           </span>
-        </div>
-        <div>
-          <span class="display-prop-name">
-               @Html.DisplayNameFor(model => model.Email)
-          </span>
-          <br />
-          <span class="display-prop-value">
-               @Html.DisplayFor(model => model.Email)
-          </span>
-        </div>
-        <div>
-          <span class="display-prop-name">
-               @Html.DisplayNameFor(model => model.Birthdate)
-          </span>
-          <br />
-          <span class="display-prop-value">
-               @Html.DisplayFor(model => model.Birthdate)
-          </span>
-        </div>
+       <span class="display-prop-name">
+           @Html.DisplayNameFor(model => model.FullName)
+       </span>
+       <br />
+       <span class="display-prop-value">
+           @Html.DisplayFor(model => model.FullName)
+       </span>
+       <span class="display-prop-name">
+           @Html.DisplayNameFor(model => model.Email)
+       </span>
+       <br />
+       <span class="display-prop-value">
+           @Html.DisplayFor(model => model.Email)
+       </span>
+       <span class="display-prop-name">
+           @Html.DisplayNameFor(model => model.Birthdate)
+       </span>
+       <br />
+       <span class="display-prop-value">
+           @Html.DisplayFor(model => model.Birthdate)
+       </span>
 ```
 >**Note:** This code block generates different HTML markup depending on the data type of the property that is being rendered.
 
@@ -289,7 +268,7 @@
 
 23. On the **Register** page, in the **Email Address** text box, type _&lt;An email address of your choice&gt;._
 
-24. On the **Register** page, in the **BirthDate** text box, choose _&lt;A birthdate of your choice&gt;._
+24. On the **Register** page, in the **Birthdate** text box, choose _&lt;A birthdate of your choice&gt;._
 
 25. On the **Register** page, in the **Password** text box, type _&lt;A password of your choice&gt;_, and then click **Register**.
 
@@ -525,7 +504,7 @@
 
 18. On the **Submit Student Information** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
 
-19. On the **Submit Student Information** page, in the **BirthDate** text box, choose _&lt;A birthdate of your choice&gt;._
+19. On the **Submit Student Information** page, in the **Birthdate** text box, choose _&lt;A birthdate of your choice&gt;._
 
 20. On the **Submit Student Information** page, ensure that **Are you a university student?** checkbox is not selected, and then click the **Submit** button.
 
