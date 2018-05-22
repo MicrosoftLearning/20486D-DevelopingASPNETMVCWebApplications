@@ -10,10 +10,10 @@ You are planning to create and code an MVC model that implements your plan for b
 
 After completing this lab, you will be able to:
 
-- Add new models to the application and add properties to the model.
-- Add GET and POST actions that accept the new model information.
+- Add new models to the application, and add properties to the model.
+- Add **GET** and **POST** actions that accept the new model information.
 - Use display and edit data annotations in the MVC model to assign property attributes to views and controllers.
-- Use Display, Editor and Form Helpers in the views.
+- Use **Display**, **Editor** and **Form** Helpers in the views.
 - Use validation Data Annotations in the MVC model to assign property attributes to views and controllers.
 - Add custom validation to the application.
 
@@ -28,16 +28,22 @@ Estimated Time: **60 minutes**
 In this exercise, you will:
 
 - Add model classes to the web application.
-- _Create (GET)_. This action creates a new Butterfly object and passes it to the Create view, which displays a form that the visitor can use to upload a butterfly and describe it.
-- _Create (POST)_. This action receives a butterfly object from the Create view and saves the details.
+- _Create (GET)_. This action creates a new **Butterfly** object and passes it to the Create view, which displays a form that the visitor can use to upload a butterfly and describe it.
+- _Create (POST)_. This action receives a **Butterfly** object from the Create view and saves the details.
 
 The main tasks for this exercise are as follows:
 
-1. Add new MVC models.
+1. Create a new model.
 
-2. Write the Create action for GET HTTP verb.
+2. Use the model in a view.
 
-3. Write the Create action for POST HTTP verb.
+3. Pass the model from the controller to a view.
+
+4. Run the application.
+
+5. Write a GET action that accepts the new model information.
+
+6. Write a POST action that accepts the model.
 
 #### Task 1: Create a new model.
 
@@ -55,42 +61,42 @@ The main tasks for this exercise are as follows:
    - Data type: **integer**
    - Access: **Read and write**
 
-4. Add a CommonName property to the Butterfly model class by using the following information:
+4. Add a **CommonName** property to the Butterfly model class by using the following information:
 
    - Scope: **public**
    - Property name: **CommonName**
    - Data type: **string**
    - Access: **Read and write**
 
-5. Add a ButterflyFamily property to the Butterfly model class by using the following information:
+5. Add a **ButterflyFamily** property to the Butterfly model class by using the following information:
 
    - Scope: **public**
    - Property name: **ButterflyFamily**
    - Data type: Nullable **Family**
    - Access: **Read and write**
 
-6. Add a Quantity property to the Butterfly model class by using the following information:
+6. Add a **Quantity** property to the Butterfly model class by using the following information:
 
    - Scope: **public**
    - Property name: **Quantity**
    - Data type: Nullable **integer**
    - Access: **Read and write**
 
-7. Add a Characteristics property to the Butterfly model class by using the following information:
+7. Add a **Characteristics** property to the Butterfly model class by using the following information:
 
    - Scope: **public**
    - Property name: **Characteristics**
    - Data type: **string**
    - Access: **Read and write**
 
-8. Add a CreatedDate property to the Butterfly model class by using the following information:
+8. Add a **CreatedDate** property to the Butterfly model class by using the following information:
 
    - Scope: **public**
    - Property name: **CreatedDate**
    - Data type: **DateTime**
    - Access: **Read and write**
 
-9. Add an image property to the **Butterfly** model class and store the image name by using the following information:
+9. Add an **image** property to the **Butterfly** model class and store the image name by using the following information:
 
    - Scope: **public**
    - Property names: **PhotoAvatar**, **ImageName**
@@ -98,24 +104,24 @@ The main tasks for this exercise are as follows:
    - Data type for image name: **string**
    - Access: **Read and write**
 
-10. Add another image property to the **Butterfly** model class and store the MIME type of image by using the following information:
+10. Add another **image** property to the **Butterfly** model class and store the MIME type of image by using the following information:
 
-   - Scope: **public**
-   - Property names: **PhotoFile**, **ImageMimeType**
-   - Data type for the image: **byte []**
-   - Data type for MIME type: **string**
-   - Access: **Read and write**
+     - Scope: **public**
+     - Property names: **PhotoFile**, **ImageMimeType**
+     - Data type for the image: **byte []**
+     - Data type for MIME type: **string**
+     - Access: **Read and write**
    
 11. Add a new model class to the **ButterfliesShop** project by using the following information:
 
-   - Class name: **IndexViewModel**
+    - Class name: **IndexViewModel**
 
-12. Add a Butterflies property to the IndexViewModel model class by using the following information:
+12. Add a **Butterflies** property to the IndexViewModel model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **Butterflies**
-   - Data type: **List&lt;Butterfly&gt;**
-   - Access: **Read and write**
+     - Scope: **public**
+     - Property name: **Butterflies**
+     - Data type: **List&lt;Butterfly&gt;**
+     - Access: **Read and write**
 
 #### Task 2: Use the model in a view.
 
@@ -155,19 +161,25 @@ The main tasks for this exercise are as follows:
 
    - **using System.IO**
 
-2. Add a method for the Index action by using the following information:
+2. Add a method for the **Index** action by using the following information:
 
-- Scope: **public**
-- Return Type: **IActionResult**
-- Name: **Index**
+   - Scope: **public**
+    - Return Type: **IActionResult**
+    - Name: **Index**
 
-3. Within the Index action code block, initiate IndexViewModel Butterflies property with ButterfliesList method from the IDataService interface.
+3. Within the **Index** action code block, initiate IndexViewModel **Butterflie** property with ButterfliesList method from the IDataService interface.
 
-4. Pass the **IndexViewModel** object to the view **Index** and return the view.
+4. Pass the **IndexViewModel** object to the view **Index**, and return the view.
 
-5. In the **GetImage** action, If the **Butterfly** object is not null, return a **File** result constructed from the **Butterfly.PhotoFile** and **Butterfly.ImageMimeType** properties, else return the **NotFound** value.
+####  Task 4: Run the application.
 
-####  Task 4: Write a GET action that accepts the new model information.
+1. Save all the changes.
+
+2. Run the website, and view the page you added.
+
+3. **Stop debugging** by closing **Microsoft Edge**.
+
+####  Task 5: Write a GET action that accepts the new model information.
 
 1. In the **ButterflyController** class, Add a method for the **Create** action by using the following information:
 
@@ -176,7 +188,7 @@ The main tasks for this exercise are as follows:
    - Return type: **IActionResult**
    - Name: **Create**
 
-####  Task 5: Write a POST action that accepts the model.
+####  Task 6: Write a POST action that accepts the model.
 
 1. In the **ButterflyController** class, Add another method for the **Create** action by using the following information:
 
@@ -186,19 +198,11 @@ The main tasks for this exercise are as follows:
    - Name: **Create**
    - Parameters: a **Photo** object called **photo**.
 
-2. Add code to the **Create** action that creates a new butterfly and sets its **CreatedDate** property to today&#39;s date.
+2. Add code to the **Create** action that saves the accepted new butterfly parameters and sets its **CreatedDate** property to today&#39;s date.
 
 3. Add the **butterfly** object to the ButterfliesList from the IDataService interface, and then redirect to the **Index** action.
 
-####  Task 6: Run the application.
-
-1. Save all the changes.
-
-2. Run the website, and view the page you added.
-
-3. Stop debugging by closing Microsoft Edge.
-
->**Results** : After completing this exercise, you will be able to create Models and implement GET and POST actions for the Butterfly model class in the application. 
+>**Results** : After completing this exercise, you will be able to create Models and implement **GET** and **POST** actions for the Butterfly model class in the application. 
 
 ### Exercise 2: Working with Forms
 
@@ -206,15 +210,23 @@ The main tasks for this exercise are as follows:
 
 In this exercise, you will:
 
-- Add Display and Edit data annotations to a butterfly model.
-- Add Display Helpers to the Index view.
-- Add Form Helpers and Editor Helpers to the Create view.
+- Add Display and Edit data annotations to butterfly model.
+- Add **Display** Helpers to **Index.cshtml**.
+- Add **Form** Helpers and **Editor** Helpers to **Create.cshtml**.
 
 The main tasks for this exercise are as follows:
 
-1. Add data annotations to a model.
+1. Add display and edit data annotations to a model.
 
-2. Complete the Index display view.
+2. Update an action to return FileContentResult.
+
+3. Add Display Helpers.
+
+4. Add Form Helpers.
+
+5. Add Editor Helpers.
+
+6. Run the application.
 
 #### Task 1: Add display and edit data annotations to a model.
 
@@ -222,13 +234,13 @@ The main tasks for this exercise are as follows:
 
    - **System.ComponentModel.DataAnnotations**
 
-2. Add a display data annotation to the **Butterfly** model class to ensure that the **CommonName** property is displayed with the name, **Common Name:**.
+2. Add a display data annotation to the **Butterfly** model class to ensure that the **CommonName** property is displayed with the name, **Common Name**.
 
-3. Add a display data annotation to the **Butterfly** model class to ensure that the **ButterflyFamily** property is displayed with the name, **Butterfly Family:**.
+3. Add a display data annotation to the **Butterfly** model class to ensure that the **ButterflyFamily** property is displayed with the name, **Butterfly Family**.
 
-4. Add a display data annotation to the **Butterfly** model class to ensure that the **Quantity** property is displayed with the name, **Butterflies Quantity:**.
+4. Add a display data annotation to the **Butterfly** model class to ensure that the **Quantity** property is displayed with the name, **Butterflies Quantity**.
 
-5. Add a display data annotation to the **Butterfly** model class to ensure that the **Characteristics** property is displayed with the name, **Characteristics:**.
+5. Add a display data annotation to the **Butterfly** model class to ensure that the **Characteristics** property is displayed with the name, **Characteristics**.
 
 6. Add the following data annotations to the **Butterfly** model class to describe the **CreatedDate** property:
 
@@ -236,11 +248,17 @@ The main tasks for this exercise are as follows:
    - Display name: **Updated on**
    - Display format: **{0:MM/dd/yy}**
 
-7. Add a display data annotation to the **Butterfly** model class to ensure that the **PhotoAvatar** property is displayed with the name, **Butterflies Picture:**.
+7. Add a display data annotation to the **Butterfly** model class to ensure that the **PhotoAvatar** property is displayed with the name, **Butterflies Picture**.
 
-#### Task 2: Add Display Helpers.
+#### Task 2: Update an action to return FileContentResult.
 
-1. In the **Index.cshtml** file, replace the code in the **foreach** code block, Add an **h3** element to display the **CommonName**  property from the model by using the following information:
+1. In the **GetImage** action, initialize the fullPath object, in order to refer to the name of the image under the images directory.
+
+2. In the **GetImage** action, If the **fullPath**  is exists, return a **File** result constructed from the **Butterfly.PhotoFile** and **Butterfly.ImageMimeType** properties, else return the **NotFound** value.
+
+#### Task 3: Add Display Helpers.
+
+1. In the **Index.cshtml** file, replace the code in the **foreach** code block, Add an **H3** element to display the **CommonName**  property from the model by using the following information:
 
    - Helper: **Html.DisplayFor**
    - Lamda expression: **modelItem =&gt; model.CommonName**
@@ -286,7 +304,7 @@ The main tasks for this exercise are as follows:
      - **HtmlDisplayFor**
    - Lamda expression: **model => item.CreatedDate**
 
-#### Task 3: Add Form Helpers.
+#### Task 4: Add Form Helpers.
 
 1. In the **Create.cshtml** file, set the **@using** for the **Create.cshtml** to **ButterfliesShop.Models**.
 
@@ -300,41 +318,41 @@ The main tasks for this exercise are as follows:
 
    - Action: **Create**
    - Form method: **FormMethod.Post**
-   - Parameter: Pass the HTML attribute **enctype = "multipart/form-data"**
+   - Parameter: Pass the **HTML** attribute **enctype = "multipart/form-data"**
 
-#### Task 4: Add Editor Helpers.
+#### Task 5: Add Editor Helpers.
 
-1. In the **Create.cshtml** file, add a **label** and an **input** elements to display controls for the **CommonName** property of the model by using the following information:
+1. In the **Create.cshtml** file, add a **LABEL** and an **INPUT** elements to display controls for the **CommonName** property of the model by using the following information:
 
    - Helper:
      - **asp-for**
 
-2. After the controls for the **CommonName** property, add a **label** and **select** elements to display controls for the **ButterflyFamily** property of the model by using the following information:
+2. After the controls for the **CommonName** property, add a **LABEL** and **SELECT** elements to display controls for the **ButterflyFamily** property of the model by using the following information:
 
    - Helpers:
      - **asp-for**
      - **asp-items**
 
-3. After the controls for the **ButterflyFamily** property, add a **label** and a **textarea** elements to display controls for the **Characteristics** property of the model by using the following information:
+3. After the controls for the **ButterflyFamily** property, add a **LABEL** and a **TEXTAREA** elements to display controls for the **Characteristics** property of the model by using the following information:
 
    - Helper:
      - **asp-for**
 
-4. After the controls for the **Characteristics** property, add a **label** and an **input** elements to display controls for the **Quantity** property of the model by using the following information:
+4. After the controls for the **Characteristics** property, add a **LABEL** and an **INPUT** elements to display controls for the **Quantity** property of the model by using the following information:
 
    - Helper:
      - **asp-for**
 
-5. After the controls for the **Quantity** property, add a **label** and an **input** elements to display controls for the **PhotoAvatar** property of the model by using the following information:
+5. After the controls for the **Quantity** property, add a **LABEL** and an **INPUT** elements to display controls for the **PhotoAvatar** property of the model by using the following information:
 
    - Helper: **asp-for**
    - Input type: **file**
 
-#### Task 5: Run the application.
+#### Task 6: Run the application.
 
 1. Save all the changes.
 
-2. Run the web application in non-debugging mode.
+2. Run the web application in **non-debugging** mode.
 
 3. On the **Add Butterflies to The Shop** page, Create a new butterfly with the following credentials:
 
@@ -345,6 +363,8 @@ The main tasks for this exercise are as follows:
     - Butterflies Picture: **_&lt;A butterfly picture of your choice&gt;_**
 
 4. Verify the details of the newly added butterfly.
+
+5. **Stop debugging** by closing **Microsoft Edge**.
 
 >**Results** : After completing this exercise, you will be able to add data annotations for the Butterfly model class in the application, also add tag helpers to views. 
 
@@ -361,13 +381,17 @@ In this exercise, you will:
 
 The main tasks for this exercise are as follows:
 
-1. Add Validation data annotations to a model.
+1. Add validation data annotations to a model.
 
-2. Complete the Create display view.
+2. Add validation helpers to a view.
 
-3. Add ModelState.IsValid property in a controller.
+3. Using the ModelState.IsValid property in a controller.
 
-4. Add custom validation.
+4. Run the application.
+
+5. Add custom validation.
+
+6. Run the application.
 
 #### Task 1: Add validation data annotations to a model.
 
@@ -377,35 +401,35 @@ The main tasks for this exercise are as follows:
 
 3. Add a validation data annotation to the **Butterfly** model class to ensure that the users complete the Quantity field.
 
-4. Add validation data annotations to the **Butterfly** model class to ensure that the users complete the **Characteristics** text box and type a string with a length shorter than 50 characters.
+4. Add validation data annotations to the **Butterfly** model class to ensure that the users complete the **Characteristics** text box, and type a string with a length shorter than 50 characters.
 
-6. Add a validation data annotation to the **Butterfly** model class to ensure that the users complete the PhotoAvatar field.
+5. Add a validation data annotation to the **Butterfly** model class to ensure that the users complete the PhotoAvatar field.
 
 #### Task 2: Add validation helpers to a view.
 
 1. In the **Create.cshtml** file, inside the form, use the **asp-validation-summary** helper to render validation messages.
 
-2. Add a **span** element to display validation message for the **CommonName** property of the model by using the following information:
+2. Add a **SPAN** element to display validation message for the **CommonName** property of the model by using the following information:
 
    - Helper:
      - **asp-validation-for**
 
-3. Add a **span** element to display validation message for the **ButterflyFamily** property of the model by using the following information:
+3. Add a **SPAN** element to display validation message for the **ButterflyFamily** property of the model by using the following information:
 
    - Helper:
      - **asp-validation-for**
 
-4. Add a **span** element to display validation message for the **Characteristics** property of the model by using the following information:
+4. Add a **SPAN** element to display validation message for the **Characteristics** property of the model by using the following information:
 
    - Helper:
      - **asp-validation-for**
 
-5. Add a **span** element to display validation message for the **Quantity** property of the model by using the following information:
+5. Add a **SPAN** element to display validation message for the **Quantity** property of the model by using the following information:
 
    - Helper:
      - **asp-validation-for**
 
-6. Add a **span** element to display validation message for the **PhotoAvatar** property of the model by using the following information:
+6. Add a **SPAN** element to display validation message for the **PhotoAvatar** property of the model by using the following information:
 
    - Helper:
      - **asp-validation-for**
@@ -414,21 +438,23 @@ The main tasks for this exercise are as follows:
 
 1. In the **ButterflyController** class, within the **Create** action method code block for the **HTTP POST** verb, check if the **ModelState** is valid.
 
-2. If the **ModelState** is not valid, pass the **butterfly** object to the **Create** view. Else, if the image parameter is not null, set the **butterfly.ImageMimeType** property to the value of the **image.ContentType** , set the **butterfly.PhotoFile** property to be a new byte array of length, **PhotoAvatar.ContentLength**, and then save the file that the user posted to the **butterfly.PhotoFile** property by using the **memoryStream.ToArray()** method.
+2. If the **ModelState** is not valid, pass the **butterfly** object to the Create view. Else, if the image parameter is not null, set the **butterfly.ImageMimeType** property to the value of the **image.ContentType** , set the **butterfly.PhotoFile** property to be a new byte array of length, **PhotoAvatar.ContentLength**, and then save the file that the user posted to the **butterfly.PhotoFile** property by using the **memoryStream.ToArray()** method.
 
 #### Task 4: Run the application.
 
 1. Save all the changes.
 
-2. Run the web application in non-debugging mode.
+2. Run the web application in **non-debugging** mode.
 
-3. On the **Add Butterflies to The Shop** page, leave all the fields blank, and click **Submit**.
+3. On the **Add Butterflies to The Shop** page, leave all the fields blank, and then click the **Submit** button.
 
 4. Verify the validation messages.
 
-5. Correct all the fields with the validation message, and then click **Submit**.
+5. Correct all the fields with the validation message, and then click the **Submit** button.
 
-5. Verify the details of the newly added butterfly.
+6. Verify the details of the newly added butterfly.
+
+7. **Stop debugging** by closing **Microsoft Edge**.
 
 #### Task 5: Add custom validation.
 
@@ -455,7 +481,7 @@ The main tasks for this exercise are as follows:
    - Data type: **integer**
    - Name: **_maxAmount** 
 
-    Instantiate the new object by calling the **MaxButterflyQuantityValidation** constructor.
+    Initialize the new object in the **MaxButterflyQuantityValidation** constructor with the value **int maxAmount**.
 
 6. In the **MaxButterflyQuantityValidation** class, override the **IsValid** method.
 
@@ -471,27 +497,31 @@ The main tasks for this exercise are as follows:
 
    - **ButterfliesShop.Validators**
 
-10. Add the custom validation data annotations to the **Butterfly** model class to ensure that the users complete the **Quantity** text box and type the correct butterflies quantity.
+10. Add the custom validation data annotations to the **Butterfly** model class to ensure that the users complete the **Quantity** text box, and type the correct butterflies quantity.
 
 #### Task 6: Run the application.
 
 1. Save all the changes.
 
-2. Run the web application in non-debugging mode.
+2. Run the web application in **non-debugging** mode.
 
-3. On the **Add Butterflies to The Shop** page, Create a new butterfly with the following credentials:
+3. Click the **Add Butteflies** button.
+
+4. On the **Add Butterflies to The Shop** page, Create a new butterfly with the following credentials:
 
     - Common Name: **_&lt;A butterfly common name of your choice&gt;_**
     - Butterfly Family: **_&lt;A butterfly family of your choice&gt;_**
     - Characteristics: **_&lt;A butterfly characteristics of your choice&gt;_**
-    - Butterflies Quantity: **leave the field blank.**
+    - Butterflies Quantity: **type 60**
     - Butterflies Picture: **_&lt;A butterfly picture of your choice&gt;_**
 
-4. Verify the custom validation messages.
+5. Verify the custom validation messages.
 
-5. Correct the **Butterflies Quantity** field, add the **Butterflies Picture** once again, and then click **Submit**.
+6. Correct the **Butterflies Quantity** field, add the **Butterflies Picture** once again, and then click the **Submit** button.
 
-5. Verify the details of the newly added butterfly.
+7. Verify the details of the newly added butterfly.
+
+8. **Stop debugging** and close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you should have created a ButterfliesShop application in which users can submit to the shop variety of butterflies.
 

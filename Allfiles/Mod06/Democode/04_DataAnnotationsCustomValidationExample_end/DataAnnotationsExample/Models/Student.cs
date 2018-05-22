@@ -19,7 +19,7 @@ namespace DataAnnotationsExample.Models
         [Required(ErrorMessage = "Please enter your last name.")]
         public string LastName { get; set; }
 
-		[Display(Name = "Birthdate:")]
+		[Display(Name = "BirthDate:")]
         [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }
 

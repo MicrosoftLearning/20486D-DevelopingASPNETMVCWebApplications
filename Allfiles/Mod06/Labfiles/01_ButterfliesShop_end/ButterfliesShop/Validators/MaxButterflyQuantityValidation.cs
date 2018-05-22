@@ -26,7 +26,7 @@ namespace ButterfliesShop.Validators
                 int? sumQuantity = quantity + butterfly.Quantity;
                 if (sumQuantity > _maxAmount)
                 {
-                    return new ValidationResult(string.Format("The store can hold up to {0} butterflies of the same family currently there are {1}", _maxAmount, quantity));
+                    return new ValidationResult(string.Format("Limit of Butterflies in a store is {0} butterflies. Currently there are {1}", _maxAmount, quantity));
                 }
                 return ValidationResult.Success;
             }
