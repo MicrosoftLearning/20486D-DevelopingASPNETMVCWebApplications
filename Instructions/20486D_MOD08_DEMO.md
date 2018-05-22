@@ -635,15 +635,14 @@
               Student Name
            </th>
            <th>
-              Total Grade
+              Mid-Term
            </th>
            <th>
-              Graduation Project Grade
+              Performance
            </th>
            <th>
-              Performance - Percentage
+              Final Grade
            </th>
-           <th></th>
        </tr>
 ```
 
@@ -651,21 +650,21 @@
   ```cs
        <tr>
            <td>Thomas M. Hacker</td>
-           <td id="studentGrade1">90</td>
            <td>93</td>
-           <td>95</td>
+           <td>95%</td>
+           <td id="studentGrade1">90</td>
        </tr>
        <tr>
            <td>Patrick J. Lazo</td>
-           <td id="studentGrade2">50</td>
            <td>53</td>
-           <td>51</td>
+           <td>51%</td>
+           <td id="studentGrade2">50</td>
        </tr>
        <tr>
            <td>Helen D. Miller</td>
-           <td id="studentGrade3">85</td>
            <td>91</td>
-           <td>95</td>
+           <td>95%</td>
+           <td id="studentGrade3">85</td>
        </tr>
 ```
 
