@@ -333,8 +333,6 @@
   ```cs
       public IActionResult Details(Person person)
       {
-          return View(person);
-      }
 ```
 10. Place the mouse cursor after the **{** (opening brackets) sign, press Enter, and then type the following code:
   ```cs
