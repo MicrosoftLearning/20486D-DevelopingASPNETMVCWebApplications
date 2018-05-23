@@ -6,8 +6,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
- https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)
 
 2. Go to **Allfiles\Mod06\Democode\01_BindViewsExample_begin**, and then double-click **BindViewsExample.sln**.
 
