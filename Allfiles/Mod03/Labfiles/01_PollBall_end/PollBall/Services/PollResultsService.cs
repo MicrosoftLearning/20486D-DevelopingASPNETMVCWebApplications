@@ -24,12 +24,7 @@ namespace PollBall.Services
 
         public SortedDictionary<SelectedGame, int> GetVoteResult()
         {
-            SortedDictionary<SelectedGame, int> sortedSelectionVotes = new SortedDictionary<SelectedGame, int>();
-            foreach (KeyValuePair<SelectedGame, int> item in SelectionVotes)
-            {
-                sortedSelectionVotes.Add(item.Key, item.Value);
-            }
-            return sortedSelectionVotes;
+            return new SortedDictionary<SelectedGame, int>(SelectionVotes);
         }
     }
 }
