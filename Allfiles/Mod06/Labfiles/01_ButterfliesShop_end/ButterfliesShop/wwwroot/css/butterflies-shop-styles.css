@@ -9,7 +9,6 @@
 
 .main-title {
     color: #321919;
-    font-family: "Libre Baskerville", serif;
     font-size: 60px;
     font-weight: bolder;
     text-align: center;
@@ -18,7 +17,6 @@
 .into {
     color: #800000;
     font-size: 25px;
-    font-family: "Libre Baskerville", serif;
     font-weight: bold;
     text-align: center;
 }
@@ -198,4 +196,11 @@ form {
 .form-field .field-validation-error {
         display: block;
         text-align: right;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px #1e004f;
 }

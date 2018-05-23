@@ -125,51 +125,55 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Use the model in a view
 
-1. In the **Index.cshtml** file, set the **@model** for the **Index.cshtml** to **ButterfliesShop.Models.IndexViewModel**.
+1. In the **Index.cshtml** page, set the **@model** for the **Index.cshtml** to **ButterfliesShop.Models.IndexViewModel**.
 
-2. Add an **H1** element to the **Index.cshtml** page by using the following information:
+2. Add an **DIV** element to the **Index.cshtml** page by using the following information:
+
+    - Class: **container**
+
+3. Add an **H1** element to the **Index.cshtml** page within the **DIV** element by using the following information:
 
     - Content: **Butterflies Shop**
     - Class: **main-title**
 
-3. Add an **P** element to the **Index.cshtml** page by using the following information:
+4. Add an **P** element to the **Index.cshtml** page within the **DIV** element by using the following information:
 
     - Content: **Welcome to Our Web Store, Enjoy a Wide Variety of Butterflies**
     - Class: **into**
 
-4. Add an **P** element to the **Index.cshtml** page by using the following information:
+5. Add an **P** element to the **Index.cshtml** page within the **DIV** element by using the following information:
 
     - Content: **Our Butterflies in The Shop**
     - Class: **into**
 
-5. Add a **BUTTON** element to the **Index.cshtml** page by using the following information:
+6. Add a **BUTTON** element to the **Index.cshtml** page within the **DIV** element by using the following information:
 
     - Type: **button**
     - Content: **Add Butterflies**
 
-6. Add the **URL.Action** helper to the **onclick** attribute of the **&lt;button&gt;** tag by using the following information:
+7. Add the **URL.Action** helper to the **onclick** attribute of the **&lt;button&gt;** tag by using the following information:
 
    - Method: **Url.Action()**
    - Action name: **Create**
    - Controller name: **Butterfly**
 
-7. Add a **DIV** element to the **Index.cshtml** page by using the following information:
+8. Add a **DIV** element to the **Index.cshtml** page within the **DIV** element by using the following information:
 
     - Class: **img-container**
 
-8. Create a new **foreach** code block that loops through all the butterflies in the **Butterflies** list.
+9. Create a new **foreach** code block that loops through all the butterflies in the **Butterflies** list.
 
-9. Add a **DIV** element to the **Index.cshtml** page inside the **foreach** code block by using the following information:
+10. Add a **DIV** element to the **Index.cshtml** page inside the **foreach** code block by using the following information:
 
     - Class: **photo-index-card**
 
-10. In the **foreach** code block, add a **P** element to display the **CommonName**  property from the model.
+11. In the **foreach** code block, add a **P** element to display the **CommonName**  property from the model.
 
-11. In the **foreach** code block, add a **P** element to display the **ButterflyFamily**  property from the model.
+12. In the **foreach** code block, add a **P** element to display the **ButterflyFamily**  property from the model.
 
-12. In the **foreach** code block, add a **P** element to display the **Quantity**  property from the model.
+13. In the **foreach** code block, add a **P** element to display the **Quantity**  property from the model.
 
-13. In the **foreach** code block, add a **P** element to display the **CreatedDate**  property from the model.
+14. In the **foreach** code block, add a **P** element to display the **CreatedDate**  property from the model.
 
 #### Task 3: Pass the model from the controller to a view
 
@@ -290,7 +294,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Add Display Helpers
 
-1. In the **Index.cshtml** file, replace the code in the **foreach** code block, add an **H3** element with the **display-picture-title** class to display the **CommonName**  property from the model by using the following information:
+1. In the **Index.cshtml** page, replace the code in the **foreach** code block, add an **H3** element with the **display-picture-title** class to display the **CommonName**  property from the model by using the following information:
 
    - Helper: **Html.DisplayFor**
    - Lamda expression: **modelItem =&gt; model.CommonName**
@@ -342,16 +346,20 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Add Form Helpers
 
-1. In the **Create.cshtml** file, set the **@using** for the **Create.cshtml** to **ButterfliesShop.Models**.
+1. In the **Create.cshtml** page, set the **@using** for the **Create.cshtml** to **ButterfliesShop.Models**.
 
-2. In the **Create.cshtml** file, set the **@model** for the **Create.cshtml** to **ButterfliesShop.Models.Butterfly**.
+2. In the **Create.cshtml** page, set the **@model** for the **Create.cshtml** to **ButterfliesShop.Models.Butterfly**.
 
-3. Add an **H1** element to the **Create.cshtml** page by using the following information:
+3. Add an **DIV** element to the **Create.cshtml** page by using the following information:
+
+    - Class: **container**
+
+4. Add an **H1** element to the **Create.cshtml** page within the **DIV** element by using the following information:
 
     - Content: **Add Butterflies to The Shop**
     - Class: **main-title**
 
-4. Create a form on the page by using the following information:
+5. Create a form on the page within the **DIV** element by using the following information:
 
    - Action: **Create**
    - Form method: **FormMethod.Post**
@@ -359,7 +367,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Add Editor Helpers
 
-1. In the **Create.cshtml** file, add a **DIV** element with the **form-field** class, and then inside the **DIV** element add a **LABEL** and an **INPUT** elements to display controls for the **CommonName** property of the model by using the following information:
+1. In the **Create.cshtml** page, add a **DIV** element with the **form-field** class, and then inside the **DIV** element add a **LABEL** and an **INPUT** elements to display controls for the **CommonName** property of the model by using the following information:
 
    - Helper:
      - **asp-for**
@@ -449,7 +457,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Add validation helpers to a view
 
-1. In the **Create.cshtml** file, inside the form, use the **asp-validation-summary** helper to render validation messages.
+1. In the **Create.cshtml** page, inside the form, use the **asp-validation-summary** helper to render validation messages.
 
 2. Add a **SPAN** element to display validation message for the **CommonName** property of the model by using the following information:
 
