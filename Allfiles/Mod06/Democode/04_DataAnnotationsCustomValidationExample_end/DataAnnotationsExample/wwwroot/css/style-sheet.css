@@ -1,4 +1,8 @@
-﻿input,textarea {
+﻿body {
+    text-align: center;
+}
+
+input,textarea {
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
@@ -20,10 +24,11 @@ span, li {
     font-size: 20px;
 }
 
+
 ul {
     display: inline-block;
     text-align: left;
-    margin-left:60px;
+    width:350px;
 }
 
 h1 {
@@ -42,7 +47,7 @@ input[type=submit] {
     width: 200px;
     background-color: darkgreen;
     color: white;
-    margin-top:30px;
+    margin:30px auto;
 }
 
 form{
@@ -72,4 +77,17 @@ form{
 .form-field .field-validation-error {
         display: block;
         text-align: right;
+}
+
+.input-span {
+    display: inline-block;
+    width: 250px;
+}
+
+.container {
+    max-width: 940px;
+    max-height: 780px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px #1e004f;
 }

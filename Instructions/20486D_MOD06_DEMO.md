@@ -190,12 +190,12 @@
 
 11. In the **BODY** element of the **Index.cshtml** code window, type the following code:
   ```cs
-       <h1>Create an account</h1>
-       <div>
+       <div class="container">
+           <h1>Create an account</h1>
        </div>
 ```
 
-12. In the **DIV** element of the **Index.cshtml** code window, type the following code:
+12. In the **DIV** element of the **Index.cshtml** code window, after the **H1** element type the following code:
   ```cs
        <form asp-action="Details" method="post">
             <label asp-for="FullName"></label>
@@ -229,11 +229,11 @@
 16. In the **BODY** element of the **Details.cshtml** code window, type the following code:
 
   ```cs
-       <h1>User Details</h1>
-       <div>
+       <div class="container">
+           <h1>User Details</h1>
        </div>
 ```
-17. In the **DIV** element of the **Details.cshtml** code window, type the following code:
+17. In the **DIV** element of the **Details.cshtml** code window, after the **H1** element type the following code:
   ```cs
        <span class="display-prop-name">
            @Html.DisplayNameFor(model => model.FullName)
@@ -355,36 +355,44 @@
 
 14. In the **BODY** element of the **Index.cshtml** code window, type the following code:
   ```cs
-       <h1>Submit Personal Information</h1>
-       <div>
+       <div class="container">
+           <h1>Submit Personal Information</h1>
        </div>
 ```
 
-15. In the **DIV** element of the **Index.cshtml** code window, type the following code:
+15. In the **DIV** element of the **Index.cshtml** code window, after the **H1** element type the following code:
   ```cs
        <form asp-action="Details">
             <div asp-validation-summary="All"></div>
             <div class="form-field">
                 <label asp-for="FirstName"></label>
-                <input asp-for="FirstName" />
-                <span asp-validation-for="FirstName"></span>
+                <span class="input-span">
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName"></span>
+                </span>
             </div>
             <div class="form-field">
                 <label asp-for="LastName"></label>
-                <input asp-for="LastName" />
-                <span asp-validation-for="LastName"></span>
+                <span class="input-span">
+                    <input asp-for="LastName" />
+                    <span asp-validation-for="LastName"></span>
+                </span>
             </div>
             <div class="form-field">
                 <label asp-for="Age"></label>
-                <input asp-for="Age" />
-                <span asp-validation-for="Age"></span>
+                <span class="input-span">
+                    <input asp-for="Age" />
+                    <span asp-validation-for="Age"></span>
+                </span>
             </div>
             <div class="form-field">
                 <label asp-for="Description"></label>
-                <textarea asp-for="Description"></textarea>
-                <span asp-validation-for="Description"></span>
+                <span class="input-span">
+                    <textarea asp-for="Description"></textarea>
+                    <span asp-validation-for="Description"></span>
+                </span>
             </div>
-            <div class="form-field">
+            <div>
                 <input type="submit" value="Submit" />
             </div>
         </form>
