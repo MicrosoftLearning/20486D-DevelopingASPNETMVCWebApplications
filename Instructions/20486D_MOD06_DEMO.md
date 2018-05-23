@@ -507,7 +507,7 @@
 
 20. On the **Submit Student Information** page, ensure that **Are you a university student?** checkbox is not selected, and then click the **Submit** button.
 
-      >**Note:** The browser window displays the **Index.cshtml** view with validation message beside the **Are you a university student?** checkbox.
+      >**Note:** The browser window displays the **Index.cshtml** view with custom validation message beside the **Are you a university student?** checkbox.
 
 21. On the **Submit Student Information**, ensure that **Are you a university student?** checkbox is selected, and then click the **Submit** button. 
 
