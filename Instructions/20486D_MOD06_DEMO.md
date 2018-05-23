@@ -271,13 +271,13 @@
 
 23. On the **Register** page, in the **Password** text box, type _&lt;A password of your choice&gt;_, and then click **Register**.
 
-24. On the **User Details** page, Verify the newly registered user details.
+      >**Note:** Verify the newly registered user details.
 
-25. In the **Microsoft Edge**, click **Close**.
+24. In the **Microsoft Edge**, click **Close**.
 
-26. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+25. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-27. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+26. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Validating MVC Applications
 
