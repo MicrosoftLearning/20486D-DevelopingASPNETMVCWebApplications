@@ -82,8 +82,9 @@ The main tasks for this exercise are as follows:
     - New folder name: **css**
 
 2. Copy a CSS file to the new folder using the following information:
-    - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
     - File name: **style.css**
+    - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+    - Target location:  **Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall\wwwroot\css**
 
 3. Copy the **images** folder using the following information:
     - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
@@ -97,11 +98,9 @@ The main tasks for this exercise are as follows:
 
 6. Inside the **P** element, create an **H1** element with the following text: "Favorite ball game poll."
 
-7. Under the **H1** element, in the **P** element, add the following text: <br />
+7. Below the **H1** element, in the **P** element, add the following text: <br />
 "Please select your favorite ball game and then press submit.<br />
 The poll is anonymous and does not contain names."
-
-
 
 8. Below the **P** element, add a **FORM** element with the class name "submit-form".
 
@@ -113,7 +112,7 @@ The poll is anonymous and does not contain names."
     - Input type: **submit**
     - Value: **Submit Query**
 
-12. Open the **html-text.txt** file, that located in **Allfiles\Mod03\Labfiles\01_PollBall_begin**, and copy its content into the **DIV** element with the class name "main-div".
+12. Open the **html-text.txt** file, that located in **Allfiles\Mod03\Labfiles\01_PollBall_begin**, and copy its content into the **DIV** element with the class name **main-div**.
 
 ####	Task 4: Run the application – content of HTML not displayed
 
@@ -138,11 +137,11 @@ The poll is anonymous and does not contain names."
 2. Access the following relative path:
     - Path: **/poll-questions.html**
 
-3. Verify that the browser displays the poll-questions.html file content.
+3. Verify that the browser displays the **poll-questions.html** file content.
 
 4. Stop debugging.
 
-5. To link a new style sheet, add a **link** element to the **head** element of the **poll-questions.html** file using the following information:
+5. To link a new style sheet, add a **LINK** element to the **HEAD** element of the **poll-questions.html** file using the following information:
     - Type: **text/css**
     - Relation: **stylesheet**
     - Href: **css/style.css**
@@ -159,10 +158,10 @@ The poll is anonymous and does not contain names."
 
 ####	Task 7: Add an HTML file outside of the wwwroot folder
 
-1. Copy a HTML file to a new location using the following information:
+1. Copy an HTML file to a new location using the following information:
     - File name: **test.html**
-    - Source location of the HTML file: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
-    - destination location of the HTML: **Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall**
+    - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+    - Target location: **Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall**
 
 ####	Task 8: Run the application – content of HTML outside wwwroot folder not displayed
 
@@ -196,18 +195,18 @@ The main tasks for this exercise are as follows:
 
 1. Create an **app.Use** custom middleware inside the **Configure** method, as the first middleware in the pipeline.
 
-2. In the **app.Use**, write a code to check the existence of the "favorite" query parameter in the request, that submitted by the HTML form.
+2. In the **app.Use**, write a code to check the existence of the "favorite" query parameter in the request that  is submitted by the HTML form.
 
 3. If the "favorite" query parameter does not exist in the request, invoke the next middleware in the pipeline.
 
 4. If the "favorite" query parameter exists in the request, define a new variable using the following information:
     - Type: **string**
     - Name: **selectedValue**
-    - Value: **"favorite" query parameter**
+    - Value: The value of the "favorite" query parameter
 
 5. If the "favorite" query parameter exists in the request, print a message to the browser using the following information:
     - Method: **WriteAsync**
-    - Text: **"Selected Value is: "** concatinated with the ** selectedValue** variable.
+    - Text: **"Selected Value is: "** concatinated with the **selectedValue** variable.
 
 ####	Task 2: Run the application
 
@@ -280,7 +279,7 @@ The main tasks for this exercise are as follows:
     - Parent folder: **Services**
     - Name: **SelectedGame**
 
-3. Fill the enum with the following values:
+3. Fill the ENUM with the following values:
 ```cs
     Basketball,
     Football,
@@ -297,10 +296,10 @@ The main tasks for this exercise are as follows:
     - Name: **IPollResultsService**
 
 5. Add a method declaration inside the interface using the following information:
+    - Return type: **void**
     - Name: **AddVote**
     - Parameter name: **game**
     - Parameter Type: **SelectedGame**
-    - Return type: **void**
 
 5. Add a method declaration inside the interface using the following information:
     - Name: **GetVoteResult**
@@ -316,25 +315,25 @@ The main tasks for this exercise are as follows:
     - Parent folder: **Services**
     - Name: **PollResultsService**
 
-3. Define an implementation in the **PollResultsService** class of the **IPollResultsService** interface.
+3. Define an implementation of the **IPollResultsService** interface in the **PollResultsService** class.
 
-4. Create a dictionary that will contain the vote counts per game using the following information:
-    - Name: **SelectionVotes**
-    - Return type: **Dictionary**<**SelectedGame**,**int**>
+4. In the **PollResultsService** class, create a property that will contain the vote counts per game using the following information:
     - Scope: **private**
+    - Type: **Dictionary**<**SelectedGame**,**int**>
+    - Name: **SelectionVotes**
     - Access: **Read/Write**
 
 5. Add a new constructor to the **PollResultsService** class. In the constructor, instantiate **SelectionVotes** to be a new **Dictionary**<**SelectedGame**,**int**> object.
 
-6. In the **PollResultsService** class, implement the **AddVote** method from the **IPollResultsService** interface. The method should increment the value of the dictionary's selected game, using the given game parameter value as it's key.
+6. Implement the **AddVote** method from the **IPollResultsService** interface. The method should increment the value of the dictionary's selected game, using the given game parameter value as it's key.
 In case the key does not exist, add a new key to the dictionary with the value of 1.
 
-8. In the **PollResultsService** class, implement the **GetVoteResult** method from the **IPollResultsService** interface. The method should return a new SortedDictionary instantiated with **SelectionVotes** passed to its constructor.
+7. In the **PollResultsService** class, implement the **GetVoteResult** method from the **IPollResultsService** interface. The method should return a new **SortedDictionary** instantiated with **SelectionVotes** passed to its constructor.
 
 ####	Task 3: Use dependency injection
 
 1. In the **Startup** class, Add **using** statements for the following namespaces:
-    - **PollBall.Services;**
+    - **PollBall.Services**
 
 2. Modify the **Configure** method so it will include the following injected services as parameters:
     - Parameter type: **IApplicationBuilder**
@@ -344,31 +343,30 @@ In case the key does not exist, add a new key to the dictionary with the value o
     - Parameter type: **IPollResultsService**
     - Parameter name: **pollResults**
 
-3. In the **Configure** method, replace the text that is printed from the **app.Run ** to 
-"This text was generated by the app.Run middleware. wwwroot folder path: ". Concatinate the string with a value from the **env.WebRootPath** property.
+3. In the **Configure** method, replace the text that is printed from the **app.Run** to "This text was generated by the app.Run middleware. wwwroot folder path: ". Concatinate the string with a value from the **env.WebRootPath** property.
 
-4. In the **app.Use**, when the "favorite" query parameter exists, add a new variable from its value and then parse it as an Enum using the following information:
-    - Variable type: **SelectedGame**
-    - Variable name: **selectedGame**
+4. In the **app.Use**, between the initialization of the **selectedValue** variable and the **WriteAsync** method call, parse the **selectedValue** variable and return the result into the **selectedGame** variable using the following information:
+    - Result variable type: **SelectedGame**
+    - Result variable name: **selectedGame**
     - Method call: **Enum.Parse**
     - Enum type: **SelectedGame**
-    - Enum value: **selectedValue**
+    - Variable name to parse: **selectedValue**
     - Ignore case sensitive: **true**
 
-6. In the **app.Use**, when the "favorite" query parameter exists, call the **AddVote** method of the **IPollResultsService** service using the following information:
+6. In the **app.Use**, between the initialization of the **selectedGame** variable and the **WriteAsync** method call, execute the **AddVote** method of the **IPollResultsService** service using the following information:
     - Parameter value: **selectedGame**
 
-7. In the **app.Use**, when the "favorite" query parameter exists, define a new variable using the following information:
+7. In the **app.Use**, between the call to **AddVote** and the call to **WriteAsync**, define a new variable using the following information:
     - Type: **SortedDictionary<SelectedGame, int>**
     - Name: **gameVotes**
 
-8. In the **app.Use**, when the "favorite" query parameter exists, replace the **WriteAsync** method call with code that receives the **GetVoteResult** result from the **lPollResultsService** service, and places it into the **gameVotes** variable.
+8. In the **app.Use**, replace the **WriteAsync** method call with code that receives the result from the **GetVoteResult** method of the **lPollResultsService** service, and places it into the **gameVotes** variable.
 
 9. In the **app.Use**, when the "favorite" query parameter exists, below the **GetVoteResult** method call, print to the browser each of the games names, and vote count from the **gameVotes** variable.
 
 10. In the **Startup** class, in the **ConfigureServices**, add the poll results service using the following information: 
     - Add method: **Singleton**
-    - Interface: **lPollResultsService**
+    - Interface: **IPollResultsService**
     - Implementation: **PollResultsService**
 
 
@@ -446,7 +444,7 @@ The main tasks for this exercise are as follows:
 
 3. Change the index action return value, and return a string content using the following information:
     - Return type: **ContentResult**
-    - Content value: **Hello from controller**
+    - Content value: **"Hello from controller"**
 
 ####	Task 3: Run the application
 
@@ -472,13 +470,13 @@ The main tasks for this exercise are as follows:
 
 1. In the **Startup** class, in the **app.Use** delete the code that is responsible for getting the vote results from the service, and displaying it in the browser.
 
-2. Replace the deleted code with code that displays to the browser the following text: "Thank you for submitting the poll".
+2. Replace the deleted code with code that prints to the browser the following text: "Thank you for submitting the poll".
 
-3. In the **HomeController** class, Add **using** statements for the following namespaces:
-    - **PollBall.Services;**
-    - **System.Text;**
+3. In the **HomeController** class, add **using** statements for the following namespaces:
+    - **PollBall.Services**
+    - **System.Text**
 
-4. In the **HomeController** class, define a new class member using the following information:
+4. In the **HomeController** class, define a new field using the following information:
     - Type: **IPollResultsService**
     - Name: **_pollResults**
     - Scope: **private**
@@ -490,54 +488,54 @@ The main tasks for this exercise are as follows:
 7. In the **index** action, define and initiate a new variable using the following information:
     - Type: **StringBuilder**
     - Name: **results**
-    - Value: new **StringBuilder** method
+    - Value: new **StringBuilder** instance
 
 8. In the **index** action, define and initiate a new variable using the following information:
     - Type: **SortedDictionary<SelectedGame, int>**
     - Name: **voteList**
-    - Value: Call the **GetVoteResult** method of the **_pollResults** class member
+    - Value: Call the **GetVoteResult** method of the **_pollResults** field
 
-9. Below the **voteList** variable, use a foreach loop to concatenate each of the game names, and vote counts from the **voteList** variable, into the **results** variable. Use the **Appent** method to concatinate into the **StringBuilder** .
+9. Below the **voteList** variable declaration, use a foreach loop to concatenate each of the game names and vote counts from the **voteList** variable, into the **results** variable. Use the **Appent** method to concatinate into the **StringBuilder** . Append a **BR** element into the string of each one of the loops.
 
-10. In the **index** action, return the **results** variable.
+10. In the **index** action, return a string content using the following information:
+    - Return type: **ContentResult**
+    - Content value:  The **results** variable as string.
 
 ####	Task 5: Run the application
 
 1. Start debugging the **PollBall** application.
 
-2. Verify that the browser displays the following text: "This text was generated by the app.Run middleware. wwwroot folder path:" [local path to your wwwroot folder].
-
-3. Access the following relative path:
+2. Access the following relative path:
     - Path: **/poll-questions.html**
 
-4. Select the **Basketball** radio button, and click the **Submit Form** button.
+3. Select the **Basketball** radio button, and click the **Submit Form** button.
 
-5. Verify that the browser displays the following text:<br>
+4. Verify that the browser displays the following text:<br>
 "Thank you for submitting the poll."
 
-6. Access the following relative path:
+5. Access the following relative path:
     - Path: **/poll-questions.html**
 
-7. Select the **Football** radio button, and click the **Submit Form** button.
+6. Select the **Football** radio button, and click the **Submit Form** button.
 
-8. Verify that the browser displays the following text:<br>
+7. Verify that the browser displays the following text:<br>
 "Thank you for submitting the poll."
 
-9. Access the following relative path:
+8. Access the following relative path:
     - Path: **/poll-questions.html**
 
-10. Select the **Basketball** radio button, and click the **Submit Form** button.
+9. Select the **Basketball** radio button, and click the **Submit Form** button.
 
-11. Verify that the browser displays the following text:<br>
+10. Verify that the browser displays the following text:<br>
 "Thank you for submitting the poll."
 
-12. Access the following relative path:
+11. Access the following relative path:
     - Path: **/**
 
-13. Verify that the browser displays the following text:<br>
+12. Verify that the browser displays the following text:<br>
 "Game name: Basketball, Votes: 2 <br> 
 Game name: Football, Votes: 1"
 
-14. Stop debugging.
+13. Stop debugging.
 
 >**Result**: At the end of this exercise, you will be able to create controller, and inject a service into it with **Dependency Injection**. 
