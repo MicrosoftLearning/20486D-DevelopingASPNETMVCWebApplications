@@ -315,7 +315,7 @@ The main tasks for this exercise are as follows:
     - Parent folder: **Services**
     - Name: **PollResultsService**
 
-3. Define an implementation of the **IPollResultsService** interface in the **PollResultsService** class.
+3. Declare **IPollResultsService** interface, so that **PollResultsService** would be an implementation of **IPollResultsService**.
 
 4. In the **PollResultsService** class, create a property that will contain the vote counts per game using the following information:
     - Scope: **private**
@@ -325,8 +325,7 @@ The main tasks for this exercise are as follows:
 
 5. Add a new constructor to the **PollResultsService** class. In the constructor, instantiate **SelectionVotes** to be a new **Dictionary**<**SelectedGame**,**int**> object.
 
-6. Implement the **AddVote** method from the **IPollResultsService** interface. The method should increment the value of the dictionary's selected game, using the given game parameter value as it's key.
-In case the key does not exist, add a new key to the dictionary with the value of 1.
+6. Implement the **AddVote** method from the **IPollResultsService** interface. The method should increment the value of the dictionary's selected game, using the given game parameter value as it's key. In case the key does not exist, add a new key to the dictionary with the value of 1.
 
 7. In the **PollResultsService** class, implement the **GetVoteResult** method from the **IPollResultsService** interface. The method should return a new **SortedDictionary** instantiated with **SelectionVotes** passed to its constructor.
 
@@ -353,10 +352,10 @@ In case the key does not exist, add a new key to the dictionary with the value o
     - Variable name to parse: **selectedValue**
     - Ignore case sensitive: **true**
 
-6. In the **app.Use**, between the initialization of the **selectedGame** variable and the **WriteAsync** method call, execute the **AddVote** method of the **IPollResultsService** service using the following information:
+6. In the **app.Use**, below the initialization of the **selectedGame** variable, execute the **AddVote** method of the **IPollResultsService** service using the following information:
     - Parameter value: **selectedGame**
 
-7. In the **app.Use**, between the call to **AddVote** and the call to **WriteAsync**, define a new variable using the following information:
+7. In the **app.Use**, below the call to **AddVote**, define a new variable using the following information:
     - Type: **SortedDictionary<SelectedGame, int>**
     - Name: **gameVotes**
 
@@ -442,8 +441,7 @@ The main tasks for this exercise are as follows:
     - Template: **MVC controller - Empty**
     - Folder: **Controllers**
 
-3. Change the index action return value, and return a string content using the following information:
-    - Return type: **ContentResult**
+3. Change the index action return value using the **Content** method with the following information:
     - Content value: **"Hello from controller"**
 
 ####	Task 3: Run the application
@@ -495,7 +493,7 @@ The main tasks for this exercise are as follows:
     - Name: **voteList**
     - Value: Call the **GetVoteResult** method of the **_pollResults** field
 
-9. Below the **voteList** variable declaration, use a foreach loop to concatenate each of the game names and vote counts from the **voteList** variable, into the **results** variable. Use the **Appent** method to concatinate into the **StringBuilder** . Append a **BR** element into the string of each one of the loops.
+9. Below the **voteList** variable declaration, use a **foreach** loop to iterate over each game name and vote count, and then concatenate those into the **results** variable. Using **StringBuilder**'s  **Append** method, append the text in each iteration, and then append **Environment.NewLine**.
 
 10. In the **index** action, return a string content using the following information:
     - Return type: **ContentResult**
