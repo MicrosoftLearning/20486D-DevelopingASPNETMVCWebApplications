@@ -361,7 +361,7 @@ The main tasks for this exercise are as follows:
 
 8. In the **app.Use**, replace the **WriteAsync** method call with code that receives the result from the **GetVoteResult** method of the **lPollResultsService** service, and places it into the **gameVotes** variable.
 
-9. In the **app.Use**, when the "favorite" query parameter exists, below the **GetVoteResult** method call, print to the browser each of the games names, and vote count from the **gameVotes** variable.
+9. In the **app.Use**, when the "favorite" query parameter exists, below the **GetVoteResult** method call, print to the browser each of the games names, and vote count from the **gameVotes** variable. Include the game name and votes of each iteration in a **DIV** element.
 
 10. In the **Startup** class, in the **ConfigureServices**, add the poll results service using the following information: 
     - Add method: **Singleton**
