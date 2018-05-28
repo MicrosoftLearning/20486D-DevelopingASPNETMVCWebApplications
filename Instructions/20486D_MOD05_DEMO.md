@@ -524,7 +524,7 @@
 
 16. Right-click the **_CardDesign.cshtml** view you just pasted, and then click **Rename**.
 
-17. In the **NewFolder** box, type **CardDesign.cshtml**, and then press Enter.
+17. In the **_CardDesign.cshtml** box, type **CardDesign.cshtml**, and then press Enter.
 
 18. In the **Solution Explorer** pane, of the **ViewComponentExample - Microsoft Visual Studio** window, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
