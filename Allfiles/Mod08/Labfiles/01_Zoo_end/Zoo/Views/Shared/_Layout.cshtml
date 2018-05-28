@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/zoo-style.css" rel="stylesheet" />
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/menubar-functions.js"></script>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="@Url.Action("Index", "Zoo")">Attractions</a></li>
+        <li><a href="@Url.Action("VisitorDetails", "Zoo")">Visitor Info</a></li>
+        <li><a href="@Url.Action("BuyTickets", "Zoo")">Tickets</a></li>
+    </ul>
+    <div class="header-container">
+        <img class="img-header" src="~/images/header.jpg" />
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿@model Zoo.Models.Customer
+
+@{
+    ViewData["Title"] = "BuyTickets";
+}
+
+<div class="container">
+    <div>
+        <table>
+            <tr>
+                <td>Adult</td>
+                <td>35.95$</td>
+                <td>
+                    <select id="adultQuantity">
+                        <option selected="selected" value="0">0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Child</td>
+                <td>23.95$</td>
+                <td>
+                    <select id="childQuantity">
+                        <option selected="selected" value="0">0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Senior</td>
+                <td>30.95$</td>
+                <td>
+                    <select id="seniorQuantity">
+                        <option selected="selected">0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <form method="post" enctype="multipart/form-data" asp-action="BuyTicketsPost">
+            <div asp-validation-summary="All"></div>
+            <div class="form-field">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" />
+                <span asp-validation-for="LastName"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="City"></label>
+                <input asp-for="City" />
+                <span asp-validation-for="City"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="PhoneNumber"></label>
+                <input asp-for="PhoneNumber" />
+                <span asp-validation-for="PhoneNumber"></span>
+            </div>
+            <input type="text" id="test" />
+            <div>
+                <p>Order Summary</p>
+                <table id="totalAmount">
+                    <tr>
+                        <td>test</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/jquery-form-functions.js"></script>
+}
