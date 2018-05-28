@@ -425,7 +425,7 @@
 
 8. In the **Solution Explorer** pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Views**, point to **Add**, and then click **New Folder**.
 
-9. In the **Solution Explorer** pane, rename **New Folder** as **Shared**, and then press Enter.
+9. In the **NewFolder** box, type **Shared**, and then press Enter.
 
 10. In the **Solution Explorer** pane of the **PartialViewExample - Microsoft Visual Studio** window, right-click **Shared**, point to **Add**, and then click **View**.
     
@@ -476,7 +476,7 @@
 
 1. In the **Solution Explorer** pane of the **ViewComponentExample - Microsoft Visual Studio** window, right-click **ViewComponentExample**, point to **Add**, and then click **New Folder**.
 
-2. In the **Solution Explorer** pane, rename **New Folder** as **ViewComponents**, and then press Enter.
+2. In the **NewFolder** box, type **ViewComponents**, and then press Enter.
 
 3.	In the **Solution Explorer** pane of the **ViewComponentExample - Microsoft Visual Studio** window, right-click **ViewComponents**, point to **Add**, and then click **Class**.
 
@@ -512,11 +512,11 @@
 
 10. In the **Solution Explorer** pane of the **ViewComponentExample - Microsoft Visual Studio** window, expand **Views**, right-click **Shared**, point to **Add**, and then click **New Folder**.
 
-11. In the **Solution Explorer** pane, rename **New Folder** as **Components**, and then press Enter.
+11. In the **NewFolder** box, type **Components**, and then press Enter.
 
 12. In the **Solution Explorer** pane of the **ViewComponentExample - Microsoft Visual Studio** window, right-click the **Components** folder you just created, point to **Add**, and then click **New Folder**.
 
-13. In the **Solution Explorer** pane, rename **New Folder** as **PersonCard**, and then press Enter.
+13. In the **NewFolder** box, type **PersonCard**, and then press Enter.
 
 14. In the **Solution Explorer** pane of the **ViewComponentExample - Microsoft Visual Studio** window, under **Shared**, right-click **_CardDesign.cshtml**, and then click **Cut**.
 
@@ -524,7 +524,7 @@
 
 16. Right-click the **_CardDesign.cshtml** view you just pasted, and then click **Rename**.
 
-17. In the **Solution Explorer** pane, rename **_CardDesign.cshtml** as **CardDesign.cshtml**, and then press Enter.
+17. In the **NewFolder** box, type **CardDesign.cshtml**, and then press Enter.
 
 18. In the **Solution Explorer** pane, of the **ViewComponentExample - Microsoft Visual Studio** window, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
