@@ -460,8 +460,6 @@ The main tasks for this exercise are as follows:
 
 6. Stop debugging. 
 
-7. Close the **Microsoft Edge** window.
-
 8. In the **Startup** class, move the **app.Run** block to be the last code block in the **Configure** method.
 
 ####	Task 4: Use Dependency Injection in a controller
