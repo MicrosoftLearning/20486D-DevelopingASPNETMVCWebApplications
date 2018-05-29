@@ -9,7 +9,7 @@
         <table>
             <tr>
                 <td>Adult</td>
-                <td>35.95$</td>
+                <td id="adultCost">35.95$</td>
                 <td>
                     <select id="adultQuantity">
                         <option selected="selected" value="0">0</option>
@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <td>Child</td>
-                <td>23.95$</td>
+                <td id="childCost">23.95$</td>
                 <td>
                     <select id="childQuantity">
                         <option selected="selected" value="0">0</option>
@@ -37,7 +37,7 @@
             </tr>
             <tr>
                 <td>Senior</td>
-                <td>30.95$</td>
+                <td id="seniorCost">30.95$</td>
                 <td>
                     <select id="seniorQuantity">
                         <option selected="selected">0</option>
@@ -65,9 +65,9 @@
                 <span asp-validation-for="LastName"></span>
             </div>
             <div class="form-field">
-                <label asp-for="City"></label>
-                <input asp-for="City" />
-                <span asp-validation-for="City"></span>
+                <label asp-for="Address"></label>
+                <input asp-for="Address" />
+                <span asp-validation-for="Address"></span>
             </div>
             <div class="form-field">
                 <label asp-for="Email"></label>
@@ -80,12 +80,9 @@
                 <span asp-validation-for="PhoneNumber"></span>
             </div>
             <input type="text" id="test" />
-            <div>
+            <div class="hidden-div">
                 <p>Order Summary</p>
                 <table id="totalAmount">
-                    <tr>
-                        <td>test</td>
-                    </tr>
                 </table>
             </div>
             <div class="form-field">

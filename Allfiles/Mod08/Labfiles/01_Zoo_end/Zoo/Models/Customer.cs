@@ -11,24 +11,23 @@ namespace Zoo.Models
     {
         public int CustomerId { get; set; }
 
-        [DisplayName("First Name")]
-        [Required]
+        [Display(Name = "First Name")]
+        [Required(ErrorMessage = "Please enter your first name")]
         public string FirstName { get; set; }
 
-        [DisplayName("Last Name")]
-        [Required]
+        [Display(Name = "Last Name")]
+        [Required(ErrorMessage = "Please enter your last name")]
         public string LastName { get; set; }
 
         [DataType(DataType.EmailAddress)]
-        [Required]
+        [Required(ErrorMessage = "Please enter your email address")]
         public string Email { get; set; }
 
-        [DataType(DataType.PhoneNumber)]
-        [Required]
+        [Display(Name = "Phone Number"), DataType(DataType.PhoneNumber)]
         public int PhoneNumber { get; set; }
 
-        [Required]
-        public string City { get; set; }
+        [StringLength(50, MinimumLength = 4)]
+        public string Address { get; set; }
 
         public double TotalAmount { get; set; }
     }
