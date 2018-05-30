@@ -193,7 +193,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 1: Create a middleware
 
-1. Create an **app.Use** custom middleware inside the **Configure** method, as the first middleware in the pipeline.
+1. In **Startup.cs**, Create an **app.Use** custom middleware inside the **Configure** method, as the first middleware in the pipeline.
 
 2. In the **app.Use**, write a code to check the existence of the "favorite" query parameter in the request that  is submitted by the HTML form.
 
