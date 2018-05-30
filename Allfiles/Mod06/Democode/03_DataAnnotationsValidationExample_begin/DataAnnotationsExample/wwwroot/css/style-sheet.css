@@ -19,10 +19,10 @@ label {
     vertical-align:top;
 }
 
-
 span, li {
     color: red;
     font-size: 20px;
+    width: 350px;
 }
 
 ul {
@@ -70,7 +70,8 @@ form{
 
 .form-field .validation-error,
 .form-field .field-validation-error {
-        display: block;
+    display: block;
+    text-align: left;
 }
 
 .input-span{
