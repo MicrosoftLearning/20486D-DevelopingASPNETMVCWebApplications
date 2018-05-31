@@ -4,12 +4,13 @@
     ViewData["Title"] = "BuyTickets";
 }
 
-<div class="container">
-    <div>
-        <table>
+<div class="container buy-tickets">
+    <div class="info">
+        <div class="step-title">Step 1 - Choose Tickets</div>
+        <table class="pricing">
             <tr>
                 <td>Adult</td>
-                <td id="adultCost">35.95$</td>
+                <td id="adultCost">$35.95</td>
                 <td>
                     <select id="adultQuantity">
                         <option selected="selected" value="0">0</option>
@@ -23,7 +24,7 @@
             </tr>
             <tr>
                 <td>Child</td>
-                <td id="childCost">23.95$</td>
+                <td id="childCost">$23.95</td>
                 <td>
                     <select id="childQuantity">
                         <option selected="selected" value="0">0</option>
@@ -37,7 +38,7 @@
             </tr>
             <tr>
                 <td>Senior</td>
-                <td id="seniorCost">30.95$</td>
+                <td id="seniorCost">$30.95</td>
                 <td>
                     <select id="seniorQuantity">
                         <option selected="selected">0</option>
@@ -50,9 +51,15 @@
                 </td>
             </tr>
         </table>
+        <div id="summery" class="hidden-div">
+            <p>Order Summary</p>
+            <table id="totalAmount"></table>
+            <label id="sum"></label>
+        </div>
     </div>
-    <div>
-        <form method="post" enctype="multipart/form-data" asp-action="BuyTicketsPost">
+    <div class="info">
+        <div class="step-title">Step 2 - Buy Tickets</div>
+        <form method="post" enctype="multipart/form-data" asp-action="BuyTickets">
             <div asp-validation-summary="All"></div>
             <div class="form-field">
                 <label asp-for="FirstName"></label>
@@ -79,14 +86,9 @@
                 <input asp-for="PhoneNumber" />
                 <span asp-validation-for="PhoneNumber"></span>
             </div>
-            <input type="text" id="test" />
-            <div class="hidden-div">
-                <p>Order Summary</p>
-                <table id="totalAmount">
-                </table>
-            </div>
-            <div class="form-field">
-                <input type="submit" value="Submit" />
+            <div class="form-field" id="formButtons">
+                <input class="submit-btn" type="submit" value="Buy" disabled />
+                <div id="comment">Please Choose Tickets</div>
             </div>
         </form>
     </div>
@@ -97,4 +99,5 @@
     <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/js/jquery-form-functions.js"></script>
+    <script src="~/js/js-total-amount-function.js"></script>
 }

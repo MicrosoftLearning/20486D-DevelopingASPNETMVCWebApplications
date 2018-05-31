@@ -1,18 +1,47 @@
 ﻿$(function () {
-    $('#adultQuantity').change(function (eventObj) {
-        var selected_value = $('#adultQuantity').val();
-        if (selected_value == '0') {
-            selected_value = '';
-        } else {
-            //$(".hidden-div").addClass("display-div").removeClass("hidden-div");
-            var msg = "Adult ticket - " + selected_value;
-            var cost = $("#adultCost").text();
-            var correctCost = (cost.substring(0, cost.length -1));
-            var calc = parseFloat(selected_value * correctCost);
-            var row = $("<tr>");
+    $('.pricing select').change(function (event) {
+        var target = $(event.target);
+        var value = parseInt(target.val());
+        var container = target.parent();
+        var price = container.prev();
+        var label = price.prev();
+ 
+        $("#" + label.text()).remove();
+
+        if (value) {
+            $("#summery").addClass("display-div").removeClass("hidden-div");
+
+            var correctCost = (price.text().substring(1, price.text().length));
+            var calc = parseFloat(value * correctCost).toFixed(2);
+
+            var msg = label.text() + " ticket - " + value.toString() + "x" + price.text() + " = <span class='sum'>" + calc +'</span>';
+            var row = $("<tr id='" + label.text() +"'>");
             row.append($("<td>").html(msg));
-            row.append($("<td>").html(calc + "$"));
             $("#totalAmount").append(row);
+
+        } 
+        if ($("#totalAmount tr").length == 0) {
+            $("#summery").addClass("hidden-div").removeClass("display-div");
+            $("#formButtons input").attr('disabled', 'disabled');
+            $("#comment").show();
+        } else {
+            $("#formButtons input").removeAttr('disabled');
+            $("#comment").hide();
         }
+        
+
+        calculateSum();
     });
+
+
+    function calculateSum() {
+        var rows = document.querySelectorAll("#totalAmount tr .sum");
+        var sum = 0;
+
+        for (var i = 0; i < rows.length; i++) {
+            sum += parseFloat(parseFloat(rows[i].innerHTML).toFixed(2));
+        }
+
+        document.getElementById("sum").innerHTML = "Total: $" + sum ;
+    }
 });

@@ -42,6 +42,8 @@ namespace Zoo.Controllers
         {
             if (ModelState.IsValid)
             {
+                _context.Customers.Add(customer);
+                _context.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(customer);

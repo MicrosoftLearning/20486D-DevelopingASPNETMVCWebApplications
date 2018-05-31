@@ -26,7 +26,7 @@ namespace Zoo.Models
         [Display(Name = "Phone Number"), DataType(DataType.PhoneNumber)]
         public int PhoneNumber { get; set; }
 
-        [StringLength(50, MinimumLength = 4)]
+        [Required(ErrorMessage = "Please enter your adress")]
         public string Address { get; set; }
 
         public double TotalAmount { get; set; }

@@ -1,9 +1,12 @@
 ﻿body {
-    background-color: #BDBDBD;
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: 0;
 }
 
 .main-title {
-    color: #321919;
+    color: #008484;
+    text-shadow: 0px 2px 5px #aba8a8;
     font-family: Arial, serif;
     font-size: 50px;
     font-weight: bolder;
@@ -12,11 +15,25 @@
 }
 
 .header-container {
+    width: 100%;
+    margin-top:46px;
+    background-image: url("/images/header.jpg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 500px;
+}
+
+.header-container h1 {
+    color: white;
+    text-shadow: 0px 4px 15px black;
+    font-size: 50px;
+    padding-top: 70px;
+     padding-left: 15px;
+}
+
+.header-container .content {
     max-width: 1040px;
     margin: 0 auto;
-    background-color: white;
-    box-shadow: 0 0 20px #1e004f;
-    text-align: center;
 }
 
 .img-header {
@@ -29,31 +46,84 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1040px;
+    max-width: 770px;
     margin: 10px auto;
-    background-color: white;
-    box-shadow: 0 0 20px #1e004f;
     text-align: center;
 }
 
+.info {
+    font-family:Arial;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 10px 5px 15px 18px;
+    padding: 25px;
+    width: 305px;
+    border: 1px solid #d6d4d4;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align:center;
+}
+
+.info table{
+    margin: 0 auto;
+}
+
+.info .contact-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+.info .sub-header{
+    color: orange;
+    font-weight: bold;
+}
+.info .form-field{
+    text-align:left;
+}
+.info label {
+    width: 118px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.info input{
+    border-radius: 2px;
+    line-height: 20px;
+    border: 1px solid #ccc6c6;
+    background-color: #f9f6f6;
+}
+.buy-tickets {
+    flex-direction: column;
+    align-items: center;
+}
 .photo-index-card {
-    background-color: #f5f5f5;
-    padding: 15px;
-    margin: 10px 5px 5px 18px;
-    height: 380px;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 10px 5px 15px 18px;
+    padding-bottom: 25px;
     width: 355px;
+    border: 1px solid #d6d4d4;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .display-picture-title {
-    display: inline-block;
-    margin: 5px 1px 5px 1px;
-    font-weight: bold;
-    font-size: 20px;
+    width: 277px;
+    padding: 10px 0;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -43px;
+    background-color: orange;
+    height: 23px;
+    font-family: Arial;
+    font-weight: 100;
+}
+
+.image-wrapper {
+    height: 210px;
+    overflow: hidden;
 }
 
 .photo-display-img {
-    width: 325px;
-    height: 235px;
+    width: 100%;
 }
 
 .display {
@@ -61,25 +131,29 @@
     width: 350px;
     margin: 25px 1px 5px 1px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: 100;
+    max-width: 240px;
 }
 
-ul {
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #85754e;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
 }
 
-li {
+.nav li {
     float: left;
 }
 
-li a {
+.nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -87,12 +161,12 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
-     background-color: #111;
+.nav li a:hover:not(.active) {
+    background-color: #016b6b;
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #008484;
     color: #fff;
 }
 
@@ -103,3 +177,58 @@ li a:hover:not(.active) {
 .display-div{
     display:block;
 }
+
+
+.step-title {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    padding: 0 24px;
+    font-weight: bold;
+    color: #26b1b9;
+}
+
+input.submit-btn {
+    width: 100px;
+    margin-top: 12px;
+    height: 29px;
+    background-color: orange;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 4px #b77006;
+    border: 1px solid #a59797;
+}
+
+input.submit-btn[disabled] {
+    opacity: 0.8;
+    background-color: whitesmoke;
+    box-shadow:none;
+}
+
+#summery .sum,
+#summery p {
+    font-weight: bold;
+}
+
+
+#summery #sum {
+    font-weight: bold;
+    color: orange;
+}
+
+#comment {
+    color: #e00e0e;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.field-validation-error{
+    text-align: right;
+    display: block;
+    margin-right: 12px;
+    margin-top: -5px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #e00e0e;
+    font-size: 12px;
+}
+
