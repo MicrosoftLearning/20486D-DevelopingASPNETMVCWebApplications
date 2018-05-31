@@ -95,15 +95,17 @@
 
 18. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays the following text:<br>
-    > Product Name: Bread<br>
+    > "Product Name: Bread<br>
     > Product Price + Tax: 6<br>
     > <br>
     > Product Name: Rice<br>
-    > Product Price + Tax: 3.6
+    > Product Price + Tax: 3.6"
     
 19. In **Microsoft Edge**, click **Close**.
 
 20. In the **RazorSyntaxExample (Running) – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+
+21. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Using HTML Helpers and Tag Helpers
 
@@ -226,6 +228,8 @@
 
 27. In the **HTMLHelpersExample (Running) – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
+21. In the **HTMLHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+
 # Lesson 2: Using HTML Helpers and Tag Helpers
 
 ### Demonstration: How to Use Tag Helpers
@@ -238,7 +242,7 @@
 
 #### Demonstration Steps
 
-1. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, click **Index.cshtml**.
+1. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
 2. In the **Index.cshtml** code window, locate the following code:
 ```cs
@@ -309,15 +313,12 @@
 17. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 18. In **Microsoft Edge**, click **Employees**.
-    >**Note**: The browser displays a list of links, each link is a person's name.
 
 19. In **Microsoft Edge**, click **Michael**.
-    >**Note**: The browser displays Michael's name and photo.
 
 20. In **Microsoft Edge**, click **Back to person selection list**.
 
 21. In **Microsoft Edge**, click **Elena**.
-    >**Note**: The browser displays Elena's name and photo.
 
 22. In **Microsoft Edge**, click **Close**.
 
@@ -350,7 +351,7 @@
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-33. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views** folder, under **Person**, click **Details.cshtml**.
+33. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Person**, click **Details.cshtml**.
 
 34. In the **Details.cshtml** code window, delete the following code:
 ```cs
@@ -375,6 +376,8 @@
 41. In **Microsoft Edge**, click **Close**.
 
 42. In the **TagHelpersExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+
+21. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Reusing Code in Views
 
@@ -462,6 +465,8 @@
 
 18. In the **PartialViewExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
+21. In the **PartialViewExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+
 # Lesson 3: Reusing Code in Views
 
 ### Demonstration: How to Create and Use View Components
@@ -546,3 +551,5 @@
 23. In **Microsoft Edge**, click **Close**.
 
 24. In the **ViewComponentExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+
+21. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
