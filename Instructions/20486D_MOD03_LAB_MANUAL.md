@@ -134,7 +134,7 @@ The poll is anonymous and does not contain names."
 
 ####	Task 5: Enable working with static files
 
-1. In the **Startup.cs**, in the **Configure** method code block, add the **UseStaticFiles** call method to be first middleware in the pipeline.
+1. In **Startup.cs**, in the **Configure** method code block, add the **UseStaticFiles** method call to be first middleware in the pipeline.
 
 ####	Task 6: Run the application – content of HTML is displayed
 
@@ -238,7 +238,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 3: Change the order of middleware
 
-1. Relocate the **app.UseStaticFiles** to be first middleware in the pipeline.
+1. Relocate the **app.UseStaticFiles** method call to be the first middleware in the pipeline.
 
 2. Save all the changes.
 
@@ -249,11 +249,12 @@ The main tasks for this exercise are as follows:
 
 5. Select **Basketball**, and click **Submit Query**.
 
-6. Verify that the browser displays the **poll-questions.html** file content, and not a different page.
+6. Verify that the browser displays the **poll-questions.html** file content.
+    > **Note**: The **use.StaticFiles** middleware handles the request. The request does not continue to the **app.Use** middleware.
 
 7. Stop debugging. 
 
-8. Relocate the **app.UseStaticFiles** to be between the **app.Use** middleware and the **app.Run** middleware .
+8. Relocate the **app.UseStaticFiles** to be between the **app.Use** middleware and the **app.Run** middleware.
 
 9. Comment out the code that would run in case the "favorite" query parameter does not exist.
 
@@ -276,7 +277,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-Votes needs to be aggregated and stored, using services to manage and preserve the data.
+Votes needs to be aggregated and stored. Services will be used to manage and preserve the data in this lab.
 
 The main tasks for this exercise are as follows: 
 
@@ -319,15 +320,15 @@ The main tasks for this exercise are as follows:
     - Parameter name: **game**
     - Parameter Type: **SelectedGame**
 
-5. Add a method declaration inside the interface using the following information:
+6. Add a method declaration inside the interface using the following information:
     - Name: **GetVoteResult**
     - Return type: **SortedDictionary**<**SelectedGame**,**int**>
 
-6. Set **public** scope to the new interface.
+7. Set **public** scope to the new interface.
 
 ####	Task 2: Define an implementation for the service
 
-1. Create a new class by using the following information:
+1. Create a new class using the following information:
     - Parent folder: **Services**
     - Name: **PollResultsService**
 
@@ -347,7 +348,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 3: Use dependency injection
 
-1. In the **Startup.cs**, Add **using** statements for the following namespaces:
+1. In **Startup.cs**, Add **using** statements for the following namespaces:
     - **PollBall.Services**
 
 2. Modify the **Configure** method to include the following parameters:
