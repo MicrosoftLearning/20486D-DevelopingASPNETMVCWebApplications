@@ -28,7 +28,5 @@ namespace Zoo.Models
 
         [Required(ErrorMessage = "Please enter your adress")]
         public string Address { get; set; }
-
-        public double TotalAmount { get; set; }
     }
 }

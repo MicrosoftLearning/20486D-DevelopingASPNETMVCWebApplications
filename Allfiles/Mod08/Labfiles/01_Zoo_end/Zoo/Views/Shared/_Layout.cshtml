@@ -7,6 +7,7 @@
     <link href="~/css/zoo-style.css" rel="stylesheet" />
     <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="~/js/menubar-functions.js"></script>
+    <script src="~/js/slider.js"></script>
 </head>
 <body>
     <ul class="nav">
@@ -16,7 +17,11 @@
     </ul>
     <div class="header-container">
         <div class="content"><h1> Welcome to Zoo Center</h1></div>
-        @*<img class="img-header" src="~/images/header.jpg"/>*@
+        <div class="slider-buttons">
+
+            <img src="~/images/prevArrow.png" class="prev" onclick="prevImage()" />
+            <img src="~/images/nextArrow.png" class="next" onclick="nextImage()" />
+        </div>
     </div>
     <div>
         @RenderBody()

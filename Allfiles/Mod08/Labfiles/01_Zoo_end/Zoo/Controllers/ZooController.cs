@@ -44,9 +44,15 @@ namespace Zoo.Controllers
             {
                 _context.Customers.Add(customer);
                 _context.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("ThankYou");
             }
             return View(customer);
+        }
+
+        [HttpGet]
+        public IActionResult ThankYou()
+        {
+            return View();
         }
 
         public IActionResult GetImage(int photoId)
