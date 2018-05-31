@@ -26,9 +26,7 @@ namespace UnitTestingExample
         {
             services.AddDbContext<ProductContext>(options =>
                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
-
             services.AddScoped<IProductRepository, ProductRepository>();
-
             services.AddMvc();
         }
         
