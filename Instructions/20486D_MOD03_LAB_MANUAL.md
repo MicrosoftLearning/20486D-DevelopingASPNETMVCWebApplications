@@ -56,7 +56,7 @@ The main tasks for this exercise are as follows:
 
 3. In **Startup.cs**, delete the **Configure** method with its content.
 
-4. Add a method for the **Startup** class using the following information:
+4. In **Startup.cs**, add a method using the following information:
     - Scope: **public**
     - Return Type: **void**
     - Name: **Configure**
@@ -113,7 +113,10 @@ The poll is anonymous and does not contain names."
     - Input type: **submit**
     - Value: **Submit Query**
 
-12. Open the **html-text.txt** file, that located in **Allfiles\Mod03\Labfiles\01_PollBall_begin**, and copy its content into the **DIV** element with the class name **main-div**.
+12. Copy the content from the **html-text.txt** file using the following information:
+    - File path: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+
+13. In the **poll-questions.html** of the **PollBall** application, paste the text into the **DIV** element with the **main-div** class name.
 
 ####	Task 4: Run the application – content of HTML not displayed
 
