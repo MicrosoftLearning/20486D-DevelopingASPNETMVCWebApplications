@@ -1,0 +1,17 @@
+﻿@model UnitTestingExample.Models.Product
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetProduct</title>
+    <link type="text/css" rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <h1>@Html.DisplayFor(modelItem => Model.Name)</h1>
+    <div>@Html.DisplayFor(modelItem => Model.BasePrice)</div>
+    <div>@Html.DisplayFor(modelItem => Model.Description)</div>
+    <div><a asp-action="Index">Back</a></div>
+</body>
+</html>
