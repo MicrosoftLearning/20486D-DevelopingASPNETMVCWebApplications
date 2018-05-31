@@ -13,7 +13,7 @@ input,textarea {
 label {
     display: inline-block;
     width: 340px;
-    margin: 25px 1px 5px 1px;
+    margin: 0 1px 25px 1px;
     font-weight: bold;
     font-size: 24px;
     text-align:left;
@@ -83,6 +83,7 @@ form{
 .input-span {
     display: inline-block;
     width: 250px;
+    vertical-align: top;
 }
 
 .container {
