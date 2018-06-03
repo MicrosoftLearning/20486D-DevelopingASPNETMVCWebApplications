@@ -187,7 +187,7 @@ The main tasks for this exercise are as follows:
     - Return Type: **IActionResult**
     - Name: **Index**
 
-3. Within the **Index** action code block, initiate **IndexViewModel** model and it's **Butterflie** property with **ButterfliesList** method from the **IDataService** interface.
+3. Within the **Index** action code block, initiate **IndexViewModel** model and it's **butterfly** property with **ButterfliesList** method from the **IDataService** interface.
 
 4. Pass the **IndexViewModel** object to the view **Index**, and return the view.
 
@@ -218,7 +218,7 @@ The main tasks for this exercise are as follows:
    - Name: **Create**
    - Parameter: a **Butterfly** object called **butterfly**.
 
-2. Add code to the **Create** action that get the last butterflie from the **IDataService** interface ButterfliesList.
+2. Add code to the **Create** action that get the last butterfly from the **IDataService** interface ButterfliesList.
 
 3. Add code to the **Create** action that saves the accepted new butterfly parameters and sets its **CreatedDate** property to today&#39;s date.
 
