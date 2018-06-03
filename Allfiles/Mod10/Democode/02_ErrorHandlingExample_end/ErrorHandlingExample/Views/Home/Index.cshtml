@@ -1,0 +1,30 @@
+﻿@inject ErrorHandlingExample.Services.ICounter cnt
+@model int
+@using Microsoft.AspNetCore.Http.Extensions
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    Welcome to the modulu calculator site.<br>
+    The number of entrances to the site is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]<br />
+    @for (int i = 1; i < 50; i++)
+    {
+        if (i % 10 == 0)
+        {
+            <br />
+        }
+        <a href="@Url.Action("GetModuluForNumber",new { id = i })">@i</a>
+    }
+
+</body>
+</html>
