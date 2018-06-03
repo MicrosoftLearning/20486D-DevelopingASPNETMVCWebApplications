@@ -9,8 +9,6 @@ namespace ErrorHandlingExample.Services
 {
     public class PrimalNumberCalculator : IPrimalNumberCalculator
     {
-
-
         public DivisionResult GetDividedNumbers(int number)
         {
             DivisionResult divisionResult = new DivisionResult();

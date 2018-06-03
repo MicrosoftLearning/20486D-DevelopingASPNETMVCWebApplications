@@ -15,16 +15,13 @@ namespace ErrorHandlingExample
     {
         
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
+         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             services.AddSingleton<ICounter,Counter>();
             services.AddSingleton<IPrimalNumberCalculator, PrimalNumberCalculator>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ICounter cnt)
         {
             if (env.IsDevelopment())
@@ -37,6 +34,8 @@ namespace ErrorHandlingExample
                 cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
                 await next.Invoke();
             });
+
+            app.UseStaticFiles();
 
             app.UseMvcWithDefaultRoute();
 

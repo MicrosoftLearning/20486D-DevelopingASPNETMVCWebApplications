@@ -4,6 +4,10 @@
 
 a {
     color: white;
+    
+}
+
+span {
     border-style: inset;
     border-color: gray;
     border-width: 5px;

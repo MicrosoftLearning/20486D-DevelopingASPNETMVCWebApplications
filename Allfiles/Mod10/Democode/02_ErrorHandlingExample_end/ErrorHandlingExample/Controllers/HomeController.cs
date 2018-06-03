@@ -22,7 +22,7 @@ namespace ErrorHandlingExample.Controllers
             return View();
         }
 
-        public IActionResult GetModuluForNumber(int id = -1)
+        public IActionResult GetModuluForNumber(int id)
         {
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
             return View(divisionResult);
