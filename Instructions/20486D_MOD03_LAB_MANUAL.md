@@ -3,11 +3,11 @@
 # Lab: Configuring Middleware and Services in ASP.NET Core
 
 #### Scenario
-The Adventure Works Company wants to develop a web site of ball games. For this purpose, the company needs to perform a survey to determine the popularity of different ball games. As their employee, you are require to create a survey site that will be used by the company.
+The Adventure Works Company wants to develop a website about ball games. For this, the company needs to perform a survey to determine the popularity of different ball games. As their employee, you are required to create a survey site to be used by the company.
 
 #### Objectives
 
-After completing this lab, you will be able to: 
+After completing this lab, you will be able to:
 
 -	Use ASP.NET Core static files including HTML files, image files and CSS files.
 -	Create and use a custom middleware and use its context information.
@@ -430,7 +430,7 @@ Game name: Football, Votes: 1"
 
 #### Scenario
 
-In this exercise you will create an ASP.NET Core MVC controller to display the poll results. 
+In this exercise, you will create an ASP.NET Core MVC controller to display the poll results. 
 
 The main tasks for this exercise are as follows: 
 
