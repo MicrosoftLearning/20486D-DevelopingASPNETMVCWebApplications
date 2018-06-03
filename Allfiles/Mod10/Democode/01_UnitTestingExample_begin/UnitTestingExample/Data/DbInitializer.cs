@@ -18,11 +18,11 @@ namespace UnitTestingExample.Data
 
             var products = new Product[]
             {
-                new Product { Name = "Milk", BasePrice= "$5.50", Description = "Fresh cold Milk"},
-                new Product { Name = "Salt", BasePrice = "$2.50", Description = "White and full of Sodium"},
-                new Product { Name = "Butter", BasePrice = "$4.00", Description = "Delicate french butter"},
-                new Product { Name = "Tomato", BasePrice = "$3.00", Description = "Red and Round"},
-                new Product { Name = "Sugar", BasePrice = "$2.00", Description = "It's Sweet"}
+                new Product { Name = "Milk", BasePrice= 5.5F, Description = "Fresh cold Milk"},
+                new Product { Name = "Salt", BasePrice = 2.5F, Description = "White and full of Sodium"},
+                new Product { Name = "Butter", BasePrice = 4F, Description = "Delicate french butter"},
+                new Product { Name = "Tomato", BasePrice = 3F, Description = "Red and Round"},
+                new Product { Name = "Sugar", BasePrice = 2F, Description = "It's Sweet"}
             };
 
             foreach (Product p in products)
