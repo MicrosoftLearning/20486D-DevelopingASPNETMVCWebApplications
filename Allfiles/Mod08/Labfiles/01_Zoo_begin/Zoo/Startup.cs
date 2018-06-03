@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Zoo.Data;
 
 namespace Zoo
 {
@@ -21,23 +23,24 @@ namespace Zoo
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ZooContext>(options =>
+                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            //app.UseStaticFiles();
+            app.UseStaticFiles();
 
-            //app.UseNodeModules(env.ContentRootPath);
-
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "ZooRoute",
-            //        template: "{controller}/{action}/{id?}",
-            //        defaults: new { controller = "Zoo", action = "Index" },
-            //        constraints: new { id = "[0-9]+" });
-            //});
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "ZooRoute",
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "Zoo", action = "Index" },
+                    constraints: new { id = "[0-9]+" });
+            });
         }
     }
 }

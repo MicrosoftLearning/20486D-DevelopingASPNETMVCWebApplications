@@ -1,7 +1,6 @@
 ﻿var images = ['/images/header.jpg', '/images/waters.jpg'];
 var current = 0;
 
-
 function nextImage() {
     current++;
     if (current == images.length) {
