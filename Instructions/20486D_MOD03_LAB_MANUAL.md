@@ -10,7 +10,7 @@ The Adventure Works Company wants to develop a web site of ball games. For this 
 After completing this lab, you will be able to: 
 
 -	Use ASP.NET Core static files including HTML files, image files and CSS files.
--	Create and use a custom Middleware, and use its context information.
+-	Create and use a custom middleware and use its context information.
 -	Create and use services with ASP.NET Core built-in Dependency Injection.
 -	Inject a service to an ASP.NET Core MVC controller.
 
@@ -26,7 +26,7 @@ To create the poll, the application needs a styled HTML page. The HTML page must
 
 The main tasks for this exercise are as follows: 
 
-1.	Create a new project using the ASP.NET Core Empty project template.
+1.	Create a new project by using the ASP.NET Core Empty project template.
 
 2.	Run the application.
 
@@ -52,7 +52,7 @@ The main tasks for this exercise are as follows:
     - Create directory for solution: **True**
     - Project template: **Empty**
 
-2. Delete all the comments in the **Startup** class.
+2. Delete all the comments in **Startup.cs**.
 
 3. In **Startup.cs**, delete the **Configure** method with its content.
 
@@ -194,7 +194,7 @@ add a **LINK** element using the following information:
 
 #### Scenario
 
-The server must receive the client’s request and notify the company for the poll submission.
+The server must receive the client’s request and notify the company of the poll submission.
 
 The main tasks for this exercise are as follows: 
 
@@ -277,7 +277,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-Votes needs to be aggregated and stored. Services will be used to manage and preserve the data in this lab.
+You will need to aggregate the votes and store them for future use. You will use services to manage and preserve the data.
 
 The main tasks for this exercise are as follows: 
 
@@ -340,7 +340,7 @@ The main tasks for this exercise are as follows:
     - Name: **SelectionVotes**
     - Access: **Read/Write**
 
-4. Add a new constructor to the **PollResultsService** class. In the constructor, instantiate **SelectionVotes** to be a new **Dictionary**<**SelectedGame**,**int**> object.
+4. Add a new public constructor to the **PollResultsService** class. In the constructor, instantiate **SelectionVotes** to be a new **Dictionary**<**SelectedGame**,**int**> object.
 
 5. Implement the **AddVote** method from the **IPollResultsService** interface. The method should increment the value of the dictionary's selected game, using the given game parameter value as it's key. In case the key does not exist, add a new key to the dictionary with the value of 1.
 
@@ -370,18 +370,18 @@ The main tasks for this exercise are as follows:
     - Variable name to parse: **selectedValue**
     - Ignore case sensitive: **true**
 
-6. In the **app.Use**, below the initialization of the **selectedGame** variable, execute the **AddVote** method of the **IPollResultsService** service using the following information:
+5. In the **app.Use**, below the initialization of the **selectedGame** variable, execute the **AddVote** method of the **IPollResultsService** service using the following information:
     - Parameter value: **selectedGame**
 
-7. In the **app.Use**, below the call to **AddVote**, define a new variable using the following information:
+6. In the **app.Use**, below the call to **AddVote**, define a new variable using the following information:
     - Type: **SortedDictionary<SelectedGame, int>**
     - Name: **gameVotes**
 
-8. In the **app.Use**, replace the **WriteAsync** method call, with code that receives the result from the **GetVoteResult** method of the **lPollResultsService** service, and places it into the **gameVotes** variable.
+7. In the **app.Use**, replace the **WriteAsync** method call, with code that receives the result from the **GetVoteResult** method of the **lPollResultsService** service, and places it into the **gameVotes** variable.
 
-9. In the **app.Use**, when the "favorite" query parameter exists, below the **GetVoteResult** method call, print to the browser each of the games names, and vote count from the **gameVotes** variable. Include the game name and votes of each iteration in a **DIV** element.
+8. In the **app.Use**, when the "favorite" query parameter exists, below the **GetVoteResult** method call, print to the browser each of the games names, and vote count from the **gameVotes** variable using the **WriteAsync** method. Include the game name and votes of each iteration in a **DIV** element.
 
-10. In the **Startup** class, in the **ConfigureServices**, add the poll results service using the following information: 
+9. In the **Startup** class, in the **ConfigureServices**, add the poll results service using the following information: 
     - Add method: **Singleton**
     - Interface: **IPollResultsService**
     - Implementation: **PollResultsService**
@@ -489,7 +489,8 @@ The main tasks for this exercise are as follows:
 
 1. In **Startup.cs**, in the **app.Use** delete the code that is responsible for getting the vote results from the service, and displaying it in the browser.
 
-2. Replace the deleted code with code that prints to the browser the following text: "Thank you for submitting the poll".
+2. Replace the deleted code with a call to the **WriteAsync** method so the browser would display a text using the following information:
+    - Text: **"Thank you for submitting the poll."**
 
 3. In **HomeController.cs**, add **using** statements for the following namespaces:
     - **PollBall.Services**
@@ -500,7 +501,7 @@ The main tasks for this exercise are as follows:
     - Name: **_pollResults**
     - Scope: **private**
 
-5. In the **HomeController** class, create a constructor, inject the **IPollResultsService** into the constructor, and save the **IPollResultsService** value into the **_pollResults** variable.
+5. In the **HomeController** class, create a public constructor, inject the **IPollResultsService** into the constructor, and save the **IPollResultsService** value into the **_pollResults** variable.
 
 6. In **HomeController.cs**, delete the content of the **index** action.
 
@@ -517,7 +518,7 @@ The main tasks for this exercise are as follows:
 9. Below the **voteList** variable declaration, use a **foreach** loop to iterate over each game name and vote count, and then concatenate those into the **results** variable. Using **StringBuilder**'s  **Append** method, append the text in each iteration, and then append **Environment.NewLine**.
 
 10. In the **index** action, return a string content using the following information:
-    - Return type: **ContentResult**
+    - method call: **Content**
     - Content value:  The **results** variable as string.
 
 ####	Task 5: Run the application
