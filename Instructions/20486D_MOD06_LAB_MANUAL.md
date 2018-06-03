@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You are planning to create and code an MVC model that implements your plan for butterflies in the butterflies’ shop application. The model includes properties that describe butterfly. The model must enable the application to store uploaded butterflies.
+You are planning to create and code an MVC model that implements your plan for butterflies in the butterflies’ shop application. The model includes properties that describe butterfly. The model must enable the application to store the uploaded butterflies.
 
 #### Objectives
 
@@ -13,7 +13,7 @@ After completing this lab, you will be able to:
 - Add new models to the application, and add properties to the model.
 - Add **GET** and **POST** actions that accept the new model information.
 - Use display and edit data annotations in the MVC model to assign property attributes to views and controllers.
-- Use **Display**, **Editor** and **Form** Helpers in the views.
+- Use **Display**, **Editor** and **Form** Helpers inside the views.
 - Use validation Data Annotations in the MVC model to assign property attributes to views and controllers.
 - Add custom validation to the application.
 
@@ -50,7 +50,7 @@ The main tasks for this exercise are as follows:
 1. Open the **ButterfliesShop.sln** file from the following location:
 **Allfiles\Mod06\Labfiles\01_ButterfliesShop_begin**.
 
-2. In the **Butterfly** class, add **using** statement to the model for the following namespace:
+2. In the **Butterfly** class, add **using** statement for the following namespace:
 
    - **Microsoft.AspNetCore.Http**
 
@@ -96,7 +96,7 @@ The main tasks for this exercise are as follows:
    - Data type: **DateTime**
    - Access: **Read and write**
 
-9. Add an **image** property to the **Butterfly** model class and store the image name by using the following information:
+9. Add an **image** properties to the **Butterfly** model class and store the image name by using the following information:
 
    - Scope: **public**
    - Property names: **PhotoAvatar**, **ImageName**
@@ -104,7 +104,7 @@ The main tasks for this exercise are as follows:
    - Data type for image name: **string**
    - Access: **Read and write**
 
-10. Add another **image** property to the **Butterfly** model class and store the MIME type of image by using the following information:
+10. Add another **image** properties to the **Butterfly** model class and store the MIME type of image by using the following information:
 
      - Scope: **public**
      - Property names: **PhotoFile**, **ImageMimeType**
@@ -151,9 +151,9 @@ The main tasks for this exercise are as follows:
     - Type: **button**
     - Content: **Add Butterflies**
 
-7. Add the **URL.Action** helper to the **onclick** attribute of the **&lt;button&gt;** tag by using the following information:
+7. Add the **URL.Action** helper to the **onclick** attribute of the **BUTTON** tag by using the following information:
 
-   - Method: **Url.Action()**
+   - Method: **location.href=Url.Action()**
    - Action name: **Create**
    - Controller name: **Butterfly**
 
@@ -177,7 +177,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Pass the model from the controller to a view
 
-1. In the **ButterflyController** class, add **using** statement to the model for the following namespace:
+1. In the **ButterflyController** class, add **using** statement for the following namespace:
 
    - **using System.IO**
 
@@ -187,7 +187,7 @@ The main tasks for this exercise are as follows:
     - Return Type: **IActionResult**
     - Name: **Index**
 
-3. Within the **Index** action code block, initiate **IndexViewModel** **Butterflie** property with **ButterfliesList** method from the **IDataService** interface.
+3. Within the **Index** action code block, initiate **IndexViewModel** model and it's **Butterflie** property with **ButterfliesList** method from the **IDataService** interface.
 
 4. Pass the **IndexViewModel** object to the view **Index**, and return the view.
 
@@ -264,7 +264,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add display and edit data annotations to a model
 
-1. In the **Butterfly** class, add **using** statement to the model for the following namespace:
+1. In the **Butterfly** class, add **using** statement for the following namespace:
 
    - **System.ComponentModel.DataAnnotations**
 
@@ -515,7 +515,7 @@ The main tasks for this exercise are as follows:
    - Name: **MaxButterflyQuantityValidation**
    - Folder: **Validators**
 
-3. Add **using** statements to the class for the following namespaces:
+3. Add **using** statements for the following namespaces:
 
    - **ButterfliesShop.Models**
    - **ButterfliesShop.Services**
@@ -544,7 +544,7 @@ The main tasks for this exercise are as follows:
 
 10. If the total quantity is bigger then the private object **_maxAmount** return new **ValidationResult**. Else return **ValidationResult.Success**.
 
-11. In the **Butterfly** class, add **using** statement to the model for the following namespace:
+11. In the **Butterfly** class, add **using** statement for the following namespace:
 
    - **ButterfliesShop.Validators**
 
