@@ -28,5 +28,10 @@ namespace UnitTestingExample.Controllers
             var product = products.Where(p => p.Id != id).FirstOrDefault();
             return View(product);
         }
+
+        public IActionResult GetImage(string name)
+        {
+            return File($@"images\{name}.png", "image/png");
+        }
     }
 }

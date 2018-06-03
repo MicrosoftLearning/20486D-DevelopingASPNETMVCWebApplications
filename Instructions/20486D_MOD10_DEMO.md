@@ -8,7 +8,7 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod04\Democode\10_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
+2. Go to **Allfiles\Mod10\Democode\10_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
 
 #### Demonstration Steps
 
@@ -20,115 +20,149 @@
 
 4. In the result pane of the **Add New Project** dialog box, click **MSTest Test Project (.NET Core)**.
 
-5. In the **Add New Project** dialog box, in the text box, type **ProductsWebsite.Tests**.
+5. In the **Add New Project** dialog box, in the **Name** text box, type **ProductsWebsite.Tests**, and then click **OK**.
 
+6. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite.Tests**, right-click **Dependencies**, and then click **Add Reference**.
 
+7. In the navigation pane of the **Reference Manager - ProductsWebsite.Tests** dialog box, expand **Projects**, and then click **Solution**.
 
-2. In the **NewFolder** text box, type **Controllers**, and then press Enter.
+8. In the result pane of the **Reference Manager - ProductsWebsite.Tests** dialog box, check **UnitTestingExample**, and then click **OK**.
 
-3. In the **ControllersExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
+9. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite.Tests**, right-click **UnitTest1**, and then click **Rename**.
 
-4. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
+10. In the **UnitTest1.cs** text box, type **ProductControllerTest**, and then press Enter.
 
-5. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **HomeController**, and then click **Add**.
+11. In the **Microsoft Visual Studio** dialog box, click Yes.
 
-6. In the **HomeController.cs** code window, locate the following code:
-  ```cs
-       using Microsoft.AspNetCore.Mvc;
+12. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **ProductsWebsite.Tests**, point to **Add**, and then click **New Folder**.
+
+13. In the **NewFolder** text box, type **Mock**, and then press Enter.
+
+14. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click the **Mock** folder, point to **Add**, and then click **Class**.
+
+15. In the **Add New item - ProductsWebsite.Tests** dialog box, in the **Name** text box, type **FakeProductRepository**, and then click **Add**.
+
+16. In the **FakeProductRepository.cs** code window, locate the following code:
+```cs
+    using System.Text;
 ```
 
-7. Ensure that the cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
-  ```cs
-       using ControllersExample.Models;
+17. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
+```cs
+    using UnitTestingExample.Repositories;
+    using UnitTestingExample.Models;
 ```
 
-8. In the **HomeController** class code block, In the **Index** action code block, select the following code:
-  ```cs
-       return View();
+18. In the **FakeProductRepository.cs** code window, locate the following code:
+```cs
+    class FakeProductRepository
 ```
 
-9. Replace the selected code with the following code:
-  ```cs
-       ExampleModel model = new ExampleModel() { Sentence = "Welcome to module 4 demo 1" };
-       return View(model);
+19. Replace the selected code with the following code:
+```cs
+    internal class FakeProductRepository : IProductRepository
 ```
 
-10. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code:
-  ```cs
-       public IActionResult ParamExample(string id)
-       {
-       }
+20. In the **FakeProductRepository.cs** code window, locate the following code:
+```cs
+    internal class FakeProductRepository : IProductRepository
+    {
 ```
 
-11. In the **ParamExample** action code block, type the following code:
-  ```cs
-        return Content("My param is: " + id);
-```
-
-12. Place the cursor at the end of the **ParamExample** action code block, press Enter twice, and then type the following code:
-  ```cs
-        public IActionResult RouteDataExample()
+21. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
+```cs
+    public IEnumerable<Product> GetProducts()
+    {
+        return new List<Product>()
         {
-        }
+            new Product{ Id = 1, Name = "Product1's name", BasePrice = 1.1F, Description = "A description for product 1."},
+            new Product{ Id = 2, Name = "Product2's name", BasePrice = 2.2F, Description = "A description for product 2."},
+            new Product{ Id = 3, Name = "Product3's name", BasePrice = 3.3F, Description = "A description for product 3."}
+        };
+    }
 ```
 
-13. In the **RouteDataExample** action code block, type the following code:
-  ```cs
-        string controller = (string)RouteData.Values["Controller"];
-        string action = (string)RouteData.Values["action"];
-        string id = (string)RouteData.Values["id"];
-        return Content($"Action information: the action is in {controller} controller, the action name is {action} and the id value is {id}");
+22. In the **FakeProductRepository.cs** code window, locate the following code:
+```cs
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 ```
 
-14. Place the cursor at the end of the **RouteDataExample** action code block, press Enter twice, and then type the following code:
-  ```cs
-        public IActionResult ViewBagExample()
-        {
-        }
-```
-15. In the **ViewBagExample** action code block, type the following code:
-  ```cs
-        ViewBag.Message = "ViewBag Example";
-        return View();
+23. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
+```cs
+    using System.Collections.Generic;
+    using Microsoft.AspNetCore.Mvc;
+    using UnitTestingExample.Controllers;
+    using UnitTestingExample.Models;
+    using UnitTestingExample.Repositories;
 ```
 
-16. Place the cursor at the end of the **ViewBagExample** action code block, press Enter twice, and then type the following code:
-  ```cs
-        public IActionResult ViewDataExample()
-        {
-        }
+24. In the **FakeProductRepository.cs** code window, locate the following code:
+```cs
+    public void TestMethod1()
+    {
+    }
 ```
 
-17. In the **ViewDataExample** action code block, type the following code:
-  ```cs
-        ViewData["Message"] = "ViewData Example";
-        return View();
+25. Replace the selected code with the following code:
+```cs
+    public void IsIndexReturnsAllProducts()
+    {
+        // arrange
+        IProductRepository fakeProductRepository = new FakeProductRepository();
+        ProductController productController = new ProductController(fakeProductRepository);
+        // act
+        ViewResult viewResult = productController.Index() as ViewResult;
+        List<Product> products = viewResult.Model as List<Product>;
+        // assert
+        Assert.AreEqual(products.Count, 3);
+    }
 ```
 
-18. In the **ControllersExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save HomeController.cs**.
+26. In the **FakeProductRepository.cs** code window, locate the following code:
+```cs
+        Assert.AreEqual(products.Count, 3);
+    }
+```
 
-19. In the **ControllersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+27. Ensure that the cursor is at the end of the located code, press Enter twice, and then type the following code:
+```cs
+    [TestMethod]
+    public void IsGetProductReturnsTheCorrectProduct()
+    {
+        // arrange
+        var fakeProductRepository = new FakeProductRepository();
+        var productController = new ProductController(fakeProductRepository);
+        // act
+        var viewResult = productController.GetProduct(2) as ViewResult;
+        Product product = viewResult.Model as Product;
+        // assert
+        Assert.AreEqual(product.Id, 2);
+    }
+```
 
-      >**Note:** The **Welcome to module 4 demo 1** text is the action result you added to the **Index** action.
+28. In the **UnitTestingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-20. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/ParamExample/2**, and then press Enter.
+29. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TEST** menu, point to **Run**, and then click **All Tests**.
+    >**Note:** The **Test Explorer** displays 1 Failed Test: IsGetProductReturnsTheCorrectProduct, and 1 Passed Test: IsIndexReturnsAllProducts.
 
-      >**Note:** The **My param is: 2** text is the content result you added in the **ParamExample** action.
+30. In the **ProductController.cs** code window, locate the following code:
+```cs
+    var product = products.Where(p => p.Id != id).FirstOrDefault();
+```
 
-21. In **Microsoft Edge**, the address bar, type **http://localhost:[port]/home/RouteDataExample/4**, and then press Enter.
+31. Replace the selected code with the following code:
+```cs
+    var product = products.Where(p => p.Id == id).FirstOrDefault();
+```
 
-      >**Note:** The **Action information: The action is in home controller, the action name is RouteDataExample and the id value is 4** text is the content result you added in the **RouteDataExample** action.
+32. In the **UnitTestingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-22. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/ViewBagExample**, and then press Enter.
+33. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TEST** menu, point to **Run**, and then click **All Tests**.
+    >**Note:** The **Test Explorer** displays 2 Passed Tests: IsGetProductReturnsTheCorrectProduct and IsIndexReturnsAllProducts.
 
-      >**Note:** The **The Message is: ViewBag Example** text is the action result you added in the **ViewBagExample** action.
+34. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
-23. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/ViewDataExample**, and then press Enter.
+# Lesson 2: Handling Exceptions
 
-      >**Note:** The **The Message is: ViewData Example** text is the action result you added in the **ViewDataExample** action.
-
-24. In **Microsoft Edge**, click **Close**.
-
-25. In the **ControllersExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-26. In the **ControllersExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+### Demonstration: How to Add Routes
+#### Preparation Steps
