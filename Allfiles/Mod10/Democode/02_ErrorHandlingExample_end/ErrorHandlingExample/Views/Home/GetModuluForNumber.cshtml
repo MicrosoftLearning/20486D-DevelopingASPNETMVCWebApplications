@@ -1,5 +1,5 @@
-﻿@inject ErrorHandlingExample.Services.ICounter cnt
-@using Microsoft.AspNetCore.Http.Extensions
+﻿@using Microsoft.AspNetCore.Http.Extensions
+@inject ErrorHandlingExample.Services.ICounter cnt
 @model ErrorHandlingExample.Models.DivisionResult
 @{
     Layout = null;
@@ -11,10 +11,12 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>GetModuluForNumber</title>
-    <link href="css\Style.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    The @Model.DividedNumber number, is divided by the following numbers: @Model.ToString()<br />
+    <h1>Number @Model.DividedNumber</h1>
+
+    The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()<br />
     This number was searched @cnt.UrlCounter[Context.Request.GetDisplayUrl()] times<br />
     @Html.Partial("_NumberLinks")
 </body>

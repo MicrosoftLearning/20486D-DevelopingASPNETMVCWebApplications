@@ -1,8 +1,11 @@
-﻿@for (int i = 1; i <= 10; i++)
-{
-    for (int j = 1; j <= 10; j++)
+﻿<br />
+<div>
+    @for (int i = 1; i <= 10; i++)
     {
-        <span><a href="@Url.Action("GetModuluForNumber", new { id = (i * j) })">@(i * j)</a></span>
+        for (int j = 1; j <= 10; j++)
+        {
+            <a href="@Url.Action("GetModuluForNumber", new { id = (i * j) })">@(i * j)</a>
+        }
+        <br />
     }
-    <br />
-}
+</div>
