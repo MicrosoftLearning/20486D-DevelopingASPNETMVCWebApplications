@@ -1,0 +1,13 @@
+﻿body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    color: #015072;
+}
+
+div {
+    padding: 5px;
+    font-size: 25px;
+}
