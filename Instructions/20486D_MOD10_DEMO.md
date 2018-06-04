@@ -278,7 +278,7 @@
 
 34. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
-# Lesson 2: Logging MVC Applications
+# Lesson 3: Logging MVC Applications
 
 ### Demonstration: How to Log an MVC Application
 #### Preparation Steps
