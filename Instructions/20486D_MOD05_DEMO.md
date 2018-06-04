@@ -326,11 +326,11 @@
 
 24. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
 
-25. In the navigation pane of the **Add New Item – TagHelpersExample** dialog box, expand **Installed**, and then expand **ASP.NET Core**.
+25. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, expand **Installed**, and then expand **ASP.NET Core**.
 
-26. In the navigation pane of the **Add New Item – TagHelpersExample** dialog box, under **ASP.NET Core**, click **Web**.
+26. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, under **ASP.NET Core**, click **Web**.
 
-27. In the result pane of the **Add New Item – TagHelpersExample** dialog box, click **Razor View Imports**, and then click **Add**.
+27. In the **Add New Item – TagHelpersExample** dialog box, in the result pane, click **Razor View Imports**, and then click **Add**.
 
 28. In the **_ViewImports.cshtml** code window, type the following code:
 ```cs
