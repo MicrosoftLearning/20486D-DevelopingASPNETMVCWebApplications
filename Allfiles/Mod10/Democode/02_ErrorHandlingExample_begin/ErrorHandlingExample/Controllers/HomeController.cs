@@ -10,9 +10,9 @@ namespace ErrorHandlingExample.Controllers
 {
     public class HomeController : Controller
     {
-        IPrimalNumberCalculator _numberCalculator;
+        IDivisionCalculator _numberCalculator;
 
-        public HomeController(IPrimalNumberCalculator numberCalculator)
+        public HomeController(IDivisionCalculator numberCalculator)
         {
             _numberCalculator = numberCalculator;
         }
@@ -22,15 +22,10 @@ namespace ErrorHandlingExample.Controllers
             return View();
         }
 
-        public IActionResult GetModuluForNumber(int id)
+        public IActionResult GetDividedNumber(int id)
         {
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
             return View(divisionResult);
-        }
-
-        public IActionResult Error()
-        {
-            return View("Error");
         }
     }
 }

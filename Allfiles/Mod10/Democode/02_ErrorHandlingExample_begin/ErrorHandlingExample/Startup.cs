@@ -19,7 +19,7 @@ namespace ErrorHandlingExample
         {
             services.AddMvc();
             services.AddSingleton<ICounter,Counter>();
-            services.AddSingleton<IPrimalNumberCalculator, PrimalNumberCalculator>();
+            services.AddSingleton<IDivisionCalculator, DivisionCalculator>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ICounter cnt)
@@ -30,22 +30,22 @@ namespace ErrorHandlingExample
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Error.html");
             }
+
+            app.UseStaticFiles();
 
             app.Use(async (context, next) =>
             {
                 cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
                 await next.Invoke();
-            });
-
-            app.UseStaticFiles();
+            });            
 
             app.UseMvcWithDefaultRoute();
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("Page not found.");
             });
         }
     }

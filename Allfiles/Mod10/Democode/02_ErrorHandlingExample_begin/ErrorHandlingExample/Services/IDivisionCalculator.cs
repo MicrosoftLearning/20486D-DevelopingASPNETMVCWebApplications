@@ -2,7 +2,7 @@
 
 namespace ErrorHandlingExample.Services
 {
-    public interface IPrimalNumberCalculator
+    public interface IDivisionCalculator
     {
         DivisionResult GetDividedNumbers(int number);
     }
