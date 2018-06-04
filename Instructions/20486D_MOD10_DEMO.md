@@ -170,16 +170,14 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod10\Democode\02_UnitTestingExample_begin**, and then double-click **ErrorHandlingExample.sln**.
+2. Go to **Allfiles\Mod10\Democode\02_ErrorHandlingExample_begin**, and then double-click **ErrorHandlingExample.sln**.
 
 #### Demonstration Steps
 
 1. In the profile selection menu for debugging, verify that the **Production** environment is selected.
 
 2. On the **DEBUG** menu of the **ErrorHandlingExample - Microsoft Visual Studio** window, click **Start Debugging**.
-     > **Note**: The browser displays: <br />
-     "Internal Server Error" <br />
-     "OOps... Sorry, an error has occured..."
+     > **Note**: The browser displays an error page.
 
 3. In the **Microsoft Edge** window, click **Close**.
 
@@ -212,7 +210,7 @@ ErrorHandlingExample.Services.Counter.IncrementRequestPathCount(string requestPa
 
 13. In the Solution Explorer pane of the **ErrorHandlingExample - Microsoft Visual Studio** window, under **Services**, click **Counter.cs**.
 
-14. In the **Counter.cs** code window, locate the following code:
+14. In the **Counter.cs** code window, select the following code:
 ```cs
     UrlCounter[requestPath]++;
 ```
@@ -255,7 +253,7 @@ ErrorHandlingExample.Services.Counter.IncrementRequestPathCount(string requestPa
 
 25. In the Solution Explorer pane of the **ErrorHandlingExample - Microsoft Visual Studio** window, under **Services**, click **DivisionCalculator.cs**.
 
-26. In the **Counter.cs** code window, locate the following code:
+26. In the **DivisionCalculator.cs** code window, select the following code:
 ```cs
     for (int i = 0; i < (number / 2) + 1; i++)
 ```
@@ -267,15 +265,18 @@ ErrorHandlingExample.Services.Counter.IncrementRequestPathCount(string requestPa
 
 28. On the **FILE** menu of the **ErrorHandlingExample - Microsoft Visual Studio** window, click **Save All**.
 
-29. On the **DEBUG** menu of the **ErrorHandlingExample - Microsoft Visual Studio** window, click **Start Debugging**.
+29. In the profile selection menu for debugging, select the **Production** environment.
+
+30. On the **DEBUG** menu of the **ErrorHandlingExample - Microsoft Visual Studio** window, click **Start Debugging**.
      > **Note**: The browser displays a welcome page, the number of users entering the site, and a multiplication table. Each number in the table is a link.
 
-30. In the **Microsoft Edge** window, click the number **16**.
+31. In the **Microsoft Edge** window, click the number **16**.
      > **Note**: The browser displays the number that 16 can be divided without modulo. The number of times this page was viewed is shown below it.
 
-31. In the **Microsoft Edge** window, click **Close**.
+32. In the **Microsoft Edge** window, click **Close**.
 
-32. On the **DEBUG** menu of the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+33. On the **DEBUG** menu of the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+
 
 
  
