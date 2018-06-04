@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Http.Extensions
+@inject ErrorHandlingExample.Services.ICounter cnt
+@model int
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+
+    Welcome to the multiplication table site.<br>
+    The number of entrances to the site is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]<br />
+    @Html.Partial("_NumberLinks")
+</body>
+</html>
