@@ -25,19 +25,16 @@
 6. In the **Add New Item – LayoutExample** dialog box, click **Web**, and then, in the result pane, click **Razor Layout**, and click **Add**.
 
 7. In the **_Layout.cshtml** file, locate the following code:
-
   ```cs
        <title>@ViewBag.Title</title>
 ```
 
 8. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
-
   ```cs
        <link type="text/css" rel="stylesheet" href="~/css/style-layout-example.css" />
 ```
 
 9. In the **_Layout.cshtml** file, locate the following code:
-
   ```cs
        <div>
            @RenderBody()
@@ -45,7 +42,6 @@
 ```
 
 10. Place the cursor before the **<** (less then) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
-
   ```cs
        <div>
             <h1>Welcome to the University</h1>
@@ -53,7 +49,6 @@
 ```
 
 11. In the **_Layout.cshtml** file, locate the following code:
-
   ```cs
        <div>
            @RenderBody()
@@ -61,7 +56,6 @@
 ```
 
 12. Place the cursor after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter, and then type the following code: 
-
   ```cs
        <footer>
            @RenderSection("footer", required: false)
@@ -71,7 +65,6 @@
 13. In the Solution Explorer pane, under **LayoutExample**, expand **Controllers**, and then click **StudentController.cs**.
 
 14. In the **StudentController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
-
   ```cs
        public IActionResult Index()
 ```
@@ -83,25 +76,21 @@
 17. In the **Add View** dialog box, ensure that the **Use a layout page** check box is selected, and then click **Add**.
 
 18. In the **Index.cshtml** code window, locate the following code:
-
   ```cs
        @{
            ViewData["Title"] = "Index";
        }
 ```
 19. Place the cursor before the **@** (shtrudel) sign, press the Up Arrow key, type the following code, and then press Enter. 
-
   ```cs
        @model IEnumerable<Student>
 ```
 20. In the **Index.cshtml** code window, select the following code:
-
   ```cs
        <h2>Index</h2>
 ```
 
 21. Replace the selected code with the following code: 
-
   ```cs
        @section footer{
             <div>
@@ -113,7 +102,6 @@
 ```
 
 22. In the **Index.cshtml** code window, locate the following code:
-
   ```cs
        @section footer{
             <div>
@@ -125,7 +113,6 @@
 ```
 
 23. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
-
   ```cs
        <h2>Students list</h2>
        <div>
@@ -164,7 +151,6 @@
 24. In the Solution Explorer pane, under **LayoutExample**, under **Controllers**, click **StudentController.cs**.
 
 25. In the **StudentController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
-
   ```cs
        public IActionResult Details(int? id)
 ```
@@ -176,7 +162,6 @@
 28. In the **Add View** dialog box, ensure that the **Use a layout page** check box is selected, and then click **Add**.
 
 29. In the **Details.cshtml** code window, locate the following code:
-
   ```cs
        @{
            ViewData["Title"] = "Details";
@@ -184,19 +169,16 @@
 ```
 
 30. Place the cursor before the **@** (shtrudel) sign, press the Up Arrow key, type the following code, and then press Enter. 
-
   ```cs
        @model Student
 ```
 
 31. In the **Details.cshtml** code window, select the following code:
-
   ```cs
        <h2>Details</h2>
 ```
 
 32. Replace the selected code with the following code: 
-
   ```cs
        @section footer{
             <div>
@@ -206,7 +188,6 @@
 ```
 
 33. In the **Details.cshtml** code window, locate the following code:
-
   ```cs
        @section footer{
             <div>
@@ -216,7 +197,6 @@
 ```
 
 34. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
-
   ```cs
        <h2>Student details</h2>
 
@@ -307,13 +287,11 @@
 3. In the navigation pane of the **Add New Item - JSLibraryExample** dialog box, click **npm Configuration File**, and then click **Add**.
 
 4. In the **package.json** file, locate the following code:
-
   ```cs
        "devDependencies": {
        }
 ```
 5. Place the cursor after the **}** (closing bracket) sign, and type the following code:
-
   ```cs
        ,
        "dependencies": {
@@ -328,13 +306,11 @@
 7. In the Solution Explorer pane of the **JSLibraryExample - Microsoft Visual Studio** window, click **Startup.cs**.
 
 8. In the **Startup.cs** code window, locate the following code: 
-
   ```cs
        app.UseMvcWithDefaultRoute();
 ```
 
 9. Place the mouse cursor before the located code, type the following code, and then press Enter twice.
-
   ```cs
        app.UseStaticFiles();
 
@@ -350,42 +326,35 @@
 13. In the **Name** box of the **Add New Item – JSLibraryExample** dialog box, type **ApplicationBuilderExtensions**, and then click **Add**.
 
 14. In the **ApplicationBuilderExtensions.cs** code window, locate the following code:
-
   ```cs
        using System.Threading.Tasks;
 ```
 15. Ensure that the mouse cursor is at the end of the **System.Threading.Tasks** namespace, press Enter, and then type the following code:
-
   ```cs
        using System.IO;
        using Microsoft.Extensions.FileProviders;
 ```
 
 16. In the **ApplicationBuilderExtensions.cs** code window, select the following code:
-
   ```cs
       public class ApplicationBuilderExtensions
 ```
 
 17.  Replace the selected code with the following code:
-
   ```cs
       public static class ApplicationBuilderExtensions
 ```
 18. In the **ApplicationBuilderExtensions.cs** code window, select the following code:
-
   ```cs
        namespace JSLibraryExample.Middleware
 ```
 
 19. Replace the selected code with the following code:
-
   ```cs
        namespace Microsoft.AspNetCore.Builder
 ```
 
 20. In the **ApplicationBuilderExtensions.cs** code block, place the mouse cursor after the **{** (opening brackets) sign, press Enter, and then type the following code:
-
   ```cs
        public static IApplicationBuilder UseNodeModules(this IApplicationBuilder applicationBuilder, string root)
        {
@@ -406,13 +375,11 @@
 21. In the Solution Explorer pane of the **JSLibraryExample – Microsoft Visual Studio** window, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
 
 22. In the **_Layout.cshtml** file, locate the following code:
-
   ```cs
        <title>@ViewBag.Title</title>
 ```
 
 23. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
-
   ```cs
        <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
        <script src="~/js/jquery-function.js"></script>
@@ -421,7 +388,6 @@
 24. In the Solution Explorer pane of the **JSLibraryExample – Microsoft Visual Studio** window, expand **Controllers**, and then click **HomeController.cs**.
 
 25. In the **HomeController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
-
   ```cs
        public IActionResult Index()
 ```
@@ -433,13 +399,11 @@
 28. In the **Add MVC View** dialog box, ensure that the **Use a layout page** check box is selected, and then click **Add**.
 
 29. In the **Index.cshtml** code window, select the following code:
-
   ```cs
        <h2>Index</h2>
 ```
 
 30. Replace the selected code with the following code: 
-
   ```cs
        <div>
             <h1> Use NPM to Add a JavaScript Library </h1>
@@ -461,14 +425,12 @@
 35. In the **Name** box of the **Add New Item – JSLibraryExample** dialog box, type **style-js-example**, and then click **Add**.
 
 36. In the **style-js-example** code window, select the following code: 
-
   ```cs
        body {
        }
 ```
 
 37. Replace the selected code with the following code:
-
   ```cs
        body {
           text-align: center;
@@ -504,13 +466,11 @@
 38. In the Solution Explorer pane of the **JSLibraryExample – Microsoft Visual Studio** window, under **Views**, under **Shared**, and then click **_Layout.cshtml**.
 
 39. In the **_Layout.cshtml** file, locate the following code:
-
   ```cs
        <script src="~/js/jquery-function.js"></script>
 ```
 
 40. Place the cursor after the **>** (greater than) sign of the **&lt;/script&gt;** tag, press Enter, and then type the following code: 
-
   ```cs
        <link href="~/css/style-js-example.css" rel="stylesheet" />
 ```

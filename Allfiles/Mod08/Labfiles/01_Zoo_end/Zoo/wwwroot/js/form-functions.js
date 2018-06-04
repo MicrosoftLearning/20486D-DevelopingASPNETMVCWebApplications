@@ -29,10 +29,8 @@
             $("#comment").hide();
         }
         
-
         calculateSum();
     });
-
 
     function calculateSum() {
         var rows = document.querySelectorAll("#totalAmount tr .sum");
