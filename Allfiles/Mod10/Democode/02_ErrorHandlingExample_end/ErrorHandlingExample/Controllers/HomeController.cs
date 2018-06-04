@@ -27,5 +27,10 @@ namespace ErrorHandlingExample.Controllers
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
             return View(divisionResult);
         }
+
+        public IActionResult Error()
+        {
+            return View("Error");
+        }
     }
 }

@@ -28,6 +28,10 @@ namespace ErrorHandlingExample
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
 
             app.Use(async (context, next) =>
             {
