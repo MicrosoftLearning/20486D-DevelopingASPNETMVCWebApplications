@@ -8,68 +8,66 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod10\Democode\10_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
+2. Navigate to **Allfiles\Mod10\Democode\01_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
 
 #### Demonstration Steps
 
 1. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **Solution 'UnitTestingExample'**, point to **Add**, and then click **New Project**.
 
-2. In the **Add New Project** dialog box, click **MVC Controller - Empty**, and then click **Add**.
+2. In the **Add New Project** dialog box, in the navigation pane, expand **Installed**, expand **Visual C#**, and then click **.NET Core**.
 
-3. In the navigation pane of the **Add New Project** dialog box, expand **Installed**, expand **Visual C#**, and then click **.NET Core**.
+3. In the **Add New Project** dialog box, in the result pane, click **MSTest Test Project (.NET Core)**.
 
-4. In the result pane of the **Add New Project** dialog box, click **MSTest Test Project (.NET Core)**.
+4. In the **Add New Project** dialog box, in the **Name** text box, type **ProductsWebsite.Tests**, and then click **OK**.
 
-5. In the **Add New Project** dialog box, in the **Name** text box, type **ProductsWebsite.Tests**, and then click **OK**.
+5. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite.Tests**, right-click **Dependencies**, and then click **Add Reference**.
 
-6. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite.Tests**, right-click **Dependencies**, and then click **Add Reference**.
+6. In the **Reference Manager - ProductsWebsite.Tests** dialog box, int the navigation pane, expand **Projects**, and then click **Solution**.
 
-7. In the navigation pane of the **Reference Manager - ProductsWebsite.Tests** dialog box, expand **Projects**, and then click **Solution**.
+7. In the **Reference Manager - ProductsWebsite.Tests** dialog box, in the result pane, mark the **ProductsWebsite** check box, and then click **OK**.
 
-8. In the result pane of the **Reference Manager - ProductsWebsite.Tests** dialog box, check **UnitTestingExample**, and then click **OK**.
+8. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite.Tests**, right-click **UnitTest1**, and then click **Rename**.
 
-9. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite.Tests**, right-click **UnitTest1**, and then click **Rename**.
+9. In the **UnitTest1.cs** text box, type **ProductControllerTest**, and then press Enter.
 
-10. In the **UnitTest1.cs** text box, type **ProductControllerTest**, and then press Enter.
+10. In the **Microsoft Visual Studio** dialog box, click Yes.
 
-11. In the **Microsoft Visual Studio** dialog box, click Yes.
+11. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **ProductsWebsite.Tests**, point to **Add**, and then click **New Folder**.
 
-12. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **ProductsWebsite.Tests**, point to **Add**, and then click **New Folder**.
+12. In the **NewFolder** text box, type **Mock**, and then press Enter.
 
-13. In the **NewFolder** text box, type **Mock**, and then press Enter.
+13. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click the **Mock** folder, point to **Add**, and then click **Class**.
 
-14. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click the **Mock** folder, point to **Add**, and then click **Class**.
+14. In the **Add New Item - ProductsWebsite.Tests** dialog box, in the **Name** text box, type **FakeProductRepository**, and then click **Add**.
 
-15. In the **Add New item - ProductsWebsite.Tests** dialog box, in the **Name** text box, type **FakeProductRepository**, and then click **Add**.
-
-16. In the **FakeProductRepository.cs** code window, locate the following code:
+15. In the **FakeProductRepository.cs** code window, locate the following code:
 ```cs
     using System.Text;
 ```
 
-17. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
+16. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
 ```cs
-    using UnitTestingExample.Repositories;
-    using UnitTestingExample.Models;
+    using ProductsWebsite.Repositories;
+    using ProductsWebsite.Models;
 ```
 
-18. In the **FakeProductRepository.cs** code window, locate the following code:
+17. In the **FakeProductRepository.cs** code window, locate the following code:
 ```cs
     class FakeProductRepository
 ```
 
-19. Replace the selected code with the following code:
+18. Replace the selected code with the following code:
 ```cs
     internal class FakeProductRepository : IProductRepository
 ```
 
-20. In the **FakeProductRepository.cs** code window, locate the following code:
+19. In the **FakeProductRepository.cs** code window, locate the following code:
 ```cs
     internal class FakeProductRepository : IProductRepository
     {
 ```
 
-21. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
+20. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
 ```cs
     public IEnumerable<Product> GetProducts()
     {
@@ -82,28 +80,28 @@
     }
 ```
 
-22. In the **FakeProductRepository.cs** code window, locate the following code:
+21. In the **ProductControllerTest.cs** code window, locate the following code:
 ```cs
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 ```
 
-23. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
+22. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
 ```cs
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
-    using UnitTestingExample.Controllers;
-    using UnitTestingExample.Models;
-    using UnitTestingExample.Repositories;
+    using ProductsWebsite.Controllers;
+    using ProductsWebsite.Models;
+    using ProductsWebsite.Repositories;
 ```
 
-24. In the **FakeProductRepository.cs** code window, locate the following code:
+23. In the **ProductControllerTest.cs** code window, locate the following code:
 ```cs
     public void TestMethod1()
     {
     }
 ```
 
-25. Replace the selected code with the following code:
+24. Replace the selected code with the following code:
 ```cs
     public void IsIndexReturnsAllProducts()
     {
@@ -118,13 +116,13 @@
     }
 ```
 
-26. In the **FakeProductRepository.cs** code window, locate the following code:
+25. In the **ProductControllerTest.cs** code window, locate the following code:
 ```cs
         Assert.AreEqual(products.Count, 3);
     }
 ```
 
-27. Ensure that the cursor is at the end of the located code, press Enter twice, and then type the following code:
+26. Ensure that the cursor is at the end of the located code, press Enter twice, and then type the following code:
 ```cs
     [TestMethod]
     public void IsGetProductReturnsTheCorrectProduct()
@@ -140,10 +138,12 @@
     }
 ```
 
-28. In the **UnitTestingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+27. In the **UnitTestingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-29. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TEST** menu, point to **Run**, and then click **All Tests**.
-    >**Note:** The **Test Explorer** displays 1 Failed Test: IsGetProductReturnsTheCorrectProduct, and 1 Passed Test: IsIndexReturnsAllProducts.
+28. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TEST** menu, point to **Run**, and then click **All Tests**.
+    >**Note:** The **Test Explorer** displays 1 failed test: IsGetProductReturnsTheCorrectProduct, and 1 passed test: IsIndexReturnsAllProducts.
+
+29. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite**, expand **Controllers**, and then click **ProductController.cs**. 
 
 30. In the **ProductController.cs** code window, locate the following code:
 ```cs
@@ -158,7 +158,7 @@
 32. In the **UnitTestingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 33. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TEST** menu, point to **Run**, and then click **All Tests**.
-    >**Note:** The **Test Explorer** displays 2 Passed Tests: IsGetProductReturnsTheCorrectProduct and IsIndexReturnsAllProducts.
+    >**Note:** The **Test Explorer** displays 2 passed tests: IsGetProductReturnsTheCorrectProduct and IsIndexReturnsAllProducts.
 
 34. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 

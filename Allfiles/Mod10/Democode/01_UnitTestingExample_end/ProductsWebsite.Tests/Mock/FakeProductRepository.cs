@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using UnitTestingExample.Models;
-using UnitTestingExample.Repositories;
+using ProductsWebsite.Models;
+using ProductsWebsite.Repositories;
 
 namespace ProductsWebsite.Tests.Mock
 {

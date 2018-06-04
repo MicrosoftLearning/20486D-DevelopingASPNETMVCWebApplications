@@ -2,9 +2,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ProductsWebsite.Tests.Mock;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using UnitTestingExample.Controllers;
-using UnitTestingExample.Models;
-using UnitTestingExample.Repositories;
+using ProductsWebsite.Controllers;
+using ProductsWebsite.Models;
+using ProductsWebsite.Repositories;
 
 namespace ProductsWebsite.Tests
 {
