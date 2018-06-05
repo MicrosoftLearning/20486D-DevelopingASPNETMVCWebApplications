@@ -171,11 +171,11 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod10\Democode\02_ErrorHandlingExample_begin**, and then double-click **ErrorHandlingExample.sln**.
+2. Navigate to **Allfiles\Mod10\Democode\02_ErrorHandlingExample_begin**, and then double-click **ErrorHandlingExample.sln**.
 
 #### Demonstration Steps
 
-1. In the profile selection menu for debugging, verify that the **Production** environment is selected.
+1. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the run button, and then select **Production**.​
 
 2. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays an error page.
@@ -184,26 +184,26 @@
 
 4. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-5. In the profile selection menu for debugging, select the **Development** environment.
+5. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the run button, and then select **Development**.​
 
 6. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-     > **Note**: The browser displays an exception page. The exception page contains an exception type, exception string, and a stack trace.
+     > **Note**: The browser displays an exception page. 
 
 7. In **Microsoft Edge**, locate the following text:
  ```
-    ErrorHandlingExample.Startup+<>c__DisplayClass1_0+<<Configure>b__0>d.MoveNext() in `Startup.cs`
+    ErrorHandlingExample.Startup+<>c__DisplayClass1_0+<<Configure>b__0>d.MoveNext() in  Startup.cs
 	+	40.  cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
  ```
 
-8. In **Microsoft Edge**, click the **+** sign near **40.**
+8. In **Microsoft Edge**, click the **+** sign near **40.** and inspect the code.
 
 9. In **Microsoft Edge**, locate the following text:
  ```
-    ErrorHandlingExample.Services.Counter.IncrementRequestPathCount(string requestPath) in `Counter.cs`
+    ErrorHandlingExample.Services.Counter.IncrementRequestPathCount(string requestPath) in Counter.cs
 	+	19.  UrlCounter[requestPath]++;
  ```
 
-10. In **Microsoft Edge**, click the **+** sign near **19.**
+10. In **Microsoft Edge**, click the **+** sign near **19.** and inspect the code.
 
 11. In **Microsoft Edge**, click **Close**.
 
@@ -230,23 +230,23 @@
      > **Note**: The browser displays a welcome page, the number of users entering the site, and a multiplication table where each number in the table is a link.
 
 18. In **Microsoft Edge**, click the number **16**.
-     > **Note**: The browser displays an exception page. The exception page contains an exception type, exception string, and a stack trace.
-
+     > **Note**: The browser displays an exception page. In case the browser does not display the exception page,  in the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Continue**.
+     
 19. In **Microsoft Edge**, locate the following text:
  ```
-    ErrorHandlingExample.Controllers.HomeController.GetDividedNumber(int id) in `HomeController.cs`
+    ErrorHandlingExample.Controllers.HomeController.GetDividedNumber(int id) in HomeController.cs
 	+	27.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
  ```
 
-20. In **Microsoft Edge**, click the **+** sign near **27.**
+20. In **Microsoft Edge**, click the **+** sign near **27.** and inspect the code.
 
 21. In **Microsoft Edge**, locate the following text:
  ```
-    ErrorHandlingExample.Services.DivisionCalculator.GetDividedNumbers(int number) in `DivisionCalculator.cs`
+    ErrorHandlingExample.Services.DivisionCalculator.GetDividedNumbers(int number) in DivisionCalculator.cs
 	+	21.  if (number % i == 0)
  ```
 
-22. In **Microsoft Edge**, click the **+** sign near **21.**
+22. In **Microsoft Edge**, click the **+** sign near **21.** and inspect the code.
 
 23. In **Microsoft Edge**, click **Close**.
 
@@ -266,12 +266,12 @@
 
 28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, On the **FILE** menu, click **Save All**.
 
-29. In the profile selection menu for debugging, select the **Production** environment.
+29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the run button, and then select **Production**.​
 
 30. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 31. In **Microsoft Edge**, click the number **16**.
-     > **Note**: The browser displays the number that 16 can be divided without modulo. The number of times this page was viewed is shown below it.
+     > **Note**: The browser displays the numbers that 16 can be divided to without leaving a remainder and below it, the number of times this number was searched.
 
 32. In **Microsoft Edge**, click **Close**.
 
