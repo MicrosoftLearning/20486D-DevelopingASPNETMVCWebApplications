@@ -23,7 +23,7 @@
 
 5. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite.Tests**, right-click **Dependencies**, and then click **Add Reference**.
 
-6. In the **Reference Manager - ProductsWebsite.Tests** dialog box, int the navigation pane, expand **Projects**, and then click **Solution**.
+6. In the **Reference Manager - ProductsWebsite.Tests** dialog box, in the navigation pane, expand **Projects**, and then click **Solution**.
 
 7. In the **Reference Manager - ProductsWebsite.Tests** dialog box, in the result pane, mark the **ProductsWebsite** check box, and then click **OK**.
 
@@ -93,6 +93,7 @@
     using ProductsWebsite.Controllers;
     using ProductsWebsite.Models;
     using ProductsWebsite.Repositories;
+    using ProductsWebsite.Tests.Mock;
 ```
 
 23. In the **ProductControllerTest.cs** code window, locate the following code:
