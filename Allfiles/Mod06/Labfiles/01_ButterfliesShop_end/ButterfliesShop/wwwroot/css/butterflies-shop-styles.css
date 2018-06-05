@@ -71,7 +71,7 @@ a:hover {
 
 .display-label {
     display: inline-block;
-    width: 150px;
+    width: 180px;
     margin: 25px 1px 5px 1px;
     font-weight: bold;
     font-size: large;
@@ -128,7 +128,7 @@ a:hover {
 .img-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .photo-display-img {
@@ -202,4 +202,8 @@ form {
     margin: 0 auto;
     background-color: white;
     box-shadow: 0 0 20px #1e004f;
+}
+
+.display-info {
+    max-height:105px;
 }
