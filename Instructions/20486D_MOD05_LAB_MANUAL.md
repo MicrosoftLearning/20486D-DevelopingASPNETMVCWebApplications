@@ -18,7 +18,7 @@ After completing this lab, you will be able to:
 
 Estimated Time: **60 minutes**
 
-## Exercise 1: Working with Static Files
+## Exercise 1: Adding Views to an MVC Application
 
 #### Scenario
 
