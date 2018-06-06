@@ -126,7 +126,7 @@ The main tasks for this exercise are as follows:
 14. In the **IMG** element, add a **SRC** property using the following information:
     - Html helper: **Url.Action**
     - Target action: **GetImage**
-    - Helper parameter: **Name** property from the **ViewBag.City**
+    - Helper parameter: In a new anonymouse object, assign the **Name** property of the **ViewBag.City** to a property named **cityName**.
      
 15. In the **CityController** class, in the **GetImage** action replace the method's return value to **File** using the following information:
     - File path: **images\**
