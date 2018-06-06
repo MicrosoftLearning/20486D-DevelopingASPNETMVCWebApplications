@@ -175,7 +175,7 @@
 
 #### Demonstration Steps
 
-1. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the run button, and then select **Production**.​
+1. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the **▶** (run) button, and then select **Production**.​
 
 2. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays an error page.
@@ -184,14 +184,14 @@
 
 4. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-5. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the run button, and then select **Development**.​
+5. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the **▶** (run) button, and then select **Development**.​
 
 6. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
      > **Note**: The browser displays an exception page. 
 
 7. In **Microsoft Edge**, locate the following text:
  ```
-    ErrorHandlingExample.Startup+<>c__DisplayClass1_0+<<Configure>b__0>d.MoveNext() in  Startup.cs
+    ErrorHandlingExample.Startup+<>c__DisplayClass1_0+<<Configure>b__0>d.MoveNext() in Startup.cs
 	+	40.  cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
  ```
 
@@ -224,10 +224,10 @@
         UrlCounter.Add(requestPath, 1);
 ```
 
-16. In the **ErrorHandlingExample - Microsoft Visual Studio** window, On the **FILE** menu, click **Save All**.
+16. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 17. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-     > **Note**: The browser displays a welcome page, the number of users entering the site, and a multiplication table where each number in the table is a link.
+     > **Note**: The browser displays a welcome page, the number of users entered the site, and a multiplication table.
 
 18. In **Microsoft Edge**, click the number **16**.
      > **Note**: The browser displays an exception page. In case the browser does not display the exception page,  in the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Continue**.
@@ -264,14 +264,14 @@
     for (int i = 1; i < (number / 2) + 1; i++)
 ```
 
-28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, On the **FILE** menu, click **Save All**.
+28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the run button, and then select **Production**.​
+29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the **▶** (run) button, and then select **Production**.​
 
 30. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 31. In **Microsoft Edge**, click the number **16**.
-     > **Note**: The browser displays the numbers that 16 can be divided to without leaving a remainder and below it, the number of times this number was searched.
+     > **Note**: The browser displays the numbers that 16 can be divided by without leaving a remainder, and below it, the number of times this number was viewed.
 
 32. In **Microsoft Edge**, click **Close**.
 
