@@ -140,12 +140,12 @@ The main tasks for this exercise are as follows:
 
 4. Add an **P** element to the **Index.cshtml** page within the **DIV** element by using the following information:
 
-    - Content: **Welcome to Our Web Store, Enjoy a Wide Variety of Butterflies**
+    - Content: **Welcome to our Web Store, Enjoy a Wide Variety of Butterflies**
     - Class: **into**
 
 5. Add an **P** element to the **Index.cshtml** page within the **DIV** element by using the following information:
 
-    - Content: **Our Butterflies in The Shop**
+    - Content: **Our Butterflies in the Shop**
     - Class: **into**
 
 6. Add a **BUTTON** element to the **Index.cshtml** page within the **DIV** element by using the following information:
