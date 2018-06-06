@@ -29,9 +29,9 @@ Estimated Time: **60 minutes**
 
 In this exercise, you will:
 
-- Add model classes to the web application.
-- **_Create (GET)_**. This action creates a new **Butterfly** object and passes it to the Create view, which displays a form that the visitor can use to upload a butterfly and describe it.
-- **_Create (POST)_**. This action receives a **Butterfly** object from the Create view and saves the details.
+- Add model classes to the web application and use them in views.
+- Add a **_Create (GET)_** action.
+- Add a **_Create (POST)_** action.
 
 The main tasks for this exercise are as follows:
 
@@ -229,9 +229,9 @@ The main tasks for this exercise are as follows:
 
 5. Within the **IF** statement, initiate the following accepted butterfly object properties: 
 
-  - First property: **ImageMimeType**
-  - Second property: **ImageName** 
-  - Third property: **Id** 
+    - First property: **ImageMimeType**
+    - Second property: **ImageName** 
+    - Third property: **Id** 
 
 6. Add the accepted butterfly object to the **IButterfliesQuantityService** interface using the **AddButterfliesQuantityData** method.
 
@@ -253,7 +253,7 @@ The main tasks for this exercise are as follows:
 
 In this exercise, you will:
 
-- Add **Display** and **Edit** data annotations to butterfly model.
+- Add Display and Edit data annotations to a **Butterfly** model.
 - Add **Display** Helpers to **Index.cshtml**.
 - Add **Form** Helpers and **Editor** Helpers to **Create.cshtml**.
 
@@ -305,9 +305,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Update an action to return FileContentResult
 
-1. In the **GetImage** action, in the **IF** statment create a variable named **fullPath** and initialize the variable, in order to refer to the name of the image under the images directory.
+1. In the **GetImage** action, in the **IF** statment create a variable named **fullPath** of type string and initialize the variable, in order to refer to the name of the image under the images directory.
 
-2. In the **GetImage** action, If the **fullPath** exists, initialize a new FileStream, declare a byte array.
+2. In the **GetImage** action, If the **fullPath** exists, initialize a new FileStream, and declare a byte array.
 
 3. Within the **GetImage** action, add a using statment, and in the using statment add initialize a  BinaryReader object, and  assign binary reader length to the byte array. 
 
