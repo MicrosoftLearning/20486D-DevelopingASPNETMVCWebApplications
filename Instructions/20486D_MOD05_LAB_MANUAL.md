@@ -159,7 +159,7 @@ The main tasks for this exercise are as follows:
     - Content:  City name
     - Tag helper:  **asp-action**
     - Target page: **ShowDataForCity**
-    - Parameter name: **City**
+    - Parameter name: **cityname**
     - Parameter value: City name
   
     > **Note**: The key of the  **CityProvider** item contains the city name.
@@ -210,7 +210,7 @@ The main tasks for this exercise are as follows:
 4. In the **_CityPopulation** view, define a variable using the following information:
     - Type: CitiesDetails.Services.CityPopulation
     - Name: **population**
-    - Initial value: **_cityPopulation** from the **ViewBag.City**
+    - Initial value: **CityPopulation** from the **ViewBag.City**
 
 5. In the **_CityPopulation** view, add a **P** element.
 
@@ -274,7 +274,7 @@ The main tasks for this exercise are as follows:
 
 4. Ensure that the **CityViewComponent** class inherits from the **ViewComponent** class.
 
-5.	Add a method for the **CityViewComponent** using the following information:
+5. Add a method for the **CityViewComponent** using the following information:
 
     - Scope: **public**
     - Return Type: **IViewComponentResult**
@@ -313,7 +313,7 @@ The main tasks for this exercise are as follows:
     - Content: **CurrentCityName** property from the **ViewBag**.
     - Tag helper: **asp-action**
     - Target action: **ShowDataForCity**
-    - Parameter name: **city**
+    - Parameter name: **cityname**
     - Parameter value: **CurrentCityName** property from the **ViewBag**.
 
 7. Below the **H2** element, add an **IMG** element.
