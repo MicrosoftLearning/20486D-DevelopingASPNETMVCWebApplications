@@ -510,7 +510,7 @@ The main tasks for this exercise are as follows:
 
 2. Add validation helpers to a view.
 
-3. Using the **ModelState.IsValid** property in a controller.
+3. Using **ModelState.IsValid** property in a controller.
 
 4. Run the application.
 
@@ -561,7 +561,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Using the ModelState.IsValid property in a controller
 
-1. In the **ButterflyController** class, within the **Create** action method code block for the **HTTP POST** verb, check if the **ModelState** is valid.
+1. In the **ButterflyController** class, within the **Create** action method code block for the **HTTP POST** verb, check if the **ModelState** is valid at the begging of the method code block.
+
+2. Otherwise if not valid return the accepted butterfly object to the view.
 
 #### Task 4: Run the application
 
@@ -596,32 +598,36 @@ The main tasks for this exercise are as follows:
 
 4. Ensure that the **MaxButterflyQuantityValidation** class inherits from the **ValidationAttribute** class.
 
-5. In the **MaxButterflyQuantityValidation** class, create a new private object using the following information:
+5. In the **MaxButterflyQuantityValidation** class, create a new private field using the following information:
 
    - Scope: **private**
    - Data type: **integer**
    - Name: **_maxAmount** 
 
-    Initialize the new object in the **MaxButterflyQuantityValidation** constructor with the value **int maxAmount**.
+    Create a constructor for the **MaxButterflyQuantityValidation** class that acceptes a **int maxAmount** parameter. Initialize the new **_maxAmount** field with the **maxAmount** paramater.
 
 6. In the **MaxButterflyQuantityValidation** class, override the **IsValid** method with the following Parameters:
 
-   - First parameter: an **object** called **value**
-   - Second parameter: a **ValidationContext** object called **validationContext**  
+   - First parameter: **value** of type **object**
+   - Second parameter: **ValidationContext** of type **validationContext**  
 
-7. Within the **IsValid** method get an instance of the **IButterfliesQuantityService** using the **GetService** method of the **ValidationContext** object.
+7. Within the **IsValid** method create an instance of type **IButterfliesQuantityService** using the **GetService** method of the **ValidationContext** parameter.
 
-8. Within the **IsValid** method get an instance of the current butterfly using the **ObjectInstance** method of the **ValidationContext** object.
+8. Within the **IsValid** method create an instance of type **butterfly** using the **ObjectInstance** method of the **ValidationContext** prameter.
 
-9. If the current butterfly instance **ButterflyFamily** property is not null, then get the total quantity using the **GetButterflyFamilyQuantity** metod of the **IButterfliesQuantityService** service, and the current butterfly instance **Quantity** property.
+9. Create a **If** statment that checks whether the **ButterflyFamily** property of the current butterfly is not null.
 
-10. If the total quantity is bigger then the private object **_maxAmount** return new **ValidationResult**. Else return **ValidationResult.Success**.
+10. Get the total quantity using the **GetButterflyFamilyQuantity** method of the **IButterfliesQuantityService** service, and assign the result to a new **quantity** variable of type **int?**.
 
-11. In the **Butterfly** class, add **using** statement for the following namespace:
+11. Calculate the sum of the new **quantity** variable and the current buttefly **quantity**.
+
+12. If the total quantity is bigger then the value of the private field **_maxAmount**, return a new **ValidationResult** with a custome validation message. Else return **ValidationResult.Success**.
+
+13. In the **Butterfly** class, add **using** statement for the following namespace:
 
    - **ButterfliesShop.Validators**
 
-12. Add the custom validation data annotations to the **Butterfly** model class to ensure that the users complete the **Quantity** text box, and type the correct butterflies quantity.
+14. Add the **MaxButterflyQuantityValidation(50)**  custom validation data annotations to the **Butterfly** model class to ensure that the users complete the **Quantity** text box, and type the correct butterflies quantity.
 
 #### Task 6: Run the application
 
@@ -639,11 +645,13 @@ The main tasks for this exercise are as follows:
     - Butterflies Quantity: **type 60**
     - Butterflies Picture: **_&lt;A butterfly picture of your choice&gt;_**
 
-5. Correct the **Butterflies Quantity** field, and then add the **Butterflies Picture** once again, and then click **Submit**.
+5. Correct the **Butterflies Quantity** box, type 2.
+
+6. Add the **Butterflies Picture** once again, and then click **Submit**.
 
       >**Note:** Verify the newly submitted butterfly details.
 
-6. Stop debugging and close Microsoft Visual Studio.
+7. Stop debugging and close Microsoft Visual Studio.
 
 >**Results**: After completing this exercise, you should have created a ButterfliesShop application in which users can submit to the shop variety of butterflies.
 

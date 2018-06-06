@@ -138,8 +138,8 @@ a:hover {
 }
 
 input, select, textarea {
-    margin-left: auto;
-    margin-right: auto;
+    /*margin-left: auto;
+    margin-right: auto;*/
     font-size: 24px;
     width: 250px;
     text-align: left;
@@ -187,14 +187,17 @@ form {
 }
 
 .form-field {
-    max-width: 605px;
+    max-width: 250px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-field .validation-error,
 .form-field .field-validation-error {
-        display: block;
-        text-align: right;
+    display: block;
+    text-align: left;
+    width: 350px;
 }
 
 .container {
@@ -205,5 +208,5 @@ form {
 }
 
 .display-info {
-    max-height:105px;
+    max-height: 105px;
 }
