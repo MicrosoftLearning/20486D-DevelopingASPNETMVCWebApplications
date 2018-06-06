@@ -96,9 +96,9 @@ The main tasks for this exercise are as follows:
 
 4. In the **CityController** class, declare a new parameter for the **ShowDataForCity** action using the following information:
     - Type: **string**
-    - Name: **city**
+    - Name: **cityName**
 
-5. Use the **city** parameter as index to the **_cities** field, and save its value to **ViewBag.City**.
+5. Use the **cityName** parameter as index to the **_cities** field, and save its value to **ViewBag.City**.
 
 6. Add a new view to the **ShowDataForCity** action method of the **CityController** class using the following information:
    - Folder: **Views/City**
@@ -113,11 +113,11 @@ The main tasks for this exercise are as follows:
 
 8. In the **BODY** element, create a **DIV** element.
 
-9. In the **DIV** element, add a **H2** element to display the **_city** property from the **ViewBag.City**.
+9. In the **DIV** element, add a **H2** element to display the **Name** property from the **ViewBag.City**.
 
-10. In the **DIV** element, below the **H2** element, add a **P** element, set its content to "Country: ", followed by the **_country** property from the **ViewBag.City**.
+10. In the **DIV** element, below the **H2** element, add a **P** element, set its content to "Country: ", followed by the **Country** property from the **ViewBag.City**.
 
-11. In the **DIV** element, below the **P** element, add another **P** element, set its content "Time zone: ", followed by the **_timeZone** property from the **ViewBag.City**.
+11. In the **DIV** element, below the **P** element, add another **P** element, set its content "Time zone: ", followed by the **TimeZone** property from the **ViewBag.City**.
 
 12. In the **DIV** element, below the last **P** element, add a **SPAN** element.
 
@@ -126,7 +126,7 @@ The main tasks for this exercise are as follows:
 14. In the **IMG** element, add a **SRC** property using the following information:
     - Html helper: **Url.Action**
     - Target action: **GetImage**
-    - Helper parameter: **_city** property from the **ViewBag.City**
+    - Helper parameter: **Name** property from the **ViewBag.City**
      
 15. In the **CityController** class, in the **GetImage** action replace the method's return value to **File** using the following information:
     - File path: **images\**
@@ -216,14 +216,14 @@ The main tasks for this exercise are as follows:
 
 6. In the **P** element add an **H3** element, set its content to "City Population()"
 
-7. In the **H3** element, in the () (brackets) sign, include the **_year** property from the **population** variable.
-    > **Note**: The **_year** property represents the year that the census was made.
+7. In the **H3** element, in the () (brackets) sign, include the **Year** property from the **population** variable.
+    > **Note**: The **Year** property represents the year that the census was made.
 
-8. In the **_CityPopulation** view, add another **P** element, set its content to "City: ", followed by the **_city** property from the **population** variable.
+8. In the **_CityPopulation** view, add another **P** element, set its content to "City: ", followed by the **City** property from the **population** variable.
 
-9. In the **_CityPopulation** view, add another  **P** element, set its content to "Urban: ", followed by the **_urban** property from the **population** variable.
+9. In the **_CityPopulation** view, add another  **P** element, set its content to "Urban: ", followed by the **Urban** property from the **population** variable.
 
-10. In the **_CityPopulation** view, add another  **P** element, set its content to "Metro: ", followed by the **_metro** property from the **population** variable.
+10. In the **_CityPopulation** view, add another  **P** element, set its content to "Metro: ", followed by the **Metro** property from the **population** variable.
 
 ####	Task 2: Use the partial view in the ShowDataForCity view.
 

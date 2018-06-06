@@ -7,12 +7,12 @@ namespace CitiesDetails.Services
 {
     public class CityDetails
     {
-        public string _country;
-        public string _city;
-        public string _timeZone;
-        public CityPopulation _cityPopulation;
+        public string Country { get; }
+        public string Name { get; }
+        public string TimeZone { get; }
+        public CityPopulation CityPopulation { get; }
 
-        public CityDetails(string country, string city, string timeZone, CityPopulation cityPopulation)
+        public CityDetails(string country, string cityName, string timeZone, CityPopulation cityPopulation)
         {
 
         }
