@@ -72,7 +72,7 @@ The main tasks for this exercise are as follows:
    - **Microsoft.AspNetCore.Hosting**
    - **WorldJourney.Models**
 
-2. Edit the code in the **Index** action by saving the following  parameter key and value in the **ViewData** dictionary to use it later in the view.
+2. Edit the code in the **Index** action and save the following   key and value in the **ViewData** dictionary, to use it later inside the view.
     - Key: **Page**
     - Value: **Search city**
 
@@ -81,18 +81,26 @@ The main tasks for this exercise are as follows:
    - Return type: **IActionResult**
    - Name: **Details**
 
-4. In the **Details** action code block, add code to find a single **City** object from its **ID**.
+4. In the **Details** action code block, add a varible named city of type **City** with the value of **null**. 
 
-5. If no city with the right ID is found, return the **HttpNotFound** value.
+5. If the value of the city is **null**, return the **HttpNotFound** result.
 
-6. If a city with the right ID is found, pass it to the **Details** view.
+6. If a city is not **null**, pass it to the **Details** view.
 
 7. Add a method for the **GetImage** action with the following information:
        - Scope: **public**
        - Return type: **IActionResult**
        - Name: **GetImage**
 
-8. If the **City** object is not null, return a **File** result constructed from the **city.ImageName** and **city.ImageMimeType** properties, else return the **HttpNotFound** value.
+8. In the **GetImage** action, define a new object of type **City** with value of **null**. 
+
+9. Define a new **fullPath** varible of type **string** with empty value. 
+
+10. If the **City** object is not null, create a new **FileStream** object using the **fullPath** varible and **FileMode.Open**. 
+
+11. Read the bytes in the **FileStream** and return a **File** result constructed from the bytes in the file and **city.ImageMimeType** properties.
+ 
+12. If the **City** object is  null,  return the **HttpNotFound** value.
 
 #### Task 3: Change actions to get a parameter
 
@@ -108,35 +116,41 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Use a service
 
-1. In the **CityController** class, create a new object with the following information:
+1. In the **CityController** class, create a new field with the following information:
    - Scope: **private**
    - Class: **IData**
    - Name: **_data** 
    
-    Initialize the new object in the **CityController** constructor with the value **IData data**.
+    Initialize the new field in the **CityController** constructor with the value **IData data**.
 
-2. In the **CityController** class, create a new object with the following information:
+2. In the **CityController** class, create a new field with the following information:
    - Scope: **private**
    - Class: **IHostingEnvironment**
    - Name: **_environment** 
 
-    Initialize the new object in the **CityController** constructor with the value **IHostingEnvironment environment** .
+    Initialize the new field in the **CityController** constructor with the value **IHostingEnvironment environment** .
 
-3. Edit the code in the **Details** action with the following information:
+3. Inside the **CityController** constructor, call the **CityInitializeData** method of the **IData** service. 
+
+4. Edit the code in the **Details** action with the following information:
    - Return class: **View**
    - View name: **Details**
    - Model: **_data.GetCityById(id)**
  
-4. Edit the code in the **GetImage** action with the following information:
-   - Return class: **View**
+5. Edit the code in the **GetImage** action with the following information:
+   - Return class: **File**
    - View name: **GetImage**
-   - Model: **_data.GetCityById(id)**
  
-5. In the **GetImage** action, initialize the **fullPath** object to refer to the name of the image under the **images** directory.
+6. In the **GetImage** action, create a new varible **webRootpath** and asssign it the value of **_environment.WebRootPath**.
+
+7. In the **GetImage** action, create a new varible **folderPath** and asssign it the value of  **"\\images\\"**.
+
+8. Initialize the **fullPath** varible with the concatenation of  **webRootpath**, **folderPath** and **requestedCity.ImageName**.
+
 
 #### Task 6: Store the result in a ViewBag property
 
--   In **CityController.cs**, edit the code in the **Index** action by saving the following **Title** parameter value in the **ViewBag** collection to use it later in the view.
+-   In **CityController.cs**, edit the code in the **Details** action by saving the following **Title** parameter value in the **ViewBag** collection to use it later in the view.
     - Value: **city.CityName**
 
 #### Task 7: Run the application
