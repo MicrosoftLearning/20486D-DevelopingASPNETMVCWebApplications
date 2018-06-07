@@ -60,7 +60,7 @@ The main tasks for this exercise are as follows:
    - Template: **MVC controller - Empty**
    - Folder: **Controllers**
 
-4. Create a new controller for handling the **City** objects with the following information:
+4. Create a new controller with the following information:
    - Controller name: **CityController**
    - Template: **MVC controller - Empty**
    - Folder: **Controllers**
@@ -72,7 +72,7 @@ The main tasks for this exercise are as follows:
    - **Microsoft.AspNetCore.Hosting**
    - **WorldJourney.Models**
 
-2. Edit the code in the **Index** action and save the following   key and value in the **ViewData** dictionary, to use it later inside the view.
+2. Edit the code in the **Index** action by saving the following key and value in the **ViewData** dictionary:
     - Key: **Page**
     - Value: **Search city**
 
@@ -81,26 +81,48 @@ The main tasks for this exercise are as follows:
    - Return type: **IActionResult**
    - Name: **Details**
 
-4. In the **Details** action code block, add a varible named city of type **City** with the value of **null**. 
+4. In the **Details** action code block, save the following key and value in the **ViewData** dictionary:
+    - Key: **Page**
+    - Value: **Selected city**
 
-5. If the value of the city is **null**, return the **HttpNotFound** result.
+5. Add a varible named **city** of type **City** with the value of **null**. 
 
-6. If a city is not **null**, pass it to the **Details** view.
+6. If the value of the **city** varible is **null**, return the **NotFoundResult** result using the **NotFound** method.
 
-7. Add a method for the **GetImage** action with the following information:
-       - Scope: **public**
-       - Return type: **IActionResult**
-       - Name: **GetImage**
+7. If the value of the **city** varible is not **null**, return the **ViewResult** result using the **View** method.  Pass the **city** varible as a parameter to the **View** method.
 
-8. In the **GetImage** action, define a new object of type **City** with value of **null**. 
+8. Add a method for the **GetImage** action with the following information:
+    - Scope: **public**
+    - Return type: **IActionResult**
+    - Name: **GetImage**
 
-9. Define a new **fullPath** varible of type **string** with empty value. 
+9. Edit the code in the **GetImage** action code block by saving the following key and value in the **ViewData** dictionary:
+    - Key: **Message**
+    - Value: **Display Image**
 
-10. If the **City** object is not null, create a new **FileStream** object using the **fullPath** varible and **FileMode.Open**. 
+10. Add a varible named **requestedCity** of type **City** with the value of **null**.
 
-11. Read the bytes in the **FileStream** and return a **File** result constructed from the bytes in the file and **city.ImageMimeType** properties.
- 
-12. If the **City** object is  null,  return the **HttpNotFound** value.
+11. Add a varible named **fullPath** of type **string** with a value of empty string (**""**).
+
+12. Create a **IF** statement that checks that the value of the **requestedCity** varible is not null. 
+
+13. Inside the **IF** statement, add a varible named **fileOnDisk** of type **FileStream**. 
+
+14. Initialize the **fileOnDisk** varaible using the **FileStream** constructor and pass to it the following parameters: **fullPath** and **FileMode.Open**. 
+
+15. Create a new variable named **fileBytes** of type **byte[]**.
+
+16. Create a new variable named **br** of type **BinaryReader** inside a **USING** statement.
+
+17. Initialize the **br** varaible using the **BinaryReader** constructor and pass to it the following parameter: **fileOnDisk**.  
+
+18. In the **USING** statement block, assign the **fileBytes** varible the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
+
+19. After the **USING** statement block, return a **FileResult** result using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedCity**. 
+
+20. After the end of **IF** statment, add an **ELSE** statment.
+
+21. Inside the **ELSE** statment, return the **NotFoundResult** result using the **NotFound** method.
 
 #### Task 3: Change actions to get a parameter
 
