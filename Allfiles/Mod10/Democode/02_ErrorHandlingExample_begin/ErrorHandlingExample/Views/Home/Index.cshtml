@@ -14,8 +14,10 @@
 </head>
 <body>
     <h1>Multiplication Table</h1>
-    Welcome to the multiplication table site.<br />
-    The number of entrances to the site is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]<br />
+    <p>
+        Welcome to the multiplication table site.<br />
+        The number of entrances to the welcome page is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]<br />
+    </p>
     @Html.Partial("_NumberLinks")
 </body>
 </html>

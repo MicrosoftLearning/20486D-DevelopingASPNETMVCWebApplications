@@ -15,8 +15,10 @@
 </head>
 <body>
     <h1>Number @Model.DividedNumber</h1>
-    The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()<br />
-    This number was searched @cnt.UrlCounter[Context.Request.GetDisplayUrl()] times<br />
+    <p>
+        The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()<br />
+        This number was viewed @cnt.UrlCounter[Context.Request.GetDisplayUrl()] times<br />
+    </p>
     @Html.Partial("_NumberLinks")
 </body>
 </html>

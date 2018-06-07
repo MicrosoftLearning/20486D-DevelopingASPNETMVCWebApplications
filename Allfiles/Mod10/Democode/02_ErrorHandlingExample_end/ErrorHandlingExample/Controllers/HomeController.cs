@@ -17,6 +17,7 @@ namespace ErrorHandlingExample.Controllers
             _numberCalculator = numberCalculator;
         }
 
+        [Route("")]
         public IActionResult Index()
         {
             return View();
