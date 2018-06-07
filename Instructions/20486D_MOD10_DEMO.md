@@ -178,7 +178,6 @@
 1. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the **▶** (run) button, and then select **Production**.​
 
 2. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-    >**Note**: The browser displays an error page.
 
 3. In **Microsoft Edge**, click **Close**.
 
@@ -187,7 +186,6 @@
 5. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the **▶** (run) button, and then select **Development**.​
 
 6. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-     > **Note**: The browser displays an exception page. 
 
 7. In **Microsoft Edge**, locate the following text:
  ```
@@ -226,11 +224,9 @@
 
 16. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-17. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-     > **Note**: The browser displays a welcome page, the number of users entered the site, and a multiplication table.
+17. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 18. In **Microsoft Edge**, click the number **16**.
-     > **Note**: The browser displays an exception page. In case the browser does not display the exception page,  in the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Continue**.
      
 19. In **Microsoft Edge**, locate the following text:
  ```
@@ -271,7 +267,6 @@
 30. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 31. In **Microsoft Edge**, click the number **16**.
-     > **Note**: The browser displays the numbers that 16 can be divided by without leaving a remainder, and below it, the number of times this number was viewed.
 
 32. In **Microsoft Edge**, click **Close**.
 
