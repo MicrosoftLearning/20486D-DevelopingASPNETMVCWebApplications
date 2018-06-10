@@ -134,7 +134,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Change an action to redirect to another action in another controller
 
-- In the **HomeController** class, edit the code in the **Index** action, and redirect the user to the **Index** action of the **City** controller.
+1. In the **HomeController** class, edit the code in the **Index** action, and remove the code which retursn the **"ViewResult"** result using the **"View"** method.
+
+2. Return the **RedirectToAction** result using the **RedirectToAction** method. Pass **"Index"** and **"City"** as parameters to the **RedirectToAction** method.
+
 
 #### Task 5: Use a service
 
