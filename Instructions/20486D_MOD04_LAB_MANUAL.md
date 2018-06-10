@@ -55,12 +55,12 @@ The main tasks for this exercise are as follows:
 
 2. In the **WorldJourney** project, create a new top-level folder, and name it **Controllers**.
 
-3. Create a new controller with the following information:
+3. Create a new controller using the following information:
    - Controller name: **HomeController**
    - Template: **MVC controller - Empty**
    - Folder: **Controllers**
 
-4. Create a new controller with the following information:
+4. Create a new controller using the following information:
    - Controller name: **CityController**
    - Template: **MVC controller - Empty**
    - Folder: **Controllers**
@@ -87,9 +87,9 @@ The main tasks for this exercise are as follows:
 
 5. Add a varible named **city** of type **City** with the value of **null**. 
 
-6. If the value of the **city** varible is **null**, return the **NotFoundResult** result using the **NotFound** method.
+6. Create a **IF** statement that checks that the value of the **city** varible is  **NULL**. If the value is **null**, return the **NotFoundResult** result using the **NotFound** method.
 
-7. If the value of the **city** varible is not **null**, return the **ViewResult** result using the **View** method.  Pass the **city** varible as a parameter to the **View** method.
+7. After the **IF** statement, return the **ViewResult** result using the **View** method. Pass the **city** varible as a parameter to the **View** method.
 
 8. Add a method for the **GetImage** action with the following information:
     - Scope: **public**
@@ -108,15 +108,15 @@ The main tasks for this exercise are as follows:
 
 13. Inside the **IF** statement, add a varible named **fileOnDisk** of type **FileStream**. 
 
-14. Initialize the **fileOnDisk** varaible using the **FileStream** constructor and pass to it the following parameters: **fullPath** and **FileMode.Open**. 
+14. Initialize the **fileOnDisk** varaible using the **FileStream** constructor and pass it the following parameters: **fullPath** and **FileMode.Open**. 
 
 15. Create a new variable named **fileBytes** of type **byte[]**.
 
 16. Create a new variable named **br** of type **BinaryReader** inside a **USING** statement.
 
-17. Initialize the **br** varaible using the **BinaryReader** constructor and pass to it the following parameter: **fileOnDisk**.  
+17. Initialize the **br** varaible using the **BinaryReader** constructor and pass it the following parameter: **fileOnDisk**.  
 
-18. In the **USING** statement block, assign the **fileBytes** varible the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
+18. Inside the **USING** statement block, assign the **fileBytes** varible the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
 
 19. After the **USING** statement block, return a **FileResult** result using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedCity**. 
 
@@ -126,10 +126,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Change actions to get a parameter
 
-1. Edit the code in the **Details** action with the following information:
+1. Edit the code in the **Details** action using the following information:
     - Parameter: A Nullable integer named **Id**
 
-2. Edit the code in the **GetImage** action with the following information:
+2. Edit the code in the **GetImage** action using the following information:
     - Parameter: A Nullable integer named **CityId**
 
 #### Task 4: Change an action to redirect to another action in another controller
@@ -138,42 +138,44 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Use a service
 
-1. In the **CityController** class, create a new field with the following information:
+1. Edit the  **CityController** constructor to allow it to accept the following parameters:
+    - Parameter: **IData** service named **data**
+    - Parameter: **IHostingEnvironment** service named **environment**
+
+
+2. In the **CityController** class, create a new field with the following information:
    - Scope: **private**
    - Class: **IData**
    - Name: **_data** 
    
     Initialize the new field in the **CityController** constructor with the value **IData data**.
 
-2. In the **CityController** class, create a new field with the following information:
+3. In the **CityController** class, create a new field with the following information:
    - Scope: **private**
    - Class: **IHostingEnvironment**
    - Name: **_environment** 
 
     Initialize the new field in the **CityController** constructor with the value **IHostingEnvironment environment** .
 
-3. Inside the **CityController** constructor, call the **CityInitializeData** method of the **IData** service. 
+4. Inside the **CityController** constructor, execute the **CityInitializeData** method of the **IData** service. 
 
-4. Edit the code in the **Details** action with the following information:
-   - Return class: **View**
-   - View name: **Details**
-   - Model: **_data.GetCityById(id)**
+5. Edit the code in the **Details** action and initiate the **city** varible above the **IF** statment with the value of **_data.GetCityById(id)** instead of **null**.
  
-5. Edit the code in the **GetImage** action with the following information:
+6. Edit the code in the **GetImage** action with the following information:
    - Return class: **File**
    - View name: **GetImage**
  
-6. In the **GetImage** action, create a new varible **webRootpath** and asssign it the value of **_environment.WebRootPath**.
+7. Edit the code in the beginning of **GetImage** action by creating a new varible named **webRootpath** of type **string** and asssign it the value of **_environment.WebRootPath**. 
 
-7. In the **GetImage** action, create a new varible **folderPath** and asssign it the value of  **"\\images\\"**.
+8. Create a new varible named **folderPath** of type **string** and asssign it the value of  **"\\images\\"**.
 
-8. Initialize the **fullPath** varible with the concatenation of  **webRootpath**, **folderPath** and **requestedCity.ImageName**.
+9. Change the value of **fullPath** varible created before with the concatenation of  **webRootpath**, **folderPath** and **requestedCity.ImageName**.
 
 
 #### Task 6: Store the result in a ViewBag property
 
--   In **CityController.cs**, edit the code in the **Details** action by saving the following **Title** parameter value in the **ViewBag** collection to use it later in the view.
-    - Value: **city.CityName**
+-   In **CityController.cs**, edit the code in the **Index** action by assigning the **city.CityName** property value to the **VisiterName** property of the **ViewBag** object.
+
 
 #### Task 7: Run the application
 
@@ -205,16 +207,15 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add a controller with an action
 
-1. Create a new controller with the following information:
+1. Create a new controller using the following information:
    - Controller name: **TravelerController**
    - Template: **MVC controller - Empty**
    - Folder: **Controllers**
 
-2. Edit the code in the **Index** action with the following information:
+2. Edit the code in the **Index** action using the following information:
     - Parameter: A string called **name**
 
-3. Edit the code in the **Index** action by saving the **VisiterName** parameter value in the **ViewBag** collection to use it later in the view.
-    - Value: **name**
+3. Edit the code in the **Index** action by assigning the **name** parameter into the  **VisiterName** property of the **ViewBag** object. 
 
 #### Task 2: Run the application
 
@@ -229,17 +230,17 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Register new routes in the routing table
 
-1. In the **Startup.cs** class, replace **app.UseMvcWithDefaultRoute** with custom routes with the following information: 
+1. In the **Startup.cs** class, replace **app.UseMvcWithDefaultRoute** by creating a custom route using the following information: 
     - Name: **TravelerRoute**
     - Template: **{controller}/{action}/{name}**
     - Defaults: **controller = "Traveler", action = "Index", name = "Katie Bruce"**
 
-2. In the **Startup.cs** class, add another custom route with the following information: 
+2. In the **Startup.cs** class, add another custom route using the following information: 
     - Name: **defaultRoute**
     - Template: **{controller}/{action}/{id?}**
     - Defaults: **controller = "Home", action = "Index"**
 
-3. In the  **defaultRoute** custom route, add constraints to the **id** parameter. The **id** parameter can be any number between 0 and 9.
+3. In the  **defaultRoute** custom route, add constraints to the **id** parameter using the followig regular expression **"[0-9]+"**. The **id** parameter can be any number between 0 and 9.
 
 #### Task 4: Run the application and verify the new route works
 
@@ -267,9 +268,9 @@ The main tasks for this exercise is as follows:
 
 #### Task 1: Apply custom routes to a controller using attributes
 
-1. In the **CityController** class, add a custom route by using attribute to the **Index** action method.
+1. In the **CityController** class, add a  **"CityDetails/{id?}"** custom route by using the **Route** attribute above the **Index** action method.
 
-2. In the **CityController** class, add a custom route by using attribute to the **Details** action method.
+2. In the **CityController** class, add a **"WorldJourney"** custom route by using the **Route** attribute above the **Details** action method.
 
 #### Task 2: Run the application and verify the new routes work
 
@@ -311,76 +312,124 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add an action filter class
 
-1. Create a new class for the action filter with the following information:
+1. In the **WorldJourney** project, create a new top-level folder, and name it **Filters**.
+
+2. Create a new class for the action filter with the following information:
    - Name: **LogActionFilter**
    - Folder: **Filters**
 
-2. Add the **using** statements to the controller for the following namespaces:
+3. Add the **using** statements to the controller for the following namespaces:
    - **System.IO**
    - **Microsoft.AspNetCore.Hosting**
    - **Microsoft.AspNetCore.Mvc**
    - **Microsoft.AspNetCore.Mvc.Filters**
 
-3. Ensure that the **LogActionFilter** class inherits from the **ActionFilterAttribute** class.
+4. Ensure that the **LogActionFilter** class inherits from the **ActionFilterAttribute** class.
 
-4. In the **LogActionFilter** class, create a new object with the following information:
+
+5. Edit the  **LogActionFilter** constructor to allow it to accept the following parameters:
+    - Parameter: **IData** service named **data**
+    - Parameter: **IHostingEnvironment** service named **environment**
+
+5. In the **LogActionFilter** class, create a new private field usig the following information:
    - Scope: **private**
    - Class: **IHostingEnvironment**
    - Name: **_environment** 
 
-    Initialize the new object in the **LogActionFilter** constructor with the **IHostingEnvironment environment** value.
+    Initialize the field in the **LogActionFilter** constructor using the **IHostingEnvironment environment** value.
 
-5. In the **LogActionFilter** class, create a new object with the following information:
+6. In the **LogActionFilter** class, create a new private field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **contentRootPath** 
 
-    Initialize the new object in the **LogActionFilter** constructor with the **_environment.ContentRootPath** value.
+    Initialize the new field in the **LogActionFilter** constructor with the **_environment.ContentRootPath** value.
 
-6. In the **LogActionFilter** class, create a new object with the following information:
+7. In the **LogActionFilter** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **logPath** 
 
-    Initialize the new object in the **LogActionFilter** constructor with the **contentRootPath + "\\LogFile\\"** value.
+    Initialize the new field in the **LogActionFilter** constructor using the **contentRootPath + "\\LogFile\\"** value.
 
-7. In the **LogActionFilter** class, create a new object with the following information:
+8. In the **LogActionFilter** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **fileName** 
 
-    Initialize the new object in the **LogActionFilter** constructor with the **$"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt"** value.
+    Initialize the new field in the **LogActionFilter** constructor using the **$"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt"** value.
 
-8. In the **LogActionFilter** class, create a new object with the following information:
+9. In the **LogActionFilter** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **fullPath** 
 
-    Initialize the new object in the **LogActionFilter** constructor with the **logPath + fileName** value.   
+    Initialize the new field in the **LogActionFilter** constructor using the **logPath + fileName** value.   
 
 #### Task 2: Add a handler for the OnActionExecuting event
 
 1. In the **LogActionFilter** action filter, override the **OnActionExecuting** event handler.
 
-2. Delete the **base.OnActionExecuting** code block.
+2. If the **base.OnActionExecuting** code block was added to the **OnActionExecuting** event handler, delete it.
 
-3. In the **OnActionExecuting** event handler, create and write the names of the action and the controller to an external file.
+3.  In the **OnActionExecuting** method code block, call the static **CreateDirectory** method of the **Directory** class and pass the **logPath** field as a parameter.
+
+4. Add a varible named **actionName** of type **string**  and assign the value of **filterContext.ActionDescriptor.RouteValues["action"]** into it.
+
+5. Add a varible named **controllerName** of type **string**  and assign the value of **filterContext.ActionDescriptor.RouteValues["controller"]** into it.
+
+6. Create an instance of type **FileStream** named **fs** inside a **USING** statement. 
+
+7. Initialize the **fs** variable using the **FileStream** constructor with the following parameters: **fullPath**, **FileMode.Create**.  
+
+8. Inside the **USING** statement block, create an instance of type **StreamWriter** named **sw** inside a nested **USING** statement.
+
+9. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  varible as a parameter.
+
+10. Inside the internal **USING** statement block, use the **WriteLine** method of the **StreamWriter** object to write the following line **$"The action {actionName} in {controllerName} controller started, event fired: OnActionExecuting"** to a file.
+
 
 #### Task 3: Add a handler for the OnActionExecuted event
 
 1. In the **LogActionFilter** action filter, override the **OnActionExecuted** event handler.
 
-2. Delete the **base.OnActionExecuted** code block.
+2. If the **base.OnActionExecuted** code block was added to the **OnActionExecuted** event handler, delete it.
 
-3. In the **OnActionExecuting** event handler, write to an external file the names of the action and the controller.
+3. Add a varible named **actionName** of type **string**  and assign the value of **filterContext.ActionDescriptor.RouteValues["action"]** into it.
+
+4. Add a varible named **controllerName** of type **string**  and assign the value of **filterContext.ActionDescriptor.RouteValues["controller"]** into it.
+
+5. Create an instance of type **FileStream** named **fs** inside a **USING** statement. 
+
+6. Initialize the **fs** variable using the **FileStream** constructor with the following parameters: **fullPath**, **FileMode.Append**.  
+
+7. Inside the **USING** statement block, create an instance of type **StreamWriter** named **sw** inside a nested **USING** statement.
+
+8. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  varible as a parameter.
+
+9. Inside the internal **USING** statement block, use the **WriteLine** method of the **StreamWriter** object to write the following line **$"The action {actionName} in {controllerName} controller finished, event fired: OnActionExecuted"** to a file.
 
 #### Task 4: Add a handler for the OnResultExecuted event
 
 1. In the **LogActionFilter** action filter, override the **OnResultExecuted** event handler.
 
-2. Delete the **base.OnResultExecuted** code block.
+2. If the **base.OnResultExecuted** code block was added to the **OnResultExecuted** event handler, delete it.
 
-3. In the **OnResultExecuted** event handler, write the parameters of action, controller and viewData to an external file.
+3. Add a varible named **actionName** of type **string**  and assign the value of **filterContext.ActionDescriptor.RouteValues["action"]** into it.
+
+4. Add a varible named **controllerName** of type **string**  and assign the value of **filterContext.ActionDescriptor.RouteValues["controller"]** into it.
+
+5. Add a varible named **result** of type **ViewResult**  and assign the value of **(ViewResult)filterContext.Result** into it.
+
+6. Create an instance of type **FileStream** named **fs** inside a **USING** statement. 
+
+7. Initialize the **fs** variable using the **FileStream** constructor with the following parameters: **fullPath**, **FileMode.Append**.
+
+8. Inside the **USING** statement block, create an instance of type **StreamWriter** named **sw** inside a nested **USING** statement.
+
+9. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  varible as a parameter.
+
+10. Inside the internal **USING** statement block, use the **WriteLine** method of the **StreamWriter** object to write the following line **$"The action {actionName} in {controllerName} controller has the following viewData : {result.ViewData.Values.FirstOrDefault()}, event fired: OnResultExecuted""** to a file.
 
 #### Task 5: Apply the action filter to the controller action
 
