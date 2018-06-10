@@ -98,27 +98,39 @@ The main tasks for this exercise are as follows:
    - Data type: **DateTime**
    - Access: **Read and write**
 
-9. Add an **image** properties to the **Butterfly** model class and store the image name by using the following information:
+9. Add a **PhotoAvatar** property to the Butterfly model class by using the following information:
 
    - Scope: **public**
-   - Property names: **PhotoAvatar**, **ImageName**
-   - Data type for the image: **IFormFile**
-   - Data type for image name: **string**
+   - Property name: **PhotoAvatar**
+   - Data type: **IFormFile**
    - Access: **Read and write**
 
-10. Add another **image** properties to the **Butterfly** model class and store the MIME type of image by using the following information:
+10. Add a **ImageName** property to the Butterfly model class by using the following information:
 
-     - Scope: **public**
-     - Property names: **PhotoFile**, **ImageMimeType**
-     - Data type for the image: **byte[]**
-     - Data type for MIME type: **string**
-     - Access: **Read and write**
-   
-11. Add a new model class to the **ButterfliesShop** project by using the following information:
+   - Scope: **public**
+   - Property name: **ImageName**
+   - Data type: **string**
+   - Access: **Read and write**
+
+11. Add a **PhotoFile** property to the Butterfly model class by using the following information:
+
+   - Scope: **public**
+   - Property name: **PhotoFile**
+   - Data type: **byte[]**
+   - Access: **Read and write**
+
+12. Add a **ImageMimeType** property to the Butterfly model class by using the following information:
+
+   - Scope: **public**
+   - Property name: **ImageMimeType**
+   - Data type: **string**
+   - Access: **Read and write**
+
+13. Add a new model class to the **ButterfliesShop** project by using the following information:
 
     - Class name: **IndexViewModel**
 
-12. Add a **Butterflies** property to the **IndexViewModel** model class by using the following information:
+14. Add a **Butterflies** property to the **IndexViewModel** model class by using the following information:
 
      - Scope: **public**
      - Property name: **Butterflies**
