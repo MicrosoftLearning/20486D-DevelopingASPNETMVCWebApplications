@@ -1,4 +1,5 @@
 ﻿
+
 # Module 10: Testing and Troubleshooting
 
 # Lesson 1: Testing MVC Applications
@@ -175,7 +176,8 @@
 
 #### Demonstration Steps
 
-1. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the **▶** (run) button, and then select **Production**.​
+1. In the **ErrorHandlingExample - Microsoft Visual Studio** window toolbar, click the arrow next to the **Start Debugging** button, and then select **Production**.​
+    >**Note:** Verify that the **Standard** toolbar is open first, by right clicking on a toolbar and confirming that the **Standard** toolbar is checked.
 
 2. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
@@ -183,7 +185,8 @@
 
 4. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-5. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the **▶** (run) button, and then select **Development**.​
+5. In the **ErrorHandlingExample - Microsoft Visual Studio** window toolbar, click the arrow next to the **Start Debugging** button, and then select **Development**.​
+    >**Note:** Verify that the **Standard** toolbar is open first, by right clicking on a toolbar and confirming that the **Standard** toolbar is checked.
 
 6. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
@@ -262,7 +265,8 @@
 
 28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, click the arrow next to the **▶** (run) button, and then select **Production**.​
+29. In the **ErrorHandlingExample - Microsoft Visual Studio** window toolbar, click the arrow next to the **Start Debugging** button, and then select **Production**.​
+    >**Note:** Verify that the **Standard** toolbar is open first, by right clicking on a toolbar and confirming that the **Standard** toolbar is checked.
 
 30. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
