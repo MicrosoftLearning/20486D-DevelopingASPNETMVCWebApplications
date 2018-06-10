@@ -107,24 +107,24 @@ The main tasks for this exercise are as follows:
 
 10. Add a **ImageName** property to the Butterfly model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **ImageName**
-   - Data type: **string**
-   - Access: **Read and write**
+     - Scope: **public**
+     - Property name: **ImageName**
+     - Data type: **string**
+     - Access: **Read and write**
 
 11. Add a **PhotoFile** property to the Butterfly model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **PhotoFile**
-   - Data type: **byte[]**
-   - Access: **Read and write**
+    - Scope: **public**
+    - Property name: **PhotoFile**
+    - Data type: **byte[]**
+    - Access: **Read and write**
 
 12. Add a **ImageMimeType** property to the Butterfly model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **ImageMimeType**
-   - Data type: **string**
-   - Access: **Read and write**
+    - Scope: **public**
+    - Property name: **ImageMimeType**
+    - Data type: **string**
+    - Access: **Read and write**
 
 13. Add a new model class to the **ButterfliesShop** project by using the following information:
 
