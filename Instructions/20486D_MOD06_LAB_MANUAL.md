@@ -56,70 +56,70 @@ The main tasks for this exercise are as follows:
 
    - **Microsoft.AspNetCore.Http**
 
-3. Add an **Id** key property to the Butterfly model class by using the following information:
+3. Add an **Id** key property to the **Butterfly** model class by using the following information:
 
    - Scope: **public**
    - Property name: **Id**
    - Data type: **integer**
    - Access: **Read and write**
 
-4. Add a **CommonName** property to the Butterfly model class by using the following information:
+4. Add a **CommonName** property to the **Butterfly** model class by using the following information:
 
    - Scope: **public**
    - Property name: **CommonName**
    - Data type: **string**
    - Access: **Read and write**
 
-5. Add a **ButterflyFamily** property to the Butterfly model class by using the following information:
+5. Add a **ButterflyFamily** property to the **Butterfly** model class by using the following information:
 
    - Scope: **public**
    - Property name: **ButterflyFamily**
    - Data type: Nullable **Family**
    - Access: **Read and write**
 
-6. Add a **Quantity** property to the Butterfly model class by using the following information:
+6. Add a **Quantity** property to the **Butterfly** model class by using the following information:
 
    - Scope: **public**
    - Property name: **Quantity**
    - Data type: Nullable **integer**
    - Access: **Read and write**
 
-7. Add a **Characteristics** property to the Butterfly model class by using the following information:
+7. Add a **Characteristics** property to the **Butterfly** model class by using the following information:
 
    - Scope: **public**
    - Property name: **Characteristics**
    - Data type: **string**
    - Access: **Read and write**
 
-8. Add a **CreatedDate** property to the Butterfly model class by using the following information:
+8. Add a **CreatedDate** property to the **Butterfly** model class by using the following information:
 
    - Scope: **public**
    - Property name: **CreatedDate**
    - Data type: **DateTime**
    - Access: **Read and write**
 
-9. Add a **PhotoAvatar** property to the Butterfly model class by using the following information:
+9. Add a **PhotoAvatar** property to the **Butterfly** model class by using the following information:
 
    - Scope: **public**
    - Property name: **PhotoAvatar**
    - Data type: **IFormFile**
    - Access: **Read and write**
 
-10. Add a **ImageName** property to the Butterfly model class by using the following information:
+10. Add a **ImageName** property to the **Butterfly** model class by using the following information:
 
      - Scope: **public**
      - Property name: **ImageName**
      - Data type: **string**
      - Access: **Read and write**
 
-11. Add a **PhotoFile** property to the Butterfly model class by using the following information:
+11. Add a **PhotoFile** property to the **Butterfly** model class by using the following information:
 
     - Scope: **public**
     - Property name: **PhotoFile**
     - Data type: **byte[]**
     - Access: **Read and write**
 
-12. Add a **ImageMimeType** property to the Butterfly model class by using the following information:
+12. Add a **ImageMimeType** property to the **Butterfly** model class by using the following information:
 
     - Scope: **public**
     - Property name: **ImageMimeType**
