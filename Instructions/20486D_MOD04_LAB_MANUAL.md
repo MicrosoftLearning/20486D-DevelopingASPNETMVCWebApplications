@@ -138,7 +138,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Use a service
 
-1. Edit the  **CityController** constructor to allow it to accept the following parameters:
+1. Edit the  **CityController** constructor to accept the following parameters:
     - Parameter: **IData** service named **data**
     - Parameter: **IHostingEnvironment** service named **environment**
 
