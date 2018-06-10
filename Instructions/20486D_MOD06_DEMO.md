@@ -416,17 +416,17 @@
 
 21. On the **Submit Personal Information** page, in the **Age** text box, type 5.
 
-22. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;More than ten characters&gt;_, and then click **Submit**.
+22. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;A description of your choice with more than ten characters&gt;_, and then click **Submit**.
 
       >**Note:** The browser window displays the **Index.cshtml** view with validation messages.
 
-23. On the **Submit Personal Information** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+23. On the **Submit Personal Information** page, in the **First Name** text box, type _&lt;A first name of your choice with at least one character&gt;._
 
-24. On the **Submit Personal Information** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+24. On the **Submit Personal Information** page, in the **Last Name** text box, type _&lt;A last name of your choice at least one character&gt;._
 
 25. On the **Submit Personal Information** page, in the **Age** text box, type 20.
 
-26. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;Less than ten characters&gt;_, and then click **Submit**.
+26. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;A description of your choice with less than ten characters&gt;_, and then click **Submit**.
 
       >**Note:** The browser window displays the **Details.cshtml** view with the newly submitted personal information.
 
