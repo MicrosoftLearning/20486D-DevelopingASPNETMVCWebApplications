@@ -148,14 +148,14 @@ The main tasks for this exercise are as follows:
    - Class: **IData**
    - Name: **_data** 
    
-    Initialize the new field in the **CityController** constructor with the value **IData data**.
+    Initialize the **_data** field in the **CityController** constructor with the value of the **data** parameter.
 
 3. In the **CityController** class, create a new field with the following information:
    - Scope: **private**
    - Class: **IHostingEnvironment**
    - Name: **_environment** 
 
-    Initialize the new field in the **CityController** constructor with the value **IHostingEnvironment environment** .
+    Initialize the **_environment** field in the **CityController** constructor with the value of the **environment** parameter.
 
 4. Inside the **CityController** constructor, execute the **CityInitializeData** method of the **IData** service. 
 
@@ -336,36 +336,36 @@ The main tasks for this exercise are as follows:
    - Class: **IHostingEnvironment**
    - Name: **_environment** 
 
-    Initialize the field in the **LogActionFilter** constructor using the **IHostingEnvironment environment** value.
+    Initialize the **_environment** field in the **LogActionFilter** constructor with the value of the **environment** parameter.
 
 6. In the **LogActionFilter** class, create a new private field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **contentRootPath** 
 
-    Initialize the new field in the **LogActionFilter** constructor with the **_environment.ContentRootPath** value.
+    Initialize the **contentRootPath** field in the **LogActionFilter** constructor with the value of **_environment.ContentRootPath**.
 
 7. In the **LogActionFilter** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **logPath** 
 
-    Initialize the new field in the **LogActionFilter** constructor using the **contentRootPath + "\\LogFile\\"** value.
+    Initialize the **logPath** field in the **LogActionFilter** constructor using the value of **contentRootPath + "\\LogFile\\"** .
 
 8. In the **LogActionFilter** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **fileName** 
 
-    Initialize the new field in the **LogActionFilter** constructor using the **$"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt"** value.
+    Initialize the **fileName** field in the **LogActionFilter** constructor using the value of **$"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt"**.
 
 9. In the **LogActionFilter** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **fullPath** 
 
-    Initialize the new field in the **LogActionFilter** constructor using the **logPath + fileName** value.   
-
+    Initialize the **fullPath** field in the **LogActionFilter** constructor using the value of **logPath + fileName"**.
+         
 #### Task 2: Add a handler for the OnActionExecuting event
 
 1. In the **LogActionFilter** action filter, override the **OnActionExecuting** event handler.
