@@ -26,11 +26,11 @@ In order to create the site, an index and a detail pages must be created. The in
 
 The main tasks for this exercise are as follows:
 
-1.	Add a view to show a list of all the cities, as retrieved by the ShowCities action.
+1.	Add a **view** to show a list of all the cities, as retrieved by the ShowCities action.
 
 2.	Run the application.
 
-3.	Add a view to show data for a city, as returned by the ShowDataForCity action.
+3.	Add a **view** to show data for a city, as returned by the ShowDataForCity action.
 
 4.	Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
 
@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
 
 4. In **CityPopulation** class, assign the fields of the **CityPopulation** class with the values received from the constructor parameters.
 
-5. Add a new view to the **ShowCities** action method of the **CityController** class using the following information:
+5. Add a new **view** to the **ShowCities** action method of the **CityController** class using the following information:
    - Folder: **Views/City**
    - Name: **ShowCities**
    - Template: **Empty (without model)**
@@ -65,7 +65,7 @@ The main tasks for this exercise are as follows:
 8. To link a new style sheet, add a **link** element to the **ShowCities.cshtml** file using the following information:
     - Type:  **text/css**
     - Relation:  **stylesheet**
-    - Href:  **~/css/StyleSheet.css**
+    - Href:  **~/css/style.css**
 
 9. In the **BODY** element, Create an **H1** element using the following information:
     - Content:  **Select City**  
@@ -77,7 +77,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 2: Run the application.
 
-1.  Start debugging the **CitiesDetails** application.
+1.  Start debugging the application.
     > **Note**: The browser displays a list of city names.
 
 2. Stop debugging.
@@ -90,17 +90,17 @@ The main tasks for this exercise are as follows:
 2. In the **CityController** class, define a new field using the following information:
     - Type: **ICityProvider**
     - Name: **_cities**
-    - Scrope: **private**
+    - Scope: **private**
 
 3. Inject the **ICityProvider** service into the **CityController** constructor, and save it into the **_cities** field.
 
-4. In the **CityController** class, declare a new parameter for the **ShowDataForCity** action using the following information:
+4. In the **CityController.cs**, declare a new parameter for the **ShowDataForCity** action using the following information:
     - Type: **string**
     - Name: **cityName**
 
 5. Use the **cityName** parameter as index to the **_cities** field, and save its value to **ViewBag.City**.
 
-6. Add a new view to the **ShowDataForCity** action method of the **CityController** class using the following information:
+6. Add a new **view** to the **ShowDataForCity** action method of the **CityController** class using the following information:
    - Folder: **Views/City**
    - Name: **ShowDataForCity**
    - Clear the **Create as partial view** check box.
@@ -109,7 +109,7 @@ The main tasks for this exercise are as follows:
 7. In the **ShowDataForCity** view, to link a new style sheet, add a  **link**  element to the  **ShowDataForCity.cshtml**  file using the following information:
     - Type:  **text/css**
     - Relation:  **stylesheet**
-    - Href:  **~/css/StyleSheet.css**
+    - Href:  **~/css/style.css**
 
 8. In the **BODY** element, create a **DIV** element.
 
@@ -121,7 +121,7 @@ The main tasks for this exercise are as follows:
 
 12. In the **DIV** element, below the last **P** element, add a **SPAN** element.
 
-13. Within the **SPAN** element, render an **IMG** tag.
+13. Within the **SPAN** element, add an **IMG** element.
 
 14. In the **IMG** element, add a **SRC** property using the following information:
     - Html helper: **Url.Action**
@@ -129,7 +129,7 @@ The main tasks for this exercise are as follows:
     - Helper parameter: In a new anonymouse object, assign the **Name** property of the **ViewBag.City** to a property named **cityName**.
      
 15. In the **CityController** class, in the **GetImage** action replace the method's return value to **File** using the following information:
-    - File path: **images\**
+    - File path: **images\\**
     - File name: **cityName** parameter value
     - File extension: **jpg**
     - Content type: **image/jpeg**
@@ -144,8 +144,8 @@ The main tasks for this exercise are as follows:
     - Content: **Back**
 
 3. Add a new **Razor View Import** page using the following information:
-    - Parent folder: Views
-    - Name: _ViewImports
+    - Parent folder: **Views**
+    - Name: **_ViewImports**
 
 4. In the  **_ViewImports**  file, Add  **addTagHelper**  statements to the file for the following namespaces:
 
@@ -166,7 +166,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 6: Run the application.
 
-1.  Start debugging the **CitiesDetails** application.
+1.  Start debugging the application.
     > **Note**: The browser displays a list of city names, each name is a link to its city's details page.
 
 2.  In the **Microsoft Edge** window, click the **London** link.
@@ -198,7 +198,7 @@ The main tasks for this exercise are as follows:
     - Folder name: **Shared**
     - Parent folder: **Views**
 
-2. Add a partial view using the following information:
+2. Add a **partial view** using the following information:
     - Folder: **Shared**
     - Name: **_CityPopulation**
     - Template: **Empty (without model)**
@@ -227,13 +227,13 @@ The main tasks for this exercise are as follows:
 
 ####	Task 2: Use the partial view in the ShowDataForCity view.
 
-1. In the **ShowDataForCity** view, below the **SPAN** element, render a partial view using the following information:  
-    - Target page: **_CityPopulation**
+1. In the **ShowDataForCity** view, below the **SPAN** element, render a **partial view** using the following information:  
     - Tag helper: Html.Partial
+    - Target page: **_CityPopulation**
 
 ####	Task 3: Run the application.
 
-1.  Start debugging the **CitiesDetails** application.
+1.  Start debugging the application.
     > **Note**: The browser displays a link for each city in a list.
 
 2.  In the **Microsoft Edge** window, click the **Madrid** link.
@@ -274,7 +274,7 @@ The main tasks for this exercise are as follows:
 
 4. Ensure that the **CityViewComponent** class inherits from the **ViewComponent** class.
 
-5. Add a method for the **CityViewComponent** using the following information:
+5. Add a method to the **CityViewComponent** using the following information:
 
     - Scope: **public**
     - Return Type: **IViewComponentResult**
@@ -335,7 +335,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 4: Run the application.
 
-1.  Start debugging the **CitiesDetails** application.
+1.  Start debugging the application.
     > **Note**: The browser displays a list of cities, each has a header link and mini map image of the region.
 
 2.  In the **Microsoft Edge** window, click the **Madrid** link.
