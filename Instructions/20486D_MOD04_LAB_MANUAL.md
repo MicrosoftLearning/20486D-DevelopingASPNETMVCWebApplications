@@ -102,11 +102,11 @@ The main tasks for this exercise are as follows:
 
 10. Add a varible named **requestedCity** of type **City** with the value of **null**.
 
-11. Add a varible named **fullPath** of type **string** with a value of empty string (**""**).
+11. Create a **IF** statement that checks that the value of the **requestedCity** varible is not null. 
 
-12. Create a **IF** statement that checks that the value of the **requestedCity** varible is not null. 
+12. Inside the **IF** statement, add a varible named **fullPath** of type **string** with a value of empty string (**""**).
 
-13. Inside the **IF** statement, add a varible named **fileOnDisk** of type **FileStream**. 
+13. Add a varible named **fileOnDisk** of type **FileStream**. 
 
 14. Initialize the **fileOnDisk** varaible using the **FileStream** constructor and pass it the following parameters: **fullPath** and **FileMode.Open**. 
 
@@ -126,10 +126,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Change actions to get a parameter
 
-1. Edit the code in the **Details** action using the following information:
+1. Change the **Details** action to accept the following parameter:
     - Parameter: A Nullable integer named **Id**
 
-2. Edit the code in the **GetImage** action using the following information:
+2. Change the **GetImage** action to accept the following parameter:
     - Parameter: A Nullable integer named **CityId**
 
 #### Task 4: Change an action to redirect to another action in another controller
@@ -341,30 +341,30 @@ The main tasks for this exercise are as follows:
 6. In the **LogActionFilter** class, create a new private field using the following information:
    - Scope: **private**
    - Data type: **string**
-   - Name: **contentRootPath** 
+   - Name: **_contentRootPath** 
 
-    Initialize the **contentRootPath** field in the **LogActionFilter** constructor with the value of **_environment.ContentRootPath**.
+    Initialize the **_contentRootPath** field in the **LogActionFilter** constructor with the value of **_environment.ContentRootPath**.
 
 7. In the **LogActionFilter** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
-   - Name: **logPath** 
+   - Name: **_logPath** 
 
-    Initialize the **logPath** field in the **LogActionFilter** constructor using the value of **contentRootPath + "\\LogFile\\"** .
+    Initialize the **_logPath** field in the **LogActionFilter** constructor using the value of **_contentRootPath + "\\LogFile\\"** .
 
 8. In the **LogActionFilter** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
-   - Name: **fileName** 
+   - Name: **_fileName** 
 
-    Initialize the **fileName** field in the **LogActionFilter** constructor using the value of **$"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt"**.
+    Initialize the **_fileName** field in the **LogActionFilter** constructor using the value of **$"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt"**.
 
 9. In the **LogActionFilter** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
-   - Name: **fullPath** 
+   - Name: **_fullPath** 
 
-    Initialize the **fullPath** field in the **LogActionFilter** constructor using the value of **logPath + fileName"**.
+    Initialize the **_fullPath** field in the **LogActionFilter** constructor using the value of **_logPath + _fileName"**.
          
 #### Task 2: Add a handler for the OnActionExecuting event
 
@@ -372,7 +372,7 @@ The main tasks for this exercise are as follows:
 
 2. If the **base.OnActionExecuting** code block was added to the **OnActionExecuting** event handler, delete it.
 
-3.  In the **OnActionExecuting** method code block, call the static **CreateDirectory** method of the **Directory** class and pass the **logPath** field as a parameter.
+3.  In the **OnActionExecuting** method code block, call the static **CreateDirectory** method of the **Directory** class and pass the **_logPath** field as a parameter.
 
 4. Add a varible named **actionName** of type **string**  and assign the value of **filterContext.ActionDescriptor.RouteValues["action"]** into it.
 
@@ -380,7 +380,7 @@ The main tasks for this exercise are as follows:
 
 6. Create an instance of type **FileStream** named **fs** inside a **USING** statement. 
 
-7. Initialize the **fs** variable using the **FileStream** constructor with the following parameters: **fullPath**, **FileMode.Create**.  
+7. Initialize the **fs** variable using the **FileStream** constructor with the following parameters: **_fullPath**, **FileMode.Create**.  
 
 8. Inside the **USING** statement block, create an instance of type **StreamWriter** named **sw** inside a nested **USING** statement.
 
@@ -401,7 +401,7 @@ The main tasks for this exercise are as follows:
 
 5. Create an instance of type **FileStream** named **fs** inside a **USING** statement. 
 
-6. Initialize the **fs** variable using the **FileStream** constructor with the following parameters: **fullPath**, **FileMode.Append**.  
+6. Initialize the **fs** variable using the **FileStream** constructor with the following parameters: **_fullPath**, **FileMode.Append**.  
 
 7. Inside the **USING** statement block, create an instance of type **StreamWriter** named **sw** inside a nested **USING** statement.
 
@@ -423,7 +423,7 @@ The main tasks for this exercise are as follows:
 
 6. Create an instance of type **FileStream** named **fs** inside a **USING** statement. 
 
-7. Initialize the **fs** variable using the **FileStream** constructor with the following parameters: **fullPath**, **FileMode.Append**.
+7. Initialize the **fs** variable using the **FileStream** constructor with the following parameters: **_fullPath**, **FileMode.Append**.
 
 8. Inside the **USING** statement block, create an instance of type **StreamWriter** named **sw** inside a nested **USING** statement.
 
