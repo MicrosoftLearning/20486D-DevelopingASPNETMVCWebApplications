@@ -21,9 +21,9 @@ namespace ButterfliesShop.Models
         [Required(ErrorMessage = "Please select the butterfly family")]
         public Family? ButterflyFamily { get; set; }
 
-        [MaxButterflyQuantityValidation(50)]
         [Display(Name = "Butterflies Quantity:")]
         [Required(ErrorMessage = "Please select the butterfly quantity")]
+        [MaxButterflyQuantityValidation(50)]
         public int? Quantity { get; set; }
 
         [Display(Name = "Characteristics:")]

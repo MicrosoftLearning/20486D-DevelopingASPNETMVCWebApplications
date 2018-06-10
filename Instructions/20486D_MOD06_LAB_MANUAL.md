@@ -245,7 +245,7 @@ The main tasks for this exercise are as follows:
 
 11. Else return a view with the accepted butterfly.
 
->**Results** : After completing this exercise, you will be able to create **Models** and implement **GET** and **POST** actions for the Butterfly model class in the application. 
+>**Results** : After completing this exercise, you will be able to create a model, pass the model from an action to a view and use the model in the view.   
 
 ### Exercise 2: Working with Forms
 
