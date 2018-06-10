@@ -31,7 +31,7 @@
 
 9. In the **UnitTest1.cs** text box, type **ProductControllerTest**, and then press Enter.
 
-10. In the **Microsoft Visual Studio** dialog box, click Yes.
+10. In the **Microsoft Visual Studio** dialog box, click **Yes**.
 
 11. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **ProductsWebsite.Tests**, point to **Add**, and then click **New Folder**.
 
