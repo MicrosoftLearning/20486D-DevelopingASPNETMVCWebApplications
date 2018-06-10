@@ -475,14 +475,14 @@
       : ValidationAttribute
 ```
 
-9. In the **InUniversityValidationAttribute.cs** code block, press Enter, and type the following code:
+9. In the **InUniversityValidationAttribute.cs** code block, press Enter, and then type the following code:
   ```cs
       protected override ValidationResult IsValid(object value, ValidationContext validationContext)
       {
       }
 ```
 
-10. In the **IsValid** method code block, press Enter, and type the following code:
+10. In the **IsValid** method code block, press Enter, and then type the following code:
   ```cs
       Student student = (Student)validationContext.ObjectInstance;
       if (!student.UniversityStudent)
@@ -514,15 +514,15 @@
 
 16. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-17. On the **Submit Student Information** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+17. On the **Submit Student Information** page, in the **First Name** text box, type _&lt;A first name of your choice with at least one character&gt;._
 
-18. On the **Submit Student Information** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+18. On the **Submit Student Information** page, in the **Last Name** text box, type _&lt;A last name of your choice with at least one character&gt;._
 
 19. On the **Submit Student Information** page, in the **Birthdate** text box, choose _&lt;A birthdate of your choice&gt;._
 
 20. On the **Submit Student Information** page, ensure that **Are you a university student?** checkbox is not selected, and then click **Submit**.
 
-      >**Note:** The browser window displays the **Index.cshtml** view with custom validation message beside the **Are you a university student?** checkbox.
+      >**Note:** The browser window displays the **Index.cshtml** view with custom validation message below the **Are you a university student?** checkbox.
 
 21. On the **Submit Student Information**, ensure that **Are you a university student?** checkbox is selected, and then click **Submit**. 
 
