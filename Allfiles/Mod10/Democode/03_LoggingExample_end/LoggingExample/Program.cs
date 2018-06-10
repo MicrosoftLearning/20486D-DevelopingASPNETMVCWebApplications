@@ -19,8 +19,8 @@ namespace LoggingExample
             Log.Logger = new LoggerConfiguration()
             .Enrich.FromLogContext()
             .WriteTo.Console()
-            .MinimumLevel.Warning()
-            .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+            .MinimumLevel.Verbose()
+            .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day, restrictedToMinimumLevel: LogEventLevel.Warning)
             .CreateLogger();
             
             try

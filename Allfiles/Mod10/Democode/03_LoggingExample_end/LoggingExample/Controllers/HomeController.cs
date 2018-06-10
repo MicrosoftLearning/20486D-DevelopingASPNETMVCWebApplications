@@ -27,8 +27,17 @@ namespace LoggingExample.Controllers
 
         public IActionResult GetDividedNumber(int id)
         {
-            DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
-            return View(divisionResult);
+            try
+            {
+                DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
+                return View(divisionResult);
+            }
+            catch (Exception ex)
+            {
+                
+                throw new Exception($"Getting the divided number of {id} throw an exception.", ex);
+            }
+
         }
     }
 }

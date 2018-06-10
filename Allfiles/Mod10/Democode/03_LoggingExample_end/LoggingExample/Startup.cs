@@ -29,7 +29,6 @@ namespace LoggingExample
             }
             else
             {
-                logger.LogError($"Client received error");
                 app.UseExceptionHandler("/Error.html");
             }
             
@@ -38,7 +37,6 @@ namespace LoggingExample
             app.Use(async (context, next) =>
             {
                 string page = context.Request.GetDisplayUrl();
-                logger.LogDebug($" Client IP {context.Connection.RemoteIpAddress} entered the page {page}");
                 cnt.IncrementRequestPathCount(page);
                 await next.Invoke();
             });
