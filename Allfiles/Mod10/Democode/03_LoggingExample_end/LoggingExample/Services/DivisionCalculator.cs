@@ -22,6 +22,8 @@ namespace LoggingExample.Services
                     divisionResult.DividingNumbers.Add(i);
             }
 
+            divisionResult.DividingNumbers.Add(number);
+
             return divisionResult;
         }
     }

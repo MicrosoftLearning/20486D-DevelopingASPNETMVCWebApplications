@@ -13,13 +13,14 @@ namespace LoggingExample.Controllers
     {
         private ILogger _logger;
         IDivisionCalculator _numberCalculator;
-
+        
         public HomeController(IDivisionCalculator numberCalculator, ILogger<HomeController> logger)
         {
             _logger = logger;
             _numberCalculator = numberCalculator;
         }
 
+        [Route("")]
         public IActionResult Index()
         {
             return View();

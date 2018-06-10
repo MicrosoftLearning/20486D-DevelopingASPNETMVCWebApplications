@@ -29,7 +29,7 @@ namespace LoggingExample
             }
             else
             {
-                app.UseExceptionHandler("/Error.html");
+                app.UseExceptionHandler("/error.html");
             }
             
             app.UseStaticFiles();
