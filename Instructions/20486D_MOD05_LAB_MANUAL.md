@@ -26,11 +26,11 @@ In order to create the site, an index and a detail pages must be created. The in
 
 The main tasks for this exercise are as follows:
 
-1.	Add a **view** to show a list of all the cities, as retrieved by the ShowCities action.
+1.	Add a view to show a list of all the cities, as retrieved by the ShowCities action.
 
 2.	Run the application.
 
-3.	Add a **view** to show data for a city, as returned by the ShowDataForCity action.
+3.	Add a view to show data for a city, as returned by the ShowDataForCity action.
 
 4.	Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
 
@@ -84,7 +84,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 3: Add a view to show data for a city, as returned by the ShowDataForCity action.
 
-1. In the **CityController** class, add **using** statements for the following namespaces:
+1. In **CityController.cs**, add **using** statements for the following namespaces:
     - **CitiesDetails.Services;**
 
 2. In the **CityController** class, define a new field using the following information:
@@ -228,7 +228,7 @@ The main tasks for this exercise are as follows:
 ####	Task 2: Use the partial view in the ShowDataForCity view.
 
 1. In the **ShowDataForCity** view, below the **SPAN** element, render a **partial view** using the following information:  
-    - Tag helper: Html.Partial
+    - Tag helper: **Html.Partial**
     - Target page: **_CityPopulation**
 
 ####	Task 3: Run the application.
