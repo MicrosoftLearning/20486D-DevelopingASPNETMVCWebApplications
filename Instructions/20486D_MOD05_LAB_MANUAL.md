@@ -73,7 +73,7 @@ The main tasks for this exercise are as follows:
 10. Create a new **foreach** code block that loops through all the cities in the **CitiesProvider** indexer list.
     
 11. In the **foreach** code block, add a **P** element to display the city name property from the model. 
-    > **Note**: The city name is each item's key in the dictionary.
+    > **Note**: The key of the  **CityProvider** item contains the city name.
 
 ####	Task 2: Run the application.
 
@@ -156,11 +156,11 @@ The main tasks for this exercise are as follows:
 1. In the **ShowCities** view, replace the **P** element with its content to an empty **H2** element.
 
 2.  In the **H2** element, add an **A** element using the following information:
-    - Content:  City name
+    - Content:  City name from the **CityProvider**
     - Tag helper:  **asp-action**
     - Target page: **ShowDataForCity**
     - Parameter name: **cityname**
-    - Parameter value: City name
+    - Parameter value: City name from the **CityProvider**
   
     > **Note**: The key of the  **CityProvider** item contains the city name.
 
@@ -328,7 +328,7 @@ The main tasks for this exercise are as follows:
 1. In the **ShowCities.cshtml** view, replace the content of the **foreach** loop, with a view component invocation using the following information:
     - Html helper: **Component.InvokeAsync**
     - Target partial view: **City**
-    - Parameter Value: city name
+    - Parameter Value: City name from the **CityProvider**
     - Include an **await** in the method call.
 
     > **Note**: The key of the  **CityProvider** item contains the city name.
