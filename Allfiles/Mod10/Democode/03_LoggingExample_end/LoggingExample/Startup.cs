@@ -37,7 +37,15 @@ namespace LoggingExample
             app.Use(async (context, next) =>
             {
                 string page = context.Request.GetDisplayUrl();
-                cnt.IncrementRequestPathCount(page);
+                try
+                {
+                    cnt.IncrementRequestPathCount(page);
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex,$"Increasing the counter over the {page} key threw an exception.");
+                }
+                
                 await next.Invoke();
             });
 

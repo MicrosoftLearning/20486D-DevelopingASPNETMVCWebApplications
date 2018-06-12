@@ -17,7 +17,18 @@
     <h1>Number @Model.DividedNumber</h1>
     <p>
         The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()<br />
-        This number was searched @cnt.UrlCounter[Context.Request.GetDisplayUrl()] times<br />
+        @if (cnt.UrlCounter.ContainsKey(Context.Request.GetDisplayUrl()))
+        {
+            @:This number was searched @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
+            @if (cnt.UrlCounter[Context.Request.GetDisplayUrl()] > 1)
+            {
+                @:times
+            }
+            else
+            {
+                @:time
+            }
+        }
     </p>
     @Html.Partial("_NumberLinks")
 </body>
