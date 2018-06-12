@@ -1,0 +1,85 @@
+# Module 10: Testing and Troubleshooting
+
+# Lab: Testing and Troubleshooting
+
+#### Scenario
+
+#### Objectives
+
+#### Lab Setup
+
+Estimated Time: **60 minutes**
+
+### Exercise 1: Testing a Model
+
+#### Scenario
+
+#### Task 1: Write a test for a model
+
+1. From **Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, open the **ShirtStore.sln**.
+
+#### Task 2: Run the unit test – it should fail
+
+#### Task 3: Implement the model class so the test will pass
+
+#### Task 4: Run the unit test – it succeeds
+
+>**Results** : 
+
+### Exercise 2: Testing a Controller Using a Fake Repository
+
+#### Scenario
+
+#### Task 1: Create an interface repository
+
+#### Task 2: Implement the interface repository using a fake repository
+
+#### Task 3: Pass the fake repository to the constructor of a controller
+
+#### Task 4: Run the unit test – it should fail
+
+#### Task 5: Implement the controller class so the test will pass
+
+#### Task 6: Run the unit test – it succeeds
+
+>**Results** : 
+
+### Exercise 3: Implementing a Repository in MVC Project
+
+#### Scenario
+
+#### Task 1: Implement the interface repository in a repository class
+
+#### Task 2: Pass the repository to the controller
+
+#### Task 3: Run the MVC Application
+
+>**Results** : 
+
+### Exercise 4: Adding Exception Handling
+
+#### Scenario
+
+#### Task 1: Add exception handling in Startup.cs
+
+#### Task 2: Run the application in development environment
+
+#### Task 3: Run the application in production environment
+
+>**Results** : 
+
+### Exercise 5: Adding Logging
+
+#### Scenario
+
+#### Task 1: Add logging to the MVC application
+
+#### Task 2: Run the application using IIS Express
+
+>**Results** : 
+
+©2018 Microsoft Corporation. All rights reserved.
+
+The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+
+This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.
