@@ -92,7 +92,7 @@ The main tasks for this exercise are as follows:
 
 5. Add a varible named **city** of type **City** with the value of **null**. 
 
-6. Create an **IF** statement that checks that the value of the **city** varible is  **NULL**. If the value is **null**, return the **NotFoundResult** result using the **NotFound** method.
+6. Create an **IF** statement that checks that the value of the **city** varible is  **null**. If the value is **null**, return the **NotFoundResult** result using the **NotFound** method.
 
 7. After the **IF** statement, return the **ViewResult** result using the **View** method. Pass the **city** varible as a parameter to the **View** method.
 
@@ -119,7 +119,7 @@ The main tasks for this exercise are as follows:
 
 16. Create a variable named **br** of type **BinaryReader** inside a **USING** statement.
 
-17. Initialize the **br** varaible using the **BinaryReader** constructor and pass it the following parameter: **fileOnDisk**.  
+17. Initialize the **br** varaible using the **BinaryReader** constructor, and pass it the following parameter: **fileOnDisk**.  
 18. Inside the **USING** statement block, assign the **fileBytes** varible the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
 
 19. After the **USING** statement block, return a **FileResult** result using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedCity**. 
@@ -179,7 +179,7 @@ The main tasks for this exercise are as follows:
 
 10. Add a varible named **folderPath** of type **string** with the value of  **"\\images\\"**.
 
-11. Initiate the value of the **fullPath** varible with the value of  **webRootpath + folderPath + requestedCity.ImageName** instead of empty string **("")**..
+11. Initiate the value of the **fullPath** varible with the value of  **webRootpath + folderPath + requestedCity.ImageName** instead of empty string **("")**.
 
 
 #### Task 6: Store the result in a ViewBag property
@@ -298,11 +298,11 @@ The main tasks for this exercise is as follows:
 
 2. Start debugging the application.
 
-3. Using the **Developer Tools**, move your cursor over the **Go Next** button and verify that the **href** attribute value in the **a** tag is **/WorldJourney**.
+3. Using the **Developer Tools**, move your cursor over the **Go Next** button, and verify that the **href** attribute value in the **a** tag is **/WorldJourney**.
 
 4. Click **Go Next**.
 
-5. Using the **Developer Tools**, move your cursor over the **Earth** image and verify that the **href** attribute value in the **area** tag  is **/CityDetails/2**.
+5. Using the **Developer Tools**, move your cursor over the **Earth** image, and verify that the **href** attribute value in the **area** tag  is **/CityDetails/2**.
 
 6. On the **Earth** image, click the **London** area. Note the red arrow at the center of the **Earth** image.
 
@@ -398,15 +398,15 @@ The main tasks for this exercise are as follows:
     - Type: **ActionExecutingContext** 
     - Name: **filterContext**
 
-3. In the **OnActionExecuting** method code block, call the static **CreateDirectory** method of the **Directory** class and pass the **_logPath** field as a parameter.
+3. In the **OnActionExecuting** method code block, call the static **CreateDirectory** method of the **Directory** class, and pass the **_logPath** field as a parameter.
 
-4. Add a varible named **actionName** of type **string** and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
+4. Add a varible named **actionName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
 
-5. Add a varible named **controllerName** of type **string** and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
+5. Add a varible named **controllerName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
 
 6. Create a varible of type **FileStream** named **fs** inside a **USING** statement. 
 
-7. Initialize the **fs** variable using the **FileStream** constructor and pass it the following parameters: **_fullPath** and **FileMode.Create**.  
+7. Initialize the **fs** variable using the **FileStream** constructor, and pass it the following parameters: **_fullPath**, and **FileMode.Create**.  
 
 8. In the **USING** statement code block, create a nested **USING** statement.
 
@@ -414,7 +414,7 @@ The main tasks for this exercise are as follows:
 
 10. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  varible as a parameter.
 
-11. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** varible and pass it the following string **$"The action {actionName} in {controllerName} controller started, event fired: OnActionExecuting"** as a parameter.
+11. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** varible, and pass it the following string **$"The action {actionName} in {controllerName} controller started, event fired: OnActionExecuting"** as a parameter.
 
 
 #### Task 3: Add a handler for the OnActionExecuted event
@@ -428,13 +428,13 @@ The main tasks for this exercise are as follows:
     - Type: **ActionExecutedContext** 
     - Name: **filterContext**
 
-3. Add a varible named **actionName** of type **string** and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
+3. Add a varible named **actionName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
 
-4. Add a varible named **controllerName** of type **string** and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
+4. Add a varible named **controllerName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
 
 5. Create a varible of type **FileStream** named **fs** inside a **USING** statement. 
 
-6. Initialize the **fs** variable using the **FileStream** constructor and pass it the following parameters: **_fullPath**, **FileMode.Create**.  
+6. Initialize the **fs** variable using the **FileStream** constructor, and pass it the following parameters: **_fullPath**, **FileMode.Create**.  
 
 7. In the **USING** statement code block, create a nested **USING** statement.
 
@@ -442,7 +442,7 @@ The main tasks for this exercise are as follows:
 
 9. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  varible as a parameter.
 
-10. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** varible and pass it the following string **$"The action {actionName} in {controllerName} controller finished, event fired: OnActionExecuted"** as a parameter.
+10. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** varible, and pass it the following string **$"The action {actionName} in {controllerName} controller finished, event fired: OnActionExecuted"** as a parameter.
 
 
 #### Task 4: Add a handler for the OnResultExecuted event
@@ -464,7 +464,7 @@ The main tasks for this exercise are as follows:
 
 6. Create a varible of type **FileStream** named **fs** inside a **USING** statement. 
 
-7. Initialize the **fs** variable using the **FileStream** constructor and pass it the following parameters: **_fullPath**, **FileMode.Create**.  
+7. Initialize the **fs** variable using the **FileStream** constructor, and pass it the following parameters: **_fullPath**, **FileMode.Create**.  
 
 8. In the **USING** statement code block, create a nested **USING** statement.
 
@@ -472,7 +472,7 @@ The main tasks for this exercise are as follows:
 
 10. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  varible as a parameter.
 
-11. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** varible and pass it the following string **$"The action {actionName} in {controllerName} controller has the following viewData : {result.ViewData.Values.FirstOrDefault()}, event fired: OnResultExecuted""** as a parameter.
+11. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** varible, and pass it the following string **$"The action {actionName} in {controllerName} controller has the following viewData : {result.ViewData.Values.FirstOrDefault()}, event fired: OnResultExecuted""** as a parameter.
 
 #### Task 5: Apply the action filter to the controller action
 
