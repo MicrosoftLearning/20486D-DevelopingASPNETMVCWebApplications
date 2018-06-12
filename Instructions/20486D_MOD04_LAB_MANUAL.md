@@ -115,7 +115,6 @@ The main tasks for this exercise are as follows:
 16. Create a new variable named **br** of type **BinaryReader** inside a **USING** statement.
 
 17. Initialize the **br** varaible using the **BinaryReader** constructor and pass it the following parameter: **fileOnDisk**.  
-
 18. Inside the **USING** statement block, assign the **fileBytes** varible the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
 
 19. After the **USING** statement block, return a **FileResult** result using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedCity**. 
@@ -126,17 +125,17 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Change actions to get a parameter
 
-1. Change the **Details** action to accept the following parameter:
+1. Change the **Details** action signature to accept the following parameter:
     - Parameter: A Nullable integer named **Id**
 
-2. Change the **GetImage** action to accept the following parameter:
+2. Change the **GetImage** action signature to accept the following parameter:
     - Parameter: A Nullable integer named **CityId**
 
 #### Task 4: Change an action to redirect to another action in another controller
 
-1. In the **HomeController** class, edit the code in the **Index** action, and remove the code which retursn the **"ViewResult"** result using the **"View"** method.
+1. In the **HomeController** class, edit the code in the **Index** action, and remove the code which returns the **ViewResult** result using the **View** method.
 
-2. Return the **RedirectToAction** result using the **RedirectToAction** method. Pass **"Index"** and **"City"** as parameters to the **RedirectToAction** method.
+2. Return the **RedirectToActionResult** result using the **RedirectToAction** method. Pass **"Index"** and **"City"** as parameters to the **RedirectToAction** method.
 
 
 #### Task 5: Use a service
