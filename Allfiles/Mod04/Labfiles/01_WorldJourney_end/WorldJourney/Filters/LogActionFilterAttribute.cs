@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace WorldJourney.Filters
 {
-    public class LogActionFilter : ActionFilterAttribute
+    public class LogActionFilterAttribute : ActionFilterAttribute
     {
         private IHostingEnvironment _environment;
         private string _contentRootPath;
@@ -17,7 +17,7 @@ namespace WorldJourney.Filters
         private string _fileName;
         private string _fullPath;
 
-        public LogActionFilter(IHostingEnvironment environment)
+        public LogActionFilterAttribute(IHostingEnvironment environment)
         {
             _environment = environment;
             _contentRootPath = _environment.ContentRootPath;

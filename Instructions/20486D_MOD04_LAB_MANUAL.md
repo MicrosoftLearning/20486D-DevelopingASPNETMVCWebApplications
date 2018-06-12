@@ -23,6 +23,11 @@ After completing this lab, you will be able to:
 
 Estimated Time: **60 minutes**
 
+### Preparation Steps
+
+1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**).
+
+
 ### Exercise 1: Adding Controllers and Actions to an MVC Application
 
 #### Scenario
@@ -67,12 +72,12 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Add actions to a controller
 
-1. In the **CityController** class, add the **using** statements to the controller for the following namespaces:
+1. In the **CityController** class, add **using** statements for the following namespaces:
    - **System.IO**
    - **Microsoft.AspNetCore.Hosting**
    - **WorldJourney.Models**
 
-2. Edit the code in the **Index** action by saving the following key and value in the **ViewData** dictionary:
+2. In the **Index** action save the following key and value in the **ViewData** property:
     - Key: **Page**
     - Value: **Search city**
 
@@ -81,13 +86,13 @@ The main tasks for this exercise are as follows:
    - Return type: **IActionResult**
    - Name: **Details**
 
-4. In the **Details** action code block, save the following key and value in the **ViewData** dictionary:
+4. In the **Details** action code block, save the following key and value in the **ViewData** property:
     - Key: **Page**
     - Value: **Selected city**
 
 5. Add a varible named **city** of type **City** with the value of **null**. 
 
-6. Create a **IF** statement that checks that the value of the **city** varible is  **NULL**. If the value is **null**, return the **NotFoundResult** result using the **NotFound** method.
+6. Create an **IF** statement that checks that the value of the **city** varible is  **NULL**. If the value is **null**, return the **NotFoundResult** result using the **NotFound** method.
 
 7. After the **IF** statement, return the **ViewResult** result using the **View** method. Pass the **city** varible as a parameter to the **View** method.
 
@@ -96,7 +101,7 @@ The main tasks for this exercise are as follows:
     - Return type: **IActionResult**
     - Name: **GetImage**
 
-9. Edit the code in the **GetImage** action code block by saving the following key and value in the **ViewData** dictionary:
+9. In the **GetImage** action code block, save the following key and value in the **ViewData** property:
     - Key: **Message**
     - Value: **Display Image**
 
@@ -126,10 +131,12 @@ The main tasks for this exercise are as follows:
 #### Task 3: Change actions to get a parameter
 
 1. Change the **Details** action signature to accept the following parameter:
-    - Parameter: A Nullable integer named **Id**
+    - Type: **int?** 
+    - Name: **Id**
 
 2. Change the **GetImage** action signature to accept the following parameter:
-    - Parameter: A Nullable integer named **CityId**
+    - Type: **int?** 
+    - Name: **CityId**
 
 #### Task 4: Change an action to redirect to another action in another controller
 
@@ -140,44 +147,46 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Use a service
 
-1. Edit the  **CityController** constructor to accept the following parameters:
-    - Parameter: **IData** service named **data**
-    - Parameter: **IHostingEnvironment** service named **environment**
-
-
-2. In the **CityController** class, create a new field with the following information:
+1. In the **CityController** class, create a new field using the following information:
    - Scope: **private**
-   - Class: **IData**
+   - Type: **IData**
    - Name: **_data** 
-   
-    Initialize the **_data** field in the **CityController** constructor with the value of the **data** parameter.
 
-3. In the **CityController** class, create a new field with the following information:
+2. Create a new field using the following information:
    - Scope: **private**
-   - Class: **IHostingEnvironment**
+   - Type: **IHostingEnvironment**
    - Name: **_environment** 
 
-    Initialize the **_environment** field in the **CityController** constructor with the value of the **environment** parameter.
+3. Add a constructor using the following parameters:
+    - Parameter: 
+        - Type: **IData** 
+        - Name: **data**
+    - Parameter: 
+        - Type: **IHostingEnvironment**
+        - Name: **environment**
 
-4. Inside the **CityController** constructor, execute the **CityInitializeData** method of the **IData** service. 
+4. In the **CityController** constructor, initialize the **_data** field with the value of the **data** parameter.
 
-5. Edit the code in the **Details** action and initiate the **city** varible above the **IF** statment with the value of **_data.GetCityById(id)** instead of **null**.
- 
-6. Edit the code in the **GetImage** action with the following information:
-   - Return class: **File**
-   - View name: **GetImage**
- 
-7. Edit the code in the beginning of **GetImage** action by creating a new varible named **webRootpath** of type **string** and asssign it the value of **_environment.WebRootPath**. 
+5. Initialize the **_environment** field with the value of the **environment** parameter.
 
-8. Create a new varible named **folderPath** of type **string** and asssign it the value of  **"\\images\\"**.
+6. Call the **CityInitializeData** method of the **_data** field. 
 
-9. Change the value of **fullPath** varible created before with the concatenation of  **webRootpath**, **folderPath** and **requestedCity.ImageName**.
+7. In the **Details** action, initiate the **city** varible with the value of **_data.GetCityById(id)** instead of **null**.
+
+8. In the **GetImage** action, initiate the **requestedCity** varible with the value of **_data.GetCityById(cityId)** instead of **null**.
+
+9. At the beginning of **IF** statment, add a varible named **webRootpath** of type **string** with the value of **_environment.WebRootPath**. 
+
+10. Add a varible named **folderPath** of type **string** with the value of  **"\\images\\"**.
+
+11. Initiate the value of the **fullPath** varible with the value of  **webRootpath + folderPath + requestedCity.ImageName** instead of empty string **("")**..
 
 
 #### Task 6: Store the result in a ViewBag property
 
--   In **CityController.cs**, edit the code in the **Index** action by assigning the **city.CityName** property value to the **VisiterName** property of the **ViewBag** object.
-
+1. In the **Details** action code block, above the **return** statement, save the following key and value in the **ViewBag** property:
+     - Key: **Title**
+     - Value: **city.CityName**
 
 #### Task 7: Run the application
 
@@ -185,9 +194,11 @@ The main tasks for this exercise are as follows:
 
 2. Start debugging the application.
 
-3. On the **Earth** image, click the **London** area. Note the red arrow at the center of the **Earth** image.
+3.  Click the **London** area on the **Earth** image. Note the red arrow at the center of the **Earth** image.
 
-4. Stop debugging.
+4. Close **Microsoft Edge**.
+
+5. Stop debugging.
 
 >**Results** : After completing this exercise, you will be able to create MVC controllers that implement common actions for the **City** model class in the application. 
 
@@ -214,10 +225,13 @@ The main tasks for this exercise are as follows:
    - Template: **MVC controller - Empty**
    - Folder: **Controllers**
 
-2. Edit the code in the **Index** action using the following information:
-    - Parameter: A string called **name**
+2.  Change the **Index** action signature to accept the following parameter:
+    - Type: **string** 
+    - Name: **name**
 
-3. Edit the code in the **Index** action by assigning the **name** parameter into the  **VisiterName** property of the **ViewBag** object. 
+3. At the beginning of the **Index** action code block,  save the following key and value in the **ViewBag** property:
+     - Key: **VisiterName**
+     - Value: **name**
 
 #### Task 2: Run the application
 
@@ -225,24 +239,28 @@ The main tasks for this exercise are as follows:
 
 2. Start debugging the application.
 
-3. In the **Microsoft Edge** window, request the folllowing relative URL.
+3. In the **Microsoft Edge** window, request the following relative URL.
    - URL: **/Traveler/Index**
 
-4. Stop debugging.
+4. Close **Microsoft Edge**.
+
+5. Stop debugging.
+
 
 #### Task 3: Register new routes in the routing table
 
-1. In the **Startup.cs** class, replace **app.UseMvcWithDefaultRoute** by creating a custom route using the following information: 
+1. In the **Startup** class, replace **app.UseMvcWithDefaultRoute**  with **app.UseMvc**.
+
+2. In the **app.UseMvc** method, use the **MapRoute** method to add a custom route with the following information: 
     - Name: **TravelerRoute**
     - Template: **{controller}/{action}/{name}**
     - Defaults: **controller = "Traveler", action = "Index", name = "Katie Bruce"**
 
-2. In the **Startup.cs** class, add another custom route using the following information: 
+3. Use the **MapRoute** method, to add another custom route with the following information: 
     - Name: **defaultRoute**
     - Template: **{controller}/{action}/{id?}**
     - Defaults: **controller = "Home", action = "Index"**
-
-3. In the  **defaultRoute** custom route, add constraints to the **id** parameter using the followig regular expression **"[0-9]+"**. The **id** parameter can be any number between 0 and 9.
+    - Constraints: **id = "[0-9]+"**
 
 #### Task 4: Run the application and verify the new route works
 
@@ -250,9 +268,9 @@ The main tasks for this exercise are as follows:
 
 2. Start debugging the application.
 
-    >**Note:** The browser displays the **Index** action view result inside the **Traveler** controller. The name shown in the title comes from the new registered route in the **TravelerRoute**routing table.
+3. Close **Microsoft Edge**.
 
-3. Stop debugging.
+4. Stop debugging.
 
 >**Results** : After completing this exercise, you will be able to register new custom routes in the request pipeline for controllers in the application.
 
@@ -270,9 +288,9 @@ The main tasks for this exercise is as follows:
 
 #### Task 1: Apply custom routes to a controller using attributes
 
-1. In the **CityController** class, add a  **"CityDetails/{id?}"** custom route by using the **Route** attribute above the **Index** action method.
+1. In the **CityController** class, annotate the **Index** action with the **Route** attribute. Pass **"WorldJourney"** as a parameter to the **Route** constructor.
 
-2. In the **CityController** class, add a **"WorldJourney"** custom route by using the **Route** attribute above the **Details** action method.
+2. Annotate the **Details** action with the **Route** attribute. Pass **"CityDetails/{id?}"** as a parameter to the **Route** constructor.
 
 #### Task 2: Run the application and verify the new routes work
 
@@ -280,17 +298,19 @@ The main tasks for this exercise is as follows:
 
 2. Start debugging the application.
 
-3. Using the **Developer Tools**, move your cursor over the **Go Next** button and check the **href** attribute value in the **a** tag.
+3. Using the **Developer Tools**, move your cursor over the **Go Next** button and verify that the **href** attribute value in the **a** tag is **/WorldJourney**.
 
 4. Click **Go Next**.
 
-5. Using the **Developer Tools**, move your cursor over the **Earth** image and check the **href** attribute value in the **area** tag.
+5. Using the **Developer Tools**, move your cursor over the **Earth** image and verify that the **href** attribute value in the **area** tag  is **/CityDetails/2**.
 
 6. On the **Earth** image, click the **London** area. Note the red arrow at the center of the **Earth** image.
 
-7. Stop debugging.
+7. Close **Microsoft Edge**.
 
->**Results** : After completing this exercise, you will be able to add custom routes by using attributes for the **City** controller in the application.
+8. Stop debugging.
+
+>**Results**: After completing this exercise, you will be able to add custom routes to  the **City** controller by using the **Route** attribute.
 
 ### Exercise 4: Adding an Action Filter
 
@@ -317,7 +337,7 @@ The main tasks for this exercise are as follows:
 1. In the **WorldJourney** project, create a new top-level folder, and name it **Filters**.
 
 2. Create a new class for the action filter with the following information:
-   - Name: **LogActionFilter**
+   - Name: **LogActionFilterAttribute**
    - Folder: **Filters**
 
 3. Add the **using** statements to the controller for the following namespaces:
@@ -326,51 +346,50 @@ The main tasks for this exercise are as follows:
    - **Microsoft.AspNetCore.Mvc**
    - **Microsoft.AspNetCore.Mvc.Filters**
 
-4. Ensure that the **LogActionFilter** class inherits from the **ActionFilterAttribute** class.
+4. Ensure that the **LogActionFilterAttribute** class inherits from the **ActionFilterAttribute** class.
 
-
-5. Edit the  **LogActionFilter** constructor to allow it to accept the following parameters:
+5. Edit the  **LogActionFilterAttribute** constructor to allow it to accept the following parameters:
     - Parameter: **IData** service named **data**
     - Parameter: **IHostingEnvironment** service named **environment**
 
-5. In the **LogActionFilter** class, create a new private field usig the following information:
+5. In the **LogActionFilterAttribute** class, create a new private field usig the following information:
    - Scope: **private**
    - Class: **IHostingEnvironment**
    - Name: **_environment** 
 
-    Initialize the **_environment** field in the **LogActionFilter** constructor with the value of the **environment** parameter.
+    Initialize the **_environment** field in the **LogActionFilterAttribute** constructor with the value of the **environment** parameter.
 
-6. In the **LogActionFilter** class, create a new private field using the following information:
+6. In the **LogActionFilterAttribute** class, create a new private field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **_contentRootPath** 
 
-    Initialize the **_contentRootPath** field in the **LogActionFilter** constructor with the value of **_environment.ContentRootPath**.
+    Initialize the **_contentRootPath** field in the **LogActionFilterAttribute** constructor with the value of **_environment.ContentRootPath**.
 
-7. In the **LogActionFilter** class, create a new field using the following information:
+7. In the **LogActionFilterAttribute** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **_logPath** 
 
-    Initialize the **_logPath** field in the **LogActionFilter** constructor using the value of **_contentRootPath + "\\LogFile\\"** .
+    Initialize the **_logPath** field in the **LogActionFilterAttribute** constructor using the value of **_contentRootPath + "\\LogFile\\"** .
 
-8. In the **LogActionFilter** class, create a new field using the following information:
+8. In the **LogActionFilterAttribute** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **_fileName** 
 
-    Initialize the **_fileName** field in the **LogActionFilter** constructor using the value of **$"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt"**.
+    Initialize the **_fileName** field in the **LogActionFilterAttribute** constructor using the value of **$"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt"**.
 
-9. In the **LogActionFilter** class, create a new field using the following information:
+9. In the **LogActionFilterAttribute** class, create a new field using the following information:
    - Scope: **private**
    - Data type: **string**
    - Name: **_fullPath** 
 
-    Initialize the **_fullPath** field in the **LogActionFilter** constructor using the value of **_logPath + _fileName"**.
+    Initialize the **_fullPath** field in the **LogActionFilterAttribute** constructor using the value of **_logPath + _fileName"**.
          
 #### Task 2: Add a handler for the OnActionExecuting event
 
-1. In the **LogActionFilter** action filter, override the **OnActionExecuting** event handler.
+1. In the **LogActionFilterAttribute** action filter, override the **OnActionExecuting** event handler.
 
 2. If the **base.OnActionExecuting** code block was added to the **OnActionExecuting** event handler, delete it.
 
@@ -393,7 +412,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Add a handler for the OnActionExecuted event
 
-1. In the **LogActionFilter** action filter, override the **OnActionExecuted** event handler.
+1. In the **LogActionFilterAttribute** action filter, override the **OnActionExecuted** event handler.
 
 2. If the **base.OnActionExecuted** code block was added to the **OnActionExecuted** event handler, delete it.
 
@@ -413,7 +432,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Add a handler for the OnResultExecuted event
 
-1. In the **LogActionFilter** action filter, override the **OnResultExecuted** event handler.
+1. In the **LogActionFilterAttribute** action filter, override the **OnResultExecuted** event handler.
 
 2. If the **base.OnResultExecuted** code block was added to the **OnResultExecuted** event handler, delete it.
 
@@ -438,12 +457,12 @@ The main tasks for this exercise are as follows:
 1. Add the **using** statements to the **Startup.cs** class for the following namespaces:
    - **WorldJourney.Filters**
 
-2. In the **Startup.cs** class, add **LogActionFilter** to the **services** container as **Scoped**.
+2. In the **Startup.cs** class, add **LogActionFilterAttribute** to the **services** container as **Scoped**.
 
 3. Add the **using** statements to the **CityController** class for the following namespaces:
    - **WorldJourney.Filters**
 
-4. In the **CityController** class, add the **LogActionFilter** action filter to the **Index** action method.
+4. In the **CityController** class, add the **LogActionFilterAttribute** action filter to the **Index** action method.
 
 #### Task 6: Run the application and verify the new filter works
 

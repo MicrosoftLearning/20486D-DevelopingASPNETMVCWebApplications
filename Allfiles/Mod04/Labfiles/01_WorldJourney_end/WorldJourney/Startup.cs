@@ -18,7 +18,7 @@ namespace WorldJourney
         {
             services.AddMvc();
             services.AddSingleton<IData, Data>();
-            services.AddScoped<LogActionFilter>();
+            services.AddScoped<LogActionFilterAttribute>();
         }
 
         public void Configure(IApplicationBuilder app)

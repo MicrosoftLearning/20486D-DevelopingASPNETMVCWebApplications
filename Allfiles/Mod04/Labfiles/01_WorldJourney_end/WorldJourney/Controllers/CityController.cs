@@ -22,7 +22,7 @@ namespace WorldJourney.Controllers
             _data.CityInitializeData();
         }
 
-        [ServiceFilter(typeof(LogActionFilter))]
+        [ServiceFilter(typeof(LogActionFilterAttribute))]
         [Route("WorldJourney")]
         public IActionResult Index()
         {
