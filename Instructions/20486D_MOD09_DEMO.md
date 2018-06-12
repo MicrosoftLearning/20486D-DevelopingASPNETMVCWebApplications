@@ -166,7 +166,7 @@
   ```cs
        <strong>Thank you for the response!</strong>
        We will take this into consideration the next time we recommend you a book.
-       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+       <button type="button" class="close" aria-label="Close">
            <span aria-hidden="true">&times;</span>
        </button>
 ```

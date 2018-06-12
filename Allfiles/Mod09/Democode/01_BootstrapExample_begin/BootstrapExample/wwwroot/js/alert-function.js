@@ -5,8 +5,8 @@
         $(".alert").show();
     });
 
-    $('.alert').on('closed.bs.alert', function () {
-        $(".alert").alert('close');
+    $('.close').on('click', function () {
+        $(".alert").hide();
     });
 });
 
