@@ -19,7 +19,7 @@
         The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()<br />
         @if (cnt.UrlCounter.ContainsKey(Context.Request.GetDisplayUrl()))
         {
-            @:This number was searched @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
+            @:This number was viewed @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
             @if (cnt.UrlCounter[Context.Request.GetDisplayUrl()] > 1)
             {
                 @:times
@@ -27,7 +27,7 @@
             else
             {
                 @:time
-            }
+            }<br />
         }
     </p>
     @Html.Partial("_NumberLinks")

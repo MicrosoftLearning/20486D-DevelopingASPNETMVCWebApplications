@@ -43,7 +43,7 @@ namespace LoggingExample
                 }
                 catch (Exception ex)
                 {
-                    logger.LogError(ex,$"Increasing the counter over the {page} key threw an exception.");
+                    logger.LogError(ex, $"Error incrementing views counter for page: {page}");
                 }
                 
                 await next.Invoke();

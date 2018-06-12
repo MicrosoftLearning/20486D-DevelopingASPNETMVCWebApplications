@@ -14,36 +14,27 @@ namespace LoggingExample
 {
     public class Program
     {
-        public static int Main(string[] args)
+        public static void Main(string[] args)
         {
-            Log.Logger = new LoggerConfiguration()
-            .Enrich.FromLogContext()
-            .WriteTo.Console()
-            .MinimumLevel.Verbose()
-            .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day, restrictedToMinimumLevel: LogEventLevel.Warning)
-            .CreateLogger();
-            
-            try
-            {
-                Log.Information("Starting web host");
-                BuildWebHost(args).Run();
-                return 0;
-            }
-            catch (Exception ex)
-            {
-                Log.Fatal(ex, "Host terminated unexpectedly");
-                return 1;
-            }
-            finally
-            {
-                Log.CloseAndFlush();
-            }
+            BuildWebHost(args).Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-            .UseSerilog()
-                .Build();
+    WebHost.CreateDefaultBuilder(args)
+        .ConfigureLogging((hostingContext, logging) =>
+        {
+            var env = hostingContext.HostingEnvironment;
+            logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+
+            if (env.IsProduction())
+                logging.AddFile("myLog.txt");
+
+            if (env.IsDevelopment())
+                logging.AddConsole();
+        })
+        .UseStartup<Startup>()
+        .Build();
+
+
     }
 }
