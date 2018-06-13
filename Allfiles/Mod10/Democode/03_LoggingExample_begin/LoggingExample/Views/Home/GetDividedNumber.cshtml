@@ -10,14 +10,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>GetModuluForNumber</title>
-    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
+    <title>GetDividedNumber</title>
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <h1>Number @Model.DividedNumber</h1>
-
-    The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()<br />
-    This number was searched @cnt.UrlCounter[Context.Request.GetDisplayUrl()] times<br />
+    <p>
+        The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()
+        <br />This number was viewed @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
+        @if (cnt.UrlCounter[Context.Request.GetDisplayUrl()] > 1)
+        {
+            @:times
+        }
+        else
+        {
+            @:time
+        }
+    </p>
     @Html.Partial("_NumberLinks")
 </body>
 </html>

@@ -28,17 +28,8 @@ namespace LoggingExample.Controllers
 
         public IActionResult GetDividedNumber(int id)
         {
-            try
-            {
-                DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
-                return View(divisionResult);
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception($"Getting the divided number of {id} threw an exception.", ex);
-            }
-
+            DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
+            return View(divisionResult);
         }
     }
 }

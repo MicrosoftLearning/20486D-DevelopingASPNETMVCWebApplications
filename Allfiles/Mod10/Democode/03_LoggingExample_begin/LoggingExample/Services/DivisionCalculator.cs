@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace LoggingExample.Services
@@ -21,6 +20,8 @@ namespace LoggingExample.Services
                 if (number % i == 0)
                     divisionResult.DividingNumbers.Add(i);
             }
+
+            divisionResult.DividingNumbers.Add(number);
 
             return divisionResult;
         }
