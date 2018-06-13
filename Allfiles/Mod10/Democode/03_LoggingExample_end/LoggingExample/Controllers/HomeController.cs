@@ -36,7 +36,7 @@ namespace LoggingExample.Controllers
             catch (Exception ex)
             {
 
-                throw new Exception($"Getting the divided number of {id} throw an exception.", ex);
+                throw new Exception($"Getting the divided number of {id} threw an exception.", ex);
             }
 
         }

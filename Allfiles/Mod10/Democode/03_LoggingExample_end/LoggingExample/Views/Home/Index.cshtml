@@ -1,6 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Http.Extensions
 @inject LoggingExample.Services.ICounter cnt
-@model int
 @{
     Layout = null;
 }
@@ -16,10 +15,10 @@
 <body>
     <h1>Multiplication Table</h1>
     <p>
-        Welcome to the multiplication table site.<br />
+        Welcome to the multiplication table site.
         @if (cnt.UrlCounter.ContainsKey(Context.Request.GetDisplayUrl()))
         {
-            @:The number of entrances to the site is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]<br />
+            <br />@:The number of entrances to the welcome page is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
         }
     </p>
     @Html.Partial("_NumberLinks")
