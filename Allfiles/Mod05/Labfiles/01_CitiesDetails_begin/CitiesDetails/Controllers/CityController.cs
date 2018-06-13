@@ -10,7 +10,7 @@ namespace CitiesDetails.Controllers
     {
         public CityController()
         {
-         
+
         }
 
         public IActionResult ShowCities()

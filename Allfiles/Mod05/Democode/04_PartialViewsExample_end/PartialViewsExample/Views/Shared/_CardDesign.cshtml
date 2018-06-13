@@ -1,0 +1,8 @@
+﻿@model int
+@inject PartialViewsExample.Services.IPersonProvider PersonList
+<td>
+    <div>First Name: @PersonList[Model].FirstName</div>
+    <div>Last Name: @PersonList[Model].LastName</div>
+    <div>Residence: @PersonList[Model].Address</div>
+    <div>Phone: @PersonList[Model].PhoneNumber</div>
+</td>

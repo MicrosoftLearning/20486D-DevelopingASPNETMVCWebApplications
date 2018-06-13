@@ -387,11 +387,11 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod05\Democode\04_PartialViewExample_begin**, and then double-click **PartialViewExample.sln**.
+2. Go to **Allfiles\Mod05\Democode\04_PartialViewsExample_begin**, and then double-click **PartialViewsExample.sln**.
 
 #### Demonstration Steps
 
-1. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Services**, and then click **Person.cs**.
+1. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Services**, and then click **Person.cs**.
 
 2. In the **Person.cs** code window, place the cursor within the **Person** constructor code block, and then type the following code: 
 ```cs
@@ -401,14 +401,14 @@
     PhoneNumber = phoneNumber;
 ```
 
-3. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **PersonProvider.cs**.
+3. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **PersonProvider.cs**.
 
 4. In the **PersonProvider.cs** code window, place the cursor within the **PersonProvider** constructor code block, and then type the following code:
 ```cs
     _personList = PersonInitializer();
 ```
 
-5. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+5. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
 6. In the **Index.cshtml** code window, locate the following code:
 ```cs
@@ -425,11 +425,11 @@
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-8. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
+8. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
 
 9. In the **NewFolder** text box, type **Shared**, and then press Enter.
 
-10. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Shared**, point to **Add**, and then click **View**.
+10. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Shared**, point to **Add**, and then click **View**.
     
 11. In the **Add MVC View** dialog box, in the **View name** text box, type **_CardDesign**.
 
@@ -446,7 +446,7 @@
 14. In the **_CardDesign.cshtml** code window, place the cursor at the beginning of the document, and then type the following code:
 ```cs
     @model int
-    @inject PartialViewExample.Services.IPersonProvider PersonList
+    @inject PartialViewsExample.Services.IPersonProvider PersonList
 
     <td>
         <div>First Name: @PersonList[Model].FirstName</div>
@@ -456,16 +456,16 @@
     </td>
 ```
 
-15. In the **PartialViewExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+15. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-16. In the **PartialViewExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+16. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: A table with cards is show. Each card contains information of a person including: First Name, Last Name, Residence, and Phone.
      
 17. In **Microsoft Edge**, click **Close**.
 
-18. In the **PartialViewExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+18. In the **PartialViewsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-21. In the **PartialViewExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+21. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Reusing Code in Views
 
