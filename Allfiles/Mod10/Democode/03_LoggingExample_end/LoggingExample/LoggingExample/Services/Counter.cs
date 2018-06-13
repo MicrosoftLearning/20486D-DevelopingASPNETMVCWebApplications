@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using Serilog.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,16 +20,7 @@ namespace LoggingExample.Services
 
         public void IncrementRequestPathCount(string requestPath)
         {
-            if (UrlCounter.ContainsKey(requestPath))
-            {
-                _logger.LogDebug($"Increasing the counter to the {requestPath} key.");
-                UrlCounter[requestPath]++;
-            }
-            else
-            {
-                _logger.LogDebug($"Adding the new key {requestPath} to the counter dictionary.");
-                UrlCounter.Add(requestPath, 1);
-            }
+            UrlCounter[requestPath]++;
         }
     }
 }
