@@ -1,0 +1,25 @@
+﻿@media only screen and (min-width: 575px) {
+    .border-left-solid {
+        border-left: solid 1px #e4e8eb;
+    }
+    .header {
+        margin-bottom: 15px;
+    }
+    .container {
+        border-radius: 15px;
+    }
+}
+
+body {
+    background-color: lightblue !important;
+}
+
+.header {
+    background-color: rgba(91, 91, 164, 0.58);
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 1);
+}
