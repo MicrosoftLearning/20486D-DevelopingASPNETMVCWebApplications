@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using PhotoSharingSample.Models;
 
 namespace PhotoSharingSample
 {
@@ -11,27 +14,11 @@ namespace PhotoSharingSample
     {
         public static void Main(string[] args)
         {
-            var host = BuildWebHost(args);
-            using (var newScope = host.Services.CreateScope())
-            {
-                var scopeServices = newScope.ServiceProvider;
-                try
-                {
-                    var dbContext = scopeServices.GetRequiredService<PhotoSharingDB>();
-                    PhotoSharingInitializer.Seed(dbContext);
-                }
-                catch (Exception ex)
-                {
-                    var log = scopeServices.GetRequiredService<ILogger<Program>>();
-                    log.LogError(ex, "Seed data error");
-                }
-            }
-            host.Run();
+            CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+                .UseStartup<Startup>();
     }
 }
