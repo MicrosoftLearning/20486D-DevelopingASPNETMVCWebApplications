@@ -50,10 +50,10 @@ namespace WorldJourney.Controllers
             City requestedCity = _data.GetCityById(cityId);
             if (requestedCity != null)
             {
-				string webRootpath = _environment.WebRootPath;
-				string folderPath = "\\images\\";
-				string fullPath = webRootpath + folderPath + requestedCity.ImageName;
-				FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
+                string webRootpath = _environment.WebRootPath;
+                string folderPath = "\\images\\";
+                string fullPath = webRootpath + folderPath + requestedCity.ImageName;
+                FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
                 byte[] fileBytes;
                 using (BinaryReader br = new BinaryReader(fileOnDisk))
                 {

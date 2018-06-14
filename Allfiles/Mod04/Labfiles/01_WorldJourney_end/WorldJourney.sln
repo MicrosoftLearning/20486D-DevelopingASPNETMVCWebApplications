@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldJourney", "WorldJourney\WorldJourney.csproj", "{62F4BEF1-B572-49D6-936F-81721EC4C89A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldJourney", "WorldJourney\WorldJourney.csproj", "{A845376A-E3E6-4791-A1E3-CE7ABF742A0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{62F4BEF1-B572-49D6-936F-81721EC4C89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62F4BEF1-B572-49D6-936F-81721EC4C89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62F4BEF1-B572-49D6-936F-81721EC4C89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62F4BEF1-B572-49D6-936F-81721EC4C89A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A845376A-E3E6-4791-A1E3-CE7ABF742A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A845376A-E3E6-4791-A1E3-CE7ABF742A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A845376A-E3E6-4791-A1E3-CE7ABF742A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A845376A-E3E6-4791-A1E3-CE7ABF742A0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6CBE0921-3C55-4EDB-B204-042A09419ED7}
+		SolutionGuid = {4B4B15B8-70F7-4B4D-B742-0509FA55EAB0}
 	EndGlobalSection
 EndGlobal

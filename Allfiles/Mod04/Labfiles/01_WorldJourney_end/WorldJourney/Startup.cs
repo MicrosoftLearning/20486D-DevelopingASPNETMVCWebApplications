@@ -6,9 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using WorldJourney.Models;
 using WorldJourney.Filters;
-
+using WorldJourney.Models;
 
 namespace WorldJourney
 {

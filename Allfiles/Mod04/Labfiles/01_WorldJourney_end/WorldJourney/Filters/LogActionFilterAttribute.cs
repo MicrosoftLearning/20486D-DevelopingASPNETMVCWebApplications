@@ -68,4 +68,3 @@ namespace WorldJourney.Filters
         }
     }
 }
-
