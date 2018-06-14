@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ErrorHandlingExample.Models;
 using ErrorHandlingExample.Services;
 using Microsoft.AspNetCore.Mvc;
-using ErrorHandlingExample.Models;
 
 namespace ErrorHandlingExample.Controllers
 {

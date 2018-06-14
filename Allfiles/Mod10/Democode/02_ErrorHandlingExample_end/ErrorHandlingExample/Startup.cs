@@ -13,10 +13,10 @@ namespace ErrorHandlingExample
 {
     public class Startup
     {
-         public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<ICounter,Counter>();
+            services.AddSingleton<ICounter, Counter>();
             services.AddSingleton<IDivisionCalculator, DivisionCalculator>();
         }
 
@@ -37,7 +37,7 @@ namespace ErrorHandlingExample
             {
                 cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
                 await next.Invoke();
-            });            
+            });
 
             app.UseMvcWithDefaultRoute();
 

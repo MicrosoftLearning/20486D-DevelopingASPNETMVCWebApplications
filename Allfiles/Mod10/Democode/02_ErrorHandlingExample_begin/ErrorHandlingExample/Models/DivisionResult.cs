@@ -24,6 +24,5 @@ namespace ErrorHandlingExample.Models
 
             return bld.ToString();
         }
-
     }
 }
