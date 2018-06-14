@@ -5,14 +5,13 @@ using System.Threading.Tasks;
 
 namespace ShirtStoreWebsite.Models
 {
-    public enum ShirtColor
+    public enum ShirtSize
     {
-        White,
-        Black,
-        Gray,
-        Red,
-        Blue,
-        Green,
-        Yellow
+        XS,
+        S,
+        M,
+        L,
+        XL,
+        XXL
     }
 }

@@ -9,15 +9,9 @@ namespace ShirtStoreWebsite.Controllers
 {
     public class ShirtController : Controller
     {
-        private readonly Data.ShirtContext _context;
-
-        public ShirtController(Data.ShirtContext context)
-        {
-            _context = context;
-        }
         public IActionResult Index()
         {
-            return View(_context.Shirts.ToList());
+            return View();
         }
 
         public IActionResult AddShirt(Shirt shirt)
