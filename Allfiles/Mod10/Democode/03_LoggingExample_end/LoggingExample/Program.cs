@@ -21,12 +21,19 @@ namespace LoggingExample
             WebHost.CreateDefaultBuilder(args)
             .ConfigureLogging((hostingContext, logging) =>
             {
-                IConfigurationSection configLogSection = hostingContext.Configuration.GetSection("LogLevel");
-                logging.AddConfiguration(configLogSection);
-
                 var env = hostingContext.HostingEnvironment;
+                var config = hostingContext.Configuration.GetSection("Logging");
+
+                if (env.IsDevelopment())
+                {
+                    logging.AddConfiguration(config);
+                    logging.AddConsole();
+                }
+
                 if (env.IsProduction())
-                    logging.AddFile("myLog.txt", LogLevel.Warning);
+                {
+                    logging.AddFile(config);
+                }                
             })
                 .UseStartup<Startup>();
     }
