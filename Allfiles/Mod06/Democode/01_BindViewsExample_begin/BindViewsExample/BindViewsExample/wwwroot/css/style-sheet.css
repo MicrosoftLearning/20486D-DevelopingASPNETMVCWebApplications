@@ -26,8 +26,9 @@ hr {
     border-top: 1px solid #ccc;
 }
 
-.editor-label {
-    width: 200px;
+.editor-label{
+    width:200px;
+
 }
 
 .editor-field {
@@ -35,6 +36,7 @@ hr {
 }
 
 .editor-field, .editor-label {
+
     float: left;
 }
 
@@ -42,3 +44,4 @@ div {
     width: 650px;
     overflow: hidden;
 }
+

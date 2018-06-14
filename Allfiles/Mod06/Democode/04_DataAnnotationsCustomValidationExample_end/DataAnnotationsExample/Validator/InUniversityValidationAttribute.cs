@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using DataAnnotationsExample.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace DataAnnotationsExample.Validators
+namespace DataAnnotationsExample.Validator
 {
     public class InUniversityValidationAttribute : ValidationAttribute
     {

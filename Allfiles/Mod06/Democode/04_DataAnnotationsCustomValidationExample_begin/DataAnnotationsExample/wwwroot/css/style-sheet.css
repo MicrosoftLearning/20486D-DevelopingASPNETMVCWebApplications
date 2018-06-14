@@ -2,12 +2,12 @@
     text-align: center;
 }
 
-input,textarea {
+input, textarea {
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
-    width:250px;
-    margin-top:10px;
+    width: 250px;
+    margin-top: 10px;
 }
 
 label {
@@ -16,7 +16,7 @@ label {
     margin: 0 1px 25px 1px;
     font-weight: bold;
     font-size: 24px;
-    text-align:left;
+    text-align: left;
 }
 
 span, li {
@@ -29,30 +29,30 @@ span, li {
 ul {
     display: inline-block;
     text-align: left;
-    width:350px;
+    width: 350px;
 }
 
 h1 {
     margin-bottom: 15px;
     font-size: 33px;
     color: darkgreen;
-    text-align:center;
+    text-align: center;
 }
 
 input[type=checkbox] {
     width: 250px;
-    height:22px;
+    height: 22px;
 }
 
 input[type=submit] {
     width: 200px;
     background-color: darkgreen;
     color: white;
-    margin:30px auto;
+    margin: 30px auto;
 }
 
-form{
-    text-align:center;
+form {
+    text-align: center;
 }
 
 .display-prop-name {
@@ -74,11 +74,11 @@ form{
     margin: 0 auto;
 }
 
-.form-field .validation-error,
-.form-field .field-validation-error {
+    .form-field .validation-error,
+    .form-field .field-validation-error {
         display: block;
         text-align: left;
-}
+    }
 
 .input-span {
     display: inline-block;

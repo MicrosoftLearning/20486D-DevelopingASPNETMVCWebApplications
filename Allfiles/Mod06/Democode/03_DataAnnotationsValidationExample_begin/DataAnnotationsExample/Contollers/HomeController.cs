@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DataAnnotationsExample.Models;
 
-namespace DataAnnotationsExample.Controllers
+namespace DataAnnotationsExample.Contollers
 {
     public class HomeController : Controller
     {
@@ -14,13 +14,9 @@ namespace DataAnnotationsExample.Controllers
             return View();
         }
 
-        public IActionResult Details(Student student)
+        public IActionResult Details(Person person)
         {
-            if (!ModelState.IsValid)
-            {
-                return View("Index", student);
-            }
-            return View(student);
+            return View(person);
         }
     }
 }

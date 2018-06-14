@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DataAnnotationsExample.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DataAnnotationsExample.Controllers
+namespace BindViewsExample.Controllers
 {
     public class HomeController : Controller
     {
@@ -14,9 +13,10 @@ namespace DataAnnotationsExample.Controllers
             return View();
         }
 
-        public IActionResult Details(Person person)
+        [Route("Home/Display")]
+        public IActionResult AnotherWayToDisplay()
         {
-            return View(person);
+            return View();
         }
     }
 }
