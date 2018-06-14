@@ -176,8 +176,7 @@
 
 #### Demonstration Steps
 
-1. In the **ErrorHandlingExample - Microsoft Visual Studio** window toolbar, click the arrow next to the **Start Debugging** button, and then select **Production**.​
-    >**Note:** Verify that the **Standard** toolbar is open first, by right clicking on a toolbar and confirming that the **Standard** toolbar is checked.
+1. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
 2. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
@@ -185,26 +184,25 @@
 
 4. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-5. In the **ErrorHandlingExample - Microsoft Visual Studio** window toolbar, click the arrow next to the **Start Debugging** button, and then select **Development**.​
-    >**Note:** Verify that the **Standard** toolbar is open first, by right clicking on a toolbar and confirming that the **Standard** toolbar is checked.
+5. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
 
 6. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 7. In **Microsoft Edge**, locate the following text:
  ```
     ErrorHandlingExample.Startup+<>c__DisplayClass1_0+<<Configure>b__0>d.MoveNext() in Startup.cs
-	+	40.  cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
+	+	38.  cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
  ```
 
-8. In **Microsoft Edge**, click the **+** sign near **40.** and inspect the code.
+8. In **Microsoft Edge**, click the **+** (plus) sign near **38.** and then inspect the code.
 
 9. In **Microsoft Edge**, locate the following text:
  ```
     ErrorHandlingExample.Services.Counter.IncrementRequestPathCount(string requestPath) in Counter.cs
-	+	19.  UrlCounter[requestPath]++;
+	+	19.            UrlCounter[requestPath]++;
  ```
 
-10. In **Microsoft Edge**, click the **+** sign near **19.** and inspect the code.
+10. In **Microsoft Edge**, click the **+** (plus) sign near **19.** and then inspect the code.
 
 11. In **Microsoft Edge**, click **Close**.
 
@@ -229,15 +227,15 @@
 
 17. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-18. In **Microsoft Edge**, click the number **16**.
+18. In **Microsoft Edge**, click **16**.
      
 19. In **Microsoft Edge**, locate the following text:
  ```
     ErrorHandlingExample.Controllers.HomeController.GetDividedNumber(int id) in HomeController.cs
-	+	27.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
+	+	28.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
  ```
 
-20. In **Microsoft Edge**, click the **+** sign near **27.** and inspect the code.
+20. In **Microsoft Edge**, click the **+** (plus) sign near **28.** and then inspect the code.
 
 21. In **Microsoft Edge**, locate the following text:
  ```
@@ -245,7 +243,7 @@
 	+	21.  if (number % i == 0)
  ```
 
-22. In **Microsoft Edge**, click the **+** sign near **21.** and inspect the code.
+22. In **Microsoft Edge**, click the **+** (plus) sign near **21.** and then inspect the code.
 
 23. In **Microsoft Edge**, click **Close**.
 
@@ -265,12 +263,11 @@
 
 28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-29. In the **ErrorHandlingExample - Microsoft Visual Studio** window toolbar, click the arrow next to the **Start Debugging** button, and then select **Production**.​
-    >**Note:** Verify that the **Standard** toolbar is open first, by right clicking on a toolbar and confirming that the **Standard** toolbar is checked.
+29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then select **Production**.​
 
 30. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-31. In **Microsoft Edge**, click the number **16**.
+31. In **Microsoft Edge**, click **16**.
 
 32. In **Microsoft Edge**, click **Close**.
 

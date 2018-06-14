@@ -15,10 +15,10 @@
 <body>
     <h1>Multiplication Table</h1>
     <p>
-        Welcome to the multiplication table site.
+        Welcome to the multiplication table site.<br/>
         @if (cnt.UrlCounter.ContainsKey(Context.Request.GetDisplayUrl()))
         {
-            <br />@:The number of entrances to the welcome page is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
+            @:The number of entrances to the welcome page is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
         }
     </p>
     @Html.Partial("_NumberLinks")
