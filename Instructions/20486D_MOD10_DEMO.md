@@ -38,7 +38,7 @@
 
 12. In the **NewFolder** text box, type **Mock**, and then press Enter.
 
-13. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click the **Mock** folder, point to **Add**, and then click **Class**.
+13. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **Mock**, point to **Add**, and then click **Class**.
 
 14. In the **Add New Item - ProductsWebsite.Tests** dialog box, in the **Name** text box, type **FakeProductRepository**, and then click **Add**.
 
@@ -194,7 +194,7 @@
 	+	38.  cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
  ```
 
-8. In **Microsoft Edge**, click the **+** (plus) sign near **38.** and then inspect the code.
+8. In **Microsoft Edge**, click the **+** (plus) sign near **38**, and then inspect the code.
 
 9. In **Microsoft Edge**, locate the following text:
  ```
@@ -202,13 +202,13 @@
 	+	19.            UrlCounter[requestPath]++;
  ```
 
-10. In **Microsoft Edge**, click the **+** (plus) sign near **19.** and then inspect the code.
+10. In **Microsoft Edge**, click the **+** (plus) sign near **19**, and then inspect the code.
 
 11. In **Microsoft Edge**, click **Close**.
 
 12. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-13. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Services**, and then click **Counter.cs**.
+13. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Services**, and then click **Counter.cs**.
 
 14. In the **Counter.cs** code window, select the following code:
 ```cs
@@ -235,21 +235,21 @@
 	+	28.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
  ```
 
-20. In **Microsoft Edge**, click the **+** (plus) sign near **28.** and then inspect the code.
+20. In **Microsoft Edge**, click the **+** (plus) sign near **28**, and then inspect the code.
 
 21. In **Microsoft Edge**, locate the following text:
  ```
     ErrorHandlingExample.Services.DivisionCalculator.GetDividedNumbers(int number) in DivisionCalculator.cs
-	+	21.  if (number % i == 0)
+	+	20.  if (number % i == 0)
  ```
 
-22. In **Microsoft Edge**, click the **+** (plus) sign near **21.** and then inspect the code.
+22. In **Microsoft Edge**, click the **+** (plus) sign near **20**, and then inspect the code.
 
 23. In **Microsoft Edge**, click **Close**.
 
 24. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-25. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in the **Solution Explorer**, under **Services**, click **DivisionCalculator.cs**.
+25. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **DivisionCalculator.cs**.
 
 26. In the **DivisionCalculator.cs** code window, select the following code:
 ```cs
@@ -263,7 +263,7 @@
 
 28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then select **Production**.​
+29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
 30. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
