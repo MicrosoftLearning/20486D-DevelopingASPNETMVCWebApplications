@@ -6,7 +6,6 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Http;
 using ButterfliesShop.Validators;
 
-
 namespace ButterfliesShop.Models
 {
     public class Butterfly

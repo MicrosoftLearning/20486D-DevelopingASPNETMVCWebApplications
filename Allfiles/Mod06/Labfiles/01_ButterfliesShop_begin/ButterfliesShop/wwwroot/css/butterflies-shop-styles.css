@@ -193,12 +193,12 @@ form {
     flex-direction: column;
 }
 
-.form-field .validation-error,
-.form-field .field-validation-error {
-    display: block;
-    text-align: left;
-    width: 350px;
-}
+    .form-field .validation-error,
+    .form-field .field-validation-error {
+        display: block;
+        text-align: left;
+        width: 350px;
+    }
 
 .container {
     max-width: 1240px;
