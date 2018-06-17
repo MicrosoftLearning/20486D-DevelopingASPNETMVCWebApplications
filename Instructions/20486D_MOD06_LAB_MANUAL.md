@@ -313,45 +313,71 @@ The main tasks for this exercise are as follows:
 
    - **System.ComponentModel.DataAnnotations**
 
-2. Add a display data annotation to the **Butterfly** model class to ensure that the **CommonName** property:
+2. Add a **Display** data annotation above the **CommonName** property with the following information:
 
    - Display name: **Common Name:**
 
-3. Add a display data annotation to the **Butterfly** model class to ensure that the **ButterflyFamily** property:
+3. Add a **Display** data annotation above the **ButterflyFamily** property with the following information:
 
    - Display name: **Butterfly Family:**
 
-4. Add a display data annotation to the **Butterfly** model class to ensure that the **Quantity** property:
+4. Add a **Display** data annotation above the **Quantity** property with the following information:
 
     - Display name: **Butterflies Quantity:**
 
-5. Add a display data annotation to the **Butterfly** model class to ensure that the **Characteristics** property:
+5. Add a **Display** data annotation above the **Characteristics** property with the following information:
 
      - Display name: **Characteristics:**
 
-6. Add the following data annotations to the **Butterfly** model class to describe the **CreatedDate** property:
+6. Add a **Display** data annotation above the **CreatedDate** property with the following information:
+
+   - Display name: **Updated on**
+
+7. Add a **DataType** data annotation with the following information:
 
    - Type: **DateTime**
-   - Display name: **Updated on**
+
+8. Add a **DisplayFormat** data annotation with the following information:
+
    - Display format: **{0:dd/MM/yy}**
 
-7. Add a display data annotation to the **Butterfly** model class to ensure that the **PhotoAvatar** property:
+9.  Add a **Display** data annotation above the **PhotoAvatar** property with the following information:
 
       - Display name: **Butterflies Picture:**
 
 #### Task 2: Update an action to return FileContentResult
 
-1. In the **GetImage** action, in the **IF** statment create a variable named **fullPath** of type string and initialize the variable, in order to refer to the name of the image under the images directory.
+1. In the **GetImage** action code block, at the beginning of **IF** statment, add a varible named **webRootpath** of type **string** with the value of **_environment.WebRootPath**. 
 
-2. In the **GetImage** action, If the **fullPath** exists, initialize a new FileStream, and declare a byte array.
+2. Add a varible named **folderPath** of type **string** with the value of  **"\\images\\"**.
 
-3. Within the **GetImage** action, add a using statment, and in the using statment add initialize a  BinaryReader object, and  assign binary reader length to the byte array. 
+3. Add a varible named **fullPath** of type **string** with the value of **webRootpath + folderPath + requestedCity.ImageName**.
 
-4. In the end of the **IF** statment return a **File** result constructed from the **image bytes** and **Butterfly.ImageMimeType** properties.
+4. Create an **IF** statement that checks that the value of **System.IO.File.Exists(fullPath)** is **true**.
 
-5. Otherwise, if the accepted butterfly object **PhotoFile** property length bigger then 0, return a **File** result constructed from the accepted butterfly object **PhotoFile** and **ImageMimeType** properties.
+5. Inside the **IF** statement, add a varible named **fileOnDisk** of type **FileStream**. 
 
-6. If not, return the **NotFound** value.
+6. Initialize the **fileOnDisk** varaible using the **FileStream** constructor and pass it the following parameters: **fullPath** and **FileMode.Open**. 
+
+7. Create a variable named **fileBytes** of type **byte[]**.
+
+8. Create a variable named **br** of type **BinaryReader** inside a **USING** statement.
+
+9. Initialize the **br** varaible using the **BinaryReader** constructor, and pass it the following parameter: **fileOnDisk**.  
+
+10. Inside the **USING** statement block, assign the **fileBytes** varible the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
+
+11. After the **USING** statement block, return a **FileResult** result using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedButterfly.ImageMimeType**. 
+
+12. After the end of **IF** statment, add an **ELSE** statment.
+
+13. Inside the **ELSE** statment, create a nested  **IF** statement that checks that the value of **requestedButterfly.PhotoFile.Length**  is bigger then **0**.
+
+14. Inside the nested **IF** statement, return a **FileResult** result using the **File** method. Pass the following parameters to the **File** method: **requestedButterfly.PhotoFile** and **requestedButterfly.ImageMimeType**. 
+
+15. After the end of nested **IF** statment, add an **ELSE** statment.
+
+16. Inside the **ELSE** statment, return the **NotFoundResult** result using the **NotFound** method.
 
 #### Task 3: Add Display Helpers
 
