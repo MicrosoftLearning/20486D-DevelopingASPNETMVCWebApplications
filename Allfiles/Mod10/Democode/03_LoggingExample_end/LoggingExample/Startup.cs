@@ -22,7 +22,7 @@ namespace LoggingExample
             services.AddSingleton<IDivisionCalculator, DivisionCalculator>();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ICounter cnt)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {

@@ -29,16 +29,10 @@ namespace LoggingExample.Controllers
         public IActionResult GetDividedNumber(int id)
         {
             ViewBag.CounterSucceeded = false;
-            try
-            {
-                _counter.IncrementRequestPathCount(id.ToString());
-                ViewBag.NumberOfViews = _counter.UrlCounter[id.ToString()];
-                ViewBag.CounterSucceeded = true;
-            }
-            catch (Exception ex)
-            {
-                
-            }
+
+            _counter.IncrementRequestPathCount(id.ToString());
+            ViewBag.NumberOfViews = _counter.UrlCounter[id.ToString()];
+            ViewBag.CounterSucceeded = true;
 
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
             return View(divisionResult);
