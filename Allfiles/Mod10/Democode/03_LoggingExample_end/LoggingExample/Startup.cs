@@ -22,7 +22,7 @@ namespace LoggingExample
             services.AddSingleton<IDivisionCalculator, DivisionCalculator>();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ICounter cnt, ILogger<Startup> logger)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ICounter cnt)
         {
             if (env.IsDevelopment())
             {
@@ -34,21 +34,6 @@ namespace LoggingExample
             }
 
             app.UseStaticFiles();
-
-            app.Use(async (context, next) =>
-            {
-                string page = context.Request.GetDisplayUrl();
-                try
-                {
-                    cnt.IncrementRequestPathCount(page);
-                }
-                catch (Exception ex)
-                {
-                    logger.LogError(ex, $"Error incrementing views counter for page: {page}");
-                }
-
-                await next.Invoke();
-            });
 
             app.UseMvcWithDefaultRoute();
 

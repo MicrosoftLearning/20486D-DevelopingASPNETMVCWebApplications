@@ -22,7 +22,7 @@ namespace LoggingExample
             services.AddSingleton<IDivisionCalculator, DivisionCalculator>();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ICounter cnt)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -34,14 +34,6 @@ namespace LoggingExample
             }
 
             app.UseStaticFiles();
-
-            app.Use(async (context, next) =>
-            {
-                string page = context.Request.GetDisplayUrl();
-                cnt.IncrementRequestPathCount(page);
-
-                await next.Invoke();
-            });
 
             app.UseMvcWithDefaultRoute();
 

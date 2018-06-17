@@ -13,10 +13,12 @@ namespace LoggingExample.Controllers
     {
         ILogger _logger;
         IDivisionCalculator _numberCalculator;
+        ICounter _counter;
 
-        public HomeController(IDivisionCalculator numberCalculator, ILogger<HomeController> logger)
+        public HomeController(IDivisionCalculator numberCalculator, ICounter counter, ILogger<HomeController> logger)
         {
             _logger = logger;
+            _counter = counter;
             _numberCalculator = numberCalculator;
         }
 
@@ -28,6 +30,18 @@ namespace LoggingExample.Controllers
 
         public IActionResult GetDividedNumber(int id)
         {
+            ViewBag.CounterSucceeded = false;
+            try
+            {
+                _counter.IncrementRequestPathCount(id.ToString());
+                ViewBag.NumberOfViews = _counter.UrlCounter[id.ToString()];
+                ViewBag.CounterSucceeded = true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"An error occured while trying to increase or retrieve the time the page was viewed. Number parameter is: {id}")
+            }
+
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
             return View(divisionResult);
         }
