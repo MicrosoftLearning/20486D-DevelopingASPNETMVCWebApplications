@@ -30,7 +30,6 @@ namespace LoggingExample.Controllers
         {
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
             return View(divisionResult);
-
         }
     }
 }
