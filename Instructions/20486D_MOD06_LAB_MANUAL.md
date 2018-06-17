@@ -144,7 +144,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Use the model in a view
 
-1. In the **Index.cshtml** view, add a **@model** with the following information:
+1. In the **Index.cshtml** page, add a **@model** with the following information:
      - Type: **ButterfliesShop.Models.IndexViewModel**.
 
 2. Add a **DIV** element with the following information:
@@ -153,13 +153,13 @@ The main tasks for this exercise are as follows:
 
 3. Inside the **DIV** element, add a **H1** element with the following information:
 
-    - Content: **Butterflies Shop**
     - Class: **main-title**
+    - Content: **Butterflies Shop**
 
 4. Below the **H1** element, add a **P** element with the following information:
 
-    - Content: **Welcome to our Web Store, Enjoy a Wide Variety of Butterflies**
     - Class: **into**
+    - Content: **Welcome to our Web Store, Enjoy a Wide Variety of Butterflies**
 
 5. Add a **P** element with the following information:
 
@@ -179,7 +179,7 @@ The main tasks for this exercise are as follows:
 
     - Class: **img-container**
 
-9. Inside the **DIV** element with the **img-container** class, create a **foreach** statment block that loops through the items in the **Model.Butterflies** list.
+9. Inside the **DIV** element with the **img-container** class, create a **foreach** statment block that loops through the items in the **Model.Butterflies** list. Name the current item varible **item**.
 
 10. Inside the **foreach** statment block, add a **DIV** element with the following information:
 
@@ -381,72 +381,117 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Add Display Helpers
 
-1. In the **Index.cshtml** page, **replace** the code in the **foreach** code block, add an **H3** element with the **display-picture-title** class to display the **CommonName**  property from the model with the following information:
+1. In the **Index.cshtml** page, **remove** the code in the **foreach** code block.
 
-   - Helper: **Html.DisplayFor**
-   - Lamda expression: **modelItem =&gt; model.CommonName**
+2. Inside the **foreach** code block, add a **H3** element with the following information:
 
-2. Add a code that runs if the **Model.ImageName** property is not **null**.
+    - Class: **display-picture-title**
+    - Content: **"@Html.DisplayFor(item => item.CommonName)"**
 
-3. Within the **if** code block, add a **DIV** element using the following information:
+
+3. After the **H3** element, add a **IF** statment that checks that the value of **item.ImageName** is not **null**.
+
+4. Inside the **IF** statment block, add a **DIV** element using the following information:
 
    - Class: **photo-display**
 
-4. Within the **DIV** code block, render an **&lt;img&gt;** tag. Use the following information:
+5. Inside the **DIV** element, add a **IMG** element with the following information:
 
-   - Tag: **&lt;img&gt;**
    - Class: **photo-display-img**
 
-5. In the **src** attribute of the **&lt;img&gt;** tag, add a call to the **Url.Action** helper with the following information:
+6. Edit the **IMG** element with the following information:
+   - Attribute: **src**
+   - Value:   **@Url.Action("GetImage", "Butterfly", new { Id = item.Id })**
 
-   - Controller: **Butterfly**
-   - Action: **GetImage**
-   - Parameter: **Model.Id**
+7. After the **IF** statment, add a **DIV** element.
 
-6. After the **if** code block, add a **DIV** element to the **Index.cshtml**, and then inside the **DIV** element, add **P** elements with the **display-label** and the **display-field** classes to display the **ButterflyFamily** property from the model with the following information:
+8. Inside the new **DIV** element, add a **P** element with the following information:
 
-   - Helpers:
-     - **Html.DisplayNameFor**
-     - **HtmlDisplayFor**
-   - Lamda expression: **model => item.ButterflyFamily**
+   - Class: **display-label**
+   - Content: 
+       - Helper: **Html.DisplayNameFor**
+       - Lamda expression: **model => item.ButterflyFamily**
 
-7. After the controls for the **ButterflyFamily** property, add a **DIV** element to the **Index.cshtml** with the **display-info** class, and then inside the **DIV** element, add **P** elements with the **display-label** and the **display-field** classes to display the **Characteristics** property from the model with the following information:
+9. Add a **BR** element. 
 
-   - Helpers:
-     - **Html.DisplayNameFor**
-     - **HtmlDisplayFor**
-   - Lamda expression: **model => item.Characteristics**
+10. Add a **P** element with the following information:
 
-8. After the controls for the **Characteristics** property, add a **DIV** element to the **Index.cshtml**, and then inside the **DIV** element, add **P** elements with the **display-label** and the **display-field** classes to display the **Quantity** property from the model with the following information:
+    - Class: **display-field**
+    - Content: 
+       - Helper: **Html.DisplayFor**
+       - Lamda expression: **model => item.ButterflyFamily**
 
-   - Helpers:
-     - **Html.DisplayNameFor**
-     - **HtmlDisplayFor**
-   - Lamda expression: **model => item.Quantity**
+11. After the **DIV** element, add a new **DIV** element with the following information:
 
-9. After the controls for the **Quantity** property, add a **DIV** element to the **Index.cshtml**, and then inside the **DIV** element, add **P** elements with the **display-label** and the **display-field** classes to display the **CreatedDate** property from the model with the following information:
+    - Class: **display-info**
 
-   - Helpers:
-     - **Html.DisplayNameFor**
-     - **HtmlDisplayFor**
-   - Lamda expression: **model => item.CreatedDate**
+12. Inside the new **DIV** element, add a **P** element with the following information:
+
+    - Class: **display-label**
+    - Content: 
+       - Helper: **Html.DisplayNameFor**
+       - Lamda expression: **model => item.Characteristics**
+
+
+13. Add another **P** element with the following information:
+
+    - Class: **display-field**
+    - Content: 
+       - Helper: **Html.DisplayFor**
+       - Lamda expression: **model => item.Characteristics**
+
+14. After the **DIV** element, add a new **DIV** element.
+
+15. Inside the new **DIV** element, add a **P** element with the following information:
+
+    - Class: **display-label**
+    - Content: 
+       - Helper: **Html.DisplayNameFor**
+       - Lamda expression: **model => item.Quantity**
+
+16. Add another **P** element with the following information:
+
+    - Class: **display-field**
+    - Content: 
+       - Helper: **Html.DisplayFor**
+       - Lamda expression: **model => item.Quantity**
+
+17. After the **DIV** element, add a new **DIV** element.
+
+18. Inside the new **DIV** element, add a **P** element with the following information:
+
+    - Class: **display-label**
+    - Content: 
+       - Helper: **Html.DisplayNameFor**
+       - Lamda expression: **model => item.CreatedDate**
+
+19. Add another **P** element with the following information:
+
+    - Class: **display-field**
+    - Content: 
+       - Helper: **Html.DisplayFor**
+       - Lamda expression: **model => item.CreatedDate**
+
 
 #### Task 4: Add Form Helpers
 
-1. In the **Create.cshtml** page, set the **@using** for the **Create.cshtml** to **ButterfliesShop.Models**.
+1. In the **Create.cshtml** page,  add a **@using** statement for the following namespace:
 
-2. In the **Create.cshtml** page, set the **@model** for the **Create.cshtml** to **ButterfliesShop.Models.Butterfly**.
+   - **ButterfliesShop.Models.Butterfly**
 
-3. Add an **DIV** element to the **Create.cshtml** page with the following information:
+2. Add the **@model** with the following information:
+     - Type: **ButterfliesShop.Models.Butterfly**.
+
+3. Add a **DIV** element with the following information:
 
     - Class: **container**
 
-4. Add an **H1** element to the **Create.cshtml** page within the **DIV** element with the following information:
+4. Inside the **DIV** element, add a **H1** element with the following information:
 
-    - Content: **Add Butterflies to the Shop**
     - Class: **main-title**
+    - Content: **Add Butterflies to the Shop**
 
-5. Create a **form** on the page below the **H1** element with the following information:
+5. Add  a **FORM** element with the following information:
 
     - method: **post**
     - enctype: **multipart/form-data**
