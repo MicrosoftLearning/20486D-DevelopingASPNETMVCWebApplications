@@ -17,14 +17,18 @@
     <h1>Number @Model.DividedNumber</h1>
     <p>
         The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()<br />
-        This number was viewed @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
-        @if (cnt.UrlCounter[Context.Request.GetDisplayUrl()] > 1)
+        
+        @if(ViewBag.CounterSucceeded)
         {
-            @:times
-        }
-        else
-        {
-            @:time
+            This number was viewed @cnt.UrlCounter[ViewBag.ViewAmount]
+            @if (cnt.UrlCounter[Context.Request.GetDisplayUrl()] > 1)
+            {
+                @:times
+            }
+            else
+            {
+                @:time
+            }
         }
     </p>
     @Html.Partial("_NumberLinks")

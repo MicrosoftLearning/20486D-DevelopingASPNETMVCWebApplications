@@ -20,7 +20,7 @@ namespace ErrorHandlingExample
             services.AddSingleton<IDivisionCalculator, DivisionCalculator>();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ICounter cnt)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -32,12 +32,6 @@ namespace ErrorHandlingExample
             }
 
             app.UseStaticFiles();
-
-            app.Use(async (context, next) =>
-            {
-                cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
-                await next.Invoke();
-            });
 
             app.UseMvcWithDefaultRoute();
 
