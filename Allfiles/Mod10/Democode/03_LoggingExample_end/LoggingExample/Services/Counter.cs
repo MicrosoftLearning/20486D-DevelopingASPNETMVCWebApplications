@@ -8,22 +8,22 @@ namespace LoggingExample.Services
 {
     public class Counter : ICounter
     {
-        public Dictionary<string, int> UrlCounter { get; set; }
+        public Dictionary<int, int> NumberCounter { get; set; }
         private ILogger<Counter> _logger;
 
 
         public Counter(ILogger<Counter> logger)
         {
-            UrlCounter = new Dictionary<string, int>();
+            NumberCounter = new Dictionary<int, int>();
             _logger = logger;
         }
 
-        public void IncrementRequestPathCount(string requestPath)
+        public void IncrementNumberCount(int number)
         {
-            if (UrlCounter.ContainsKey(requestPath))
-                UrlCounter[requestPath]++;
+            if (NumberCounter.ContainsKey(number))
+                NumberCounter[number]++;
             else
-                UrlCounter.Add(requestPath, 1);
+                NumberCounter.Add(number, 1);
         }
     }
 }

@@ -33,13 +33,13 @@ namespace LoggingExample.Controllers
             ViewBag.CounterSucceeded = false;
             try
             {
-                _counter.IncrementRequestPathCount(id.ToString());
-                ViewBag.NumberOfViews = _counter.UrlCounter[id.ToString()];
+                _counter.IncrementNumberCount(id);
+                ViewBag.NumberOfViews = _counter.NumberCounter[id];
                 ViewBag.CounterSucceeded = true;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"An error occured while trying to increase or retrieve the time the page was viewed. Number parameter is: {id}")
+                _logger.LogError(ex, $"An error occured while trying to increase or retrieve the time the page was viewed. Number parameter is: {id}");
             }
 
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);

@@ -30,8 +30,8 @@ namespace LoggingExample.Controllers
         {
             ViewBag.CounterSucceeded = false;
 
-            _counter.IncrementRequestPathCount(id.ToString());
-            ViewBag.NumberOfViews = _counter.UrlCounter[id.ToString()];
+            _counter.IncrementNumberCount(id);
+            ViewBag.NumberOfViews = _counter.NumberCounter[id];
             ViewBag.CounterSucceeded = true;
 
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
