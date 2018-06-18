@@ -1,22 +1,23 @@
 ﻿@using Microsoft.AspNetCore.Http.Extensions
 @inject ErrorHandlingExample.Services.ICounter cnt
 @{
-    Layout = null;
+Layout = null;
 }
 
 <!DOCTYPE html>
 
 <html>
-<head>
+  <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link href="~/css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+  </head>
+  <body>
     <h1>Multiplication Table</h1>
     <p>
-        Welcome to the multiplication table site.<br />
+      Welcome to the multiplication table site.<br />
+      The number of entrances to the welcome page is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
     </p>
     @Html.Partial("_NumberLinks")
-</body>
+  </body>
 </html>
