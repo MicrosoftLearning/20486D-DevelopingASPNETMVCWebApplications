@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShirtStoreWebsite", "ShirtStoreWebsite\ShirtStoreWebsite.csproj", "{F07D5389-7A0B-4E4A-A408-75B9F3B28682}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShirtStoreWebsite", "ShirtStoreWebsite\ShirtStoreWebsite.csproj", "{F07D5389-7A0B-4E4A-A408-75B9F3B28682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShirtStoreWebsite.Tests", "ShirtStoreWebsite.Tests\ShirtStoreWebsite.Tests.csproj", "{B982A30A-A973-4966-985D-5EDD0183A77F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F07D5389-7A0B-4E4A-A408-75B9F3B28682}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F07D5389-7A0B-4E4A-A408-75B9F3B28682}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F07D5389-7A0B-4E4A-A408-75B9F3B28682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B982A30A-A973-4966-985D-5EDD0183A77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B982A30A-A973-4966-985D-5EDD0183A77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B982A30A-A973-4966-985D-5EDD0183A77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B982A30A-A973-4966-985D-5EDD0183A77F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

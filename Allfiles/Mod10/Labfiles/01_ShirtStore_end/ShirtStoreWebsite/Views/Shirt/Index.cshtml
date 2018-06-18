@@ -46,7 +46,7 @@
                                     @Html.DisplayFor(modelItem => item.Color)
                                 </td>
                                 <td>
-                                    @item.GetTaxedPrice(1.2F)
+                                    @item.GetFormattedTaxedPrice(1.2F)
                                 </td>
                                 <td>
                                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })

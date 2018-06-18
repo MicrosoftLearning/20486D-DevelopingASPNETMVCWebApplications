@@ -16,7 +16,7 @@ namespace ShirtStoreWebsite.Models
         [Required]
         public float Price { get; set; }
 
-        public string GetTaxedPrice(float tax)
+        public string GetFormattedTaxedPrice(float tax)
         {
             return Price.ToString($"C2");
         }
