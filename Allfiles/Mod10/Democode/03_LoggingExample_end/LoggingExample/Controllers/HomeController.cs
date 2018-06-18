@@ -11,15 +11,15 @@ namespace LoggingExample.Controllers
 {
     public class HomeController : Controller
     {
-        ILogger _logger;
         IDivisionCalculator _numberCalculator;
         ICounter _counter;
+        ILogger _logger;
 
         public HomeController(IDivisionCalculator numberCalculator, ICounter counter, ILogger<HomeController> logger)
         {
-            _logger = logger;
             _counter = counter;
             _numberCalculator = numberCalculator;
+            _logger = logger;
         }
 
         [Route("")]
@@ -31,6 +31,7 @@ namespace LoggingExample.Controllers
         public IActionResult GetDividedNumber(int id)
         {
             ViewBag.CounterSucceeded = false;
+
             try
             {
                 _counter.IncrementNumberCount(id);

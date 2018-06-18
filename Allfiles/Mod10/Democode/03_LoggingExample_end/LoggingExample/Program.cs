@@ -33,7 +33,7 @@ namespace LoggingExample
                 if (env.IsProduction())
                 {
                     logging.AddFile(config);
-                }                
+                }
             })
                 .UseStartup<Startup>();
     }

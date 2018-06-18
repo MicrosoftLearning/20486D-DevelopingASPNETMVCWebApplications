@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using LoggingExample.Services;
 using Microsoft.Extensions.Logging;
-using Serilog.Events;
 
 namespace LoggingExample
 {
