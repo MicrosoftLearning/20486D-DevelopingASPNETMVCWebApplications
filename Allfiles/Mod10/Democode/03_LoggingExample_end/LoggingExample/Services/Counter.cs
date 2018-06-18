@@ -21,9 +21,15 @@ namespace LoggingExample.Services
         public void IncrementNumberCount(int number)
         {
             if (NumberCounter.ContainsKey(number))
+            {
                 NumberCounter[number]++;
+                _logger.LogDebug($"The views count for number {number} was increased to {NumberCounter[number]}.");
+            }
             else
+            {
                 NumberCounter.Add(number, 1);
+                _logger.LogDebug($"The number {number} was added to the views count dictionary");
+            }
         }
     }
 }
