@@ -51,6 +51,7 @@ The main tasks for this exercise are as follows:
     - Solution name: **PollBall**
     - Create directory for solution: **True**
     - Project template: **Empty**
+    - Configure for HTTPS: **False**
 
 2. Delete all the comments in **Startup.cs**.
 
