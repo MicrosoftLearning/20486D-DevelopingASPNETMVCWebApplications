@@ -280,6 +280,12 @@
 ### Demonstration: How to Log an MVC Application
 #### Preparation Steps
 
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+
+2. Navigate to **Allfiles\Mod10\Democode\02_LoggingExample _begin**, and then double-click **LoggingExample .sln**.
+
+#### Demonstration Steps
+
 1. In the **LoggingExample - Microsoft Visual Studio** window, on the **VIEW** menu, point to **Other Windows**, and then click **Package Manager Console**.
 
 2. In the **Package Manager Console** type **Install-Package Serilog.Extensions.Logging.File -Version 2.0.0-dev-00024**.
@@ -298,6 +304,8 @@
         var env = hostingContext.HostingEnvironment;
         var config = hostingContext.Configuration.GetSection("Logging");
 
+        logging.ClearProviders();
+
         if (env.IsDevelopment())
         {
             logging.AddConfiguration(config);
@@ -307,7 +315,7 @@
         if (env.IsProduction())
         {
             logging.AddFile(config);
-        }                
+        }
     })
 ```
 
@@ -387,7 +395,7 @@
     }
 ```
 
-19. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+19. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 20. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
@@ -422,7 +430,7 @@
         _logger.LogDebug($"The number {number} was added to the views count dictionary");
     }
 ```
-29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+29. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 30. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
 

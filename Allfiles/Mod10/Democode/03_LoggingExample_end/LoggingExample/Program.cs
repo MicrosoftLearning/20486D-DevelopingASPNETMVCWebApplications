@@ -24,6 +24,8 @@ namespace LoggingExample
                 var env = hostingContext.HostingEnvironment;
                 var config = hostingContext.Configuration.GetSection("Logging");
 
+                logging.ClearProviders();
+
                 if (env.IsDevelopment())
                 {
                     logging.AddConfiguration(config);
@@ -35,6 +37,6 @@ namespace LoggingExample
                     logging.AddFile(config);
                 }
             })
-                .UseStartup<Startup>();
+            .UseStartup<Startup>();
     }
 }
