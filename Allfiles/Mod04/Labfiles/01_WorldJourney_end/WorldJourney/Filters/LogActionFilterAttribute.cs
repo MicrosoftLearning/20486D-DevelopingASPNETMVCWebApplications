@@ -9,29 +9,29 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace WorldJourney.Filters
 {
-    public class LogActionFilter : ActionFilterAttribute
+    public class LogActionFilterAttribute : ActionFilterAttribute
     {
         private IHostingEnvironment _environment;
-        private string contentRootPath;
-        private string logPath;
-        private string fileName;
-        private string fullPath;
+        private string _contentRootPath;
+        private string _logPath;
+        private string _fileName;
+        private string _fullPath;
 
-        public LogActionFilter(IHostingEnvironment environment)
+        public LogActionFilterAttribute(IHostingEnvironment environment)
         {
             _environment = environment;
-            contentRootPath = _environment.ContentRootPath;
-            logPath = contentRootPath + "\\LogFile\\";
-            fileName = $"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt";
-            fullPath = logPath + fileName;
+            _contentRootPath = _environment.ContentRootPath;
+            _logPath = _contentRootPath + "\\LogFile\\";
+            _fileName = $"log {DateTime.Now.ToString("MM-dd-yyyy-H-mm")}.txt";
+            _fullPath = _logPath + _fileName;
         }
 
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            Directory.CreateDirectory(logPath);
+            Directory.CreateDirectory(_logPath);
             string actionName = filterContext.ActionDescriptor.RouteValues["action"];
             string controllerName = filterContext.ActionDescriptor.RouteValues["controller"];
-            using (FileStream fs = new FileStream(fullPath, FileMode.Create))
+            using (FileStream fs = new FileStream(_fullPath, FileMode.Create))
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
@@ -44,7 +44,7 @@ namespace WorldJourney.Filters
         {
             string actionName = filterContext.ActionDescriptor.RouteValues["action"];
             string controllerName = filterContext.ActionDescriptor.RouteValues["controller"];
-            using (FileStream fs = new FileStream(fullPath, FileMode.Append))
+            using (FileStream fs = new FileStream(_fullPath, FileMode.Append))
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
@@ -58,7 +58,7 @@ namespace WorldJourney.Filters
             string actionName = filterContext.ActionDescriptor.RouteValues["action"];
             string controllerName = filterContext.ActionDescriptor.RouteValues["controller"];
             ViewResult result = (ViewResult)filterContext.Result;
-            using (FileStream fs = new FileStream(fullPath, FileMode.Append))
+            using (FileStream fs = new FileStream(_fullPath, FileMode.Append))
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
@@ -68,4 +68,3 @@ namespace WorldJourney.Filters
         }
     }
 }
-

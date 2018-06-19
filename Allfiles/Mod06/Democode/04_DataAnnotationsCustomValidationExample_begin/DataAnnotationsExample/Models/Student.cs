@@ -10,15 +10,15 @@ namespace DataAnnotationsExample.Models
     {
         public int StudentId { get; set; }
 
-		[Display(Name = "First Name:")]
+        [Display(Name = "First Name:")]
         [Required(ErrorMessage = "Please enter your first name.")]
         public string FirstName { get; set; }
 
-		[Display(Name = "Last Name:")]
+        [Display(Name = "Last Name:")]
         [Required(ErrorMessage = "Please enter your last name.")]
         public string LastName { get; set; }
 
-		[Display(Name = "Birthdate:")]
+        [Display(Name = "Birthdate:")]
         [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }
         public bool UniversityStudent { get; set; }

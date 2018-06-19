@@ -1,5 +1,6 @@
 ﻿@model DataAnnotationsExample.Models.User
 
+
 <!DOCTYPE html>
 
 <html>
@@ -11,21 +12,21 @@
 <body>
     <div class="container">
         <h1>Create An Account</h1>
-            <form asp-action="Details" method="post">
-                <label asp-for="FullName"></label>
-                <input asp-for="FullName" />
-                <br />
-                <label asp-for="Email"></label>
-                <input asp-for="Email" />
-                <br />
-                <label asp-for="Birthdate"></label>
-                <input asp-for="Birthdate" />
-                <br />
-                <label asp-for="Password"></label>
-                <input asp-for="Password" />
-                <br />
-                <input type="submit" value="Register" />
-            </form>
+        <form asp-action="Details" method="post">
+            <label asp-for="FullName"></label>
+            <input asp-for="FullName" />
+            <br />
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <br />
+            <label asp-for="Birthdate"></label>
+            <input asp-for="Birthdate" />
+            <br />
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <br />
+            <input type="submit" value="Register" />
+        </form>
     </div>
 </body>
 </html>

@@ -1,19 +1,13 @@
-﻿body{
-    text-align:center;
+﻿body {
+    text-align: center;
 }
 
-input {
+input, textarea {
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
-    width:250px;
-    text-align:left;
-}
-
-textarea {
     width: 250px;
-    height:45px;
-    margin-top:10px;
+    text-align: left;
 }
 
 label {
@@ -21,14 +15,14 @@ label {
     width: 180px;
     font-weight: bold;
     font-size: 24px;
-    text-align:left;
-    vertical-align:top;
+    text-align: left;
+    vertical-align: top;
 }
-
 
 span, li {
     color: red;
     font-size: 20px;
+    width: 350px;
 }
 
 ul {
@@ -40,19 +34,19 @@ h1 {
     margin-bottom: 15px;
     font-size: 33px;
     color: darkgreen;
-    text-align:center;
+    text-align: center;
 }
 
 input[type=submit] {
     width: 200px;
     background-color: darkgreen;
     color: white;
-    margin-top: 30px;
+    margin: 30px auto;
     text-align: center;
 }
 
-form{
-    text-align:center;
+form {
+    text-align: center;
 }
 
 .display-prop-name {
@@ -71,15 +65,24 @@ form{
 
 .form-field {
     max-width: 605px;
-    margin:20px auto;
+    margin: 20px auto;
 }
 
-.form-field .validation-error,
-.form-field .field-validation-error {
+    .form-field .validation-error,
+    .form-field .field-validation-error {
         display: block;
+        text-align: left;
+    }
+
+.input-span {
+    display: inline-block;
+    width: 250px;
 }
 
-.input-span{
-    display:inline-block;
-    width:250px;
+.container {
+    max-width: 940px;
+    max-height: 780px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px #1e004f;
 }

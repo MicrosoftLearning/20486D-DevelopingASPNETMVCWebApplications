@@ -16,7 +16,7 @@ namespace ButterfliesShop.Controllers
         private IHostingEnvironment _environment;
         private IButterfliesQuantityService _butterfliesQuantityService;
 
-        public ButterflyController(IDataService data, IHostingEnvironment environment,IButterfliesQuantityService butterfliesQuantityService)
+        public ButterflyController(IDataService data, IHostingEnvironment environment, IButterfliesQuantityService butterfliesQuantityService)
         {
             _data = data;
             _environment = environment;

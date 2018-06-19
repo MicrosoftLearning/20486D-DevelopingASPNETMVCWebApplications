@@ -6,13 +6,14 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+**(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 2. Go to **Allfiles\Mod06\Democode\01_BindViewsExample_begin**, and then double-click **BindViewsExample.sln**.
 
 #### Demonstration Steps
 
-1. In the **Solution Explorer**, right-click **BindViewsExample**, point to **Add**, and then click **New Folder**.
+1. In **Solution Explorer**, right-click **BindViewsExample**, point to **Add**, and then click **New Folder**.
 
 2. In the **NewFolder** text box, type **Models**, and then press Enter.
 
@@ -20,7 +21,7 @@
 
 4. In the **Add New Item – BindViewsExample** dialog box, in the **Name** text box, type **Restaurant**, and then click **Add**.
 
-5. In the **Restaurant.cs** code block, place the cursor after the second **{** (opening brackets) sign, press Enter, and then type the following code:
+5. In the **Restaurant.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
        public int Id { get; set; }
        public string Name { get; set; }
@@ -92,7 +93,7 @@
        <p><b>Rating</b>: @Model.Review</p>
 ```
 
-18. In the **BindViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, and then click **AnotherWayToDisplay.cshtml**.
+18. In the **BindViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, click **AnotherWayToDisplay.cshtml**.
 
 19. In the **AnotherWayToDisplay.cshtml** code window, locate the following code:
   ```cs
@@ -115,21 +116,21 @@
        @Html.EditorForModel()
 ```
 
-23. On the **FILE** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Save All**.
+23. In the **BindViewsExample - Microsoft Visual Studio** window, On the **FILE** menu, click **Save All**.
 
-24. On the **DEBUG** menu of the **BindViewsExample - Microsoft Visual Studio** window, click **Start Debugging**.
+24. In the **BindViewsExample - Microsoft Visual Studio** window, On the **DEBUG** menu, click **Start Debugging**.
 
        >**Note:** The browser window displays the **Index.cshtml** view. 
 
-25. In the Address bar of the **Microsoft Edge** window, type **http://localhost:[port]/Home/Display**, and then press Enter.
+25. In **Microsoft Edge**, in the Address bar, type **http://localhost:[port]/Home/Display**, and then press Enter.
 
       >**Note:** The browser window displays the **AnotherWayToDisplay.cshtml** view. 
 
-26. In the **Microsoft Edge** window, click **Close**.
+26. In **Microsoft Edge**, click **Close**.
 
-27. In the **BindViewsExample - Microsoft Visual Studio** window, click **Stop Debugging**.
+27. In the **BindViewsExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-28. In the **BindViewsExample - Microsoft Visual Studio** window, click **Close**.
+28. In **BindViewsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Working with Forms
 
@@ -137,8 +138,8 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
- https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+**(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 2. Go to **Allfiles\Mod06\Democode\02_DataAnnotationsExample_begin**, and then double-click **DataAnnotationsExample.sln**.
 
@@ -150,7 +151,7 @@
   ```cs
       using System.Threading.Tasks;
 ```
-3. Ensure that the cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code:
+3. Ensure that the cursor is at the end of the **System.Threading.Tasks** namespace, press Enter, and then type the following code:
   ```cs
       using System.ComponentModel.DataAnnotations;
 ```
@@ -214,7 +215,7 @@
         </form>
 ```
 
-13. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, and then click **Details.cshtml**.
+13. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, click **Details.cshtml**.
 
 14. In the **Details.cshtml** code window, locate the following code:
   ```cs
@@ -235,27 +236,33 @@
 ```
 17. In the **DIV** element of the **Details.cshtml** code window, after the **H1** element type the following code:
   ```cs
-       <span class="display-prop-name">
-           @Html.DisplayNameFor(model => model.FullName)
-       </span>
-       <br />
-       <span class="display-prop-value">
-           @Html.DisplayFor(model => model.FullName)
-       </span>
-       <span class="display-prop-name">
-           @Html.DisplayNameFor(model => model.Email)
-       </span>
-       <br />
-       <span class="display-prop-value">
-           @Html.DisplayFor(model => model.Email)
-       </span>
-       <span class="display-prop-name">
-           @Html.DisplayNameFor(model => model.Birthdate)
-       </span>
-       <br />
-       <span class="display-prop-value">
-           @Html.DisplayFor(model => model.Birthdate)
-       </span>
+       <div>
+            <span class="display-prop-name">
+                @Html.DisplayNameFor(model => model.FullName)
+            </span>
+            <br />
+            <span class="display-prop-value">
+                @Html.DisplayFor(model => model.FullName)
+            </span>
+        </div>
+        <div>
+            <span class="display-prop-name">
+                @Html.DisplayNameFor(model => model.Email)
+            </span>
+            <br />
+            <span class="display-prop-value">
+                @Html.DisplayFor(model => model.Email)
+            </span>
+        </div>
+        <div>
+            <span class="display-prop-name">
+                @Html.DisplayNameFor(model => model.Birthdate)
+            </span>
+            <br />
+            <span class="display-prop-value">
+                @Html.DisplayFor(model => model.Birthdate)
+            </span>
+        </div>
 ```
 >**Note:** This code block generates different HTML markup depending on the data type of the property that is being rendered.
 
@@ -273,9 +280,9 @@
 
       >**Note:** Verify the newly registered user details.
 
-24. In the **Microsoft Edge**, click **Close**.
+24. In **Microsoft Edge**, click **Close**.
 
-25. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+25. In the **DataAnnotationsExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
 26. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -285,14 +292,14 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
- https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+**(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 2. Go to **Allfiles\Mod06\Democode\03_DataAnnotationsValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
 
 #### Demonstration Steps
 
-1. In the **DataAnnotationsExample - Microsoft Visual Studio** window, **Solution Explorer**, expand **Models**, and then click **Person.cs**.
+1. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Models**, and then click **Person.cs**.
 
 2. In the **Person.cs** code window, locate the following code:
   ```cs
@@ -327,14 +334,14 @@
       [StringLength(10)]
       [Display(Name = "Description:")]
 ```
-8. In the **DataAnnotationsExample - Microsoft Visual Studio** window, **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
+8. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
 
 9. In the **HomeController** code window, locate the following code:
   ```cs
       public IActionResult Details(Person person)
       {
 ```
-10. Place the mouse cursor after the **{** (opening brackets) sign, press Enter, and then type the following code:
+10. Place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
       if (!ModelState.IsValid)
       {
@@ -342,7 +349,7 @@
       }
 ```
 
-11. In the **DataAnnotationsExample - Microsoft Visual Studio** window, **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**. 
+11. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**. 
 
 12. In the **Index.cshtml** code window, locate the following code:
   ```cs
@@ -397,7 +404,7 @@
             </div>
         </form>
 ```
-16. In the **DataAnnotationsExample - Microsoft Visual Studio** window, **Solution Explorer**, under **Views**, under **Home**, examine the **Details.cshtml** file content.
+16. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, examine the **Details.cshtml** file content.
 
 17. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
@@ -409,23 +416,23 @@
 
 21. On the **Submit Personal Information** page, in the **Age** text box, type 5.
 
-22. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;More than ten characters&gt;_, and then click the **Submit** button.
+22. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;A description of your choice with more than ten characters&gt;_, and then click **Submit**.
 
       >**Note:** The browser window displays the **Index.cshtml** view with validation messages.
 
-23. On the **Submit Personal Information** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+23. On the **Submit Personal Information** page, in the **First Name** text box, type _&lt;A first name of your choice with at least one character&gt;._
 
-24. On the **Submit Personal Information** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+24. On the **Submit Personal Information** page, in the **Last Name** text box, type _&lt;A last name of your choice at least one character&gt;._
 
 25. On the **Submit Personal Information** page, in the **Age** text box, type 20.
 
-26. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;Less than ten characters&gt;_, and then click the **Submit** button.
+26. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;A description of your choice with less than ten characters&gt;_, and then click **Submit**.
 
       >**Note:** The browser window displays the **Details.cshtml** view with the newly submitted personal information.
 
-27. In the **Microsoft Edge**, click **Close**.
+27. In **Microsoft Edge**, click **Close**.
 
-28. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+28. In the **DataAnnotationsExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
 29. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -435,18 +442,18 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
- https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+**(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 2. Go to **Allfiles\Mod06\Democode\04_DataAnnotationsCustomValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
 
 #### Demonstration Steps
 
-1. In the **DataAnnotationsExample - Microsoft Visual Studio** window, **Solution Explorer**, right-click **DataAnnotationsExample**, point to **Add**, and then click **New Folder**.
+1. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **DataAnnotationsExample**, point to **Add**, and then click **New Folder**.
 
 2. In the **NewFolder** text box, type **Validators**, and then press Enter.
 
-3. In the **DataAnnotationsExample - Microsoft Visual Studio** window, **Solution Explorer**, right-click **Validators**, point to Add, and then click **Class**.
+3. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Validators**, point to Add, and then click **Class**.
 
 4. In the **Add New Item – DataAnnotationsExample** dialog box, in the **Name** text box, type **InUniversityValidationAttribute**, and then click **Add**.
 
@@ -468,14 +475,14 @@
       : ValidationAttribute
 ```
 
-9. In the **InUniversityValidationAttribute.cs** code block, press Enter, and type the following code:
+9. In the **InUniversityValidationAttribute.cs** code block, press Enter, and then type the following code:
   ```cs
       protected override ValidationResult IsValid(object value, ValidationContext validationContext)
       {
       }
 ```
 
-10. In the **IsValid** method code block, press Enter, and type the following code:
+10. In the **IsValid** method code block, press Enter, and then type the following code:
   ```cs
       Student student = (Student)validationContext.ObjectInstance;
       if (!student.UniversityStudent)
@@ -486,13 +493,13 @@
 ```
 >**Note:** This code block validates whether the student is a university student or not.
 
-11. In the Solution Explorer pane of the **DataAnnotationsExample - Microsoft Visual Studio** window, expand **Models**, and then click **Student.cs**.
+11. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **solution Explorer**, expand **Models**, and then click **Student.cs**.
 
 12. In the **Student.cs** code window, locate the following code:
   ```cs
       using System.Threading.Tasks;
 ```
-13. Ensure that the cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code:
+13. Ensure that the cursor is at the end of the **System.Threading.Tasks** namespace, press Enter, and then type the following code:
   ```cs
       using DataAnnotationsExample.Validators;
 ```
@@ -505,25 +512,25 @@
 
 15. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-16. In the **DataAnnotationsExample - Microsoft Visual Studio** window, 0n the **DEBUG** menu, click **Start Debugging**.
+16. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-17. On the **Submit Student Information** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+17. On the **Submit Student Information** page, in the **First Name** text box, type _&lt;A first name of your choice with at least one character&gt;._
 
-18. On the **Submit Student Information** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+18. On the **Submit Student Information** page, in the **Last Name** text box, type _&lt;A last name of your choice with at least one character&gt;._
 
 19. On the **Submit Student Information** page, in the **Birthdate** text box, choose _&lt;A birthdate of your choice&gt;._
 
-20. On the **Submit Student Information** page, ensure that **Are you a university student?** checkbox is not selected, and then click the **Submit** button.
+20. On the **Submit Student Information** page, ensure that **Are you a university student?** checkbox is not selected, and then click **Submit**.
 
-      >**Note:** The browser window displays the **Index.cshtml** view with custom validation message beside the **Are you a university student?** checkbox.
+      >**Note:** The browser window displays the **Index.cshtml** view with custom validation message below the **Are you a university student?** checkbox.
 
-21. On the **Submit Student Information**, ensure that **Are you a university student?** checkbox is selected, and then click the **Submit** button. 
+21. On the **Submit Student Information**, ensure that **Are you a university student?** checkbox is selected, and then click **Submit**. 
 
       >**Note:** Verify the newly submitted student information.
 
-22. In the **Microsoft Edge** window, click **Close**.
+22. In **Microsoft Edge**, click **Close**.
 
-23. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+23. In the **DataAnnotationsExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
 24. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
