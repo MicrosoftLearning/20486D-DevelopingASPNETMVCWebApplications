@@ -286,18 +286,14 @@
 
 #### Demonstration Steps
 
-1. In the **LoggingExample - Microsoft Visual Studio** window, on the **VIEW** menu, point to **Other Windows**, and then click **Package Manager Console**.
+1. In **Solution Explorer**, click **Program.cs**. 
 
-2. In the **Package Manager Console** type **Install-Package Serilog.Extensions.Logging.File -Version 2.0.0-dev-00024**.
-
-3. In **Solution Explorer**, click **Program.cs**. 
-
-4. In the **Program.cs** code window, locate the following code:
+2. In the **Program.cs** code window, locate the following code:
 ```cs
     WebHost.CreateDefaultBuilder(args)
 ```
 
-5. Place the cursor at the end of the located code, press Enter, and then type the following code:
+3. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     .ConfigureLogging((hostingContext, logging) =>
     {
@@ -319,9 +315,9 @@
     })
 ```
 
-6. In **Solution Explorer**, expand **appsettings.json**, and then click **appsettings.development.json**
+4. In **Solution Explorer**, expand **appsettings.json**, and then click **appsettings.development.json**
 
-7. Place the cursor after the **{** (opening brackets) sign, press Enter, and then type the following code:
+5. Place the cursor after the **{** (opening brackets) sign, press Enter, and then type the following code:
 ```cs
     "Logging": {
        "LogLevel": {
@@ -330,9 +326,9 @@
     }
 ```
 
-8. In **Solution Explorer**, under **appsettings.json**, and then click **appsettings.production.json**
+6. In **Solution Explorer**, under **appsettings.json**, and then click **appsettings.production.json**
 
-9. Place the cursor after the **{** (opening brackets) sign, press Enter, and then type the following code:
+7. Place the cursor after the **{** (opening brackets) sign, press Enter, and then type the following code:
 ```cs
     "Logging": {
       "PathFormat": "myLog.txt",
@@ -342,46 +338,46 @@
     }
 ```
 
-10. In **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**. 
+8. In **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**. 
 
-11. In the **HomeController.cs** code window, locate the following code:
+9. In the **HomeController.cs** code window, locate the following code:
 ```cs
     ICounter _counter;
 ```
 
-12. Place the cursor at the end of the located code, press Enter, and then type the following code:
+10. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     ILogger _logger;
 ```
 
-13. In the **HomeController.cs** code window, select the following code:
+11. In the **HomeController.cs** code window, select the following code:
 ```cs
     public HomeController(IDivisionCalculator numberCalculator, ICounter counter)
 ```
 
-14. Replace the selected code with the following code:
+12. Replace the selected code with the following code:
 ```cs
     public HomeController(IDivisionCalculator numberCalculator, ICounter counter, ILogger<HomeController> logger)
 ```
 
-15. In the **HomeController.cs** code window, locate the following code:
+13. In the **HomeController.cs** code window, locate the following code:
 ```cs
     _numberCalculator = numberCalculator;
 ```
 
-16. Place the cursor at the end of the located code, press Enter, and then type the following code:
+14. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     _logger = logger;
 ```
 
-17. In the **HomeController.cs** code window, select the following code:
+15. In the **HomeController.cs** code window, select the following code:
 ```cs
     _counter.IncrementNumberCount(id);
     ViewBag.NumberOfViews = _counter.NumberCounter[id];
     ViewBag.CounterSucceeded = true;
 ```
 
-18. Replace the selected code with the following code:
+16. Replace the selected code with the following code:
 ```cs
     try
     {
@@ -395,29 +391,29 @@
     }
 ```
 
-19. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+17. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-20. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
+18. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
-21. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+19. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-22. In **Microsoft Edge**, click **16**.
+20. In **Microsoft Edge**, click **16**.
     >**Note:** The browser does not display a text that shows the number of times that the page was displayed.
 
-23. In **Microsoft Edge**, click **Close**.
+21. In **Microsoft Edge**, click **Close**.
 
-24. In the **LoggingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+22. In the **LoggingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-25. In the **LoggingExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **myLog-XXXXXXXX.txt**, and then inspect the **KeyNotFoundException** stack trace.
+23. In the **LoggingExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **myLog-XXXXXXXX.txt**, and then inspect the **KeyNotFoundException** stack trace.
 
-26. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
+24. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
 
-27. In the **Counter.cs** code window, select the following code:
+25. In the **Counter.cs** code window, select the following code:
 ```cs
     NumberCounter[number]++;
 ```
 
-28. Replace the selected code with the following code:
+26. Replace the selected code with the following code:
 ```cs
     if (NumberCounter.ContainsKey(number))
     {
@@ -430,22 +426,24 @@
         _logger.LogDebug($"The number {number} was added to the views count dictionary");
     }
 ```
-29. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+27. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-30. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
+28. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
 
-31. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+29. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-32. In the **LoggingExample - Microsoft Visual Studio** window,  In the **Output** window, click  the **Show output from** drop down, select the **ASP .NET Core Web Server** option, and then click the **Clear All** button.
+30. In the **LoggingExample - Microsoft Visual Studio** window,  In the **Output** window, click  the **Show output from** drop down, select the **ASP .NET Core Web Server** option, and then click the **Clear All** button.
 
-34. In **Microsoft Edge**, click **16**.
+31. In **Microsoft Edge**, click **16**.
     >**Note:** The browser displays a text that shows the number of times that the page was displayed.
 
-33. In the **LoggingExample (Running) - Microsoft Visual Studio** window, in the **Output** window, locate the text: "The number 16 was added to the views count dictionary".
+32. In the **LoggingExample (Running) - Microsoft Visual Studio** window, in the **Output** window, locate the text: "The number 16 was added to the views count dictionary".
 
-35. In **Microsoft Edge**, click **Close**.
+33. In **Microsoft Edge**, click **Close**.
 
-36. In the **LoggingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+34. In the **LoggingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-37. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+35. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+
+
 
