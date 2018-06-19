@@ -10,7 +10,7 @@ namespace HTMLHelpersExample.Controllers
     {
         public IActionResult Index()
         {
-            
+
             return View();
         }
 

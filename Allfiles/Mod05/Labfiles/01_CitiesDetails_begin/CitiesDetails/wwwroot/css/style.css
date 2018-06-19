@@ -1,5 +1,4 @@
 ﻿html {
-    /*background: filter(url('istock-497944862.jpg'), blur(5px));*/
     background-image: linear-gradient(rgba(47,79,79,0.75),rgba(47,79,79,0.75)), url('../images/block.jpg');
     background-position: center center;
     background-repeat: repeat-y;

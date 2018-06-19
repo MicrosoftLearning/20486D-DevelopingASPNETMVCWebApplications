@@ -9,15 +9,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
-    <link href="~/CSS/StyleSheet.css" rel="stylesheet" />
+    <link href="~/CSS/style.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Employee Details</h1>
-    <br />
     <p>
         Name: @ViewBag.SelectedPerson
     </p>
-    <br />
     <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
     <p><a asp-action="Index">Back to person selection list</a></p>
 </body>
