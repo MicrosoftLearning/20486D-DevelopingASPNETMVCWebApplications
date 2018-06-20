@@ -55,7 +55,7 @@
 9. In the **P** element of the **Index.cshtml** code window, type the following code, and then press Enter.
 ```cs
     <div>
-        Product Name: @productPrices.Key
+        Product name: @productPrices.Key
     </div>
 ```
 
@@ -70,10 +70,10 @@
 
 12. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays the following text:<br>
-    > "Product Name: Bread<br>
+    > "Product name: Bread<br>
     > Product price including tax: 5 * 1.2<br>
     > <br>
-    > Product Name: Rice<br>
+    > Product name: Rice<br>
     > Product price including tax: 3 * 1.2"
     
 13. In **Microsoft Edge**, click **Close**.
@@ -94,11 +94,11 @@
 
 18. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays the following text:<br>
-    > "Product Name: Bread<br>
-    > Product Price including tax: 6<br>
+    > "Product name: Bread<br>
+    > Product price including tax: 6<br>
     > <br>
-    > Product Name: Rice<br>
-    > Product Price including tax: 3.6"
+    > Product name: Rice<br>
+    > Product price including tax: 3.6"
     
 19. In **Microsoft Edge**, click **Close**.
 
