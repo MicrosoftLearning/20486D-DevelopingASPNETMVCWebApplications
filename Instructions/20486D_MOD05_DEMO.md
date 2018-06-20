@@ -39,7 +39,7 @@
     
 7. In the **Index.cshtml** code window, in the **BODY** element, press Enter, and then type the following code:
 ```cs
-    @foreach (KeyValuePair<string, int> ProductPrices in ViewBag.ProductPrices)
+    @foreach (KeyValuePair<string, int> productPrices in ViewBag.ProductPrices)
     {
 
     }
@@ -55,14 +55,14 @@
 9. In the **P** element of the **Index.cshtml** code window, type the following code, and then press Enter.
 ```cs
     <div>
-        Product Name: @ProductPrices.Key
+        Product Name: @productPrices.Key
     </div>
 ```
 
 10. In the **P** element, below the **DIV** element, type the following code:
 ```cs
     <div>
-        Product price including tax: @ProductPrices.Value * 1.2
+        Product price including tax: @productPrices.Value * 1.2
     </div>
 ```
 
@@ -82,12 +82,12 @@
 
 15. In the **Index.cshtml** code window, select the following code:
 ```cs
-    Product price including tax: @ProductPrices.Value * 1.2
+    Product price including tax: @productPrices.Value * 1.2
 ```
 
 16. Replace the selected code with the following code:
 ```cs
-    Product price including tax: @(ProductPrices.Value * 1.2)
+    Product price including tax: @(productPrices.Value * 1.2)
 ```
 
 17. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
