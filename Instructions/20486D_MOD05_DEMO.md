@@ -62,7 +62,7 @@
 10. In the **P** element, below the **DIV** element, type the following code:
 ```cs
     <div>
-        Product Price including tax: @ProductPrices.Value * 1.2
+        Product price including tax: @ProductPrices.Value * 1.2
     </div>
 ```
 
@@ -71,10 +71,10 @@
 12. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays the following text:<br>
     > "Product Name: Bread<br>
-    > Product Price including tax: 5 * 1.2<br>
+    > Product price including tax: 5 * 1.2<br>
     > <br>
     > Product Name: Rice<br>
-    > Product Price including tax: 3 * 1.2"
+    > Product price including tax: 3 * 1.2"
     
 13. In **Microsoft Edge**, click **Close**.
 
@@ -82,12 +82,12 @@
 
 15. In the **Index.cshtml** code window, select the following code:
 ```cs
-    Product Price including tax: @ProductPrices.Value * 1.2
+    Product price including tax: @ProductPrices.Value * 1.2
 ```
 
 16. Replace the selected code with the following code:
 ```cs
-    Product Price including tax: @(ProductPrices.Value * 1.2)
+    Product price including tax: @(ProductPrices.Value * 1.2)
 ```
 
 17. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
