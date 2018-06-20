@@ -37,6 +37,10 @@ h1 {
     opacity: 0.8;
 }
 
+a {
+    text-decoration: none;
+}
+
 a:link {
     color: white;
     opacity: 0.8;

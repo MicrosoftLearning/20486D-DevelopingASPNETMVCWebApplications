@@ -188,7 +188,6 @@
 15. In the **Details.cshtml** code window, locate the following code:
 ```cs
     </p>
-    <br />
 ```
 
 16. Place the cursor at the end of the located code, press Enter, and then type the following code:

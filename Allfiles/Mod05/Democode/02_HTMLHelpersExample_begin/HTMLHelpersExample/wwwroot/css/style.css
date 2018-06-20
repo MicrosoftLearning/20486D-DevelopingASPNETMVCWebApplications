@@ -47,6 +47,10 @@ a:visited {
     opacity: 0.8;
 }
 
+a {
+    text-decoration: none;
+}
+
 a:hover {
     color: white;
     opacity: 0.8;
