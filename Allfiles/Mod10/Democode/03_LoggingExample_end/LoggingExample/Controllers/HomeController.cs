@@ -40,7 +40,7 @@ namespace LoggingExample.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"An error occured while trying to increase or retrieve the time the page was viewed. Number parameter is: {id}");
+                _logger.LogError(ex, $"An error occured while trying to increase or retrieve the page display count. Number parameter is: {id}");
             }
 
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
