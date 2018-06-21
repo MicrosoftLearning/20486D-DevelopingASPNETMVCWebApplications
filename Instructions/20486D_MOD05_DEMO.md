@@ -444,10 +444,9 @@
 11. In the **Add MVC View** dialog box, in the **View name** text box, type **_CardDesign**.
 
 12. In the **Add MVC View** dialog box, verify that the **Create as a partial view** check box is marked, and then click **Add**.
-    >**Note**: In the **Add MVC View** dialog box, the **Reference script libraries** check box can be unchecked by setting the Template to Edit. Ensure setting back the Template to **Empty (without model)**.<br>
 
 13. In the **_CardDesign.cshtml** code window, delete the following code:
-```cs
+```
     @*
         For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
     *@
@@ -467,7 +466,7 @@
 15. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 16. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-    >**Note**: A table with cards is show. Each card contains information of a person including: First Name, Last Name, Residence, and Phone.
+    >**Note**: A table with cards is shown. Each card contains information of a person including: First Name, Last Name, Residence, and Phone.
      
 17. In **Microsoft Edge**, click **Close**.
 
