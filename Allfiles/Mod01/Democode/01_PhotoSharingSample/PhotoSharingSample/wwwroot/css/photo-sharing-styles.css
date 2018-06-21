@@ -5,8 +5,8 @@
     font-weight: 200;
     color: rgb(85, 85, 85);
     background-image: linear-gradient(#afeeee 15%, #000000 );
-    max-width:1240px;
-    margin:0 auto;
+    max-width: 1240px;
+    margin: 0 auto;
 }
 
 .main-title {
@@ -77,7 +77,7 @@ a:hover {
     width: 150px;
     margin: 25px 1px 5px 1px;
     font-weight: bold;
-    font-size:large;
+    font-size: large;
 }
 
 .display-picture-title {
@@ -90,7 +90,7 @@ a:hover {
 .display-field {
     margin-left: auto;
     margin-right: auto;
-    font-size:medium;
+    font-size: medium;
 }
 
 .editor-label {
@@ -131,6 +131,5 @@ a:hover {
 .photo-display-img {
     width: 325px;
     max-height: 250px;
-    margin:15px 5px 15px 5px;
+    margin: 15px 5px 15px 5px;
 }
-
