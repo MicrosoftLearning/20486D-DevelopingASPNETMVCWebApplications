@@ -166,7 +166,7 @@ The main tasks for this exercise are as follows:
 10. In the **BODY** element, create a **DIV** element.
 
 11. In the **DIV** element, add a **H2** element with the following information:
-    - Content:  **ViewBag.City.Name** 
+    - Content:  **@ViewBag.City.Name** 
 
 12. Add a **P** element with the following information:
     - Content:  **Country:  @ViewBag.City.Country** 
