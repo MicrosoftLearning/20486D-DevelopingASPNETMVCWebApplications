@@ -514,7 +514,7 @@
     public class PersonCardViewComponent : ViewComponent
 ```
 
-9.	In the **PersonCardViewComponent.cs** code window, place the cursor within the **PersonCardViewComponent.cs** code block, and then type the following code:
+9.	In the **PersonCardViewComponent.cs** code window, place the cursor within the **PersonCardViewComponent** class code block, and then type the following code:
 ```cs
     public IViewComponentResult Invoke(int id)
     {
