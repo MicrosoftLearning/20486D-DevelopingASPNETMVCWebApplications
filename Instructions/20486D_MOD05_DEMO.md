@@ -20,9 +20,9 @@
     {
 ```
 
-3. Place the cursor at the end of the located code, type the following code, and then press Enter.
+3. Place the cursor at the end of the located code, type the following code:
 ```cs
-    ViewBag.ProductPrices = new Dictionary<string,int>();
+    ViewBag.ProductPrices = new Dictionary<string, int>();
     ViewBag.ProductPrices.Add("Bread", 5);
     ViewBag.ProductPrices.Add("Rice", 3);
 ```
@@ -34,13 +34,12 @@
 
 5. Right-click on the **Index** method name, and then click **Add View**.
 
-6. In the **Add MVC View** dialog box, ensure that the check boxes are cleared, and then click **Add**.
-    >**Note**: In the **Add MVC View** dialog box, the **Reference script libraries** check box can be unchecked by setting the Template to Edit. Ensure setting back the Template to **Empty (without model)**.<br>
-    After clicking **Add**, **Index.cshtml** would be created under **Product** folder that is under **Views** folder.
+6. In the **Add MVC View** dialog box, ensure that **Create as a partial view** and **Use a layout page** check boxes are cleared, and then click **Add**.
+    >**Note**: Ensure that **Index.cshtml** file was created under the **Product** folder that is under the **Views** folder. 
     
 7. In the **Index.cshtml** code window, in the **BODY** element, press Enter, and then type the following code:
 ```cs
-    @foreach (KeyValuePair<string, int> ProductPrices in ViewBag.ProductPrices)
+    @foreach (KeyValuePair<string, int> productPrices in ViewBag.ProductPrices)
     {
 
     }
@@ -56,14 +55,14 @@
 9. In the **P** element of the **Index.cshtml** code window, type the following code, and then press Enter.
 ```cs
     <div>
-        Product Name: @ProductPrices.Key
+        Product name: @productPrices.Key
     </div>
 ```
 
 10. In the **P** element, below the **DIV** element, type the following code:
 ```cs
     <div>
-        Product Price + Tax: @ProductPrices.Value * 1.2
+        Product price including tax: @productPrices.Value * 1.2
     </div>
 ```
 
@@ -71,11 +70,11 @@
 
 12. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays the following text:<br>
-    > "Product Name: Bread<br>
-    > Product Price + Tax: 5 * 1.2<br>
+    > "Product name: Bread<br>
+    > Product price including tax: 5 * 1.2<br>
     > <br>
-    > Product Name: Rice<br>
-    > Product Price + Tax: 3 * 1.2"
+    > Product name: Rice<br>
+    > Product price including tax: 3 * 1.2"
     
 13. In **Microsoft Edge**, click **Close**.
 
@@ -83,23 +82,23 @@
 
 15. In the **Index.cshtml** code window, select the following code:
 ```cs
-    Product Price + Tax: @ProductPrices.Value * 1.2
+    Product price including tax: @productPrices.Value * 1.2
 ```
 
 16. Replace the selected code with the following code:
 ```cs
-    Product Price + Tax: @(ProductPrices.Value * 1.2)
+    Product price including tax: @(productPrices.Value * 1.2)
 ```
 
 17. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 18. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays the following text:<br>
-    > "Product Name: Bread<br>
-    > Product Price + Tax: 6<br>
+    > "Product name: Bread<br>
+    > Product price including tax: 6<br>
     > <br>
-    > Product Name: Rice<br>
-    > Product Price + Tax: 3.6"
+    > Product name: Rice<br>
+    > Product price including tax: 3.6"
     
 19. In **Microsoft Edge**, click **Close**.
 
@@ -188,7 +187,6 @@
 15. In the **Details.cshtml** code window, locate the following code:
 ```cs
     </p>
-    <br />
 ```
 
 16. Place the cursor at the end of the located code, press Enter, and then type the following code:
@@ -326,11 +324,11 @@
 
 24. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
 
-25. In the navigation pane of the **Add New Item – TagHelpersExample** dialog box, expand **Installed**, and then expand **ASP.NET Core**.
+25. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, expand **Installed**, and then expand **ASP.NET Core**.
 
-26. In the navigation pane of the **Add New Item – TagHelpersExample** dialog box, under **ASP.NET Core**, click **Web**.
+26. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, under **ASP.NET Core**, click **Web**.
 
-27. In the result pane of the **Add New Item – TagHelpersExample** dialog box, click **Razor View Imports**, and then click **Add**.
+27. In the **Add New Item – TagHelpersExample** dialog box, in the result pane, click **Razor View Imports**, and then click **Add**.
 
 28. In the **_ViewImports.cshtml** code window, type the following code:
 ```cs
@@ -387,11 +385,11 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod05\Democode\04_PartialViewExample_begin**, and then double-click **PartialViewExample.sln**.
+2. Go to **Allfiles\Mod05\Democode\04_PartialViewsExample_begin**, and then double-click **PartialViewsExample.sln**.
 
 #### Demonstration Steps
 
-1. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Services**, and then click **Person.cs**.
+1. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Services**, and then click **Person.cs**.
 
 2. In the **Person.cs** code window, place the cursor within the **Person** constructor code block, and then type the following code: 
 ```cs
@@ -401,14 +399,14 @@
     PhoneNumber = phoneNumber;
 ```
 
-3. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **PersonProvider.cs**.
+3. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **PersonProvider.cs**.
 
 4. In the **PersonProvider.cs** code window, place the cursor within the **PersonProvider** constructor code block, and then type the following code:
 ```cs
     _personList = PersonInitializer();
 ```
 
-5. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+5. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
 6. In the **Index.cshtml** code window, locate the following code:
 ```cs
@@ -425,11 +423,11 @@
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-8. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
+8. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
 
 9. In the **NewFolder** text box, type **Shared**, and then press Enter.
 
-10. In the **PartialViewExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Shared**, point to **Add**, and then click **View**.
+10. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Shared**, point to **Add**, and then click **View**.
     
 11. In the **Add MVC View** dialog box, in the **View name** text box, type **_CardDesign**.
 
@@ -446,7 +444,7 @@
 14. In the **_CardDesign.cshtml** code window, place the cursor at the beginning of the document, and then type the following code:
 ```cs
     @model int
-    @inject PartialViewExample.Services.IPersonProvider PersonList
+    @inject PartialViewsExample.Services.IPersonProvider PersonList
 
     <td>
         <div>First Name: @PersonList[Model].FirstName</div>
@@ -456,16 +454,16 @@
     </td>
 ```
 
-15. In the **PartialViewExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+15. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-16. In the **PartialViewExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+16. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: A table with cards is show. Each card contains information of a person including: First Name, Last Name, Residence, and Phone.
      
 17. In **Microsoft Edge**, click **Close**.
 
-18. In the **PartialViewExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+18. In the **PartialViewsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-21. In the **PartialViewExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+21. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Reusing Code in Views
 

@@ -7,10 +7,10 @@ namespace CitiesDetails.Services
 {
     public class CityPopulation
     {
-        public int _year;
-        public int _city;
-        public int _urban;
-        public int _metro;
+        public int Year { get; }
+        public int City { get; }
+        public int Urban { get; }
+        public int Metro { get; }
 
         public CityPopulation(int year, int city, int urban, int metro)
         {
