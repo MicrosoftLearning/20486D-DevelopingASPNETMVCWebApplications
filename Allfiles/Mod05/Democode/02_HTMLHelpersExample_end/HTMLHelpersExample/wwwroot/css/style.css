@@ -52,6 +52,10 @@ a:hover {
     opacity: 0.8;
 }
 
+a{
+    text-decoration: none;
+}
+
 a:active {
     color: white;
     opacity: 0.8;

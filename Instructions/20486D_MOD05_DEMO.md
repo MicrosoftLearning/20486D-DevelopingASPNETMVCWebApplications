@@ -20,9 +20,9 @@
     {
 ```
 
-3. Place the cursor at the end of the located code, type the following code, and then press Enter.
+3. Place the cursor at the end of the located code, type the following code:
 ```cs
-    ViewBag.ProductPrices = new Dictionary<string,int>();
+    ViewBag.ProductPrices = new Dictionary<string, int>();
     ViewBag.ProductPrices.Add("Bread", 5);
     ViewBag.ProductPrices.Add("Rice", 3);
 ```
@@ -34,13 +34,12 @@
 
 5. Right-click on the **Index** method name, and then click **Add View**.
 
-6. In the **Add MVC View** dialog box, ensure that the check boxes are cleared, and then click **Add**.
-    >**Note**: In the **Add MVC View** dialog box, the **Reference script libraries** check box can be unchecked by setting the Template to Edit. Ensure setting back the Template to **Empty (without model)**.<br>
-    After clicking **Add**, **Index.cshtml** would be created under **Product** folder that is under **Views** folder.
+6. In the **Add MVC View** dialog box, ensure that **Create as a partial view** and **Use a layout page** check boxes are cleared, and then click **Add**.
+    >**Note**: Ensure that **Index.cshtml** file was created under the **Product** folder that is under the **Views** folder. 
     
 7. In the **Index.cshtml** code window, in the **BODY** element, press Enter, and then type the following code:
 ```cs
-    @foreach (KeyValuePair<string, int> ProductPrices in ViewBag.ProductPrices)
+    @foreach (KeyValuePair<string, int> productPrices in ViewBag.ProductPrices)
     {
 
     }
@@ -56,14 +55,14 @@
 9. In the **P** element of the **Index.cshtml** code window, type the following code, and then press Enter.
 ```cs
     <div>
-        Product Name: @ProductPrices.Key
+        Product name: @productPrices.Key
     </div>
 ```
 
 10. In the **P** element, below the **DIV** element, type the following code:
 ```cs
     <div>
-        Product Price + Tax: @ProductPrices.Value * 1.2
+        Product price including tax: @productPrices.Value * 1.2
     </div>
 ```
 
@@ -71,11 +70,11 @@
 
 12. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays the following text:<br>
-    > "Product Name: Bread<br>
-    > Product Price + Tax: 5 * 1.2<br>
+    > "Product name: Bread<br>
+    > Product price including tax: 5 * 1.2<br>
     > <br>
-    > Product Name: Rice<br>
-    > Product Price + Tax: 3 * 1.2"
+    > Product name: Rice<br>
+    > Product price including tax: 3 * 1.2"
     
 13. In **Microsoft Edge**, click **Close**.
 
@@ -83,23 +82,23 @@
 
 15. In the **Index.cshtml** code window, select the following code:
 ```cs
-    Product Price + Tax: @ProductPrices.Value * 1.2
+    Product price including tax: @productPrices.Value * 1.2
 ```
 
 16. Replace the selected code with the following code:
 ```cs
-    Product Price + Tax: @(ProductPrices.Value * 1.2)
+    Product price including tax: @(productPrices.Value * 1.2)
 ```
 
 17. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 18. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays the following text:<br>
-    > "Product Name: Bread<br>
-    > Product Price + Tax: 6<br>
+    > "Product name: Bread<br>
+    > Product price including tax: 6<br>
     > <br>
-    > Product Name: Rice<br>
-    > Product Price + Tax: 3.6"
+    > Product name: Rice<br>
+    > Product price including tax: 3.6"
     
 19. In **Microsoft Edge**, click **Close**.
 
@@ -188,7 +187,6 @@
 15. In the **Details.cshtml** code window, locate the following code:
 ```cs
     </p>
-    <br />
 ```
 
 16. Place the cursor at the end of the located code, press Enter, and then type the following code:
