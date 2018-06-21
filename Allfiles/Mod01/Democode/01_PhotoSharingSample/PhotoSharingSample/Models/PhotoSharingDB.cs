@@ -81,15 +81,6 @@ namespace PhotoSharingSample.Models
                     PhotoFileName = "fungi.jpg",
                     ImageMimeType = "image/jpeg",
                     CreatedDate = DateTime.Today
-                },
-                new Photo
-                {
-                    PhotoID = 8,
-                    Title = "Coastal view",
-                    Description = "A view from my vacation in greece.",
-                    PhotoFileName = "zakynthos.jpg",
-                    ImageMimeType = "image/jpeg",
-                    CreatedDate = DateTime.Today
                 });
         }
     }

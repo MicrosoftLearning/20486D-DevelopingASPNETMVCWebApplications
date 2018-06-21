@@ -1,4 +1,9 @@
-﻿namespace ActorsRazorPages.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ActorsRazorPages.Models
 {
     public class Actor
     {
