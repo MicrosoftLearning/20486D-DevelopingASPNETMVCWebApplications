@@ -553,7 +553,7 @@
 21. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 22. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-    >**Note**: A table with cards is show. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
+    >**Note**: A table with cards is shown. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
      
 23. In **Microsoft Edge**, click **Close**.
 
