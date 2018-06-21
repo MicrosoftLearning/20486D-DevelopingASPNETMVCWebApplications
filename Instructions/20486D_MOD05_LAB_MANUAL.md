@@ -398,8 +398,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 3: Use the view component.
 
-1. In the **ShowCities** view, delete the content of the **FOREACH** statment and place the following information:
-    - Content: **@await Component.InvokeAsync("City", item.Key)**
+1. In the **ShowCities** view, delete the content of the **FOREACH** statment and add the following: **@await Component.InvokeAsync("City", item.Key)**
 
     > **Note**: The key of the  **CityProvider** item contains the city name.
 
