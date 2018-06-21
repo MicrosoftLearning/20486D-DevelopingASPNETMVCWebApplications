@@ -7,15 +7,7 @@ namespace PartialViewsExample.Services
 {
     public class PersonProvider : IPersonProvider
     {
-        List<Person> _personList;
-
-        public Person this[int index]
-        {
-            get
-            {
-                return _personList[index];
-            }
-        }
+        public List<Person> PersonList { get; private set; }
 
         public PersonProvider()
         {

@@ -403,10 +403,22 @@
 
 4. In the **PersonProvider.cs** code window, place the cursor within the **PersonProvider** constructor code block, and then type the following code:
 ```cs
-    _personList = PersonInitializer();
+    PersonList= PersonInitializer();
 ```
 
-5. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+5. In **Solution Explorer**, under **Controllers**, click **HomeController.cs**.
+
+6. In the **HomeController.cs** code window, locate the following code:
+```cs
+    ViewBag.Columns = 3;
+```
+
+7. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    ViewBag.People = _personProvider.PersonList;
+```
+
+5. In **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
 6. In the **Index.cshtml** code window, locate the following code:
 ```cs
@@ -444,13 +456,11 @@
 14. In the **_CardDesign.cshtml** code window, place the cursor at the beginning of the document, and then type the following code:
 ```cs
     @model int
-    @inject PartialViewsExample.Services.IPersonProvider PersonList
-
     <td>
-        <div>First Name: @PersonList[Model].FirstName</div>
-        <div>Last Name: @PersonList[Model].LastName</div>
-        <div>Residence: @PersonList[Model].Address</div>
-        <div>Phone: @PersonList[Model].PhoneNumber</div>
+        <div>First Name: @ViewBag.People[Model].FirstName</div>
+        <div>Last Name: @ViewBag.People[Model].LastName</div>
+        <div>Residence: @ViewBag.People[Model].Address</div>
+        <div>Phone: @ViewBag.People[Model].PhoneNumber</div>
     </td>
 ```
 
