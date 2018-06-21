@@ -336,7 +336,7 @@ The main tasks for this exercise are as follows:
 2. Create a new class with the following information:
 
     - Name: **CityViewComponent**
-    - Parent folder: **ViewComponents**
+    - Folder: **ViewComponents**
 
 3. In the **CityViewComponent** class, add **using** statement for the following namespaces:
 
