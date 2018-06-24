@@ -16,7 +16,7 @@ namespace EntityFrameworkExample
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseStaticFiles();
             app.UseMvc(routes =>

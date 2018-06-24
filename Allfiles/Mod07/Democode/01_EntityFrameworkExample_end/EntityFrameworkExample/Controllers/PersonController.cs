@@ -34,7 +34,9 @@ namespace EntityFrameworkExample.Controllers
 
         public IActionResult Create()
         {
-            _context.Add(new Person() { FirstName = "Robert ", LastName = "Berends", City = "Birmingham", Address = "2632 Petunia Way" });
+            Person person = _context.People.LastOrDefault();
+            int id = person.PersonId + 1;
+            _context.Add(new Person() {PersonId = id ,FirstName = "Robert ", LastName = "Berends", City = "Birmingham", Address = "2632 Petunia Way" });
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
@@ -46,6 +48,5 @@ namespace EntityFrameworkExample.Controllers
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
-
     }
 }

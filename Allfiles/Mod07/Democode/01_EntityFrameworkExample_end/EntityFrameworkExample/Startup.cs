@@ -2,25 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
-using EntityFrameworkExample.Data;
 using Microsoft.EntityFrameworkCore;
+using EntityFrameworkExample.Data;
+using Microsoft.AspNetCore.Builder;
 
 namespace EntityFrameworkExample
 {
     public class Startup
     {
-        private IConfiguration _configuration;
-
-        public Startup(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
-
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PersonContext>(options =>
@@ -29,9 +21,13 @@ namespace EntityFrameworkExample
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, PersonContext personContext)
         {
+            personContext.Database.EnsureDeleted();
+            personContext.Database.EnsureCreated();
+
             app.UseStaticFiles();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
