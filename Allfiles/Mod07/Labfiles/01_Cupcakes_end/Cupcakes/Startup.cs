@@ -25,14 +25,14 @@ namespace Cupcakes
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CupcakeContext>(options =>
-                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+                 options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
             services.AddTransient<ICupcakeRepository, CupcakeRepository>();
 
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, CupcakeContext cupcakeContext)
         {
             app.UseStaticFiles();
 

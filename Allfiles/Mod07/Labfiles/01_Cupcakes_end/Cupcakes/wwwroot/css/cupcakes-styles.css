@@ -143,7 +143,7 @@ a:hover {
 .img-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .photo-display-img {

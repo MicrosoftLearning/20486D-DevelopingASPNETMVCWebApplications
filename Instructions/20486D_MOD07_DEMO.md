@@ -73,7 +73,6 @@
 8. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Startup.cs**.
 
 9. In the **Startup.cs** code window, locate the following code:
-
   ```cs
       using Microsoft.Extensions.DependencyInjection;
 ```

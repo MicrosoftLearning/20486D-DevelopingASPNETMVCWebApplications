@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2037
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cupcakes", "Cupcakes\Cupcakes.csproj", "{569D89F8-0A6E-4C2F-9B48-5D30633E39EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cupcakes", "Cupcakes\Cupcakes.csproj", "{2C320057-499E-4298-BE33-B4F1F088CB77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{569D89F8-0A6E-4C2F-9B48-5D30633E39EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{569D89F8-0A6E-4C2F-9B48-5D30633E39EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{569D89F8-0A6E-4C2F-9B48-5D30633E39EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{569D89F8-0A6E-4C2F-9B48-5D30633E39EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C320057-499E-4298-BE33-B4F1F088CB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C320057-499E-4298-BE33-B4F1F088CB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C320057-499E-4298-BE33-B4F1F088CB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C320057-499E-4298-BE33-B4F1F088CB77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6A8642E3-2BE0-4279-9563-2A39B12AE3D1}
+		SolutionGuid = {858C3A08-7C8B-498E-B11B-4A3B54571129}
 	EndGlobalSection
 EndGlobal

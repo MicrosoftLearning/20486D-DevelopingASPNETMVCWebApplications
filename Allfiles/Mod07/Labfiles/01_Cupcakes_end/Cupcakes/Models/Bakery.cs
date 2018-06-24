@@ -14,7 +14,7 @@ namespace Cupcakes.Models
         [StringLength(50, MinimumLength = 4)]
         public string BakeryName { get; set; }
 
-        [Range(1,40)]
+        [Range(1, 40)]
         public int Quantity { get; set; }
 
         [StringLength(50, MinimumLength = 4)]
