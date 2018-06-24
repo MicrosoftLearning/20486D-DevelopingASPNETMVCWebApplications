@@ -1,16 +1,16 @@
-﻿using System;
+﻿using EntityFrameworkExample.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EntityFrameworkExample.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace EntityFrameworkExample.Data
 {
     public class PersonContext : DbContext
     {
-        public PersonContext(DbContextOptions<PersonContext> options) 
-            :base(options)
+        public PersonContext(DbContextOptions<PersonContext> options)
+            : base(options)
         {
         }
 

@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using EntityFrameworkExample.Data;
 using Microsoft.EntityFrameworkCore;
 using EntityFrameworkExample.Repositories;
+
 
 namespace EntityFrameworkExample
 {
@@ -32,8 +33,11 @@ namespace EntityFrameworkExample
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, PersonContext personContext)
         {
+            personContext.Database.EnsureDeleted();
+            personContext.Database.EnsureCreated();
+
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {

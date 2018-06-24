@@ -72,7 +72,7 @@
 
 8. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Startup.cs**.
 
-9. In the **Startup.cs** code window, locate the following code.
+9. In the **Startup.cs** code window, locate the following code:
 
   ```cs
       using Microsoft.Extensions.DependencyInjection;
@@ -85,7 +85,7 @@
       using Microsoft.AspNetCore.Builder;
 ```
 
-11. In the **ConfigureServices** method code block, locate the following code:
+11. In the **Startup.cs** code window, locate the following code:
   ```cs
       services.AddMvc();
 ```
@@ -97,13 +97,12 @@
              options.UseInMemoryDatabase("PersonDB"));
 ```
 
-13. In the **Configure** method code block, locate the following code:
+13. In the **Startup.cs** code window, locate the following code:
   ```cs
       app.UseStaticFiles();
 ```
 
 14. Place the mouse cursor before the located code, type the following code, and then press Enter twice.
-
   ```cs
       personContext.Database.EnsureDeleted();
       personContext.Database.EnsureCreated();
@@ -226,19 +225,16 @@
 
 1. In the Solution Explorer pane, under **EntityFrameworkExample**, expand **Repositories**, and then click **IRepository.cs**.
 
-2. In the **IRepository.cs** code window, locate the following code.
-
+2. In the **IRepository.cs** code window, locate the following code:
   ```cs
       using System.Threading.Tasks;
 ```
-3. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
-
+3. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code:
   ```cs
       using EntityFrameworkExample.Models;
 ```
 
-4. In the **IRepository.cs** code block, press Enter, and then type the following code.
-
+4. In the **IRepository.cs** code block, press Enter, and then type the following code:
   ```cs
       IEnumerable<Person> GetPeople();
       void CreatePerson();
@@ -248,30 +244,25 @@
 
 5. In the Solution Explorer pane, under **EntityFrameworkExample**, under **Repositories**, click **MyRepository.cs**.
 
-6. In the **MyRepository.cs** code window, locate the following code.
-
+6. In the **MyRepository.cs** code window, locate the following code:
   ```cs
       using System.Threading.Tasks;
 ```
-7. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code.
-
+7. Ensure that the mouse cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code:
   ```cs
       using EntityFrameworkExample.Data;
       using EntityFrameworkExample.Models;
 ```
-8. In the **MyRepository.cs** code window, locate the following code.
-
+8. In the **MyRepository.cs** code window, locate the following code:
   ```cs
       public class MyRepository
 ```
-9.  Append the following code to the existing line of code.
-
+9.  Append the following code to the existing line of code:
   ```cs
       : IRepository
 ```
 
-10. In the **MyRepository.cs** code block, press Enter, and then type the following code.
-
+10. In the **MyRepository.cs** code block, press Enter, and then type the following code:
   ```cs
       private PersonContext _context;
 
@@ -280,9 +271,7 @@
             _context = context;
       }
 ```
-
-11. Ensure that the cursor is at the end of the **MyRepository** method code block, press Enter twice, and then type the following code.
-
+11. Ensure that the cursor is at the end of the **MyRepository** method code block, press Enter twice, and then type the following code:
   ```cs
       public void CreatePerson()
       {
@@ -290,8 +279,7 @@
            _context.SaveChanges();
       }
 ```
-12. Ensure that the cursor is at the end of the **CreatePerson** method code block, press Enter twice, and then type the following code.
-
+12. Ensure that the cursor is at the end of the **CreatePerson** method code block, press Enter twice, and then type the following code:
   ```cs
       public void DeletePerson(int id)
       {
@@ -301,8 +289,7 @@
       }
 ```
 
-13. Ensure that the cursor is at the end of the **DeletePerson** method code block, press Enter twice, and then type the following code.
-
+13. Ensure that the cursor is at the end of the **DeletePerson** method code block, press Enter twice, and then type the following code:
   ```cs
       public IEnumerable<Person> GetPeople()
       {
@@ -310,8 +297,7 @@
       }
 ```
 
-14. Ensure that the cursor is at the end of the **GetPeople** method code block, press Enter twice, and then type the following code.
-
+14. Ensure that the cursor is at the end of the **GetPeople** method code block, press Enter twice, and then type the following code:
   ```cs
       public void UpdatePerson(int id)
       {
@@ -324,26 +310,23 @@
 
 15. In the Solution Explorer pane of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Startup.cs**.
 
-16. In the **Startup.cs** code window, locate the following code.
-
+16. In the **Startup.cs** code window, locate the following code:
   ```cs
-      using Microsoft.Extensions.Configuration;
+      using Microsoft.Extensions.DependencyInjection;
 ```
-17. Ensure that the mouse cursor is at the end of the  **Microsoft.Extensions.Configuration** namespace, press Enter, and then type the following code.
 
+17. Ensure that the mouse cursor is at the end of the  **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
   ```cs
       using EntityFrameworkExample.Data;
       using Microsoft.EntityFrameworkCore;
       using EntityFrameworkExample.Repositories;
 ```
 
-18. In the **Startup.cs** code window, locate the following code.
-
+18. In the **Startup.cs** code window, locate the following code:
   ```cs
       services.AddMvc();
 ```
-19. Place the mouse cursor before the located code, type the following code, and then press Enter.
-
+19. Place the mouse cursor before the located code, type the following code, and then press Enter twice.
   ```cs
       services.AddDbContext<PersonContext>(options =>
                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
@@ -353,26 +336,35 @@
 
 >**Note:** Verify in the Solution Explorer pane, under **EntityFrameworkExample**, the appsettings.json that contains the **DefaultConnection** string.
 
-20. In the Solution Explorer pane, under **EntityFrameworkExample**, expand **Controllers**, and then click **PersonController.cs**.
+20. In the **Startup.cs** code window, locate the following code:
+  ```cs
+      app.UseStaticFiles();
+```
 
-21. In the **PersonController.cs** code window, locate the following code.
+21. Place the mouse cursor before the located code, type the following code, and then press Enter twice.
+  ```cs
+      personContext.Database.EnsureDeleted();
+      personContext.Database.EnsureCreated();
+```
 
+22. In the Solution Explorer pane, under **EntityFrameworkExample**, expand **Controllers**, and then click **PersonController.cs**.
+
+23. In the **PersonController.cs** code window, locate the following code:
   ```cs
       using Microsoft.AspNetCore.Mvc;
 ```
-22. Ensure that the mouse cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code.
 
+24. Ensure that the mouse cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
   ```cs
       using EntityFrameworkExample.Repositories;
 ```
 
-23. In the **PersonController.cs** code window, locate the following code.
-
+25. In the **PersonController.cs** code window, locate the following code:
   ```cs
       public IActionResult Index()
 ```
-24. Place the mouse cursor before the located code, type the following code, and then press Enter.
 
+26. Place the mouse cursor before the located code, type the following code, and then press Enter.
   ```cs
       private IRepository _repository;
 
@@ -380,78 +372,73 @@
       {
            _repository = repository;
       }
-
 ```
 
-25. In the **PersonController.cs** code block, in the **Index** action code block, select the following code.
-
+27. In the **PersonController.cs** code block, in the **Index** action code block, select the following code:
   ```cs
        return View();
 ```
-26. Replace the selected code with the following code.
-
+28. Replace the selected code with the following code:
   ```cs
        var list = _repository.GetPeople();
        return View(list);
 ```
-27. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code.
 
+29. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code:
   ```cs
        public IActionResult Edit(int id)
        {
        }
 ```
-28. In the **Edit** action code block, type the following code.
 
+30. In the **Edit** action code block, type the following code:
   ```cs
        _repository.UpdatePerson(id);
        return RedirectToAction(nameof(Index));
 ```
-29. Ensure that the cursor is at the end of the **Edit** action code block, press Enter twice, and then type the following code.
 
+31. Ensure that the cursor is at the end of the **Edit** action code block, press Enter twice, and then type the following code:
   ```cs
        public IActionResult Create()
        {
        }
 ```
-30. In the **Create** action code block, type the following code.
 
+32. In the **Create** action code block, type the following code:
   ```cs
        _repository.CreatePerson();
        return RedirectToAction(nameof(Index));
 ```
 
-31. Ensure that the cursor is at the end of the **Create** action code block, press Enter twice, and then type the following code.
-
+33. Ensure that the cursor is at the end of the **Create** action code block, press Enter twice, and then type the following code:
   ```cs
        public IActionResult Delete(int id)
        {
        }
 ```
-32. In the **Delete** action code block, type the following code.
-
+34. In the **Delete** action code block, type the following code:
   ```cs
       _repository.DeletePerson(id);
       return RedirectToAction(nameof(Index));
 ```
 
-33. On the **FILE** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Save All**.
+35. On the **FILE** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Save All**.
 
-34. On the **DEBUG** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Start Debugging**.
+36. On the **DEBUG** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
       >**Note:** The browser window displays the **Index.cshtml** page.
 
-35. In the **Microsoft Edge** window, click **Create New Person**.
+37. In the **Microsoft Edge** window, click **Create New Person**.
 
-36. In the **Microsoft Edge** window, select a person of your choice, and click **Edit**.
+38. In the **Microsoft Edge** window, select a person of your choice, and click **Edit**.
 
-37. In the **Microsoft Edge** window, select a person of your choice, and click **Delete**.
+39. In the **Microsoft Edge** window, select a person of your choice, and click **Delete**.
 
-38. In the **Microsoft Edge** window, click **Close**.
+40. In the **Microsoft Edge** window, click **Close**.
 
-39. On the **DEBUG** menu of the **EntityFrameworkExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+41. On the **DEBUG** menu of the **EntityFrameworkExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-40. On the **FILE** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Exit**.
+42. On the **FILE** menu of the **EntityFrameworkExample - Microsoft Visual Studio** window, click **Exit**.
 
 ©2016 Microsoft Corporation. All rights reserved.
 

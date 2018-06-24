@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EntityFrameworkExample.Repositories;
 
+
 namespace EntityFrameworkExample.Controllers
 {
     public class PersonController : Controller
@@ -39,6 +40,5 @@ namespace EntityFrameworkExample.Controllers
             _repository.DeletePerson(id);
             return RedirectToAction(nameof(Index));
         }
-
     }
 }
