@@ -1,3 +1,5 @@
+@page 
+@model ActorsRazorPages.Pages.Actors.IndexModel
 @{
     ViewData["Title"] = "Index";
 }

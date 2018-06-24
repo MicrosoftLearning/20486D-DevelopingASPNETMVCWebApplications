@@ -1,7 +1,4 @@
 ﻿
-@{
-    Layout = null;
-}
 
 <!DOCTYPE html>
 
@@ -9,7 +6,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link type="text/css" rel="stylesheet" href="~/css/CityStyles.css" />
+    <link type="text/css" rel="stylesheet" href="~/css/city-styles.css" />
 </head>
 <body>
     <h3 class="main-titel">Hello @ViewBag.VisiterName</h3>
@@ -29,7 +26,7 @@
         </div>
     </div>
     <div class="button-center">
-        <button class="button">@Html.ActionLink("Go Next", "Index", "City")</button>
+        @Html.ActionLink("Go Next", "Index", "City")
     </div>
 </body>
 </html>

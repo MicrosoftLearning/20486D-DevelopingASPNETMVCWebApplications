@@ -1,0 +1,44 @@
+﻿body {
+    font-size: 22px;
+    font-family: Arial;
+}
+
+input {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 33px;
+    color: darkblue;
+}
+
+p {
+    font-size: 28px;
+}
+
+#remark {
+    color: steelblue;
+}
+
+hr {
+    border-top: 1px solid #ccc;
+}
+
+.editor-label {
+    width: 200px;
+}
+
+.editor-field {
+    width: 450px;
+}
+
+.editor-field, .editor-label {
+    float: left;
+}
+
+div {
+    width: 650px;
+    overflow: hidden;
+}

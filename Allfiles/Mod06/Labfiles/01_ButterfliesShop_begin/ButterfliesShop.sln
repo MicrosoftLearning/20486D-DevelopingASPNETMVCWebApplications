@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButterfliesShop", "ButterfliesShop\ButterfliesShop.csproj", "{B47D41C9-CA28-4AA0-BC46-13C61EEBC203}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButterfliesShop", "ButterfliesShop\ButterfliesShop.csproj", "{A1302943-95E8-4E72-ACC5-9E56A6927A8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B47D41C9-CA28-4AA0-BC46-13C61EEBC203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B47D41C9-CA28-4AA0-BC46-13C61EEBC203}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B47D41C9-CA28-4AA0-BC46-13C61EEBC203}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B47D41C9-CA28-4AA0-BC46-13C61EEBC203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1302943-95E8-4E72-ACC5-9E56A6927A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1302943-95E8-4E72-ACC5-9E56A6927A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1302943-95E8-4E72-ACC5-9E56A6927A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1302943-95E8-4E72-ACC5-9E56A6927A8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0055A055-07B0-4CE9-9521-C64EAC202C7B}
+		SolutionGuid = {1F00C70D-CD1D-498D-858A-1D2075788ED0}
 	EndGlobalSection
 EndGlobal

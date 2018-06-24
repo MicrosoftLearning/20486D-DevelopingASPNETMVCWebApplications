@@ -1,6 +1,10 @@
-﻿using ControllersExample.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using System;
+using ControllersExample.Models;
+
 
 namespace ControllersExample.Controllers
 {
@@ -10,7 +14,7 @@ namespace ControllersExample.Controllers
         {
             ExampleModel model = new ExampleModel() { Sentence = "Welcome to module 4 demo 1" };
             return View(model);
-        } 
+        }
 
         public IActionResult ParamExample(string id)
         {
@@ -18,7 +22,7 @@ namespace ControllersExample.Controllers
         }
 
         public IActionResult RouteDataExample()
-        { 
+        {
             string controller = (string)RouteData.Values["Controller"];
             string action = (string)RouteData.Values["action"];
             string id = (string)RouteData.Values["id"];
@@ -27,13 +31,13 @@ namespace ControllersExample.Controllers
 
         public IActionResult ViewBagExample()
         {
-            ViewBag.Message = "View Bag Example";
+            ViewBag.Message = "ViewBag Example";
             return View();
         }
 
         public IActionResult ViewDataExample()
         {
-            ViewData["Message"] = "View Data Example";
+            ViewData["Message"] = "ViewData Example";
             return View();
         }
     }

@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/CSS/style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Contoso</h1>
+    <nav>
+        <span>
+            Photos
+        </span>
+        <span>
+            @Html.ActionLink("Employees", "Index", "Person")
+        </span>
+        <span>
+            Contact Us
+        </span>
+    </nav>
+    <footer>
+        Welcome to the contoso main page. Visit the employees page to see our employees.
+    </footer>
+</body>
+</html>

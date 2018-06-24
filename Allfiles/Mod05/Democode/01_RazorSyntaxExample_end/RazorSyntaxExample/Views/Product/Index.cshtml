@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @foreach (KeyValuePair<string, int> productPrices in ViewBag.ProductPrices)
+    {
+        <p>
+            <div>
+                Product name: @productPrices.Key
+            </div>
+            <div>
+                Product price including tax: @(productPrices.Value * 1.2)
+            </div>
+        </p>
+    }
+</body>
+</html>

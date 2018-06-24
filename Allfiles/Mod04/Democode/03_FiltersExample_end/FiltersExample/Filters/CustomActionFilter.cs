@@ -32,7 +32,7 @@ namespace FiltersExample.Filters
         {
             string actionName = filterContext.ActionDescriptor.RouteValues["action"];
             ContentResult result = (ContentResult)filterContext.Result;
-            Debug.WriteLine(">>> " + actionName + " result is: "+ result.Content + " ,event fired: OnResultExecuted");
+            Debug.WriteLine(">>> " + actionName + " result is: " + result.Content + " , event fired: OnResultExecuted");
         }
     }
 }

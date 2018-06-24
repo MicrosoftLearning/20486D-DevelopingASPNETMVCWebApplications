@@ -18,6 +18,7 @@ namespace RoutesExample
 
         public void Configure(IApplicationBuilder app)
         {
+            
         }
     }
 }

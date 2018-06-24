@@ -22,7 +22,7 @@ namespace WorldJourney.Controllers
             _data.CityInitializeData();
         }
 
-        [ServiceFilter(typeof(LogActionFilter))]
+        [ServiceFilter(typeof(LogActionFilterAttribute))]
         [Route("WorldJourney")]
         public IActionResult Index()
         {
@@ -34,7 +34,7 @@ namespace WorldJourney.Controllers
         public IActionResult Details(int? id)
         {
             ViewData["Page"] = "Selected city";
-            var city = _data.GetCityById(id);
+            City city = _data.GetCityById(id);
             if (city == null)
             {
                 return NotFound();
@@ -44,10 +44,10 @@ namespace WorldJourney.Controllers
         }
 
         [Route("CityImage/{CityId?}")]
-        public IActionResult GetImage(int? CityId)
+        public IActionResult GetImage(int? cityId)
         {
             ViewData["Message"] = "display Image";
-            City requestedCity = _data.GetCityById(CityId);
+            City requestedCity = _data.GetCityById(cityId);
             if (requestedCity != null)
             {
                 string webRootpath = _environment.WebRootPath;

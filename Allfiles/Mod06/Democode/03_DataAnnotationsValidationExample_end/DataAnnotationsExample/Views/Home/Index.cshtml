@@ -6,34 +6,42 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link type="text/css" rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link type="text/css" rel="stylesheet" href="~/css/style-sheet.css" />
 </head>
 <body>
-    <h1>Submit Personal Information</h1>
-    <div>
+    <div class="container">
+        <h1>Submit Personal Information</h1>
         <form asp-action="Details">
             <div asp-validation-summary="All"></div>
             <div class="form-field">
                 <label asp-for="FirstName"></label>
-                <input asp-for="FirstName" />
-                <span asp-validation-for="FirstName"></span>
+                <span class="input-span">
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName"></span>
+                </span>
             </div>
             <div class="form-field">
                 <label asp-for="LastName"></label>
-                <input asp-for="LastName" />
-                <span asp-validation-for="LastName"></span>
+                <span class="input-span">
+                    <input asp-for="LastName" />
+                    <span asp-validation-for="LastName"></span>
+                </span>
             </div>
             <div class="form-field">
                 <label asp-for="Age"></label>
-                <input asp-for="Age" />
-                <span asp-validation-for="Age"></span>
+                <span class="input-span">
+                    <input asp-for="Age" />
+                    <span asp-validation-for="Age"></span>
+                </span>
             </div>
             <div class="form-field">
                 <label asp-for="Description"></label>
-                <textarea asp-for="Description"></textarea>
-                <span asp-validation-for="Description"></span>
+                <span class="input-span">
+                    <textarea asp-for="Description"></textarea>
+                    <span asp-validation-for="Description"></span>
+                </span>
             </div>
-            <div class="form-field">
+            <div>
                 <input type="submit" value="Submit" />
             </div>
         </form>
