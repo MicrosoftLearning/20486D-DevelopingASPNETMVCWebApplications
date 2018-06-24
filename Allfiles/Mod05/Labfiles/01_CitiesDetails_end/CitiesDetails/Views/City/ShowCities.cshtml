@@ -1,6 +1,4 @@
-﻿@using CitiesDetails.Services
-@inject ICityProvider CityProvider
-
+﻿
 @{
     Layout = null;
 }
@@ -15,7 +13,7 @@
 </head>
 <body>
     <h1>Select City</h1>
-    @foreach (var item in CityProvider)
+    @foreach (var item in ViewBag.Cities)
     {
         @await Component.InvokeAsync("City", item.Key)
     }

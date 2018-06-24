@@ -18,6 +18,7 @@ namespace CitiesDetails.Controllers
 
         public IActionResult ShowCities()
         {
+            ViewBag.Cities = _cities;
             return View();
         }
 
