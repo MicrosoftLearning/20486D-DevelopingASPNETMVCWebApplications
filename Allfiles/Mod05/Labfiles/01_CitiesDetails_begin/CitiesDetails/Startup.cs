@@ -16,7 +16,7 @@ namespace CitiesDetails
         {
             services.AddMvc();
             services.AddSingleton<ICityProvider, CityProvider>();
-            services.AddSingleton<CityFormatter>();
+            services.AddSingleton<ICityFormatter, CityFormatter>();
         }
 
         public void Configure(IApplicationBuilder app)

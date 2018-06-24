@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CitiesDetails.Services
 {
-    public class CityFormatter
+    public class CityFormatter : ICityFormatter
     {
         public string GetFormattedPopulation(int population)
         {
