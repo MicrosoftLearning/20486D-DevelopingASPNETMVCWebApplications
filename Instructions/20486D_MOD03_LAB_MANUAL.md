@@ -44,7 +44,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 1: Create a new project using the ASP.NET Core Empty project template
 
-1. Open **Visual Studio 2017** and create a new **ASP.NET Core Web Application** using the following information:
+1. Open **Visual Studio 2017** and create a new **ASP.NET Core Web Application** with following information:
 
     - Name: **PollBall**
     - Location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
@@ -121,7 +121,7 @@ The main tasks for this exercise are as follows:
     - Type: **submit**
     - Value: **Submit Query**
 
-12. Copy the content of **html-text.txt** file, using the following information:
+12. Copy the content of **html-text.txt** file, with following information:
     - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
 
 13. In the **poll-questions.html** file, paste the copied content into the **DIV** element with the **main-div** class.
@@ -334,20 +334,20 @@ The main tasks for this exercise are as follows:
     - Name: **IPollResultsService**
     - Scope: **public**
 
-4. In **IPollResultsService** interface, declare a method using the following information:
+4. In **IPollResultsService** interface, declare a method with following information:
     - Return type: **void**
     - Name: **AddVote**
     - Parameter:
         - Name: **game**
         - Type: **SelectedGame**
 
-5. Declare a method using the following information:
+5. Declare a method with following information:
     - Name: **GetVoteResult**
     - Return type: **SortedDictionary**<**SelectedGame**,**int**>
 
 ####	Task 2: Define an implementation for the service
 
-1. Create a new class using the following information:
+1. Create a new class with following information:
     - Folder: **Services**
     - Name: **PollResultsService**
 
@@ -532,39 +532,46 @@ The main tasks for this exercise are as follows:
 
 ####	Task 4: Use Dependency Injection in a controller
 
-1. In **Startup** class, in the **app.Use** delete the code that is responsible for getting the vote results from the service, and displaying it in the browser.
+1. In **Startup** class, in the **Configure** method, remove the **gameVotes** varible, the **FOREACH** statement and its content. 
 
-2. Replace the deleted code with a call to the **WriteAsync** method so the browser would display a text using the following information:
-    - Text: **"Thank you for submitting the poll."**
+
+2. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"$"&lt;div&gt; Game name: {currentVote.Key}, Votes: {currentVote.Value} 	&lt;/div&gt;"** as a parameter to the **WriteAsync** method. 
 
 3. In **HomeController** class, add **using** statements for the following namespaces:
     - **PollBall.Services**
     - **System.Text**
 
-4. In the **HomeController** class, define a new field using the following information:
+4. Add a new field with the following information:
     - Type: **IPollResultsService**
     - Name: **_pollResults**
     - Scope: **private**
 
-5. In the **HomeController** class, create a public constructor, inject the **IPollResultsService** into the constructor, and save the **IPollResultsService** value into the **_pollResults** variable.
+5. Add a constructor with the following parameter:
+    - Type: **IPollResultsService**
+    - Name: **pollResults**
 
-6. In **HomeController** class, delete the content of the **index** action.
+6. In the constructor, initialize the **_pollResults** field with the value of the **pollResults** parameter.
 
-7. In the **index** action, define and initiate a new variable using the following information:
-    - Type: **StringBuilder**
-    - Name: **results**
-    - Value: new **StringBuilder** instance
+7. Remove the content of the **Index** action.
 
-8. In the **index** action, define and initiate a new variable using the following information:
-    - Type: **SortedDictionary<SelectedGame, int>**
-    - Name: **voteList**
-    - Value: Call the **GetVoteResult** method of the **_pollResults** field
+8. In the **Index** action, add a varible named **results** of type **StringBuilder**.
 
-9. Below the **voteList** variable declaration, use a **foreach** loop to iterate over each game name and vote count, and then concatenate those into the **results** variable. Using **StringBuilder**'s  **Append** method, append the text in each iteration, and then append **Environment.NewLine**.
+9. Initialize the **results** varaible using the **StringBuilder** constructor.
 
-10. In the **index** action, return a string content using the following information:
-    - method call: **Content**
-    - Content value:  The **results** variable as string.
+10. Add a varible named **voteList** of type **<SortedDictionary<SelectedGame, int>**.
+
+11. Initialize the **voteList** varaible with the result of **_pollResults.GetVoteResult** method call.
+
+12. Create a **FOREACH** statement block, with the following information:
+
+    - Variable Type: **var**
+    - Variable Name: **gameVotes**
+    - Collection: **voteList**
+
+13.  In the **FOREACH** statement block, call the **Append** method of the **results** varible. Pass **$"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}"** as a parameter to the **Append** method. 
+
+14. After the **FOREACH** statement block, return the **ContentResult** result using the **Content** method. Pass **results.ToString()"** string as a parameter to the **View** method.
+
 
 ####	Task 5: Run the application
 
