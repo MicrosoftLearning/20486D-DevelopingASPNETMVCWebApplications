@@ -34,6 +34,9 @@ namespace Cupcakes
 
         public void Configure(IApplicationBuilder app, CupcakeContext cupcakeContext)
         {
+            cupcakeContext.Database.EnsureDeleted();
+            cupcakeContext.Database.EnsureCreated();
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
