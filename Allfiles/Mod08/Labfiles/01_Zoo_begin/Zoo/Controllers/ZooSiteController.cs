@@ -10,12 +10,12 @@ using Zoo.Models;
 
 namespace Zoo.Controllers
 {
-    public class ZooController : Controller
+    public class ZooSiteController : Controller
     {
         private ZooContext _context;
         private IHostingEnvironment _environment;
 
-        public ZooController(ZooContext context, IHostingEnvironment environment)
+        public ZooSiteController(ZooContext context, IHostingEnvironment environment)
         {
             _context = context;
             _environment = environment;

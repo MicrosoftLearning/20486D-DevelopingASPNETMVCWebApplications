@@ -24,7 +24,7 @@ namespace Zoo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ZooContext>(options =>
-                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+                 options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc();
         }
@@ -40,7 +40,7 @@ namespace Zoo
                 routes.MapRoute(
                     name: "ZooRoute",
                     template: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "Zoo", action = "Index" },
+                    defaults: new { controller = "ZooSite", action = "Index" },
                     constraints: new { id = "[0-9]+" });
             });
         }
