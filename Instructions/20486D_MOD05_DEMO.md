@@ -8,7 +8,7 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod05\Democode\01_RazorSyntaxExample_begin**, and then double-click **RazorSyntaxExample.sln**.
+2. Navigate to **Allfiles\Mod05\Democode\01_RazorSyntaxExample_begin**, and then double-click **RazorSyntaxExample.sln**.
 
 #### Demonstration Steps
 
@@ -114,7 +114,7 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos.(**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin**, and then double-click **HTMLHelpersExample.sln**.
+2. Navigate to **Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin**, and then double-click **HTMLHelpersExample.sln**.
 
 #### Demonstration Steps
 
@@ -236,7 +236,7 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod05\Democode\03_TagHelpersExample_begin**, and then double-click **TagHelpersExample.sln**.
+2. Navigate to **Allfiles\Mod05\Democode\03_TagHelpersExample_begin**, and then double-click **TagHelpersExample.sln**.
 
 #### Demonstration Steps
 
@@ -385,13 +385,19 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod05\Democode\04_PartialViewsExample_begin**, and then double-click **PartialViewsExample.sln**.
+2. Navigate to **Allfiles\Mod05\Democode\04_PartialViewsExample_begin**, and then double-click **PartialViewsExample.sln**.
 
 #### Demonstration Steps
 
 1. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Services**, and then click **Person.cs**.
 
-2. In the **Person.cs** code window, place the cursor within the **Person** constructor code block, and then type the following code: 
+2. In the **Person.cs** code window, locate the following code:
+```cs
+    public Person(string firstName, string lastName, string address, string phoneNumber)
+    {
+```
+
+3. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     FirstName = firstName;
     LastName = lastName;
@@ -399,28 +405,34 @@
     PhoneNumber = phoneNumber;
 ```
 
-3. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **PersonProvider.cs**.
+4. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **PersonProvider.cs**.
 
-4. In the **PersonProvider.cs** code window, place the cursor within the **PersonProvider** constructor code block, and then type the following code:
+5. In the **PersonProvider.cs** code window, locate the following code:
+```cs
+    public PersonProvider()
+    {
+```
+
+6. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     PersonList= PersonInitializer();
 ```
 
-5. In **Solution Explorer**, under **Controllers**, click **HomeController.cs**.
+7. In **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
 
-6. In the **HomeController.cs** code window, locate the following code:
+8. In the **HomeController.cs** code window, locate the following code:
 ```cs
     ViewBag.Columns = 3;
 ```
 
-7. Place the cursor at the end of the located code, press Enter, and then type the following code:
+9. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     ViewBag.People = _personProvider.PersonList;
 ```
 
-5. In **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+10. In **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-6. In the **Index.cshtml** code window, locate the following code:
+11. In the **Index.cshtml** code window, locate the following code:
 ```cs
     @for (int rowIndex = 0; rowIndex < ViewBag.Rows; rowIndex++)
         {
@@ -429,30 +441,30 @@
                 {
 ```
 
-7. Place the cursor at the end of the located code, press Enter, and then type the following code:
+12. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-8. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
+13. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
 
-9. In the **NewFolder** text box, type **Shared**, and then press Enter.
+14. In the **NewFolder** text box, type **Shared**, and then press Enter.
 
-10. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Shared**, point to **Add**, and then click **View**.
+15. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Shared**, point to **Add**, and then click **View**.
     
-11. In the **Add MVC View** dialog box, in the **View name** text box, type **_CardDesign**.
+16. In the **Add MVC View** dialog box, in the **View name** text box, type **_CardDesign**.
 
-12. In the **Add MVC View** dialog box, verify that the **Create as a partial view** check box is marked, and then click **Add**.
+17. In the **Add MVC View** dialog box, verify that the **Create as a partial view** check box is marked, and then click **Add**.
 
-13. In the **_CardDesign.cshtml** code window, delete the following code:
+18. In the **_CardDesign.cshtml** code window, delete the following code:
 ```
     @*
         For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
     *@
 ```
 
-14. In the **_CardDesign.cshtml** code window, place the cursor at the beginning of the document, and then type the following code:
+19. In the **_CardDesign.cshtml** code window, place the cursor at the beginning of the document, and then type the following code:
 ```cs
     @model int
     <td>
@@ -463,16 +475,16 @@
     </td>
 ```
 
-15. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+20. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-16. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+21. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: A table with cards is shown. Each card contains information of a person including: First Name, Last Name, Residence, and Phone.
-     
-17. In **Microsoft Edge**, click **Close**.
 
-18. In the **PartialViewsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+22. In **Microsoft Edge**, click **Close**.
 
-21. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+23. In the **PartialViewsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+
+24. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Reusing Code in Views
 
@@ -482,7 +494,7 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod05\Democode\05_ViewComponentsExample_begin**, and then double-click **ViewComponentExample.sln**.
+2. Navigate to **Allfiles\Mod05\Democode\05_ViewComponentsExample_begin**, and then double-click **ViewComponentExample.sln**.
 
 #### Demonstration Steps
 
@@ -509,12 +521,18 @@
     public class PersonCardViewComponent
 ```
 
-8. Replace the selected code the following code:
+8. Replace the selected code with the following code:
 ```cs
     public class PersonCardViewComponent : ViewComponent
 ```
 
-9.	In the **PersonCardViewComponent.cs** code window, place the cursor within the **PersonCardViewComponent** class code block, and then type the following code:
+9. In the **PersonCardViewComponent.cs** code window, locate the following code:
+```cs
+    public class PersonCardViewComponent : ViewComponent
+    {
+```
+
+10. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     public IViewComponentResult Invoke(int id)
     {
@@ -526,15 +544,15 @@
 
 11. In the **NewFolder** text box, type **Components**, and then press Enter.
 
-12. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click the **Components** folder you just created, point to **Add**, and then click **New Folder**.
+12. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Components**, point to **Add**, and then click **New Folder**.
 
 13. In the **NewFolder** text box, type **PersonCard**, and then press Enter.
 
 14. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Shared**, right-click **_CardDesign.cshtml**, and then click **Cut**.
 
-15. Right-click **PersonCard** you just created, and then click **Paste**.
+15. Right-click **PersonCard**, and then click **Paste**.
 
-16. Right-click the **_CardDesign.cshtml** view you just pasted, and then click **Rename**.
+16. Right-click **_CardDesign.cshtml**, and then click **Rename**.
 
 17. In the **_CardDesign.cshtml** text box, type **CardDesign.cshtml**, and then press Enter.
 
@@ -545,7 +563,7 @@
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-20. Replace the selected code the following code:
+20. Replace the selected code with the following code:
 ```cs
     @await Component.InvokeAsync("PersonCard", cardIndex);
 ```
@@ -559,4 +577,4 @@
 
 24. In the **ViewComponentExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-21. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+25. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
