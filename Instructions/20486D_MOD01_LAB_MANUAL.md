@@ -48,17 +48,13 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Explore the application structure
 
-1. Open **Startup.cs** and verify that MVC service is added to the service container.
+1. Verify that **_ViewStart.cshtml** is linked to **_Layout.cshtml**.
 
-2. In the **Startup.cs**, verify that MVC is added to the request execution pipeline.
+2. Verify that **Contact.cshtml** is not linked to .css file.
 
-3. Verify that **_ViewStart.cshtml** is linked to **_Layout.cshtml**.
+3. Verify that **_Layout.cshtml** is in the **HEAD** element linked to **site.css** file.
 
-4. Verify that **Contact.cshtml** is not linked to .css file.
-
-5. Verify that **_Layout.cshtml** is in the **HEAD** element linked to **site.css** file.
-
-6. Open the **site.css** style sheet.
+4. Open the **site.css** style sheet.
 
 #### Task 3: Add simple functionality
 
@@ -267,15 +263,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Explore the application structure
 
-1. Open **Startup.cs** and verify that MVC service is added to the service container.
+1.  Open the  **ValuesController.cs** inside the **Controllers** folder, and verify  that the **Get** method returns **value1** and **value2**.
 
-2. In the **Startup.cs**, verify that MVC is added to the request execution pipeline.
+2. Run the website in Microsoft Edge, and view the content in the browser.
 
-3.  Open the  **ValuesController.cs** inside the **Controllers** folder, and verify  that the **Get** method returns **value1** and **value2**.
-
-4. Run the website in Microsoft Edge, and view the content in the browser.
-
-5. Stop Debugging.
+3. Stop Debugging.
 
 #### Task 3: Add simple functionality
 
@@ -434,17 +426,13 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Explore the application structure
 
-1. Open **Startup.cs** and verify that MVC service is added to the service container.
+1. Verify that **_ViewStart.cshtml** is linked to **_Layout.cshtml**.
 
-2. In the **Startup.cs**, verify that MVC is added to the request execution pipeline.
+2. Verify that **Contact.cshtml** not linked to .css file.
 
-3. Verify that **_ViewStart.cshtml** is linked to **_Layout.cshtml**.
+3. Verify that **_Layout.cshtml**, in the **HEAD** element linked to **site.css** file.
 
-4. Verify that **Contact.cshtml** not linked to .css file.
-
-5. Verify that **_Layout.cshtml**, in the **HEAD** element linked to **site.css** file.
-
-6. Open the **site.css** style sheet.
+4. Open the **site.css** style sheet.
 
     >**Note:** This is the CSS **style sheet** file that applied in the **_Layout.cshtml**.
 
