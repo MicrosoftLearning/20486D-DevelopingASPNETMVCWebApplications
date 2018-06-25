@@ -452,7 +452,7 @@
     
 16. In the **Add MVC View** dialog box, in the **View name** text box, type **_CardDesign**.
 
-12. In the **Add MVC View** dialog box, verify that **Create as a partial view** check box is marked and that **Use a layout page** check box is cleared, and then click **Add**.
+17. In the **Add MVC View** dialog box, verify that **Create as a partial view** check box is marked and that **Use a layout page** check box is cleared, and then click **Add**.
 
 18. In the **_CardDesign.cshtml** code window, delete the following code:
 ```
@@ -474,10 +474,8 @@
 
 20. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-16. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+21. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays a table with cards. Each card contains information of a person including: First Name, Last Name, Residence, and Phone.
-     
-17. In **Microsoft Edge**, click **Close**.
 
 22. In **Microsoft Edge**, click **Close**.
 
@@ -570,7 +568,7 @@
 22. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 23. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-    >**Note**: The browser displays table with cards. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
+    >**Note**: The browser displays a table with cards. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
      
 24. In **Microsoft Edge**, click **Close**.
 
