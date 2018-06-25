@@ -539,41 +539,41 @@
     }
 ```
 
-10. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, right-click **Shared**, point to **Add**, and then click **New Folder**.
+11. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, right-click **Shared**, point to **Add**, and then click **New Folder**.
 
-11. In the **NewFolder** text box, type **Components**, and then press Enter.
+12. In the **NewFolder** text box, type **Components**, and then press Enter.
 
-12. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Components**, point to **Add**, and then click **New Folder**.
+13. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Components**, point to **Add**, and then click **New Folder**.
 
-13. In the **NewFolder** text box, type **PersonCard**, and then press Enter.
+14. In the **NewFolder** text box, type **PersonCard**, and then press Enter.
 
-14. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Shared**, right-click **_CardDesign.cshtml**, and then click **Cut**.
+15. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Shared**, right-click **_CardDesign.cshtml**, and then click **Cut**.
 
-15. Right-click **PersonCard**, and then click **Paste**.
+16. Right-click **PersonCard**, and then click **Paste**.
 
-16. Right-click **_CardDesign.cshtml**, and then click **Rename**.
+17. Right-click **_CardDesign.cshtml**, and then click **Rename**.
 
-17. In the **_CardDesign.cshtml** text box, type **CardDesign.cshtml**, and then press Enter.
+18. In the **_CardDesign.cshtml** text box, type **CardDesign.cshtml**, and then press Enter.
 
-18. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Home**, and then click **Index.cshtml**.
+19. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
-19. In the **Index.cshtml** code window, select the following code:
+20. In the **Index.cshtml** code window, select the following code:
 ```cs
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-20. Replace the selected code with the following code:
+21. Replace the selected code with the following code:
 ```cs
     @await Component.InvokeAsync("PersonCard", cardIndex);
 ```
 
-21. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+22. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-22. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+23. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays table with cards. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
      
-23. In **Microsoft Edge**, click **Close**.
+24. In **Microsoft Edge**, click **Close**.
 
-24. In the **ViewComponentExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+25. In the **ViewComponentExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-25. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+26. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
