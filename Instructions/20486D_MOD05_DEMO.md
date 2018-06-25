@@ -131,12 +131,12 @@
 
 3. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    @Html.ActionLink("Employees", "Index", "Person")
+    @Html.ActionLink("Employees", "Index", "Employee")
 ```
 
-4. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **PersonController.cs**.
+4. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **EmployeeController.cs**.
 
-5. In the **PersonController.cs** code window, locate the following code:
+5. In the **EmployeeController.cs** code window, locate the following code:
 ```cs
     public IActionResult Index()
     {
@@ -144,10 +144,10 @@
 
 6. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    ViewBag.PersonNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
+    ViewBag.EmployeeNames = new string[] { "Michael", "Sarah", "Logan", "Elena", "Nathan" };
 ```
 
-7. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Person**, and then click **Index.cshtml**.
+7. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Employee**, and then click **Index.cshtml**.
 
 8. In the **Index.cshtml** code window, locate the following code:
 ```cs
@@ -156,7 +156,7 @@
 
 9. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    @foreach (string currentName in ViewBag.PersonNames)
+    @foreach (string currentName in ViewBag.EmployeeNames)
     {
     
     }
@@ -165,24 +165,24 @@
 10. Place the cursor within the foreach code block you just created, and then type the following code:
 ```cs
     <div>
-        @Html.ActionLink(currentName, "Details", new { personName = currentName })
+        @Html.ActionLink(currentName, "Details", new { employeeName = currentName })
     </div>
 ```
 
-11. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, click **PersonController.cs**.
+11. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, click **EmployeeController.cs**.
 
-12. In the **PersonController.cs** code window, locate the following code:
+12. In the **EmployeeController.cs** code window, locate the following code:
 ```cs
-    public IActionResult Details(string personName)
+    public IActionResult Details(string employeeName)
     {
 ```
 
 13. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    ViewBag.SelectedPerson = personName;
+    ViewBag.SelectedEmployee = employeeName;
 ```
 
-14. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Person**, click **Details.cshtml**.
+14. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
 
 15. In the **Details.cshtml** code window, locate the following code:
 ```cs
@@ -191,20 +191,20 @@
 
 16. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
-    <p class="text">@Html.ActionLink("Back to person selection list", "Index")</p>
+    <img src="@Url.Action("GetImage", new {employeeName = ViewBag.SelectedEmployee })" width="500" />
+    <p class="text">@Html.ActionLink("Back to employee selection list", "Index")</p>
 ```
 
-17. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, click **PersonController.cs**.
+17. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, click **EmployeeController.cs**.
 
-18. In the **PersonController.cs** code window, in the **GetImage** action, select the following code:
+18. In the **EmployeeController.cs** code window, in the **GetImage** action, select the following code:
 ```cs
     return Content("");
 ```
 
 19. Replace the selected code with the following code:
 ```
-    return File($@"\images\{personName.ToLower()}.jpg", "image/jpeg");
+    return File($@"\images\{employeeName.ToLower()}.jpg", "image/jpeg");
 ```
 
 20. In the **HTMLHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
@@ -212,12 +212,12 @@
 21. In the **HTMLHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 22. In **Microsoft Edge**, click **Employees**.
-    >**Note**: The browser displays a list of links, each link is a person's name.
+    >**Note**: The browser displays a list of links, each link is a employee's name.
 
 23. In **Microsoft Edge**, click **Michael**.
     >**Note**: The browser displays Michael's name and photo.
 
-24. In **Microsoft Edge**, click **Back to person selection list**.
+24. In **Microsoft Edge**, click **Back to employee selection list**.
 
 25. In **Microsoft Edge**, click **Elena**.
     >**Note**: The browser displays Elena's name and photo.
@@ -254,15 +254,15 @@
 
 4. In the **Index.cshtml** code window, select the following code:
 ```cs
-    @Html.ActionLink("Employees", "Index", "Person")
+    @Html.ActionLink("Employees", "Index", "Employee")
 ```
 
 5. Replace the selected code with the following code:
 ```cs
-    <a asp-controller="Person" asp-action="Index">Employees</a>
+    <a asp-controller="Employee" asp-action="Index">Employees</a>
 ```
 
-6. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Person**, click **Index.cshtml**.
+6. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Employee**, click **Index.cshtml**.
 
 7. In the **Index.cshtml** code window, locate the following code:
 ```cs
@@ -276,15 +276,15 @@
 
 9. In the **Index.cshtml** code window, select the following code:
 ```cs
-    @Html.ActionLink(currentName, "Details", new { personName = currentName })
+    @Html.ActionLink(currentName, "Details", new { employeeName = currentName })
 ```
 
 10. Replace the selected code with the following code:
 ```cs
-    <a asp-action="Details" asp-route-personName="@currentName">@currentName</a>
+    <a asp-action="Details" asp-route-employeeName="@currentName">@currentName</a>
 ```
 
-11. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Person**, click **Details.cshtml**.
+11. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
 
 12. In the **Details.cshtml** code window, locate the following code:
 ```cs
@@ -298,12 +298,12 @@
 
 14. In the **Details.cshtml** code window, select the following code:
 ```cs
-    @Html.ActionLink("Back to person selection list", "Index")
+    @Html.ActionLink("Back to employee selection list", "Index")
 ```
 
 15. Replace the selected code with the following code:
 ```cs
-    <a asp-action="Index">Back to person selection list</a>
+    <a asp-action="Index">Back to employee selection list</a>
 ```
 
 16. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
@@ -314,7 +314,7 @@
 
 19. In **Microsoft Edge**, click **Michael**.
 
-20. In **Microsoft Edge**, click **Back to person selection list**.
+20. In **Microsoft Edge**, click **Back to employee selection list**.
 
 21. In **Microsoft Edge**, click **Elena**.
 
@@ -342,14 +342,14 @@
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-31. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Person**, click **Index.cshtml**.
+31. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Index.cshtml**.
 
 32. In the **Index.cshtml** code window, delete the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-33. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Person**, click **Details.cshtml**.
+33. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
 
 34. In the **Details.cshtml** code window, delete the following code:
 ```cs
@@ -361,15 +361,12 @@
 36. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 37. In **Microsoft Edge**, click **Employees**.
-    >**Note**: The browser displays a list of links, each link is a person's name.
 
 38. In **Microsoft Edge**, click **Michael**.
-    >**Note**: The browser displays Michael's name and photo.
 
-39. In **Microsoft Edge**, click **Back to person selection list**.
+39. In **Microsoft Edge**, click **Back to employee selection list**.
 
 40. In **Microsoft Edge**, click **Elena**.
-    >**Note**: The browser displays Elena's name and photo.
 
 41. In **Microsoft Edge**, click **Close**.
 
