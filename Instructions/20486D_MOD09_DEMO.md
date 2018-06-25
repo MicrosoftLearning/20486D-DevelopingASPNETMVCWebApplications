@@ -9,36 +9,37 @@
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
-2. Go to **Allfiles\Mod09\Democode\01_BootstrapExample_begin**, and then double-click **BootstrapExample.sln**.
-
 #### Demonstration Steps
 
-1. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
+1. Navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin**, and then double-click **BootstrapExample.sln**.
 
-2. In the **NewFolder** text box, type **Shared**, and then press Enter.
+2. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
 
-3. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
+3. In the **NewFolder** text box, type **Shared**, and then press Enter.
 
-4. In the **Add New Item – BootstrapExample** dialog box, click **Web**, and then, in the result pane, click **Razor Layout**, and click **Add**.
+4. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
 
-5. In the **_Layout.cshtml** file, locate the following code:
+5. In the **Add New Item – BootstrapExample** dialog box, click **Web**, and then, in the result pane, click **Razor Layout**, and click **Add**.
+
+6. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <title>@ViewBag.Title</title>
 ```
 
-6. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
+7. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+       <link href="~/css/style.css" rel="stylesheet" />
 ```
 
-7. In the **_Layout.cshtml** file, locate the following code:
+8. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <div>
            @RenderBody()
        </div>
 ```
 
-8. Place the cursor before the **<** (less then) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
+9. Place the cursor before the **<** (less then) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
   ```cs
        <div>
            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -51,7 +52,7 @@
        </div>
 ```
 
-9. In the **UL** element of the **_Layout.cshtml** code window, type the following code:
+10. In the **UL** element of the **_Layout.cshtml** code window, type the following code:
   ```cs
        <li class="nav-item active">
            <a class="nav-link" href="@Url.Action("Index", "Library")">Home <span class="sr-only">(current)</span></a>
@@ -67,14 +68,14 @@
        </li>
 ```
 
-10. In the **_Layout.cshtml** file, locate the following code:
+11. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <div>
            @RenderBody()
        </div>
 ```
 
-11. Place the cursor after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter twice, and then type the following code: 
+12. Place the cursor after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter twice, and then type the following code: 
   ```cs
        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -82,29 +83,43 @@
        <script src="~/js/alert-function.js"></script>
 ```
 
-12. In the **BootstrapExample - Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Controllers**, and then click **LibraryController.cs**.
+13. In the **_Layout.cshtml** file, select the following code:
+  ```cs
+       <div>
+           @RenderBody()
+       </div>
+```
 
-13. In the **LibraryController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+14. Replace the selected code with the following code:
+  ```cs
+       <div class="container">
+           @RenderBody()
+       </div>
+```
+
+15. In the **BootstrapExample - Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Controllers**, and then click **LibraryController.cs**.
+
+16. In the **LibraryController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-14. In the **Add MVC View** dialog box, ensure that the name in the **View name** box is **Index**.
+17. In the **Add MVC View** dialog box, ensure that the name in the **View name** box is **Index**.
 
-15. In the **Template** selector, ensure that the template in the **Template** box is **Empty(without model)**.
+18. In the **Template** selector, ensure that the template in the **Template** box is **Empty(without model)**.
 
-16. In the **Add MVC View** dialog box, ensure that the **Reference script libraries** check box is not selected.
+19. In the **Add MVC View** dialog box, ensure that the **Reference script libraries** check box is not selected.
 
       >**Note:** In the **Add MVC View** dialog box, the **Reference script libraries** checkbox can be edited by setting the **Template** to **Edit**.
 
-17. In the **Add MVC View** dialog box, ensure that the **Use a layout page** check box is selected, and then click **Add**.
+20. In the **Add MVC View** dialog box, ensure that the **Use a layout page** check box is selected, and then click **Add**.
 
-18. In the **Index.cshtml** code window, select the following code:
+21. In the **Index.cshtml** code window, select the following code:
   ```cs
        <h2>Index</h2>
 ```
 
-19. Replace the selected code with the following code:
+22. Replace the selected code with the following code:
   ```cs
        <div class="text-center">
            <h1>Welcome to Open Library </h1>
@@ -114,7 +129,7 @@
        </div>
 ```
 
-20. In the **Index.cshtml** code window, place the cursor immediately the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter twice, and then type the following code:
+23. In the **Index.cshtml** code window, place the cursor immediately the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter twice, and then type the following code:
   ```cs
        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
            <div class="modal-dialog" role="document">
@@ -136,13 +151,13 @@
        </div>
 ```
 
-21. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
+24. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
 
-22. In the **Add New Item – BootstrapExample** dialog box, click **Web**, and then, in the result pane, click **Razor View**.
+25. In the **Add New Item – BootstrapExample** dialog box, click **Web**, and then, in the result pane, click **Razor View**.
 
-23. In the **Name** box of the **Add New Item – BootstrapExample** dialog box, type **_Alert**, and then click **Add**.
+26. In the **Name** box of the **Add New Item – BootstrapExample** dialog box, type **_Alert**, and then click **Add**.
 
-24. In the **_Alert.cshtml** code window, select the following code:
+27. In the **_Alert.cshtml** code window, select the following code:
   ```cs
        @*
           For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -151,18 +166,18 @@
        }
 ```
 
-25. Replace the selected code with the following code:
+28. Replace the selected code with the following code:
   ```cs
        <section>
-           <h2>Did you like the book you borrowed? </h2>
+           <h2 class="m-2">Did you like the book you borrowed? </h2>
            <button type="button" class="btn btn-outline-success">Yes</button>
            <button type="button" class="btn btn-outline-danger">No</button>
-           <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+           <div id="alert" class="alert alert-success alert-dismissible fade show m-3" role="alert">
            </div>
        </section>
 ```
 
-26. In the **DIV** element of the **_Alert.cshtml** code window, type the following code:
+29. In the **DIV** element of the **_Alert.cshtml** code window, type the following code:
   ```cs
        <strong>Thank you for the response!</strong>
        We will take this into consideration the next time we recommend you a book.
@@ -170,23 +185,23 @@
            <span aria-hidden="true">&times;</span>
        </button>
 ```
-27. On the **FILE** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Save All**.
+30. On the **FILE** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Save All**.
 
-28. On the **DEBUG** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Start Debugging**.
+31. On the **DEBUG** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
-29. In the **Home** page, click **Lunch modal example**, and then click **Close**.
+32. In the **Home** page, click **Lunch modal example**, and then click **Close**.
 
-30. In the menu bar click **Genres**, and then click **Drama**. 
+33. In the menu bar click **Genres**, and then click **Drama**. 
 
-31. In the **Drama Books** page, click **Yes**, and examine the **alert** that appears.
+34. In the **Drama Books** page, click **Yes**, and examine the **alert** that appears.
 
       >**Note:** In the **Drama Books** page, to close the message press the small X on the side.
 
-32. In the **Microsoft Edge** window, click **Close**.
+35. In the **Microsoft Edge** window, click **Close**.
 
-33. On the **DEBUG** menu of the **BootstrapExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+36. On the **DEBUG** menu of the **BootstrapExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-34. On the **FILE** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Exit**.
+37. On the **FILE** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
