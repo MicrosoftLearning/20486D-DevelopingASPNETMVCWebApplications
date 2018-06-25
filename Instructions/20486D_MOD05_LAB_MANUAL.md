@@ -143,7 +143,7 @@ The main tasks for this exercise are as follows:
 
 2. In the **ShowDataForCity** action code block, above the return statement, save the following key and value in the **ViewBag** property:
     - Key: **City**
-    - Value: **_cities**
+    - Value: **_cities[cityName]**
 
 3. Right-click on the **ShowDataForCity** action name, and then click **Add View**.
 
@@ -196,10 +196,9 @@ The main tasks for this exercise are as follows:
     - Name: **_ViewImports**
     - Folder: **Views**
 
-
 4. In the  **_ViewImports**  file, add a **@addTagHelper** directive with the following information:
 
-    - Tag Helpers: **"*"**
+    - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
 
@@ -213,7 +212,7 @@ The main tasks for this exercise are as follows:
 
     - Content: **@item.Key**
     - asp-action: **ShowDataForCity**
-    - asp-route-cityname: **"@item.Key**
+    - asp-route-cityname: **@item.Key**
   
     > **Note**: The key of the  **CityProvider** item contains the city name.
 
@@ -359,7 +358,7 @@ The main tasks for this exercise are as follows:
 
 6. In the **Invoke** method code block, save the following key and value in the **ViewBag** property:
     - Key: **CurrentCityName**
-    - Value: **city.CityName**
+    - Value: **cityName**
 
 7. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
 
@@ -398,7 +397,7 @@ The main tasks for this exercise are as follows:
 
 8. After the **H2** element, add an **IMG** element with the following information:
     - Attribute: **src**
-    - Value: **@Url.Action("GetImage", "Butterfly", new { Id = item.Id })**
+    - Value: **@Url.Action("GetImage", new {cityName = ViewBag.CurrentCityName })**
 
 ####	Task 3: Use the view component.
 
