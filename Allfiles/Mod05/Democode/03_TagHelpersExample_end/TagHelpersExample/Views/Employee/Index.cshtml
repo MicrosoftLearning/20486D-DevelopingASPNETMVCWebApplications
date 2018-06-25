@@ -14,10 +14,10 @@
 <body>
     <h1>Employees</h1>
     <p>Please select an employee from the list:</p>
-    @foreach (string currentName in ViewBag.PersonNames)
+    @foreach (string currentName in ViewBag.EmployeeNames)
     {
         <div>
-            <a asp-action="Details" asp-route-personName="@currentName">@currentName</a>
+            <a asp-action="Details" asp-route-employeeName="@currentName">@currentName</a>
         </div>
     }
 </body>

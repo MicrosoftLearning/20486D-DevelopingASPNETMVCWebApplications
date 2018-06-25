@@ -14,9 +14,7 @@
 <body>
     <h1>Employee Details</h1>
     <p>
-        Name: @ViewBag.SelectedPerson
+        Name: @ViewBag.SelectedEmployee
     </p>
-    <img src="@Url.Action("GetImage", new {personName = ViewBag.SelectedPerson })" width="500" />
-    <p>@Html.ActionLink("Back to person selection list", "Index")</p>
 </body>
 </html>
