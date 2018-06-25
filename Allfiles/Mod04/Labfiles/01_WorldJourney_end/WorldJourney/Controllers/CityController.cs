@@ -22,7 +22,7 @@ namespace WorldJourney.Controllers
             _data.CityInitializeData();
         }
 
-        [ServiceFilter(typeof(LogActionFilter))]
+        [ServiceFilter(typeof(LogActionFilterAttribute))]
         [Route("WorldJourney")]
         public IActionResult Index()
         {
@@ -48,11 +48,11 @@ namespace WorldJourney.Controllers
         {
             ViewData["Message"] = "display Image";
             City requestedCity = _data.GetCityById(cityId);
-            string webRootpath = _environment.WebRootPath;
-            string folderPath = "\\images\\";
-            string fullPath = webRootpath + folderPath + requestedCity.ImageName;
             if (requestedCity != null)
             {
+                string webRootpath = _environment.WebRootPath;
+                string folderPath = "\\images\\";
+                string fullPath = webRootpath + folderPath + requestedCity.ImageName;
                 FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
                 byte[] fileBytes;
                 using (BinaryReader br = new BinaryReader(fileOnDisk))

@@ -9,15 +9,14 @@
     <link type="text/css" rel="stylesheet" href="~/css/butterflies-shop-styles.css" />
 </head>
 <body>
-    <div>
-        <h1 class="main-titel">Butterflies Shop</h1>
-        <p class="into">Welcome to Our Web Store, Enjoy a Wide Variety of Butterflies</p>
-        <p class="into">Our Butterflies in The Shop</p>
+    <div class="container">
+        <h1 class="main-title">Butterflies Shop</h1>
+        <p class="into">Welcome to our Web Store, Enjoy a Wide Variety of Butterflies</p>
+        <p class="into">Our Butterflies in the Shop</p>
         <button type="button" onclick="location.href='@Url.Action("Create", "Butterfly")'">Add Butteflies</button>
-    </div>
-    <div class="img-container">
-        @foreach (var item in Model.Butterflies)
-        {
+        <div class="img-container">
+            @foreach (var item in Model.Butterflies)
+            {
                 <div class="photo-index-card">
                     <h3 class="display-picture-title">
                         "@Html.DisplayFor(modelItem => item.CommonName)"
@@ -37,7 +36,7 @@
                             @Html.DisplayFor(model => item.ButterflyFamily)
                         </p>
                     </div>
-                    <div>
+                    <div class="display-info">
                         <p class="display-label">
                             @Html.DisplayNameFor(model => item.Characteristics)
                         </p>
@@ -62,7 +61,8 @@
                         </p>
                     </div>
                 </div>
-        }
+            }
+        </div>
     </div>
 </body>
 </html>

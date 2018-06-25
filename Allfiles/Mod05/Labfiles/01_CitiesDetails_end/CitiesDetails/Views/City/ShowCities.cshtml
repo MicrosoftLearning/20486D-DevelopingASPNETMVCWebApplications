@@ -1,6 +1,4 @@
-﻿@using CitiesDetails.Services
-@inject ICityProvider CityProvider
-
+﻿
 @{
     Layout = null;
 }
@@ -11,11 +9,11 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>ShowCities</title>
-    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
 </head>
 <body>
     <h1>Select City</h1>
-    @foreach (var item in CityProvider)
+    @foreach (var item in ViewBag.Cities)
     {
         @await Component.InvokeAsync("City", item.Key)
     }

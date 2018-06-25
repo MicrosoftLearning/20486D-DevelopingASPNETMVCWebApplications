@@ -18,18 +18,19 @@ namespace CitiesDetails.Controllers
 
         public IActionResult ShowCities()
         {
+            ViewBag.Cities = _cities;
             return View();
         }
 
-        public IActionResult ShowDataForCity(string city)
+        public IActionResult ShowDataForCity(string cityName)
         {
-            ViewBag.City = _cities[city];
+            ViewBag.City = _cities[cityName];
             return View();
         }
 
         public IActionResult GetImage(string cityName)
         {
-            return File($@"\images\{cityName}.jpg", "image/jpeg");
+            return File($@"images\{cityName}.jpg", "image/jpeg");
         }
     }
 }

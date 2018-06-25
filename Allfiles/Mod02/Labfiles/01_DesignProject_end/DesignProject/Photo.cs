@@ -23,9 +23,9 @@ namespace DesignProject
             }
         }
 
-        public byte PhotoFile
+        public byte[] PhotoFile
         {
-            get => default(byte);
+            get => default(byte[]);
             set
             {
             }

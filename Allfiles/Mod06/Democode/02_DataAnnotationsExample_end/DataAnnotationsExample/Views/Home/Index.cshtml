@@ -1,16 +1,17 @@
 ﻿@model DataAnnotationsExample.Models.User
 
+
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link type="text/css" rel="stylesheet" href="~/css/style-sheet.css"/>
+    <link type="text/css" rel="stylesheet" href="~/css/style-sheet.css" />
 </head>
 <body>
-    <h1>Create An Account</h1>
-    <div>
+    <div class="container">
+        <h1>Create An Account</h1>
         <form asp-action="Details" method="post">
             <label asp-for="FullName"></label>
             <input asp-for="FullName" />

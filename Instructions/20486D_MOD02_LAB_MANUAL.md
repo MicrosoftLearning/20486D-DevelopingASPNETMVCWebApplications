@@ -40,7 +40,7 @@ The main tasks for this exercise are as follows:
 
 1. Open the **InitialInvestigation** document by using the following information:
 
-   - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+    - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
 
 2. Enable the **Navigation Pane** feature.
 
@@ -54,54 +54,177 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Plan the photo model class.
 
-1. Open the **DetailedPlanningDocument** document, and locate the MVC Model section.
+1. Open the **DetailedPlanningDocument** document, and locate the "MVC Model" section.
+    - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
 
-   - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model** using the following information:
+    - Class name: **Photo**
+    - Description: **The photo model class represents a photo that authenticated users can upload to the website**
 
-2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model**.
+3. In **Table 1: MVC Model**, add a property using the following information:
+    - Class name: **Photo**
+    - Property name: **PhotoID**
+    - Data type: **Integer**
 
-3. Add properties to the model class you created in **Table 1: MVC Model**. The model class will have many properties
+4. Add a property using the following information:
+    - Class name: **Photo**
+    - Property name: **Title**
+    - Data type: **String**
 
-4. Add data types to the photo properties. Each property will have one, and only one data type.
+5. Add a property using the following information:
+    - Class name: **Photo**
+    - Property name: **PhotoFile**
+    - Data type: **Binary**
 
-5. Merge the rows in the **Model Class** and **Description** columns, and save the document.
+6. Add a property using the following information:
+    - Class name: **Photo**
+    - Property name: **Description**
+    - Data type: **String**
 
-6. Create a **WPF Project** in visual studio.
+7. Add a property using the following information:
+    - Class name: **Photo**
+    - Property name: **CreatedDate**
+    - Data type: **Date**
 
-7. Add a **Class Diagram** template to the project.
+8. Add a property using the following information:
+    - Class name: **Photo**
+    - Property name: **Owner**
+    - Data type: **Integer**
 
-8. Add a new **Class** to the class diagram.
+9. Merge all the rows in the **Model Class** column that belong to the **Photo** class, and save the document.
 
-9. Add attributes to the new **Photo** class diagram for each of the properties you planned for the photo class.
+10. Merge all the rows in the **Description** column that belong to the **Photo** class, and save the document.
 
-10. Fix the properties return values in the **Photo** class, to match the property types.
+11. Open Visual Studio 2017 and create a new **WPF App (.NET Framework)** project by using the following information:
+    - Name: **DesignProject**
+    - Template: **WPF App (.NET Framework)**
+    - Location: **Allfiles/Mod02/Labfiles/01_DesignProject_begin**
+    - Solution name: **DesignProject**
+    - Create directory for solution: **True**
 
-11. Save the created diagram.
+12. Create a new **Class Diagram** in the main project's directory by using the following information:
+    - File name: **ModelDesign**
+    - Item type: **Class Diagram**
 
+13. Open the **Toolbox** window.
+
+14. In **ModelDesign.cd**, Drag a new **Class** object to the class diagram using the following information:
+    - Class name: **Photo**
+
+15. In the **Photo** class diagram, add a property using the following information:
+    - Property name: **PhotoID**
+    - Data type: **int**
+
+16. Add a property using the following information:
+    - Property name: **Title**
+    - Data type: **string**
+
+17. Add a property using the following information:
+    - Property name: **PhotoFile**
+    - Data type: **byte[]**
+
+18. Add a property using the following information:
+    - Property name: **Description**
+    - Data type: **string**
+
+19. Add a property using the following information:
+    - Property name: **CreatedDate**
+    - Data type: **DateTime**
+
+20. Add a property using the following information:
+    - Property name: **Owner**
+    - Data type: **int**
+
+21. In **Photo.cs**, in the **Title** property, change the property return type to **string**.
+
+22. In the **PhotoFile** property, change the property return type to **byte[]**.
+
+23. In the **Description** property, change the property return type to **string**.
+
+24. In the **CreatedDate** property, change the property return type to **DateTime**.
+
+25. Save the created diagram.
 
 #### Task 3: Plan the comment model class.
 
-1. Open the **DetailedPlanningDocument** document, and locate the MVC Model section.
+1. In the **DetailedPlanningDocument**, locate the "MVC Model" section.
 
-2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model**.
+2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for comments in **Table 1: MVC Model** using the following information:
+    - Class name: **Comment**
+    - Description: **The comment model class represents a comment that authenticated users can add to photos. This enables users to discuss others’ photos. Each comment is associated with just one photo.**
 
-3. Add properties to the model class you created in **Table 1: MVC Model**.
+3. In **Table 1: MVC Model**, add a property using the following information:
+    - Class name: **Comment**
+    - Property name: **CommentID**
+    - Data type: **int**
 
-4. Add data types to the comment properties.
+4. Add a property using the following information:
+    - Class name: **Comment**
+    - Property name: **User**
+    - Data type: **string**
 
-5. Merge the rows in the **Model Class** and the **Description** columns, and then save the document.
+5. Add a property using the following information:
+    - Class name: **Comment**
+    - Property name: **Subject**
+    - Data type: **string**
 
-7. Add a new **Class** to the class diagram and name it **Comment**.
+6. Add a property using the following information:
+    - Class name: **Comment**
+    - Property name: **Body**
+    - Data type: **string**
 
-8. Add attributes to the new **Comment** class diagram for each of the properties you planned for the comment.
+7. Add a property using the following information:
+    - Class name: **Comment**
+    - Property name: **PhotoID**
+    - Data type: **int**
 
-9. Connect the two classes with association object.
+8. Merge all the rows in the **Model Class** column that belong to the **Comment** class, and save the document.
 
-10. The association created a property,  in the photo class. Change its return type to List<Comment>, and change the property back to "collection association" in the class diagram.
+9. Merge all the rows in the **Description** column that belong to the **Comment** class, and save the document.
 
-11. Fix the properties return values in the **Photo** class, to match the property types.
+10. In **ModelDesign.cd**, drag a new **Class** object to the class diagram using the following information:
+    - Class name: **Comment**
 
-   >**Results** : After completing this exercise, you will be able to create proposals for a model, and configure the properties and data types of the model classes.
+11. In **ModelDesign.cd**, connect the **Photo** class to the **Comment** class using the association object from the toolbox.
+
+12. Change the association name to **PhotoComments**.
+
+13. In **Photo.cs**, change the **PhotoComments** property type to List<Comment>.
+
+14. In **Photo.cs**, change the **PhotoComments** property return type to List<Comment>.
+
+15. In **ModelDesign.cd**, change the **PhotoComments** property to **Show as Collection Association**.
+
+16. In the **Comment** class diagram, add a property using the following information:
+    - Property name: **CommentID**
+    - Data type: **int**
+
+17. Add a property using the following information:
+    - Property name: **User**
+    - Data type: **string**
+
+18. Add a property using the following information:
+    - Property name: **Subject**
+    - Data type: **string**
+
+19. Add a property using the following information:
+    - Property name: **Body**
+    - Data type: **string**
+
+20. Add a property using the following information:
+    - Property name: **PhotoID**
+    - Data type: **int**
+
+21. In **Comment.cs**, in the **User** property, change the property return type to **string**.
+
+22. In the **Subject** property, change the property return type to **string**.
+
+23. In the **Body** property, change the property return type to **string**.
+
+24. Save the created diagram.
+
+
+>**Results** : After completing this exercise, you will be able to create proposals for a model, and configure the properties and data types of the model classes.
 
 ### Exercise 2: Planning Controllers
 
@@ -117,28 +240,73 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Plan the photo controller.
 
-1. Open the **DetailedPlanningDocument** document, and locate the MVC Controllers section.
+1. In the **DetailedPlanningDocument**, locate the "MVC Controllers" section.
 
-2. Based on your reading of the **InitialInvestigation** document, add a controller for photos in **Table 2: MVC Controllers**.
+2. Based on your reading of the **InitialInvestigation** document, add and describe a controller for photos in **Table 2: MVC Controllers** using the following information:
+    - Controller name: **PhotoController**
 
-3. Add actions to the controller for photos in **Table 2: MVC Controllers**.
+3. In **Table 2: MVC Controllers**, add an action using the following information:
+    - Controller name: **PhotoController**
+    - Action name: **DisplayGallery (GET)**
+    - Action description: **The action runs when the user requests the Photo Gallery page. The action obtains all the photos from the database and passes them to the DisplayGallery view.**
 
-4. Add descriptions for each of the actions you have planned.
+4. In **Table 2: MVC Controllers**, add an action using the following information:
+    - Controller name: **PhotoController**
+    - Action name: **DisplayRecent (GET)**
+    - Action description: **This action is similar to the DisplayGallery action except that only the most recent photos are obtained from the database. This smaller collection of photos is passed to the DisplayGallery view.**
 
-5. Merge rows in the **Controller** column, and save the document.
+5. In **Table 2: MVC Controllers**, add an action using the following information:
+    - Controller name: **PhotoController**
+    - Action name: **DisplayPhoto (GET)**
+    - Action description: **This action runs when the user clicks a photo's “Details” link in a gallery. The action obtains full details of a single photo from the database and passes it to the DisplayPhoto view.**
 
+6. In **Table 2: MVC Controllers**, add an action using the following information:
+    - Controller name: **PhotoController**
+    - Action name: **AddPhoto (GET)**
+    - Action description: **This action runs when the user clicks an “Add a Photo” link. The action creates a new instance of the Photo model class and passes it to the AddPhoto view.**
+
+7. In **Table 2: MVC Controllers**, add an action using the following information: 
+    - Controller name: **PhotoController**
+    - Action name: **AddPhoto (POST)**
+    - Action description: **This action runs when the user clicks “Save” in the AddPhoto view. The action saves the file and details of the new photo to the database and redirects the user to the DisplayGallery view.**
+
+8. In **Table 2: MVC Controllers**, add an action using the following information:
+    - Controller name: **PhotoController**
+    - Action name: **DeletePhoto (GET)**
+    - Action description: **This action runs when the user clicks a “Delete this Photo” link in the DisplayPhoto view. The action displays the DeletePhoto view, which requests confirmation for the deletion.**
+
+9. In **Table 2: MVC Controllers**, add an action using the following information:
+    - Controller name: **PhotoController**
+    - Action name: **DeletePhoto (POST)**
+    - Action description: **This action runs when the user clicks “Delete” in the DeletePhoto view. The action deletes the current photo, with its associated comments from the database and redirects the user to the DisplayGallery view.**
+
+10. Merge all the rows in the **Controller** column that belong to the **PhotoController** controller, and save the document.
 
 #### Task 2: Plan the comment controller.
 
-1. Based on your reading of the **InitialInvestigation** document, add a controller for photos in **Table 2: MVC Controllers**.
+1. In the **DetailedPlanningDocument**, locate the "MVC Controllers" section.
 
-2. Add actions to the controller for comments in **Table 2: MVC Controllers**.
+2. Based on your reading of the **InitialInvestigation** document, add and describe a controller for comments in **Table 2: MVC Controllers** using the following information:
+    - Controller name: **CommentController**
 
-3. Add descriptions for each of the actions you have planned.
+3. In **Table 2: MVC Controllers**, add an action using the following information:
+    - Controller name: **CommentController**
+    - Action name: **DisplayComments (GET)**
+    - Action description: **This action runs when the DisplayPhoto view is displayed. The action requires the current PhotoID as a parameter and uses it to get all the comments for the current photo from the database. The action returns the _DisplayComments partial view.**
 
-4. Merge rows in the **Controller** column, and save the document.
+4. In **Table 2: MVC Controllers**, add an action using the following information:
+    - Controller name: **CommentController**
+    - Action name: **AddComment (GET)**
+    - Action description: **This action runs when the user clicks the “Add a Comment” link in the DisplayPhoto view. The action creates a new instance of the Comment model class and sets its PhotoID to be the ID of the current photo. It passes this new comment to the AddComment view.**
 
-   >**Results** : After completing this exercise, you will be able to create proposals for controllers, and configure their properties and data types.
+5. In **Table 2: MVC Controllers**, add an action using the following information:
+    - Controller name: **CommentController**
+    - Action name: **AddComment (POST)**
+    - Action description: **This action runs when the user clicks “Submit” in the AddComment view. The action saves the details of the new comment in the database and redirects the user to the DisplayPhoto view.**
+
+6. Merge all the rows in the **Controller** column that belong to the **CommentController** controller, and save the document.
+
+>**Results** : After completing this exercise, you will be able to create proposals for controllers, and configure their properties and data types.
 
 ### Exercise 3: Planning Views
 
@@ -156,49 +324,196 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Define the views.
 
-1. Add a controller to the **Table 3: MVC Views** table.
+1. Based on your reading of the **InitialInvestigation** document, add views in **Table 3: MVC Views** using the following information:
+    - Controller name: **PhotoController**
 
-2. Add the required views to the Controllers.
+2. In **Table 3: MVC Views**, add a view using the following information:
+    - Controller name: **PhotoController**
+    - View name: **DisplayGallery**
+    - Action description: **This view displays a collection of photos in the thumbnail size. For each photo the Title, Owner, and Created Date values are displayed.**
 
-3. Add a description to the views.
+3. In **Table 3: MVC Views**, add a view using the following information:
+    - Controller name: **PhotoController**
+    - View name: **DisplayPhoto**
+    - Action description: **This view displays a single photo in full size. The Title and Owner values appear above the photo. The Photo Name, Description, and other values appear beneath the photo. Under these details, all the comments for the current photo are listed with an “Add a Comment” link.**
 
-4. Merge rows in the **Controller** column, and save the document.
+4. In **Table 3: MVC Views**, add a view using the following information:
+    - Controller name: **PhotoController**
+    - View name: **AddPhoto**
+    - Action description: **This view displays a form that the user can use to upload and describe a new photo.**
 
+5. In **Table 3: MVC Views**, add a view using the following information:
+    - Controller name: **PhotoController**
+    - View name: **DeletePhoto**
+    - Action description: **This view displays a form that the user can use to confirm the deletion of a photo. The view displays details of the current photo such as its title and description.**
+
+6. Merge all the rows in the **Controller** column that belong to the **PhotoController** controller, and save the document.
+
+7. Based on your reading of the **InitialInvestigation** document, add a controller **Table 3: MVC Views** using the following information:
+    - Controller name: **CommentController**
+
+8. In **Table 3: MVC Views**, add a view using the following information:
+    - Controller name: **CommentController**
+    - View name: **DisplayComments**
+    - Action description: **This partial view, which is used on the DisplayPhoto form, displays all the comments associated with the current photo.**
+
+9. In **Table 3: MVC Views**, add a view using the following information:
+    - Controller name: **CommentController**
+    - View name: **AddComment**
+    - Action description: **This view displays a form that the user can use to create a new comment for a photo.**
+
+10. Merge all the rows in the **Controller** column that belong to the **CommentController** controller, and save the document. 
 
 #### Task 2: Design the single photo view.
 
-1. Create a new **WPF Window** with the name **SinglePhotoView**.
+1. Create a new **Window (WPF)** in the main project's directory by using the following information:
+    - File name: **SinglePhotoView**
 
-2. Drag a **label** as header.
+2. Open the **Properties** window.
 
-3. Drag a **Canvas**, and put inside it **buttons**, as the site menu according the the use cases defined.
+3. Open the **Document Outline** window.
 
-4. **Design** the canvas, and buttons so they will look well.
+4. Modify the main window properties using the following information:
+    - Width: **500**
+    - Height: **1100**
+    - WindowStyle: **None**
 
-5. Drag below it **labels** that show the photo properties as needed. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
+5. Drag a **Label** from the Toolbox to the top left corner of the screen using the following information:
+    - Content: **Adventure Works Photo Sharing**
+    - Text size: **20 px**
 
-6. Drag an **Image** object and maximize it. (Use the image as placeholder file **Allfiles\Mod02\Labfiles\01_DesignProject_begin\photo.jpg** to be shown instead of real photos).
+6. Drag a **Canvas** below the label and set its properties using the following information:
+    - Background style: **Solid color brush**
+    - Background R: **150**
+    - Background G: **175**
+    - Background B: **207**
+    - Width: **400**
+    - Height: **40**
 
-7. Drag **Canvas** for the comments, and fill it with **Labels** according to the comment properties. (Write "Title" instead of the photo name, "Owner" instead of the owner name, "Date", instead of date value etc.)
+7. Select the canvas and drag a **Button** into the left side of it, set its properties using the following information:
+    - Content: **Home**
+    - Background style: **Solid color brush**
+    - Background R: **31**
+    - Background G: **71**
+    - Background B: **125**
+    - Foreground style: **Solid color brush**
+    - Foreground R: **255**
+    - Foreground G: **255**
+    - Foreground B: **255**
 
-8. Add a **TextBlock** which supports underline to represend a link, and fill it with the text **Add Comment**.
+8. Copy the **Button** and paste it to the right side of the previous button. Change its content to **Gallery**.
 
+9. Paste the **Button** again, and place it to the right side of the last pasted button. Change its content to **Photo**.
+
+10. Paste the **Button** again, and place it to the right side of the last pasted button. Change its content to **Slideshow**.
+
+11. Drag a **Label** below the left side of the canvas using the following information:
+    - Content: **Title**
+    - Text size: **20 px**
+
+12. Drag a **Label** below the last created label using the following information:
+    - Content: **By: Owner**
+
+13. Add an existing item to the current project main directory using the following information:
+    - File path: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+    - File name: **photo.jpg**
+
+14. Drag an **Image** below the last created label using the following information:
+    - Source: **photo.jpg**
+    - Width: **400**
+    - Height: **240**
+
+15. Drag a **Label** below the left side of the image using the following information:
+    - Content: **Description:**
+
+16. Drag a **Label** below the last created label using the following information:
+    - Content: **Photo Description...**
+    - Width: **300**
+    - Height: **150**
+    - BorderBrush style: **Solid color brush**
+    - BorderBrush R: **0**
+    - BorderBrush G: **0**
+    - BorderBrush B: **0**
+    - Border Thickness: **2 (In each one of the 4 boxes)**
+
+17. Drag a **Label** below the left side of the canvas using the following information:
+    - Content: **Comments:**
+
+18. Drag a **Canvas** below the label using the following information:
+    - Width: **300**
+    - Height: **130**
+    - Background style: **Solid color brush**
+    - Background R: **150**
+    - Background G: **175**
+    - Background B: **207**
+
+19. Select the canvas, and drag a **Label** into the top left corner of it. Set its properties using the following information:
+    - Content: **From:**
+
+20. Select the canvas, and drag a **Label** into it. Place it below the last created label, and set it properties using the following information:
+    - Content: **Subject:**
+
+21. Select the canvas, and drag a **Label** into it. Place it below the last created label, and set it properties using the following information:
+    - Content: **Body:**
+
+22. Copy the Canvas, and paste it below the last copied canvas.
+
+23. Drag a **TextBlock** below the left side of the canvas using the following information:
+    - Content: **Add a Comment**
+    - Foreground style: **Solid Color Brush**
+    - Foreground R: **0**
+    - Foreground G: **0**
+    - Foreground B: **255**
+    - Underline: **True**
 
 #### Task 3: Design the gallery view.
 
-1. Create a new **WPF Window** with the name **PhotoGalleryView**.
+1. Create a new **Window (WPF)** in the main project's directory by using the following information:
+    - File name: **PhotoGalleryView**
 
-2. Drag a **label** as header.
+2. Modify the main window properties using the following information:
+    - Width: **500**
+    - Height: **600**
+    - WindowStyle: **None**
 
-3. Drag a **Canvas**, and put inside it **buttons**, to be used as the site menu according the the use cases defined.
+3. Drag a **Label** to the top left corner of the screen using the following information:
+    - Content: **Adventure Works Photo Sharing**
+    - Text size: **20 px**
 
-4. **Design** the canvas and buttons so they will look well.
+4. In the **SinglePhotoView.xaml** copy the canvas that contains 4 buttons.
 
-5. Drag a **canvas** below the menu, and fill it with the photo and properties that should be shown for a list of photos in the home page.
+5. In the **PhotoGalleryView.xaml** paste the canvas, and place it below the label.
 
-6. Copy the canvas multiple times for each image, as an image list.
+6. Drag a **Canvas** below the last created canvas using the following information:
+    - Width: **150**
+    - Height: **190**
+    - Background R: **150**
+    - Background G: **175**
+    - Background B: **207**
 
-   >**Results** : After completing this exercise, you will create proposals for views and their layouts.
+7. Select the canvas, and drag a **Label** into it. Place it in the left corner of the canvas, and set it properties using the following information:
+    - Content: **Title**
+
+8. Select the canvas, and drag a **Label** into it. Place it in the canvas, below the previous Label, and set it properties using the following information:
+    - Content: **By: Owner**
+
+9. Select the canvas, and drag a **Image** into it. Place it in the canvas, below the previous Label, and set it properties using the following information:
+    - Source: **photo.jpg**
+    - Width: **100**
+    - Height: **100**
+
+10. Select the canvas, and drag a **Label** into it. Place it in the canvas, below the Image, and set it properties using the following information:
+    - Content: **Created On: Date**
+
+11. Copy the canvas that contains the image.
+
+12. Paste the canvas in the right side of the copied canvas.
+
+13. Paste another canvas below the last pasted canvas.
+
+14. Paste another canvas to the left of the last pasted canvas.
+
+>**Results** : After completing this exercise, you will create proposals for views and their layouts.
 
 ### Exercise 4: Architecting an MVC Web Application
 
@@ -214,16 +529,21 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Hosting options.
 
-1. Based on your reading of the **InitialInvestigation** document, add a description of the web server arrangements that are suited to host the photo sharing application.
+1. Based on your reading of the **InitialInvestigation** document, add a description of the web server arrangements using the following information:
+
+    - Description: **The author recommends using Microsoft Azure to host the Photo Sharing application. Microsoft Azure can host any ASP.NET website, including the ASP.NET Core MVC application proposed in this document. Scaling is very simple because Microsoft, not Adventure Works, is responsible for adding server resources at times of high traffic. Costs are minimal: they depend on the amount of data served to visitors but it is not necessary to maintain our own hardware.**
 
 #### Task 2: Choose a data store.
 
-2. Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements that are suited to host the photo sharing application.
+2. Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements using the following information:
 
-   >**Results**: After completing this exercise, you will be able to create proposals for hosting arrangements.
+    - Description: **DetailedPlanningDocument(docx) - Microsoft Word** window, type **The author recommends using SQL Database, within Microsoft Azure, to host the Photo Sharing application underlying database. As for the web server, this recommendation ensures high-availability hosting for the database with good value for money. This makes particular sense if the web site is hosted in Microsoft Azure.**
+
+
+>**Results**: After completing this exercise, you will be able to create proposals for hosting arrangements.
 
 ©2017 Microsoft Corporation. All rights reserved.
 
-The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+The text in this document is available under the [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are **not** included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 
 This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.

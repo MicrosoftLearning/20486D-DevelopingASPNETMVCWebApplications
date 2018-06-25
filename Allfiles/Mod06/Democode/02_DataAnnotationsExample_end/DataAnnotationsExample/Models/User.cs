@@ -17,7 +17,7 @@ namespace DataAnnotationsExample.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Display(Name = "BirthDate:")]
+        [Display(Name = "Birthdate:")]
         [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }
 
