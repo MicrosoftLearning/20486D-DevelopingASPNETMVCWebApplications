@@ -7,6 +7,6 @@ namespace ViewComponentsExample.Services
 {
     public interface IPersonProvider
     {
-        Person this[int index] { get; }
+        List<Person> PersonList { get; }
     }
 }

@@ -67,9 +67,27 @@ The main tasks for this exercise are as follows:
 
 10. Initialize the **Metro** property with the value of the **metro** parameter.
 
-11. Right-click on the **ShowCities** action name, and then click **Add View**.
+11. In the **CityController** class, add **using** statement for the following namespace:
+    - **CitiesDetails.Services**
 
-12. Create a new view using the **Add MVC View** dialog box, with the following information:
+12. Create a new field with the following information:
+    - Scope: **private**
+    - Type: **ICityProvider**
+    - Name: **_cities**
+
+13. Change the **CityController** constructor signature to accept the following parameter:
+    - Type: **ICityProvider**
+    - Name: **cities**
+
+14. In the constructor code block, initialize the **_cities** field with the value of the **cities** parameter.
+
+15. In the **ShowCities** action code block, above the return statement, save the following key and value in the **ViewBag** property:
+    - Key: **Cities**
+    - Value: **_cities**
+
+16. Right-click on the **ShowCities** action name, and then click **Add View**.
+
+17. Create a new view using the **Add MVC View** dialog box, with the following information:
 
     - View Name: **ShowCities**
     - Template: **Empty (without model)**
@@ -79,28 +97,24 @@ The main tasks for this exercise are as follows:
 
     > **Note**: In the Add MVC View dialog box, the "Reference script libraries" check box can be unchecked by setting the template to **Edit** and then setting back the template to **Empty**(without model).
 
-13. At the beggining of **ShowCities** view, add a **USING** statement for the following namespace:
+18. At the beggining of **ShowCities** view, add a **USING** statement for the following namespace:
 
     - **CitiesDetails.Services**
 
-14. Add a **@inject** directive with the following information:
-    - Type:  **ICityProvider**
-    - Name:  **CityProvider**
-
-15. After the **TITLE** element, add a **LINK** element with the following information:
+19. After the **TITLE** element, add a **LINK** element with the following information:
     - Type:  **text/css**
     - Rel:  **stylesheet**
     - Href:  **~/css/style.css**
 
-16. In the **BODY** element, add a **H1** element with the following information:
+20. In the **BODY** element, add a **H1** element with the following information:
     - Content:  **Select City**  
 
-17. Create a **FOREACH** statement block, with the following information:
+21. Create a **FOREACH** statement block, with the following information:
     - Variable Type: **var**
     - Variable Name: **item**
-    - Collection: **CitiesProvider**
+    - Collection: **ViewBag.Cities**
 
-18.  In the  **FOREACH** statement block, add a **P** element with the following information:
+22.  In the  **FOREACH** statement block, add a **P** element with the following information:
 
      - Content:  **@item.Key**  
     
@@ -123,31 +137,17 @@ The main tasks for this exercise are as follows:
 
 ####	Task 3: Add a view to show data of a city, as returned by the ShowDataForCity action.
 
-1. In the **CityController** class, add **using** statement for the following namespace:
-    - **CitiesDetails.Services**
-
-2. Create a new field with the following information:
-    - Scope: **private**
-    - Type: **ICityProvider**
-    - Name: **_cities**
-
-3. Change the **CityController** constructor signature to accept the following parameter:
-    - Type: **ICityProvider**
-    - Name: **cities**
-
-4. In the constructor code block, initialize the **_cities** field with the value of the **cities** parameter.
-
-5. Change the **ShowDataForCity** action signature to accept the following parameter:
+1. In the **CityController** class, change the **ShowDataForCity** action signature to accept the following parameter:
     - Type: **string**
     - Name: **cityName**
 
-6. In the **ShowDataForCity** action code block, above the return statement, save the following key and value in the **ViewBag** property:
+2. In the **ShowDataForCity** action code block, above the return statement, save the following key and value in the **ViewBag** property:
     - Key: **City**
-    - Value: **_cities**
+    - Value: **_cities[cityName]**
 
-7. Right-click on the **ShowDataForCity** action name, and then click **Add View**.
+3. Right-click on the **ShowDataForCity** action name, and then click **Add View**.
 
-8. Create a new view using the **Add MVC View** dialog box, with the following information:
+4. Create a new view using the **Add MVC View** dialog box, with the following information:
 
    - View Name: **ShowDataForCity**
    - Template: **Empty (without model)**
@@ -158,30 +158,30 @@ The main tasks for this exercise are as follows:
     > **Note**: In the Add MVC View dialog box, the Reference script libraries check box can be unchecked by setting the template to **Edit** and then setting back the template to **Empty**(without model).   
 
 
-9. In the **ShowDataForCity** view, after the **TITLE** element, add a **LINK** element with the following information:
+5. In the **ShowDataForCity** view, after the **TITLE** element, add a **LINK** element with the following information:
     - Type:  **text/css**
     - Rel:  **stylesheet**
     - Href:  **~/css/style.css**
 
-10. In the **BODY** element, create a **DIV** element.
+6. In the **BODY** element, create a **DIV** element.
 
-11. In the **DIV** element, add a **H2** element with the following information:
+7. In the **DIV** element, add a **H2** element with the following information:
     - Content:  **@ViewBag.City.Name** 
 
-12. Add a **P** element with the following information:
+8. Add a **P** element with the following information:
     - Content:  **Country:  @ViewBag.City.Country** 
 
-13. Add a **P** element with the following information:
+9. Add a **P** element with the following information:
     - Content:  **Time zone: @ViewBag.City.TimeZone** 
 
-14. Add a **SPAN** element.
+10. Add a **SPAN** element.
 
-15. In the **SPAN** element, add a **IMG** element with the following information:
+11. In the **SPAN** element, add a **IMG** element with the following information:
     - Source:  **@Url.Action("GetImage", new {cityName = ViewBag.City.Name })** 
 
-16. In the **CityController** class, edit the code in the **GetImage** action by removing the code which returns the **ContentResult** result using the **Content** method.
+12. In the **CityController** class, edit the code in the **GetImage** action by removing the code which returns the **ContentResult** result using the **Content** method.
 
-17. Return the **FileResult** result using the **File** method. Pass **"$@"images\{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
+13. Return the **FileResult** result using the **File** method. Pass **"$@"images\{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
 
 ####	Task 4: Add a back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
 
@@ -196,10 +196,9 @@ The main tasks for this exercise are as follows:
     - Name: **_ViewImports**
     - Folder: **Views**
 
-
 4. In the  **_ViewImports**  file, add a **@addTagHelper** directive with the following information:
 
-    - Tag Helpers: **"*"**
+    - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
 
@@ -213,7 +212,7 @@ The main tasks for this exercise are as follows:
 
     - Content: **@item.Key**
     - asp-action: **ShowDataForCity**
-    - asp-route-cityname: **"@item.Key**
+    - asp-route-cityname: **@item.Key**
   
     > **Note**: The key of the  **CityProvider** item contains the city name.
 
@@ -270,24 +269,28 @@ The main tasks for this exercise are as follows:
 
 3. In the **_CityPopulation** partial view, delete all the content.
 
-4. Add a new variable with the following information:
+4. Add a **@inject** directive with the following information:
+    - Type: **CitiesDetails.Services.ICityFormatter**
+    - Name: **cityFormatter**
+
+5. Add a new variable with the following information:
     - Type: **CitiesDetails.Services.CityPopulation**
     - Name: **population**
     - Value: **ViewBag.City.CityPopulation**
 
-5. Add a **P** element.
+6. Add a **P** element.
 
-6. In the **P** element, add a **H3** element with the following information:
+7. In the **P** element, add a **H3** element with the following information:
     - Content:  **City Population(@population.Year)** .
 
-7. After the **P** element, add another **P** element with the following information:
-    - Content:  **City: @population.City** .
-
-8. After the last **P** element, add another **P** element with the following information:
-    - Content:  **Urban: @population.Urban** .
+8. After the **P** element, add another **P** element with the following information:
+    - Content:  **City: @cityFormatter.GetFormattedPopulation(@population.City)** .
 
 9. After the last **P** element, add another **P** element with the following information:
-    - Content:  **Metro: @population.Metro** .
+    - Content:  **Urban: @cityFormatter.GetFormattedPopulation(@population.Urban)** .
+
+10. After the last **P** element, add another **P** element with the following information:
+    - Content:  **Metro: @cityFormatter.GetFormattedPopulation(@population.Metro)** .
 
 ####	Task 2: Use the partial view in the ShowDataForCity view.
 
@@ -355,7 +358,7 @@ The main tasks for this exercise are as follows:
 
 6. In the **Invoke** method code block, save the following key and value in the **ViewBag** property:
     - Key: **CurrentCityName**
-    - Value: **city.CityName**
+    - Value: **cityName**
 
 7. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
 
@@ -394,7 +397,7 @@ The main tasks for this exercise are as follows:
 
 8. After the **H2** element, add an **IMG** element with the following information:
     - Attribute: **src**
-    - Value: **@Url.Action("GetImage", "Butterfly", new { Id = item.Id })**
+    - Value: **@Url.Action("GetImage", new {cityName = ViewBag.CurrentCityName })**
 
 ####	Task 3: Use the view component.
 

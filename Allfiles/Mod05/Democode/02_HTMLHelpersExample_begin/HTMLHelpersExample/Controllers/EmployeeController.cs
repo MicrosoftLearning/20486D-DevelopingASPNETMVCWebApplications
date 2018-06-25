@@ -6,21 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HTMLHelpersExample.Controllers
 {
-    public class PersonController : Controller
+    public class EmployeeController : Controller
     {
         public IActionResult Index()
         {
-
             return View();
         }
 
-        public IActionResult Details(string personName)
+        public IActionResult Details(string employeeName)
         {
-
             return View();
         }
 
-        public IActionResult GetImage(string personName)
+        public IActionResult GetImage(string employeeName)
         {
             return Content("");
         }
