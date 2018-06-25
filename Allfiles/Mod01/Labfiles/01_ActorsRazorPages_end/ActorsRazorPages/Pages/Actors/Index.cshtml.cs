@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using ActorsRazorPages.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ActorsRazorPages.Pages.Actors
 {
@@ -13,7 +17,7 @@ namespace ActorsRazorPages.Pages.Actors
             _data = data;
         }
 
-        public List<Actor> Actors { get; set; }
+        public IList<Actor> Actors { get; set; }
 
         public void OnGet()
         {

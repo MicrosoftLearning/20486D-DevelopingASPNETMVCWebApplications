@@ -7,6 +7,7 @@ namespace ActorsRazorPages.Pages.Actors
     public class DetailsModel : PageModel
     {
         private IData _data;
+		
         public Actor Actor { get; set; }
 
         public DetailsModel(IData data)

@@ -13,14 +13,14 @@
 <body>
     @foreach (KeyValuePair<string, int> productPrices in ViewBag.ProductPrices)
     {
-    <p>
-        <div>
-            Product Name: @productPrices.Key
-        </div>
-        <div>
-            Product Price + Tax: @(productPrices.Value * 1.2)
-        </div>
-    </p>
+        <p>
+            <div>
+                Product name: @productPrices.Key
+            </div>
+            <div>
+                Product price including tax: @(productPrices.Value * 1.2)
+            </div>
+        </p>
     }
 </body>
 </html>

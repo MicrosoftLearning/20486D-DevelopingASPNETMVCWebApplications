@@ -1,0 +1,29 @@
+﻿html {
+    background-image: url('../images/brown-bg.jpg');
+    background-position: center center;
+}
+
+td {
+    background-image: url('../images/parchment.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 300px;
+}
+
+div {
+    opacity: 0.6;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+h1 {
+    color: antiquewhite;
+    opacity: 0.5;
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}

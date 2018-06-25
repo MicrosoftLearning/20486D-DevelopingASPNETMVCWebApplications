@@ -15,15 +15,15 @@ namespace RazorSyntaxExample
         {
             services.AddMvc();
         }
-        
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+
+        public void Configure(IApplicationBuilder app)
         {
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                name: "Product",
-                template: "{controller}/{action}/{id?}",
-                defaults: new { controller = "Product", action = "Index" });
+                    name: "Product",
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "Product", action = "Index" });
             });
 
             app.Run(async (context) =>
