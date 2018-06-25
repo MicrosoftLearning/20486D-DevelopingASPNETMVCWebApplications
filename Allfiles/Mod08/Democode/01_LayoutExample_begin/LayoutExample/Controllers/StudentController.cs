@@ -21,7 +21,6 @@ namespace LayoutExample.Controllers
             return View(_context.Students.ToList());
         }
 
-
         public IActionResult Details(int? id)
         {
             if (id == null)
@@ -29,7 +28,7 @@ namespace LayoutExample.Controllers
                 return NotFound();
             }
 
-            var student =  _context.Students
+            var student = _context.Students
                 .SingleOrDefault(s => s.StudentId == id);
             if (student == null)
             {

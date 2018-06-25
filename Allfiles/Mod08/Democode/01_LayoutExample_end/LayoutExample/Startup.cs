@@ -16,13 +16,16 @@ namespace LayoutExample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<StudentContext>(options =>
-                   options.UseInMemoryDatabase("StudentDB"));
+                  options.UseInMemoryDatabase("StudentDB"));
 
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, StudentContext studentContext)
         {
+            studentContext.Database.EnsureDeleted();
+            studentContext.Database.EnsureCreated();
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>

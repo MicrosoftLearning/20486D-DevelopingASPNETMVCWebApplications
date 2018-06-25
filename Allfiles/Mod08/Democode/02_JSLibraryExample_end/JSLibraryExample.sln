@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2037
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSLibraryExample", "JSLibraryExample\JSLibraryExample.csproj", "{A9B67996-3BC9-46A2-8601-E568105F54C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSLibraryExample", "JSLibraryExample\JSLibraryExample.csproj", "{8E87810E-9A34-4E5C-AA3A-43DA2E65267C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A9B67996-3BC9-46A2-8601-E568105F54C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9B67996-3BC9-46A2-8601-E568105F54C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9B67996-3BC9-46A2-8601-E568105F54C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9B67996-3BC9-46A2-8601-E568105F54C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E87810E-9A34-4E5C-AA3A-43DA2E65267C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E87810E-9A34-4E5C-AA3A-43DA2E65267C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E87810E-9A34-4E5C-AA3A-43DA2E65267C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E87810E-9A34-4E5C-AA3A-43DA2E65267C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {959ADCA6-358A-4970-813A-4684C81AC05F}
+		SolutionGuid = {5E60A20C-4DCE-4676-80A9-5653EF3E05A6}
 	EndGlobalSection
 EndGlobal
