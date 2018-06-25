@@ -1,8 +1,7 @@
 ﻿@model int
-@inject ViewComponentsExample.Services.IPersonProvider PersonList
 <td>
-    <div>First Name: @PersonList[Model].FirstName</div>
-    <div>Last Name: @PersonList[Model].LastName</div>
-    <div>Residence: @PersonList[Model].Address</div>
-    <div>Phone: @PersonList[Model].PhoneNumber</div>
+    <div>First Name: @ViewBag.People[Model].FirstName</div>
+    <div>Last Name: @ViewBag.People[Model].LastName</div>
+    <div>Residence: @ViewBag.People[Model].Address</div>
+    <div>Phone: @ViewBag.People[Model].PhoneNumber</div>
 </td>
