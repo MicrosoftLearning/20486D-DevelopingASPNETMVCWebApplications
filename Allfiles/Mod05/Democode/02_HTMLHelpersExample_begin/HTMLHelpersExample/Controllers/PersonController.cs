@@ -10,13 +10,11 @@ namespace HTMLHelpersExample.Controllers
     {
         public IActionResult Index()
         {
-
             return View();
         }
 
         public IActionResult Details(string personName)
         {
-
             return View();
         }
 
