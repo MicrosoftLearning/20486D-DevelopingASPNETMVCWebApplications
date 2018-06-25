@@ -18,6 +18,10 @@ After completing this lab, you will be able to:
 
 Estimated Time: **75 minutes**
 
+### Preparation Steps
+
+1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**).
+
 ### Exercise 1: Working with Static Files
 
 #### Scenario
