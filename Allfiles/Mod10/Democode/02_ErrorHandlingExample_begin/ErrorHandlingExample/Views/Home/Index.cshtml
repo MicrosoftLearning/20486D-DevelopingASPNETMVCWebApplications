@@ -1,5 +1,4 @@
-﻿@using Microsoft.AspNetCore.Http.Extensions
-@inject ErrorHandlingExample.Services.ICounter cnt
+﻿
 @{
     Layout = null;
 }
@@ -16,7 +15,7 @@
     <h1>Multiplication Table</h1>
     <p>
         Welcome to the multiplication table site.<br />
-        The number of entrances to the welcome page is: @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
+        The number of entrances to the welcome page is: @ViewBag.NumberOfViews
     </p>
     @Html.Partial("_NumberLinks")
 </body>
