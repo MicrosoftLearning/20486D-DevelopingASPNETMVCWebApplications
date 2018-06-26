@@ -20,7 +20,7 @@
     {
 ```
 
-3. Place the cursor at the end of the located code, type the following code:
+3. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     ViewBag.ProductPrices = new Dictionary<string, int>();
     ViewBag.ProductPrices.Add("Bread", 5);
@@ -33,6 +33,7 @@
 ```
 
 5. Right-click on the **Index** method name, and then click **Add View**.
+    >**Note**: Ensure that the View name is **Index**
 
 6. In the **Add MVC View** dialog box, ensure that **Create as a partial view** and **Use a layout page** check boxes are cleared, and then click **Add**.
     >**Note**: Ensure that **Index.cshtml** file was created under the **Product** folder that is under the **Views** folder. 
@@ -262,7 +263,7 @@
     <a asp-controller="Employee" asp-action="Index">Employees</a>
 ```
 
-6. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Employee**, click **Index.cshtml**.
+6. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Employee**, and then click **Index.cshtml**.
 
 7. In the **Index.cshtml** code window, locate the following code:
 ```cs
