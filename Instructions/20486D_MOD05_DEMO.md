@@ -243,137 +243,122 @@
 
 1. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-2. In the **Index.cshtml** code window, locate the following code:
-```cs
-    <!DOCTYPE html>
-```
-
-3. Place the cursor before the **<** (less than) sign, press Enter, press the Up Arrow key and then type the following code:
+2. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-4. In the **Index.cshtml** code window, select the following code:
+3. In the **Index.cshtml** code window, select the following code:
 ```cs
     @Html.ActionLink("Employees", "Index", "Employee")
 ```
 
-5. Replace the selected code with the following code:
+4. Replace the selected code with the following code:
 ```cs
     <a asp-controller="Employee" asp-action="Index">Employees</a>
 ```
 
-6. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Employee**, and then click **Index.cshtml**.
+5. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Employee**, and then click **Index.cshtml**.
 
-7. In the **Index.cshtml** code window, locate the following code:
-```cs
-    <!DOCTYPE html>
-```
-
-8. Place the cursor before the **<** (less than) sign, press Enter, press the Up Arrow key and then type the following code:
+6. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-9. In the **Index.cshtml** code window, select the following code:
+7. In the **Index.cshtml** code window, select the following code:
 ```cs
     @Html.ActionLink(currentName, "Details", new { employeeName = currentName })
 ```
 
-10. Replace the selected code with the following code:
+8. Replace the selected code with the following code:
 ```cs
     <a asp-action="Details" asp-route-employeeName="@currentName">@currentName</a>
 ```
 
-11. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
+9. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
 
-12. In the **Details.cshtml** code window, locate the following code:
-```cs
-    <!DOCTYPE html>
-```
-
-13. Place the cursor before the **<** (less than) sign, press Enter, press the Up Arrow key and then type the following code:
+10. In the **Details.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-14. In the **Details.cshtml** code window, select the following code:
+11. In the **Details.cshtml** code window, select the following code:
 ```cs
     @Html.ActionLink("Back to employee selection list", "Index")
 ```
 
-15. Replace the selected code with the following code:
+12. Replace the selected code with the following code:
 ```cs
     <a asp-action="Index">Back to employee selection list</a>
 ```
 
-16. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+13. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-17. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+14. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-18. In **Microsoft Edge**, click **Employees**.
+15. In **Microsoft Edge**, click **Employees**.
 
-19. In **Microsoft Edge**, click **Michael**.
+16. In **Microsoft Edge**, click **Michael**.
 
-20. In **Microsoft Edge**, click **Back to employee selection list**.
+17. In **Microsoft Edge**, click **Back to employee selection list**.
 
-21. In **Microsoft Edge**, click **Elena**.
+18. In **Microsoft Edge**, click **Elena**.
 
-22. In **Microsoft Edge**, click **Close**.
+19. In **Microsoft Edge**, click **Close**.
 
-23. In the **TagHelpersExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+20. In the **TagHelpersExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-24. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
+21. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
 
-25. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, expand **Installed**, and then expand **ASP.NET Core**.
+22. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, expand **Installed**, and then expand **ASP.NET Core**.
 
-26. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, under **ASP.NET Core**, click **Web**.
+23. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, under **ASP.NET Core**, click **Web**.
 
-27. In the **Add New Item – TagHelpersExample** dialog box, in the result pane, click **Razor View Imports**, and then click **Add**.
+24. In the **Add New Item – TagHelpersExample** dialog box, in the result pane, click **Razor View Imports**, and then click **Add**.
 
-28. In the **_ViewImports.cshtml** code window, type the following code:
+25. In the **_ViewImports.cshtml** code window, type the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-29. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, click **Index.cshtml**.
+26. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, click **Index.cshtml**.
 
-30. In the **Index.cshtml** code window, delete the following code:
+37. In the **Index.cshtml** code window, delete the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-31. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Index.cshtml**.
+38. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Index.cshtml**.
 
-32. In the **Index.cshtml** code window, delete the following code:
+39. In the **Index.cshtml** code window, delete the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-33. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
+40. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
 
-34. In the **Details.cshtml** code window, delete the following code:
+41. In the **Details.cshtml** code window, delete the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-35. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+42. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-36. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+43. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-37. In **Microsoft Edge**, click **Employees**.
+44. In **Microsoft Edge**, click **Employees**.
 
-38. In **Microsoft Edge**, click **Michael**.
+45. In **Microsoft Edge**, click **Michael**.
 
-39. In **Microsoft Edge**, click **Back to employee selection list**.
+46. In **Microsoft Edge**, click **Back to employee selection list**.
 
-40. In **Microsoft Edge**, click **Elena**.
+47. In **Microsoft Edge**, click **Elena**.
 
-41. In **Microsoft Edge**, click **Close**.
+48. In **Microsoft Edge**, click **Close**.
 
-42. In the **TagHelpersExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+49. In the **TagHelpersExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-21. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+50. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Reusing Code in Views
 
