@@ -20,7 +20,7 @@
     {
 ```
 
-3. Place the cursor at the end of the located code, type the following code:
+3. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     ViewBag.ProductPrices = new Dictionary<string, int>();
     ViewBag.ProductPrices.Add("Bread", 5);
@@ -33,6 +33,7 @@
 ```
 
 5. Right-click on the **Index** method name, and then click **Add View**.
+    >**Note**: Ensure that the View name is **Index**
 
 6. In the **Add MVC View** dialog box, ensure that **Create as a partial view** and **Use a layout page** check boxes are cleared, and then click **Add**.
     >**Note**: Ensure that **Index.cshtml** file was created under the **Product** folder that is under the **Views** folder. 
@@ -262,7 +263,7 @@
     <a asp-controller="Employee" asp-action="Index">Employees</a>
 ```
 
-6. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Employee**, click **Index.cshtml**.
+6. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Employee**, and then click **Index.cshtml**.
 
 7. In the **Index.cshtml** code window, locate the following code:
 ```cs
@@ -452,7 +453,7 @@
     
 16. In the **Add MVC View** dialog box, in the **View name** text box, type **_CardDesign**.
 
-17. In the **Add MVC View** dialog box, verify that the **Create as a partial view** check box is marked, and then click **Add**.
+17. In the **Add MVC View** dialog box, verify that **Create as a partial view** check box is marked and that **Use a layout page** check box is cleared, and then click **Add**.
 
 18. In the **_CardDesign.cshtml** code window, delete the following code:
 ```
@@ -475,7 +476,7 @@
 20. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 21. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-    >**Note**: A table with cards is shown. Each card contains information of a person including: First Name, Last Name, Residence, and Phone.
+    >**Note**: The browser displays a table with cards. Each card contains information of a person including: First Name, Last Name, Residence, and Phone.
 
 22. In **Microsoft Edge**, click **Close**.
 
@@ -537,41 +538,41 @@
     }
 ```
 
-10. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, right-click **Shared**, point to **Add**, and then click **New Folder**.
+11. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, right-click **Shared**, point to **Add**, and then click **New Folder**.
 
-11. In the **NewFolder** text box, type **Components**, and then press Enter.
+12. In the **NewFolder** text box, type **Components**, and then press Enter.
 
-12. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Components**, point to **Add**, and then click **New Folder**.
+13. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Components**, point to **Add**, and then click **New Folder**.
 
-13. In the **NewFolder** text box, type **PersonCard**, and then press Enter.
+14. In the **NewFolder** text box, type **PersonCard**, and then press Enter.
 
-14. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Shared**, right-click **_CardDesign.cshtml**, and then click **Cut**.
+15. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Shared**, right-click **_CardDesign.cshtml**, and then click **Cut**.
 
-15. Right-click **PersonCard**, and then click **Paste**.
+16. Right-click **PersonCard**, and then click **Paste**.
 
-16. Right-click **_CardDesign.cshtml**, and then click **Rename**.
+17. Right-click **_CardDesign.cshtml**, and then click **Rename**.
 
-17. In the **_CardDesign.cshtml** text box, type **CardDesign.cshtml**, and then press Enter.
+18. In the **_CardDesign.cshtml** text box, type **CardDesign.cshtml**, and then press Enter.
 
-18. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Home**, and then click **Index.cshtml**.
+19. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
-19. In the **Index.cshtml** code window, select the following code:
+20. In the **Index.cshtml** code window, select the following code:
 ```cs
     @Html.Partial("_CardDesign", cardIndex);
 ```
 
-20. Replace the selected code with the following code:
+21. Replace the selected code with the following code:
 ```cs
     @await Component.InvokeAsync("PersonCard", cardIndex);
 ```
 
-21. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+22. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-22. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-    >**Note**: A table with cards is shown. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
+23. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+    >**Note**: The browser displays a table with cards. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
      
-23. In **Microsoft Edge**, click **Close**.
+24. In **Microsoft Edge**, click **Close**.
 
-24. In the **ViewComponentExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+25. In the **ViewComponentExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-25. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+26. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
