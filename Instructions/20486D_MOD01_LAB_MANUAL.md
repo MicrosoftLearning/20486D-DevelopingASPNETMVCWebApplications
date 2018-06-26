@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You are working as a junior developer at Adventure Works. You have been asked by a senior developer to investigate the possibility of creating a web-based ASP.NET Core MVC application for your organization's customers, similar to one that the senior developer has seen on the Internet. Such an application will promote a community of cyclists who use Adventure Works equipment, and the community members will be able to share their experiences. This initiative is intended to increase the popularity of Adventure Works Cycles, and thereby to increase sales. You have been asked to begin the planning of the application. You have also been asked to examine programming models available to ASP.NET Core  developers. To do this, you need to create basic web applications written with three different models: Razor Pages , Web API , and MVC. 
+You are working as a junior developer at Adventure Works. You have been asked by a senior developer to investigate the possibility of creating a web-based ASP.NET Core MVC application for your organization's customers, similar to one that the senior developer has seen on the Internet. Such an application will promote a community of cyclists who use Adventure Works equipment, and the community members will be able to share their experiences. This initiative is intended to increase the popularity of Adventure Works Cycles, and thereby to increase sales. You have been asked to begin the planning of the application. You have also been asked to examine programming models available to ASP.NET Core developers. To do this, you need to create basic web applications written with three different models: Razor Pages , Web API , and MVC. 
 
 #### Objectives
 
@@ -17,6 +17,11 @@ After completing this lab, you will be able to:
 #### Lab Setup
 
 Estimated Time: **90 minutes**
+
+### Preparation Steps
+
+1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos.
+**(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 ### Exercise 1: Exploring a Razor Pages Application
 
@@ -36,134 +41,153 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating a Razor Pages application
 
-1. Start Visual Studio 2017, and create a new ASP.NET Core Web Application project with the following information:
+1. Open **Visual Studio 2017** and create a new **ASP.NET Core Web Application** with following information:
 
     - Name: **ActorsRazorPages**
     - Location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
+    - Solution name: **ActorsRazorPages**
+    - Create directory for solution: **True**
     - Project template: **Web Application**
+    - Enable docker support: **False**
+    - Configure for HTTPS: **False**
 
-2. Run the new Razor Pages application in **Microsoft Edge**, and view the **Contact** page.
+2. Start debugging the application.
 
-3. Stop Debugging.
+3. In **Microsoft Edge** window, view the **Contact** page.
+
+4. Close Microsoft Edge.
+
+5. Stop Debugging.
 
 #### Task 2: Explore the application structure
 
-1. Verify that **_ViewStart.cshtml** is linked to **_Layout.cshtml**.
+1. In the **_ViewImports** file, note that the value of **Layout** is **"_Layout"**.
 
-2. Verify that **Contact.cshtml** is not linked to .css file.
+2. In the **Contact.cshtml**  page, note that there are no links to **.css** files..
 
-3. Verify that **_Layout.cshtml** is in the **HEAD** element linked to **site.css** file.
+3.  In the **_Layout.cshtml** page, in the **HEAD** element, note there is a link to **~/css/site.css**.
 
-4. Open the **site.css** style sheet.
+4. Open the **site.css** file.
 
 #### Task 3: Add simple functionality
 
-1. Add a new **Razor Page** to the **Pages** folder using the following information:
+1. Create a new **Razor Page** with the following information:
  
-    - Razor Page name: **TestPage.cshtml**
+    - Name: **TestPage.cshtml**
+    - Folder: **Pages**
+    - Generate PageModel class: **True**
+    - Create as a partial view: **False**
+    - Reference script libraries: **True**
+    - Use a layout page: **True**
 
-2. Add a **ViewData** to the **TestPage.cshtml** by using the following information: 
+2. Remove the contents of the **TestPage.cshtml** page.
 
-    - ViewData Key: **Title**
-    - ViewData Value : **"Test Page"**
+3. In the **TestPage.cshtml** page, save the following key and value in the **ViewData** property: 
 
-3. Add an **H1** element to the **TestPage.cshtml** by using the following information:
+    - Key: **Title**
+    - Value : **"Test Page"**
 
+4. Add an **H1** element with the following information:
     - Content: **@ViewData["Title"]**
 
-4. Add an **H2** element to the **TestPage.cshtml** by using the following information:
-
+5. Add an **H2** element with the following information:
     - Content: **This is a Test Page**
 
-5. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information:
+6. In the **_Layout.cshtml** page, in the **UL** element, add an **LI** element.
 
-    - Start tag: **&lt;li&gt;<a**
-    - Attribute: **asp-page=&quot;/TestPage&quot;**
+7. In the new **LI** element,  add an **A** element with the following information:
+
     - Content: **Test Page**
-    - End tag: **&lt;/a&gt;&lt;/li&gt;**
+    - asp-page: **/TestPage**
 
-6. Add a new folder to the application at the root level by using the following information:
+8. In the **ActorsRazorPages** project, create a new top-level folder and name it **Models**.
+
+9. Create a new model with the following information:
+
+   - Name: **Actor**
+   - Folder: **Models**
  
-   - Folder name: **Models**
- 
-7. Add a new model class to the **Models** folder by using the following information:
-
-   - Class name: **Actor**
-
-8. Add an **ID** property to the **Actor** model class by using the following information:
-
-   - Scope: **public**
-   - Property name: **Id**
-   - Data type: **int**
-   - Access: **Read and write**
-
-9. Add a **FirstName** property to the **Actor** model class by using the following information:
-
-   - Scope: **public**
-   - Property name: **FirstName**
-   - Data type: **string**
-   - Access: **Read and write**
-
-10.  Add a **LastName** property to the **Actor** model class by using the following information:
-
-     - Scope: **public**
-     - Property name: **LastName**
-     - Data type: **string**
-     - Access: **Read and write**
-
-11. Add a **KnownFor** property to the **Actor** model class by using the following information:
+10. In the the **Actor** model class, add a new property with the following information:
 
     - Scope: **public**
-    - Property name: **KnownFor**
-    - Data type: **string**
-    - Access: **Read and write**
+    - Name: **Id**
+    - Type: **int**
+    - Access:  **Read and write**
 
-12. Add an **OscarWinner** property to the **Actor** model class by using the following information:
- 
+11. Add a new property with the following information:
+
     - Scope: **public**
-    - Property name: **OscarWinner**
-    - Data type: **bool**
-    - Access: **Read and write**
+    - Name: **FirstName**
+    - Type: **string**
+    - Access:  **Read and write**
 
-13. Add an **ImageName** property to the **Actor** model class by using the following information:
- 
+12. Add a new property with the following information:
+
     - Scope: **public**
-    - Property name: **ImageName**
-    - Data type: **string**
-    - Access: **Read and write**
+    - Name: **LastName**
+    - Type: **string**
+    - Access:  **Read and write**
 
-14. Add a new interface called **IData** to the Models folder in the project.
+13. Add a new property with the following information:
 
-15. Set **public** scope to the new interface.
+    - Scope: **public**
+    - Name: **KnownFor**
+    - Type: **string**
+    - Access:  **Read and write**
 
-16. Add the **ActorsList** property to the **IData** interface by using the following information:
- 
+
+14. Add a new property with the following information:
+
+    - Scope: **public**
+    - Name: **OscarWinner**
+    - Type: **bool**
+    - Access:  **Read and write**
+
+15. Add a new property with the following information:
+
+    - Scope: **public**
+    - Name: **ImageName**
+    - Type: **string**
+    - Access:  **Read and write**
+
+16. Create a new interface with the following information:
+
+    - Name: **IData**
+    - Folder: **Models**
+    - Scope: **public**
+
+17. In **IData** interface, declare a property with following information:
+
     - Type: **List&lt;Actor&gt;**
     - Name: **ActorsList**
-    - Access: **Read and write**
 
-17. Add the **ActorsInitializeData** method to the **IData** interface by using the following information:
+18. Declare a method with following information:
 
-    - Return type: **List&lt;Actor&gt;**
+    - Return type: **List<Actor>**
     - Name: **ActorsInitializeData**
 
-18. Add the **GetActorById** method to the **IData** interface by using the following information:
+19. Declare a method with following information:
 
     - Return type: **Actor**
     - Name: **GetActorById**
-    - Parameter: an Nullable integer named **id**
+    - Parameter:
+        - Name:  **id**
+        - Type: **int?**
 
-19. Add **Data.cs** to the **Models** folder from the following location:
- 
-     - **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
+20. Copy the **Data.cs** file to the **ActorsRazorPages** project, with the following information:
 
-20. Add the **images** existing files to the **images** folder inside **wwwroot** folder from the following location:
-  
-    -  **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin/Images**     
+     - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
+     - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Models**
 
-21. Inside  the **Pages** folder Add a new folder using the following information:
+21. Copy the **images** folder to the **ActorsRazorPages** project, with the following information:
+
+     - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
+     - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\wwwroot**
+
+23. Create a new folder with the following information:
   
     - Folder name: **Actors**
+    - Parent folder: **Pages**
 
 22. Add a new Razor Page using the following information:
 
