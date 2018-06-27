@@ -9,14 +9,14 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>ShowDataForCity</title>
-    <link href="~/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
 </head>
 <body>
     <div>
-        <h2>@ViewBag.City._city</h2>
-        <p>Country: @ViewBag.City._country</p>
-        <p>Time zone: @ViewBag.City._timeZone</p>
-        <span><img src="@Url.Action("GetImage", new {cityName = ViewBag.City._city })" /></span>
+        <h2>@ViewBag.City.Name</h2>
+        <p>Country: @ViewBag.City.Country</p>
+        <p>Time zone: @ViewBag.City.TimeZone</p>
+        <span><img src="@Url.Action("GetImage", new {cityName = ViewBag.City.Name })" /></span>
         @Html.Partial("_CityPopulation")
         <br /><a asp-action="ShowCities">Back</a>
     </div>

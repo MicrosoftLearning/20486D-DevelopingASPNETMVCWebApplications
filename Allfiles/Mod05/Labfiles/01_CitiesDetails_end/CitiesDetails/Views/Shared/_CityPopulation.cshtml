@@ -1,8 +1,10 @@
-﻿@{ 
-    CitiesDetails.Services.CityPopulation population = ViewBag.City._cityPopulation;
+﻿@inject CitiesDetails.Services.ICityFormatter cityFormatter;
+
+@{
+    CitiesDetails.Services.CityPopulation population = ViewBag.City.CityPopulation;
 }
 
-<p><h3>City Population(@population._year)</h3></p>
-<p>City: @population._city</p>
-<p>Urban: @population._urban</p>
-<p>Metro: @population._metro</p>
+<p><h3>City Population(@population.Year)</h3></p>
+<p>City: @cityFormatter.GetFormattedPopulation(population.City)</p>
+<p>Urban: @cityFormatter.GetFormattedPopulation(population.Urban)</p>
+<p>Metro: @cityFormatter.GetFormattedPopulation(population.Metro)</p>
