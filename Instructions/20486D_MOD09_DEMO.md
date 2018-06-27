@@ -203,6 +203,68 @@
 
 37. On the **FILE** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Exit**.
 
+# Lesson 2: Lesson 2: Using Task Runners
+
+### Demonstration: How to Use gulp to Compile SASS File to CSS
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+**(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
+
+
+#### Demonstration Steps
+
+1. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin**, and then double-click **GulpExample.sln**.
+
+2. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Item**.
+
+3. In the **Add New Item - GulpExample** dialog box, in the search box type **npm**, and then press Enter.
+
+4. In the **Add New Item - GulpExample** dialog box, click **npm Configuration File**, and then click **Add**.
+
+5. In the **package.json** file, locate the following code:
+
+  ```cs
+       "devDependencies": {
+       }
+```
+6. Place the cursor after the **{** (opening bracket) sign, press Enter, and type the following code:
+
+  ```cs
+       "gulp": "3.9.1",
+       "gulp-sass": "4.0.1"
+```
+7. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
+
+>**Note:** In the Solution Explorer pane, under **Depenndencies**, a new folder has been added named **npm** with the **gulp** and **gulp-sass** packages.
+
+8. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Item**.
+
+9. In the **Add New Item - GulpExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+
+10. In the **Add New Item - GulpExample** dialog box, in the **Name** text box, type **gulpfile**, and then click **Add**.
+
+11. In the **gulpfile** code window, type the following code:
+  ```cs
+       var gulp = require('gulp');
+       var sass = require('gulp-sass');
+
+
+       gulp.task("sass", function () {
+           return gulp.src('Styles/main.scss')
+               .pipe(sass())
+               .pipe(gulp.dest('wwwroot/css'));
+});
+```
+
+12. 
+
+
+
+
+
+
 ©2018 Microsoft Corporation. All rights reserved. 
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
