@@ -398,7 +398,7 @@
 
 6. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    PersonList= PersonInitializer();
+    PersonList = PersonInitializer();
 ```
 
 7. In **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
@@ -427,7 +427,7 @@
 12. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
-    @Html.Partial("_CardDesign", cardIndex);
+    @await Html.PartialAsync("_CardDesign", cardIndex);
 ```
 
 13. In the **PartialViewsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
@@ -543,7 +543,7 @@
 
 20. In the **Index.cshtml** code window, select the following code:
 ```cs
-    @Html.Partial("_CardDesign", cardIndex);
+    @await Html.PartialAsync("_CardDesign", cardIndex);
 ```
 
 21. Replace the selected code with the following code:
