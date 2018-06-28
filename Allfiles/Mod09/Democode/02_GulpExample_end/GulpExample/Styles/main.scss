@@ -5,11 +5,6 @@ $main-color: #1395f4;
     font-family: Arial;
 }
 
-body {
-    margin: auto;
-    width: 30%;
-}
-
 h1 {
     color: $highlights;
     @include normalized-text();
