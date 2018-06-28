@@ -65,7 +65,7 @@ The main tasks for this exercise are as follows:
 
 2. In the **Contact.cshtml**  page, note that there are no links to **.css** files..
 
-3.  In the **_Layout.cshtml** page, in the **HEAD** element, note there is a link to **~/css/site.css**.
+3.  In the **_Layout.cshtml** page, in the **HEAD** element, note that there is a link to **~/css/site.css**.
 
 4. Open the **site.css** file.
 
@@ -100,7 +100,9 @@ The main tasks for this exercise are as follows:
     - Content: **Test Page**
     - asp-page: **/TestPage**
 
-8. In the **ActorsRazorPages** project, create a new top-level folder and name it **Models**.
+8. Create a new folder with the following information:
+
+   - Folder name: **Models**.
 
 9. Create a new model with the following information:
 
@@ -184,66 +186,70 @@ The main tasks for this exercise are as follows:
      - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
      - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\wwwroot**
 
-23. Create a new folder with the following information:
+22. Create a new folder with the following information:
   
     - Folder name: **Actors**
     - Parent folder: **Pages**
 
-22. Add a new Razor Page using the following information:
+23. Add a new **Razor Page** with the following information:
 
     - Folder: **Pages/Actors**
     - Name: **Index**
 
-23. In the **Index.cshtml.cs** code window, delete the **OnGet** function code.
-
-24. In the **Index.cshtml.cs** code window, add **using** statement for the following namespace:
+24. In the **Index.cshtml.cs** file, add a **using** statement for the following namespace:
 
     - **ActorsRazorPages.Models**
 
-25. In the **Index.cshtml.cs**, create a new field using the following information:
+25. Create a new field with the following information:
  
      - Scope: **private**
      - Class: **IData**
      - Name: **_data**
-     
-     Initialize the new field in the **Index.cshtml.cs** constructor with the value of the **IData** parameter.
-   
-26. Add the **Actors** property to the **Index.cshtml.cs** by using the following information:
 
-    - Scope: **public**
-    - Type: **List&lt;Actor&gt;**
-    - Name: **Actors**
-    - Access: **Read and write**
+26. Add a constructor with the following parameter:
 
-27. Add a new **OnGet** method, to the **Index.cshtml.cs** using the following information:
+     - Type: **IData**
+     - Name: **data**
 
-    - Return type: **void**
-    - Name: **OnGet**
+27. In the constructor, initialize the **_data** field with the value of the **data** parameter.
 
-28. In the **Index.cshtml.cs** class inside **OnGet** method initiate **Actors** property  with **ActorsInitializeData** method from the IData interface.
+28.  Add a new property with the following information:
 
-29. Delete the content in the **Index.cshtml**.
+     - Scope: **public**
+     - Name: **Actors**
+     - Type: **List&lt;Actor&gt;**
+     - Access:  **Read and write**
 
-30. Open **Indexcshtml.txt** and copy all the content into the **Index.cshtml** from the following location:
- 
-     - **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
+29. In the **OnGet** method, initialize the **Actors** property using the **ActorsInitializeData** method of the **_data.** field.
 
-31. Add the **Details.cs** and **Details.cshtml** to the **Pages/Actors** folder from the following location:
+30. Delete the contents of the **Index.cshtml** page.
 
-      - **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**   
+31. Copy the content of **Indexcshtml.txt** text file to the **Index.cshtml** page, using the following information:
 
-32. In the **Startup.cs** code window , add **using** statement for the following namespace:
+     - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
+
+32. Copy the **Details.cs** and **Details.cshtml** files to the **ActorsRazorPages** project, with the following information:
+
+     - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
+     - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Pages\Actors**
+
+33. In the **Startup** class, add a **using** statement for the following namespace:
 
     - **ActorsRazorPages.Models**
 
-33.  In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
+34. In the **ConfigureServices** method, call the **AddSingleton** method of **services** parameter with the following information:
 
-34. Add a link to the **_Layout.cshtml**, in the **UL** element after the last **LI** element, by using the following information:
- 
-    - Start tag: **&lt;li&gt;<a**
-    - Attribute: **asp-page=&quot;/Actors/Index&quot;**
+    - Interface: **IData**
+    - Implementation: **data**
+
+35. In the **_Layout.cshtml** page, in the **UL** element, add a **LI** element.
+
+36. In the new **LI** element,  add an **A** element with the following information:
+
     - Content: **Actors**
-    - End tag: **&lt;/a&gt;&lt;/li&gt;**
+    - asp-page: **/Actors/Index**
+
+
 
 #### Task 4: Run the application
 
@@ -251,13 +257,15 @@ The main tasks for this exercise are as follows:
 
 2. Start Debugging the application.
 
-3. View the **Test Page** and **Actors** pages you added.
+3. View the **Test Page** and **Actors** pages you have added.
 
 4. In the Actors window, click on the **Details** link.
 
 5. Verify that the **site.css** file is used to apply style to all the pages.
 
-6. Close the Microsoft Edge window, and the Visual Studio application.
+6. Close the Microsoft Edge window.
+
+7. Stop Debugging and close the Visual Studio application.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
 
