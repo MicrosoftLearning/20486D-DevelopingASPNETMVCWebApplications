@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using LoggingExample.Models;
 using LoggingExample.Services;
+using Microsoft.Extensions.Logging;
 
 namespace LoggingExample.Controllers
 {
