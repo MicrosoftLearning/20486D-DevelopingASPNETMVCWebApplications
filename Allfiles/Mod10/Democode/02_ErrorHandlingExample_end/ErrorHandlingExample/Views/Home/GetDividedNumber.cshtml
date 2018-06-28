@@ -1,6 +1,4 @@
-﻿@using Microsoft.AspNetCore.Http.Extensions
-@inject ErrorHandlingExample.Services.ICounter cnt
-@model ErrorHandlingExample.Models.DivisionResult
+﻿@model ErrorHandlingExample.Models.DivisionResult
 @{
     Layout = null;
 }
@@ -17,8 +15,8 @@
     <h1>Number @Model.DividedNumber</h1>
     <p>
         The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()<br />
-        This number was viewed @cnt.UrlCounter[Context.Request.GetDisplayUrl()]
-        @if (cnt.UrlCounter[Context.Request.GetDisplayUrl()] > 1)
+        This number was viewed @ViewBag.NumberOfViews
+        @if (ViewBag.NumberOfViews > 1)
         {
             @:times
         }

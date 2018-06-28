@@ -286,7 +286,7 @@
 
 #### Demonstration Steps
 
-1. In **Solution Explorer**, click **Program.cs**. 
+1. In the **LoggingExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Program.cs**. 
 
 2. In the **Program.cs** code window, locate the following code:
 ```cs
@@ -387,7 +387,7 @@
     }
     catch (Exception ex)
     {
-        _logger.LogError(ex, $"An error occured while trying to increase or retrieve the time the page was viewed. Number parameter is: {id}");
+        _logger.LogError(ex, $"An error occured while trying to increase or retrieve the page display count. Number parameter is: {id}");
     }
 ```
 
@@ -418,12 +418,12 @@
     if (NumberCounter.ContainsKey(number))
     {
         NumberCounter[number]++;
-        _logger.LogDebug($"The views count for number {number} was increased to {NumberCounter[number]}.");
+        _logger.LogDebug($"The number of time the page was displayed for the number {number} was increased to {NumberCounter[number]}.");
     }
     else
     {
         NumberCounter.Add(number, 1);
-        _logger.LogDebug($"The number {number} was added to the views count dictionary");
+        _logger.LogDebug($"The number {number} was added to the page display count dictionary.");
     }
 ```
 27. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
@@ -437,7 +437,7 @@
 31. In **Microsoft Edge**, click **16**.
     >**Note:** The browser displays a text that shows the number of times that the page was displayed.
 
-32. In the **LoggingExample (Running) - Microsoft Visual Studio** window, in the **Output** window, locate the text: "The number 16 was added to the views count dictionary".
+32. In the **LoggingExample (Running) - Microsoft Visual Studio** window, in the **Output** window, locate the text: "The number 16 was added to the page display count dictionary."
 
 33. In **Microsoft Edge**, click **Close**.
 
