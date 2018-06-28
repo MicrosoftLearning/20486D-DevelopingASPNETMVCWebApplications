@@ -1,5 +1,4 @@
 ﻿
-
 # Module 10: Testing and Troubleshooting
 
 # Lesson 1: Testing MVC Applications
@@ -34,42 +33,49 @@
 
 10. In the **Microsoft Visual Studio** dialog box, click **Yes**.
 
-11. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **ProductsWebsite.Tests**, point to **Add**, and then click **New Folder**.
+11. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **Tools** menu, click **NuGet Package Manager**, and then click **Package Manager Console**.
 
-12. In the **NewFolder** text box, type **Mock**, and then press Enter.
+12. In the **Package Manager Console** window, type the following text, and then press Enter.
+```
+    Install-Package Microsoft.AspNetCore.Mvc.ViewFeatures -ProjectName ProductsWebsite.Tests
+```
 
-13. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **Mock**, point to **Add**, and then click **Class**.
+13. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **ProductsWebsite.Tests**, point to **Add**, and then click **New Folder**.
 
-14. In the **Add New Item - ProductsWebsite.Tests** dialog box, in the **Name** text box, type **FakeProductRepository**, and then click **Add**.
+14. In the **NewFolder** text box, type **Mock**, and then press Enter.
 
-15. In the **FakeProductRepository.cs** code window, locate the following code:
+15. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, right-click **Mock**, point to **Add**, and then click **Class**.
+
+16. In the **Add New Item - ProductsWebsite.Tests** dialog box, in the **Name** text box, type **FakeProductRepository**, and then click **Add**.
+
+17. In the **FakeProductRepository.cs** code window, locate the following code:
 ```cs
     using System.Text;
 ```
 
-16. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
+18. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
 ```cs
     using ProductsWebsite.Repositories;
     using ProductsWebsite.Models;
 ```
 
-17. In the **FakeProductRepository.cs** code window, locate the following code:
+19. In the **FakeProductRepository.cs** code window, locate the following code:
 ```cs
     class FakeProductRepository
 ```
 
-18. Replace the selected code with the following code:
+20. Replace the selected code with the following code:
 ```cs
     internal class FakeProductRepository : IProductRepository
 ```
 
-19. In the **FakeProductRepository.cs** code window, locate the following code:
+21. In the **FakeProductRepository.cs** code window, locate the following code:
 ```cs
     internal class FakeProductRepository : IProductRepository
     {
 ```
 
-20. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
+22. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
 ```cs
     public IEnumerable<Product> GetProducts()
     {
@@ -82,12 +88,12 @@
     }
 ```
 
-21. In the **ProductControllerTest.cs** code window, locate the following code:
+23. In the **ProductControllerTest.cs** code window, locate the following code:
 ```cs
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 ```
 
-22. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
+24. Ensure that the cursor is at the end of the located code, press Enter, and then type the following code:
 ```cs
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
@@ -97,14 +103,14 @@
     using ProductsWebsite.Tests.Mock;
 ```
 
-23. In the **ProductControllerTest.cs** code window, locate the following code:
+25. In the **ProductControllerTest.cs** code window, locate the following code:
 ```cs
     public void TestMethod1()
     {
     }
 ```
 
-24. Replace the selected code with the following code:
+26. Replace the selected code with the following code:
 ```cs
     public void IsIndexReturnsAllProducts()
     {
@@ -119,13 +125,13 @@
     }
 ```
 
-25. In the **ProductControllerTest.cs** code window, locate the following code:
+27. In the **ProductControllerTest.cs** code window, locate the following code:
 ```cs
         Assert.AreEqual(products.Count, 3);
     }
 ```
 
-26. Ensure that the cursor is at the end of the located code, press Enter twice, and then type the following code:
+28. Ensure that the cursor is at the end of the located code, press Enter twice, and then type the following code:
 ```cs
     [TestMethod]
     public void IsGetProductReturnsTheCorrectProduct()
@@ -141,29 +147,29 @@
     }
 ```
 
-27. In the **UnitTestingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+29. In the **UnitTestingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-28. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TEST** menu, point to **Run**, and then click **All Tests**.
+30. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TEST** menu, point to **Run**, and then click **All Tests**.
     >**Note:** The **Test Explorer** displays 1 failed test: IsGetProductReturnsTheCorrectProduct, and 1 passed test: IsIndexReturnsAllProducts.
 
-29. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite**, expand **Controllers**, and then click **ProductController.cs**. 
+31. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite**, expand **Controllers**, and then click **ProductController.cs**. 
 
-30. In the **ProductController.cs** code window, locate the following code:
+32. In the **ProductController.cs** code window, locate the following code:
 ```cs
     var product = products.Where(p => p.Id != id).FirstOrDefault();
 ```
 
-31. Replace the selected code with the following code:
+33. Replace the selected code with the following code:
 ```cs
     var product = products.Where(p => p.Id == id).FirstOrDefault();
 ```
 
-32. In the **UnitTestingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+34. In the **UnitTestingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-33. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TEST** menu, point to **Run**, and then click **All Tests**.
+35. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TEST** menu, point to **Run**, and then click **All Tests**.
     >**Note:** The **Test Explorer** displays 2 passed tests: IsGetProductReturnsTheCorrectProduct and IsIndexReturnsAllProducts.
 
-34. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+36. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Implementing an Exception Handling Strategy
 
