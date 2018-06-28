@@ -102,7 +102,7 @@ The main tasks for this exercise are as follows:
 
 8. Create a new folder with the following information:
 
-   - Folder name: **Models**.
+   - Folder name: **Models**
 
 9. Create a new model with the following information:
 
@@ -287,130 +287,155 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating a Web API application
 
-1. Start Visual Studio 2017, and create a new ASP.NET Core Web Application project with the following information:
+1. Open **Visual Studio 2017** and create a new **ASP.NET Core Web Application** with following information:
 
     - Name: **CakeStoreApi**
     - Location: **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
+    - Solution name: **CakeStoreApi**
+    - Create directory for solution: **True**
     - Project template: **API**
+    - Enable docker support: **False**
+    - Configure for HTTPS: **False**
 
 #### Task 2: Explore the application structure
 
-1.  Open the  **ValuesController.cs** inside the **Controllers** folder, and verify  that the **Get** method returns **value1** and **value2**.
+1. In the **ValuesController** controller, note that the **Get** method returns **value1** and **value2**.
 
-2. Run the website in Microsoft Edge, and view the content in the browser.
+2. Start debugging the application.
 
-3. Stop Debugging.
+3. In **Microsoft Edge** window, view the content in the browser.
+
+4. Close Microsoft Edge.
+
+5. Stop Debugging.
+
 
 #### Task 3: Add simple functionality
 
-1. Add a new folder to the application at the root level by using the following information:
+1. Create a new folder with the following information:
 
-   - Folder name: **Models**
+   - Folder name: **Models**.
+
+2. Create a new model with the following information:
+
+   - Name: **CakeStore**
+   - Folder: **Models**
  
-2. Add a new model class to the **Models** folder by using the following information:
+3. In the the **CakeStore** model class, add a new property with the following information:
 
-   - Class name: **CakeStore**
+    - Scope: **public**
+    - Name: **Id**
+    - Type: **int**
+    - Access:  **Read and write**
 
-3. Add an **Id** property to the **CakeStore** model class by using the following information:
 
-   - Scope: **public**
-   - Property name: **Id**
-   - Data type: **int**
-   - Access: **Read and write**
-
-4.   Add a **CakeType** property to the **CakeStore** model class by using the following information:
+4. Add a new property with the following information:
  
      - Scope: **public**
      - Property name: **CakeType**
      - Data type: **string**
      - Access: **Read and write**
 
-5. Add a **Quantity** property to the **CakeStore** model class by using the following information:
+5. Add a new property with the following information:
  
    - Scope: **public**
    - Property name: **Quantity**
-   - Data type: **integer**
-   - Access: **Read and write**
- 
-6. Add a new interface called **IData** to the **Models** folder in the project.
-
-7. Set **public** scope to the new interface.
-
-8. Add the **CakesList** property to the **IData** interface by using the following information:
- 
-   - Type: **List&lt;CakeStore&gt;**
-   - Name: **CakesList**
+   - Data type: **int**
    - Access: **Read and write**
 
-9. Add the **CakesInitializeData** method to the **IData** interface by using the following information:
- 
-   - Return type: **List&lt;CakeStore&gt;**
-   - Name: **CakesInitializeData**
+6. Create a new interface with the following information:
 
-10. Add the **GetCakeById** method to the **IData** interface by using the following information:
+    - Name: **IData**
+    - Folder: **Models**
+    - Scope: **public**
+
+7. In **IData** interface, declare a property with following information:
+
+    - Type: **List&lt;CakeStore&gt;**
+    - Name: **CakesList**
+
+8. Declare a method with following information:
+
+    - Return type: **List&lt;CakeStore&gt;**
+    - Name: **CakesInitializeData**
+
+9. Declare a method with following information:
 
     - Return type: **CakeStore**
     - Name: **GetCakeById**
-    - Parameter: an Nullable integer named **id**
-
-11. Add the **Data.cs** to the **Models** folder from the following location:
+    - Parameter:
+        - Name:  **id**
+        - Type: **int?**
  
-     - **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
+10. Copy the **Data.cs** file to the **CakeStoreApi** project, with the following information:
 
-12. Create a new controller for handling **CakeStore** objects by using the following information:
- 
+     - Source location: **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
+     - Target location: **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin\CakeStoreApi\Models**
+
+11. Create a new controller with the following information:
     - Controller name: **CakeStoreApiController**
     - Template: **API Controller - Empty**
- 
-13. Add **using** statement to the controller for the following namespace:
+    - Folder: **Controllers**
+
+12. In the **CakeStoreApiController** class, add a **using** statement for the following namespace:
 
     - **CakeStoreApi.Models**
 
-14. In the **CakeStoreApiController**, create a new private field by using the following information:
+13. Create a new field with the following information:
  
-    - Scope: **private**
-    - Class: **IData**
-    - Name: **_data**
+     - Scope: **private**
+     - Class: **IData**
+     - Name: **_data**
 
-    Initialize the new field in the **CakeStoreApiController** constructor with the value of the **IData** parameter.
- 
-15. Add a method for the **GetAll** action by using the following information:
- 
+14. Add a constructor with the following parameter:
+
+     - Type: **IData**
+     - Name: **data**
+
+15. In the constructor, initialize the **_data** field with the value of the **data** parameter.
+
+16. Add an action with the following information:
+
      - Scope: **public**
-     - Return Type : **IEnumerable&lt;CakeStore&gt;**
+     - Return Type:  **ActionResult&lt;List&lt;CakeStore&gt;&gt;**
      - Name: **GetAll**
 
-16. Within the **GetAll** method, return the following information :
+17. In the **GetAll** action code block, return the **List&lt;CakeStore&gt;** result using the **_data.CakesInitializeData** method
 
-    - **_data.CakesInitializeData()**
+    >**Note**: The **_data** field is the private object you just Instantiate.
 
->**Note**: The **_data** field is the private object you just Instantiate.
+18. Above the **GetAll** action, add a **HttpGet** attribute with the following information:
 
-17. Add to **GetAll** action **HttpGet**  attribute with the following information: 
+     - Template : **"/api/CakeStore"**
 
-     - template : **"/api/CakeStore"**
- 
-18. Add a method for the **GetById** action by using the following information:
+19. Add a action with the following information:
 
      - Scope: **public**
-     - Return Type: **IActionResult**
+     - Return Type:  **ActionResult&lt;CakeStore&gt;**
      - Name: **GetById**
-     - Parameters: One Nullable  integer called **id**
+     - Parameter: 
+        - Type: **int?**
+        - Name: **id**
 
-19. Within the **GetById** action code block, add code to find a single **Cake** object from its **Id**.
+20. In the **GetById** action, add a varible named **item** with the value of **_data.GetCakeById(id)**.
 
-20. If no Cake with the right Id is found, return NotFoundResult using the **NotFound** method.
+21. Add an **IF** statement that checks that the value of the **item** varible is **NULL**.
 
-21. If a Cake with the right Id is found, return a new object result containing the cake object.
+22. In the **IF**  statement code block, return the **NotFoundResult** result using the **NotFound** method.
 
-22. Add to **GetById** action **HttpGet**  attribute with the following information : 
+23. After the **IF**  statement, return a new **ObjectResult** result using the **ObjectResult** constructor. Pass **item** varible as a parameter to the **ObjectResult** constructor.
+
+24. Above the **GetById** action, add a **HttpGet** attribute with the following information:
      - template : **"/api/CakeStore/{id}"**
 
-23. In the **Startup.cs**, add **using** statement for the following namespace:
+25. In the **Startup** class, add **using** statement for the following namespace:
 
       - **CakeStoreApi.Models**
 
-24. In the **Startup.cs**, in the **ConfigureServices** method code block, add **IData** to the services container as Singleton.
+26. In the **ConfigureServices** method, call the **AddSingleton** method of **services** parameter with the following information:
+
+    - Interface: **IData**
+    - Implementation: **data**
 
 #### Task 4: Run the application
 
@@ -420,13 +445,15 @@ The main tasks for this exercise are as follows:
 
     - Path: **/api/CakeStore**
 
-4. In the **Microsoft Edge** window, access the following relative path:
+3. In the **Microsoft Edge** window, access the following relative path:
 
     - Path: **/api/CakeStore/1**
 
-5. Close the **Microsoft Edge** window, and the Visual Studio application.
+4. Close Microsoft Edge.
 
->**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
+5. Stop Debugging.
+
+    >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
 
 ### Exercise 3: Exploring an MVC Application
 
