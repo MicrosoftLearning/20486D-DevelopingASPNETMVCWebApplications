@@ -75,22 +75,16 @@
 
 17. In the **Add View** dialog box, ensure that the **Use a layout page** check box is selected, and then click **Add**.
 
-18. In the **Index.cshtml** code window, locate the following code:
-  ```cs
-       @{
-           ViewData["Title"] = "Index";
-       }
-```
-19. Place the cursor before the **@** (shtrudel) sign, press the Up Arrow key, type the following code, and then press Enter. 
+18. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
   ```cs
        @model IEnumerable<Student>
 ```
-20. In the **Index.cshtml** code window, select the following code:
+19. In the **Index.cshtml** code window, select the following code:
   ```cs
        <h2>Index</h2>
 ```
 
-21. Replace the selected code with the following code: 
+20. Replace the selected code with the following code: 
   ```cs
        @section footer{
             <div>
@@ -101,7 +95,7 @@
        }
 ```
 
-22. In the **Index.cshtml** code window, locate the following code:
+21. In the **Index.cshtml** code window, locate the following code:
   ```cs
        @section footer{
             <div>
@@ -112,7 +106,7 @@
        }
 ```
 
-23. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
+22. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
   ```cs
        <h2>Students list</h2>
        <div>
@@ -148,37 +142,30 @@
        </div>
 ```
 
-24. In the Solution Explorer pane, under **LayoutExample**, under **Controllers**, click **StudentController.cs**.
+23. In the Solution Explorer pane, under **LayoutExample**, under **Controllers**, click **StudentController.cs**.
 
-25. In the **StudentController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+24. In the **StudentController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
   ```cs
        public IActionResult Details(int? id)
 ```
 
-26. In the **Add MVC View** dialog box, ensure that the name in the **View name** box is **Details**.
+25. In the **Add MVC View** dialog box, ensure that the name in the **View name** box is **Details**.
 
-27. In the **Template** selector, ensure that the template in the **Template** box is **Empty(without model)**.
+26. In the **Template** selector, ensure that the template in the **Template** box is **Empty(without model)**.
 
-28. In the **Add View** dialog box, ensure that the **Use a layout page** check box is selected, and then click **Add**.
+27. In the **Add View** dialog box, ensure that the **Use a layout page** check box is selected, and then click **Add**.
 
-29. In the **Details.cshtml** code window, locate the following code:
-  ```cs
-       @{
-           ViewData["Title"] = "Details";
-       }
-```
-
-30. Place the cursor before the **@** (shtrudel) sign, press the Up Arrow key, type the following code, and then press Enter. 
+28. In the **Details.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
   ```cs
        @model Student
 ```
 
-31. In the **Details.cshtml** code window, select the following code:
+29. In the **Details.cshtml** code window, select the following code:
   ```cs
        <h2>Details</h2>
 ```
 
-32. Replace the selected code with the following code: 
+30. Replace the selected code with the following code: 
   ```cs
        @section footer{
             <div>
@@ -187,7 +174,7 @@
        }
 ```
 
-33. In the **Details.cshtml** code window, locate the following code:
+31. In the **Details.cshtml** code window, locate the following code:
   ```cs
        @section footer{
             <div>
@@ -196,7 +183,7 @@
        }
 ```
 
-34. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
+32. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
   ```cs
        <h2>Student details</h2>
 
@@ -249,24 +236,23 @@
        </div>
 ```
 
-35. On the **FILE** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Save All**.
+33. On the **FILE** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Save All**.
 
-36. On the **DEBUG** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Start Debugging**.
+34. On the **DEBUG** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Start Debugging**.
 
       >**Note:** The browser displays the **Index.cshtml** file combined with the **_Layout.cshtml** file.
 
-37. On the **Home** page, select a student of your choice, and then click **Details**.
+35. On the **Home** page, select a student of your choice, and then click **Details**.
 
       >**Note:** The footer content in the **Student details** page changed.
 
-38. On the **Student details** page, examine the student details, and then click **Back to List**.
+36. On the **Student details** page, examine the student details, and then click **Back to List**.
       
-39. In the Microsoft Edge window, click **Close**.
+37. In the Microsoft Edge window, click **Close**.
 
-40. On the **DEBUG** menu of the **LayoutExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+38. On the **DEBUG** menu of the **LayoutExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
-41. On the **FILE** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Exit**.
-
+39. On the **FILE** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Exit**.
 
 # Lesson 2: Using CSS and JavaScript
 
