@@ -58,7 +58,7 @@
            <a class="nav-link" href="@Url.Action("Index", "Library")">Home <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item dropdown">
-           <a href="# class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                Genres
            </a>
            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
