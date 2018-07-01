@@ -21,7 +21,7 @@
 
 5. In the **Add New Item – BootstrapExample** dialog box, click **Web**, and then, in the result pane, click **Razor Layout**, and click **Add**.
 
-6. In the **_Layout.cshtml** file, locate the following code:
+6. In the **_Layout.cshtml** code window, locate the following code:
   ```cs
        <title>@ViewBag.Title</title>
 ```
@@ -32,7 +32,7 @@
        <link href="~/css/style.css" rel="stylesheet" />
 ```
 
-8. In the **_Layout.cshtml** file, locate the following code:
+8. In the **_Layout.cshtml** code window, locate the following code:
   ```cs
        <div>
            @RenderBody()
@@ -52,7 +52,7 @@
        </div>
 ```
 
-10. In the **UL** element of the **_Layout.cshtml** code window, type the following code:
+10. In the **_Layout.cshtml** code window, in the **UL** element, type the following code:
   ```cs
        <li class="nav-item active">
            <a class="nav-link" href="@Url.Action("Index", "Library")">Home <span class="sr-only">(current)</span></a>
@@ -68,7 +68,7 @@
        </li>
 ```
 
-11. In the **_Layout.cshtml** file, locate the following code:
+11. In the **_Layout.cshtml** code window, locate the following code:
   ```cs
        <div>
            @RenderBody()
@@ -83,7 +83,7 @@
        <script src="~/js/alert-function.js"></script>
 ```
 
-13. In the **_Layout.cshtml** file, select the following code:
+13. In the **_Layout.cshtml** code window, select the following code:
   ```cs
        <div>
            @RenderBody()
@@ -99,14 +99,14 @@
 
 15. In the **BootstrapExample - Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Controllers**, and then click **LibraryController.cs**.
 
-16. In the **LibraryController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+16. In the **LibraryController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-17. In the **Add MVC View** dialog box, ensure that the name in the **View name** box is **Index**.
+17. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.
 
-18. In the **Template** selector, ensure that the template in the **Template** box is **Empty(without model)**.
+18. In the **Template** selector, ensure that the template in the **Template** text box is **Empty(without model)**.
 
 19. In the **Add MVC View** dialog box, ensure that the **Reference script libraries** check box is not selected.
 
@@ -127,9 +127,9 @@
                Launch modal example
            </button>
        </div>
-```
+``` 
 
-23. In the **Index.cshtml** code window, place the cursor immediately the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter twice, and then type the following code:
+23. In the **Index.cshtml** code window, place the cursor immediately after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter twice, and then type the following code:
   ```cs
        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
            <div class="modal-dialog" role="document">
@@ -155,7 +155,7 @@
 
 25. In the **Add New Item – BootstrapExample** dialog box, click **Web**, and then, in the result pane, click **Razor View**.
 
-26. In the **Name** box of the **Add New Item – BootstrapExample** dialog box, type **_Alert**, and then click **Add**.
+26. In the **Name** text box of the **Add New Item – BootstrapExample** dialog box, type **_Alert**, and then click **Add**.
 
 27. In the **_Alert.cshtml** code window, select the following code:
   ```cs
@@ -185,9 +185,9 @@
            <span aria-hidden="true">&times;</span>
        </button>
 ```
-30. On the **FILE** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Save All**.
+30. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-31. On the **DEBUG** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Start Debugging**.
+31. In the **BootstrapExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 32. In the **Home** page, click **Lunch modal example**, and then click **Close**.
 
@@ -195,13 +195,13 @@
 
 34. In the **Drama Books** page, click **Yes**, and examine the **alert** that appears.
 
-      >**Note:** In the **Drama Books** page, to close the message press the small X on the side.
+      >**Note:** Press the **X** close button in order to close the alert
 
-35. In the **Microsoft Edge** window, click **Close**.
+35. In **Microsoft Edge**, click **Close**.
 
-36. On the **DEBUG** menu of the **BootstrapExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+36. In the **BootstrapExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-37. On the **FILE** menu of the **BootstrapExample - Microsoft Visual Studio** window, click **Exit**.
+37. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Lesson 2: Using Task Runners
 
@@ -231,7 +231,7 @@
 
 7. In the **Add New Item - GulpExample** dialog box, click **npm Configuration File**, and then click **Add**.
 
-8. In the **package.json** file, locate the following code:
+8. In the **package.json** code window, locate the following code:
   ```cs
        "devDependencies": {
        }
@@ -337,7 +337,7 @@
 
 29. In the **GulpExample - Microsoft Visual Studio** window, in the **Solution Explorer**, under **Views**, under **PhotoBook**, click **Index.cshtml**.
 
-30. In the **Index.cshtml** file, locate the following code:
+30. In the **Index.cshtml** code window, locate the following code:
   ```cs
        <title>Index</title>
 ```
