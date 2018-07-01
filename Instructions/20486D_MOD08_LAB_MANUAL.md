@@ -8,10 +8,6 @@ Estimated Time: **60 minutes**
 
 ### Preparation Steps
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
-**(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
-
-2. Navigate to **Allfiles\Mod08\Labfiles\01_Zoo_begin**, and then double-click **Zoo.sln**.
 
 ### Exercise 1: Applying a Layout and Link Views to it 
 
