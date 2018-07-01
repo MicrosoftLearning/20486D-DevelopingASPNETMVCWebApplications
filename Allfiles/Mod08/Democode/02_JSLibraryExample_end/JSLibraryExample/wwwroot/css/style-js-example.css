@@ -1,0 +1,29 @@
+﻿body {
+    text-align: center;
+}
+
+h1 {
+    color: #1B5E20;
+    font-family: "Libre Baskerville", serif;
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#btn-jquery-func {
+    font-size: 20px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background: #81C784;
+    margin-top: 30px;
+    margin-left: 150px;
+    margin-right: auto;
+    border-style: solid;
+    border-color: #388E3C;
+    font-size: x-large;
+    font-weight: bold;
+}
+

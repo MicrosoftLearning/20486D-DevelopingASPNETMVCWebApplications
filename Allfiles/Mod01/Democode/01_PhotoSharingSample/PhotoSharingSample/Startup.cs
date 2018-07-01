@@ -29,9 +29,13 @@ namespace PhotoSharingSample
                    options.UseSqlServer(_configuration.GetConnectionString("PhotoSharingContext")));
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, PhotoSharingDB photoSharingDB)
         {
+            photoSharingDB.Database.EnsureDeleted();
+            photoSharingDB.Database.EnsureCreated();
+
             app.UseStaticFiles();
+
             app.UseMvcWithDefaultRoute();
         }
     }
