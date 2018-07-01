@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You are planning to create and code an MVC models that implements your plan for cupcakes and bakeries, in the application. To connect the application to a data store, your development team has decided to use Entity Framework. You have been asked to create a class that derives from a DbContext class, and then use the class to retrieve data from the data store and store data in the data store.
+You are planning to create and code an MVC models that implement your plan for cupcakes and bakeries, in the application. To connect the application to a data store, your development team has decided to use Entity Framework. You have been asked to create a class that derives from a DbContext class, and then use the class to retrieve data from the data store and store data in the data store.
 The application enables to store uploaded cupcakes, edit their properties, view their details, and delete them in response to user requests.
 
 #### Objectives
@@ -13,7 +13,7 @@ After completing this lab, you will be able to:
 
 - Add new models to the application and add properties to the model.
 - Add a class that derives from DbContext.
-- Use Repository in the project.
+- Use a Repository in the project.
 - Use Entity Framework Core to Retrieve and Store Data in the application.
 - Use Visual Studio to create a new Microsoft SQL database and connect to the database.
 - Use Migrations in the application.
@@ -22,13 +22,17 @@ After completing this lab, you will be able to:
 
 Estimated Time: **60 minutes**
 
+### Preparation Steps
+
+1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**).
+
 ### Exercise 1: Adding Entity Framework Core 
 
 #### Scenario
 
 In this exercise, you will:
 
-- Add a Cupcake model, and a Bakery model.
+- Add a Cupcake model and a Bakery model.
 - Add a CupcakeContext class.
 - Set CupcakeContext as an In Memory database.
 - Add a Dbinitializer class and populate the database.
@@ -45,199 +49,289 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create model classes.
 
-1. Open the Cupcakes.sln file from the following location:
-**Allfiles\Mod07\Labfiles\01_Cupcakes_begin**.
+1. From **Allfiles\Mod04\Labfiles\01_WorldJourney_begin**, open the **Cupcakes.sln**.
 
-2. Create a new class for the Cupcake model by using the following information:
+2. Create a new model with the following information:
 
     - Name: **Cupcake**
     - Folder: **Models**
 
-3. In the **Cupcake** class, Add **using** statements to the model for the following namespaces:
+3. In the **Cupcake** class, add **using** statements for the following namespaces:
 
    - **Microsoft.AspNetCore.Http**
    - **System.ComponentModel.DataAnnotations**
    - **System.ComponentModel.DataAnnotations.Schema**
 
-4. Add a primary key property to the Cupcake model class by using the following information:
+4. Add a new property with the following information:
 
-   - Scope: **public**
-   - Property name: **CupcakeId**
-   - Data type: **integer**
+   - Scope:   **public**
+   - Name: **CupcakeId**
+   - Type: **int**
    - Access: **Read and write**
 
-5. Add a CupcakeType property to the Cupcake model class by using the following information:
+5. Add a new property with the following information:
 
-   - Scope: **public**
-   - Property name: **CupcakeType**
-   - Data type: Nullable **CupcakeType**
+   - Scope:   **public**
+   - Name: **CupcakeType**
+   - Type: **CupcakeType?**
    - Access: **Read and write**
 
-6. Add a Description property to the Cupcake model class by using the following information:
+6. Add a new property with the following information:
 
-   - Scope: **public**
-   - Property name: **Description**
-   - Data type: **string**
+   - Scope:   **public**
+   - Name: **Description**
+   - Type: **string**
    - Access: **Read and write**
 
-7. Add a GlutenFree property to the Cupcake model class by using the following information:
+7. Add a new property with the following information:
 
    - Scope: **public**
-   - Property name: **GlutenFree**
-   - Data type: **bool**
+   - Name: **GlutenFree**
+   - Type: **bool**
    - Access: **Read and write**
 
-8. Add a Price property to the Cupcake model class by using the following information:
+8. Add a new property with the following information:
 
    - Scope: **public**
-   - Property name: **Price**
-   - Data type: Nullable **double**
+   - Name: **Price**
+   - Type: **double?**
    - Access: **Read and write**
 
-9. Add an image property to the **Cupcake** model class and store the image name by using the following information:
+9. Add a new property with the following information:
 
    - Scope: **public**
-   - Property names: **PhotoAvatar**, **ImageName**
-   - Data type for the image: **IFormFile**
-   - Data type for image name: **string**
+   - Name: **PhotoAvatar**
+   - Type: **IFormFile**
    - Access: **Read and write**
 
-10. Add another image property to the **Cupcake** model class and store the MIME type of image by using the following information:
+10. Add a new property with the following information:
 
-       - Scope: **public**
-       - Property names: **PhotoFile**, **ImageMimeType**
-       - Data type for the image: **byte []**
-       - Data type for MIME type: **string**
-       - Access: **Read and write**
+    - Scope: **public**
+    - Name: **ImageName**
+    - Type: **string**
+    - Access: **Read and write**
 
-11. Add a new property to the **Cupcake** model class to retrieve the bakery for a given bakeryId by using the following information: 
+11. Add a new property with the following information:
 
-       - Scope: **public**
-       - Property name: **BakeryId**
-       - Property type: Nullable **int**
-       - Access: **Read and write**
+    - Scope: **public**
+    - Name: **PhotoFile**
+    - Type: **byte[]**
+    - Access: **Read and write**
 
-12. Add a new property to the **Cupcake** model class to retrieve the bakery by using the following information:
+12. Add a new property with the following information:
 
-       - Scope: **public**
-       - Property name: **Bakery**
-       - Property type: **Bakery**
-       - Access: **Read and write**
-       - Include the **virtual** keyword
+    - Scope: **public**
+    - Name: **ImageMimeType**
+    - Type: **string**
+    - Access: **Read and write**
 
-13. Add a Key attribute to the **Cupcake** model class to ensure that the CupcakeId property is a key property and corresponding column to a PrimaryKey column in the database.
+13. Add a new property with the following information:
 
-14. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the CupcakeType field.
+    - Scope: **public**
+    - Name: **BakeryId**
+    - Type: **int?**
+    - Access: **Read and write**
 
-15. Add a display data annotation to the **Cupcake** model class to ensure that the CupcakeType property is displayed with the name, **Cupcake Type:** .
+14. Add a new property with the following information:
 
-16. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the Description field.
-
-17. Add a display data annotation to the **Cupcake** model class to ensure that the Description  property is displayed with the name, **Description:** .
-
-18. Add a display data annotation to the **Cupcake** model class to ensure that the GlutenFree property is displayed with the name, **Gluten Free:** .
-
-19. Add validation data annotations to the **Cupcake** model class to ensure that the users complete the Price text box and type an int not greater than 15 Digits.
-
-20. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the Price field.
-
-21. Add a DataType annotation to the **Cupcake** model class to ensure that the Price property is displayed as Currency.
-
-22. Add a display data annotation to the **Cupcake** model class to ensure that the Price property is displayed with the name, **Price:** .
-
-23. Add a data annotation to the **Cupcake** model class to ensure that the PhotoAvatar property wont be created corresponding column in a database table.
-
-24. Add a display data annotation to the **Cupcake** model class to ensure that the PhotoAvatar  property is displayed with the name, **Cupcake Picture:** .
-
-25. Add a validation data annotation to the **Cupcake** model class to ensure that the users complete the BakeryId field.
-
-26. Create a new class for the Bakery model by using the following information:
-
+    - Scope: **public**
     - Name: **Bakery**
-    - Folder: **Models**
+    - Type: **Bakery**
+    - Access: **Read and write**
+    - Modifier: **virtual**
 
-27. In the **Bakery** class, Add **using** statements to the model for the following namespaces:
+15. Above the **CupcakeId** property, add a **Key** attribute.
+
+16. Above the **CupcakeType** property,  add a **Required** attribute with the following information:
+
+    - Error Message: **Please select a cupcake type**
+
+17. Add a **Display** attribute with the following information:
+
+    - Name: **Cupcake Type:**
+
+18. Above the **Description** property,  add a **Required** attribute with the following information:
+
+    - Error Message: **Please enter a cupcake description**
+
+19. Add a **Display** attribute with the following information:
+
+    - Name: **Description:**
+
+20. Above the **GlutenFree** property,  add a **Display** attribute with the following information:
+
+    - Name: **Gluten Free:**
+
+21. Above the **Price** property,  add a **Range** attribute with the following information:
+
+    - Minimum: **1**
+    - Maximum: **5**
+
+22. Add a **Required** attribute with the following information:
+
+    - Error Message: **Please enter a cupcake price**
+
+23. Add a **DataType** attribute with the following information:
+
+    - Data Type: **DataType.Currency**
+
+24. Add a **Price** attribute with the following information:
+
+    - Name: **Price:**
+
+25. Above the **PhotoAvatar** property,  add a **NotMapped** attribute.
+
+26. Add a **Display** attribute with the following information:
+
+    - Name: **Cupcake Picture:**
+
+27. Above the **BakeryId** property,  add a  **Required** attribute with the following information:
+
+    - Error Message: **Please select a bakery**
+
+28.  Create a new model with the following information:
+
+     - Name: **Bakery**
+     - Folder: **Models**
+
+29. In the **Bakery** class, add a **using** statement for the following namespace:
 
     - **System.ComponentModel.DataAnnotations**
 
-28. Add a primary key property to the Bakery model class by using the following information:
+30. Add a new property with the following information:
 
-      - Scope: **public**
-      - Property name: **BakeryId**
-      - Data type: **integer**
-      - Access: **Read and write**
+    - Scope:   **public**
+    - Name: **BakeryId**
+    - Type: **int**
+    - Access: **Read and write**
 
-29. Add a BakeryName property to the Bakery model class by using the following information:
+31. Add a new property with the following information:
 
-       - Scope: **public**
-      - Property name: **BakeryName**
-       - Data type: **string**
-       - Access: **Read and write**
+    - Scope:   **public**
+    - Name: **BakeryName**
+    - Type: **string**
+    - Access: **Read and write**
 
-30. Add a Quantity property to the Bakery model class by using the following information:
+32. Add a new property with the following information:
 
-       - Scope: **public**
-      - Property name: **Quantity**
-      - Data type: **int**
-      - Access: **Read and write**
+    - Scope:   **public**
+    - Name: **Quantity**
+    - Type: **int**
+    - Access: **Read and write**
 
-31. Add a Address property to the Bakery model class by using the following information:
+33. Add a new property with the following information:
 
-       - Scope: **public**
-       - Property name: **Address**
-       - Data type: **string**
-       - Access: **Read and write**
+     - Scope:   **public**
+     - Name: **Address**
+     - Type: **string**
+     - Access: **Read and write**
 
-32. Add a new property to the **Bakery** model class to retrieve cupcakes for a given bakery by using the following information:
+34. Add a new property with the following information:
 
-       - Scope: **public**
-       - Property name: **Cupcakes**
-       - Data type: a collection of **Cupcake**
-       - Access : **Read and write**
-       - Include the **virtual** keyword
+     - Scope:   **public**
+     - Name: **Cupcakes**
+     - Type: **ICollection&lt;Cupcake&gt;**
+     - Access: **Read and write**
+     - Modifier: **virtual**
 
-33. Add a Key attribute to the **Bakery** model class to ensure that the BakeryId  property is a key property and corresponding column to a PrimaryKey column in the database.
+35. Above the **BakeryId** property, add a **Key** attribute.
 
-34. Add validation data annotations to the **Bakery** model class to ensure that the users complete the BakeryName text box and type a string with a length shorter than 50 characters.
+36. Above the **BakeryName** property,  add a **StringLength** attribute with the following information:
 
-35. Add validation data annotations to the **Cupcake** model class to ensure that the users complete the Quantity text box and type an int not greater than 40 Digits.
+    - Maximum Length: **50**
+    - Minimum Length: **4**
 
-36. Add validation data annotations to the **Bakery** model class to ensure that the users complete the Address text box and type a string with a length shorter than 50 characters.
+37. Above the **Quantity** property,  add a **Range** attribute with the following information:
+
+    - Minimum: **1**
+    - Maximum: **40**
+
+38. Above the **Address** property,  add a **StringLength** attribute with the following information:
+
+    - Maximum Length: **50**
+    - Minimum Length: **4**
+
 
 #### Task 2: Create a class that derives from DbContext.
 
-1. Create a new top-level folder, in the **Cupcakes** project by using the following information:
+1. Create a new folder with the following information:
 
    - Folder name: **Data**
 
-2. Add a new class named **CupcakeContext** to the **Data** folder and ensure that the new class inherits the **System.Data.Entity.DbContext** class.
+2. Create a new class with the following information:
 
-3. In the **CupcakeContext** class, Add **using** statements to the model for the following namespaces:
+    - Name: **CupcakeContext**
+    - Folder: **Data**
+
+3. Change the **CupcakeContext** class to inherit from the **DbContext** class.
+
+4. Add **using** statements for the following namespaces:
 
    - **Cupcakes.Models**
    - **Microsoft.EntityFrameworkCore**
 
-4. Initialize the DbContextOptions<CupcakeContext> options, in the **CupcakeContext** constructor, and derive from DbContext base constructor the value **options**.
+5. Add a constructor with the following parameter:
 
-5. Add public **DbSet** properties, Cupcake and Bakery to enable Entity Framework create database tables called Cupcakes and Bakeries.
+   - Type: **DbContextOptions&lt;CupcakeContext&gt;**
+   - Name: **options**
+
+6. In the constructor, pass the **options** as a parameter to the **base** constructor.
+
+7. Add a new property with the following information:
+
+    - Scope: **public**
+    - Name: **Cupcakes**
+    - Type: **DbSet&lt;Cupcake&gt;**
+    - Access: **Read and write**
+
+8. Add a new property with the following information:
+
+    - Scope: **public**
+    - Name: **Bakeries**
+    - Type: **DbSet&lt;Bakery&gt;**
+    - Access: **Read and write**
 
 #### Task 3: Set up Entity Framework to use an In Memory database.
 
-1. In the **Startup** class, Add **using** statements to the model for the following namespaces:
+1. In the **Startup** class, add **using** statements  for the following namespaces:
 
    - **Microsoft.Extensions.Configuration**
    - **Cupcakes.Data**
    - **Microsoft.EntityFrameworkCore**
 
-2. In the **Startup** class, create a new object using the following information:
+2. Create a new field with the following information:
 
    - Scope: **private**
-   - Class: **IConfiguration**
+   - Type: **IConfiguration**
    - Name: **_configuration**
 
-    Initialize the new object in the **Startup** constructor with the value **IConfiguration configuration**.
+3. Add a constructor with the following parameter:
 
-3. In the **ConfigureServices** method, initialize the **CupcakeContext** to use an **in memory database**.
+   - Type: **IConfiguration**
+   - Name: **configuration**
+
+4. In the constructor, initialize the  **_configuration** field with the value of the **configuration** parameter.
+
+5. In the beginning of the **ConfigureServices** method, call the **AddDbContext** method of the **services** parameter, with the following information:
+
+   - Type: **CupcakeContext**
+
+6. Pass the following lamda expression as a parameter to the **AddDbContext** method:
+   - Lamda Expression: **options =>
+           options.UseInMemoryDatabase("CupcakesDb")**
+
+7. Change the **Configure** method signature to accept the following parameters:
+
+   - Parameter:
+        - Type: **IApplicationBuilder**
+        - Name: **app**
+   - Parameter:
+        - Type: **CupcakeContext**
+        - Name: **cupcakeContext**
+
+8. In the beginning of the **Configure** method code block, call the **cupcakeContext.Database.EnsureDeleted** method.
+
+9. In the beginning of the **Configure** method code block, call the **cupcakeContext.Database.EnsureCreated** method.
 
 #### Task 4: Using an initializer to populate the database.
 
