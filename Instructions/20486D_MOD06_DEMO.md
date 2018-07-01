@@ -432,7 +432,7 @@
 
 #### Demonstration Steps
 
-1. Go to **Allfiles\Mod06\Democode\04_DataAnnotationsCustomValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
+1. Navigate to **Allfiles\Mod06\Democode\04_DataAnnotationsCustomValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
 
 2. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **DataAnnotationsExample**, point to **Add**, and then click **New Folder**.
 

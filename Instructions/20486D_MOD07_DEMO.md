@@ -9,7 +9,7 @@
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
  https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
-2. Go to **Allfiles\Mod07\Democode\01_EntityFrameworkExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+2. Navigate to **Allfiles\Mod07\Democode\01_EntityFrameworkExample_begin**, and then double-click **EntityFrameworkExample.sln**.
 
 #### Demonstration Steps
 
@@ -218,7 +218,7 @@
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. 
  https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles.
 
-2. Go to **Allfiles\Mod07\Democode\02_RepositoryExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+2. Navigate to **Allfiles\Mod07\Democode\02_RepositoryExample_begin**, and then double-click **EntityFrameworkExample.sln**.
 
 #### Demonstration Steps
 
