@@ -266,7 +266,7 @@
 
 21. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Styles**, point to **Add**, and then click **New Item**.
 
-22. In the **Add New Item - GulpExample** dialog box, in the **search** box type **scss**, and then press Enter.
+22. In the **Add New Item - GulpExample** dialog box, in the **search** text box type **scss**, and then press Enter.
 
 23. In the **Add New Item - GulpExample** dialog box, click **SCSS Style Sheet (SASS)**.
 
