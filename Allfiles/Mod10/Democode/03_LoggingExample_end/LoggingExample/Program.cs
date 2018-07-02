@@ -37,6 +37,6 @@ namespace LoggingExample
                     logging.AddFile(config);
                 }
             })
-            .UseStartup<Startup>();
+                .UseStartup<Startup>();
     }
 }
