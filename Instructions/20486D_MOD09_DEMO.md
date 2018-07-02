@@ -203,7 +203,7 @@
 
 37. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
-# Lesson 2: Lesson 2: Using Task Runners
+# Lesson 2: Using Task Runners
 
 ### Demonstration: How to Use gulp to Compile SASS File to CSS
 
@@ -211,7 +211,6 @@
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
-
 
 #### Demonstration Steps
 
@@ -227,7 +226,7 @@
 
 5. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Item**.
 
-6. In the **Add New Item - GulpExample** dialog box, in the search box type **npm**, and then press Enter.
+6. In the **Add New Item - GulpExample** dialog box, in the **search** box type **npm**, and then press Enter.
 
 7. In the **Add New Item - GulpExample** dialog box, click **npm Configuration File**, and then click **Add**.
 
@@ -243,21 +242,21 @@
 ```
 10. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
 
->**Note:** In the Solution Explorer pane, under **Depenndencies**, a new folder has been added named **npm** with **gulp** and **gulp-sass** packages.
+>**Note:** In the **Solution Explorer** pane, under **Depenndencies**, a new folder has been added named **npm** with **gulp** and **gulp-sass** packages.
 
 11. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **PhotoBook**, and then click **Index.cshtml**.
 
-12. In the **Index.cshtml** code window, examine the code, and note there are no links to .css files.
+12. In the **Index.cshtml** code window, examine the code, and ensure there are no links to **css** files.
 
 13. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Folder**.
 
 14. In the **NewFolder** text box, type **Styles**, and then press Enter.
 
-15. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Styles**, point to Add, and then click **New Item**.
+15. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Styles**, point to **Add**, and then click **New Item**.
 
-16. In the **Add New Item - GulpExample** dialog box, in the search box type **scss**, and then press Enter.
+16. In the **Add New Item - GulpExample** dialog box, in the **search** box type **scss**, and then press Enter.
 
-17. In the **Add New Item - GulpExample** dialog box, click **SCSS Style Sheet(SASS)**.
+17. In the **Add New Item - GulpExample** dialog box, click **SCSS Style Sheet (SASS)**.
 
 18. In the **Add New Item – GulpExample** dialog box, in the **Name** text box, type **main**, and then click **Add**. 
 
@@ -315,7 +314,7 @@
 
 24. In the **Add New Item - GulpExample** dialog box, in the **Name** text box, type **gulpfile**, and then click **Add**.
 
-25. In the **gulpfile** code window, type the following code:
+25. In the **gulpfile.js** code window, type the following code:
   ```cs
        var gulp = require('gulp');
        var sass = require('gulp-sass');
@@ -349,7 +348,7 @@
 
 33. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-      >**Note:** The browser displays the **Index.cshtml** view with css.
+      >**Note:** The browser displays the **Index.cshtml** view with **css** style.
 
 34. In **Microsoft Edge**, click **Close**.
 
