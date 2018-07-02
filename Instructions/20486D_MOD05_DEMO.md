@@ -479,15 +479,15 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod05\Democode\05_ViewComponentsExample_begin**, and then double-click **ViewComponentExample.sln**.
+1. Navigate to **Allfiles\Mod05\Democode\05_ViewComponentsExample_begin**, and then double-click **ViewComponentsExample.sln**.
 
-2. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **ViewComponentExample**, point to **Add**, and then click **New Folder**.
+2. In the **ViewComponentsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **ViewComponentsExample**, point to **Add**, and then click **New Folder**.
 
 3. In the **NewFolder** text box, type **ViewComponents**, and then press Enter.
 
-4. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **ViewComponents**, point to **Add**, and then click **Class**.
+4. In the **ViewComponentsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **ViewComponents**, point to **Add**, and then click **Class**.
 
-5.	In the **Add New Item - ViewComponentExample** dialog box, in the **Name** text box, type **PersonCardViewComponent**, and then click **Add**.
+5.	In the **Add New Item - ViewComponentsExample** dialog box, in the **Name** text box, type **PersonCardViewComponent**, and then click **Add**.
 
 6. In the **PersonCardViewComponent.cs** code window, locate the following code:
 ```cs
@@ -523,15 +523,15 @@
     }
 ```
 
-12. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, right-click **Shared**, point to **Add**, and then click **New Folder**.
+12. In the **ViewComponentsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, right-click **Shared**, point to **Add**, and then click **New Folder**.
 
 13. In the **NewFolder** text box, type **Components**, and then press Enter.
 
-14. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Components**, point to **Add**, and then click **New Folder**.
+14. In the **ViewComponentsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Components**, point to **Add**, and then click **New Folder**.
 
 15. In the **NewFolder** text box, type **PersonCard**, and then press Enter.
 
-16. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Shared**, right-click **_CardDesign.cshtml**, and then click **Cut**.
+16. In the **ViewComponentsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Shared**, right-click **_CardDesign.cshtml**, and then click **Cut**.
 
 17. Right-click **PersonCard**, and then click **Paste**.
 
@@ -539,7 +539,7 @@
 
 19. In the **_CardDesign.cshtml** text box, type **CardDesign.cshtml**, and then press Enter.
 
-20. In the **ViewComponentExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Home**, and then click **Index.cshtml**.
+20. In the **ViewComponentsExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
 21. In the **Index.cshtml** code window, select the following code:
 ```cs
@@ -551,13 +551,47 @@
     @await Component.InvokeAsync("PersonCard", cardIndex);
 ```
 
-23. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+23. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-24. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+24. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
     >**Note**: The browser displays a table with cards. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
      
 25. In **Microsoft Edge**, click **Close**.
 
-26. In the **ViewComponentExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+26. In the **ViewComponentsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-27. In the **ViewComponentExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+27. In the **CitiesDetails - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
+
+28. In **Add New Item – CitiesDetails** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
+
+29. In **Add New Item – CitiesDetails** dialog box, in the result pane, click **Razor View Import**, and then click **Add**.
+
+30. In the **_ViewImports.cshtml** code window, type the following code:
+```cs
+    @addTagHelper *, ViewComponentsExample
+```
+
+31. In the **Index.cshtml** code window, select the following code:
+```cs
+    @await Component.InvokeAsync("PersonCard", cardIndex);
+```
+
+32. Replace the selected code with the following code:
+```cs
+    <vc:person-card id="cardIndex"></vc:person-card>
+```
+
+33. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+
+34. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+    >**Note**: The browser displays the same page.
+     
+35. In **Microsoft Edge**, click **Close**.
+
+36. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+
+©2018 Microsoft Corporation. All rights reserved.
+
+The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not** included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+
+This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.
