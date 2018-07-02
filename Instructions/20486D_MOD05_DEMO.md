@@ -35,7 +35,7 @@
 5. Right-click on the **Index** method name, and then click **Add View**.
     >**Note**: Ensure that the View name is **Index**
 
-6. In the **Add MVC View** dialog box, ensure that **Create as a partial view** and **Use a layout page** check boxes are cleared, and then click **Add**.
+6. In the **Add MVC View** dialog box, ensure that **Create as a partial view** and **Use a layout page** check boxes are unchecked, and then click **Add**.
     >**Note**: Ensure that **Index.cshtml** file was created under the **Product** folder that is under the **Views** folder. 
     
 7. In the **Index.cshtml** code window, in the **BODY** element, press Enter, and then type the following code:
@@ -418,10 +418,10 @@
 11. In the **Index.cshtml** code window, locate the following code:
 ```cs
     @for (int rowIndex = 0; rowIndex < ViewBag.Rows; rowIndex++)
-        {
-            <tr>
-                @for (int columnIndex = 0; columnIndex < ViewBag.Columns; columnIndex++)
-                {
+    {
+        <tr>
+            @for (int columnIndex = 0; columnIndex < ViewBag.Columns; columnIndex++)
+            {
 ```
 
 12. Place the cursor at the end of the located code, press Enter, and then type the following code:
@@ -438,7 +438,7 @@
     
 16. In the **Add MVC View** dialog box, in the **View name** text box, type **_CardDesign**.
 
-17. In the **Add MVC View** dialog box, verify that **Create as a partial view** check box is marked and that **Use a layout page** check box is cleared, and then click **Add**.
+17. In the **Add MVC View** dialog box, verify that **Create as a partial view** check box is checked and that **Use a layout page** check box is unchecked, and then click **Add**.
 
 18. In the **_CardDesign.cshtml** code window, delete the following code:
 ```
