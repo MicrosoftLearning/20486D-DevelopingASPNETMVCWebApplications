@@ -20,7 +20,7 @@
                 @for (int columnIndex = 0; columnIndex < ViewBag.Columns; columnIndex++)
                 {
                     int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
-                    @await Component.InvokeAsync("PersonCard", cardIndex);
+                    <vc:person-card id="cardIndex"></vc:person-card>
                 }
             </tr>
         }
