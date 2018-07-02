@@ -83,47 +83,41 @@
       using Microsoft.AspNetCore.Builder;
 ```
 
-12. In the **Startup.cs** code window, locate the following code:
-  ```cs
-      services.AddMvc();
-```
-
-13. Place the cursor before the located code, type the following code, and then press Enter twice.
-
+12. In the **Startup.cs** code window, place the cursor after the **{** (opening braces) sign of the **ConfigureServices** method, press Enter, and then type the following code:
   ```cs
       services.AddDbContext<PersonContext>(options =>
              options.UseInMemoryDatabase("PersonDB"));
 ```
 
-14. In the **Startup.cs** code window, locate the following code:
+13. In the **Startup.cs** code window, locate the following code:
   ```cs
       app.UseStaticFiles();
 ```
 
-15. Place the cursor before the located code, type the following code, and then press Enter twice.
+14. Place the cursor before the located code, type the following code, and then press Enter twice.
   ```cs
       personContext.Database.EnsureDeleted();
       personContext.Database.EnsureCreated();
 ```
 
-16. In the **EntityFrameworkExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **PersonController.cs**.
+15. In the **EntityFrameworkExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **PersonController.cs**.
 
-17. In the **PersonController.cs** code window, locate the following code:
+16. In the **PersonController.cs** code window, locate the following code:
   ```cs
       using Microsoft.AspNetCore.Mvc;
 ```
-18. Ensure that the cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
+17. Ensure that the cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
   ```cs
       using EntityFrameworkExample.Data;
       using EntityFrameworkExample.Models;
 ```
 
-19. In the **PersonController.cs** code window, locate the following code:
+18. In the **PersonController.cs** code window, locate the following code:
   ```cs
       public IActionResult Index()
 ```
 
-20. Place the cursor before the located code, type the following code, and then press Enter.
+19. Place the cursor before the located code, type the following code, and then press Enter.
   ```cs
       private readonly PersonContext _context;
 
@@ -133,24 +127,24 @@
       }
 ```
 
-21. In the **PersonController.cs** code block, in the **Index** action code block, select the following code:
+20. In the **PersonController.cs** code block, in the **Index** action code block, select the following code:
   ```cs
        return View();
 ```
 
-22. Replace the selected code with the following code:
+21. Replace the selected code with the following code:
   ```cs
        return View(_context.People.ToList());
 ```
 
-23. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code:
+22. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code:
   ```cs
        public IActionResult Edit(int id)
        {
        }
 ```
 
-24. In the **Edit** action code block, type the following code:
+23. In the **Edit** action code block, type the following code:
   ```cs
        var person = _context.People.SingleOrDefault(m => m.PersonId == id);
        person.FirstName = "Brandon";
@@ -159,14 +153,14 @@
        return RedirectToAction(nameof(Index));
 ```
 
-25. Ensure that the cursor is at the end of the **Edit** action code block, press Enter twice, and then type the following code:
+24. Ensure that the cursor is at the end of the **Edit** action code block, press Enter twice, and then type the following code:
   ```cs
        public IActionResult Create()
        {
        }
 ```
 
-26. In the **Create** action code block, type the following code:
+25. In the **Create** action code block, type the following code:
   ```cs
        Person person = _context.People.LastOrDefault();
        int id = person.PersonId + 1;
@@ -175,14 +169,14 @@
        return RedirectToAction(nameof(Index));
 ```
 
-27. Ensure that the cursor is at the end of the **Create** action code block, press Enter twice, and then type the following code:
+26. Ensure that the cursor is at the end of the **Create** action code block, press Enter twice, and then type the following code:
   ```cs
        public IActionResult Delete(int id)
        {
        }
 ```
 
-28. In the **Delete** action code block, type the following code:
+27. In the **Delete** action code block, type the following code:
   ```cs
       var person = _context.People.SingleOrDefault(m => m.PersonId == id);
       _context.People.Remove(person);
@@ -190,23 +184,23 @@
       return RedirectToAction(nameof(Index));
 ```
 
-29. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+28. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-30. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+29. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
       >**Note:** The browser window displays the **Index.cshtml** view.
 
-31. In **Microsoft Edge**, click **Create New Person**.
+30. In **Microsoft Edge**, click **Create New Person**.
 
-32. In **Microsoft Edge**, select a person of your choice, and then click **Edit**.
+31. In **Microsoft Edge**, select a person of your choice, and then click **Edit**.
 
-33. In **Microsoft Edge**, select a person of your choice, and then click **Delete**.
+32. In **Microsoft Edge**, select a person of your choice, and then click **Delete**.
 
-34. In **Microsoft Edge**, click **Close**.
+33. In **Microsoft Edge**, click **Close**.
 
-35. In the **EntityFrameworkExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+34. In the **EntityFrameworkExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-36. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+35. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Using Entity Framework Core to Connect to Microsoft SQL Server
 
@@ -245,6 +239,7 @@
   ```cs
       using System.Threading.Tasks;
 ```
+
 8. Ensure that the cursor is at the end of the  **System.Threading.Tasks** namespace, press Enter, and then type the following code:
   ```cs
       using EntityFrameworkExample.Data;
@@ -259,7 +254,7 @@
       : IRepository
 ```
 
-11. In the **MyRepository.cs** code block, press Enter, and then type the following code:
+11. In the **MyRepository.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
       private PersonContext _context;
 
@@ -319,11 +314,7 @@
       using EntityFrameworkExample.Repositories;
 ```
 
-19. In the **Startup.cs** code window, locate the following code:
-  ```cs
-      services.AddMvc();
-```
-20. Place the cursor before the located code, type the following code, and then press Enter twice.
+19. In the **Startup.cs** code window, place the cursor after the **{** (opening braces) sign of the **ConfigureServices** method, press Enter, and then type the following code:
   ```cs
       services.AddDbContext<PersonContext>(options =>
                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
