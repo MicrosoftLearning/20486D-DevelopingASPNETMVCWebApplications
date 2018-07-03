@@ -35,7 +35,7 @@ In this exercise, you will:
 - Add a Cupcake model and a Bakery model.
 - Add a CupcakeContext class.
 - Set CupcakeContext as an In Memory database.
-- Add a Dbinitializer class and populate the database.
+- Add a OnModelCreating method and populate the database.
 
 The main tasks for this exercise are as follows:
 
@@ -45,9 +45,9 @@ The main tasks for this exercise are as follows:
 
 3. Set up Entity Framework to use an In Memory database.
 
-4. Using an initializer to populate the database.
+4. Using OnModelCreating to populate the database.
 
-#### Task 1: Create model classes.
+#### Task 1: Create model classes
 
 1. From **Allfiles\Mod04\Labfiles\01_WorldJourney_begin**, open the **Cupcakes.sln**.
 
@@ -165,7 +165,7 @@ The main tasks for this exercise are as follows:
 21. Above the **Price** property,  add a **Range** attribute with the following information:
 
     - Minimum: **1**
-    - Maximum: **5**
+    - Maximum: **15**
 
 22. Add a **Required** attribute with the following information:
 
@@ -252,7 +252,7 @@ The main tasks for this exercise are as follows:
     - Minimum Length: **4**
 
 
-#### Task 2: Create a class that derives from DbContext.
+#### Task 2: Create a class that derives from DbContext
 
 1. Create a new folder with the following information:
 
@@ -263,12 +263,12 @@ The main tasks for this exercise are as follows:
     - Name: **CupcakeContext**
     - Folder: **Data**
 
-3. Change the **CupcakeContext** class to inherit from the **DbContext** class.
-
-4. Add **using** statements for the following namespaces:
+3. Add **using** statements for the following namespaces:
 
    - **Cupcakes.Models**
    - **Microsoft.EntityFrameworkCore**
+
+4. Change the **CupcakeContext** class to inherit from the **DbContext** class.
 
 5. Add a constructor with the following parameter:
 
@@ -291,7 +291,7 @@ The main tasks for this exercise are as follows:
     - Type: **DbSet&lt;Bakery&gt;**
     - Access: **Read and write**
 
-#### Task 3: Set up Entity Framework to use an In Memory database.
+#### Task 3: Set up Entity Framework to use an In Memory database
 
 1. In the **Startup** class, add **using** statements  for the following namespaces:
 
@@ -316,7 +316,7 @@ The main tasks for this exercise are as follows:
 
    - Type: **CupcakeContext**
 
-6. Pass the following lamda expression as a parameter to the **AddDbContext** method:
+6. Pass a **lamda expression** as a parameter to the **AddDbContext** method with the following information:
    - Lamda Expression: **options =>
            options.UseInMemoryDatabase("CupcakesDb")**
 
@@ -333,46 +333,90 @@ The main tasks for this exercise are as follows:
 
 9. In the beginning of the **Configure** method code block, call the **cupcakeContext.Database.EnsureCreated** method.
 
-#### Task 4: Using an initializer to populate the database.
 
-1. Add a new static class named **DbInitializer** to the **Data** folder.
+#### Task 4: Using OnModelCreating to populate the database
 
-2. In the **DbInitializer** class, Add **using** statements to the model for the following namespaces:
+1. In the **CupcakeContext** class, add an **override** method with the following information:
 
-   - **Cupcakes.Models**
+   - Scope: **protected**
+   - Return type: **void** 
+   - Name: **OnModelCreating**
+   - Parameter:
+       - Type: **ModelBuilder**
+       - Name: **modelBuilder**
 
-3. Add static **Initialize** method in the **DbInitializer** class.
 
-4. Edit the code in the **Initialize** method by using the following information:
+2. In the **OnModelCreating** method, call the **Entity** method of the **modelBuilder** parameter, with the following information:
 
-   - Parameter: a CupcakeContext named **context**
+   - Type: **Bakery**
 
-5. Create a new list of **Bakery** objects in the **Initialize** method. The list should contain four Bakery objects with the following properties:
+3. Call the **HasData** method of the **EntityTypeBuilder&lt;Bakery&gt;** object returned from the **Entity&lt;Bakery&gt;** method. Pass the following new **Bakery** objects as parameters to the **HasData** method:
 
-   - BakeryName: **_&lt;A bakery name of your choice&gt;_**
-   - Address: **_&lt;An address of your choice&gt;_**
-   - Quantity:  **_&lt;A quantity of your choice&gt;_**
+    - Parameters:
+        - Parameter:
+            - BakeryId: **1**
+            - BakeryName:  **"Gluteus Free"**
+            - Address: **"635 Brighton Circle Road"**
+            - Quantity: **8**
+        - Parameter:
+            - BakeryId: **2**
+            - BakeryName:  **"Cupcakes Break"**
+            - Address: **"Cupcakes Break"**
+            - Quantity: **22**
+        - Parameter:
+            - BakeryId: **3**
+            - BakeryName:  **"Cupcakes Ahead"**
+            - Address: **"Cupcakes Break"**
+            - Quantity: **18**
+        - Parameter:
+            - BakeryId: **4**
+            - BakeryName:  **"Sugar"**
+            - Address: **"1608 Charles Street"**
+            - Quantity: **30**
 
-5. Add each **Bakery** object in the **Bakeries** list to the Entity Framework context, and then save the changes to the context.
+4. Call the **Entity** method of the **modelBuilder** parameter, with the following information:
 
-6. Create a new list of Cupcake objects in the **Initialize** method. The list should contain four **Cupcake** objects with the following properties:
+   - Type: **Cupcake**
 
-   - CupcakeType: **_&lt;A cupcake tyoe of your choice&gt;_**
-   - Description: **_&lt;A description of your choice&gt;_**
-   - GlutenFree: **Choose if the cupcake is gluten-free**
-   - Price: **_&lt;A price of your choice&gt;_**
-   - BakeryId: **1**, **2**, **3**, **4**
-   - ImageMimeType: **image/jpeg**
-   - ImageName: **birthday-cupcake.jpg** , **chocolate-cupcake.jpg**, **pink-cupcake.jpg**, **turquoise-cupcake.jpg**
+3. Call the **HasData** method of the **EntityTypeBuilder&lt;Cupcake&gt;** object returned from the **Entity&lt;Cupcake&gt;** method. Pass the following new **Cupcake** objects as parameters to the **HasData** method:
 
-7. Add each **Cupcake** object in the **cupcakes** list to the Entity Framework context, and then save the changes to the context.
-
-8. In the **Program** class, Add **using** statements to the model for the following namespaces:
-
-   - **Cupcakes.Data**
-   - **Microsoft.Extensions.DependencyInjection**
-
-9.  In the **Program** class, add code to initialize the **DbInitializer** with test data.
+    - Parameters:
+        - Parameter:
+            - CupcakeId: **1**
+            - CupcakeType : **CupcakeType.Birthday**,
+            - Description:  **"Vanilla cupcake with coconut cream"**
+            - GlutenFree: **true**
+            - Price: **2.5**
+            - BakeryId: **1**
+            - ImageMimeType:  **"image/jpeg"**
+            - ImageName :  **"birthday-cupcake.jpg"**
+        - Parameter:
+            - CupcakeId: **2**
+            - CupcakeType : **CupcakeType.Chocolate**,
+            - Description:  **"Chocolate cupcake with caramel filling and chocolate butter cream"**
+            - GlutenFree: **false**
+            - Price: **3.2**
+            - BakeryId: **2**
+            - ImageMimeType:  **"image/jpeg"**
+            - ImageName :  **"chocolate-cupcake.jpg"**
+        - Parameter:
+            - CupcakeId: **3**
+            - CupcakeType : **CupcakeType.Strawberry**,
+            - Description:  **"Chocolate cupcake with straberry cream filling"**
+            - GlutenFree: **false**
+            - Price: **4**
+            - BakeryId: **3**
+            - ImageMimeType:  **"image/jpeg"**
+            - ImageName :  **"pink-cupcake.jpg"**
+        - Parameter:
+            - CupcakeId: **4**
+            - CupcakeType : **CupcakeType.Turquoise**,
+            - Description:  **"Vanilla cupcake with butter cream"**
+            - GlutenFree: **true**
+            - Price: **1.5**
+            - BakeryId: **4**
+            - ImageMimeType:  **"image/jpeg"**
+            - ImageName :  **"turquoise-cupcake.jpg"**
 
 >**Results** : After completing this exercise, you will be able to add Entity Framework Core to the Cupcake Shop application. 
 
@@ -399,15 +443,18 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create a repository. 
 
-1. Create a new top-level folder, in the **Cupcakes** project by using the following information:
+1. Create a new folder with the following information:
 
    - Folder name: **Repositories**
 
-2. Add a new interface named **ICupcakeRepository** to the **Repositories** folder.
+2. Create a new interface with the following information:
 
-3. Set public scope to the new interface.
+   - Folder: **Repositories**
+   - Name:  **ICupcakeRepository**
+   - Scope: **public**
 
-4. In the **ICupcakeRepository** class, Add **using** statements to the model for the following namespaces:
+
+3. In the **ICupcakeRepository** interface, add **using** statement for the following namespaces:
 
    - **Cupcakes.Models**
 
@@ -446,7 +493,7 @@ The main tasks for this exercise are as follows:
 
 11. Add a new class named **CupcakeRepository** to the **Repositories** folder.
 
-12. In the **CupcakeRepository** class, Add **using** statements to the model for the following namespaces:
+12. In the **CupcakeRepository** class, add **using** statements for the following namespaces:
 
       - **System.IO**
       - **Cupcakes.Data**  
@@ -475,7 +522,7 @@ The main tasks for this exercise are as follows:
 
 20. In the **CupcakeRepository** class, implement the **SaveChanges** method from the **ICupcakeRepository** interface.
 
-21. In the **Startup** class, Add **using** statements to the model for the following namespaces:
+21. In the **Startup** class, add **using** statements for the following namespaces:
 
        - **Cupcakes.Repositories**
 
@@ -483,7 +530,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Update a controller to use a repository.
 
-1. In the **CupcakeController** class, Add **using** statements to the model for the following namespaces:
+1. In the **CupcakeController** class, add **using** statements for the following namespaces:
 
    - **Microsoft.AspNetCore.Hosting**
    - **Cupcakes.Models**
