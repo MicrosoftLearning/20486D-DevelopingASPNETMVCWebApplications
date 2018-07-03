@@ -19,6 +19,5 @@ namespace ViewComponentsExample.Services
             Address = address;
             PhoneNumber = phoneNumber;
         }
-
     }
 }
