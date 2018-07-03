@@ -11,7 +11,7 @@ namespace BindViewsExample.Controllers
     {
         public IActionResult Index()
         {
-            Restaurant restaurant = new Restaurant() {Id = 1, Name = "My Kitchen 1", Address = "New Brunswick, 2657 Webster Street", Speciality = "Hamburgers", Open = true, Review = 4 }; 
+            Restaurant restaurant = new Restaurant() { Id = 1, Name = "My Kitchen 1", Address = "New Brunswick, 2657 Webster Street", Speciality = "Hamburgers", Open = true, Review = 4 };
             return View(restaurant);
         }
 

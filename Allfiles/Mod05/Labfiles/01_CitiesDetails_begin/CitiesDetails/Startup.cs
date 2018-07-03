@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CitiesDetails.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using CitiesDetails.Services;
 
 namespace CitiesDetails
 {
@@ -16,8 +16,9 @@ namespace CitiesDetails
         {
             services.AddMvc();
             services.AddSingleton<ICityProvider, CityProvider>();
+            services.AddSingleton<ICityFormatter, CityFormatter>();
         }
-        
+
         public void Configure(IApplicationBuilder app)
         {
             app.UseStaticFiles();

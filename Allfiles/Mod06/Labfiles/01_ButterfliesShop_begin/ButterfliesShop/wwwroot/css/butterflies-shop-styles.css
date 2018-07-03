@@ -71,7 +71,7 @@ a:hover {
 
 .display-label {
     display: inline-block;
-    width: 150px;
+    width: 180px;
     margin: 25px 1px 5px 1px;
     font-weight: bold;
     font-size: large;
@@ -128,7 +128,7 @@ a:hover {
 .img-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .photo-display-img {
@@ -138,8 +138,8 @@ a:hover {
 }
 
 input, select, textarea {
-    margin-left: auto;
-    margin-right: auto;
+    /*margin-left: auto;
+    margin-right: auto;*/
     font-size: 24px;
     width: 250px;
     text-align: left;
@@ -187,19 +187,26 @@ form {
 }
 
 .form-field {
-    max-width: 605px;
+    max-width: 250px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.form-field .validation-error,
-.form-field .field-validation-error {
+    .form-field .validation-error,
+    .form-field .field-validation-error {
         display: block;
-        text-align: right;
-}
+        text-align: left;
+        width: 350px;
+    }
 
 .container {
     max-width: 1240px;
     margin: 0 auto;
     background-color: white;
     box-shadow: 0 0 20px #1e004f;
+}
+
+.display-info {
+    max-height: 105px;
 }

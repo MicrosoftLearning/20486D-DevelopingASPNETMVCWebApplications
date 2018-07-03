@@ -9,7 +9,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link href="~/CSS/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
 </head>
 <body>
     <h1>Contoso</h1>
@@ -18,16 +18,14 @@
             Photos
         </span>
         <span>
-            <a asp-controller="Person" asp-action="Index">Employees</a>
+            <a asp-controller="Employee" asp-action="Index">Employees</a>
         </span>
         <span>
             Contact Us
         </span>
     </nav>
-    <br />
-    <br />
-    <p>
-        Welcome to the contoso main page. Visit the employees page to see out employees.
-    </p>
+    <footer>
+        Welcome to the contoso main page. Visit the employees page to see our employees.
+    </footer>
 </body>
 </html>

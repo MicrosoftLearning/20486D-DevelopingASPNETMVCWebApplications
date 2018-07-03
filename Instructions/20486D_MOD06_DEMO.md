@@ -416,17 +416,17 @@
 
 21. On the **Submit Personal Information** page, in the **Age** text box, type 5.
 
-22. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;More than ten characters&gt;_, and then click **Submit**.
+22. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;A description of your choice with more than ten characters&gt;_, and then click **Submit**.
 
       >**Note:** The browser window displays the **Index.cshtml** view with validation messages.
 
-23. On the **Submit Personal Information** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+23. On the **Submit Personal Information** page, in the **First Name** text box, type _&lt;A first name of your choice with at least one character&gt;._
 
-24. On the **Submit Personal Information** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+24. On the **Submit Personal Information** page, in the **Last Name** text box, type _&lt;A last name of your choice at least one character&gt;._
 
 25. On the **Submit Personal Information** page, in the **Age** text box, type 20.
 
-26. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;Less than ten characters&gt;_, and then click **Submit**.
+26. On the **Submit Personal Information** page, in the **Description** text box, type _&lt;A description of your choice with less than ten characters&gt;_, and then click **Submit**.
 
       >**Note:** The browser window displays the **Details.cshtml** view with the newly submitted personal information.
 
@@ -475,14 +475,14 @@
       : ValidationAttribute
 ```
 
-9. In the **InUniversityValidationAttribute.cs** code block, press Enter, and type the following code:
+9. In the **InUniversityValidationAttribute.cs** code block, press Enter, and then type the following code:
   ```cs
       protected override ValidationResult IsValid(object value, ValidationContext validationContext)
       {
       }
 ```
 
-10. In the **IsValid** method code block, press Enter, and type the following code:
+10. In the **IsValid** method code block, press Enter, and then type the following code:
   ```cs
       Student student = (Student)validationContext.ObjectInstance;
       if (!student.UniversityStudent)
@@ -514,15 +514,15 @@
 
 16. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-17. On the **Submit Student Information** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+17. On the **Submit Student Information** page, in the **First Name** text box, type _&lt;A first name of your choice with at least one character&gt;._
 
-18. On the **Submit Student Information** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+18. On the **Submit Student Information** page, in the **Last Name** text box, type _&lt;A last name of your choice with at least one character&gt;._
 
 19. On the **Submit Student Information** page, in the **Birthdate** text box, choose _&lt;A birthdate of your choice&gt;._
 
 20. On the **Submit Student Information** page, ensure that **Are you a university student?** checkbox is not selected, and then click **Submit**.
 
-      >**Note:** The browser window displays the **Index.cshtml** view with custom validation message beside the **Are you a university student?** checkbox.
+      >**Note:** The browser window displays the **Index.cshtml** view with custom validation message below the **Are you a university student?** checkbox.
 
 21. On the **Submit Student Information**, ensure that **Are you a university student?** checkbox is selected, and then click **Submit**. 
 

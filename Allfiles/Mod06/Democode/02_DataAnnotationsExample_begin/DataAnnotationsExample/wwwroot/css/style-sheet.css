@@ -1,13 +1,14 @@
 ﻿body {
     text-align: center;
+    background-color: #feffd9;
 }
 
 input {
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
-    width:250px;
-    text-align:left;
+    width: 250px;
+    text-align: left;
 }
 
 label {
@@ -16,18 +17,18 @@ label {
     margin: 25px 1px 5px 1px;
     font-weight: bold;
     font-size: 24px;
-    text-align:left;
+    text-align: left;
 }
 
 h1 {
     margin-bottom: 15px;
     font-size: 33px;
     color: darkgreen;
-    text-align:center;
+    text-align: center;
 }
 
-div{
-    text-align:center;
+div {
+    text-align: center;
 }
 
 input[type=submit] {
@@ -38,8 +39,8 @@ input[type=submit] {
     text-align: center;
 }
 
-form{
-    text-align:center;
+form {
+    text-align: center;
 }
 
 .display-prop-name {
@@ -57,9 +58,10 @@ form{
 }
 
 .container {
-    max-width: 940px;
+    max-width: 760px;
     max-height: 780px;
-    margin: 0 auto;
+    padding: 20px;
+    margin: 50px auto;
     background-color: white;
     box-shadow: 0 0 20px #1e004f;
 }
