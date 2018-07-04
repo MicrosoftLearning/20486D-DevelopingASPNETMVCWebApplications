@@ -369,6 +369,131 @@
 
 42. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
+
+# Lesson 3: Responsive Design
+
+### Demonstration: How to Use the Bootstrap Grid System
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+**(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
+
+#### Demonstration Steps
+
+1. Navigate to **Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
+
+2. In the **GridExample - Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Controllers**, and then click **ChessController.cs**.
+
+3. In the **ChessController.cs** code window, right-click the following code, and then click **Add View**.
+  ```cs
+       public IActionResult Index()
+```
+
+4. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.
+
+5. In the **Template** selector, ensure that the template in the **Template** text box is **Empty(without model)**.
+
+6. In the **Add MVC View** dialog box, ensure that the **Reference script libraries** check box is not selected.
+
+      >**Note:** In the **Add MVC View** dialog box, the **Reference script libraries** checkbox can be edited by setting the **Template** to **Edit**.
+
+7. In the **Add MVC View** dialog box, ensure that the **Use a layout page** check box is not selected, and then click **Add**.
+
+8. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
+  ```cs
+       @model IEnumerable<GridExample.Models.Game>
+```
+
+9. In the **Index.cshtml** code window, locate the following code:
+  ```cs
+       <title>Index</title>
+```
+
+10. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
+  ```cs
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+       <link href="~/css/style.css" rel="stylesheet" />
+```
+
+11. In the **BODY** element of the **Index.cshtml** code window, type the following code:
+  ```cs
+       <div class="title">
+           <h1>Chess League</h1>
+           <p>hey, these are the results</p>
+       </div>    
+```
+
+12. Place the cursor immediately after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter twice, and then type the following code:
+  ```cs
+       <div class="container">
+           <div class="row grid-header align-items-center">
+                <div class="col-2">
+                </div>
+                <div class="col-4">
+                    Competitors
+                </div>
+                <div class="col-3">
+                    Quantity
+                </div>
+                <div class="col-3">
+                    Results
+                </div>
+           </div>
+           <div class="row align-items-center">
+                @foreach (var item in Model)
+                {
+                }
+           </div>
+       </div>    
+```
+
+13. Place the cursor in the **FOREACH** code block, press Enter, and then type the following code:
+  ```cs
+       <div class="col-2">
+           <div class="row justify-content-center">
+                <img src="~/images/@item.FirstCompetitorPhotoFileName" />
+           </div>
+           <div class="row justify-content-center">
+                <img src="~/images/@item.SecondCompetitorPhotoFileName" />
+           </div>
+       </div>
+       <div class="col-4">
+           <div class="row">
+                @Html.DisplayFor(model => item.FirstCompetitorName)
+           </div>
+           <div class="row">
+                @Html.DisplayFor(model => item.SecondCompetitorName)
+           </div>
+       </div>
+       <div class="col-3">
+                @Html.DisplayFor(model => item.GamesQuantity)
+           </div>
+           <div class="col-3">
+                @Html.DisplayFor(model => item.FinalScore)
+           </div>  
+```
+
+14. Place the cursor before the **<** (less then) sign of the **&lt;/body&gt;** tag, press Enter twice, press the Up Arrow key, and then type the following code:
+  ```cs
+       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+       <script src="~/js/alert-function.js"></script>
+```
+
+15. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+
+16. In the **GridExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+
+      >**Note:** The browser displays the **Index.cshtml** view with **Bootstrap grid system**.
+
+17. In **Microsoft Edge**, click **Close**.
+
+18. In the **GridExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+
+19. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+
 ©2018 Microsoft Corporation. All rights reserved. 
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
