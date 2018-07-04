@@ -449,10 +449,9 @@ The main tasks for this exercise are as follows:
 
 2. Create a new interface with the following information:
 
-   - Folder: **Repositories**
-   - Name:  **ICupcakeRepository**
-   - Scope: **public**
-
+     - Folder: **Repositories**
+     - Name:  **ICupcakeRepository**
+     - Scope: **public**
 
 3. In the **ICupcakeRepository** interface, add a **using** statement for the following namespaces:
 
