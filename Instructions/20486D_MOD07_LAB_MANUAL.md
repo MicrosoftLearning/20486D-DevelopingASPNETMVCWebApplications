@@ -546,11 +546,11 @@ The main tasks for this exercise are as follows:
 
 21. Initialize the **memoryStream** varaible using the **MemoryStream** constructor.
 
-22. In the **USING** statement block, call the **CopyTo** method, of the **cupcake.PhotoAvatar** property, and pass **memoryStream** as a parameter.
+22. In the **USING** statement block, call the **CopyTo** method, of the **cupcake.PhotoAvatar** property. Pass **memoryStream** as a parameter to the the **CopyTo** method.
 
 23. Assign the **PhotoFile** property of the **cupcake** parameter, the value of **memoryStream.ToArray()**.
 
-24. Call the **Add** method of the **_context** field, and pass **cupcake** as a parameter to the **Add** method.
+24. After the **IF** statement, call the **Add** method of the **_context** field. Pass **cupcake** as a parameter to the **Add** method.
 
 25. Call the **SaveChanges** method of the **_context** field.
 
@@ -565,7 +565,7 @@ The main tasks for this exercise are as follows:
 
 27. In the **DeleteCupcake** method, create a **cupcake** varible of type **var** and assign it the value of  **_context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id)** .
 
-28. Call the **Remove** method of the **_context.Cupcakes** field, and pass **cupcake** as a parameter to the **Remove** method.
+28. Call the **Remove** method of the **_context.Cupcakes** property. Pass **cupcake** as a parameter to the **Remove** method.
 
 29. Call the **SaveChanges** method of the **_context** field.
 
@@ -594,7 +594,7 @@ The main tasks for this exercise are as follows:
     - Return Type: **IQueryable&lt;Bakery&gt;**
     - Name: **PopulateBakeriesDropDownList**
 
-35. In the **PopulateBakeriesDropDownList** method, create a variable named **BakeriesQuery** of type **var** and assign it the value of the following LINQ query:
+35. In the **PopulateBakeriesDropDownList** method, create a variable named **BakeriesQuery** of type **var** and assign it the value of the following **LINQ**query:
 
     - From: **b in _context.Bakeries**
     - Orderby: **BakeryName**
@@ -630,140 +630,198 @@ The main tasks for this exercise are as follows:
         **Microsoft.AspNetCore.Mvc.Rendering**
         **Microsoft.EntityFrameworkCore**
 
-2. In the **CupcakeController** class, create a new object using the following information:
+2. In the **CupcakeController** class, create a new field with the following information:
 
    - Scope: **private**
-   - Class: **ICupcakeRepository**
+   - Type: **ICupcakeRepository**
    - Name: **_repository**
 
-    Initialize the new object in the **CupcakeController** constructor with the value **ICupcakeRepository repository**.
-
-3. In the **CupcakeController** class, create a new object using the following information:
+3. Create a new field with the following information:
 
    - Scope: **private**
-   - Class: **IHostingEnvironment**
+   - Type: **IHostingEnvironment**
    - Name: **_environment**
 
-    Initialize the new object in the **CupcakeController** constructor with the value **IHostingEnvironment environment**.
+4. Add a constructor with the following parameters:
+
+   - Parameter:
+        - Type: **ICupcakeRepository**
+        - Name: **repository**
+   - Parameter:
+        - Type: **IHostingEnvironment**
+        - Name: **environment**
+
+5. In the **CupcakeController** constructor, initialize the **_repository** field with the value of the **repository** parameter.
+
+6. Initialize the **_environment** field with the value of the **environment** parameter.
+
 
 #### Task 3: Use Entity Framework to retrieve data.
 
-1. In the **CupcakeController** class, edit the code in the **Index** action by using the following information:
+1. Edit the code in the **Index** action to return the **ViewResult** result using the **View** method. Pass **_repository.GetCupcakes()** as a parameter to the **View** method.
 
-   - Return class: **View**
-   - View name: **Index**
-   - Model: **_repository.GetCupcakes()**
-
-2. Add a method for the **Details** action by using the following information:
+2. Add a method for the **Details** action with the following information:
 
    - Scope: **public**
-   - Return Type: **IActionResult**
+   - Return type: **IActionResult**
    - Name: **Details**
-   - Parameters: One integer called **id**
+   - Parameter:
+        - Type: **int**
+        - Name: **id**
 
-3. Within the **Details** action code block, add code to find a single **Cupcake** object from the accepted **id**.
+3. In the **Details** action, add a varible named **cupcake** of type **var**, with the value of **_repository.GetCupcakeById(id)**.
 
-4. If no **Cupcake** with the right Id is found, return the **NotFound** value.
+4. Create an **IF** statement that checks that the value of the **cupcake** varible is **NULL**.
 
-5. If a **Cupcake** with the right Id is found, pass it to a view called **Details**.
+5. Inside the **IF** statement code block, return the **NotFoundResult** result using the **NotFound** method.
 
-6. Add a method for the **PopulateBakeriesDropDownList** method by using the following information:
+6. After the **IF** statement, return the **ViewResult** result using the **View** method. Pass the **cupcake** varible as a parameter to the **View** method.
 
-   - Scope: **public**
-   - Return Type: **void**
-   - Name: **PopulateBakeriesDropDownList**
-   - Parameter: **int? selectedBakery = null**
+7. Add a method with the following information:
 
-7. Within the **PopulateBakeriesDropDownList** method code block, add code to get **IQueryable&lt;Bakery&gt;** using the the following method from the repository **PopulateBakeriesDropDownList**, and store the result in a **ViewBag**.
+    - Scope: **private**
+    - Return type: **void**
+    - Name: **PopulateBakeriesDropDownList**
+    - Parameter:
+        - Type: **int?**
+        - Name: **selectedBakery**
+        - Defualt Value: **null**
+
+8. In the **PopulateBakeriesDropDownList** method, add a varible named **bakeries** of type **var**, with the value of **_repository.PopulateBakeriesDropDownList()**.
+
+9. Save the following key and value in the **ViewBag** property:
+
+    - Key: **BakeryID**
+    - Value: **new SelectList(bakeries.AsNoTracking(), "BakeryId", "BakeryName", selectedbakery)**
 
 #### Task 4: Manipulating data using Entity Framework. 
 
-1. In the **CupcakeController** class, Add a method for the **Create** action by using the following information:
+1. In the **CupcakeController** class, add a method for the **Create** action with the following information:
 
    - HTTP verb: **HTTP Get**
    - Scope: **public**
    - Return type: **IActionResult**
    - Name: **Create**
 
-2. Within the **Create** method, call the **PopulateBakeriesDropDownList** method to send the **ViewBag** object with parameters to the view.
+2. In the **Create** action, call the **PopulateBakeriesDropDownList** method.
 
-3. In the **CupcakeController** class, Add another method for the **Create** action by using the following information:
+3. Return the **ViewResult** result using the **View** method.
 
-      - HTTP verb: **HTTP Post**
-      - Scope: **public**
-      - Return type: **IActionResult**
-      - Name: **Create**
-      - Parameters: a **Cupcake** object called **cupcake**.
+4. Add a method for the **Create** action with the following information:
 
-4.  Within the **Create** method, if the **ModelState.IsValid** is valid, call the **CreateCupcake** from the repository, and redirect to action **Index**.
+    - HTTP verb: **HTTP Post**
+    - Action Name: **"Create"**
+    - Scope: **public**
+    - Return type: **IActionResult**
+    - Name: **CreatePost**
+    - Parameter:
+        - Type: **Cupcake**
+        - Name: **cupcake**
 
-5. If **ModelState.IsValid** is not valid, pass the **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and the **Cupcake** object to a view called **Create**.
+5. In the **Create** action with **HTTP POST** verb, create an **IF** statement that checks that the value of the **ModelState.IsValid**  is **true**.
 
-5. In the **CupcakeController** class, Add a method for the **Edit** action by using the following information:
+6. Inside the **IF** statement code block, call the **CreateCupcake** method of the **_repository** field. Pass **cupcake** as a parameter to the **CreateCupcake** method.
 
-   - HTTP verb: **HTTP Get**
-   - Scope: **public**
-   - Return type: **IActionResult**
-   - Name: **Edit**
-   - Parameter: One integer called **id**
+7. Return the **RedirectToActionResult** result using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
 
-6. Within the **Edit** method, call the **GetCupcakeById** from the repository, with the accepted **id**.
+8. After the **IF** statement, call the **PopulateBakeriesDropDownList** method. Pass **cupcake.BakeryId** as a parameter to the **PopulateBakeriesDropDownList** method.
 
-7. If no **Cupcake** with the right Id is found, return the **NotFound** value.
+9.  Return the **ViewResult** result using the **View** method.  Pass **cupcake** as a parameter to the **View** method.
 
-8. Otherwise, pass the **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and **Cupcake** object to a view called **Edit**.
+10. Add a method for the **Edit** action with the following information:
 
-9. In the **CupcakeController** class, Add another method for the **Edit** action by using the following information:
+    - HTTP verb: **HTTP Get**
+    - Scope: **public**
+    - Return type: **IActionResult**
+    - Name: **Edit**
+    - Parameter:
+        - Type: **int**
+        - Name: **id**
 
-     - HTTP verb: **HTTP Post**
-     - Scope: **public**
-     - Return type: **IActionResult**
-     - Name: **EditPost**
-     - Parameter: One integer called **Id**
+11. In the **Edit** action, add a varible named **cupcake** of type **Cupcake**, with the value of **_repository.GetCupcakeById(id)**.
 
-10. Within the **Edit** method, call the **GetCupcakeById** from the repository, with the accepted **id**, and call the **Async** method **TryUpdateModelAsync** with the following information: 
+12. Create an **IF** statement that checks that the value of the **cupcake**  is **NULL**.
 
-       - First parameter: a **Cupcake** with the accepted **id**
-       - Second parameter: **empty string**
-       - Lambda  expression: **c =&gt; c.BakeryId** , **c =&gt; c.CupcakeType**, **c =&gt; c.Description**, **c =&gt; c.GlutenFree**,**c =&gt; c.Price** 
+13. Inside the **IF** statement code block, return the **NotFoundResult** result using the **NotFound** method.
 
-11. If the **TryUpdateModelAsync** method returns true, call the **SaveChanges** from the repository, and redirect to action **Index**.
+14. After the **IF** statement, call the **PopulateBakeriesDropDownList** method. Pass **cupcake.BakeryId** as a parameter to the **PopulateBakeriesDropDownList** method.
 
-12. Otherwise, pass the **Cupcake** with the accepted **id** with the following parameter **cupcake.BakeryId** to the **PopulateBakeriesDropDownList** method, and **Cupcake** object to a view called **Edit**.
+15.  Return the **ViewResult** result using the **View** method.  Pass **cupcake** as a parameter to the **View** method.
 
-13. In the **CupcakeController** class, Add a method for the **Delete** action by using the following information:
+16. Add a method for the **Edit** action with the following information:
 
-       - HTTP verb: **HTTP Get**
-       - Scope: **public**
-       - Return type: **IActionResult**
-       - Name: **Delete**
-       - Parameter: One integer called **id**
+    - HTTP verb: **HTTP Post**
+    - Action Name: **"Edit"**
+    - Scope: **public**
+    - Return type: **IActionResult**
+    - Name: **EditPost**
+    - Parameter:
+        - Type: **int**
+        - Name: **id**
 
-14. Within the **Delete** method, call the **GetCupcakeById** from the repository, with the accepted **id**.
+17. In the **Edit** action with **HTTP POST** verb, add a varible named **cupcakeToUpdate** of type **var**, with the value of **_repository.GetCupcakeById(id)**.
 
-15. If no **Cupcake** with the right Id is found, return the **NotFound** value.
+18. Add a varible named **isUpdated** of type **bool**, with the value of                                   **await TryUpdateModelAsync<Cupcake>(
+                                cupcakeToUpdate,
+                                "",
+                                c => c.BakeryId, 
+                                c => c.CupcakeType, 
+                                c => c.Description, 
+                                c => c.GlutenFree,
+                                c => c.Price)**.
 
-16. Otherwise, pass the **cupcake.BakeryId** to the view called **Delete**.
+19. Create an **IF** statement that checks that the value of the **isUpdated**  is **TRUE**.
 
-17. In the **CupcakeController** class, Add another method for the **Delete** action by using the following information:
+20. Inside the **IF** statement code block, call the **SaveChanges** method of the **_repository** field.
 
-       - HTTP verb: **HTTP Post**
-       - Scope: **public**
-       - Return type: **IActionResult**
-       - Name: **DeleteConfirmed**
-       - Parameter: One integer called **Id**
+21. Return the **RedirectToActionResult** result using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
 
-18. Within the **Delete** method, call the **DeleteCupcake** from the repository, with the accepted **id**, and redirect to action **Index**.
+22. After the **IF** statement, call the **PopulateBakeriesDropDownList** method. Pass **cupcakeToUpdate.BakeryId** as a parameter to the **PopulateBakeriesDropDownList** method.
+
+23.  Return the **ViewResult** result using the **View** method.  Pass **cupcakeToUpdate** as a parameter to the **View** method.
+
+24. Add a method for the **Delete** action with the following information:
+
+    - HTTP verb: **HTTP Get**
+    - Scope: **public**
+    - Return type: **IActionResult**
+    - Name: **Delete**
+    - Parameter:
+        - Type: **int**
+        - Name: **id**
+
+25. In the **Delete** action, add a varible named **cupcake** of type **Cupcake**, with the value of **_repository.GetCupcakeById(id)**.
+
+26. Create an **IF** statement that checks that the value of the **cupcake**  is **NULL**.
+
+27. Inside the **IF** statement code block, return the **NotFoundResult** result using the **NotFound** method.
+
+28. After the **IF** statement, return the **ViewResult** result using the **View** method.  Pass **cupcake** as a parameter to the **View** method.
+
+29. Add a method for the **Delete** action with the following information:
+
+    - HTTP verb: **HTTP Post**
+    - Action Name: **"Delete"**
+    - Scope: **public**
+    - Return type: **IActionResult**
+    - Name: **DeleteConfirmed**
+    - Parameter:
+        - Type: **int**
+        - Name: **id**
+
+30. In the **Delete** action with **HTTP POST** verb, call the **DeleteCupcake** method of the **_repository** field. Pass **id** as a parameter to the  **DeleteCupcake** method.
+
+31. Return the **RedirectToActionResult** result using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
 
 #### Task 5: Run the application.
 
 1. Save all the changes.
 
-2. Run the web application in non-debugging mode.
+2. Start debugging the application..
 
-3. Click the **Add Cupcakes** button.
+3. In the **Microsoft Edge** window, click the **Add Cupcakes** button.
 
-4. On the **Add Cupcake to The Shop** page, Create a new cupcake with the following credentials:
+4. On the **Add Cupcake to The Shop** page, create a new cupcake with the following credentials:
 
     - Bakery: **_&lt;A bakery of your choice&gt;_**
     - Cupcake Type: **_&lt;A cupcake type of your choice&gt;_**
@@ -772,21 +830,33 @@ The main tasks for this exercise are as follows:
     - Price: **_&lt;A cupcake price of your choice&gt;_**
     - Cupcake Picture: **_&lt;A cupcake picture of your choice&gt;_**
 
-5. Verify the details of the newly added cupcake.
+5. Click on the **Submit** button.
 
-6. Select a cupcake of your choice, click **Details**, verify the cupcake details, and then click **Back to List**.
+6. On the **Cupcakes Shop** page, verify the newly submitted cupcake details.
 
-7. Select a cupcake of your choice, and then click **Edit**.
+7. Select a cupcake of your choice and click on **Details**.
 
-8. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
+8. Verify the cupcake details and then click **Back to List**.
+
+9. Select a cupcake of your choice, and then click on **Edit**.
+
+10. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
 
     - Price: **_&lt;A cupcake price of your choice&gt;_**
 
-9. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake details, and then click **Back to List**.
+11. On the **Cupcakes Shop** page, select the cupcake you edited, and click on **Details**.
 
-10. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake deleted.
+12. Verify the newly edited cupcake details and then click **Back to List**.
 
-11. **Stop debugging**.
+13. On the **Cupcakes Shop** page, select a cupcake of your choice, and click **Delete**.
+
+14. On the **Cupcakes Delete** page, click **Delete**.
+
+15. On the **Cupcakes Shop** page, verify the cupcake was deleted.
+
+16. Close **Microsoft Edge.**
+
+17. **Stop debugging**.
 
 >**Results** : After completing this exercise, you will be able to use Entity Framework Core to retrieve and store data through a Repository in the **CupcakeController**. 
 
@@ -811,48 +881,55 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Connecting to a Microsoft SQL Server.
 
-1. In the **Startup** class, in the **ConfigureServices** method, initialize the **CupcakeContext** to use **Microsoft SQL Server** instead of **In Memory database**.
+1. In the **Startup** class, in the **ConfigureServices** method, replace the lamda expression parameter in the **AddDbContext** method call with: **options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**
 
 #### Task 2: Specifying a connection string in a configuration file. 
 
-1. Add a new top-level **App Settings File** to the **Cupcakes** project.
+1. Create a new top-level **App Setting** file with the following information:
+     - File Name: **appsettings.json**
+     - Folder: **/**
 
-2. In the **App Settings File** json file, edit the **DefaultConnection** to the **Database** name of your choice.
+2. In the **App Settings** File, change the **Database** property value to **BakeriesDb**
 
 #### Task 3: Use Migrations.
 
-1. In the **Cupcakes.csproj** file, add the **Microsoft.EntityFrameworkCore.Tools.DotNet** package to the DotNetCliToolReference collection using the following information:
+1. In the **Cupcakes.csproj** file, at the end of the **Project** element, add a **ItemGroup** element. 
 
-      - Include: **Microsoft.EntityFrameworkCore.Tools.DotNet**
-      - Version: **2.0.0**
+2. In the **ItemGroup** element, add a **DotNetCliToolReference** element with the following information:
+    - Include: **Microsoft.EntityFrameworkCore.Tools.DotNet**
+    - Version: **2.0.0**
 
 2. Save all the changes.
 
-3. In the Solution Explorer, Open Folder in File Explorer.
+3. In the Solution Explorer, click on **Open Folder in File Explorer**.
 
 4. In the address bar type **cmd**, and press Enter.
 
-5. In the command Line window, verify that the **Entity Framework tools** for the command-line interface provided correctly in Microsoft.EntityFrameworkCore.Tools.DotNet.
+5. In the **Command Line** window, type the following command: **dotnet ef**.
 
-6. In the command Line window, verify that the Database name is identical to the name in the **appsettings.json** file.
+    >**Note:** Verify that the Entity Framework tools for the command-line interface provided correctly in Microsoft.EntityFrameworkCore.Tools.DotNet.
 
-7. In the command Line window, Enter the command that will create the database from scratch.
+6. In the **Command Line** window, type the following command: **dotnet ef dbcontext info**.
 
->**Note:** Verify the newly added folder **Migrations**.
+    >**Note:** Verify that the **Database name** is identical to the name in the appsettings.json file.
 
-8. In the command Line window, Enter the command that will apply the migration to the database.
+7. In the **Command Line** window, type the following command: **dotnet ef migrations add InitialCreate**.
 
-9. In the **SQL Server Object Explorer**, verify the **BakeriesDb** tables.
+    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, the newly added folder **Migrations** contains two cs files.
+
+8. In the **Command Line** window, type the following command: ** dotnet ef database update**.
+
+    >**Note:** In the **SQL Server Object Explorer** pane of the **Cupcakes - Microsoft Visual Studio** window, verify the **BakeriesDb **tables..
 
 #### Task 4: Run the application.
 
 1. Save all the changes.
 
-2. Run the web application in non-debugging mode.
+2. Start debugging the application..
 
-3. Click the **Add Cupcakes** button.
+3. In the **Microsoft Edge** window, click the **Add Cupcakes** button.
 
-4. On the **Add Cupcake to The Shop** page, Create a new cupcake with the following credentials:
+4. On the **Add Cupcake to The Shop** page, create a new cupcake with the following credentials:
 
     - Bakery: **_&lt;A bakery of your choice&gt;_**
     - Cupcake Type: **_&lt;A cupcake type of your choice&gt;_**
@@ -861,21 +938,33 @@ The main tasks for this exercise are as follows:
     - Price: **_&lt;A cupcake price of your choice&gt;_**
     - Cupcake Picture: **_&lt;A cupcake picture of your choice&gt;_**
 
-5. Verify the details of the newly added cupcake.
+5. Click on the **Submit** button.
 
-6. Select a cupcake of your choice, click **Details**, verify the cupcake details, and then click **Back to List**.
+6. On the **Cupcakes Shop** page, verify the newly submitted cupcake details.
 
-7. Select a cupcake of your choice, and then click **Edit**.
+7. Select a cupcake of your choice and click on **Details**.
 
-8. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
+8. Verify the cupcake details and then click **Back to List**.
+
+9. Select a cupcake of your choice, and then click on **Edit**.
+
+10. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
 
     - Price: **_&lt;A cupcake price of your choice&gt;_**
 
-9. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake details, and then click **Back to List**.
+11. On the **Cupcakes Shop** page, select the cupcake you edited, and click on **Details**.
 
-10. On the **Cupcakes Shop** page, select the cupcake you edit, and click **Details**, verify the cupcake deleted.
+12. Verify the newly edited cupcake details and then click **Back to List**.
 
-11. **Stop debugging**, and **close** Microsoft Visual Studio.
+13. On the **Cupcakes Shop** page, select a cupcake of your choice, and click **Delete**.
+
+14. On the **Cupcakes Delete** page, click **Delete**.
+
+15. On the **Cupcakes Shop** page, verify the cupcake was deleted.
+
+16. Close **Microsoft Edge.**
+
+17. **Stop debugging**, and **close** Microsoft Visual Studio.
 
 >**Results**: After completing this exercise, you should have created a Cupcakes shop application in which users can submit, edit, delete and View cupcales details.
 
