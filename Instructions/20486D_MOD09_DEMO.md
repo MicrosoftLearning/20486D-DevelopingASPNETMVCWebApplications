@@ -292,7 +292,7 @@
             font-size: 40px;
             text-shadow: 0px 2px 5px #aba8a8;
             font-weight: bolder;
-            margin-left: 90px;
+            text-align:center;
        }
 ```
 27. Place the cursor immediately after the last typed **}** (closing bracket) sign, press Enter, and then type the following code:
@@ -305,6 +305,7 @@
             border: 5px solid #d6d4d4;
             border-radius: 10px;
             height: 210px;
+            float:left;
 
             img {
                 width: 100%;
