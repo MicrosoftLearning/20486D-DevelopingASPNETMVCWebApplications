@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using EntityFrameworkExample.Data;
-using Microsoft.AspNetCore.Builder;
 
 namespace EntityFrameworkExample
 {
@@ -27,7 +27,6 @@ namespace EntityFrameworkExample
             personContext.Database.EnsureCreated();
 
             app.UseStaticFiles();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
