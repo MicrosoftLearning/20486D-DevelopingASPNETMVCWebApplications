@@ -82,7 +82,7 @@
       using EntityFrameworkExample.Data;
 ```
 
-12. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter again.
+12. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
   ```cs
       services.AddDbContext<PersonContext>(options =>
              options.UseInMemoryDatabase("PersonDB"));
@@ -92,12 +92,12 @@
   ```cs
        public void Configure(IApplicationBuilder app)
 ```
-14. Replace the selected code with the following code.
+14. Replace the selected code with the following code:
   ```cs
        public void Configure(IApplicationBuilder app, PersonContext personContext)
 ```
 
-15. In the **Startup.cs** code window, in the **Configure** method, place the cursor after the **{** (opening braces) sign, type the following code, and then press Enter.
+15. In the **Startup.cs** code window, in the **Configure** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
   ```cs
       personContext.Database.EnsureDeleted();
       personContext.Database.EnsureCreated();
@@ -322,7 +322,9 @@
       using EntityFrameworkExample.Repositories;
 ```
 
-21. In the **Startup.cs** code window, place the cursor after the **{** (opening braces) sign of the **ConfigureServices** method,  press Enter, type the following code, and then press Enter again.
+21. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
+
+in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, type the following code, and then press Enter.
   ```cs
       services.AddDbContext<PersonContext>(options =>
                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
@@ -336,12 +338,12 @@
   ```cs
        public void Configure(IApplicationBuilder app)
 ```
-23. Replace the selected code with the following code.
+23. Replace the selected code with the following code:
   ```cs
        public void Configure(IApplicationBuilder app, PersonContext personContext)
 ```
 
-24. In the **Startup.cs** code window, in the **Configure** method, place the cursor after the **{** (opening braces) sign, type the following code, and then press Enter.
+24. In the **Startup.cs** code window, in the **Configure** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
   ```cs
       personContext.Database.EnsureDeleted();
       personContext.Database.EnsureCreated();
