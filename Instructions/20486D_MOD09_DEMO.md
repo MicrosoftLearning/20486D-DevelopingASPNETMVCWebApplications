@@ -383,7 +383,7 @@
 
 1. Navigate to **Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
 
-2. In the **GridExample - Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Controllers**, and then click **ChessController.cs**.
+2. In the **GridExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **ChessController.cs**.
 
 3. In the **ChessController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
@@ -392,7 +392,7 @@
 
 4. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.
 
-5. In the **Template** selector, ensure that the template in the **Template** text box is **Empty(without model)**.
+5. In the **Template** selector, ensure that the **Template** text box is **Empty(without model)**.
 
 6. In the **Add MVC View** dialog box, ensure that the **Reference script libraries** check box is not selected.
 
@@ -416,7 +416,7 @@
        <link href="~/css/style.css" rel="stylesheet" />
 ```
 
-11. In the **BODY** element of the **Index.cshtml** code window, type the following code:
+11. In the **Index.cshtml** code window,  in the **BODY** element, type the following code:
   ```cs
        <div class="title">
            <h1>Chess League</h1>
