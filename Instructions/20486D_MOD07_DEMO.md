@@ -97,7 +97,7 @@
        public void Configure(IApplicationBuilder app, PersonContext personContext)
 ```
 
-15. In the **Startup.cs** code window, in the **Configure** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
+15. In the **Startup.cs** code window, in the **Configure** method, place the cursor after the first **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
   ```cs
       personContext.Database.EnsureDeleted();
       personContext.Database.EnsureCreated();
@@ -115,7 +115,7 @@
       using EntityFrameworkExample.Models;
 ```
 
-19. In the **PersonController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+19. In the **PersonController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
   ```cs
       private readonly PersonContext _context;
 
@@ -161,8 +161,14 @@
 25. In the **Create** action code block, type the following code:
   ```cs
        Person person = _context.People.LastOrDefault();
-       int id = person.PersonId + 1;
-       _context.Add(new Person() { PersonId = id ,FirstName = "Robert ", LastName = "Berends", City = "Birmingham", Address = "2632 Petunia Way" });
+       if (person != null)
+       {
+            int id = person.PersonId + 1;
+            _context.Add(new Person() { PersonId = id, FirstName = "Robert ", LastName = "Berends", City = "Birmingham", Address = "2632 Petunia Way" });
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+       }
+       _context.Add(new Person() { PersonId = 1, FirstName = "Robert ", LastName = "Berends", City = "Birmingham", Address = "2632 Petunia Way" });
        _context.SaveChanges();
        return RedirectToAction(nameof(Index));
 ```
@@ -323,8 +329,6 @@
 ```
 
 21. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
-
-in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, type the following code, and then press Enter.
   ```cs
       services.AddDbContext<PersonContext>(options =>
                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
@@ -361,7 +365,7 @@ in the **ConfigureServices** method, place the cursor after the **{** (opening b
       using EntityFrameworkExample.Repositories;
 ```
 
-28. In the **PersonController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+28. In the **PersonController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
   ```cs
       private IRepository _repository;
 
