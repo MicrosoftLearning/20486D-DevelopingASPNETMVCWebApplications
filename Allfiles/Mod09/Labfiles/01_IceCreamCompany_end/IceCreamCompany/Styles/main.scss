@@ -1,0 +1,14 @@
+﻿$highlights: #124eab;
+
+@mixin normalized-text() {
+    font-family: Arial;
+}
+
+h1 {
+    color: $highlights;
+    @include normalized-text();
+    font-size: 40px;
+    text-shadow: 0px 2px 5px #aba8a8;
+    font-weight: bolder;
+    text-align: center;
+}
