@@ -290,7 +290,7 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod10\Democode\02_LoggingExample _begin**, and then double-click **LoggingExample .sln**.
+1. Navigate to **Allfiles\Mod10\Democode\02_LoggingExample_begin**, and then double-click **LoggingExample.sln**.
 
 2. In the **LoggingExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Program.cs**. 
 

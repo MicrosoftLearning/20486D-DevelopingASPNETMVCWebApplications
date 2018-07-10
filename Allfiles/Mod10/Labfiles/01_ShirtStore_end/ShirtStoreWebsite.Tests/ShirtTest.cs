@@ -16,7 +16,7 @@ namespace ShirtStoreWebsite.Tests
 
             string taxedPrice = shirt.GetFormattedTaxedPrice(1.2F);
 
-            Assert.AreEqual(12F, taxedPrice);
+            Assert.AreEqual("$12.00", taxedPrice);
         }
     }
 }

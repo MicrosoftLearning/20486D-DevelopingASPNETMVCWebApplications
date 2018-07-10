@@ -4,23 +4,39 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ShirtStoreWebsite.Models;
+using ShirtStoreWebsite.Services;
+using Microsoft.Extensions.Logging;
 
 namespace ShirtStoreWebsite.Controllers
 {
     public class ShirtController : Controller
     {
+        private IShirtRepository _repository;
+        private ILogger _logger;
+
+        public ShirtController(IShirtRepository repository, ILogger<ShirtController> logger)
+        {
+            _repository = repository;
+            _logger = logger;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Shirt> shirts = _repository.GetShirts();
+            return View(shirts);
         }
 
         public IActionResult AddShirt(Shirt shirt)
         {
+            _repository.AddShirt(shirt);
+            _logger.LogDebug($"A {shirt.Color.ToString()} shirt of size {shirt.Size.ToString()} with a price of {shirt.GetFormattedTaxedPrice(1.2F)} was added successfully.");
             return RedirectToAction("Index");
         }
 
         public IActionResult Delete(int id)
         {
+            _repository.RemoveShirt(id);
+            _logger.LogDebug($"A shirt with id {id} was removed successfully.");
             return RedirectToAction("Index");
         }
     }
