@@ -23,8 +23,6 @@ Estimated Time: **60 minutes**
 
 1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Go to **Allfiles\Mod05\Labfiles\01_CitiesDetails_begin**, and then double-click **CitiesDetails.sln**.
-
 ## Exercise 1: Adding Views to an MVC Application
 
 #### Scenario
@@ -37,15 +35,15 @@ The main tasks for this exercise are as follows:
 
 2.	Run the application.
 
-3.	Add a view to show data of a city, as returned by the ShowDataForCity action.
+3.	Add a view to show data for a city, as returned by the ShowDataForCity action.
 
-4.	Add a back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
+4.	Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
 
 5.	Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action.
 
 6.	Run the application.
 
-####	Task 1: Add a view to show a list of all the cities, as retrieved by the ShowCities action.
+####	Task 1: Add a view to show a list of all the cities, as retrieved by the ShowCities action
 
 1. From **Allfiles\Mod05\Labfiles\01_CitiesDetails_begin** open the **CitiesDetails.sln**. 
 
@@ -87,15 +85,13 @@ The main tasks for this exercise are as follows:
 
 16. Right-click on the **ShowCities** action name, and then click **Add View**.
 
-17. Create a new view using the **Add MVC View** dialog box, with the following information:
+17. Create a new **View** using the **Add MVC View** dialog box, with the following information:
 
     - View Name: **ShowCities**
     - Template: **Empty (without model)**
     - Create as Partial View: **False**
     - Use a layout page: **False**
     - Reference script libraries: **False**
-
-    > **Note**: In the Add MVC View dialog box, the "Reference script libraries" check box can be unchecked by setting the template to **Edit** and then setting back the template to **Empty**(without model).
 
 18. At the beggining of **ShowCities** view, add a **USING** statement for the following namespace:
 
@@ -116,9 +112,7 @@ The main tasks for this exercise are as follows:
 
 22.  In the  **FOREACH** statement block, add a **P** element with the following information:
 
-     - Content:  **@item.Key**  
-    
-     > **Note**: The key of the  **CityProvider** item contains the city name.
+     - Content:  **@item.Key** 
 
 
 ####	Task 2: Run the application.
@@ -135,7 +129,7 @@ The main tasks for this exercise are as follows:
 
 5. Stop debugging.
 
-####	Task 3: Add a view to show data of a city, as returned by the ShowDataForCity action.
+####	Task 3: Add a view to show data for a city, as returned by the ShowDataForCity action.
 
 1. In the **CityController** class, change the **ShowDataForCity** action signature to accept the following parameter:
     - Type: **string**
@@ -181,9 +175,9 @@ The main tasks for this exercise are as follows:
 
 12. In the **CityController** class, edit the code in the **GetImage** action by removing the code which returns the **ContentResult** result using the **Content** method.
 
-13. Return the **FileResult** result using the **File** method. Pass **"$@"images\{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
+13. Return the **FileResult** result using the **File** method. Pass **"$@"images&bsol;{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
 
-####	Task 4: Add a back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
+####	Task 4: Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
 
 1. In the **ShowDataForCity** view, after the **SPAN** add a **BR** element.
 
@@ -208,13 +202,11 @@ The main tasks for this exercise are as follows:
 
 2. In the  **FOREACH** statement block, add a **H2**.
 
-3. In the  **H2** element, add an **A** with the following information:
+3. In the  **H2** element, add an **A** element with the following information:
 
     - Content: **@item.Key**
     - asp-action: **ShowDataForCity**
     - asp-route-cityname: **@item.Key**
-  
-    > **Note**: The key of the  **CityProvider** item contains the city name.
 
 
 ####	Task 6: Run the application.
@@ -223,14 +215,11 @@ The main tasks for this exercise are as follows:
 
 2. Start debugging the application.
 
-    > **Note**: The browser displays a list of city names, each name is a link to the city's details page.
-
-3. In the **Microsoft Edge** window, click on the **London** link.
+3. In **Microsoft Edge** window, click **London**.
 
     > **Note**: The browser displays the city's name, details, mini map and a **Back** link.
 
-4. In the **Microsoft Edge** window, click on the **Back** link.
-    > **Note**: The browser displays the previous page.
+4. In **Microsoft Edge**, click **Back**.
 
 5. Close **Microsoft Edge**.
 
@@ -247,7 +236,7 @@ The main tasks for this exercise are as follows:
 
 1.	Add a partial view.
 
-2.	Use the partial view in the **ShowDataForCity** view.
+2.	Use the partial view in the ShowDataForCity view.
 
 3.	Run the application.
 
@@ -305,11 +294,7 @@ The main tasks for this exercise are as follows:
 
 2. Start debugging the application.
 
-    > **Note**: The browser displays a list of city names, each name is a link to the city's details page.
-
-3. In the **Microsoft Edge** window, click on the **Madrid** link.
-
-    > **Note**: The browser displays the city details with its population region.
+3. In **Microsoft Edge**, click **Madrid**.
 
 4. Close **Microsoft Edge**.
 
@@ -341,7 +326,7 @@ The main tasks for this exercise are as follows:
     - Name: **CityViewComponent**
     - Folder: **ViewComponents**
 
-3. In the **CityViewComponent** class, add **using** statement for the following namespaces:
+3. In the **CityViewComponent** class, add **USING** statement for the following namespaces:
 
     - **Microsoft.AspNetCore.Mvc**
 
@@ -388,7 +373,7 @@ The main tasks for this exercise are as follows:
 
 5. Add a **DIV** element.
 
-6. In the **DIV** element, add a **H2** element 
+6. In the **DIV** element, add a **H2** element.
 
 7. In the **H2** element, add a **A** element with the following information:
     - Content: **@ViewBag.CurrentCityName**
@@ -414,11 +399,10 @@ The main tasks for this exercise are as follows:
     > **Note**: The browser displays a list of cities, each has a header link and mini map image of the region.
 
 3.  In the **Microsoft Edge** window, click the **Madrid** link.
-    > **Note**: The browser displays the city details.
 
 4. Close **Microsoft Edge**.
 
-5. Stop debugging.
+5. Stop debugging and close the **Visual Studio**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
