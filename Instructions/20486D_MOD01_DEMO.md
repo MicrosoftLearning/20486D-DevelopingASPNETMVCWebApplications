@@ -23,7 +23,7 @@
 
 1. In the **PhotoSharingSample – Microsoft Visual Studio** window, in **Solution Explorer**, expand **PhotoSharingSample**.
 
-    >**Note:** The **PhotoSharingSample application** application  does not have **default.html**, **default.aspx** or **default.cshtml** to act as a home page.
+    >**Note:** The **PhotoSharingSample** application  does not have **default.html**, **default.aspx** or **default.cshtml** to act as a home page.
 
 2. In **Solution Explorer**, under **PhotoSharingSample**, expand **Controllers**, and then click **HomeController.cs**.
 
@@ -34,7 +34,6 @@
           return View(_dbContext.Photos.ToList());
        }
 ```
-
 
 >**Note:** This code block sends a list of Photos to the view. 
 
@@ -51,7 +50,7 @@
 
     >**Note:** The browser displays the default home page. You reached the **Index** action of **Home** controller.  
     
-7. On the taskbar, click the **Microsoft Visual Studio** icon.
+7. On taskbar, click the **Microsoft Visual Studio** icon.
 
 8. In the **PhotoSharingSample – Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
@@ -130,7 +129,7 @@
 
 21. In the **PhotoSharingSample (Running) – Microsoft Visual Studio** window, click **Close**.
 
-22. In the **Microsoft Visual Studio** dialog box, click **Yes** to **Stop Debugging**.
+22. In the **Microsoft Visual Studio** dialog box, click **Yes** to Stop Debugging.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
