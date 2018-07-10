@@ -15,6 +15,8 @@ paths.destinationJsFolder = paths.webroot + "lib/";
 
 paths.bootstrapCss = paths.nodeModules + "bootstrap/dist/css/bootstrap.css";
 paths.bootstrapjs = paths.nodeModules + "bootstrap/dist/js/bootstrap.js";
+paths.vendorJsFileName = "vendor.min.js";
+paths.vendorCssFileName = "vendor.min.css";
 paths.vendorJsFiles = [paths.bootstrapjs, paths.jqueryjs];
 
 //exercise 2 task 1
@@ -46,6 +48,13 @@ gulp.task("min:scss", function () {
         .pipe(gulp.dest(paths.destinationCssFolder));
 });
 
+//exercise 3 task 3
+gulp.task("min-vendor:css", function () {
+    return gulp.src(paths.bootstrapCss)
+        .pipe(concat(paths.vendorCssFileName))
+        .pipe(cssmin())
+        .pipe(gulp.dest(paths.destinationCssFolder));
+});
 
 //exercise 1 task 5
 gulp.task("js-watcher", function () {
@@ -54,4 +63,8 @@ gulp.task("js-watcher", function () {
 
 gulp.task("sass-watcher", function () {
     gulp.watch(paths.sassFiles, ["min:scss"]);
+});
+
+gulp.task("css-watcher", function () {
+    gulp.watch(paths.sassFiles, ["min-vendor:css"]);
 });

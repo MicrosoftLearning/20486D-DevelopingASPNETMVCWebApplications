@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IceCreamCompany.Data;
+using IceCreamCompany.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace IceCreamCompany
@@ -13,11 +16,19 @@ namespace IceCreamCompany
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IRepository, Repository>();
+
+            services.AddDbContext<IceCreamContext>(options =>
+                 options.UseInMemoryDatabase("IceCreamDB"));
+
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IceCreamContext iceCreamContext)
         {
+            iceCreamContext.Database.EnsureDeleted();
+            iceCreamContext.Database.EnsureCreated();
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
