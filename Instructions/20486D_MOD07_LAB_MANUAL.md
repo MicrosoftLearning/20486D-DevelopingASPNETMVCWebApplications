@@ -537,23 +537,42 @@ The main tasks for this exercise are as follows:
 
 17. In the **CreateCupcake** method, create an **IF** statement that checks that the value of **cupcake.PhotoAvatar** is not **NULL** and that **cupcake.PhotoAvatar.Length** is bigger than **0**.
 
-18. In the **IF** statement code block, assign the **ImageMimeType** property of the **cupcake** parameter, the value of **cupcake.PhotoAvatar.ContentType**.
+18. In the **IF** statement code block, create a variable named **lastCupcake** of type **Cupcake**. Initialize the **lastCupcake** variable with the value of **_context.Cupcakes.LastOrDefault()**.
 
-19. Assign the **ImageName** property of the **cupcake** parameter, the value of **Path.GetFileName(cupcake.PhotoAvatar.FileName)**.
+19. Assign the **CupcakeId** property of the **cupcake** parameter, the value of **lastCupcake.CupcakeId + 1**.
 
-20. Create a variable named **memoryStream** of type **MemoryStream** inside a **USING** statement.
+20. Assign the **ImageMimeType** property of the **cupcake** parameter, the value of **cupcake.PhotoAvatar.ContentType**.
 
-21. Initialize the **memoryStream** varaible using the **MemoryStream** constructor.
+21. Assign the **ImageName** property of the **cupcake** parameter, the value of **Path.GetFileName(cupcake.PhotoAvatar.FileName)**.
 
-22. In the **USING** statement block, call the **CopyTo** method, of the **cupcake.PhotoAvatar** property. Pass **memoryStream** as a parameter to the the **CopyTo** method.
+22. Create a variable named **memoryStream** of type **MemoryStream** inside a **USING** statement.
 
-23. Assign the **PhotoFile** property of the **cupcake** parameter, the value of **memoryStream.ToArray()**.
+23. Initialize the **memoryStream** varaible using the **MemoryStream** constructor.
 
-24. After the **IF** statement, call the **Add** method of the **_context** field. Pass **cupcake** as a parameter to the **Add** method.
+24. In the **USING** statement block, call the **CopyTo** method, of the **cupcake.PhotoAvatar** property. Pass **memoryStream** as a parameter to the the **CopyTo** method.
 
-25. Call the **SaveChanges** method of the **_context** field.
+25. Assign the **PhotoFile** property of the **cupcake** parameter, the value of **memoryStream.ToArray()**.
 
-26. Add a method with the following information:
+26. After the **IF** statement, call the **Add** method of the **_context** field. Pass a new **Cupcake** as a parameter to the **Add** method using the following information:
+
+    - Parameter:
+        - **New Cupcake**:
+            - CupcakeId: **cupcake.CupcakeId**
+            - Bakery : **cupcake.Bakery**
+            - BakeryId:  **cupcake.BakeryId**
+            - CupcakeType: **cupcake.CupcakeType**
+            - Description: **cupcake.Description**
+            - GlutenFree: **cupcake.GlutenFree**
+            - ImageMimeType:  **cupcake.ImageMimeType**
+            - ImageName :  **cupcake.ImageName**
+            - PhotoAvatar :  **cupcake.PhotoAvatar**
+            - PhotoFile :  **cupcake.PhotoFile**
+            - Price :  **cupcake.Price**
+
+
+27. Call the **SaveChanges** method of the **_context** field.
+
+28. Add a method with the following information:
 
        - Scope: **public**
        - Return Type: **void**
@@ -562,13 +581,13 @@ The main tasks for this exercise are as follows:
             - Type: **int**
             - Name: **id**
 
-27. In the **DeleteCupcake** method, create a **cupcake** varible of type **var** and assign it the value of  **_context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id)** .
+29. In the **DeleteCupcake** method, create a **cupcake** varible of type **var** and assign it the value of  **_context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id)** .
 
-28. Call the **Remove** method of the **_context.Cupcakes** property. Pass **cupcake** as a parameter to the **Remove** method.
+30. Call the **Remove** method of the **_context.Cupcakes** property. Pass **cupcake** as a parameter to the **Remove** method.
 
-29. Call the **SaveChanges** method of the **_context** field.
+31. Call the **SaveChanges** method of the **_context** field.
 
-30. Add a method with the following information:
+32. Add a method with the following information:
 
     - Scope: **public**
     - Return Type: **Cupcake**
@@ -577,43 +596,43 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-31. In the **GetCupcakeById** method, return the **Cupcake** result using the **_context.Cupcakes.Include(b => b.Bakery).SingleOrDefault(c => c.CupcakeId == id)** method.
+33. In the **GetCupcakeById** method, return the **Cupcake** result using the **_context.Cupcakes.Include(b => b.Bakery).SingleOrDefault(c => c.CupcakeId == id)** method.
 
-32. Add a method with the following information:
+34. Add a method with the following information:
 
     - Scope: **public**
     - Return Type: **IEnumerable&lt;Cupcake&gt;**
     - Name: **GetCupcakes**
 
-33. In the **GetCupcakes** method, return the **IEnumerable&lt;Cupcake&gt;** result using the **_context.Cupcakes.ToList();** method.
+35. In the **GetCupcakes** method, return the **IEnumerable&lt;Cupcake&gt;** result using the **_context.Cupcakes.ToList();** method.
 
-34. Add a method with the following information:
+36. Add a method with the following information:
 
     - Scope: **public**
     - Return Type: **IQueryable&lt;Bakery&gt;**
     - Name: **PopulateBakeriesDropDownList**
 
-35. In the **PopulateBakeriesDropDownList** method, create a variable named **BakeriesQuery** of type **var** and assign it the value of the following **LINQ**query:
+37. In the **PopulateBakeriesDropDownList** method, create a variable named **BakeriesQuery** of type **var** and assign it the value of the following **LINQ**query:
 
     - From: **b in _context.Bakeries**
     - Orderby: **BakeryName**
     - Select: **b**
 
-36.  Return the **IQueryable&lt;Bakery&gt;** result using the **BakeriesQuery** variable.
+38.  Return the **IQueryable&lt;Bakery&gt;** result using the **BakeriesQuery** variable.
 
-37. Add a method with the following information:
+39. Add a method with the following information:
 
     - Scope: **public**
     - Return Type: **void**
     - Name: **SaveChanges**
 
-38. In the **SaveChanges** method, call the **SaveChanges** method of the **_context** field.
+40. In the **SaveChanges** method, call the **SaveChanges** method of the **_context** field.
 
-39. In the **Startup** class, add **using** statement for the following namespace:
+41. In the **Startup** class, add **using** statement for the following namespace:
 
       - **Cupcakes.Repositories**
 
-40. In the beginning of the **ConfigureServices** method, call the **AddTransient** method of **services** parameter with the following information:
+42. In the beginning of the **ConfigureServices** method, call the **AddTransient** method of **services** parameter with the following information:
 
     - Interface: **ICupcakeRepository**
     - Implementation: **CupcakeRepository**
@@ -880,7 +899,22 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Connecting to a Microsoft SQL Server.
 
-1. In the **Startup** class, in the **ConfigureServices** method, replace the lamda expression parameter in the **AddDbContext** method call with: **options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**
+1. In the **Startup** class, in the **ConfigureServices** method, replace the lamda expression parameter in the **AddDbContext** method call with:  *options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**.
+
+2. In the **Configure** method, remove the **cupcakeContext** parameter from the method signature. 
+
+3. Remove the **cupcakeContext.Database.EnsureDeleted** method call. 
+
+4. Remove the **cupcakeContext.Database.EnsureCreated** method call.
+
+5.  In the **CupcakeRepository** class, in the **CreateCupcake** method, remove the **lastCupcake** varible. 
+
+6. Remove the assigment of **lastCupcake.CupcakeId + 1** to the **CupcakeId** property of the **cupcake** parameter.
+
+7. After the **IF** statment code block, remove the call to the **Add** method of the **_context** field.
+
+8. Call the **Add** method of the **_context** field. Pass **cupcake** as a parameter to the **Add** method.
+
 
 #### Task 2: Specifying a connection string in a configuration file. 
 
@@ -908,15 +942,20 @@ The main tasks for this exercise are as follows:
 
     >**Note:** Verify that the Entity Framework tools for the command-line interface provided correctly in Microsoft.EntityFrameworkCore.Tools.DotNet.
 
-6. In the **Command Line** window, type the following command: **dotnet ef dbcontext info**.
+6. Type the following command: **dotnet ef dbcontext info**.
 
     >**Note:** Verify that the **Database name** is identical to the name in the appsettings.json file.
 
-7. In the **Command Line** window, type the following command: **dotnet ef migrations add InitialCreate**.
+7.  Type the following command: **dotnet ef database drop**.
+
+8. Type the following command: **y**.
+    >**Note:** Enter y to ensure that there are no database conflicts.
+
+9. Type the following command: **dotnet ef migrations add InitialCreate**.
 
     >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, the newly added folder **Migrations** contains two cs files.
 
-8. In the **Command Line** window, type the following command: ** dotnet ef database update**.
+10. Type the following command: **dotnet ef database update**.
 
     >**Note:** In the **SQL Server Object Explorer** pane of the **Cupcakes - Microsoft Visual Studio** window, verify the **BakeriesDb **tables..
 
