@@ -517,9 +517,9 @@
 
 11. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    public IViewComponentResult Invoke(int id)
+    public Task<IViewComponentResult> InvokeAsync(int id)
     {
-        return View("CardDesign", id);
+        return Task.FromResult<IViewComponentResult>(View("CardDesign", id));
     }
 ```
 
