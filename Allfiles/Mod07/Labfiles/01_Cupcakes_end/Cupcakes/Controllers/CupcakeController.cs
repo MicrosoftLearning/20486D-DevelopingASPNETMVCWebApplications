@@ -73,12 +73,16 @@ namespace Cupcakes.Controllers
         public async Task<IActionResult> EditPost(int id)
         {
             var cupcakeToUpdate = _repository.GetCupcakeById(id);
-            if (await TryUpdateModelAsync<Cupcake>(
-                cupcakeToUpdate,
-                "",
-                c => c.BakeryId, c => c.CupcakeType, c => c.Description, c => c.GlutenFree, c => c.Price))
-            {
-                _repository.SaveChanges();
+			bool isUpdated = await TryUpdateModelAsync<Cupcake>(
+								cupcakeToUpdate,
+								"",
+								c => c.BakeryId,
+								c => c.CupcakeType,
+								c => c.Description,
+								c => c.GlutenFree,
+								c => c.Price);
+			if(isUpdated) {
+				_repository.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             PopulateBakeriesDropDownList(cupcakeToUpdate.BakeryId);
