@@ -272,7 +272,7 @@
 
 9. Replace the selected code with the following code:
 ```cs
-    <a asp-action="Details" asp-route-employeeName="@currentName">@currentName</a>
+    <a asp-action="Details" asp-route-employeename="@currentName">@currentName</a>
 ```
 
 10. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.

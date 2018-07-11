@@ -1,0 +1,6 @@
+﻿<div>
+    <h2>
+        <a asp-action="ShowDataForCity" asp-route-cityname=@ViewBag.CurrentCity.Name>@ViewBag.CurrentCity.Name (Capital of @ViewBag.CurrentCity.Country)</a>
+    </h2>
+    <img src="@Url.Action("GetImage", new { cityName = ViewBag.CurrentCity.Name })" />
+</div>
