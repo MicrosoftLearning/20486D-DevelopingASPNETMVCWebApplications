@@ -91,7 +91,6 @@ The main tasks for this exercise are as follows:
     - Template: **Empty (without model)**
     - Create as Partial View: **False**
     - Use a layout page: **False**
-    - Reference script libraries: **False**
 
 18. At the beggining of **ShowCities** view, add a **USING** statement for the following namespace:
 
@@ -115,7 +114,7 @@ The main tasks for this exercise are as follows:
      - Content:  **@item.Key** 
 
 
-####	Task 2: Run the application.
+####	Task 2: Run the application
 
 1. Save all the changes.
 
@@ -129,7 +128,7 @@ The main tasks for this exercise are as follows:
 
 5. Stop debugging.
 
-####	Task 3: Add a view to show data for a city, as returned by the ShowDataForCity action.
+####	Task 3: Add a view to show data for a city, as returned by the ShowDataForCity action
 
 1. In the **CityController** class, change the **ShowDataForCity** action signature to accept the following parameter:
     - Type: **string**
@@ -147,10 +146,6 @@ The main tasks for this exercise are as follows:
    - Template: **Empty (without model)**
    - Create as Partial View: **False**
    - Use a layout page: **False**
-   - Reference script libraries: **False**
-
-    > **Note**: In the Add MVC View dialog box, the Reference script libraries check box can be unchecked by setting the template to **Edit** and then setting back the template to **Empty**(without model).   
-
 
 5. In the **ShowDataForCity** view, after the **TITLE** element, add a **LINK** element with the following information:
     - Type:  **text/css**
@@ -177,7 +172,7 @@ The main tasks for this exercise are as follows:
 
 13. Return the **FileResult** result using the **File** method. Pass **"$@"images&bsol;{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
 
-####	Task 4: Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
+####	Task 4: Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action
 
 1. In the **ShowDataForCity** view, after the **SPAN** add a **BR** element.
 
@@ -196,7 +191,7 @@ The main tasks for this exercise are as follows:
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
 
-####	Task 5: Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action.
+####	Task 5: Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action
 
 1. In the **ShowCities** view, remove the **P** element with its content.
 
@@ -209,7 +204,7 @@ The main tasks for this exercise are as follows:
     - asp-route-cityname: **@item.Key**
 
 
-####	Task 6: Run the application.
+####	Task 6: Run the application
 
 1. Save all the changes.
 
@@ -230,7 +225,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-The population details of the city are quite big and should be grouped as a subgroup in the details page.
+You have been asked to show the population of each city. In order to do this, you have been asked to add a partial view. In this exercise you will create a partial view and embed it in the ShowDataForCity view.
 
 The main tasks for this exercise are as follows:
 
@@ -240,7 +235,7 @@ The main tasks for this exercise are as follows:
 
 3.	Run the application.
 
-####	Task 1: Add a partial view.
+####	Task 1: Add a partial view
 
 1. Create a new folder with the following information:
 
@@ -254,7 +249,6 @@ The main tasks for this exercise are as follows:
    - Template: **Empty (without model)**
    - Create as Partial View: **True**
    - Use a layout page: **False**
-   - Reference script libraries: **False**
 
 3. In the **_CityPopulation** partial view, delete all the content.
 
@@ -270,31 +264,32 @@ The main tasks for this exercise are as follows:
 6. Add a **P** element.
 
 7. In the **P** element, add a **H3** element with the following information:
-    - Content:  **City Population(@population.Year)** .
+    - Content:  **City Population(@population.Year)**
 
 8. After the **P** element, add another **P** element with the following information:
-    - Content:  **City: @cityFormatter.GetFormattedPopulation(@population.City)** .
+    - Content:  **City: @cityFormatter.GetFormattedPopulation(@population.City)**
 
 9. After the last **P** element, add another **P** element with the following information:
-    - Content:  **Urban: @cityFormatter.GetFormattedPopulation(@population.Urban)** .
+    - Content:  **Urban: @cityFormatter.GetFormattedPopulation(@population.Urban)**
 
 10. After the last **P** element, add another **P** element with the following information:
-    - Content:  **Metro: @cityFormatter.GetFormattedPopulation(@population.Metro)** .
+    - Content:  **Metro: @cityFormatter.GetFormattedPopulation(@population.Metro)**
 
-####	Task 2: Use the partial view in the ShowDataForCity view.
+####	Task 2: Use the partial view in the ShowDataForCity view
 
 1. In the **ShowDataForCity** view, after the **SPAN** element, render a **partial view** with the following information:  
-    - Helper: **Html.Partial**
-    - Partial View Name: **_CityPopulation**   
+    - Helper: **Html.PartialAsync**
+    - Partial View Name: **_CityPopulation**
 
-
-####	Task 3: Run the application.
+####	Task 3: Run the application
 
 1. Save all the changes.
 
 2. Start debugging the application.
 
 3. In **Microsoft Edge**, click **Madrid**.
+
+    > **Note**: The browser displays the city's name, details, mini map and a **Back** link.
 
 4. Close **Microsoft Edge**.
 
@@ -317,7 +312,7 @@ The main tasks for this exercise are as follows:
 
 4.	Run the application.
 
-####	Task 1: Add a view component class.
+####	Task 1: Add a view component class
 
 1. In the  **CitiesDetails** project, create a new top-level folder, and name it **ViewComponents**.
 
@@ -347,8 +342,7 @@ The main tasks for this exercise are as follows:
 
 7. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
 
-
-####	Task 2: Add a view component view.
+####	Task 2: Add a view component view
 
 1. Create a new folder with the following information:
 
@@ -367,7 +361,6 @@ The main tasks for this exercise are as follows:
    - Template: **Empty (without model)**
    - Create as Partial View: **True**
    - Use a layout page: **False**
-   - Reference script libraries: **False**
 
 4. In the **SelectCity** partial view, delete all the content.
 
@@ -384,13 +377,13 @@ The main tasks for this exercise are as follows:
     - Attribute: **src**
     - Value: **@Url.Action("GetImage", new {cityName = ViewBag.CurrentCityName })**
 
-####	Task 3: Use the view component.
+####	Task 3: Use the view component
 
 1. In the **ShowCities** view, delete the content of the **FOREACH** statment and add the following: **@await Component.InvokeAsync("City", item.Key)**
 
     > **Note**: The key of the  **CityProvider** item contains the city name.
 
-####	Task 4: Run the application.
+####	Task 4: Run the application
 
 1. Save all the changes.
 
