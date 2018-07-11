@@ -3,7 +3,7 @@
 # Lab: Developing Views 
 
 #### Scenario
-To construct the user interface of the cities details application, your development team decided to add views. You have been asked to create views to render a response to a browser.
+To construct the user interface of a cities web application, your development team decided to add views. You have been asked to create the views to render a response to a browser.
 
 #### Objectives
 
@@ -27,23 +27,23 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-In order to create the site, index and detail pages must be created. The index page will show a list of cities, and the details page will show the details on each one of the cities.
+To construct the user interface of a web application, views should be added to the web application. In this exercise you will add to views to the web application: Index and Details. The Index view will show a list of cities, and the Details view will show the details of a city.
 
 The main tasks for this exercise are as follows:
 
-1.	Add a view to show a list of all the cities, as retrieved by the ShowCities action.
+1.	Add a view to show all the cities.
 
 2.	Run the application.
 
-3.	Add a view to show data for a city, as returned by the ShowDataForCity action.
+3.	Add a view to show data for a city.
 
-4.	Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
+4.	Add a Back link to a view.
 
-5.	Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action.
+5.	Add a "Show data" link next to each city.
 
 6.	Run the application.
 
-####	Task 1: Add a view to show a list of all the cities, as retrieved by the ShowCities action
+####	Task 1: Add a view to show all the cities
 
 1. From **Allfiles\Mod05\Labfiles\01_CitiesDetails_begin** open the **CitiesDetails.sln**. 
 
