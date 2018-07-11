@@ -1,0 +1,61 @@
+﻿@using IceCreamCompany.Models
+@model IceCreamCompany.Models.Customer
+@{
+    ViewData["Title"] = "Buy";
+}
+
+<div>
+    <label asp-for="IceCreamFlavors"></label>
+    <select asp-for="IceCreamFlavors" asp-items="Html.GetEnumSelectList<IceCreamFlavor>()">
+        <option selected="selected" value="">Select</option>
+    </select>
+    <span asp-validation-for="IceCreamFlavors"></span>
+</div>
+
+//grid 
+<div>
+    <label>Buy bulk</label>
+    <select id="iceCreamAmout">
+        <option selected="selected">0</option>
+        <option>1</option>
+        <option>1.5</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+</div>
+
+<div>
+    total amount
+</div>
+
+<form method="post" enctype="multipart/form-data" asp-action="BuyPost">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div>
+        <label asp-for="Address"></label>
+        <input asp-for="Address" />
+        <span asp-validation-for="Address"></span>
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" />
+        <span asp-validation-for="PhoneNumber"></span>
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>

@@ -1,8 +1,9 @@
 ﻿var gulp = require('gulp');
-var concat = require("gulp-concat");
-var uglify = require("gulp-uglify");
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
-var cssmin = require("gulp-cssmin");
+var cssmin = require('gulp-cssmin');
+var watch = require('gulp-watch-sass');
 
 var paths = {
     webroot: "./wwwroot/",
@@ -19,18 +20,14 @@ paths.vendorJsFileName = "vendor.min.js";
 paths.vendorCssFileName = "vendor.min.css";
 paths.vendorJsFiles = [paths.bootstrapjs, paths.jqueryjs];
 
-//exercise 2 task 1
-paths.sassFiles = "./Styles/*.scss";
-paths.compiledCssFileName = "main.min.css";
-
 
 //exercise 1 task 2 
 gulp.task("copy-js-file", function () {
     return gulp.src(paths.jqueryjs)
         .pipe(gulp.dest(paths.destinationJsFolder));
 });
-
-//exercise 1 task 4
+ 
+//exercise 1 task 4 +  exercise 3 task 2 
 gulp.task("min:js", function () {
     return gulp.src(paths.vendorJsFiles)
         .pipe(concat(paths.vendorJsFileName))
@@ -40,6 +37,9 @@ gulp.task("min:js", function () {
 
 
 //exercise 2 task 1
+paths.sassFiles = "./Styles/*.scss";
+paths.compiledCssFileName = "main.min.css";
+
 gulp.task("min:scss", function () {
     return gulp.src(paths.sassFiles)
         .pipe(sass().on('error', sass.logError))
@@ -57,14 +57,8 @@ gulp.task("min-vendor:css", function () {
 });
 
 //exercise 1 task 5
-gulp.task("js-watcher", function () {
-    gulp.watch(paths.vendorJsFiles, ["min:js"]);
-});
-
 gulp.task("sass-watcher", function () {
-    gulp.watch(paths.sassFiles, ["min:scss"]);
+    gulp.watch('./Styles/*.scss', ["min:scss"]);
 });
 
-gulp.task("css-watcher", function () {
-    gulp.watch(paths.sassFiles, ["min-vendor:css"]);
-});
+

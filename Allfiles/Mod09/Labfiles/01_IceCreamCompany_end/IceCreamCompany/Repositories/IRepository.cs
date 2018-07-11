@@ -10,7 +10,6 @@ namespace IceCreamCompany.Repositories
     {
         IEnumerable<IceCream> GetIceCreamFlavors();
         IceCream GetIceCreamFlavorById(int id);
-        void BuyIceCreamFlavor(IceCream iceCream);
-        IQueryable<IceCream> PopulateIceCreamFlavorsDropDownList();
+        void BuyIceCreamFlavor(Customer customer);
     }
 }

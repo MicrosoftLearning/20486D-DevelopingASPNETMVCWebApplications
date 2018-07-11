@@ -2,30 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IceCreamCompany.Data;
 using IceCreamCompany.Models;
 
 namespace IceCreamCompany.Repositories
 {
     public class Repository : IRepository
     {
-        public void BuyIceCreamFlavor(IceCream iceCream)
+        private IceCreamContext _context;
+
+        public Repository(IceCreamContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+
+        public void BuyIceCreamFlavor(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
         }
 
         public IceCream GetIceCreamFlavorById(int id)
         {
-            throw new NotImplementedException();
+            return _context.IceCreamFlavors.SingleOrDefault(i => i.IceCreamId == id);
         }
 
         public IEnumerable<IceCream> GetIceCreamFlavors()
         {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<IceCream> PopulateIceCreamFlavorsDropDownList()
-        {
-            throw new NotImplementedException();
+            return _context.IceCreamFlavors.ToList();
         }
     }
 }

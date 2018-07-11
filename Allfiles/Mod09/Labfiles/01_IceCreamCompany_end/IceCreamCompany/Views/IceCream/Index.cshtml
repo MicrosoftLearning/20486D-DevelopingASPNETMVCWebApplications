@@ -4,5 +4,26 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
+<h1>Choose your favourite one</h1>
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div>
+            <h3>
+                @Html.DisplayFor(modelItem => item.Flavor)
+            </h3>
+            @if (item.PhotoFileName != null)
+            {
+                <div>
+                    <img src="@Url.Action("GetImage", "IceCream", new { iceCreamId = item.IceCreamId })" />
+                </div>
+            }
+            <div>
+                <p>
+                    @Html.DisplayFor(model => item.Price)
+                </p>
+            </div>
+        </div>
+    }
+</div>

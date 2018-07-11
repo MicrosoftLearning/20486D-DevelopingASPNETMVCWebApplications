@@ -19,7 +19,7 @@ namespace IceCreamCompany.Models
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
         [Required]
         [StringLength(30)]
-        public string Flavor { get; set; }
+        public IceCreamFlavor Flavor { get; set; }
 
         [DisplayName("Picture")]
         [MaxLength]
@@ -27,5 +27,7 @@ namespace IceCreamCompany.Models
 
         [HiddenInput(DisplayValue = false)]
         public string ImageMimeType { get; set; }
+
+        public virtual List<IceCreamFlavorsCustomers> IceCreamFlavors { get; set; }
     }
 }

@@ -7,7 +7,8 @@
     "gulp-sass": "4.0.1",
     "gulp-concat": "2.6.1",
     "gulp-cssmin": "0.2.0",
-    "gulp-uglify": "3.0.0"
+    "gulp-uglify": "3.0.0",
+    "gulp-watch-sass": "1.4.1"
   },
   "dependencies": {
     "bootstrap": "4.1.1",

@@ -31,26 +31,18 @@ namespace IceCreamCompany.Controllers
         [HttpGet]
         public IActionResult Buy()
         {
-            PopulateIceCreamFlavorsDropDownList();
             return View();
         }
 
         [HttpPost, ActionName("Buy")]
-        public IActionResult BuyPost(IceCream iceCream)
+        public IActionResult BuyPost(Customer customer)
         {
             if (ModelState.IsValid)
             {
-                _repository.BuyIceCreamFlavor(iceCream);
+                _repository.BuyIceCreamFlavor(customer);
                 return RedirectToAction(nameof(Index));
             }
-            PopulateIceCreamFlavorsDropDownList(iceCream.IceCreamId);
-            return View(iceCream);
-        }
-
-        private void PopulateIceCreamFlavorsDropDownList(int? selectediceCream = null)
-        {
-            var iceCreamFlavors = _repository.PopulateIceCreamFlavorsDropDownList();
-            ViewBag.BakeryID = new SelectList(iceCreamFlavors, "IceCreamId", "Flavor", selectediceCream);
+            return View(customer);
         }
 
         public IActionResult GetImage(int iceCreamId)
