@@ -560,11 +560,11 @@
 
 26. In the **ViewComponentsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-27. In the **CitiesDetails - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
+27. In the **ViewComponentsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
 
-28. In **Add New Item – CitiesDetails** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
+28. In **Add New Item – ViewComponentsExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
 
-29. In **Add New Item – CitiesDetails** dialog box, in the result pane, click **Razor View Import**, and then click **Add**.
+29. In **Add New Item – ViewComponentsExample** dialog box, in the result pane, click **Razor View Imports**, and then click **Add**.
 
 30. In the **_ViewImports.cshtml** code window, type the following code:
 ```cs
@@ -584,7 +584,7 @@
 33. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 34. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-    >**Note**: The browser displays the same page.
+    >**Note**: The browser displays a table with cards. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
      
 35. In **Microsoft Edge**, click **Close**.
 
