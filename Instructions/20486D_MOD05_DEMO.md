@@ -560,34 +560,6 @@
 
 26. In the **ViewComponentsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-27. In the **ViewComponentsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
-
-28. In **Add New Item – ViewComponentsExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
-
-29. In **Add New Item – ViewComponentsExample** dialog box, in the result pane, click **Razor View Imports**, and then click **Add**.
-
-30. In the **_ViewImports.cshtml** code window, type the following code:
-```cs
-    @addTagHelper *, ViewComponentsExample
-```
-
-31. In the **Index.cshtml** code window, select the following code:
-```cs
-    @await Component.InvokeAsync("PersonCard", cardIndex);
-```
-
-32. Replace the selected code with the following code:
-```cs
-    <vc:person-card id="cardIndex"></vc:person-card>
-```
-
-33. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
-
-34. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-    >**Note**: The browser displays a table with cards. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
-     
-35. In **Microsoft Edge**, click **Close**.
-
 36. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
