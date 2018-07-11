@@ -45,17 +45,17 @@ The main tasks for this exercise are as follows:
 
 ####	Task 1: Add a view to show all the cities
 
-1. From **Allfiles\Mod05\Labfiles\01_CitiesDetails_begin** open the **CitiesDetails.sln**. 
+1. From **Allfiles\Mod05\Labfiles\01_CitiesWebsite_begin** open the **CitiesWebsite.sln**. 
 
-2. In the **CityProvider** constructor, initialize the **_cities** field using the  **CityInitializer** method.
+2. In the **CityProvider** constructor, initialize the **_cities** field using the **CityInitializer** method.
 
-3. In the **CityDetails** constructor, initialize the **Country** property with the value of the **country** parameter.
+3. In the **City** constructor, initialize the **Country** property with the value of the **country** parameter.
 
 4. Initialize the **Name** property with the value of the **cityName** parameter.
 
 5. Initialize the **TimeZone** property with the value of the **timeZone** parameter.
 
-6. Initialize the **CityPopulation** property with the value of the **cityPopulation** parameter.
+6. Initialize the **Population** property with the value of the **population** parameter.
 
 7. In **CityPopulation** constructor, initialize the **Year** property with the value of the **year** parameter.
 
@@ -66,7 +66,7 @@ The main tasks for this exercise are as follows:
 10. Initialize the **Metro** property with the value of the **metro** parameter.
 
 11. In the **CityController** class, add **using** statement for the following namespace:
-    - **CitiesDetails.Services**
+    - **CitiesWebsite.Services**
 
 12. Create a new field with the following information:
     - Scope: **private**
@@ -122,7 +122,7 @@ The main tasks for this exercise are as follows:
 
 5. Stop debugging.
 
-####	Task 3: Add a view to show data for a city, as returned by the ShowDataForCity action
+####	Task 3: Add a view to show data for a city
 
 1. In the **CityController** class, change the **ShowDataForCity** action signature to accept the following parameter:
     - Type: **string**
@@ -160,32 +160,30 @@ The main tasks for this exercise are as follows:
 10. Add a **SPAN** element.
 
 11. In the **SPAN** element, add a **IMG** element with the following information:
-    - src:  **@Url.Action("GetImage", new {cityName = ViewBag.City.Name })** 
+    - src:  **@Url.Action("GetImage", new { cityName = ViewBag.City.Name })** 
 
 12. In the **CityController** class, edit the code in the **GetImage** action by removing the code which returns the **ContentResult** result using the **Content** method.
 
 13. Return the **FileResult** result using the **File** method. Pass **"$@"images&bsol;{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
 
-####	Task 4: Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action
+####	Task 4: Add a Back link to a view
 
-1. In the **ShowDataForCity** view, after the **SPAN** add a **BR** element.
-
-2. After the **BR** element, add an **A** element with the following information:
+1. In the **ShowDataForCity** view, after the **SPAN** add an **A** element with the following information:
     - asp-action: **ShowCities**
     - Content: **Back**
 
-3. Create a new **_ViewImports.cshtml** file with the following information:
+2. Create a new **_ViewImports.cshtml** file with the following information:
 
     - Name: **_ViewImports**
     - Folder: **Views**
 
-4. In the  **_ViewImports**  file, add a **@addTagHelper** directive with the following information:
+3. In the  **_ViewImports**  file, add a **@addTagHelper** directive with the following information:
 
     - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
 
-####	Task 5: Add a city name as a link to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action
+####	Task 5: Add a city name as a link to each city
 
 1. In the **ShowCities** view, remove the **P** element with its content.
 
@@ -247,13 +245,13 @@ The main tasks for this exercise are as follows:
 3. In the **_CityPopulation** partial view, delete all the content.
 
 4. Add a **@inject** directive with the following information:
-    - Type: **CitiesDetails.Services.ICityFormatter**
+    - Type: **CitiesWebsite.Services.ICityFormatter**
     - Name: **cityFormatter**
 
 5. Add a new variable with the following information:
-    - Type: **CitiesDetails.Services.CityPopulation**
+    - Type: **CitiesWebsite.Models.CityPopulation**
     - Name: **population**
-    - Value: **ViewBag.City.CityPopulation**
+    - Value: **ViewBag.City.Population**
 
 6. Add a **P** element.
 
@@ -308,7 +306,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 1: Add a view component class
 
-1. In the  **CitiesDetails** project, create a new top-level folder, and name it **ViewComponents**.
+1. In the  **CitiesWebsite** project, create a new top-level folder, and name it **ViewComponents**.
 
 2. Create a new class with the following information:
 
@@ -318,7 +316,8 @@ The main tasks for this exercise are as follows:
 3. In the **CityViewComponent** class, add **USING** statement for the following namespaces:
 
     - **Microsoft.AspNetCore.Mvc**
-    - **CitiesDetails.Services**
+    - **CitiesWebsite.Services**
+    - **CitiesWebsite.Models**
 
 4. Change the **CityViewComponent** class to inherit from the **ViewComponent** class.
 
@@ -347,17 +346,17 @@ The main tasks for this exercise are as follows:
 9. Add a method with the following information:
 
     - Scope: **private**
-    - Return Type: **Task<CityDetails>**
-    - Name: **GetCityDetails**
+    - Return Type: **Task<City>**
+    - Name: **GetCity**
     - Parameter:
         - Type: **string**
         - Name: **cityName**
 
-10. In the **GetCityDetails** method code block, return a completed task result, the result is the value from **_cities** with the index of  **cityName**.
+10. In the **GetCity** method code block, return a completed task result, the result is the value from **_cities** with the index of  **cityName**.
 
-11. In the **Invoke** method code block, save the awaitable return value of **GetCityDetails** by passing it the parameter **cityName** using the following key in the **ViewBag** property:
+11. In the **InvokeAsync** method code block, save the awaitable return value of **GetCity** by passing it the parameter **cityName** using the following key in the **ViewBag** property:
 
-    - Key: **CurrentCityDetails**
+    - Key: **CurrentCity**
 
 12. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
 
@@ -388,13 +387,13 @@ The main tasks for this exercise are as follows:
 6. In the **DIV** element, add a **H2** element.
 
 7. In the **H2** element, add a **A** element with the following information:
-    - Content: **@ViewBag.CurrentCityName**
+    - Content: **@ViewBag.CurrentCity.Name (Capital of @ViewBag.CurrentCity.Country)**
     - asp-action: **ShowDataForCity**
-    - asp-route-cityname: **@ViewBag.CurrentCityName**
+    - asp-route-cityname: **@ViewBag.CurrentCity.Name**
 
 8. After the **H2** element, add an **IMG** element with the following information:
     - Attribute: **src**
-    - Value: **@Url.Action("GetImage", new { cityName = ViewBag.CurrentCityName })**
+    - Value: **@Url.Action("GetImage", new { cityName = ViewBag.CurrentCity.Name })**
 
 ####	Task 3: Use the view component
 
