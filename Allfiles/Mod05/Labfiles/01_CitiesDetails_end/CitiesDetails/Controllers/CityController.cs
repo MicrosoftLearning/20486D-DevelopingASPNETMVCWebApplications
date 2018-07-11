@@ -9,7 +9,7 @@ namespace CitiesDetails.Controllers
 {
     public class CityController : Controller
     {
-        ICityProvider _cities;
+        private ICityProvider _cities;
 
         public CityController(ICityProvider cities)
         {

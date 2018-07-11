@@ -27,7 +27,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-To construct the user interface of a web application, views should be added to the web application. In this exercise you will add to views to the web application: Index and Details. The Index view will show a list of cities, and the Details view will show the details of a city.
+To construct the user interface of a web application, views should be added to the web application. In this exercise you will add to views to the web application: **Index** and **Details**. The **Index** view will show a list of cities, and the **Details** view will show the details of a city.
 
 The main tasks for this exercise are as follows:
 
@@ -219,7 +219,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-You have been asked to show the population of each city. In order to do this, you have been asked to add a partial view. In this exercise you will create a partial view and embed it in the ShowDataForCity view.
+You have been asked to show the population of each city. In order to do this, you have been asked to add a partial view. In this exercise you will create a partial view and embed it in the **ShowDataForCity** view.
 
 The main tasks for this exercise are as follows:
 
@@ -318,23 +318,48 @@ The main tasks for this exercise are as follows:
 3. In the **CityViewComponent** class, add **USING** statement for the following namespaces:
 
     - **Microsoft.AspNetCore.Mvc**
+    - **CitiesDetails.Services**
 
 4. Change the **CityViewComponent** class to inherit from the **ViewComponent** class.
 
-5. Add a method with the following information:
+5. Create a new field with the following information:
+ 
+    - Scope: **private**
+    - Class: **ICityProvider**
+    - Name: **_cities**
+
+6. Add a constructor with the following parameter: 
+
+    - Type: **ICityProvider**
+    - Name: **cities**
+
+7. In the constructor, initialize the **_cities** field with the value of the **cities** parameter.
+
+8. Add an asynchronous method with the following information:
 
     - Scope: **public**
-    - Return Type: **IViewComponentResult**
-    - Name: **Invoke**
+    - Return Type: **Task<IViewComponentResult>**
+    - Name: **InvokeAsync**
     - Parameter:
         - Type: **string**
         - Name: **cityName**
 
-6. In the **Invoke** method code block, save the following key and value in the **ViewBag** property:
-    - Key: **CurrentCityName**
-    - Value: **cityName**
+9. Add a method with the following information:
 
-7. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
+    - Scope: **private**
+    - Return Type: **Task<CityDetails>**
+    - Name: **GetCityDetails**
+    - Parameter:
+        - Type: **string**
+        - Name: **cityName**
+
+10. In the **GetCityDetails** method code block, return a completed task result, the result is the value from **_cities** with the index of  **cityName**.
+
+11. In the **Invoke** method code block, save the awaitable return value of **GetCityDetails** by passing it the parameter **cityName** using the following key in the **ViewBag** property:
+
+    - Key: **CurrentCityDetails**
+
+12. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
 
 ####	Task 2: Add a view component view
 
@@ -369,7 +394,7 @@ The main tasks for this exercise are as follows:
 
 8. After the **H2** element, add an **IMG** element with the following information:
     - Attribute: **src**
-    - Value: **@Url.Action("GetImage", new {cityName = ViewBag.CurrentCityName })**
+    - Value: **@Url.Action("GetImage", new { cityName = ViewBag.CurrentCityName })**
 
 ####	Task 3: Use the view component
 
@@ -385,7 +410,7 @@ The main tasks for this exercise are as follows:
 
     > **Note**: The browser displays a list of cities, each has a header link and mini map image of the region.
 
-3.  In the **Microsoft Edge** window, click the **Madrid** link.
+3.  In the **Microsoft Edge** window, click the **Madrid (Capital of Spain)** link.
 
 4. Close **Microsoft Edge**.
 
