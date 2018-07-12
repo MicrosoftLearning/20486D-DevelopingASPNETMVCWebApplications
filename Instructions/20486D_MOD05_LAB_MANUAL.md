@@ -39,7 +39,7 @@ The main tasks for this exercise are as follows:
 
 4.	Add a Back link to a view.
 
-5.	Add a "Show data" link next to each city.
+5.	Add a city name as a link to each city.
 
 6.	Run the application.
 
@@ -223,7 +223,7 @@ The main tasks for this exercise are as follows:
 
 1.	Add a partial view.
 
-2.	Use the partial view in the ShowDataForCity view.
+2.	Use the partial view in the **ShowDataForCity** view.
 
 3.	Run the application.
 
@@ -292,8 +292,8 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-The **ShowCities** page shows a simple list of links to the **City** details page. We will use **ViewCoponents** to show more details on each city in the **ShowCities** page.
-
+Currently in the **ShowCities** view you show for each city a link with the name of the city. You have been asked to show for each city in the **ShowCities** view also the country to which the city belongs and a mini map of the city. To implement this you have been asked to use a view component. In this exercise you will create a view component and embed it in the **ShowCities** view.
+ 
 The main tasks for this exercise are as follows:
 
 1.	Add a view component class.
