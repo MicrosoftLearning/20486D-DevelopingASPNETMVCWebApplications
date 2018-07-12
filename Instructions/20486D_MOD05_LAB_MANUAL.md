@@ -213,7 +213,7 @@ The main tasks for this exercise are as follows:
 6. Stop debugging.
 
 
-##	Exercise 2: Adding a partial view
+##	Exercise 2: Adding a Partial View
 
 #### Scenario
 
@@ -288,11 +288,11 @@ The main tasks for this exercise are as follows:
 5. Stop debugging.
 
 
-##	Exercise 3: Adding a view component
+##	Exercise 3: Adding a View Component
 
 #### Scenario
 
-The **ShowCities** page shows a simple list of links to the **CityDetails** page. We will use **ViewCoponents** to show more details on each city in the **ShowCities** page.
+The **ShowCities** page shows a simple list of links to the **City** details page. We will use **ViewCoponents** to show more details on each city in the **ShowCities** page.
 
 The main tasks for this exercise are as follows:
 
