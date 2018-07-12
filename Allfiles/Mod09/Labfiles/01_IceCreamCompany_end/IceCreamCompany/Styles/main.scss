@@ -55,7 +55,7 @@ div {
 }
 
 
-.container {
+.img-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -90,3 +90,18 @@ div {
         }
     }
 }
+
+nav{
+    width:450px;
+}
+
+img{
+    height: 35px;
+    width: 35px;
+}
+
+.navbar-nav > li {
+    float: left;
+    position: relative;
+}
+
