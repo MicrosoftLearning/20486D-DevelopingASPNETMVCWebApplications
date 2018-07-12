@@ -6,32 +6,34 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using EntityFrameworkExample.Data;
+using CitiesWebsite.Services;
 
-namespace EntityFrameworkExample
+namespace CitiesWebsite
 {
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<PersonContext>(options =>
-                    options.UseInMemoryDatabase("PersonDB"));
-
             services.AddMvc();
+            services.AddSingleton<ICityProvider, CityProvider>();
+            services.AddSingleton<ICityFormatter, CityFormatter>();
         }
 
-        public void Configure(IApplicationBuilder app, PersonContext personContext)
+        public void Configure(IApplicationBuilder app)
         {
-            personContext.Database.EnsureDeleted();
-            personContext.Database.EnsureCreated();
-
             app.UseStaticFiles();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "defaultRoute",
-                    template: "{controller=Person}/{action=Index}/{id?}");
+                name: "Default",
+                template: "{controller}/{action}",
+                defaults: new { controller = "City", action = "ShowCities" });
+            });
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Page not found");
             });
         }
     }

@@ -272,7 +272,7 @@
 
 9. Replace the selected code with the following code:
 ```cs
-    <a asp-action="Details" asp-route-employeeName="@currentName">@currentName</a>
+    <a asp-action="Details" asp-route-employeename="@currentName">@currentName</a>
 ```
 
 10. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
@@ -517,9 +517,9 @@
 
 11. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    public IViewComponentResult Invoke(int id)
+    public Task<IViewComponentResult> InvokeAsync(int id)
     {
-        return View("CardDesign", id);
+        return Task.FromResult<IViewComponentResult>(View("CardDesign", id));
     }
 ```
 
@@ -559,34 +559,6 @@
 25. In **Microsoft Edge**, click **Close**.
 
 26. In the **ViewComponentsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-27. In the **CitiesDetails - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
-
-28. In **Add New Item – CitiesDetails** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
-
-29. In **Add New Item – CitiesDetails** dialog box, in the result pane, click **Razor View Import**, and then click **Add**.
-
-30. In the **_ViewImports.cshtml** code window, type the following code:
-```cs
-    @addTagHelper *, ViewComponentsExample
-```
-
-31. In the **Index.cshtml** code window, select the following code:
-```cs
-    @await Component.InvokeAsync("PersonCard", cardIndex);
-```
-
-32. Replace the selected code with the following code:
-```cs
-    <vc:person-card id="cardIndex"></vc:person-card>
-```
-
-33. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
-
-34. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
-    >**Note**: The browser displays the same page.
-     
-35. In **Microsoft Edge**, click **Close**.
 
 36. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
