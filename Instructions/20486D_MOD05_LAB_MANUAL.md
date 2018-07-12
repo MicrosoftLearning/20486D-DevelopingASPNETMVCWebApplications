@@ -352,13 +352,13 @@ The main tasks for this exercise are as follows:
         - Type: **string**
         - Name: **cityName**
 
-10. In the **GetCity** method code block, return a completed task result, the result is the value from **_cities** with the index of  **cityName**.
+10. In the **GetCity** method code block, return a **Task<City>** result using the  **Task.FromResult<City>** method. Pass **_cities[cityName]** as a parameter to the **Task.FromResult<City>** method.
 
-11. In the **InvokeAsync** method code block, save the awaitable return value of **GetCity** by passing it the parameter **cityName** using the following key in the **ViewBag** property:
+11. In the **InvokeAsync** method code block, call the **GetCity** method using the **await** operator. Pass  **cityName** as a parameter to the **GetCity** method.
 
-    - Key: **CurrentCity**
+12. Assign the result of **GetCity** method call to **ViewBag.CurrentCity** property.
 
-12. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
+13. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
 
 ####	Task 2: Add a view component view
 
