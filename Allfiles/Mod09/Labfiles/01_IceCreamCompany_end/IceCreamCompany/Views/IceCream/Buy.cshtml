@@ -4,29 +4,43 @@
     ViewData["Title"] = "Buy";
 }
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-6"><label asp-for="IceCreamFlavors"></label></div>
-        <div class="col-2">Buy bulk</div>
-        <div class="col-2">Total amount</div>
+    <h1>Choose your flavor</h1>
+    <div class="checkout">
+        <div class="row justify-content-center intro-row">
+            <div class="col-4">Ice Cream Flavors</div>
+            <div class="col-2">Buy bulk(lbs)</div>
+            <div class="col-2">Total amount</div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <select class="form-control" id="flavor">
+                    <option>Select</option>
+                    <option>Vanilla Ice Cream with Caramel Ripple and Almonds</option>
+                    <option>Vanilla Ice Cream with Cherry Dark Chocolate Ice Cream</option>
+                    <option>Vanilla Ice Cream with Pistachio</option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" id="quantity">
+                    <option>1</option>
+                    <option>1.5</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+            <div class="col-2">
+                <div id="totalAmount"></div>
+            </div>
+            <div class="col-2">
+                <div>
+                    <img class="imageDisplay" src="~/images/" id="iceCreamImage" alt="">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-6">
-            <select asp-for="IceCreamFlavors" asp-items="Html.GetEnumSelectList<IceCreamFlavor>()">
-            </select>
-            <span asp-validation-for="IceCreamFlavors"></span>
-        </div>
-        <div class="col-2">
-            <select id="iceCreamAmout">
-                <option selected="selected">1</option>
-                <option>1.5</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
-        </div>
-        <div class="col-2">
-            <div id="totalAmount">place holder</div>
-        </div>
-    </div>
+
     <div class="row justify-content-center">
         <div class="col-5">
             <form method="post" enctype="multipart/form-data" asp-action="Buy">
@@ -62,7 +76,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-outline-primary">
+                        <button id="formButton" type="submit" class="btn btn-outline-primary">
                             Make a purchase
                         </button>
                     </div>

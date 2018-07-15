@@ -5,6 +5,11 @@
     text-align: center;
 }
 
+@mixin normalized-image() {
+    width: 100%;
+    height: auto;
+}
+
 div {
     h1 {
         @include normalized-text();
@@ -40,7 +45,7 @@ div {
     button {
         @include normalized-text();
         transition: none;
-        color: #ffffff;
+        color: lighten(#ffffff,90%);
         text-align: inherit;
         line-height: 13px;
         border: 1px solid #d3c0c0;
@@ -61,11 +66,12 @@ div {
     justify-content: space-around;
     align-items: flex-end;
 
-    div {
-        width: 200px;
-        height: 150px;
-        line-height: 150px;
+    .item {
         color: white;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         h3 {
             @include normalized-text();
@@ -75,8 +81,7 @@ div {
 
         div {
             img {
-                min-height: 300px;
-                width: 100%;
+                @include normalized-image();
             }
         }
 
@@ -91,11 +96,11 @@ div {
     }
 }
 
-nav{
-    width:450px;
+nav {
+    width: 450px;
 }
 
-img{
+img {
     height: 35px;
     width: 35px;
 }
@@ -105,3 +110,32 @@ img{
     position: relative;
 }
 
+.row{
+    margin:10px;
+}
+
+
+.imageDisplay {
+    @include normalized-image();
+}
+
+.container {
+    .checkout {
+        border: 1px solid #ccc;
+        box-shadow: 0 0 5px #ccc;
+        padding: 20px;
+        width: 800px;
+        margin: 0 auto;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+
+        .row justify-content-center intro-row {
+            font-weight: bold;
+        }
+    }
+}
+
+.justify-content-center {
+    justify-content: center !important;
+    align-items: center;
+}
