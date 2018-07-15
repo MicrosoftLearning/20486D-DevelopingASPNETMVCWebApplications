@@ -166,7 +166,7 @@ The main tasks for this exercise are as follows:
 
 13. Return the **FileResult** result using the **File** method. Pass **"$@"images&bsol;{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
 
-####	Task 4: Add a Back link to a view
+####	Task 4: Add links to the views using tag helpers
 
 1. In the **ShowDataForCity** view, after the **SPAN** add an **A** element with the following information:
     - asp-action: **ShowCities**
@@ -182,21 +182,18 @@ The main tasks for this exercise are as follows:
     - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
+4. In the **ShowCities** view, remove the **P** element with its content.
 
-####	Task 5: Add a city name as a link to each city
+5. In the  **FOREACH** statement block, add a **H2**.
 
-1. In the **ShowCities** view, remove the **P** element with its content.
-
-2. In the  **FOREACH** statement block, add a **H2**.
-
-3. In the  **H2** element, add an **A** element with the following information:
+6. In the  **H2** element, add an **A** element with the following information:
 
     - Content: **@item.Key**
     - asp-action: **ShowDataForCity**
     - asp-route-cityname: **@item.Key**
 
 
-####	Task 6: Run the application
+####	Task 5: Run the application
 
 1. Save all the changes.
 
