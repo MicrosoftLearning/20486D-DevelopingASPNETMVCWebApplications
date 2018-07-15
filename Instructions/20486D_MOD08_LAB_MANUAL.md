@@ -7,29 +7,150 @@
 Estimated Time: **60 minutes**
 
 ### Preparation Steps
-
+1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. (https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)
 
 ### Exercise 1: Applying a Layout and Link Views to it 
 
 #### Task 1: Create a layout
+1. From **Allfiles\Mod08\Labfiles\01_Zoo_begin** open the **Zoo.sln**.
 
-1. Create a new folder in the **Zoo** project by using the following information:
+2. Create a new folder with the following information:
 
    - Parent folder: **Views**
    - Folder name: **Shared**
 
-2. Add a new layout to the **Zoo** project by using the following information:
+3. Add a new **Razor Layout** by using the following information:
 
-	- File location: **/Views/Shared**
-	- View name: **_Layout**	
+	- Folder: **/Views/Shared**
+	- Name: **_Layout**	
 
+4. In the **_Layout.cshtml** file, in the **BODY** element, add a **UL** element with the following information:
+
+	- Class:**nav**
+
+5. In the **UL** element, add a **LI** element.
+
+6. In the **LI** element, add an **A** element with the following information:
+
+	- Href: **@Url.Action("Index", "Zoo")"**
+	- Content: **Attractions**
+
+7. After the **LI** element, add a **LI** element.
+
+8. In the last **LI** element, add an **A** element with the following information:
+
+	- Href: **@Url.Action("VisitorDetails", "Zoo")"**
+	- Content: **Visitor Info**
+
+9. After the last **LI** element, add a **LI** element.
+
+10. In the last **LI** element, add an **A** element with the following information:
+
+	- Href: **@Url.Action("BuyTickets", "Zoo")"**
+	- Content: **Tickets**
+
+11. After the **UL** element, add a **DIV** element with the following information:
+
+	- Class:**header-container**
+
+12. In the **DIV** element, add an **H1** element with the following information:
+
+	- Class:**content**
+	- Content: **Welcome to Zoo Center**
+
+13. After the **H1** element, add a **DIV** element with the following information:
+
+	- Class:**slider-buttons**
+
+14. In the **DIV** element, add a **IMG** element with the following information:
+
+	- Class:**prev**
+    - Src: **~/images/prevArrow.png**
+    - Onclick: **prevImage()**
+
+
+15. Afteer the **IMG** element, add a **IMG** element with the following information:
+
+	- Class:**next**
+    - Src: **~/images/nextArrow.png**
+    - Onclick: **nextImage()**
 
 
 #### Task 2: Add a view and link it to a layout
 
+1. In the **ZooSiteController** class, right-click on the **Index** action name, and then click **Add View**. 
+
+2. Create a new view using the **Add MVC View** dialog box, with the following information:
+
+    - View Name: **Index**
+    - Template: **Empty (without model)**
+    - Create as Partial View: **False**
+    - Use a layout page: **True**
+    - Layout Page: **_Layout.cshtml**
+
+3. Delete the contents of the **Index.cshtml** view.
+
+4. Add a **@model** directive with the following information:
+
+   - Type: **IEnumerable&lt;Zoo.Models.Photo&gt;**
+
+5.  Add a **H1** element with the following information:
+
+	- Class:**main-title**
+    - Content: **Zoo Attractions**
+
+6.  Add a **DIV** element with the following information:
+
+	- Class:**container**
+
+7. In the **DIV** element, create a **FOREACH** statement, with the following information:
+
+	- Variable Type: **var**
+	- Variable Name: **item**
+	- Collection: **Model**
+
+8. In the **FOREACH** statement block, create an **IF** statement that checks that the value of **item.PhotoFileName** is not **NULL**.
+
+9. In the **IF** statement, add a **DIV** element with the following information:
+
+	- Class:**image-wrapper**
+
+10. In the **DIV** element, add a **IMG** element with the following information:
+
+	- Class:**photo-display-img**
+    - Src: **@Url.Action("GetImage", "Zoo", new { PhotoId = item.PhotoID })**
+
+11. After the **IF** statement, add a **H3** element with the following information:
+
+	- Class:**display-picture-title**
+    - Content: **@Html.DisplayFor(modelItem  => item.Title)**
+
+12. Add a **DIV** element.
+
+13. In the **DIV** element, add a **SPAN** element with the following information:
+
+	- Class:**display**
+    - Content: **@Html.DisplayFor(model => item.Description)**
+
 #### Task 3: Add _ViewStart.cshtml
 
+1. Create a new **Razor View Start** file, with the following information:
+
+    - Name: **_ViewStart**
+    - Folder: **Views**
+
+2. At the beginning of the **Index.cshtml** view, remove the the **Layout** initialization.
+
+
 #### Task 4: Add existing views to the layout
+1.  Add exiting views with the following information:
+    - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+    
+
+Under **Views**, right-click on **ZooSite**. Click **Add**, and then click **Existing Item**.
+
+In the Add Existing Item - Zoo dialog box, go to Allfiles\Mod08\Labfiles\ZooViews, select all the .cshtml files, and then click Add.
+
 
 #### Task 5: Add sections to layout and views
 
