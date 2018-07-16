@@ -24,11 +24,6 @@ paths.compiledCssFileName = "main.min.css";
 paths.destinationCssFolder = paths.webroot + "css/";
 paths.bootstrapCss = paths.nodeModules + "bootstrap/dist/css/bootstrap.css";
 paths.vendorCssFileName = "vendor.min.css";
-
-gulp.task("copy-js-file", function () {
-    return gulp.src(paths.jqueryjs)
-        .pipe(gulp.dest(paths.destinationJsFolder));
-});
  
 gulp.task("min-vendor:js", function () {
     return gulp.src(paths.vendorJsFiles)
