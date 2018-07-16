@@ -1,10 +1,9 @@
-/// <binding ProjectOpened='sass-watcher, js-watcher' />
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var watch = require('gulp-watch-sass');
 var sass = require('gulp-sass');
 var cssmin = require('gulp-cssmin');
-var watch = require('gulp-watch-sass');
 
 var paths = {
     webroot: "./wwwroot/",
@@ -12,19 +11,19 @@ var paths = {
 };
 
 paths.jqueryjs = paths.nodeModules + "jquery/dist/jquery.js";
-paths.destinationCssFolder = paths.webroot + "css/";
-paths.destinationJsFolder = paths.webroot + "lib/";
-paths.bootstrapCss = paths.nodeModules + "bootstrap/dist/css/bootstrap.css";
-paths.bootstrapjs = paths.nodeModules + "bootstrap/dist/js/bootstrap.js";
 paths.popperjs = paths.nodeModules + "popper.js/dist/umd/popper.js";
-paths.vendorJsFileName = "vendor.min.js";
-paths.vendorCssFileName = "vendor.min.css";
+paths.bootstrapjs = paths.nodeModules + "bootstrap/dist/js/bootstrap.js";
 paths.vendorJsFiles = [paths.jqueryjs, paths.popperjs, paths.bootstrapjs];
+paths.destinationJsFolder = paths.webroot + "lib/";
+paths.vendorJsFileName = "vendor.min.js";
 paths.JsFiles = "./Scripts/*.js";
 paths.JsFileName = "script.min.js";
-paths.destinationMyJsFolder = paths.webroot + "script/";
+paths.destinationExistingJsFolder = paths.webroot + "script/";
 paths.sassFiles = "./Styles/*.scss";
 paths.compiledCssFileName = "main.min.css";
+paths.destinationCssFolder = paths.webroot + "css/";
+paths.bootstrapCss = paths.nodeModules + "bootstrap/dist/css/bootstrap.css";
+paths.vendorCssFileName = "vendor.min.css";
 
 gulp.task("copy-js-file", function () {
     return gulp.src(paths.jqueryjs)
@@ -42,7 +41,7 @@ gulp.task("min:js", function () {
     return gulp.src(paths.JsFiles)
         .pipe(concat(paths.JsFileName))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.destinationMyJsFolder));
+        .pipe(gulp.dest(paths.destinationExistingJsFolder));
 });
 
 gulp.task("min:scss", function () {
@@ -60,11 +59,13 @@ gulp.task("min-vendor:css", function () {
         .pipe(gulp.dest(paths.destinationCssFolder));
 });
 
+gulp.task("js-watcher", function () {
+    gulp.watch('./Scripts/*.js', ["min:js"]);
+});
+
 gulp.task("sass-watcher", function () {
     gulp.watch('./Styles/*.scss', ["min:scss"]);
 });
 
-gulp.task("js-watcher", function () {
-    gulp.watch('./Scripts/*.js', ["min:js"]);
-});
+
 

@@ -96,29 +96,6 @@ div {
     }
 }
 
-nav {
-    width: 450px;
-}
-
-img {
-    height: 35px;
-    width: 35px;
-}
-
-.navbar-nav > li {
-    float: left;
-    position: relative;
-}
-
-.row{
-    margin:10px;
-}
-
-
-.imageDisplay {
-    @include normalized-image();
-}
-
 .container {
     .checkout {
         border: 1px solid #ccc;
@@ -138,4 +115,26 @@ img {
 .justify-content-center {
     justify-content: center !important;
     align-items: center;
+}
+
+nav {
+    width: 450px;
+}
+
+img {
+    height: 35px;
+    width: 35px;
+}
+
+.navbar-nav > li {
+    float: left;
+    position: relative;
+}
+
+.row {
+    margin: 10px;
+}
+
+.imageDisplay {
+    @include normalized-image();
 }
