@@ -200,7 +200,7 @@ The main tasks for this exercise are as follows:
 
 5. Stop debugging.
 
->**Results** : After completing this exercise, you will be able to create MVC controllers that implement common actions for the **City** model class in the application. 
+>**Results**: After completing this exercise, you will be able to create MVC controllers that implement common actions for the **City** model class in the application. 
 
 ### Exercise 2: Configuring Routes by Using the Routing Table
 
@@ -272,7 +272,7 @@ The main tasks for this exercise are as follows:
 
 4. Stop debugging.
 
->**Results** : After completing this exercise, you will be able to register new custom routes in the request pipeline for controllers in the application.
+>**Results**: After completing this exercise, you will be able to register new custom routes in the request pipeline for controllers in the application.
 
 ### Exercise 3: Configuring Routes Using Attributes
 
@@ -508,7 +508,7 @@ The main tasks for this exercise are as follows:
 
     >**Note:** The text file displays the new filter result.
 
->**Results** : After completing this exercise, you should have created an action filter class that logs the details of actions, controllers, and parameters to external file whenever an action is called.
+>**Results**: After completing this exercise, you should have created an action filter class that logs the details of actions, controllers, and parameters to external file whenever an action is called.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

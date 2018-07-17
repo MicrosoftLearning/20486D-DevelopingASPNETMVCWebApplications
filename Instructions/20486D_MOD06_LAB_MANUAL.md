@@ -284,7 +284,7 @@ The main tasks for this exercise are as follows:
 
 15. After the **IF** statement block,  return the **ViewResult** result using the **View** method, and pass **butterfly** as a parameter.
 
->**Results** : After completing this exercise, you will be able to create a model, pass it to the view, and use it to display the data.
+>**Results**: After completing this exercise, you will be able to create a model, pass it to the view, and use it to display the data.
 
 ### Exercise 2: Working with Forms
 

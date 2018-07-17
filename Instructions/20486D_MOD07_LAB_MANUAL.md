@@ -24,7 +24,7 @@ Estimated Time: **60 minutes**
 
 ### Preparation Steps
 
-1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**).
+1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 ### Exercise 1: Adding Entity Framework Core 
 
@@ -51,12 +51,12 @@ The main tasks for this exercise are as follows:
 
 1. From **Allfiles\Mod04\Labfiles\01_WorldJourney_begin**, open the **Cupcakes.sln**.
 
-2. Create a new model with the following information:
+2. Create a new class with the following information:
 
     - Name: **Cupcake**
     - Folder: **Models**
 
-3. In the **Cupcake** class, add **using** statements for the following namespaces:
+3. In the **Cupcake** class, add **USING** statements for the following namespaces:
 
    - **Microsoft.AspNetCore.Http**
    - **System.ComponentModel.DataAnnotations**
@@ -194,7 +194,7 @@ The main tasks for this exercise are as follows:
      - Name: **Bakery**
      - Folder: **Models**
 
-29. In the **Bakery** class, add a **using** statement for the following namespace:
+29. In the **Bakery** class, add a **USING** statement for the following namespace:
 
     - **System.ComponentModel.DataAnnotations**
 
@@ -263,7 +263,7 @@ The main tasks for this exercise are as follows:
     - Name: **CupcakeContext**
     - Folder: **Data**
 
-3. Add **using** statements for the following namespaces:
+3. Add **USING** statements for the following namespaces:
 
    - **Cupcakes.Models**
    - **Microsoft.EntityFrameworkCore**
@@ -293,7 +293,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Set up Entity Framework to use an In Memory database
 
-1. In the **Startup** class, add **using** statements  for the following namespaces:
+1. In the **Startup** class, add **USING** statements  for the following namespaces:
 
    - **Microsoft.Extensions.Configuration**
    - **Cupcakes.Data**
@@ -453,7 +453,7 @@ The main tasks for this exercise are as follows:
      - Name:  **ICupcakeRepository**
      - Scope: **public**
 
-3. In the **ICupcakeRepository** interface, add a **using** statement for the following namespaces:
+3. In the **ICupcakeRepository** interface, add a **USING** statement for the following namespaces:
 
    - **Cupcakes.Models**
 
@@ -504,7 +504,7 @@ The main tasks for this exercise are as follows:
    - Scope: **public**
 
 
-11. In the **CupcakeRepository** class, add **using** statements for the following namespaces:
+11. In the **CupcakeRepository** class, add **USING** statements for the following namespaces:
 
       - **System.IO**
       - **Cupcakes.Data**  
@@ -628,7 +628,7 @@ The main tasks for this exercise are as follows:
 
 40. In the **SaveChanges** method, call the **SaveChanges** method of the **_context** field.
 
-41. In the **Startup** class, add **using** statement for the following namespace:
+41. In the **Startup** class, add **USING** statement for the following namespace:
 
       - **Cupcakes.Repositories**
 
@@ -640,7 +640,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Update a controller to use a repository
 
-1. In the **CupcakeController** class, add **using** statements for the following namespaces:
+1. In the **CupcakeController** class, add **USING** statements for the following namespaces:
 
       - **Microsoft.AspNetCore.Hosting**
         **Cupcakes.Models**
@@ -674,7 +674,7 @@ The main tasks for this exercise are as follows:
 6. Initialize the **_environment** field with the value of the **environment** parameter.
 
 
-#### Task 3: Use Entity Framework to retrieve data.
+#### Task 3: Use Entity Framework to retrieve data
 
 1. Edit the code in the **Index** action to return the **ViewResult** result using the **View** method. Pass **_repository.GetCupcakes()** as a parameter to the **View** method.
 
@@ -712,7 +712,7 @@ The main tasks for this exercise are as follows:
     - Key: **BakeryID**
     - Value: **new SelectList(bakeries.AsNoTracking(), "BakeryId", "BakeryName", selectedbakery)**
 
-#### Task 4: Manipulating data using Entity Framework. 
+#### Task 4: Manipulating data using Entity Framework
 
 1. In the **CupcakeController** class, add a method for the **Create** action with the following information:
 
@@ -831,13 +831,13 @@ The main tasks for this exercise are as follows:
 
 31. Return the **RedirectToActionResult** result using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
 
-#### Task 5: Run the application.
+#### Task 5: Run the application
 
 1. Save all the changes.
 
 2. Start debugging the application..
 
-3. In the **Microsoft Edge** window, click the **Add Cupcakes** button.
+3. In **Microsoft Edge**, click **Add Cupcakes**.
 
 4. On the **Add Cupcake to The Shop** page, create a new cupcake with the following credentials:
 
@@ -845,28 +845,28 @@ The main tasks for this exercise are as follows:
     - Cupcake Type: **_&lt;A cupcake type of your choice&gt;_**
     - Description: **_&lt;A cupcake description of your choice&gt;_**
     - Gluten Free: **_&lt;Choose if the cupcake is gluten-free&gt;_**
-    - Price: **_&lt;A cupcake price of your choice&gt;_**
+    - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
     - Cupcake Picture: **_&lt;A cupcake picture of your choice&gt;_**
 
-5. Click on the **Submit** button.
+5. Click **Submit**.
 
 6. On the **Cupcakes Shop** page, verify the newly submitted cupcake details.
 
-7. Select a cupcake of your choice and click on **Details**.
+7. Select a cupcake of your choice, and click **Details**.
 
-8. Verify the cupcake details and then click **Back to List**.
+8. Verify the cupcake details, and then click **Back to List**.
 
-9. Select a cupcake of your choice, and then click on **Edit**.
+9. Select a cupcake of your choice, and then click **Edit**.
 
 10. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
 
-    - Price: **_&lt;A cupcake price of your choice&gt;_**
+    - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
 
-11. On the **Cupcakes Shop** page, select the cupcake you edited, and click on **Details**.
+11. On the **Cupcakes Shop** page, select the cupcake you edited, and then click on **Details**.
 
-12. Verify the newly edited cupcake details and then click **Back to List**.
+12. Verify the newly edited cupcake details, and then click **Back to List**.
 
-13. On the **Cupcakes Shop** page, select a cupcake of your choice, and click **Delete**.
+13. On the **Cupcakes Shop** page, select a cupcake of your choice, and then click **Delete**.
 
 14. On the **Cupcakes Delete** page, click **Delete**.
 
@@ -897,7 +897,7 @@ The main tasks for this exercise are as follows:
 
 3. Use Migrations.
 
-#### Task 1: Connecting to a Microsoft SQL Server.
+#### Task 1: Connecting to a Microsoft SQL Server
 
 1. In the **Startup** class, in the **ConfigureServices** method, replace the lambda expression parameter in the **AddDbContext** method call with:  *options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**.
 
@@ -916,7 +916,7 @@ The main tasks for this exercise are as follows:
 8. Call the **Add** method of the **_context** field. Pass **cupcake** as a parameter to the **Add** method.
 
 
-#### Task 2: Specifying a connection string in a configuration file. 
+#### Task 2: Specifying a connection string in a configuration file
 
 1. Create a new top-level **App Setting** file with the following information:
      - File Name: **appsettings.json**
@@ -924,7 +924,7 @@ The main tasks for this exercise are as follows:
 
 2. In the **App Settings** File, change the **Database** property value to **BakeriesDb**
 
-#### Task 3: Use Migrations.
+#### Task 3: Use Migrations
 
 1. In the **Cupcakes.csproj** file, at the end of the **Project** element, add a **ItemGroup** element. 
 
@@ -934,17 +934,17 @@ The main tasks for this exercise are as follows:
 
 2. Save all the changes.
 
-3. In the Solution Explorer, click on **Open Folder in File Explorer**.
+3. In **Solution Explorer**, click on **Open Folder in File Explorer**.
 
 4. In the address bar type **cmd**, and press Enter.
 
 5. In the **Command Line** window, type the following command: **dotnet ef**.
 
-    >**Note:** Verify that the Entity Framework tools for the command-line interface provided correctly in Microsoft.EntityFrameworkCore.Tools.DotNet.
+    >**Note:** Verify that the Entity Framework tools for the command-line interface provided correctly in **Microsoft.EntityFrameworkCore.Tools.DotNet**.
 
 6. Type the following command: **dotnet ef dbcontext info**.
 
-    >**Note:** Verify that the **Database name** is identical to the name in the appsettings.json file.
+    >**Note:** Verify that the **Database name** is identical to the name in the **appsettings.json** file.
 
 7.  Type the following command: **dotnet ef database drop**.
 
@@ -953,19 +953,19 @@ The main tasks for this exercise are as follows:
 
 9. Type the following command: **dotnet ef migrations add InitialCreate**.
 
-    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, the newly added folder **Migrations** contains two cs files.
+    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, in the **Solution Explorer**, that the newly added folder **Migrations** contains two cs files.
 
 10. Type the following command: **dotnet ef database update**.
 
-    >**Note:** In the **SQL Server Object Explorer** pane of the **Cupcakes - Microsoft Visual Studio** window, verify the **BakeriesDb **tables..
+    >**Note:** In the **SQL Server Object Explorer** pane of the **Cupcakes - Microsoft Visual Studio** window, verify the **BakeriesDb **tables.
 
-#### Task 4: Run the application.
+#### Task 4: Run the application
 
 1. Save all the changes.
 
-2. Start debugging the application..
+2. Start debugging the application.
 
-3. In the **Microsoft Edge** window, click the **Add Cupcakes** button.
+3. In **Microsoft Edge**, click **Add Cupcakes**.
 
 4. On the **Add Cupcake to The Shop** page, create a new cupcake with the following credentials:
 
@@ -973,28 +973,28 @@ The main tasks for this exercise are as follows:
     - Cupcake Type: **_&lt;A cupcake type of your choice&gt;_**
     - Description: **_&lt;A cupcake description of your choice&gt;_**
     - Gluten Free: **_&lt;Choose if the cupcake is gluten-free&gt;_**
-    - Price: **_&lt;A cupcake price of your choice&gt;_**
+    - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
     - Cupcake Picture: **_&lt;A cupcake picture of your choice&gt;_**
 
-5. Click on the **Submit** button.
+5. Click **Submit**.
 
 6. On the **Cupcakes Shop** page, verify the newly submitted cupcake details.
 
-7. Select a cupcake of your choice and click on **Details**.
+7. Select a cupcake of your choice, and click on **Details**.
 
-8. Verify the cupcake details and then click **Back to List**.
+8. Verify the cupcake details, and then click **Back to List**.
 
-9. Select a cupcake of your choice, and then click on **Edit**.
+9. Select a cupcake of your choice, and then click **Edit**.
 
 10. On the **Edit Cupcakes** page, edit a cupcake with the following credential:
 
     - Price: **_&lt;A cupcake price of your choice&gt;_**
 
-11. On the **Cupcakes Shop** page, select the cupcake you edited, and click on **Details**.
+11. On the **Cupcakes Shop** page, select the cupcake you edited, and then click **Details**.
 
 12. Verify the newly edited cupcake details and then click **Back to List**.
 
-13. On the **Cupcakes Shop** page, select a cupcake of your choice, and click **Delete**.
+13. On the **Cupcakes Shop** page, select a cupcake of your choice, and then click **Delete**.
 
 14. On the **Cupcakes Delete** page, click **Delete**.
 
@@ -1002,9 +1002,9 @@ The main tasks for this exercise are as follows:
 
 16. Close **Microsoft Edge.**
 
-17. **Stop debugging**, and **close** Microsoft Visual Studio.
+17. **Stop debugging** and close **Microsoft Visual Studio**.
 
->**Results**: After completing this exercise, you should have created a Cupcakes shop application in which users can submit, edit, delete and View cupcales details.
+>**Results**: After completing this exercise, you should have created a cupcakes shop application in which users can submit, edit, delete and view cupcales details.
 
 ©2016 Microsoft Corporation. All rights reserved.
 
