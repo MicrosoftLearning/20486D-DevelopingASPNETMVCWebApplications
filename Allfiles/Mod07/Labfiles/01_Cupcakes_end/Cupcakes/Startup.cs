@@ -24,10 +24,10 @@ namespace Cupcakes
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<ICupcakeRepository, CupcakeRepository>();
+
             services.AddDbContext<CupcakeContext>(options =>
                  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddTransient<ICupcakeRepository, CupcakeRepository>();
 
             services.AddMvc();
         }
