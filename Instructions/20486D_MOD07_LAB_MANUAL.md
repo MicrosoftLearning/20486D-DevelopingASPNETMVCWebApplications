@@ -316,8 +316,8 @@ The main tasks for this exercise are as follows:
 
    - Type: **CupcakeContext**
 
-6. Pass a **lamda expression** as a parameter to the **AddDbContext** method with the following information:
-   - Lamda Expression: **options =>
+6. Pass a **lambda expression** as a parameter to the **AddDbContext** method with the following information:
+   - Lambda Expression: **options =>
            options.UseInMemoryDatabase("CupcakesDb")**
 
 7. Change the **Configure** method signature to accept the following parameters:
@@ -418,7 +418,7 @@ The main tasks for this exercise are as follows:
             - ImageMimeType:  **"image/jpeg"**
             - ImageName :  **"turquoise-cupcake.jpg"**
 
->**Results** : After completing this exercise, you will be able to add Entity Framework Core to the Cupcake Shop application. 
+>**Results**: After completing this exercise, you will be able to add Entity Framework Core to the Cupcake Shop application. 
 
 ### Exercise 2: Use Entity Framework Core to Retrieve and Store Data
 
@@ -876,7 +876,7 @@ The main tasks for this exercise are as follows:
 
 17. **Stop debugging**.
 
->**Results** : After completing this exercise, you will be able to use Entity Framework Core to retrieve and store data through a Repository in the **CupcakeController**. 
+>**Results**: After completing this exercise, you will be able to use Entity Framework Core to retrieve and store data through a Repository in the **CupcakeController**. 
 
 ### Exercise 3: Use Entity Framework Core to Connect to Microsoft SQL Server
 
@@ -899,7 +899,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Connecting to a Microsoft SQL Server.
 
-1. In the **Startup** class, in the **ConfigureServices** method, replace the lamda expression parameter in the **AddDbContext** method call with:  *options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**.
+1. In the **Startup** class, in the **ConfigureServices** method, replace the lambda expression parameter in the **AddDbContext** method call with:  *options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**.
 
 2. In the **Configure** method, remove the **cupcakeContext** parameter from the method signature. 
 
