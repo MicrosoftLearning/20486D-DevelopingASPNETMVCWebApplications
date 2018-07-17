@@ -415,7 +415,7 @@ The main tasks for this exercise are as follows:
    - Class: **display-label**
    - Content: 
        - Helper: **Html.DisplayNameFor**
-       - Lamda expression: **model => item.ButterflyFamily**
+       - Lambda expression: **model => item.ButterflyFamily**
 
 9. Add a **BR** element. 
 
@@ -424,7 +424,7 @@ The main tasks for this exercise are as follows:
     - Class: **display-field**
     - Content: 
        - Helper: **Html.DisplayFor**
-       - Lamda expression: **model => item.ButterflyFamily**
+       - Lambda expression: **model => item.ButterflyFamily**
 
 11. After the **DIV** element, add a new **DIV** element with the following information:
 
@@ -435,7 +435,7 @@ The main tasks for this exercise are as follows:
     - Class: **display-label**
     - Content: 
        - Helper: **Html.DisplayNameFor**
-       - Lamda expression: **model => item.Characteristics**
+       - Lambda expression: **model => item.Characteristics**
 
 
 13. Add another **P** element with the following information:
@@ -443,7 +443,7 @@ The main tasks for this exercise are as follows:
     - Class: **display-field**
     - Content: 
        - Helper: **Html.DisplayFor**
-       - Lamda expression: **model => item.Characteristics**
+       - Lambda expression: **model => item.Characteristics**
 
 14. After the **DIV** element, add a new **DIV** element.
 
@@ -452,14 +452,14 @@ The main tasks for this exercise are as follows:
     - Class: **display-label**
     - Content: 
        - Helper: **Html.DisplayNameFor**
-       - Lamda expression: **model => item.Quantity**
+       - Lambda expression: **model => item.Quantity**
 
 16. Add another **P** element with the following information:
 
     - Class: **display-field**
     - Content: 
        - Helper: **Html.DisplayFor**
-       - Lamda expression: **model => item.Quantity**
+       - Lambda expression: **model => item.Quantity**
 
 17. After the **DIV** element, add a new **DIV** element.
 
@@ -468,14 +468,14 @@ The main tasks for this exercise are as follows:
     - Class: **display-label**
     - Content: 
        - Helper: **Html.DisplayNameFor**
-       - Lamda expression: **model => item.CreatedDate**
+       - Lambda expression: **model => item.CreatedDate**
 
 19. Add another **P** element with the following information:
 
     - Class: **display-field**
     - Content: 
        - Helper: **Html.DisplayFor**
-       - Lamda expression: **model => item.CreatedDate**
+       - Lambda expression: **model => item.CreatedDate**
 
 
 #### Task 4: Add Form Helpers
