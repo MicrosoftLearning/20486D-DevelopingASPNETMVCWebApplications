@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+</head>
+<body>
+    <h1>Employees</h1>
+    <p>Please select an employee from the list:</p>
+    @foreach (string currentName in ViewBag.EmployeeNames)
+    {
+        <div>
+            <a asp-action="Details" asp-route-employeename="@currentName">@currentName</a>
+        </div>
+    }
+</body>
+</html>

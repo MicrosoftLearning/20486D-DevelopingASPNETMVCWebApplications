@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowCities</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+</head>
+<body>
+    <h1>Select City</h1>
+    @foreach (var item in ViewBag.Cities)
+    {
+        @await Component.InvokeAsync("City", item.Key)
+    }
+</body>
+</html>

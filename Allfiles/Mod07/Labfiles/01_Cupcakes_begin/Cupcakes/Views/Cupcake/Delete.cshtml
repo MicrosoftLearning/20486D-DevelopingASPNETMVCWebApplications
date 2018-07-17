@@ -1,0 +1,61 @@
+﻿@model Cupcakes.Models.Cupcake
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+    <link type="text/css" rel="stylesheet" href="~/css/cupcakes-styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h3 class="into">Are you sure you want to delete this?</h3>
+        <div class="photo-index-card-details">
+            <h3 class="display-picture-title">
+                "@Html.DisplayFor(modelItem => modelItem.CupcakeType)"
+            </h3>
+            @if (Model.ImageName != null)
+            {
+                <div class="photo-display">
+                    <img class="photo-display-img" src="@Url.Action("GetImage", "Cupcake", new { Id = Model.CupcakeId })" />
+                </div>
+            }
+            <div>
+                <p class="display-label">
+                    @Html.DisplayNameFor(model => model.Description)
+                </p>
+                <br />
+                <p class="display-field">
+                    @Html.DisplayFor(model => model.Description)
+                </p>
+            </div>
+            <div>
+                <p class="display-label">
+                    @Html.DisplayNameFor(model => model.GlutenFree)
+                </p>
+                <p class="display-field">
+                    @Html.DisplayFor(model => model.GlutenFree)
+                </p>
+            </div>
+            <div>
+                <p class="display-label">
+                    @Html.DisplayNameFor(model => model.Price)
+                </p>
+                <p class="display-field">
+                    @Html.DisplayFor(model => model.Price)
+                </p>
+            </div>
+        </div>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="CupcakeId" />
+            <input type="submit" value="Delete" /> |
+            <a asp-action="Index">Back to List</a>
+        </form>
+    </div>
+</body>
+</html>

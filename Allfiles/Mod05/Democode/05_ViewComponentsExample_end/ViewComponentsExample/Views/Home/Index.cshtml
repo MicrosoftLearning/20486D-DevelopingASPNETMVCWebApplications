@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="css\style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Person Card List</h1>
+    <table>
+        @for (int rowIndex = 0; rowIndex < ViewBag.Rows; rowIndex++)
+        {
+            <tr>
+                @for (int columnIndex = 0; columnIndex < ViewBag.Columns; columnIndex++)
+                {
+                    int cardIndex = columnIndex + (rowIndex * ViewBag.Columns);
+                    @await Component.InvokeAsync("PersonCard", cardIndex);
+                }
+            </tr>
+        }
+    </table>
+</body>
+</html>
