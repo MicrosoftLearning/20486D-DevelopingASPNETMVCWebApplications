@@ -209,6 +209,7 @@ The main tasks for this exercise are as follows:
 
 6. Stop debugging.
 
+>**Result**: At the end of this exercise, you will be able to add a **Razor view** templates to an **MVC** application, passing data from the **Controller** to the **View** using **ViewBag**, and navigate between them using **URL.Action** and **Tag Helpers**. 
 
 ##	Exercise 2: Adding a Partial View
 
@@ -284,6 +285,7 @@ The main tasks for this exercise are as follows:
 
 5. Stop debugging.
 
+>**Result**: At the end of thise exercise, you will be able to add and render **Partial Views** in **Views**, and inject and use services using the **@Inject** directive.
 
 ##	Exercise 3: Adding a View Component
 
@@ -411,6 +413,8 @@ The main tasks for this exercise are as follows:
 4. Close **Microsoft Edge**.
 
 5. Stop debugging and close the **Visual Studio**.
+
+>**Result**: At the end of this exercise, you will be able to create **View Components**, and invoke and render **View Components** from a **View**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
