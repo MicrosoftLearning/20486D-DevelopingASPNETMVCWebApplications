@@ -141,29 +141,64 @@ Estimated Time: **60 minutes**
 
 2. At the beginning of the **Index.cshtml** view, remove the the **Layout** initialization.
 
-
 #### Task 4: Add existing views to the layout
-1.  Add exiting views with the following information:
-    - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
-    
 
-Under **Views**, right-click on **ZooSite**. Click **Add**, and then click **Existing Item**.
+1. Copy the exiting **Views** to the **Zoo** project, with the following information:
 
-In the Add Existing Item - Zoo dialog box, go to Allfiles\Mod08\Labfiles\ZooViews, select all the .cshtml files, and then click Add.
+    - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
+	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\Views**
 
 
 #### Task 5: Add sections to layout and views
 
+1. In the **_Layout.cshtml** file, after the **DIV** element with **@RenderBody()** content, call the **RenderSection** method. 
+
+2. Pass **"Scripts"** and **required: false** as parameters to the **RenderSection** method.
+
+
 #### Task 6: Run the application
 
+1. Save all the changes.
 
+2. Start debugging the application.
 
+3. In the menu bar, click **Visitor Info**.
+
+4. In the menu bar, click **Tickets**.
+
+5. Close the **Microsoft Edge** window.
+
+6. Stop Debugging.
 
 ### Exercise 2: Using CSS 
 
 #### Task 1: Add existing CSS file to the project
 
+1. Create a new folder with the following information:
+
+	- Folder name: **css**
+	- Parent folder: **wwwroot**
+
+2. Copy the **zoo-style.css*** file to the **Zoo** project, with the following information:
+
+	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
+	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\wwwroot\css**
+
 #### Task 2: Link the layout to the CSS file
+
+1. In the **_Layout.cshtml** file, in the **HEAD** element, add a **LINK** element with the following information:
+
+	- Type: **text/css**
+	- Rel: **stylesheet**
+	- Href: **css/zoo-style..css**
+
+2. In the **zoo-style.css** file, after the **.slider-buttons img** selector code block, add a **.nav** selector with the following information:
+
+	- Properties:
+		- list-style-type: **text/css**
+		- Rel: **stylesheet**
+		- Href: **css/zoo-style..css**
+
 
 #### Task 3: Style the menu
 
