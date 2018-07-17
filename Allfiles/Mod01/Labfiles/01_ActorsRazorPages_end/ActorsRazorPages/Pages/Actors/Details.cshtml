@@ -1,5 +1,4 @@
 ﻿@page
-
 @model ActorsRazorPages.Pages.Actors.DetailsModel
 @{
     ViewData["Title"] = "Details";
@@ -39,10 +38,11 @@
     <div style="padding:10px;">
         @if (Model.Actor.ImageName != "")
         {
-            <img src="~/images/@Model.Actor.ImageName" alt="Sample Image" height="300"  />
+            <img src="~/images/@Model.Actor.ImageName" alt="Sample Image" height="300" />
         }
     </div>
 </div>
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>
+
