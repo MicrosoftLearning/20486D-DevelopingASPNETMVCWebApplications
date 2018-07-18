@@ -33,7 +33,7 @@
 
 11. In the **Microsoft Visual Studio** dialog box, click **Yes**.
 
-11. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **Tools** menu, click **NuGet Package Manager**, and then click **Package Manager Console**.
+11. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **Tools** menu, point to **NuGet Package Manager**, and then click **Package Manager Console**.
 
 12. In the **Package Manager Console** window, type the following text, and then press Enter.
 ```
@@ -59,7 +59,7 @@
     using ProductsWebsite.Models;
 ```
 
-19. In the **FakeProductRepository.cs** code window, locate the following code:
+19. In the **FakeProductRepository.cs** code window, select the following code:
 ```cs
     class FakeProductRepository
 ```
@@ -103,7 +103,7 @@
     using ProductsWebsite.Tests.Mock;
 ```
 
-25. In the **ProductControllerTest.cs** code window, locate the following code:
+25. In the **ProductControllerTest.cs** code window, select the following code:
 ```cs
     public void TestMethod1()
     {
@@ -154,7 +154,7 @@
 
 31. In the **UnitTestingExample - Microsoft Visual Studio** window, In **Solution Explorer**, under **ProductsWebsite**, expand **Controllers**, and then click **ProductController.cs**. 
 
-32. In the **ProductController.cs** code window, locate the following code:
+32. In the **ProductController.cs** code window, select the following code:
 ```cs
     var product = products.Where(p => p.Id != id).FirstOrDefault();
 ```
