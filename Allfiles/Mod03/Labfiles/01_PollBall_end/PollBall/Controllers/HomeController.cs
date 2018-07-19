@@ -19,15 +19,22 @@ namespace PollBall.Controllers
 
         public IActionResult Index()
         {
-            StringBuilder results = new StringBuilder();
-            SortedDictionary<SelectedGame, int> voteList = _pollResults.GetVoteResult();
-
-            foreach (var gameVotes in voteList)
+            if (Request.Query.ContainsKey("submitted"))
             {
-                results.Append($"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}");
-            }
+                StringBuilder results = new StringBuilder();
+                SortedDictionary<SelectedGame, int> voteList = _pollResults.GetVoteResult();
 
-            return Content(results.ToString());
+                foreach (var gameVotes in voteList)
+                {
+                    results.Append($"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}");
+                }
+
+                return Content(results.ToString());
+            }
+            else
+            {
+                return Redirect("poll-questions.html");
+            }
         }
     }
 }
