@@ -525,7 +525,7 @@ The main tasks for this exercise are as follows:
 
 1. In **Startup** class, in the **Configure** method, remove the **gameVotes** variable, the **FOREACH** statement and its content.
 
-2. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Thank you for submitting the poll."** as a parameter to the **WriteAsync** method.
+2. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Thank you for submitting the poll. You may look at the Poll Results <a href='/?submitted=true'>Here</a>."** as a parameter to the **WriteAsync** method.
 
 3. In **HomeController** class, add **USING** statements for the following namespaces:
     - **PollBall.Services**
@@ -572,8 +572,6 @@ The main tasks for this exercise are as follows:
 18. After the **IF** statment, add  an **ELSE** statemet.
 
 19. Inside the **ELSE** statment, return the **RedirectResult** result using the **Redirect** method. Pass **"poll-questions.html"** as a parameter to the **Redirect** method.
-
-1. In **Startup** class, in the **app.Use** middleware, in the **context.Response.WriteAsync** method, replace the parameter passed to **"Thank you for submitting the poll. You may look at the Poll Results <a href='/?submitted=true'>Here</a>."**
 
 ####	Task 5: Run the application
 
