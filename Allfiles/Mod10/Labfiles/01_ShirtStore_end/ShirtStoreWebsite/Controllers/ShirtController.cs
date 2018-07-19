@@ -35,9 +35,17 @@ namespace ShirtStoreWebsite.Controllers
 
         public IActionResult Delete(int id)
         {
-            _repository.RemoveShirt(id);
-            _logger.LogDebug($"A shirt with id {id} was removed successfully.");
-            return RedirectToAction("Index");
+            try
+            {
+                _repository.RemoveShirt(id);
+                _logger.LogDebug($"A shirt with id {id} was removed successfully.");
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"An error occured while trying to delete shirt with id of {id}.");
+                throw ex;
+            }
         }
     }
 }
