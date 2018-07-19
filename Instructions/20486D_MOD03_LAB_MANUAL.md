@@ -544,61 +544,62 @@ The main tasks for this exercise are as follows:
 
 7. Remove the content of the **Index** action.
 
-8. In the **Index** action, add a variable named **results** of type **StringBuilder**.
 
-9. Initialize the **results** varaible using the **StringBuilder** constructor.
+8. In the **Index** action, add an **IF** statemet that checks if the  **Request.Query.ContainsKey** method returns **TRUE**. Pass **"submitted"** as a parameter to the **ContainsKey** method. 
 
-10. Add a variable named **voteList** of type **<SortedDictionary<SelectedGame, int>**.
+9. Inside the **IF** statment,  add a variable named **selectedValue** of type **string** with the value of **context.Request.Query["favorite"]**.
 
-11. Initialize the **voteList** varaible with the result of **_pollResults.GetVoteResult** method call.
+10. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Selected Value is: " + selectedValue** as a parameter to the **WriteAsync** method. 
 
-12. Create a **FOREACH** statement block, with the following information:
+11. Inside the **IF** statment, add a variable named **results** of type **StringBuilder**.
+
+12. Initialize the **results** varaible using the **StringBuilder** constructor.
+
+13. Add a variable named **voteList** of type **<SortedDictionary<SelectedGame, int>**.
+
+14. Initialize the **voteList** varaible with the result of **_pollResults.GetVoteResult** method call.
+
+15. Create a **FOREACH** statement block, with the following information:
 
     - Variable Type: **var**
     - Variable Name: **gameVotes**
     - Collection: **voteList**
 
-13. In the **FOREACH** statement block, call the **Append** method of the **results** variable. Pass **$"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}"** as a parameter to the **Append** method. 
+16. In the **FOREACH** statement block, call the **Append** method of the **results** variable. Pass **$"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}"** as a parameter to the **Append** method. 
 
-14. After the **FOREACH** statement block, return the **ContentResult** result using the **Content** method. Pass **results.ToString()** string as a parameter to the **Content** method.
+17. After the **FOREACH** statement block, return the **ContentResult** result using the **Content** method. Pass **results.ToString()** string as a parameter to the **Content** method.
 
+18. After the **IF** statment, add  an **ELSE** statemet.
+
+19. Inside the **ELSE** statment, return the **RedirectResult** result using the **Redirect** method. Pass **"poll-questions.html"** as a parameter to the **Redirect** method.
+
+1. In **Startup** class, in the **app.Use** middleware, in the **context.Response.WriteAsync** method, replace the parameter passed to **"Thank you for submitting the poll. You may look at the Poll Results <a href='/?submitted=true'>Here</a>."**
 
 ####	Task 5: Run the application
 
 1. Save all the changes.
 
 2. Start debugging the application.
+    >**Note**: The browser displays: **http://localhost:[port]/poll-questions.html** page.
 
-3. Access the following relative path:
+3. Select **Basketball**, and then click **Submit Poll**.
+    > **Note**: The browser displays: "Thank you for submitting the poll. You may look at the Poll Results **Here**."
+
+4. Access the following relative path:
     - Path: **/poll-questions.html**
 
-4. Select **Basketball**, and then click **Submit Poll**.
+5. Select **Football**, and then click **Submit Poll**.
     > **Note**: The browser displays the following text:<br>
-"Thank you for submitting the poll."
+"Thank you for submitting the poll. You may look at the Poll Results **Here**."
 
-5. Access the following relative path:
-    - Path: **/poll-questions.html**
-
-6. Select **Football**, and then click **Submit Poll**.
+6. click **Here**
     > **Note**: The browser displays the following text:<br>
-"Thank you for submitting the poll."
-
-7. Access the following relative path:
-    - Path: **/poll-questions.html**
-
-8. Select **Basketball**, and then click **Submit Poll**.
-    > **Note**: The browser displays the following text:<br>
-"Thank you for submitting the poll."
-
-9. Access the following relative path:
-    - Path: **/**
-    > **Note**: The browser displays the following text:<br>
-"Game name: Basketball, Votes: 2 <br> 
+"Game name: Basketball, Votes: 1 <br> 
 Game name: Football, Votes: 1"
 
-10. Close **Microsoft Edge**.
+7. Close **Microsoft Edge**.
 
-11. Stop debugging.
+8. Stop debugging.
 
 >**Result**: At the end of this exercise, you will be able to create controller, and inject a service into it with **Dependency Injection**. 
 
