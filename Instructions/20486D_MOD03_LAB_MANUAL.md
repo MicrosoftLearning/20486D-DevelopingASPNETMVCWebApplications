@@ -226,7 +226,7 @@ The main tasks for this exercise are as follows:
 
 2. In the async **lambda expression** of the **Use** method, add an **IF** statemet that checks if the  **context.Request.Query.ContainsKey** method returns **TRUE**. Pass **"favorite"** as a parameter to the **ContainsKey** method. 
 
-3. Inside the **IF** statment,  add a varible named **selectedValue** of type **string** with the value of **context.Request.Query["favorite"]**.
+3. Inside the **IF** statment,  add a variable named **selectedValue** of type **string** with the value of **context.Request.Query["favorite"]**.
 
 4. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Selected Value is: " + selectedValue** as a parameter to the **WriteAsync** method. 
 
@@ -410,11 +410,11 @@ The main tasks for this exercise are as follows:
 
 5. In the **app.Use** lambda expression code block, delete the call to the **context.Response.WriteAsync**.
 
-6. Inside the **IF** statment,  add a varible named **selectedGame** of type **SelectedGame** with the value of **(SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue, true)**.
+6. Inside the **IF** statment,  add a variable named **selectedGame** of type **SelectedGame** with the value of **(SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue, true)**.
 
-7. Call the **AddVote** method of the **pollResults** parameter. Pass **selectedGame** varible as a parameter to the **AddVote** method.
+7. Call the **AddVote** method of the **pollResults** parameter. Pass **selectedGame** variable as a parameter to the **AddVote** method.
 
-8. Add a varible named **gameVotes** of type **SortedDictionary<SelectedGame, int>**.  Initialize the **gameVotes** varible with the result of **pollResults.GetVoteResult** method call.
+8. Add a variable named **gameVotes** of type **SortedDictionary<SelectedGame, int>**.  Initialize the **gameVotes** variable with the result of **pollResults.GetVoteResult** method call.
 
 9. Create a **FOREACH** statement block, with the following information:
 
