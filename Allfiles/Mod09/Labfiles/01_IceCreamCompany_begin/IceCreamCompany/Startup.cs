@@ -19,7 +19,7 @@ namespace IceCreamCompany
             services.AddTransient<IRepository, Repository>();
 
             services.AddDbContext<IceCreamContext>(options =>
-                 options.UseInMemoryDatabase("IceCreamDB"));
+                 options.UseSqlite("Data Source=iceCream.db"));
 
             services.AddMvc();
         }
