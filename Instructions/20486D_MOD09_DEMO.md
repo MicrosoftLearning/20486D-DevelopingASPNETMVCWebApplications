@@ -373,7 +373,7 @@
 
 18. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-19. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+19. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** and the **Use a layout page** check boxes are **unchecked**, and then click **Add**.
 
 8. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
   ```cs
