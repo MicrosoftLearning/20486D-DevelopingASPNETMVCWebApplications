@@ -220,7 +220,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 1: Create a middleware
 
-1. In the **Startup** class, in the beginnig of the **Configure** method, call the **Use** method of the  **app** parameter. Pass a async **lambda expression** as a parameter with the following information:
+1. In the **Startup** class, in the beginnig of the **Configure** method, call the **Use** method of the  **app** parameter. Pass an async **lambda expression** as a parameter with the following information:
 
     - Expression: **async (context, next) => { }**
 
@@ -496,7 +496,7 @@ The main tasks for this exercise are as follows:
     - Template: **MVC Controller - Empty**
     - Folder: **Controllers**
 
-3. In the **Index** action, return the **ViewResult** result using the **Content** method. Pass **Hello from controller.** string as a parameter to the **Content** method.
+3. In the **Index** action, return the **ViewResult** result using the **Content** method. Pass **"Hello from controller."** as a parameter to the **Content** method.
 
 
 ####	Task 3: Run the application
