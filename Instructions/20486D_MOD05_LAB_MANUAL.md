@@ -117,6 +117,7 @@ The main tasks for this exercise are as follows:
 2. Start debugging the application.
 
 3. View the page you have added.
+    >**Note**: The browser displays a "Select City" title and a list of cities below it: Madrid, London and Paris.
 
 4. Close **Microsoft Edge**.
 
