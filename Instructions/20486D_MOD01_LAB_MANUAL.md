@@ -75,7 +75,7 @@ The main tasks for this exercise are as follows:
 
 1. Create a new **Razor Page** with the following information:
  
-    - Name: **TestPage.cshtml**
+    - Name: **TestPage**
     - Folder: **Pages**
     - Generate PageModel class: **True**
     - Create as a partial view: **False**
