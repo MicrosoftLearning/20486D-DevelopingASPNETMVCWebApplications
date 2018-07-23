@@ -242,7 +242,7 @@ The main tasks for this exercise are as follows:
 34. In the **ConfigureServices** method, call the **AddSingleton** method of **services** parameter with the following information:
 
     - Interface: **IData**
-    - Implementation: **data**
+    - Implementation: **Data**
 
 35. In the **_Layout.cshtml** page, in the **UL** element, add a **LI** element.
 
