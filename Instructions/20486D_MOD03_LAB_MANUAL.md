@@ -583,21 +583,27 @@ The main tasks for this exercise are as follows:
 3. Select **Basketball**, and then click **Submit Poll**.
     > **Note**: The browser displays: "Thank you for submitting the poll. You may look at the Poll Results **Here**."
 
-4. Access the following relative path:
+4. click **Here**
+    > **Note**: The browser displays the following text:<br>
+"Game name: Basketball, Votes: 1
+
+5. Open a new **Microsoft Edge** window.
+
+6. Access the following relative path:
     - Path: **/poll-questions.html**
 
-5. Select **Football**, and then click **Submit Poll**.
+7. Select **Football**, and then click **Submit Poll**.
     > **Note**: The browser displays the following text:<br>
 "Thank you for submitting the poll. You may look at the Poll Results **Here**."
 
-6. click **Here**
+8. click **Here**
     > **Note**: The browser displays the following text:<br>
 "Game name: Basketball, Votes: 1 <br> 
 Game name: Football, Votes: 1"
 
-7. Close **Microsoft Edge**.
+9. Close all the **Microsoft Edge** windows.
 
-8. Stop debugging.
+10. Stop debugging.
 
 >**Result**: At the end of this exercise, you will be able to create controller, and inject a service into it with **Dependency Injection**. 
 
