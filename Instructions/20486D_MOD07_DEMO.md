@@ -18,7 +18,7 @@
 
 4. In the **Search** text box, type **Microsoft.EntityFrameworkCore.Sqlite**, and then press Enter.
 
-5. Select **Microsoft.EntityFrameworkCore.Sqlit** version **v2.1.0**, and then click **Install**.
+5. Click **Microsoft.EntityFrameworkCore.Sqlit**, select version **v2.1.0**, and then click **Install.**
 
 6. If a **Preview Changes** dialog box appears, click **OK**.
 
@@ -198,7 +198,7 @@
 
 36. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-      >**Note:** The browser window displays the **Index.cshtml** view.
+      >**Note:** The browser displays the **Index.cshtml** view.
 
 37. In **Microsoft Edge**, click **Create New Person**.
 
