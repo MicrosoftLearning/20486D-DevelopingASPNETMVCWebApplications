@@ -4,7 +4,7 @@ using System.Text;
 using ShirtStoreWebsite.Services;
 using ShirtStoreWebsite.Models;
 
-namespace ShirtStoreWebsite.Tests.Mock
+namespace ShirtStoreWebsite.Tests.FakeRepositories
 {
     public class FakeShirtRepository : IShirtRepository
     {

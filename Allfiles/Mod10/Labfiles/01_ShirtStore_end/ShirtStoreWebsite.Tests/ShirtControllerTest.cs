@@ -6,18 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 using ShirtStoreWebsite.Controllers;
 using ShirtStoreWebsite.Models;
 using ShirtStoreWebsite.Services;
-using ShirtStoreWebsite.Tests.Mock;
+using ShirtStoreWebsite.Tests.FakeRepositories;
+using Microsoft.Extensions.Logging;
+using Moq;
 
 namespace ShirtStoreWebsite.Tests
 {
     [TestClass]
-    class ShirtControllerTest
+    public class ShirtControllerTest
     {
         [TestMethod]
         public void IsIndexReturnsAllShirts()
         {
             IShirtRepository fakeShirtRepository = new FakeShirtRepository();
-            ShirtController shirtController = new ShirtController(fakeShirtRepository);
+            Mock<ILogger<ShirtController>> mockLogger = new Mock<ILogger<ShirtController>>();
+            ShirtController shirtController = new ShirtController(fakeShirtRepository, mockLogger.Object);
             ViewResult viewResult = shirtController.Index() as ViewResult;
             List<Shirt> products = viewResult.Model as List<Shirt>;
             Assert.AreEqual(products.Count, 3);
