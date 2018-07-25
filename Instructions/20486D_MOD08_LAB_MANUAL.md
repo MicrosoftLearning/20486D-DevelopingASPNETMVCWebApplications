@@ -292,9 +292,43 @@ Estimated Time: **60 minutes**
 
 #### Task 1: Add a JavaScript file
 
+1. Create a new folder with the following information:
+
+	- Folder name: **js**
+	- Parent folder: **wwwroot**
+
+2. Add a **JavaScript** file with the following information:
+
+	- Folder: **/wwwroot/js**
+	- Name: **form-functions.js**	
+
 #### Task 2: Link a view to the JavaScript file
 
+1. In the **BuyTickets** view, in the **Scripts** section code block, add a **SCRIPT** element with the following information:
+
+	- Src: **~/js/form-functions.js**
+
 #### Task 3: Write the code of the JavaScript file
+1. In the **form-functions.js** file, add a **method** with the following information:
+
+	- Name: **calculateSum**
+
+2. In the **calculateSum** method code block, add a new variable named **rows** with the value of **document.querySelectorAll("#totalAmount tr .sum")**.
+
+3. Add a new variable named **sum** with the value of **0**.
+
+4. Create a **FOR** loop, with the following information:
+
+	- Initial Expression: **var i = 0**
+	- Condition: **i < rows.length**
+	- Increment Expression: **i++**
+
+5. In the **FOR** loop code block, assign the **sum** variable the value of **sum + parseFloat(parseFloat(rows[i].innerHTML).toFixed(2))**.
+
+6. After the **FOR** loop code block, create a varible named **sumElement** with the value of **document.getElementById("sum")**.
+
+7. Assign the **innerHTML** property of the **sumElement** varible the value of **"Total: $" + sum**.
+
 
 ### Exercise 4: Using jQuery
 
