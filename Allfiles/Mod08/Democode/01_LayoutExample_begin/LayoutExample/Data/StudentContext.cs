@@ -21,6 +21,7 @@ namespace LayoutExample.Data
             modelBuilder.Entity<Student>().HasData(
                  new Student
                  {
+                     StudentId =1,
                      FirstName = "Tara",
                      LastName = "Brewer",
                      City = "Ocala",
@@ -31,6 +32,7 @@ namespace LayoutExample.Data
                  },
                 new Student
                 {
+                    StudentId = 2,
                     FirstName = "Andrew",
                     LastName = "Tippett",
                     City = "Anaheim",
@@ -41,6 +43,7 @@ namespace LayoutExample.Data
                 },
                 new Student
                 {
+                    StudentId = 3,
                     FirstName = "Tara",
                     LastName = "Brewer",
                     City = "Ocala",
@@ -51,6 +54,7 @@ namespace LayoutExample.Data
                 },
                 new Student
                 {
+                    StudentId = 4,
                     FirstName = "Tara",
                     LastName = "Brewer",
                     City = "Ocala",
@@ -61,6 +65,7 @@ namespace LayoutExample.Data
                 },
                 new Student
                 {
+                    StudentId = 5,
                     FirstName = "Andrew",
                     LastName = "Tippett",
                     City = "Anaheim",

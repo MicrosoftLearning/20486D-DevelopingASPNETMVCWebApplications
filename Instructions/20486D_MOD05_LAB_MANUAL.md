@@ -39,7 +39,7 @@ The main tasks for this exercise are as follows:
 
 4.	Add a Back link to a view.
 
-5.	Add a "Show data" link next to each city.
+5.	Add a city name as a link to each city.
 
 6.	Run the application.
 
@@ -117,6 +117,7 @@ The main tasks for this exercise are as follows:
 2. Start debugging the application.
 
 3. View the page you have added.
+    >**Note**: The browser displays a "Select City" title and a list of cities below it: Madrid, London and Paris.
 
 4. Close **Microsoft Edge**.
 
@@ -166,7 +167,7 @@ The main tasks for this exercise are as follows:
 
 13. Return the **FileResult** result using the **File** method. Pass **"$@"images&bsol;{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
 
-####	Task 4: Add a Back link to a view
+####	Task 4: Add links to the views using tag helpers
 
 1. In the **ShowDataForCity** view, after the **SPAN** add an **A** element with the following information:
     - asp-action: **ShowCities**
@@ -182,21 +183,18 @@ The main tasks for this exercise are as follows:
     - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
+4. In the **ShowCities** view, remove the **P** element with its content.
 
-####	Task 5: Add a city name as a link to each city
+5. In the  **FOREACH** statement block, add a **H2**.
 
-1. In the **ShowCities** view, remove the **P** element with its content.
-
-2. In the  **FOREACH** statement block, add a **H2**.
-
-3. In the  **H2** element, add an **A** element with the following information:
+6. In the  **H2** element, add an **A** element with the following information:
 
     - Content: **@item.Key**
     - asp-action: **ShowDataForCity**
     - asp-route-cityname: **@item.Key**
 
 
-####	Task 6: Run the application
+####	Task 5: Run the application
 
 1. Save all the changes.
 
@@ -212,6 +210,7 @@ The main tasks for this exercise are as follows:
 
 6. Stop debugging.
 
+>**Result**: At the end of this exercise, you will be able to add a **Razor view** templates to an **MVC** application, passing data from the **Controller** to the **View** using **ViewBag**, and navigate between them using **URL.Action** and **Tag Helpers**. 
 
 ##	Exercise 2: Adding a Partial View
 
@@ -223,7 +222,7 @@ The main tasks for this exercise are as follows:
 
 1.	Add a partial view.
 
-2.	Use the partial view in the ShowDataForCity view.
+2.	Use the partial view in the **ShowDataForCity** view.
 
 3.	Run the application.
 
@@ -287,13 +286,14 @@ The main tasks for this exercise are as follows:
 
 5. Stop debugging.
 
+>**Result**: At the end of thise exercise, you will be able to add and render **Partial Views** in **Views**, and inject and use services using the **@Inject** directive.
 
 ##	Exercise 3: Adding a View Component
 
 #### Scenario
 
-The **ShowCities** page shows a simple list of links to the **City** details page. We will use **ViewCoponents** to show more details on each city in the **ShowCities** page.
-
+Currently in the **ShowCities** view you show for each city a link with the name of the city. You have been asked to show for each city in the **ShowCities** view also the country to which the city belongs and a mini map of the city. To implement this you have been asked to use a view component. In this exercise you will create a view component and embed it in the **ShowCities** view.
+ 
 The main tasks for this exercise are as follows:
 
 1.	Add a view component class.
@@ -414,6 +414,8 @@ The main tasks for this exercise are as follows:
 4. Close **Microsoft Edge**.
 
 5. Stop debugging and close the **Visual Studio**.
+
+>**Result**: At the end of this exercise, you will be able to create **View Components**, and invoke and render **View Components** from a **View**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

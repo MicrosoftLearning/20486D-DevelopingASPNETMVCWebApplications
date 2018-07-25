@@ -16,7 +16,7 @@ namespace EntityFrameworkExample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PersonContext>(options =>
-                    options.UseInMemoryDatabase("PersonDB"));
+                    options.UseSqlite("Data Source=person.db"));
 
             services.AddMvc();
         }
