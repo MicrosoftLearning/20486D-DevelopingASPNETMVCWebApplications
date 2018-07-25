@@ -433,7 +433,7 @@
 
 38. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-      >**Note:** The browser window displays the **Index.cshtml** view.
+      >**Note:** The browser displays the **Index.cshtml** view.
 
 39. In **Microsoft Edge**, click **Create New Person**.
 
