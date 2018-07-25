@@ -19,7 +19,7 @@ Estimated Time: **60 minutes**
    - Parent folder: **Views**
    - Folder name: **Shared**
 
-3. Add a new **Razor Layout** by using the following information:
+3. Add a new **Razor Layout** with the following information:
 
 	- Folder: **/Views/Shared**
 	- Name: **_Layout**	
@@ -68,8 +68,7 @@ Estimated Time: **60 minutes**
     - Src: **~/images/prevArrow.png**
     - Onclick: **prevImage()**
 
-
-15. Afteer the **IMG** element, add a **IMG** element with the following information:
+15. After the **IMG** element, add a **IMG** element with the following information:
 
 	- Class:**next**
     - Src: **~/images/nextArrow.png**
@@ -139,11 +138,11 @@ Estimated Time: **60 minutes**
     - Name: **_ViewStart**
     - Folder: **Views**
 
-2. At the beginning of the **Index.cshtml** view, remove the the **Layout** initialization.
+2. At the beginning of the **Index.cshtml** view, remove the the **Layout** property assignment.
 
 #### Task 4: Add existing views to the layout
 
-1. Copy the exiting **Views** to the **Zoo** project, with the following information:
+1. Copy the existing **.cshtml** files to the **Zoo** project, with the following information:
 
     - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
 	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\Views**
@@ -170,6 +169,7 @@ Estimated Time: **60 minutes**
 
 6. Stop Debugging.
 
+
 ### Exercise 2: Using CSS 
 
 #### Task 1: Add existing CSS file to the project
@@ -190,23 +190,102 @@ Estimated Time: **60 minutes**
 
 	- Type: **text/css**
 	- Rel: **stylesheet**
-	- Href: **css/zoo-style..css**
-
-2. In the **zoo-style.css** file, after the **.slider-buttons img** selector code block, add a **.nav** selector with the following information:
-
-	- Properties:
-		- list-style-type: **text/css**
-		- Rel: **stylesheet**
-		- Href: **css/zoo-style..css**
-
+	- Href: **css/zoo-style.css**
 
 #### Task 3: Style the menu
 
+1. In the bottom of the **zoo-style.css** file, add a **.nav** selector with the following information:
+
+	- Properties:
+		- list-style-type: **none**
+		- margin: **0**
+		- padding: **0**
+		- overflow: **hidden**
+		- background-color: **#85754e**
+		- Position: **fixed**
+		- top: **0**
+		- left: **0**
+		- width: **100%**
+
+2. Add a **.nav li** selector with the following information:
+
+	- Properties:
+		- float: **left**
+
+3. Add a **.nav li a** selector with the following information:
+
+	- Properties:
+		- display: **block**
+		- color: **white**
+		- text-align: **center**
+		- padding: **14px 16px**
+		- text-decoration: **none**
+
+4. Add a **.nav li a:hover:not(.active)** selector with the following information:
+
+	- Properties:
+		- background-color: **#016b6b**
+
+5. Add a **.active** selector with the following information:
+
+	- Properties:
+		- background-color: **#008484**		
+		- color: **#fff**
+
+
 #### Task 4: Style the RenderBody section
+
+1. Add a **.photo-index-card** selector with the following information:
+
+	- Properties:
+		- background-color: **#ffffff**
+		- padding: **0**
+		- margin: **10px 5px 15px 18px**
+		- padding-bottom: **25px**
+		- width: **355px**
+		- border: **1px solid #d6d4d4**
+		- border-radius: **10px**
+		- overflow: **hidden**
 
 #### Task 5: Style the form
 
+1. Add a **.info .form-field** selector with the following information:
 
+	- Properties:
+		- text-align: **left**
+
+2. Add a **.info label** selector with the following information:
+
+	- Properties:
+		- width: **118px**
+		- display: **inline-block**
+		- margin-bottom: **10px**
+
+3. Add a **.info input** selector with the following information:
+
+	- Properties:
+		- border-radius: **2px**
+		- line-height: **20px**
+		- border: **1px solid #ccc6c6**
+		- background-color: **#f9f6f6**
+
+4. Add a **input.submit-btn** selector with the following information:
+
+	- Properties:
+		- width: **100px**
+		- margin-top: **12px**
+		- height: **29px**
+		- background-color: **orange**
+		- font-weight: **bold**
+		- box-shadow: **inset 0px 0px 4px #b77006**
+		- border: **1px solid #a59797**
+
+5. Add a **input.submit-btn[disabled]** selector with the following information:
+
+	- Properties:
+		- opacity: **0.8**
+		- background-color: **whitesmoke**
+		- box-shadow: **none**
 
 
 ### Exercise 3: Using JavaScript
