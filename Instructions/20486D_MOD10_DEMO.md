@@ -33,7 +33,7 @@
 
 11. In the **Microsoft Visual Studio** dialog box, click **Yes**.
 
-11. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **Tools** menu, point to **NuGet Package Manager**, and then click **Package Manager Console**.
+11. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TOOLS** menu, point to **NuGet Package Manager**, and then click **Package Manager Console**.
 
 12. In the **Package Manager Console** window, type the following text, and then press Enter.
 ```
@@ -224,9 +224,13 @@
 16. Replace the selected code with the following code:
 ```cs
     if (UrlCounter.ContainsKey(requestPath))
+    {
         UrlCounter[requestPath]++;
+    }
     else
+    {
         UrlCounter.Add(requestPath, 1);
+    }
 ```
 
 17. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
@@ -238,7 +242,7 @@
 20. In **Microsoft Edge**, locate the following text:
  ```
     ErrorHandlingExample.Controllers.HomeController.GetDividedNumber(int id) in HomeController.cs
-	+	28.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
+	+	33.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
  ```
 
 21. In **Microsoft Edge**, click the **+** (plus) sign near **28**, and then inspect the code.
@@ -253,33 +257,31 @@
 
 24. In **Microsoft Edge**, click **Close**.
 
-25. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+25. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **DivisionCalculator.cs**.
 
-26. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **DivisionCalculator.cs**.
-
-27. In the **DivisionCalculator.cs** code window, select the following code:
+26. In the **DivisionCalculator.cs** code window, select the following code:
 ```cs
     for (int i = 0; i < (number / 2) + 1; i++)
 ```
 
-28. Replace the selected code with the following code:
+27. Replace the selected code with the following code:
 ```cs
     for (int i = 1; i < (number / 2) + 1; i++)
 ```
 
-29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-30. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
+29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
-31. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+30. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-32. In **Microsoft Edge**, click **16**.
+31. In **Microsoft Edge**, click **16**.
 
-33. In **Microsoft Edge**, click **Close**.
+32. In **Microsoft Edge**, click **Close**.
 
-34. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+33. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-35. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+34. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Logging MVC Applications
 
@@ -323,7 +325,7 @@
 
 5. In **Solution Explorer**, expand **appsettings.json**, and then click **appsettings.development.json**.
 
-6. Place the cursor after the **{** (opening brackets) sign, press Enter, and then type the following code:
+6. Place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
 ```cs
     "Logging": {
        "LogLevel": {
@@ -334,7 +336,7 @@
 
 7. In **Solution Explorer**, under **appsettings.json**, click **appsettings.production.json**.
 
-8. Place the cursor after the **{** (opening brackets) sign, press Enter, and then type the following code:
+8. Place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
 ```cs
     "Logging": {
       "PathFormat": "myLog.txt",
@@ -404,7 +406,7 @@
 20. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 21. In **Microsoft Edge**, click **16**.
-    >**Note:** The browser displays the numbers that **16** can be divided with.
+    >**Note:** The browser displays the numbers that **16** can be divided by.
 
 22. In **Microsoft Edge**, click **Close**.
 
@@ -441,7 +443,7 @@
 31. In the **LoggingExample - Microsoft Visual Studio** window,  In the **Output** window, click  the **Show output from** drop down, select the **ASP.NET Core Web Server** option, and then click the **Clear All** button.
 
 32. In **Microsoft Edge**, click **16**.
-    >**Note:** The browser displays the numbers that **16** can be divided with and a text that shows the number of times that the page was displayed.
+    >**Note:** The browser displays the numbers that **16** can be divided by and a text that shows the number of times that the page was displayed.
 
 33. In the **LoggingExample (Running) - Microsoft Visual Studio** window, in the **Output** window, locate the text: "The number 16 was added to the page display count dictionary."
 

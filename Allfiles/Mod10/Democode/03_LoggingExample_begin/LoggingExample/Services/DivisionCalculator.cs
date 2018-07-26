@@ -18,7 +18,9 @@ namespace LoggingExample.Services
             for (int i = 1; i < (number / 2) + 1; i++)
             {
                 if (number % i == 0)
+                {
                     divisionResult.DividingNumbers.Add(i);
+                }
             }
 
             divisionResult.DividingNumbers.Add(number);

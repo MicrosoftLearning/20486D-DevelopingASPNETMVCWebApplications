@@ -17,6 +17,6 @@
         Welcome to the multiplication table site.<br />
         The number of entrances to the welcome page is: @ViewBag.NumberOfViews
     </p>
-    @Html.Partial("_NumberLinks")
+    @await Html.PartialAsync("_NumberLinks")
 </body>
 </html>

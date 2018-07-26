@@ -12,11 +12,11 @@ Layout = null;
     <link href="~/css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Multiplication Table</h1>
-    <p>
-        Welcome to the multiplication table site.<br />
-        The number of entrances to the welcome page is: @ViewBag.NumberOfViews
-    </p>
-    @Html.Partial("_NumberLinks")
+      <h1>Multiplication Table</h1>
+      <p>
+          Welcome to the multiplication table site.<br />
+          The number of entrances to the welcome page is: @ViewBag.NumberOfViews
+      </p>
+      @await Html.PartialAsync("_NumberLinks")
   </body>
 </html>
