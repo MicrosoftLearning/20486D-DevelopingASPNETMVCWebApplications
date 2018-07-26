@@ -24,11 +24,11 @@
 
 7. In the **PersonController.cs** code window, locate the following code:
   ```cs
-      using Microsoft.AspNetCore.Mvc;
+       using Microsoft.AspNetCore.Mvc;
 ```
 8. Ensure that the cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
   ```cs
-      using WebApiExample.Models;
+       using WebApiExample.Models;
 ```
 
 9. In the **PersonController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
@@ -88,6 +88,92 @@
 18. In the **WebApiExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
 19. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+
+# Lesson 2: Developing a Web API
+
+### Demonstration: How to Return Data in XML Format
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+
+#### Demonstration Steps
+
+1. Navigate to **Allfiles\Mod13\Democode\02_XmlFormatExample_begin**, and then double-click **XmlFormatExample.sln**.
+
+2. In the **XmlFormatExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **XmlFormatExample**, and then click **Manage NuGet Packages**.
+
+3. In the **NuGet Package Manager: XmlFormatExample** window, click **Browse**.
+
+4. In the **Search** text box, type **Microsoft.AspNetCore.Mvc.Formatters.Xml**, and then press Enter.
+
+5. Click **Microsoft.AspNetCore.Mvc.Formatters.Xml**, select version **2.1.0**, and then click **Install.**
+
+6. If a **Preview Changes** dialog box appears, click **OK**.
+
+7. If a **License Acceptance** dialog box appears, click **I Accept**.
+
+8. Close the **NuGet Package Manager: XmlFormatExample** window.
+
+9. In the **XmlFormatExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+
+10. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
+  ```cs
+      services.AddMvc().AddXmlSerializerFormatters();
+```
+11. In **Solution Explorer**, right-click **XmlFormatExample**, point to **Add**, and then click **New Folder**.
+
+12. In the **NewFolder** text box, type **Controllers**, and then press Enter.
+
+13. In the **XmlFormatExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
+
+14. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
+
+15. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **AnimalsController**, and then click **Add**.
+
+16. In the **AnimalsController.cs** code window, locate the following code:
+  ```cs
+       using Microsoft.AspNetCore.Mvc;
+```
+17. Ensure that the cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
+  ```cs
+       using XmlFormatExample.Models;
+```
+
+18. In the **AnimalsController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+  ```cs
+       private List<Animal> _animals = new List<Animal>();
+
+       public AnimalsController()
+       {
+            _animals.Add(new Animal() { Id = 1, Name = "Lion", Family = "Mammal", Facts = "Lions are found especially in parts of Africa, and they are most active at night." });
+            _animals.Add(new Animal() { Id = 2, Name = "Elephant", Family = "Mammal", Facts = "Elephants are intelligent animals and have a very good memories, they also display emotions signs." });
+            _animals.Add(new Animal() { Id = 3, Name = "Shark", Family = "Fish", Facts = "Sharks live in the ocean, and average shark has 40-45 teeth" });
+       }
+```
+19. Ensure that the cursor is at the end of the **AnimalsController** method code block, press Enter twice, and then type the following code:
+  ```cs
+       [HttpGet]
+       [Produces("application/xml")]
+       public ActionResult<List<Animal>> GetAll()
+       {
+       }
+```
+20. In the **GetAll** action code block, type the following code:
+  ```cs
+       return _animals;
+```
+21. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+
+22. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+
+    >**Note:** The browser displays a list of animals in **XML** format.
+
+23. In **Microsoft Edge**, click **Close**.
+
+24. In the **XmlFormatExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+
+25. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
