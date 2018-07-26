@@ -16,7 +16,7 @@
 
 3. In the **NewFolder** text box, type **Controllers**, and then press Enter.
 
-4. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, right-click **Controllers**, point to **Add**, and then click **Controller**.
+4. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
 5. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
 
@@ -73,21 +73,21 @@
        return new ObjectResult(person.LastName);
 ```
 
-14. On the **FILE** menu of the **WebApiExample - Microsoft Visual Studio** window, click **Save All**.
+14. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-15. On the **DEBUG** menu of the **WebApiExample - Microsoft Visual Studio** window, click **Start Debugging**.
+15. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
     >**Note:** The browser displays a list of people in **JSON** format.
 
 16. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/api/person/1**, and then press Enter.
 
-    >**Note:** The browser displays the first person in **JSON** format.
+    >**Note:** The browser displays the first person's last name in **JSON** format.
 
-17. In the Microsoft Edge window, click **Close**.
+17. In **Microsoft Edge**, click **Close**.
 
-18. On the **DEBUG** menu of the **WebApiExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
+18. In the **WebApiExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-19. On the **FILE** menu of the **WebApiExample - Microsoft Visual Studio** window, click **Exit**.
+19. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
