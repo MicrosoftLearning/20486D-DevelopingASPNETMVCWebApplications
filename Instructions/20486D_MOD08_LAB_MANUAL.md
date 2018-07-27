@@ -325,14 +325,82 @@ Estimated Time: **60 minutes**
 
 5. In the **FOR** loop code block, assign the **sum** variable the value of **sum + parseFloat(parseFloat(rows[i].innerHTML).toFixed(2))**.
 
-6. After the **FOR** loop code block, create a varible named **sumElement** with the value of **document.getElementById("sum")**.
+6. After the **FOR** loop code block, create a variable named **sumElement** with the value of **document.getElementById("sum")**.
 
-7. Assign the **innerHTML** property of the **sumElement** varible the value of **"Total: $" + sum**.
+7. Assign the **innerHTML** property of the **sumElement** variable the value of **"Total: $" + sum**.
 
 
 ### Exercise 4: Using jQuery
 
 #### Task 1: Use NPM to add jQuery
+
+1. Add a new **package.json** file to the **Zoo** project.
+
+2. In the  **package.json** file, add the following key and value in the **dependencies** object:
+
+	- Key: **"jquery"**
+	- Value: **"3.3.1"**
+
+3. Save all the changes.
+
+>**Note:** In the Solution Explorer pane, under **Depenndencies**, a new folder has been added named **npm** with the **jquery** package.
+
+4. In **Startup** class, in the **Configure** method, before the **app.UseMVC** middleware, call the **UseStaticFiles** method of the **app** parameter.
+
+5. Call the **UseNodeModules** method of the **app** parameter. Pass **env.ContentRootPath** as a parameter to the **UseNodeModules** method.
+
+6. Create a new folder with the following information:
+
+   - Folder name: **Middleware**
+
+7. Add a new class with the following information:
+
+	- Folder: **Middleware**
+	- Name: **ApplicationBuilderExtensions**
+
+8. In the **ApplicationBuilderExtensions** class, add **USING** statements for the following namespaces:
+
+   - **System.IO**
+   - **Microsoft.Extensions.FileProviders**
+
+9. Add the **static** keyword to the **ApplicationBuilderExtensions** class declaration.
+
+10. Relace the **ApplicationBuilderExtensions** class namecpace with the following information:
+   
+    - Current namespace: **Zoo.Middleware**
+    - New namespace: **Microsoft.AspNetCore.Builder**
+
+11. Add a method with the following information:
+
+    - Scope: **public**
+	- Modifier: **static**
+    - Return Type: **IApplicationBuilder**
+    - Name: **UseNodeModules**
+	- Parameters:
+		- Parameter:
+			- Type: **this IApplicationBuilder**
+			- Name: **applicationBuilder**
+		- Parameter:
+			- Type: **string**
+			- Name: **root**
+
+12. In the **UseNodeModules** method, add a variable named **path** of type **var** with the value of **Path.Combine(root, "node_modules")**.
+
+13. Add a variable named **fileProvider** of type **var** with the value of **new PhysicalFileProvider(path)**.
+
+14. Add a variable named **options** of type **var** with the value of **new StaticFileOptions()**.
+
+15. Assign the **RequestPath** property of the **options** variable the value of **/node_modules**.
+
+16. Assign the **FileProvider** property of the **options** variable the value of **fileProvider** variable.
+
+17. Call the **UseStaticFiles** method of the **applicationBuilder** parameter. Pass **options** variable as a parameter to the **UseStaticFiles** method.
+
+18. Return the **IApplicationBuilder**  result using the **applicationBuilder** variable.
+
+19. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
+
+	- Src:**~/node_modules/jquery/dist/jquery.min.js**
 
 #### Task 2: Use jQuery to add event handlers
 
@@ -342,4 +410,39 @@ Estimated Time: **60 minutes**
 
 #### Task 5: Client-side validation using jQuery
 
+1. In the **BuyTickets** view, in the beginning of the **Scripts** section code block, add a **SCRIPT** element with the following information:
+
+	- Src: **~/node_modules/jquery-validation/dist/jquery.validate.min.js**
+
+2. Add a **SCRIPT** element with the following information:
+
+	- Src: **~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js**
+
 #### Task 6: Run the application
+
+1. Save all the changes.
+
+2. Start debugging the application.
+
+3. In the menu bar, click **Visitor Info**.
+
+4. In the menu bar, click **Tickets**.
+
+5. On the **Step 1 - Choose Tickets**, select the following:
+
+	- Adult: **_&lt;As many tickets as you like&gt;_**
+	- Senior: **_&lt;As many tickets as you like&gt;_**
+
+6.  On the **Step 2 - Buy Tickets**, type the following:
+
+	- First Name: **_&lt;A first name of your choice&gt;_**
+	- Last Name: **_&lt;A last name of your choice&gt;_**
+	- Address: **_&lt;An address of your choice&gt;_**
+	- Email: **_&lt;An email of your choice&gt;_**
+	- Phone Number **_&lt; A phone number of your choice&gt;_**
+
+7. Click **Submit**.
+
+8. Close **Microsoft Edge**.
+
+9. Stop Debugging.
