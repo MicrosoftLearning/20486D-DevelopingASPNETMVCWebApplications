@@ -403,10 +403,155 @@ Estimated Time: **60 minutes**
 	- Src:**~/node_modules/jquery/dist/jquery.min.js**
 
 #### Task 2: Use jQuery to add event handlers
+1. In the beginning of the **form-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
+
+2. Move the **calculateSum** function inside the anonymous function.
+
+3. At the beginning of the anonymous function code block, call the **$** function and pass **'.pricing select'** as a parameter. 
+
+4. Chain a **change** function call to the **$** function call. Pass anonymous function as a parameter to the **change** function.
+
+5. Change the signature of the anonymous function passed to the **change** method to accept a **event** parameter.
+
+6. Inside the anonymous function passed to the **change** method, create a variable named **target** and assign it the value of **$(event.target)**
+
+7. Create a variable named **value** and assign it the value of **parseInt(target.val())**
+
+8. Create a variable named **container** and assign it the value of **target.parent()**
+
+9. Create a variable named **price** and assign it the value of **container.prev()**
+
+10. Create a variable named **label** and assign it the value of **price.prev()**
+
+11. Call the **$** function and pass **"#" + label.text()** as a parameter. 
+
+12. Chain a **remove** function call to the **$** function call. 
+
 
 #### Task 3: Use jQuery to modify an element with a particular id
+1. At the end of the **calculateSum** function, add an **IF** statement that checks that value of **value** variable is not empty.
+
+2. Inside the **IF** statement, call the **$** function and pass **'#summery'** as a parameter. 
+
+3. Chain a **addClass** function call to the **$** function call. Pass **"display-div"** as a parameter as a parameter to the **addClass** function.
+
+4. Chain a **removeClass** function call to the **addClass** function call. Pass **"hidden-div"** as a parameter as a parameter to the **addClass** function.
+
+5. Create a variable named **correctCost** and assign it the value of **(price.text().substring(1, price.text().length))**
+
+6. Create a variable named **calc** and assign it the value of ** parseFloat(value * correctCost).toFixed(2)**
+
+7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" + calc +'&lt;/span&gt;'**
+
+8. Create a variable named **row** and assign it the value of **$("&lt;tr id='" + label.text() +"'&gt;")**
+
+9. Call the **append** method of the **row** variable. Pass **$("&lt;td&gt;")** as a parameter to the **append** function.
+
+10.  Chain an **html** function call to the **append** function call. Pass **msg** as a parameter to the **append** function.
+
+11. Call the **$** function and pass **'#totalAmount'** as a parameter. 
+
+12. Chain an **append** function call to the **$** function call. Pass **row** as a parameter to the **append** function.
+
+13. After the **IF** statement code block, add and **IF** statement that checks that the value of **$("#totalAmount tr").length** is equal to **0**.
+
+14. Inside the **IF** statement code block, call the **$** function and pass **'#summery'** as a parameter. 
+
+15. Chain an **addClass** function call to the **$** function call. Pass **"hidden-div"** as a parameter to the **addClass** function.
+
+16. Chain an **removeClass** function call to the **addClass** function call. Pass **"display-div"** as a parameter to the **removeClass** function.
+
+17. Call the **$** function and pass **'#formButtons input'** as a parameter. 
+
+18. Chain an **attr** function call to the **$** function call. Pass **"disabled"** and **"disabled"** as a parameters to the **attr** function. 
+
+19. Call the **$** function and pass **'#comment'** as a parameter. 
+
+20. Chain an **show** function call to the **$** function call. 
+
+21. After the **IF** statement code block, add an **ELSE** statement. 
+
+22. Inside the **ELSE** statement code block, call the **$** function and pass **'#formButtons input'** as a parameter. 
+
+23. Chain an **removeAttr** function call to the **$** function call. Pass **"disabled"** as a parameter to the **removeAttr** function.
+
+24. Call the **$** function and pass **'#comment'** as a parameter. 
+
+25. Chain an **hide** function call to the **$** function call. 
+
+26. After the **ELSE** ststement call block, call the **calculateSum** function.
+
 
 #### Task 4: Use jQuery to change a style
+
+1. Add a **JavaScript** file with the following information:
+
+	- Folder: **/wwwroot/js**
+	- Name: **menubar-functions.js**	
+
+2. In the beginning of the **menubar-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
+
+3. At the beginning of the anonymous function code block, add a new variable named **path** with the value of **window.location.pathname**.
+
+4. Call the **$** function and pass **'.nav li a'** as a parameter. 
+
+5. Chain a **each** function call to the **$** function call. Pass anonymous function as a parameter to the **each** function.
+
+6. Change the signature of the anonymous function passed to the **each** method to accept **index** and **value** parameters.
+
+7. Inside the anonymous function passed to the **each** method, create a variable named **href** and assign it the value of **$(value).attr('href')**.
+
+8. Create an **IF** statement that checks that the value of **path** is equal to the value of **href**.
+
+9. Inside the **IF** statement code block, call the **$** function and pass **this** as a parameter. 
+
+10. Chain a **closest** function call to the **$** function call. Pass **'li'** to the **closest** function.
+
+11. Chain a **addClass** function call to the **closest** function call. Pass **'active'** to the **addClass** function.
+
+12. Add a **JavaScript** file with the following information:
+
+	- Folder: **/wwwroot/js**
+	- Name: **slider-functions.js**	
+
+13. In the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
+
+14. Add a new variable named **current** with the value of **0**.
+
+15. Add a new function with the following information:
+    - Name: **nextImage**
+
+16. In the **nextImage** function code block, increment the **current** variable by 1.
+
+17. Create an **IF** statement that checks that the value of **current** is equal to **images.length**.
+
+18. Inside the **IF** statement code block, assign the **current** variable the value of **0**.
+
+18. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
+
+19. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
+
+20. Add a new function with the following information:
+    - Name: **prevImage**
+
+21. In the **prevImage** function code block, decrement the **current** variable by 1.
+
+22. Create an **IF** statement that checks that the value of **current** is smaller than **0**.
+
+23. Inside the **IF** statement code block, assign the **current** variable the value of **images.length-1**.
+
+24. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
+
+25. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
+
+26. In the **_Layout.cshtml** file, in the bottom of the **HEAD** tag code block, add a **SCRIPT** element with the following information:
+
+	- Src: **~/js/menubar-functions.js**
+
+27. Add a **SCRIPT** element with the following information:
+
+	- Src: **~/js/slider-functions.js**
+
 
 #### Task 5: Client-side validation using jQuery
 
