@@ -2,6 +2,23 @@
 
 # Lab: Using Layouts, CSS and JavaScript in ASP.NET Core
 
+#### Scenario
+
+You have been asked to add a slideshow to the homepage of the web application that will show some of the animal photos in the database. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
+
+You want to use jQuery to create this slideshow because you want to cycle through the photos in the browser, without reloading the page each time. 
+
+Also, you have been asked to add a purchase page to enable customers to buy Adult, Child and Senior tickets to the zoo. 
+
+#### Objectives
+
+After completing this lab, you will be able to:
+
+- Apply a consistent look and feel to the web application.
+- Use layouts to ensure that common interface features, such as the headers, are consistent across the entire web application.
+- Render and execute JavaScript code in the browser.
+- Use the jQuery script library to update and animate page components.
+
 ### Lab Setup
 
 Estimated Time: **60 minutes**
@@ -10,6 +27,30 @@ Estimated Time: **60 minutes**
 1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. (https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)
 
 ### Exercise 1: Applying a Layout and Link Views to it 
+
+#### Scenario
+
+In this exercise, you will:
+
+- Create a new layout and link the application to the view by using a _ViewStart.cshtml file.
+- Modify the index view to use the new layout.
+- Add existing views to the layout.
+- Browse through the resulting web application.
+
+The main tasks for this exercise are as follows:
+
+1. Create a new layout.
+
+2. Add a view and link it to a layout.
+
+3. Add _ViewStart.cshtml.
+
+4. Add existing views to the layout.
+
+5. Add sections to layout and views.
+
+6. Run the application.
+
 
 #### Task 1: Create a layout
 1. From **Allfiles\Mod08\Labfiles\01_Zoo_begin** open the **Zoo.sln**.
@@ -95,12 +136,12 @@ Estimated Time: **60 minutes**
 
 5.  Add a **H1** element with the following information:
 
-	- Class:**main-title**
+	- Class: **main-title**
     - Content: **Zoo Attractions**
 
 6.  Add a **DIV** element with the following information:
 
-	- Class:**container**
+	- Class: **container**
 
 7. In the **DIV** element, create a **FOREACH** statement, with the following information:
 
@@ -138,7 +179,7 @@ Estimated Time: **60 minutes**
     - Name: **_ViewStart**
     - Folder: **Views**
 
-2. At the beginning of the **Index.cshtml** view, remove the the **Layout** property assignment.
+2. At the beginning of the **Index.cshtml** view, remove the **Layout** property and its value.
 
 #### Task 4: Add existing views to the layout
 
@@ -170,7 +211,28 @@ Estimated Time: **60 minutes**
 6. Stop Debugging.
 
 
+
 ### Exercise 2: Using CSS 
+
+#### Scenario
+
+In this exercise, you will:
+
+- Add existing CSS file to the web application and link it to the layout. 
+- Style the main menu  and the elements inside the views by adding new CSS rules to an existing CSS file.
+
+The main tasks for this exercise are as follows:
+
+1. Add existing CSS file to the project.
+
+2. Link the layout to the CSS file.
+
+3. Style the menu.
+
+4. Style the RenderBody section.
+
+5. Style the form.
+
 
 #### Task 1: Add existing CSS file to the project
 
@@ -290,6 +352,22 @@ Estimated Time: **60 minutes**
 
 ### Exercise 3: Using JavaScript
 
+#### Scenario
+
+In this exercise, you will:
+
+- Add and link a javascript file to a view.
+- Add a function to calculate the total cost of the tickets.
+
+The main tasks for this exercise are as follows:
+
+1. Add a JavaScript file.
+
+2. Link the JavaScript file to a view.
+
+3. Write the code of the JavaScript file.
+
+
 #### Task 1: Add a JavaScript file
 
 1. Create a new folder with the following information:
@@ -332,6 +410,28 @@ Estimated Time: **60 minutes**
 
 ### Exercise 4: Using jQuery
 
+#### Scenario
+
+In this exercise, you will:
+
+- Use NPM to add jQuery package by editing the package.json file.
+- Add and edit javascript files to handle click events, modify elements and change the style of the application.
+- Add client-side validation using jQuery validation package.
+
+The main tasks for this exercise are as follows:
+
+1. Use NPM to add jQuery.
+
+2. Use jQuery to add event handlers.
+
+3. Use jQuery to modify an element with a particular id.
+
+4. Use jQuery to change a style.
+
+5. Client-side validation using jQuery.
+
+6. Run the application.
+
 #### Task 1: Use NPM to add jQuery
 
 1. Add a new **package.json** file to the **Zoo** project.
@@ -365,7 +465,7 @@ Estimated Time: **60 minutes**
 
 9. Add the **static** keyword to the **ApplicationBuilderExtensions** class declaration.
 
-10. Relace the **ApplicationBuilderExtensions** class namecpace with the following information:
+10. Relace the **ApplicationBuilderExtensions** class namespace with the following information:
    
     - Current namespace: **Zoo.Middleware**
     - New namespace: **Microsoft.AspNetCore.Builder**
@@ -413,15 +513,15 @@ Estimated Time: **60 minutes**
 
 5. Change the signature of the anonymous function passed to the **change** method to accept a **event** parameter.
 
-6. Inside the anonymous function passed to the **change** method, create a variable named **target** and assign it the value of **$(event.target)**
+6. Inside the anonymous function passed to the **change** method, create a variable named **target** and assign it the value of **$(event.target)**.
 
 7. Create a variable named **value** and assign it the value of **parseInt(target.val())**
 
-8. Create a variable named **container** and assign it the value of **target.parent()**
+8. Create a variable named **container** and assign it the value of **target.parent()**..
 
-9. Create a variable named **price** and assign it the value of **container.prev()**
+9. Create a variable named **price** and assign it the value of **container.prev()**.
 
-10. Create a variable named **label** and assign it the value of **price.prev()**
+10. Create a variable named **label** and assign it the value of **price.prev()**.
 
 11. Call the **$** function and pass **"#" + label.text()** as a parameter. 
 
@@ -437,11 +537,11 @@ Estimated Time: **60 minutes**
 
 4. Chain a **removeClass** function call to the **addClass** function call. Pass **"hidden-div"** as a parameter as a parameter to the **addClass** function.
 
-5. Create a variable named **correctCost** and assign it the value of **(price.text().substring(1, price.text().length))**
+5. Create a variable named **correctCost** and assign it the value of **(price.text().substring(1, price.text().length))**.
 
-6. Create a variable named **calc** and assign it the value of ** parseFloat(value * correctCost).toFixed(2)**
+6. Create a variable named **calc** and assign it the value of ** parseFloat(value * correctCost).toFixed(2)**.
 
-7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" + calc +'&lt;/span&gt;'**
+7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" + calc +'&lt;/span&gt;'**.
 
 8. Create a variable named **row** and assign it the value of **$("&lt;tr id='" + label.text() +"'&gt;")**
 
