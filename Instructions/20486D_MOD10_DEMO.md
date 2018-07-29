@@ -33,7 +33,7 @@
 
 11. In the **Microsoft Visual Studio** dialog box, click **Yes**.
 
-11. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TOOLS** menu, point to **NuGet Package Manager**, and then click **Package Manager Console**.
+11. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TOOLS** menu, point to **NuGet Package Manager**, and then click **Package Manager Console**. 
 
 12. In the **Package Manager Console** window, type the following text, and then press Enter.
 ```
@@ -184,15 +184,13 @@
 
 2. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
-3. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+3. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 4. In **Microsoft Edge**, click **Close**.
 
-5. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
 6. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
 
-7. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+7. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 8. In **Microsoft Edge**, locate the following text:
  ```
@@ -212,16 +210,14 @@
 
 12. In **Microsoft Edge**, click **Close**.
 
-13. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+13. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Services**, and then click **Counter.cs**.
 
-14. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Services**, and then click **Counter.cs**.
-
-15. In the **Counter.cs** code window, select the following code:
+14. In the **Counter.cs** code window, select the following code:
 ```cs
     UrlCounter[requestPath]++;
 ```
 
-16. Replace the selected code with the following code:
+15. Replace the selected code with the following code:
 ```cs
     if (UrlCounter.ContainsKey(requestPath))
     {
@@ -233,55 +229,53 @@
     }
 ```
 
-17. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+16. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-18. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+17. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-19. In **Microsoft Edge**, click **16**.
+18. In **Microsoft Edge**, click **16**.
      
-20. In **Microsoft Edge**, locate the following text:
+19. In **Microsoft Edge**, locate the following text:
  ```
     ErrorHandlingExample.Controllers.HomeController.GetDividedNumber(int id) in HomeController.cs
 	+	33.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
  ```
 
-21. In **Microsoft Edge**, click the **+** (plus) sign near **28**, and then inspect the code.
+20. In **Microsoft Edge**, click the **+** (plus) sign near **28**, and then inspect the code.
 
-22. In **Microsoft Edge**, locate the following text:
+21. In **Microsoft Edge**, locate the following text:
  ```
     ErrorHandlingExample.Services.DivisionCalculator.GetDividedNumbers(int number) in DivisionCalculator.cs
 	+	20.  if (number % i == 0)
  ```
 
-23. In **Microsoft Edge**, click the **+** (plus) sign near **20**, and then inspect the code.
+22. In **Microsoft Edge**, click the **+** (plus) sign near **20**, and then inspect the code.
 
-24. In **Microsoft Edge**, click **Close**.
+23. In **Microsoft Edge**, click **Close**.
 
-25. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **DivisionCalculator.cs**.
+24. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Services**, click **DivisionCalculator.cs**.
 
-26. In the **DivisionCalculator.cs** code window, select the following code:
+25. In the **DivisionCalculator.cs** code window, select the following code:
 ```cs
     for (int i = 0; i < (number / 2) + 1; i++)
 ```
 
-27. Replace the selected code with the following code:
+26. Replace the selected code with the following code:
 ```cs
     for (int i = 1; i < (number / 2) + 1; i++)
 ```
 
-28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+27. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
+28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
-30. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-31. In **Microsoft Edge**, click **16**.
+30. In **Microsoft Edge**, click **16**.
 
-32. In **Microsoft Edge**, click **Close**.
+31. In **Microsoft Edge**, click **Close**.
 
-33. In the **ErrorHandlingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-34. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+32. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Logging MVC Applications
 
@@ -403,25 +397,23 @@
 
 19. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
-20. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+20. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 21. In **Microsoft Edge**, click **16**.
     >**Note:** The browser displays the numbers that **16** can be divided by.
 
 22. In **Microsoft Edge**, click **Close**.
 
-23. In the **LoggingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+23. In the **LoggingExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **myLog-XXXXXXXX.txt**, and then inspect the **KeyNotFoundException** stack trace.
 
-24. In the **LoggingExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **myLog-XXXXXXXX.txt**, and then inspect the **KeyNotFoundException** stack trace.
+24. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
 
-25. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
-
-26. In the **Counter.cs** code window, select the following code:
+25. In the **Counter.cs** code window, select the following code:
 ```cs
     NumberCounter[number]++;
 ```
 
-27. Replace the selected code with the following code:
+26. Replace the selected code with the following code:
 ```cs
     if (NumberCounter.ContainsKey(number))
     {
@@ -434,24 +426,24 @@
         _logger.LogDebug($"The number {number} was added to the page display count dictionary.");
     }
 ```
-28. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+27. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-29. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
+28. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
 
-30. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+29. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
-31. In the **LoggingExample - Microsoft Visual Studio** window,  In the **Output** window, click  the **Show output from** drop down, select the **ASP.NET Core Web Server** option, and then click the **Clear All** button.
+30. In the **LoggingExample - Microsoft Visual Studio** window,  In the **Output** window, click  the **Show output from** drop down, select the **ASP.NET Core Web Server** option, and then click the **Clear All** button.
 
-32. In **Microsoft Edge**, click **16**.
-    >**Note:** The browser displays the numbers that **16** can be divided by and a text that shows the number of times that the page was displayed.
+31. In **Microsoft Edge**, click **16**.
+    >**Note:** The browser displays the numbers that **16** can be divided by, and a text that shows the number of times that the page was displayed.
 
-33. In the **LoggingExample (Running) - Microsoft Visual Studio** window, in the **Output** window, locate the text: "The number 16 was added to the page display count dictionary."
+32. In the **LoggingExample (Running) - Microsoft Visual Studio** window, in the **Output** window, locate the text: "The number 16 was added to the page display count dictionary."
 
-34. In **Microsoft Edge**, click **Close**.
+33. In **Microsoft Edge**, click **Close**.
 
-35. In the **LoggingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+34. In the **LoggingExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
 
-36. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+35. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

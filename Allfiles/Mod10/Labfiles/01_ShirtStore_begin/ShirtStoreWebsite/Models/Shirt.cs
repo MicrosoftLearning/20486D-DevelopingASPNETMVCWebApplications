@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace ShirtStoreWebsite.Models
 {
@@ -18,7 +19,7 @@ namespace ShirtStoreWebsite.Models
 
         public string GetFormattedTaxedPrice(float tax)
         {
-            return Price.ToString($"C2");
+            return Price.ToString($"C2", CultureInfo.GetCultureInfo("en-US"));
         }
     }
 }
