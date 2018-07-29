@@ -70,7 +70,7 @@
 
 13. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-14. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+14. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
     >**Note**: The browser displays the following text:<br>
     > "Product name: Bread<br>
     > Product price including tax: 5 * 1.2<br>
@@ -80,21 +80,19 @@
     
 15. In **Microsoft Edge**, click **Close**.
 
-16. In the **RazorSyntaxExample (Running) – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-17. In the **Index.cshtml** code window, select the following code:
+16. In the **Index.cshtml** code window, select the following code:
 ```cs
     Product price including tax: @productPrices.Value * 1.2
 ```
 
-18. Replace the selected code with the following code:
+17. Replace the selected code with the following code:
 ```cs
     Product price including tax: @(productPrices.Value * 1.2)
 ```
 
-19. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+18. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-20. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+19. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
     >**Note**: The browser displays the following text:<br>
     > "Product name: Bread<br>
     > Product price including tax: 6<br>
@@ -102,11 +100,9 @@
     > Product name: Rice<br>
     > Product price including tax: 3.6"
     
-21. In **Microsoft Edge**, click **Close**.
+20. In **Microsoft Edge**, click **Close**.
 
-22. In the **RazorSyntaxExample (Running) – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-23. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+21. In the **RazorSyntaxExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Using HTML Helpers and Tag Helpers
 
@@ -211,7 +207,7 @@
 
 21. In the **HTMLHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-22. In the **HTMLHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+22. In the **HTMLHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 23. In **Microsoft Edge**, click **Employees**.
     >**Note**: The browser displays a list of links, each link is a employee's name.
@@ -226,9 +222,7 @@
 
 27. In **Microsoft Edge**, click **Close**.
 
-28. In the **HTMLHelpersExample (Running) – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-29. In the **HTMLHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+28. In the **HTMLHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Using HTML Helpers and Tag Helpers
 
@@ -316,7 +310,7 @@
 
 17. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-18. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+18. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 19. In **Microsoft Edge**, click **Employees**.
 
@@ -328,59 +322,55 @@
 
 23. In **Microsoft Edge**, click **Close**.
 
-24. In the **TagHelpersExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+24. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
 
-25. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
+25. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, expand **Installed**, and then expand **ASP.NET Core**.
 
-26. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, expand **Installed**, and then expand **ASP.NET Core**.
+26. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, under **ASP.NET Core**, click **Web**.
 
-27. In the **Add New Item – TagHelpersExample** dialog box, in the navigation pane, under **ASP.NET Core**, click **Web**.
+27. In the **Add New Item – TagHelpersExample** dialog box, in the result pane, click **Razor View Imports**, and then click **Add**.
 
-28. In the **Add New Item – TagHelpersExample** dialog box, in the result pane, click **Razor View Imports**, and then click **Add**.
-
-29. In the **_ViewImports.cshtml** code window, type the following code:
+28. In the **_ViewImports.cshtml** code window, type the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-30. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, click **Index.cshtml**.
+29. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Home**, click **Index.cshtml**.
 
-31. In the **Index.cshtml** code window, delete the following code:
+30. In the **Index.cshtml** code window, delete the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-32. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Index.cshtml**.
+31. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Index.cshtml**.
 
-33. In the **Index.cshtml** code window, delete the following code:
+32. In the **Index.cshtml** code window, delete the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-34. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
+33. In the **TagHelpersExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Employee**, click **Details.cshtml**.
 
-35. In the **Details.cshtml** code window, delete the following code:
+34. In the **Details.cshtml** code window, delete the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-36. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+35. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-37. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+36. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-38. In **Microsoft Edge**, click **Employees**.
+37. In **Microsoft Edge**, click **Employees**.
 
-39. In **Microsoft Edge**, click **Michael**.
+38. In **Microsoft Edge**, click **Michael**.
 
-40. In **Microsoft Edge**, click **Back to employee selection list**.
+39. In **Microsoft Edge**, click **Back to employee selection list**.
 
-41. In **Microsoft Edge**, click **Elena**.
+40. In **Microsoft Edge**, click **Elena**.
 
-42. In **Microsoft Edge**, click **Close**.
+41. In **Microsoft Edge**, click **Close**.
 
-43. In the **TagHelpersExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-44. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+42. In the **TagHelpersExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Reusing Code in Views
 
@@ -482,14 +472,12 @@
 
 21. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-22. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+22. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
     >**Note**: The browser displays a table with cards. Each card contains information of a person including: First Name, Last Name, Residence, and Phone.
 
 23. In **Microsoft Edge**, click **Close**.
 
-24. In the **PartialViewsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-25. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+24. In the **PartialViewsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Reusing Code in Views
 
@@ -575,14 +563,12 @@
 
 23. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-24. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+24. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
     >**Note**: The browser displays a table with cards. Each card contains information of a person including: First Name, Last Name, Address, and a Phone.
      
 25. In **Microsoft Edge**, click **Close**.
 
-26. In the **ViewComponentsExample (Running)  – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-36. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+26. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

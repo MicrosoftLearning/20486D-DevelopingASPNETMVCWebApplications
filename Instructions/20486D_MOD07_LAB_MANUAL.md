@@ -175,7 +175,7 @@ The main tasks for this exercise are as follows:
 
     - Data Type: **DataType.Currency**
 
-24. Add a **Price** attribute with the following information:
+24. Add a **Display** attribute with the following information:
 
     - Name: **Price:**
 
