@@ -210,7 +210,7 @@ The main tasks for this exercise are as follows:
 
 6. Stop Debugging.
 
-
+>**Results**: After completing this exercise, you will be able to add layout and link it to views. You will also be able to add _ViewStart file and apply it to views.  
 
 ### Exercise 2: Using CSS 
 
@@ -349,6 +349,7 @@ The main tasks for this exercise are as follows:
 		- background-color: **whitesmoke**
 		- box-shadow: **none**
 
+>**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, link the CSS file to the layout and add new CSS rules. 
 
 ### Exercise 3: Using JavaScript
 
@@ -407,6 +408,7 @@ The main tasks for this exercise are as follows:
 
 7. Assign the **innerHTML** property of the **sumElement** variable the value of **"Total: $" + sum**.
 
+>**Results**: After completing this exercise, you will be able to add a JavaScript file and write JavaScript code to handle user interactions. 
 
 ### Exercise 4: Using jQuery
 
@@ -691,3 +693,6 @@ The main tasks for this exercise are as follows:
 8. Close **Microsoft Edge**.
 
 9. Stop Debugging.
+
+
+>**Results**: After completing this exercise, you will be able to add jQuery to web application using NPM, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 
