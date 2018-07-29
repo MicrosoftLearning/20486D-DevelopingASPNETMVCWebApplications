@@ -184,7 +184,7 @@
 
 30. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-31. In the **BootstrapExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+31. In the **BootstrapExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 32. In the **Home** page, click **Lunch modal example**, and then click **Close**.
 
@@ -196,9 +196,7 @@
 
 35. In **Microsoft Edge**, click **Close**.
 
-36. In the **BootstrapExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-37. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+36. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Using Task Runners
 
@@ -211,31 +209,31 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin\GulpExample**.
+1. Go to **Start**, and then type **cmd**.
 
-2. Select the address in the address bar, type **cmd**, and then press Enter.
+2. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
-3. In the command prompt, type the following command, and then press Enter.
+3. In the **User Account Control** dialog box, click **Yes**.
+
+4. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
        npm install
 ```
-4. Close the window.
+5. Close the window.
 
-5. On the taskbar, click **File Explorer**, navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin** and then double-click **GulpExample.sln**.
+6. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin** and then double-click **GulpExample.sln**.
 
-6. In the **GulpExample - Microsoft Visual Studio** window, on the **Tools** menu, click **Options**.
+7. In the **GulpExample - Microsoft Visual Studio** window, on the **Tools** menu, click **Options**.
 
-7. In the **Options** dialog box, in the **Search Options** text box, type **Web Package Management**, and then press Enter.
+8. In the **Options** dialog box, in the **Search Options** text box, type **Web Package Management**, and then press Enter.
 
-8. In the **Locations of external tools** box, of the **Options** dialog box, select **$(PATH)**, press the **Ap arrow** button until  selected **$(PATH)** is at the top of the list, and then click **OK**.
+9. In the **Locations of external tools** box, of the **Options** dialog box, select **$(PATH)**, press the **Ap arrow** button until  selected **$(PATH)** is at the top of the list, and then click **OK**.
 
-9. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+10. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
       >**Note:** The browser displays the **Index.cshtml** view without css.
 
-10. In **Microsoft Edge**, click **Close**.
-
-11. In the **GulpExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+11. In **Microsoft Edge**, click **Close**.
 
 12. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **package.json**.
 
@@ -253,18 +251,18 @@
 
 18. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Styles**, point to **Add**, and then click **New Item**.
 
-19. In the **Add New Item - GulpExample** dialog box, in the **search** text box type **scss**, and then press Enter.
+20. In the **Add New Item - GulpExample** dialog box, in the **search** text box type **scss**, and then press Enter.
 
-20. In the **Add New Item - GulpExample** dialog box, click **SCSS Style Sheet (SASS)**.
+21. In the **Add New Item - GulpExample** dialog box, click **SCSS Style Sheet (SASS)**.
 
-21. In the **Add New Item – GulpExample** dialog box, in the **Name** text box, type **main**, and then click **Add**. 
+22. In the **Add New Item – GulpExample** dialog box, in the **Name** text box, type **main**, and then click **Add**. 
 
-22. In the **main.scss** code window, select the following code: 
+23. In the **main.scss** code window, select the following code: 
   ```cs
        body {
        }
 ```
-23. Replace the selected code with the following code:
+24. Replace the selected code with the following code:
   ```cs
        $highlights: #124eab;
        $main-color: #1395f4;
@@ -282,7 +280,7 @@
             text-align:center;
        }
 ```
-24. Place the cursor immediately after the last typed **}** (closing bracket) sign, press Enter, and then type the following code:
+25. Place the cursor immediately after the last typed **}** (closing bracket) sign, press Enter, and then type the following code:
   ```cs
        div {
             color: darken($main-color, 20%);
@@ -308,13 +306,13 @@
             }
        }
 ```
-25. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Item**.
+26. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Item**.
 
-26. In the **Add New Item - GulpExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+27. In the **Add New Item - GulpExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
 
-27. In the **Add New Item - GulpExample** dialog box, in the **Name** text box, type **gulpfile**, and then click **Add**.
+28. In the **Add New Item - GulpExample** dialog box, in the **Name** text box, type **gulpfile**, and then click **Add**.
 
-28. In the **gulpfile.js** code window, type the following code:
+29. In the **gulpfile.js** code window, type the following code:
   ```cs
        var gulp = require('gulp');
        var sass = require('gulp-sass');
@@ -326,33 +324,33 @@
                .pipe(gulp.dest('wwwroot/css'));
        });
 ```
-29. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+30. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-30. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **gulpfile.js**, and then click **Task Runner Explorer**.
+31. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **gulpfile.js**, and then click **Task Runner Explorer**.
 
-31. In the **Task Runner Explorer** pane, under **Tasks**, right-click **sass**, and then click **Run**.
+      >**Note:** In **Task Runner Explorer**, if the **Tasks** list is not updated click **Refresh**.
+
+32. In the **Task Runner Explorer** pane, under **Tasks**, right-click **sass**, and then click **Run**.
 
       >**Note:** In Solution Explorer, under **wwwroot**, a new folder has been added named **css** with compiled SASS File to CSS named **main.css**.
 
-32. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **PhotoBook**, click **Index.cshtml**.
+33. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **PhotoBook**, click **Index.cshtml**.
 
-33. In the **Index.cshtml** code window, locate the following code:
+34. In the **Index.cshtml** code window, locate the following code:
   ```cs
        <title>Index</title>
 ```
-34. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
+35. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <link type="text/css" href="~/css/main.css" rel="stylesheet" />
 ```
-35. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+36. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-36. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+37. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
       >**Note:** The browser displays the **Index.cshtml** view with **css** style.
 
-37. In **Microsoft Edge**, click **Close**.
-
-38. In the **GulpExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
+38. In **Microsoft Edge**, click **Close**.
 
 39. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -466,15 +464,13 @@
 
 15. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-16. In the **GridExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+16. In the **GridExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
       >**Note:** The browser displays the **Index.cshtml** view with **Bootstrap grid system**.
 
 17. In **Microsoft Edge**, click **Close**.
 
-18. In the **GridExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-19. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+18. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
