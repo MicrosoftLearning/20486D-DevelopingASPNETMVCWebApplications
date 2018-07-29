@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowDataForCity</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+</head>
+<body>
+    <div>
+        <h2>@ViewBag.City.Name</h2>
+        <p>Country: @ViewBag.City.Country</p>
+        <p>Time zone: @ViewBag.City.TimeZone</p>
+        <span><img src="@Url.Action("GetImage", new { cityName = ViewBag.City.Name })" /></span>
+        @await Html.PartialAsync("_CityPopulation")
+        <a asp-action="ShowCities">Back</a>
+    </div>
+</body>
+</html>

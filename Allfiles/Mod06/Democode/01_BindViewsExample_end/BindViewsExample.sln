@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindViewsExample", "BindViewsExample\BindViewsExample.csproj", "{337CE23A-0213-4AFE-A9B7-75883A4D0F6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindViewsExample", "BindViewsExample\BindViewsExample.csproj", "{99A1244C-3EEA-48FF-8075-1811EBCB338B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{337CE23A-0213-4AFE-A9B7-75883A4D0F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{337CE23A-0213-4AFE-A9B7-75883A4D0F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{337CE23A-0213-4AFE-A9B7-75883A4D0F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{337CE23A-0213-4AFE-A9B7-75883A4D0F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A1244C-3EEA-48FF-8075-1811EBCB338B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A1244C-3EEA-48FF-8075-1811EBCB338B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A1244C-3EEA-48FF-8075-1811EBCB338B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A1244C-3EEA-48FF-8075-1811EBCB338B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {080614B3-C6F9-420A-9F08-6DADEA9B6E5C}
+		SolutionGuid = {7AB9FA5C-A0F4-4094-8F64-5C6FA0D45746}
 	EndGlobalSection
 EndGlobal

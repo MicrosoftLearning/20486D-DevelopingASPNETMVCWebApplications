@@ -3,13 +3,13 @@
 # Lab: Developing Views 
 
 #### Scenario
-To construct the user interface of the cities details application, your development team decided to add views. You have been asked to create the views to render a response to a browser.
+To construct the user interface of a cities web application, your development team decided to add views. You have been asked to create the views to render a response to a browser.
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
-- Add an MVC view to a web application.
+- Add a MVC view to a web application.
 - Use Razor to differentiate server-side code from HTML.
 - Write HTML and tag helpers in a view.
 - Add partial views and view components.
@@ -18,170 +18,201 @@ After completing this lab, you will be able to:
 
 Estimated Time: **60 minutes**
 
-## Exercise 1: Working with Static Files
+
+### Preparation Steps
+
+1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+
+## Exercise 1: Adding Views to an MVC Application
 
 #### Scenario
 
-In order to create the site, an index and a detail pages must be created. The index page will show a list of cities, and the details page will show the details on each one of the cities.
+To construct the user interface of a web application, views should be added to the web application. In this exercise you will add to views to the web application: **Index** and **Details**. The **Index** view will show a list of cities, and the **Details** view will show the details of a city.
 
 The main tasks for this exercise are as follows:
 
-1.	Add a view to show a list of all the cities, as retrieved by the ShowCities action.
+1.	Add a view to show all the cities.
 
 2.	Run the application.
 
-3.	Add a view to show data for a city, as returned by the ShowDataForCity action.
+3.	Add a view to show data for a city.
 
-4.	Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
+4.	Add a Back link to a view.
 
-5.	Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action.
+5.	Add a city name as a link to each city.
 
 6.	Run the application.
 
-####	Task 1: Add a view to show a list of all the cities, as retrieved by the ShowCities action.
+####	Task 1: Add a view to show all the cities
 
-1. Open the CitiesDetails.sln from the following location: **Allfiles\Mod05\Labfiles\01_CitiesDetails_begin**.
+1. From **Allfiles\Mod05\Labfiles\01_CitiesWebsite_begin** open the **CitiesWebsite.sln**. 
 
-2. In the constructor of the **CityProvider** service, initialize the **_cities** variable with the **CityInitializer** method results.
+2. In the **CityProvider** constructor, initialize the **_cities** field using the **CityInitializer** method.
 
-3. In **CityDetails** class, assign the fields of the **CityDetails** class with the values received from the constructor parameters.
+3. In the **City** constructor, initialize the **Country** property with the value of the **country** parameter.
 
-4. In **CityPopulation** class, assign the fields of the **CityPopulation** class with the values received from the constructor parameters.
+4. Initialize the **Name** property with the value of the **cityName** parameter.
 
-5. Add a new view to the **ShowCities** action method of the **CityController** class using the following information:
-   - Folder: **Views/City**
-   - Name: **ShowCities**
-   - Template: **Empty (without model)**
-   - Clear the **Create as partial view** check box.
-   - Clear the **Use a layout page** check box.
+5. Initialize the **TimeZone** property with the value of the **timeZone** parameter.
 
-6. In the **ShowCities** view, add **using** statements for the following namespaces:
-    - **CitiesDetails.Services**
+6. Initialize the **Population** property with the value of the **population** parameter.
 
-7. In the **ShowCities** view, inject a service into the view using the following information:
-    - Class type:  **ICityProvider**
-    - Variable name:  **CityProvider**
+7. In **CityPopulation** constructor, initialize the **Year** property with the value of the **year** parameter.
 
-8. To link a new style sheet, add a **link** element to the **ShowCities.cshtml** file using the following information:
-    - Type:  **text/css**
-    - Relation:  **stylesheet**
-    - Href:  **~/css/StyleSheet.css**
+8. Initialize the **City** property with the value of the **city** parameter.
 
-9. In the **BODY** element, Create an **H1** element using the following information:
-    - Content:  **Select City**  
+9. Initialize the **Urban** property with the value of the **urban** parameter.
 
-10. Create a new **foreach** code block that loops through all the cities in the **CitiesProvider** indexer list.
-    
-11. In the **foreach** code block, add a **P** element to display the city name property from the model. 
-    > **Note**: The city name is each item's key in the dictionary.
+10. Initialize the **Metro** property with the value of the **metro** parameter.
 
-####	Task 2: Run the application.
+11. In the **CityController** class, add **using** statement for the following namespace:
+    - **CitiesWebsite.Services**
 
-1.  Start debugging the **CitiesDetails** application.
-    > **Note**: The browser displays a list of city names.
-
-2. Stop debugging.
-
-####	Task 3: Add a view to show data for a city, as returned by the ShowDataForCity action.
-
-1. In the **CityController** class, add **using** statements for the following namespaces:
-    - **CitiesDetails.Services;**
-
-2. In the **CityController** class, define a new field using the following information:
+12. Create a new field with the following information:
+    - Scope: **private**
     - Type: **ICityProvider**
     - Name: **_cities**
-    - Scrope: **private**
 
-3. Inject the **ICityProvider** service into the **CityController** constructor, and save it into the **_cities** field.
+13. Change the **CityController** constructor signature to accept the following parameter:
+    - Type: **ICityProvider**
+    - Name: **cities**
 
-4. In the **CityController** class, declare a new parameter for the **ShowDataForCity** action using the following information:
-    - Type: **string**
-    - Name: **city**
+14. In the constructor code block, initialize the **_cities** field with the value of the **cities** parameter.
 
-5. Use the **city** parameter as index to the **_cities** field, and save its value to **ViewBag.City**.
+15. In the **ShowCities** action code block, above the return statement, save the following key and value in the **ViewBag** property:
+    - Key: **Cities**
+    - Value: **_cities**
 
-6. Add a new view to the **ShowDataForCity** action method of the **CityController** class using the following information:
-   - Folder: **Views/City**
-   - Name: **ShowDataForCity**
-   - Clear the **Create as partial view** check box.
-   - Clear the **Use a layout page** check box.
+16. Right-click on the **ShowCities** action name, and then click **Add View**.
 
-7. In the **ShowDataForCity** view, to link a new style sheet, add a  **link**  element to the  **ShowDataForCity.cshtml**  file using the following information:
+17. Create a new **View** using the **Add MVC View** dialog box, with the following information:
+
+    - View Name: **ShowCities**
+    - Template: **Empty (without model)**
+    - Create as Partial View: **False**
+    - Use a layout page: **False**
+
+18. After the **TITLE** element, add a **LINK** element with the following information:
     - Type:  **text/css**
-    - Relation:  **stylesheet**
-    - Href:  **~/css/StyleSheet.css**
+    - Rel:  **stylesheet**
+    - Href:  **~/css/style.css**
 
-8. In the **BODY** element, create a **DIV** element.
+19. In the **BODY** element, add a **H1** element with the following information:
+    - Content:  **Select City**  
 
-9. In the **DIV** element, add a **H2** element to display the **_city** property from the **ViewBag.City**.
+20. Create a **FOREACH** statement block, with the following information:
+    - Variable Type: **var**
+    - Variable Name: **item**
+    - Collection: **ViewBag.Cities**
 
-10. In the **DIV** element, below the **H2** element, add a **P** element, set its content to "Country: ", followed by the **_country** property from the **ViewBag.City**.
+21.  In the  **FOREACH** statement block, add a **P** element with the following information:
 
-11. In the **DIV** element, below the **P** element, add another **P** element, set its content "Time zone: ", followed by the **_timeZone** property from the **ViewBag.City**.
+     - Content:  **@item.Key** 
 
-12. In the **DIV** element, below the last **P** element, add a **SPAN** element.
 
-13. Within the **SPAN** element, render an **IMG** tag.
+####	Task 2: Run the application
 
-14. In the **IMG** element, add a **SRC** property using the following information:
-    - Html helper: **Url.Action**
-    - Target action: **GetImage**
-    - Helper parameter: **_city** property from the **ViewBag.City**
-     
-15. In the **CityController** class, in the **GetImage** action replace the method's return value to **File** using the following information:
-    - File path: **images\**
-    - File name: **cityName** parameter value
-    - File extension: **jpg**
-    - Content type: **image/jpeg**
+1. Save all the changes.
 
-####	Task 4: Add a Back link to the ShowDataForCity view. Pressing the link will redirect to the ShowCities action.
+2. Start the application without debugging.
 
-1. In the **ShowDataForCity** view, below the **SPAN** add a **BR** element.
+3. View the page you have added.
+    >**Note**: The browser displays a "Select City" title and a list of cities below it: Madrid, London and Paris.
 
-2. Below the **BR** element add an **A** element using the following information:
-    - Tag helper: **asp-action**
-    - Target page: **ShowCities**
+4. Close **Microsoft Edge**.
+
+####	Task 3: Add a view to show data for a city
+
+1. In the **CityController** class, change the **ShowDataForCity** action signature to accept the following parameter:
+    - Type: **string**
+    - Name: **cityName**
+
+2. In the **ShowDataForCity** action code block, above the return statement, save the following key and value in the **ViewBag** property:
+    - Key: **City**
+    - Value: **_cities[cityName]**
+
+3. Right-click on the **ShowDataForCity** action name, and then click **Add View**.
+
+4. Create a new view using the **Add MVC View** dialog box, with the following information:
+
+   - View Name: **ShowDataForCity**
+   - Template: **Empty (without model)**
+   - Create as Partial View: **False**
+   - Use a layout page: **False**
+
+5. In the **ShowDataForCity** view, after the **TITLE** element, add a **LINK** element with the following information:
+    - Type:  **text/css**
+    - Rel:  **stylesheet**
+    - Href:  **~/css/style.css**
+
+6. In the **BODY** element, create a **DIV** element.
+
+7. In the **DIV** element, add a **H2** element with the following information:
+    - Content:  **@ViewBag.City.Name** 
+
+8. Add a **P** element with the following information:
+    - Content:  **Country:  @ViewBag.City.Country** 
+
+9. Add a **P** element with the following information:
+    - Content:  **Time zone: @ViewBag.City.TimeZone** 
+
+10. Add a **SPAN** element.
+
+11. In the **SPAN** element, add a **IMG** element with the following information:
+    - src:  **@Url.Action("GetImage", new { cityName = ViewBag.City.Name })** 
+
+12. In the **CityController** class, edit the code in the **GetImage** action by removing the code which returns the **ContentResult** result using the **Content** method.
+
+13. Return the **FileResult** result using the **File** method. Pass **"$@"images&bsol;{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
+
+####	Task 4: Add links to the views using tag helpers
+
+1. In the **ShowDataForCity** view, after the **SPAN** add an **A** element with the following information:
+    - asp-action: **ShowCities**
     - Content: **Back**
 
-3. Add a new **Razor View Import** page using the following information:
-    - Parent folder: Views
-    - Name: _ViewImports
+2. Create a new **_ViewImports.cshtml** file with the following information:
 
-4. In the  **_ViewImports**  file, Add  **addTagHelper**  statements to the file for the following namespaces:
+    - Name: **_ViewImports**
+    - Folder: **Views**
 
-    - **Microsoft.AspNetCore.Mvc.TagHelpers**
+3. In the  **_ViewImports**  file, add a **@addTagHelper** directive with the following information:
 
-####	Task 5: Add a “Show data” link next to each city in the ShowCities view. Pressing the link will trigger a redirect to the ShowDataForCity action.
+    - Tag Helpers: <strong>*</strong>
+    - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
-1. In the **ShowCities** view, replace the **P** element with its content to an empty **H2** element.
+4. In the **ShowCities** view, remove the **P** element with its content.
 
-2.  In the **H2** element, add an **A** element using the following information:
-    - Content:  City name
-    - Tag helper:  **asp-action**
-    - Target page: **ShowDataForCity**
-    - Parameter name: **City**
-    - Parameter value: City name
-  
-    > **Note**: The key of the  **CityProvider** item contains the city name.
+5. In the  **FOREACH** statement block, add a **H2**.
 
-####	Task 6: Run the application.
+6. In the  **H2** element, add an **A** element with the following information:
 
-1.  Start debugging the **CitiesDetails** application.
-    > **Note**: The browser displays a list of city names, each name is a link to its city's details page.
+    - Content: **@item.Key**
+    - asp-action: **ShowDataForCity**
+    - asp-route-cityname: **@item.Key**
 
-2.  In the **Microsoft Edge** window, click the **London** link.
+
+####	Task 5: Run the application
+
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+3. In **Microsoft Edge** window, click **London**.
+
     > **Note**: The browser displays the city's name, details, mini map and a **Back** link.
 
-3. In the **Microsoft Edge** window, click the **Back** link.
-    > **Note**: The browser displays the previous page.
+4. In **Microsoft Edge**, click **Back**.
 
-4. Stop debugging.
+5. Close **Microsoft Edge**.
 
-##	Exercise 2: Adding a partial view
+>**Result**: At the end of this exercise, you will be able to add a **Razor view** templates to an **MVC** application, passing data from the **Controller** to the **View** using **ViewBag**, and navigate between them using **URL.Action** and **Tag Helpers**. 
+
+##	Exercise 2: Adding a Partial View
 
 #### Scenario
 
-The population details of the city is quite big and should be grouped as a subgroup in the details page.
+You have been asked to show the population of each city. In order to do this, you have been asked to add a partial view. In this exercise you will create a partial view and embed it in the **ShowDataForCity** view.
 
 The main tasks for this exercise are as follows:
 
@@ -191,62 +222,72 @@ The main tasks for this exercise are as follows:
 
 3.	Run the application.
 
-####	Task 1: Add a partial view.
+####	Task 1: Add a partial view
 
-1. Create a new folder, in the **CitiesDetails** project using the following information:
+1. Create a new folder with the following information:
 
     - Folder name: **Shared**
     - Parent folder: **Views**
 
-2. Add a partial view using the following information:
-    - Folder: **Shared**
-    - Name: **_CityPopulation**
-    - Template: **Empty (without model)**
-    - Check the **Create as partial view** check box. 
-    - Clear the **Use a layout page** check box.
+2. Create a new **partial view** using the **Add MVC View** dialog box, with the following information:
 
-3. In the **_CityPopulation** view, delete the file content.
+   - Folder: **Shared**
+   - View Name: **_CityPopulation**
+   - Template: **Empty (without model)**
+   - Create as Partial View: **True**
+   - Use a layout page: **False**
 
-4. In the **_CityPopulation** view, define a variable using the following information:
-    - Type: CitiesDetails.Services.CityPopulation
+3. In the **_CityPopulation** partial view, delete all the content.
+
+4. Add a **@inject** directive with the following information:
+    - Type: **CitiesWebsite.Services.ICityFormatter**
+    - Name: **cityFormatter**
+
+5. Add a new variable with the following information:
+    - Type: **CitiesWebsite.Models.CityPopulation**
     - Name: **population**
-    - Initial value: **_cityPopulation** from the **ViewBag.City**
+    - Value: **ViewBag.City.Population**
 
-5. In the **_CityPopulation** view, add a **P** element.
+6. Add a **P** element.
 
-6. In the **P** element add an **H3** element, set its content to "City Population()"
+7. In the **P** element, add a **H3** element with the following information:
+    - Content:  **City Population(@population.Year)**
 
-7. In the **H3** element, in the () (brackets) sign, include the **_year** property from the **population** variable.
-    > **Note**: The **_year** property represents the year that the census was made.
+8. After the **P** element, add another **P** element with the following information:
+    - Content:  **City: @cityFormatter.GetFormattedPopulation(@population.City)**
 
-8. In the **_CityPopulation** view, add another **P** element, set its content to "City: ", followed by the **_city** property from the **population** variable.
+9. After the last **P** element, add another **P** element with the following information:
+    - Content:  **Urban: @cityFormatter.GetFormattedPopulation(@population.Urban)**
 
-9. In the **_CityPopulation** view, add another  **P** element, set its content to "Urban: ", followed by the **_urban** property from the **population** variable.
+10. After the last **P** element, add another **P** element with the following information:
+    - Content:  **Metro: @cityFormatter.GetFormattedPopulation(@population.Metro)**
 
-10. In the **_CityPopulation** view, add another  **P** element, set its content to "Metro: ", followed by the **_metro** property from the **population** variable.
+####	Task 2: Use the partial view in the ShowDataForCity view
 
-####	Task 2: Use the partial view in the ShowDataForCity view.
+1. In the **ShowDataForCity** view, after the **SPAN** element, render a **partial view** with the following information:  
+    - Helper: **Html.PartialAsync**
+    - Partial View Name: **_CityPopulation**
 
-1. In the **ShowDataForCity** view, below the **SPAN** element, render a partial view using the following information:  
-    - Target page: **_CityPopulation**
-    - Tag helper: Html.Partial
+####	Task 3: Run the application
 
-####	Task 3: Run the application.
+1. Save all the changes.
 
-1.  Start debugging the **CitiesDetails** application.
-    > **Note**: The browser displays a link for each city in a list.
+2. Start the application without debugging.
 
-2.  In the **Microsoft Edge** window, click the **Madrid** link.
-    > **Note**: The browser displays the city details with its population region.
+3. In **Microsoft Edge**, click **Madrid**.
 
-3. Stop debugging.
+    > **Note**: The browser displays the city's name, details, mini map and a **Back** link.
 
-##	Exercise 3: Adding a view component
+4. Close **Microsoft Edge**.
+
+>**Result**: At the end of thise exercise, you will be able to add and render **Partial Views** in **Views**, and inject and use services using the **@Inject** directive.
+
+##	Exercise 3: Adding a View Component
 
 #### Scenario
 
-The **ShowCities** page shows onle a simple list of links to the **CityDetailsPage**. We will use **ViewCoponents** to show more details on each city in the **ShowCities** page.
-
+Currently in the **ShowCities** view you show for each city a link with the name of the city. You have been asked to show for each city in the **ShowCities** view also the country to which the city belongs and a mini map of the city. To implement this you have been asked to use a view component. In this exercise you will create a view component and embed it in the **ShowCities** view.
+ 
 The main tasks for this exercise are as follows:
 
 1.	Add a view component class.
@@ -257,88 +298,121 @@ The main tasks for this exercise are as follows:
 
 4.	Run the application.
 
-####	Task 1: Add a view component class.
+####	Task 1: Add a view component class
 
-1. Create a new top-level folder, in the **CitiesDetails** project using the following information:
+1. In the  **CitiesWebsite** project, create a new top-level folder, and name it **ViewComponents**.
 
-    - Folder name: **ViewComponents**
-
-2. Create a new class using the following information:
+2. Create a new class with the following information:
 
     - Name: **CityViewComponent**
-    - Parent folder: **ViewComponents**
+    - Folder: **ViewComponents**
 
-3. In the **CityViewComponent** class, add **using** statements for the following namespaces:
+3. In the **CityViewComponent** class, add **USING** statement for the following namespaces:
 
     - **Microsoft.AspNetCore.Mvc**
+    - **CitiesWebsite.Services**
+    - **CitiesWebsite.Models**
 
-4. Ensure that the **CityViewComponent** class inherits from the **ViewComponent** class.
+4. Change the **CityViewComponent** class to inherit from the **ViewComponent** class.
 
-5.	Add a method for the **CityViewComponent** using the following information:
+5. Create a new field with the following information:
+ 
+    - Scope: **private**
+    - Class: **ICityProvider**
+    - Name: **_cities**
+
+6. Add a constructor with the following parameter: 
+
+    - Type: **ICityProvider**
+    - Name: **cities**
+
+7. In the constructor, initialize the **_cities** field with the value of the **cities** parameter.
+
+8. Add an asynchronous method with the following information:
 
     - Scope: **public**
-    - Return Type: **IViewComponentResult**
-    - Name: **Invoke**
-    - Parameter Type: **string**
-    - Parameter Name: **cityName**
+    - Return Type: **Task<IViewComponentResult>**
+    - Name: **InvokeAsync**
+    - Parameter:
+        - Type: **string**
+        - Name: **cityName**
 
-6. In the **Invoke** method code block, insert the **cityName** parameter into the **ViewBag.CurrentCityName**.
+9. Add a method with the following information:
 
-7. In the **Invoke** method code block, return the **SelectCity** view.
+    - Scope: **private**
+    - Return Type: **Task<City>**
+    - Name: **GetCity**
+    - Parameter:
+        - Type: **string**
+        - Name: **cityName**
 
-####	Task 2: Add a view component view.
+10. In the **GetCity** method code block, return a **Task<City>** result using the  **Task.FromResult<City>** method. Pass **_cities[cityName]** as a parameter to the **Task.FromResult<City>** method.
 
-1. Create a new folder, in the **CitiesDetails** project using the following information:
+11. In the **InvokeAsync** method code block, call the **GetCity** method using the **await** operator. Pass  **cityName** as a parameter to the **GetCity** method.
+
+12. Assign the result of **GetCity** method call to **ViewBag.CurrentCity** property.
+
+13. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
+
+####	Task 2: Add a view component view
+
+1. Create a new folder with the following information:
 
     - Folder name: **Components**
     - Parent folder: **Shared**
 
-2. Create a new folder, in the **CitiesDetails** project using the following information:
+2. Create a new folder with the following information:
 
     - Folder name: **City**
     - Parent folder: **Components**
 
-3. Create a new **partial view** using the following information:
-    - Folder:  **Shared\Components\City**
-    - Name: **SelectCity**
-    - Template: **Empty (without model)**
-    - Check  the **Create as partial view** check box. 
-    - Clear the **Use a layout page** check box.
+3. Create a new **partial view** using the **Add MVC View** dialog box, with the following information:
 
-4. In the **SelectCity** partial view, replace the content with a new **DIV** element.
+   - Folder: **City**
+   - View Name: **SelectCity**
+   - Template: **Empty (without model)**
+   - Create as Partial View: **True**
+   - Use a layout page: **False**
 
-5. Place an **H2** element inside the **DIV** element.
+4. In the **SelectCity** partial view, delete all the content.
 
-6. Place an **A** element with a tag helper, inside the **H2** element using the following information:
-    - Content: **CurrentCityName** property from the **ViewBag**.
-    - Tag helper: **asp-action**
-    - Target action: **ShowDataForCity**
-    - Parameter name: **city**
-    - Parameter value: **CurrentCityName** property from the **ViewBag**.
+5. Add a **DIV** element.
 
-7. Below the **H2** element, add an **IMG** element.
+6. In the **DIV** element, add a **H2** element.
 
-8. In the **IMG** element, add a **SRC** property using the following information:
-    - Html helper: **Url.Action**
-    - Target action: **GetImage**
-    - Helper parameter: Create an annonymouse object with the property **cityName**. Assign the **CurrentCityName** property value from the **ViewBag** to the **cityName** property of the annonymouse object.
+7. In the **H2** element, add a **A** element with the following information:
+    - Content: **@ViewBag.CurrentCity.Name (Capital of @ViewBag.CurrentCity.Country)**
+    - asp-action: **ShowDataForCity**
+    - asp-route-cityname: **@ViewBag.CurrentCity.Name**
 
-####	Task 3: Use the view component.
+8. After the **H2** element, add an **IMG** element with the following information:
+    - Attribute: **src**
+    - Value: **@Url.Action("GetImage", new { cityName = ViewBag.CurrentCity.Name })**
 
-1. In the **ShowCities.cshtml** view, replace the content of the **foreach** loop, with a view component invocation using the following information:
-    - Html helper: **Component.InvokeAsync**
-    - Target partial view: **City**
-    - Parameter Value: city name
-    - Include an **await** in the method call.
+####	Task 3: Use the view component
+
+1. In the **ShowCities** view, delete the content of the **FOREACH** statment and add the following: **@await Component.InvokeAsync("City", item.Key)**
 
     > **Note**: The key of the  **CityProvider** item contains the city name.
 
-####	Task 4: Run the application.
+####	Task 4: Run the application
 
-1.  Start debugging the **CitiesDetails** application.
+1. Save all the changes.
+
+2. Start the application without debugging.
+
     > **Note**: The browser displays a list of cities, each has a header link and mini map image of the region.
 
-2.  In the **Microsoft Edge** window, click the **Madrid** link.
-    > **Note**: The browser displays the city details.
+3.  In the **Microsoft Edge** window, click the **Madrid (Capital of Spain)** link.
 
-3. Stop debugging.
+4. Close **Microsoft Edge**.
+
+5. Close **Visual Studio**.
+
+>**Result**: At the end of this exercise, you will be able to create **View Components**, and invoke and render **View Components** from a **View**.
+
+©2018 Microsoft Corporation. All rights reserved.
+
+The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not** included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+
+This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.
