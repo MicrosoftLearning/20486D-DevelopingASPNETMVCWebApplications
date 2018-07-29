@@ -56,7 +56,7 @@
 ```
 12. Ensure that the cursor is at the end of the **GetAll** action code block, press Enter twice, and then type the following code:
   ```cs
-       [HttpGet("/api/person/{id}")]
+       [HttpGet("{id}")]
        public ActionResult GetLastNameById(int id)
        {
        }

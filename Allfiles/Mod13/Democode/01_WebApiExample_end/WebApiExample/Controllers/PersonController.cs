@@ -28,7 +28,7 @@ namespace WebApiExample.Controllers
             return _people;
         }
 
-        [HttpGet("/api/person/{id}")]
+        [HttpGet("{id}")]
         public ActionResult GetLastNameById(int id)
         {
             var person = _people.FirstOrDefault(p => p.Id == id);
