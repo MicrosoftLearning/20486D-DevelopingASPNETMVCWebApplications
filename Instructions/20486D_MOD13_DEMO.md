@@ -12,26 +12,45 @@
 
 1. Navigate to **Allfiles\Mod13\Democode\01_WebApiExample_begin**, and then double-click **WebApiExample.sln**.
 
-2. In **Solution Explorer**, right-click **WebApiExample**, point to **Add**, and then click **New Folder**.
+2. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-3. In the **NewFolder** text box, type **Controllers**, and then press Enter.
+    >**Note:** The browser displays **HTTP 404** error. 
 
-4. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
+3. In **Microsoft Edge**, click **Close**.
 
-5. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
+4. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Properties** click **lanchSettings.json**.
 
-6. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **PersonController**, and then click **Add**.
+5. In the **lanchSettings.json** code window, select the following code:
+  ```cs
+       "launchUrl": "api/values",
+```
+>**Note:** This snippet of code appears twice in the file.  
 
-7. In the **PersonController.cs** code window, locate the following code:
+6. Replace the selected code with the following code:
+  ```cs
+       "launchUrl": "api/person",
+```
+
+7. In **Solution Explorer**, right-click **WebApiExample**, point to **Add**, and then click **New Folder**.
+
+8. In the **NewFolder** text box, type **Controllers**, and then press Enter.
+
+9. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
+
+10. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
+
+11. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **PersonController**, and then click **Add**.
+
+12. In the **PersonController.cs** code window, locate the following code:
   ```cs
        using Microsoft.AspNetCore.Mvc;
 ```
-8. Ensure that the cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
+13. Ensure that the cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
   ```cs
        using WebApiExample.Models;
 ```
 
-9. In the **PersonController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+14. In the **PersonController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
        private List<Person> _people = new List<Person>();
 
@@ -43,25 +62,25 @@
             _people.Add(new Person() {Id = 4, FirstName = "Bessie", LastName = "Duppstadt" });
        }
 ```
-10. Ensure that the cursor is at the end of the **PersonController** method code block, press Enter twice, and then type the following code:
+15. Ensure that the cursor is at the end of the **PersonController** method code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet]
        public ActionResult<List<Person>> GetAll()
        {
        }
 ```
-11. In the **GetAll** action code block, type the following code:
+16. In the **GetAll** action code block, type the following code:
   ```cs
        return _people;
 ```
-12. Ensure that the cursor is at the end of the **GetAll** action code block, press Enter twice, and then type the following code:
+17. Ensure that the cursor is at the end of the **GetAll** action code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet("{id}")]
        public ActionResult GetLastNameById(int id)
        {
        }
 ```
-13. In the **GetLastNameById** action code block, type the following code:
+18. In the **GetLastNameById** action code block, type the following code:
   ```cs
        var person = _people.FirstOrDefault(p => p.Id == id);
 
@@ -73,19 +92,19 @@
        return new ObjectResult(person.LastName);
 ```
 
-14. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+19. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-15. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+20. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
     >**Note:** The browser displays a list of people in **JSON** format.
 
-16. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/api/person/1**, and then press Enter.
+21. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/api/person/1**, and then press Enter.
 
     >**Note:** The browser displays the first person's last name in **JSON** format.
 
-17. In **Microsoft Edge**, click **Close**.
+22. In **Microsoft Edge**, click **Close**.
 
-18. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+23. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Developing a Web API
 
