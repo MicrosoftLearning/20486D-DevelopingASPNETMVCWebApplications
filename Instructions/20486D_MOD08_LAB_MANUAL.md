@@ -200,15 +200,13 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In the menu bar, click **Visitor Info**.
 
 4. In the menu bar, click **Tickets**.
 
 5. Close the **Microsoft Edge** window.
-
-6. Stop Debugging.
 
 >**Results**: After completing this exercise, you will be able to add layout and link it to views. You will also be able to add _ViewStart file and apply it to views.  
 
@@ -669,7 +667,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In the menu bar, click **Visitor Info**.
 
@@ -692,7 +690,6 @@ The main tasks for this exercise are as follows:
 
 8. Close **Microsoft Edge**.
 
-9. Stop Debugging.
-
+9. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you will be able to add jQuery to web application using NPM, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 
