@@ -18,7 +18,7 @@
 
 4. In the **Search** text box, type **Microsoft.EntityFrameworkCore.Sqlite**, and then press Enter.
 
-5. Click **Microsoft.EntityFrameworkCore.Sqlit**, select version **v2.1.0**, and then click **Install.**
+5. Click **Microsoft.EntityFrameworkCore.Sqlit**, select version **2.1.0**, and then click **Install.**
 
 6. If a **Preview Changes** dialog box appears, click **OK**.
 
@@ -52,7 +52,7 @@
 14. In the **PersonContext.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
       public PersonContext(DbContextOptions<PersonContext> options) 
-          :base(options)
+          : base(options)
       {
       }
 
@@ -174,7 +174,7 @@
 
 32. In the **Create** action code block, type the following code:
   ```cs
-       _context.Add(new Person() { FirstName = "Robert ", LastName = "Berends", City = "Birmingham", Address = "2632 Petunia Way" });
+       _context.Add(new Person() { FirstName = "Robert", LastName = "Berends", City = "Birmingham", Address = "2632 Petunia Way" });
        _context.SaveChanges();
        return RedirectToAction(nameof(Index));
 ```
@@ -197,8 +197,6 @@
 35. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 36. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
-
-      >**Note:** The browser displays the **Index.cshtml** view.
 
 37. In **Microsoft Edge**, click **Create New Person**.
 
