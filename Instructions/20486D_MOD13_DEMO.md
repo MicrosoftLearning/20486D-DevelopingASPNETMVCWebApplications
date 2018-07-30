@@ -75,7 +75,7 @@
 
 14. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-15. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+15. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
     >**Note:** The browser displays a list of people in **JSON** format.
 
@@ -85,9 +85,7 @@
 
 17. In **Microsoft Edge**, click **Close**.
 
-18. In the **WebApiExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-19. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+18. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Developing a Web API
 
@@ -165,15 +163,13 @@
 ```
 21. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-22. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+22. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
     >**Note:** The browser displays a list of animals in **XML** format.
 
 23. In **Microsoft Edge**, click **Close**.
 
-24. In the **XmlFormatExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-25. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+24. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
