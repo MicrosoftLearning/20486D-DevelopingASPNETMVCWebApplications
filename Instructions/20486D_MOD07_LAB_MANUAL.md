@@ -821,7 +821,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application..
+2. Start the application without debugging.
 
 3. In **Microsoft Edge**, click **Add Cupcakes**.
 
@@ -859,8 +859,6 @@ The main tasks for this exercise are as follows:
 15. On the **Cupcakes Shop** page, verify the cupcake was deleted.
 
 16. Close **Microsoft Edge.**
-
-17. **Stop debugging**.
 
 >**Results**: After completing this exercise, you will be able to use Entity Framework Core to retrieve and store data through a Repository in the **CupcakeController**. 
 
@@ -940,7 +938,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In **Microsoft Edge**, click **Add Cupcakes**.
 
@@ -979,7 +977,7 @@ The main tasks for this exercise are as follows:
 
 16. Close **Microsoft Edge.**
 
-17. **Stop debugging** and close **Microsoft Visual Studio**.
+17. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you should have created a cupcakes shop application in which users can submit, edit, delete and view cupcales details.
 
