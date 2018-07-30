@@ -1,0 +1,140 @@
+﻿$highlights: #124eab;
+
+@mixin normalized-text() {
+    font-family: "Playfair Display", Arial, Tahoma, sans-serif;
+    text-align: center;
+}
+
+@mixin normalized-image() {
+    width: 100%;
+    height: auto;
+}
+
+div {
+    h1 {
+        @include normalized-text();
+        font-size: 45px;
+        line-height: 50px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #736454;
+        margin: 60px;
+    }
+}
+
+.main-title {
+    background-image: url("/images/banner-1.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        @include normalized-text();
+        color: $highlights;
+        font-size: 50px;
+        text-shadow: 0px 2px 5px #aba8a8;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    button {
+        @include normalized-text();
+        transition: none;
+        color: lighten(#ffffff,90%);
+        text-align: inherit;
+        line-height: 13px;
+        border: 1px solid #d3c0c0;
+        margin: 0px;
+        padding: 12px 24px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #736454;
+    }
+}
+
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    .item {
+        color: white;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h3 {
+            @include normalized-text();
+            color: #736454;
+            font-size: 20px;
+        }
+
+        div {
+            img {
+                @include normalized-image();
+            }
+        }
+
+        div {
+            p {
+                @include normalized-text();
+                color: #736454;
+                font-size: 20px;
+                margin: 70px;
+            }
+        }
+    }
+}
+
+.container {
+    .checkout {
+        border: 1px solid #ccc;
+        box-shadow: 0 0 5px #ccc;
+        padding: 20px;
+        width: 800px;
+        margin: 0 auto;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+
+        .row justify-content-center intro-row {
+            font-weight: bold;
+        }
+    }
+}
+
+.justify-content-center {
+    justify-content: center !important;
+    align-items: center;
+}
+
+nav {
+    width: 450px;
+}
+
+img {
+    height: 35px;
+    width: 35px;
+}
+
+.navbar-nav > li {
+    float: left;
+    position: relative;
+}
+
+.row {
+    margin: 10px;
+}
+
+.imageDisplay {
+    @include normalized-image();
+}

@@ -114,14 +114,12 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. View the page you have added.
     >**Note**: The browser displays a "Select City" title and a list of cities below it: Madrid, London and Paris.
 
 4. Close **Microsoft Edge**.
-
-5. Stop debugging.
 
 ####	Task 3: Add a view to show data for a city
 
@@ -198,7 +196,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In **Microsoft Edge** window, click **London**.
 
@@ -207,8 +205,6 @@ The main tasks for this exercise are as follows:
 4. In **Microsoft Edge**, click **Back**.
 
 5. Close **Microsoft Edge**.
-
-6. Stop debugging.
 
 >**Result**: At the end of this exercise, you will be able to add a **Razor view** templates to an **MVC** application, passing data from the **Controller** to the **View** using **ViewBag**, and navigate between them using **URL.Action** and **Tag Helpers**. 
 
@@ -276,15 +272,13 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In **Microsoft Edge**, click **Madrid**.
 
     > **Note**: The browser displays the city's name, details, mini map and a **Back** link.
 
 4. Close **Microsoft Edge**.
-
-5. Stop debugging.
 
 >**Result**: At the end of thise exercise, you will be able to add and render **Partial Views** in **Views**, and inject and use services using the **@Inject** directive.
 
@@ -405,7 +399,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
     > **Note**: The browser displays a list of cities, each has a header link and mini map image of the region.
 
@@ -413,7 +407,7 @@ The main tasks for this exercise are as follows:
 
 4. Close **Microsoft Edge**.
 
-5. Stop debugging and close the **Visual Studio**.
+5. Close **Visual Studio**.
 
 >**Result**: At the end of this exercise, you will be able to create **View Components**, and invoke and render **View Components** from a **View**.
 

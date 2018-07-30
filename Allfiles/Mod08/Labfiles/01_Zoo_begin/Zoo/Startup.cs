@@ -29,8 +29,11 @@ namespace Zoo
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ZooContext zooContext)
         {
+			zooContext.Database.EnsureDeleted();
+			zooContext.Database.EnsureCreated();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

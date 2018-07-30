@@ -1,0 +1,50 @@
+﻿body{
+    font-size:20px;
+}
+
+.row {
+    padding: 2px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.grid-header {
+    font-weight: bold;
+    background-color: #ccc;
+}
+
+.row > div {
+    padding: 5px;
+}
+
+.title {
+    background-image: url("/images/chess-game.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    min-height: 400px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #e22d2d;
+    text-shadow: 0px 2px 5px #000;
+    font-family: Arial, serif;
+    font-size: 55px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    background-color: rgba(101, 97, 96, 0.5);
+    border-radius: 5px;
+}
