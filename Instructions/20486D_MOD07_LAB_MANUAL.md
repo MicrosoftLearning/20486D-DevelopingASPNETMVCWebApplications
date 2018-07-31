@@ -444,7 +444,9 @@ The main tasks for this exercise are as follows:
 
 3. Use Entity Framework to retrieve data.
 
-4. Manipulating data using Entity Framework. 
+4. Manipulating data using Entity Framework.
+
+5. Run the application. 
 
 #### Task 1: Create a repository
 
@@ -880,6 +882,8 @@ The main tasks for this exercise are as follows:
 2. Create an app Settings File and specifying a connection string.
 
 3. Use Migrations.
+
+4. Run the application.
 
 #### Task 1: Connecting to a Microsoft SQL Server
 
