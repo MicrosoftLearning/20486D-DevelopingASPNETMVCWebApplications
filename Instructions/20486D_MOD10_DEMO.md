@@ -241,7 +241,7 @@
 	+	33.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
  ```
 
-20. In **Microsoft Edge**, click the **+** (plus) sign near **28**, and then inspect the code.
+20. In **Microsoft Edge**, click the **+** (plus) sign near **33**, and then inspect the code.
 
 21. In **Microsoft Edge**, locate the following text:
  ```
