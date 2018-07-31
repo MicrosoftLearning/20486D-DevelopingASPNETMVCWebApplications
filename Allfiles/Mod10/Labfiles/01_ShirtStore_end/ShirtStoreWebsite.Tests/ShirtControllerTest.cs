@@ -22,8 +22,8 @@ namespace ShirtStoreWebsite.Tests
             Mock<ILogger<ShirtController>> mockLogger = new Mock<ILogger<ShirtController>>();
             ShirtController shirtController = new ShirtController(fakeShirtRepository, mockLogger.Object);
             ViewResult viewResult = shirtController.Index() as ViewResult;
-            List<Shirt> products = viewResult.Model as List<Shirt>;
-            Assert.AreEqual(products.Count, 3);
+            List<Shirt> shirts = viewResult.Model as List<Shirt>;
+            Assert.AreEqual(shirts.Count, 3);
         }
     }
 }
