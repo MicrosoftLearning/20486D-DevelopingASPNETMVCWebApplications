@@ -34,7 +34,7 @@ In this exercise, you will:
 
 - Add a Cupcake model and a Bakery model.
 - Add a CupcakeContext class.
-- Set CupcakeContext as an In Memory database.
+- Set Entity Framework to use SQLite.
 - Add a OnModelCreating method and populate the database.
 
 The main tasks for this exercise are as follows:
