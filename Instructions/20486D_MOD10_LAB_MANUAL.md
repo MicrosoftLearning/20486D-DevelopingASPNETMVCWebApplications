@@ -48,15 +48,41 @@ In this exercise, you will create a test project to the ASP.NET Core MVC applica
 
 5. In the **ShirtTest** class code block, rename **TestMethod1** to **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
-6. 
+6. In the **ShirtTest** class, add **using** statements for the following namespaces:
+   - **ShirtStoreWebsite.Models**
+
+7. Add a new variable with the following information:
+    - Type: **Shirt**
+    - Name: **shirt**
+    - Value: **new Shirt { Price = 10F }**
+
+8. Add a new variable with the following information:
+    - Type: **string**
+    - Name: **taxedPrice**
+    - Value: **shirt.GetFormattedTaxedPrice(1.2F)**
+
+9. Call the static **AreEqual** method of the **Assert** class, pass **"$12.00"** and the **taxedPrice** variable as parameters to the **AreEqual** method.
+
+10. Save all the changes.
 
 #### Task 2: Run the unit test – it should fail
 
+1. Run all tests.
+    >**Note:** The **Test Explorer** displays 1 failed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
+
 #### Task 3: Implement the model class so the test will pass
+
+1. In the **Shirt** class, replace **GetFormattedTaxedPrice** return value using the following information:
+    - Value: **(Price * tax).ToString($"C2", CultureInfo.GetCultureInfo("en-US"))** 
+
+2. Save all the changes.
 
 #### Task 4: Run the unit test – it succeeds
 
->**Results** : 
+1. Run all tests.
+    >**Note:** The **Test Explorer** displays 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
+
+>**Results** : After completing this exercise, you will be able to create a Test project and test a model while fixing its code, as in a Test Driven Development environment.
 
 ### Exercise 2: Testing a Controller Using a Fake Repository
 
