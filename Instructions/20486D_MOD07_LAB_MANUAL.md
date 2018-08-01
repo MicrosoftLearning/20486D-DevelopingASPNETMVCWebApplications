@@ -980,7 +980,69 @@ The main tasks for this exercise are as follows:
 
     - Name: **Caloric Value:**
 
-3. In the **CupcakeContext** class,
+3. In the **CupcakeContext** class, replace the call **HasData** method of the **EntityTypeBuilder&lt;Cupcake&gt;** object returned from the **Entity&lt;Cupcake&gt;** method. Pass the following instances as parameters to the **HasData** method:
+
+    - Parameters:
+        - **New Cupcake**:
+            - CupcakeId: **1**
+            - CupcakeType : **CupcakeType.Birthday**
+            - Description:  **"Vanilla cupcake with coconut cream"**
+            - GlutenFree: **true**
+            - Price: **2.5**
+            - BakeryId: **1**
+            - ImageMimeType:  **"image/jpeg"**
+            - ImageName :  **"birthday-cupcake.jpg"**
+            - CaloricValue : **355**
+        - **New Cupcake**:
+            - CupcakeId: **2**
+            - CupcakeType : **CupcakeType.Chocolate**
+            - Description:  **"Chocolate cupcake with caramel filling and chocolate butter cream"**
+            - GlutenFree: **false**
+            - Price: **3.2**
+            - BakeryId: **2**
+            - ImageMimeType:  **"image/jpeg"**
+            - ImageName :  **"chocolate-cupcake.jpg"**
+            - CaloricValue : **195**
+        - **New Cupcake**:
+            - CupcakeId: **3**
+            - CupcakeType : **CupcakeType.Strawberry**
+            - Description:  **"Chocolate cupcake with straberry cream filling"**
+            - GlutenFree: **false**
+            - Price: **4**
+            - BakeryId: **3**
+            - ImageMimeType:  **"image/jpeg"**
+            - ImageName :  **"pink-cupcake.jpg"**
+            - CaloricValue : **295**
+        - **New Cupcake**:
+            - CupcakeId: **4**
+            - CupcakeType : **CupcakeType.Turquoise**
+            - Description:  **"Vanilla cupcake with butter cream"**
+            - GlutenFree: **true**
+            - Price: **1.5**
+            - BakeryId: **4**
+            - ImageMimeType:  **"image/jpeg"**
+            - ImageName :  **"turquoise-cupcake.jpg"**
+            - CaloricValue : **360**
+
+4. In the **Details.cshtml** file, add a **DIV** element.
+
+5. In the **DIV** element, add a **P** element with the following information:
+
+	- Class:**display-label**
+    - Content: ***@Html.DisplayNameFor(model => model.CaloricValue)**
+
+6. After the **P** element, add a **P** element with the following information:
+
+	- Class:**display-field**
+    - Content: ***@Html.DisplayFor(model => model.CaloricValue)**
+
+7. Open **Package Manager Console**. 
+
+8. In the **Package Manager Console** tab, type the following command: **Add-Migration AddCupcakeCaloricValue**.
+
+    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, in **Solution Explorer**, under  **Migrations**, a new file created.
+
+9. Type the following command: **Update-Database**.
 
 #### Task 6: Run the application
 
