@@ -87,14 +87,14 @@ a:hover {
 .display-label {
     display: inline-block;
     width: 150px;
-    margin: 25px 1px 5px 1px;
+    margin: 25px 1px 2px 1px;
     font-weight: bold;
     font-size: 20px;
 }
 
 .display-picture-title {
     display: inline-block;
-    margin: 5px 1px 5px 1px;
+    margin: 2px 1px 2px 1px;
     font-weight: bold;
     font-size: 20px;
 }
@@ -226,6 +226,6 @@ form {
     border-style: solid;
     padding: 15px;
     margin: 50px auto auto auto;
-    height: 720px;
+    height: 715px;
     width: 355px;
 }

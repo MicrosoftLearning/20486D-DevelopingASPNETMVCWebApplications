@@ -881,6 +881,10 @@ The main tasks for this exercise are as follows:
 
 4. Run the application.
 
+5. Use Migrations to update database schema.
+
+6. Run the application.
+
 #### Task 1: Connecting to a Microsoft SQL Server
 
 1. In the **Startup** class, in the **ConfigureServices** method, add a varible named **connectionString** of type **string**, with the value of **"Server=(localdb)\\MSSQLLocalDB;Database=BakeriesDb;Trusted_Connection=True;MultipleActiveResultSets=true";**.
@@ -907,38 +911,17 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Use Migrations
 
-1. In the **Cupcakes.csproj** file, at the end of the **Project** element, add a **ItemGroup** element. 
+1. Open **Package Manager Console**. 
 
-2. In the **ItemGroup** element, add a **DotNetCliToolReference** element with the following information:
-    - Include: **Microsoft.EntityFrameworkCore.Tools.DotNet**
-    - Version: **2.0.0**
+2. In the **Package Manager Console** tab, type the following command: **Add-Migration InitialCreate**.
 
-2. Save all the changes.
+    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, in **Solution Explorer**, new folder named **Migrations** created with multiple files.
 
-3. In **Solution Explorer**, click on **Open Folder in File Explorer**.
+3. Type the following command: **Update-Database**.
 
-4. In the address bar type **cmd**, and press Enter.
+4. Open **SQL Server Object Explorer**. 
 
-5. In the **Command Line** window, type the following command: **dotnet ef**.
-
-    >**Note:** Verify that the Entity Framework tools for the command-line interface provided correctly in **Microsoft.EntityFrameworkCore.Tools.DotNet**.
-
-6. Type the following command: **dotnet ef dbcontext info**.
-
-    >**Note:** Verify that the **Database name** is identical to the name in the **appsettings.json** file.
-
-7.  Type the following command: **dotnet ef database drop**.
-
-8. Type the following command: **y**.
-    >**Note:** Enter y to ensure that there are no database conflicts.
-
-9. Type the following command: **dotnet ef migrations add InitialCreate**.
-
-    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, in the **Solution Explorer**, that the newly added folder **Migrations** contains two cs files.
-
-10. Type the following command: **dotnet ef database update**.
-
-    >**Note:** In the **SQL Server Object Explorer** pane of the **Cupcakes - Microsoft Visual Studio** window, verify the **BakeriesDb **tables.
+5. In **SQL Server Object Explorer**, view the **BakeriesDb** database tables.
 
 #### Task 4: Run the application
 
@@ -983,7 +966,37 @@ The main tasks for this exercise are as follows:
 
 16. Close **Microsoft Edge.**
 
-17. Close **Microsoft Visual Studio**.
+
+#### Task 5: Use Migrations to update database schema
+
+1. In the **Cupcake** class, add a new property with the following information:
+
+   - Scope:   **public**
+   - Name: **CaloricValue**
+   - Type: **int**
+   - Access: **Read and write**
+
+2. Add a **Display** attribute with the following information:
+
+    - Name: **Caloric Value:**
+
+3. In the **CupcakeContext** class,
+
+#### Task 6: Run the application
+
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+3. Select a cupcake of your choice, and click on **Details**.
+
+    >**Note:** The database schema updated successfully a new property added named **Caloric Value** with it`s value. 
+
+4. Verify the cupcake details, and then click **Back to List**.
+
+5. Close **Microsoft Edge.**
+
+6. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you should have created a cupcakes shop application in which users can submit, edit, delete and view cupcales details.
 
