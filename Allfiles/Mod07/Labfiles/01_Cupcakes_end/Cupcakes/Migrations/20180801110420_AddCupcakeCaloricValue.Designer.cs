@@ -4,14 +4,16 @@ using Cupcakes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cupcakes.Migrations
 {
     [DbContext(typeof(CupcakeContext))]
-    partial class CupcakeContextModelSnapshot : ModelSnapshot
+    [Migration("20180801110420_AddCupcakeCaloricValue")]
+    partial class AddCupcakeCaloricValue
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

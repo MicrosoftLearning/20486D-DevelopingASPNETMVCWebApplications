@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cupcakes.Migrations
 {
     [DbContext(typeof(CupcakeContext))]
-    [Migration("20180624131547_InitialCreate")]
+    [Migration("20180801103729_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
