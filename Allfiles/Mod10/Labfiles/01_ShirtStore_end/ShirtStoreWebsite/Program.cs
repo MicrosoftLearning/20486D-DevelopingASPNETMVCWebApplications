@@ -49,8 +49,7 @@ namespace ShirtStoreWebsite
                     logging.AddConfiguration(config);
                     logging.AddConsole();
                 }
-
-                if (env.IsProduction())
+                else
                 {
                     logging.AddFile(config);
                 }

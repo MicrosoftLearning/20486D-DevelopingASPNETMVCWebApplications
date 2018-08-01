@@ -272,6 +272,7 @@
 29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 30. In **Microsoft Edge**, click **16**.
+    >**Note:** The browser displays the numbers that **16** can be divided by.
 
 31. In **Microsoft Edge**, click **Close**.
 
@@ -309,8 +310,7 @@
             logging.AddConfiguration(config);
             logging.AddConsole();
         }
-
-        if (env.IsProduction())
+        else
         {
             logging.AddFile(config);
         }
@@ -404,16 +404,20 @@
 
 22. In **Microsoft Edge**, click **Close**.
 
-23. In the **LoggingExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **myLog-XXXXXXXX.txt**, and then inspect the **KeyNotFoundException** stack trace.
+23. Navigate to **Allfiles\Mod10\Democode\02_ErrorHandlingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
 
-24. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
+24. In **myLog-XXXXXXXX.txt - Notepad** window, inspect the **KeyNotFoundException** stack trace.
 
-25. In the **Counter.cs** code window, select the following code:
+25. In **myLog-XXXXXXXX.txt - Notepad** window, click **Close**.
+
+26. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
+
+27. In the **Counter.cs** code window, select the following code:
 ```cs
     NumberCounter[number]++;
 ```
 
-26. Replace the selected code with the following code:
+28. Replace the selected code with the following code:
 ```cs
     if (NumberCounter.ContainsKey(number))
     {
@@ -426,22 +430,21 @@
         _logger.LogDebug($"The number {number} was added to the page display count dictionary.");
     }
 ```
-27. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+29. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-28. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
+30. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
 
-29. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+31. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-30. In the **LoggingExample - Microsoft Visual Studio** window,  In the **Output** window, click  the **Show output from** drop down, select the **ASP.NET Core Web Server** option, and then click the **Clear All** button.
+32. In the **LoggingExample - Microsoft Visual Studio** window,  In the **Output** window, click  the **Show output from** drop down, select the **ASP.NET Core Web Server** option, and then click the **Clear All** button.
 
-31. In **Microsoft Edge**, click **16**.
-    >**Note:** The browser displays the numbers that **16** can be divided by, and a text that shows the number of times that the page was displayed.
+33. In **Microsoft Edge**, click **16**.
 
-32. In the **LoggingExample - Microsoft Visual Studio** window, in the **Output** window, locate the text: "The number 16 was added to the page display count dictionary."
+34. In the **LoggingExample - Microsoft Visual Studio** window, in the **Output** window, locate the text: "The number 16 was added to the page display count dictionary."
 
-33. In **Microsoft Edge**, click **Close**.
+35. In **Microsoft Edge**, click **Close**.
 
-35. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+36. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
