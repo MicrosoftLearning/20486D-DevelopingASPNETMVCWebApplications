@@ -152,6 +152,14 @@ a:hover {
     margin: 15px 5px 15px 5px;
 }
 
+textarea{
+    height:30px;
+}
+
+#GlutenFree {
+    height: 20px;
+}
+
 input, select, textarea {
     margin-left: auto;
     margin-right: auto;
