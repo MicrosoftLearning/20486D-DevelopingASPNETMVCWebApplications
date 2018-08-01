@@ -11,13 +11,11 @@
 
 2. Navigate to **Allfiles/Mod01/Democode/01_PhotoSharingSample**, and then open the **PhotoSharingSample.sln**.
 
-3. In the **PhotoSharingSample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+3. In the **PhotoSharingSample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 4. In **Microsoft Edge**, in the address bar, note the port number that appears at the end of the URL "http://localhost:[port]." You will use the port number during this demonstration.
 
 5. In **Microsoft Edge**, click **Close**.
-
-6. On the **DEBUG** menu of the **PhotoSharingSample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
 
 #### Demonstration Steps
 
@@ -46,7 +44,7 @@
 
 >**Note:** This code block represents how the view accepts the list of Photos from the Index action.
 
-6. In the **PhotoSharingSample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+6. In the **PhotoSharingSample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
     >**Note:** The browser displays the default home page. You reached the **Index** action of **Home** controller.  
     
@@ -127,9 +125,7 @@
 
 20. In **Microsoft Edge**, click **Close**.
 
-21. In the **PhotoSharingSample (Running) – Microsoft Visual Studio** window, click **Close**.
-
-22. In the **Microsoft Visual Studio** dialog box, click **Yes** to Stop Debugging.
+21. In the **PhotoSharingSample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

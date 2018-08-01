@@ -224,14 +224,12 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. View the page you have added.
     >**Note:** The browser displays the **Index** action result inside the **Butterfly** Controller.
 
 4. Close Microsoft Edge.
-
-5. Stop debugging.
 
 #### Task 5: Write a GET action.
 
@@ -284,7 +282,7 @@ The main tasks for this exercise are as follows:
 
 15. After the **IF** statement block,  return the **ViewResult** result using the **View** method, and pass **butterfly** as a parameter.
 
->**Results** : After completing this exercise, you will be able to create a model, pass it to the view, and use it to display the data.
+>**Results**: After completing this exercise, you will be able to create a model, pass it to the view, and use it to display the data.
 
 ### Exercise 2: Working with Forms
 
@@ -415,7 +413,7 @@ The main tasks for this exercise are as follows:
    - Class: **display-label**
    - Content: 
        - Helper: **Html.DisplayNameFor**
-       - Lamda expression: **model => item.ButterflyFamily**
+       - Lambda expression: **model => item.ButterflyFamily**
 
 9. Add a **BR** element. 
 
@@ -424,7 +422,7 @@ The main tasks for this exercise are as follows:
     - Class: **display-field**
     - Content: 
        - Helper: **Html.DisplayFor**
-       - Lamda expression: **model => item.ButterflyFamily**
+       - Lambda expression: **model => item.ButterflyFamily**
 
 11. After the **DIV** element, add a new **DIV** element with the following information:
 
@@ -435,7 +433,7 @@ The main tasks for this exercise are as follows:
     - Class: **display-label**
     - Content: 
        - Helper: **Html.DisplayNameFor**
-       - Lamda expression: **model => item.Characteristics**
+       - Lambda expression: **model => item.Characteristics**
 
 
 13. Add another **P** element with the following information:
@@ -443,7 +441,7 @@ The main tasks for this exercise are as follows:
     - Class: **display-field**
     - Content: 
        - Helper: **Html.DisplayFor**
-       - Lamda expression: **model => item.Characteristics**
+       - Lambda expression: **model => item.Characteristics**
 
 14. After the **DIV** element, add a new **DIV** element.
 
@@ -452,14 +450,14 @@ The main tasks for this exercise are as follows:
     - Class: **display-label**
     - Content: 
        - Helper: **Html.DisplayNameFor**
-       - Lamda expression: **model => item.Quantity**
+       - Lambda expression: **model => item.Quantity**
 
 16. Add another **P** element with the following information:
 
     - Class: **display-field**
     - Content: 
        - Helper: **Html.DisplayFor**
-       - Lamda expression: **model => item.Quantity**
+       - Lambda expression: **model => item.Quantity**
 
 17. After the **DIV** element, add a new **DIV** element.
 
@@ -468,14 +466,14 @@ The main tasks for this exercise are as follows:
     - Class: **display-label**
     - Content: 
        - Helper: **Html.DisplayNameFor**
-       - Lamda expression: **model => item.CreatedDate**
+       - Lambda expression: **model => item.CreatedDate**
 
 19. Add another **P** element with the following information:
 
     - Class: **display-field**
     - Content: 
        - Helper: **Html.DisplayFor**
-       - Lamda expression: **model => item.CreatedDate**
+       - Lambda expression: **model => item.CreatedDate**
 
 
 #### Task 4: Add Form Helpers
@@ -588,7 +586,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. Click **Add Butterflies**.
 
@@ -605,8 +603,6 @@ The main tasks for this exercise are as follows:
       >**Note:** Verify that the submitted butterfly details are valid and that a new butterfly was added to the homepage.
 
 6. Close **Microsoft Edge**.
-
-7. Stop debugging.
 
 >**Results** : After completing this exercise, you will be able to add data annotations to the Butterfly model class in the application and add tag helpers to views. 
 
@@ -703,7 +699,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. On the **Add Butterflies to The Shop** page, leave all the fields blank, and then click **Submit**.
 
@@ -712,8 +708,6 @@ The main tasks for this exercise are as follows:
       >**Note:** Verify that the submitted butterfly details are valid and that a new butterfly was added to the homepage.
 
 6. Close **Microsoft Edge**.
-
-7. Stop debugging.
 
 #### Task 5: Add custom validation
 
@@ -786,7 +780,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. Click **Add Butteflies**.
 
@@ -806,7 +800,7 @@ The main tasks for this exercise are as follows:
 
 7. Close **Microsoft Edge**.
 
-8. Stop debugging and close Microsoft Visual Studio.
+8. Close Microsoft Visual Studio.
 
 >**Results**: After completing this exercise, you should have created a ButterfliesShop application in which users can submit to the shop variety of butterflies.
 

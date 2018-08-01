@@ -8,9 +8,9 @@ namespace ViewComponentsExample.ViewComponents
 {
     public class PersonCardViewComponent : ViewComponent
     {
-        public IViewComponentResult Invoke(int id)
+        public Task<IViewComponentResult> InvokeAsync(int id)
         {
-            return View("CardDesign", id);
+            return Task.FromResult<IViewComponentResult>(View("CardDesign", id));
         }
     }
 }

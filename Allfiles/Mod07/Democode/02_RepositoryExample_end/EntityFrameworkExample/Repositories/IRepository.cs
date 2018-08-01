@@ -10,7 +10,8 @@ namespace EntityFrameworkExample.Repositories
     {
         IEnumerable<Person> GetPeople();
         void CreatePerson();
-        void DeletePerson(int id);
         void UpdatePerson(int id);
+        void DeletePerson(int id);
+
     }
 }

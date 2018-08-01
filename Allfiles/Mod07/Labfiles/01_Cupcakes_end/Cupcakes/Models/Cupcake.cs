@@ -24,6 +24,9 @@ namespace Cupcakes.Models
         [Display(Name = "Gluten Free:")]
         public bool GlutenFree { get; set; }
 
+        [Display(Name = "Caloric Value:")]
+        public int CaloricValue { get; set; }
+
         [Range(1, 15)]
         [Required(ErrorMessage = "Please enter a cupcake price")]
         [DataType(DataType.Currency)]

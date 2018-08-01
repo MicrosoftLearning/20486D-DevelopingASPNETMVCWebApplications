@@ -51,13 +51,11 @@ The main tasks for this exercise are as follows:
     - Enable docker support: **False**
     - Configure for HTTPS: **False**
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In **Microsoft Edge** window, view the **Contact** page.
 
 4. Close Microsoft Edge.
-
-5. Stop Debugging.
 
 #### Task 2: Explore the application structure
 
@@ -257,7 +255,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start Debugging the application.
+2. Start the application without debugging.
 
 3. View the **Test Page** and **Actors** pages you have added.
 
@@ -267,7 +265,7 @@ The main tasks for this exercise are as follows:
 
 6. Close the Microsoft Edge window.
 
-7. Stop Debugging and close the **Visual Studio**.
+7. Close the **Visual Studio**.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
 
@@ -303,14 +301,11 @@ The main tasks for this exercise are as follows:
 
 1. In the **ValuesController** controller, note that the **Get** method returns **value1** and **value2**.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In **Microsoft Edge** window, view the content in the browser.
 
 4. Close Microsoft Edge.
-
-5. Stop Debugging.
-
 
 #### Task 3: Add simple functionality
 
@@ -444,7 +439,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start Debugging the application, and access the following relative path:
+2. Start the application without debugging, and access the following relative path:
 
     - Path: **/api/CakeStore**
 
@@ -453,8 +448,6 @@ The main tasks for this exercise are as follows:
     - Path: **/api/CakeStore/1**
 
 4. Close Microsoft Edge.
-
-5. Stop Debugging.
 
     >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
 
@@ -486,13 +479,11 @@ The main tasks for this exercise are as follows:
     - Enable docker support: **False**
     - Configure for HTTPS: **False**
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In **Microsoft Edge** window, view the **Contact** page.
 
 4. Close Microsoft Edge.
-
-5. Stop Debugging.
 
 #### Task 2: Explore the application structure
 
@@ -732,7 +723,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start Debugging the application.
+2. Start the application without debugging.
 
 3. View the **Test Page** and **Animals** pages you have added.
 
@@ -742,7 +733,7 @@ The main tasks for this exercise are as follows:
 
 6. Close the **Microsoft Edge** window.
 
-7. Stop Debugging and close the **Visual Studio**.
+7. Close the **Visual Studio**.
 
 >**Results**: At the end of this exercise, you will be able to build a simple MVC application in Visual Studio.
 

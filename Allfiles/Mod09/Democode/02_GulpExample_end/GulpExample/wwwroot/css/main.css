@@ -1,0 +1,26 @@
+h1 {
+  color: #124eab;
+  font-family: Arial;
+  font-size: 40px;
+  text-shadow: 0px 2px 5px #aba8a8;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 55px; }
+
+div {
+  color: #075c9a;
+  margin: 21px 5px 15px 18px;
+  padding-bottom: 95px;
+  width: 455px;
+  border: 5px solid #d6d4d4;
+  border-radius: 10px;
+  height: 210px; }
+  div img {
+    width: 100%; }
+  div h3 {
+    font-family: Arial;
+    font-size: 25px;
+    position: relative;
+    margin-top: -43px;
+    background-color: #bee2fc;
+    text-align: center; }

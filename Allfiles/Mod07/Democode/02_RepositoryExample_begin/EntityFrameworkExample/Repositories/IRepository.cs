@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace EntityFrameworkExample.Repositories
 {
-    interface IRepository
+    public interface IRepository
     {
     }
 }

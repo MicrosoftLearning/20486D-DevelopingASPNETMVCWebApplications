@@ -238,7 +238,7 @@
 
 34. On the **FILE** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Save All**.
 
-35. On the **DEBUG** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Start Debugging**.
+35. On the **DEBUG** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Start Without Debugging**.
 
       >**Note:** The browser displays the **Index.cshtml** file combined with the **_Layout.cshtml** file.
 
@@ -250,9 +250,7 @@
       
 38. In the Microsoft Edge window, click **Close**.
 
-39. On the **DEBUG** menu of the **LayoutExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
-
-40. On the **FILE** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Exit**.
+39. On the **FILE** menu of the **LayoutExample - Microsoft Visual Studio** window, click **Exit**.
 
 # Lesson 2: Using CSS and JavaScript
 
@@ -465,15 +463,13 @@
 
 42. On the **FILE** menu of the **JSLibraryExample - Microsoft Visual Studio** window, click **Save All**.
 
-43. On the **DEBUG** menu of the **JSLibraryExample - Microsoft Visual Studio** window, click **Start Debugging**.
+43. On the **DEBUG** menu of the **JSLibraryExample - Microsoft Visual Studio** window, click **Start Without Debugging**.
 
       >**Note:** In the Microsoft Edge window, click **Run JQuery Function** button to verify that **jQuery** package added correctly using **NPM**.
       
-44. In the **Microsoft Edge** window, click **Close**.
+44. In **Microsoft Edge**, click **Close**.
 
-45. On the **DEBUG** menu of the **JSLibraryExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
-
-46. On the **FILE** menu of the **JSLibraryExample - Microsoft Visual Studio** window, click **Exit**.
+45. On the **FILE** menu of the **JSLibraryExample - Microsoft Visual Studio** window, click **Exit**.
 
 # Lesson 3: Using jQuery
 
@@ -615,15 +611,13 @@
 
 20. On the **FILE** menu of the **JQueryExample - Microsoft Visual Studio** window, click **Save All**.
 
-21. On the **DEBUG** menu of the **JQueryExample - Microsoft Visual Studio** window, click **Start Debugging**.
+21. On the **DEBUG** menu of the **JQueryExample - Microsoft Visual Studio** window, click **Start Without Debugging**.
 
       >**Note:** In the Microsoft Edge window, click **Apply JQuery** button to verify that **jQuery** function implemented correctly in the application.
       
-22. In the **Microsoft Edge** window, click **Close**.
+22. In **Microsoft Edge**, click **Close**.
 
-23. On the **DEBUG** menu of the **JQueryExample (Running) - Microsoft Visual Studio** window, click **Stop Debugging**.
-
-24. On the **FILE** menu of the **JQueryExample - Microsoft Visual Studio** window, click **Exit**.
+23. On the **FILE** menu of the **JQueryExample - Microsoft Visual Studio** window, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 

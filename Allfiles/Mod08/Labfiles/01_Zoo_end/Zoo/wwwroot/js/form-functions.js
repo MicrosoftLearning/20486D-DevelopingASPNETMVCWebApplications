@@ -37,9 +37,10 @@
         var sum = 0;
 
         for (var i = 0; i < rows.length; i++) {
-            sum += parseFloat(parseFloat(rows[i].innerHTML).toFixed(2));
+            sum = sum + parseFloat(parseFloat(rows[i].innerHTML).toFixed(2));
         }
 
-        document.getElementById("sum").innerHTML = "Total: $" + sum ;
+        var sumElement = document.getElementById("sum");
+        sumElement.innerHTML = "Total: $" + sum;
     }
 });

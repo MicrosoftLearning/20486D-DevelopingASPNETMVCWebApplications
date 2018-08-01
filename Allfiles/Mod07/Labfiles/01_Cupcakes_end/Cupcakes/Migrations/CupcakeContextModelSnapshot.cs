@@ -54,6 +54,8 @@ namespace Cupcakes.Migrations
                     b.Property<int?>("BakeryId")
                         .IsRequired();
 
+                    b.Property<int>("CaloricValue");
+
                     b.Property<int>("CupcakeType");
 
                     b.Property<string>("Description")
@@ -77,10 +79,10 @@ namespace Cupcakes.Migrations
                     b.ToTable("Cupcakes");
 
                     b.HasData(
-                        new { CupcakeId = 1, BakeryId = 1, CupcakeType = 0, Description = "Vanilla cupcake with coconut cream", GlutenFree = true, ImageMimeType = "image/jpeg", ImageName = "birthday-cupcake.jpg", Price = 2.5 },
-                        new { CupcakeId = 2, BakeryId = 2, CupcakeType = 2, Description = "Chocolate cupcake with caramel filling and chocolate butter cream", GlutenFree = false, ImageMimeType = "image/jpeg", ImageName = "chocolate-cupcake.jpg", Price = 3.2 },
-                        new { CupcakeId = 3, BakeryId = 3, CupcakeType = 3, Description = "Chocolate cupcake with straberry cream filling", GlutenFree = false, ImageMimeType = "image/jpeg", ImageName = "pink-cupcake.jpg", Price = 4.0 },
-                        new { CupcakeId = 4, BakeryId = 4, CupcakeType = 1, Description = "Vanilla cupcake with butter cream", GlutenFree = true, ImageMimeType = "image/jpeg", ImageName = "turquoise-cupcake.jpg", Price = 1.5 }
+                        new { CupcakeId = 1, BakeryId = 1, CaloricValue = 355, CupcakeType = 0, Description = "Vanilla cupcake with coconut cream", GlutenFree = true, ImageMimeType = "image/jpeg", ImageName = "birthday-cupcake.jpg", Price = 2.5 },
+                        new { CupcakeId = 2, BakeryId = 2, CaloricValue = 195, CupcakeType = 2, Description = "Chocolate cupcake with caramel filling and chocolate butter cream", GlutenFree = false, ImageMimeType = "image/jpeg", ImageName = "chocolate-cupcake.jpg", Price = 3.2 },
+                        new { CupcakeId = 3, BakeryId = 3, CaloricValue = 295, CupcakeType = 3, Description = "Chocolate cupcake with straberry cream filling", GlutenFree = false, ImageMimeType = "image/jpeg", ImageName = "pink-cupcake.jpg", Price = 4.0 },
+                        new { CupcakeId = 4, BakeryId = 4, CaloricValue = 360, CupcakeType = 1, Description = "Vanilla cupcake with butter cream", GlutenFree = true, ImageMimeType = "image/jpeg", ImageName = "turquoise-cupcake.jpg", Price = 1.5 }
                     );
                 });
 
