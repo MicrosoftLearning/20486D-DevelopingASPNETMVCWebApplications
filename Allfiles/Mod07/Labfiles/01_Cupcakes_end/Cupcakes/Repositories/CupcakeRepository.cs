@@ -18,6 +18,19 @@ namespace Cupcakes.Repositories
             _context = context;
         }
 
+        public IEnumerable<Cupcake> GetCupcakes()
+        {
+            return _context.Cupcakes.ToList();
+        }
+
+
+        public Cupcake GetCupcakeById(int id)
+        {
+            return _context.Cupcakes.Include(b => b.Bakery)
+                .SingleOrDefault(c => c.CupcakeId == id);
+        }
+
+
         public void CreateCupcake(Cupcake cupcake)
         {
             if (cupcake.PhotoAvatar != null && cupcake.PhotoAvatar.Length > 0)
@@ -41,15 +54,9 @@ namespace Cupcakes.Repositories
             _context.SaveChanges();
         }
 
-        public Cupcake GetCupcakeById(int id)
+        public void SaveChanges()
         {
-            return _context.Cupcakes.Include(b => b.Bakery)
-                .SingleOrDefault(c => c.CupcakeId == id);
-        }
-
-        public IEnumerable<Cupcake> GetCupcakes()
-        {
-            return _context.Cupcakes.ToList();
+            _context.SaveChanges();
         }
 
         public IQueryable<Bakery> PopulateBakeriesDropDownList()
@@ -58,11 +65,6 @@ namespace Cupcakes.Repositories
                                 orderby b.BakeryName
                                 select b;
             return BakeriesQuery;
-        }
-
-        public void SaveChanges()
-        {
-            _context.SaveChanges();
         }
     }
 }
