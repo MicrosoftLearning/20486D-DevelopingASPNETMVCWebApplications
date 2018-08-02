@@ -45,3 +45,8 @@ body {
 a {
     color: white !important;
 }
+
+select::-ms-value {
+    background: transparent !important;
+    color: white !important;
+}
