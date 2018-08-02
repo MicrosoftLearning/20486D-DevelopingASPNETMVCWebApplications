@@ -407,7 +407,7 @@
 23. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
     >**Note**: Inspect the **KeyNotFoundException** stack trace.
 
-24. In **myLog-XXXXXXXX.txt** editor window, click **Close**.
+24. In **myLog-XXXXXXXX.txt** window, click **Close**.
 
 25. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
 
@@ -435,15 +435,15 @@
 
 30. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-31. In the **LoggingExample - Microsoft Visual Studio** window, on the **VIEW** menu, click **Output**.
+31. In the **LoggingExample - Microsoft Visual Studio** window, in the **Output** tab, click the **Output** pane.
 
-32. In the **LoggingExample - Microsoft Visual Studio** window,  In the **Output** tab, click  the **Show output from** drop down, select the **ASP.NET Core Web Server** option, and then click the **Clear All** button.
+32. On the **Output** tab, click  the **Show output from** drop down, select the **ASP.NET Core Web Server** option, and then click the **Clear All** button.
 
 33. In **Microsoft Edge**, click **16**.
 
-34. In the **LoggingExample - Microsoft Visual Studio** window, in the **Output** tab, locate the following text:
+34. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, locate the following text:
 ```
-    LoggingExample>       The number 16 was added to the page display count dictionary.
+    The number 16 was added to the page display count dictionary.
 ```
 
 35. In **Microsoft Edge**, click **Close**.
