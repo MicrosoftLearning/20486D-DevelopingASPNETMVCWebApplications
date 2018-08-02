@@ -437,7 +437,7 @@
 
 31. In the **LoggingExample - Microsoft Visual Studio** window, in the **Output** tab, click the **Output** pane.
 
-32. On the **Output** tab, click  the **Show output from** text box, select the **ASP.NET Core Web Server** option, and then click the **Clear All** button.
+32. On the **Output** tab, click the **Show output from** text box, select **ASP.NET Core Web Server**, and then click the **Clear All** button.
 
 33. In **Microsoft Edge**, click **16**.
 
