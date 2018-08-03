@@ -45,11 +45,49 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Use Node to install gulp
 
-1.
+1. In the **Command Prompt**, run the command **cd _<The location of  Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin folder on your machine>_** 
+
+2. Run the command  **npm install** command.
+
+3. Close the  **Command Prompt** window.
+
+4. Open the **IceCreamCompany.sln** file from the following location: **Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin**.
+
+5. In the **Microsoft Visual Studio** window, click on the **Tools** menu, and then click **Options**.
+
+6. In the **Options** dialog box, search for **Web Package Management** and press **Enter**.
+
+7. In the **Locations of external tools** box, move the **$(PATH)** option to the top of the list, and then click **OK**.
+
+8. Open the **package.json** file and view its content.
+
+    > **Note:** In **Solution Explorer**, under **Depenndencies**, a new folder added named **npm** with **gulp**, **gulp-concat**, **gulp-uglify**, **gulp-watch-sass**, **gulp-sass**, **gulp-cssmin**, **jquery**, **bootstrap**, and **popper.js** packages.
 
 #### Task 2: Write a task to copy a js file
 
-1. 
+1. Add a **JavaScript** file with the following information:
+
+    - Folder: **/**
+    - Name: **gulpfile.js**
+
+2. In the **gulpfile.js** file, add a new variable named **gulp** with the value of **require('gulp')**.
+
+3. Add a new variable named **paths** with the value of **{}**.
+
+4. In the **paths** object, add the following properties :
+
+    - webroot: **"./wwwroot/"**
+    - nodeModules: **"./node_modules/"**
+
+5. Assign the **jqueryjs** property of the **paths** variable the value of **paths.nodeModules + "jquery/dist/jquery.js"**.
+
+6. Assign the **destinationJsFolder** property of the **paths** variable the value of **paths.webroot + "lib/"**.
+
+7. Call the **task** method of the **paths** variable. Pass **"copy-js-file"** and an **anonymous function** as parameters to the **task** function.
+
+8. In the **anonymous function** code block, return the **gulp.src(paths.jqueryjs)** function call result. 
+
+9. Chain a **pipe** function call to the **src** function call. Pass **gulp.dest(paths.destinationJsFolder)** as a parameter to the pipe function. 
 
 #### Task 3: Run the task
 
