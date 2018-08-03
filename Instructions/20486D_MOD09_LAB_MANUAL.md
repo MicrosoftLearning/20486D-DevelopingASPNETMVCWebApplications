@@ -91,11 +91,34 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Run the task
 
-1. 
+1. Save all the changes.
+
+2. Open **Task Runner Explorer**.
+    >**Note:** In **Task Runner Explorer**, if the **Tasks list** is not updated click **Refresh**.
+
+3. Right-click **copy-js-file**, and then click **Run**.
+    >**Note:** In **Solution Explorer**, under **wwwroot**, a new folder has been added named **lib** with js File named **jquery.js**
 
 #### Task 4:  Update the task to bundle and minify js file
 
-1. 
+1. In the **gulpfile.js**, after the **gulp** variable, add a variable named **concat** of type **var** with the value of **require('gulp-concat')**.
+
+2. Add a variable named **uglify** of type **var** with the value of **require('gulp-uglify')**.
+
+3. Before the **gulp.task** method call, assign the **vendorJsFileName** propery of the **path** variable the value of **"vendor.min.js"**.
+
+4. Remove the **gulp.task** method call.
+
+5. Call the **task** method of the **paths** variable. Pass **"min-vendor:js"** and an **anonymous function** as parameters to the **task** function.
+
+6. In the **anonymous function** code block, return the **gulp.src(paths.jqueryjs)** function call result. 
+
+7. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorJsFileName)** as a parameter to the pipe function. 
+
+8. Chain a **pipe** function call to the **pipe** function call. Pass **uglify()** as a parameter to the pipe function. 
+
+9. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationJsFolder)** as a parameter to the pipe function. 
+
 
 #### Task 5: Write a task to bundle and minify an existing file js file
 
