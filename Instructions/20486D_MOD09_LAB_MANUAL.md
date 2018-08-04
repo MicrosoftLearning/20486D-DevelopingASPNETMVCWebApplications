@@ -105,7 +105,7 @@ The main tasks for this exercise are as follows:
 
 2. Add a variable named **uglify** with the value of **require('gulp-uglify')**.
 
-3. Before the **gulp.task** method call, assign the **vendorJsFileName** propery of the **path** variable the value of **"vendor.min.js"**.
+3. Before the **gulp.task** method call, assign the **vendorJsFileName** propery of the **path** object the value of **"vendor.min.js"**.
 
 4. Remove the **gulp.task** method call.
 
@@ -122,11 +122,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Write a task to bundle and minify an existing file js file
 
-1. Before the **gulp.task** method call, assign the **JsFiles** propery of the **path** variable the value of **"./Scripts/*.js"**.
+1. Before the **gulp.task** method call, assign the **JsFiles** propery of the **path** object the value of **"./Scripts/*.js"**.
 
-2. Assign the **JsFileName** propery of the **path** variable the value of **"script.min.js"**.
+2. Assign the **JsFileName** propery of the **path** object the value of **"script.min.js"**.
 
-3. Assign the **destinationExistingJsFolder** propery of the **path** variable the value of **paths.webroot + "script/"**.
+3. Assign the **destinationExistingJsFolder** propery of the **path** object the value of **paths.webroot + "script/"**.
 
 4. After the **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:js"** and an **anonymous function** as parameters to the **task** function.
 
@@ -191,11 +191,11 @@ The main tasks for this exercise are as follows:
 
 2. Add a variable named **cssmin** with the value of **require('gulp-cssmin')**.
 
-3. Before the first **gulp.task** method call, assign the **sassFiles** propery of the **path** variable the value of **"./Styles/*.scss"**.
+3. Before the first **gulp.task** method call, assign the **sassFiles** propery of the **path** object the value of **"./Styles/*.scss"**.
 
-4. Assign the **compiledCssFileName** propery of the **path** variable the value of **""main.min.css"**.
+4. Assign the **compiledCssFileName** propery of the **path** object the value of **""main.min.css"**.
 
-5. Assign the **destinationCssFolder** propery of the **path** variable the value of **paths.webroot + "css/"**.
+5. Assign the **destinationCssFolder** propery of the **path** object the value of **paths.webroot + "css/"**.
 
 6. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:scss** and an **anonymous function** as parameters to the **task** function.
 
@@ -422,17 +422,44 @@ The main tasks for this exercise are as follows:
 
 8. Run the application.
 
+
 #### Task 1: Update js task to include bootstrap.
 
-1. 
+1. In the **gulpfile.js** file, after the **jqueryjs** property assignment, assign the **popperjs** propery of the **path** object the value of **paths.nodeModules + "popper.js/dist/umd/popper.js"**.
+
+2. Assign the **bootstrapjs** propery of the **path** object the value of **paths.nodeModules + "bootstrap/dist/js/bootstrap.js"**.
+
+3. Assign the **vendorJsFiles** propery of the **path** object the value of **[paths.jqueryjs, paths.popperjs, paths.bootstrapjs]**.
+
+4. In the **gulp.task** method call with the **"min-vendor:js"** parameter, in the **return** statement, replace the **paths.jqueryjs** parameter with **paths.vendorJsFiles** parameter.
+
 
 #### Task 2: Add a new task to handle the bootstrap css
 
-1. 
+1. After the **destinationCssFolder** property assignment, assign the **bootstrapCss** propery of the **path** object the value of **paths.nodeModules + "bootstrap/dist/css/bootstrap.css"**.
+
+2. Assign the **vendorCssFileName** propery of the **path** object the value of **"vendor.min.css"**.
+
+3. After the **gulp.task** method call with the **"min:scss"** parameter, call the **task** method of the **gulp** variable. Pass **"min-vendor:css** and an **anonymous function** as parameters to the **task** function.
+
+4. In the **anonymous function** code block, return the **gulp.src** function call result. Pass **paths.bootstrapCss** as a parameter to the **gulp.src** function.
+
+5. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorCssFileName)** as a parameter to the **pipe** function. 
+
+6. Chain a **pipe** function call to the **pipe** function call. Pass **cssmin()** as a parameter to the **pipe** function. 
+
+7. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the **pipe** function. 
 
 #### Task 3:  Run the task
 
-1. 
+1. Save all changes.
+
+    > **Note**: In **Task Runner Explorer**, if the **Tasks** list is not updated click **Refresh**.
+
+2. In the **Task Runner Explorer** window, right-click **min-vendor:css**, and then click **Run**.
+
+     > **Note**: In **Solution Explorer**, under **wwwroot**, under **css**, a new css File has been added named **vendor.min.css**.
+
 
 #### Task 4: Link the layout to Bootstrap
 
