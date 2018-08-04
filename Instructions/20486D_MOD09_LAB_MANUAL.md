@@ -101,9 +101,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 4:  Update the task to bundle and minify js file
 
-1. In the **gulpfile.js**, after the **gulp** variable, add a variable named **concat** of type **var** with the value of **require('gulp-concat')**.
+1. In the **gulpfile.js**, after the **gulp** variable, add a variable named **concat** with the value of **require('gulp-concat')**.
 
-2. Add a variable named **uglify** of type **var** with the value of **require('gulp-uglify')**.
+2. Add a variable named **uglify** with the value of **require('gulp-uglify')**.
 
 3. Before the **gulp.task** method call, assign the **vendorJsFileName** propery of the **path** variable the value of **"vendor.min.js"**.
 
@@ -140,7 +140,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 6: Add a watcher task
 
-1. After the **uglify** variable assigment, add a variable named **watch** of type **var** with the value of **require('gulp-watch-sass')**.
+1. After the **uglify** variable assigment, add a variable named **watch** with the value of **require('gulp-watch-sass')**.
 
 2. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"js-watcher"** and an **anonymous function** as parameters to the **task** function.
 
@@ -187,19 +187,77 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add gulp SASS task to compile bundle and minify
 
-1.
+1. In the **gulpfile.js**, after the **watch** variable assigment, add a variable named **sass** with the value of **require('gulp-sass')**.
+
+2. Add a variable named **cssmin** with the value of **require('gulp-cssmin')**.
+
+3. Before the first **gulp.task** method call, assign the **sassFiles** propery of the **path** variable the value of **"./Styles/*.scss"**.
+
+4. Assign the **compiledCssFileName** propery of the **path** variable the value of **""main.min.css"**.
+
+5. Assign the **destinationCssFolder** propery of the **path** variable the value of **paths.webroot + "css/"**.
+
+6. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:scss** and an **anonymous function** as parameters to the **task** function.
+
+7. In the **anonymous function** code block, return the **gulp.src** function call result. Pass **paths.sassFiles** as a parameter to the **gulp.src** function.
+
+8. Chain a **pipe** function call to the **src** function call. Pass **sass().on('error', sass.logError)** as a parameter to the **pipe** function. 
+
+9. Chain a **pipe** function call to the **pipe** function call. Pass **concat(paths.compiledCssFileName)** as a parameter to the pipe function. 
+
+10. Chain a **pipe** function call to the **pipe** function call. Pass **cssmin()** as a parameter to the pipe function. 
+
+11. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the pipe function. 
+
 
 #### Task 2: Add a new SASS file to the project
 
-1. 
+1. Create a new folder with the following information:
+
+    - Folder name: **Styles**
+
+2. Add a **SCSS Style Sheet (SASS)** file with the following information:
+
+    - Folder: **Styles**
+    - Name: **main.scss**
+ 
 
 #### Task 3: Add SASS variables mixin and functions
 
-1. 
+1. Delete the contents of the **main.scss** file.
+
+2. In the **main.scss** file, add a new variable named **$highlights** with the value of **#124eab**.
+
+3. Add a new **mixin** with the name of **normalized-text**.
+
+4. In the **normalized-text** mixin, add the following properties:
+
+    - font-family: **"Playfair Display", Arial, Tahoma, sans-serif**
+    - text-align: **center**
+
+5. Add a new **mixin** with the name of **normalized-image**.
+
+6. In the **normalized-image** mixin, add the following properties:
+
+    - width: **100%**
+    - height: **auto**
 
 #### Task 4: Add a SASS nesting styles
 
-1. 
+1. After the **normalized-image** mixin definition, add a **div** selector.
+
+2. Inside the **div** selector, add a **h1** nested selector.
+
+3. Inside the **h1** selector, include the **normalized-text** mixin with the **@include** directive. 
+
+4. After the **@include** directive, add the following properties:
+
+    - font-size: **45px**
+    - line-height: **50px**
+    - font-weight: **400**
+    - letter-spacing: **1px**
+    - color: **#736454**
+    - margin: **60px**
    
 #### Task 5: Run the task
 
