@@ -248,7 +248,7 @@ The main tasks for this exercise are as follows:
 
 2. Inside the **div** selector, add a **h1** nested selector.
 
-3. Inside the **h1** selector, include the **normalized-text** mixin with the **@include** directive. 
+3. Inside the **h1** selector, add the **normalized-text** mixin using the **@include** directive. 
 
 4. After the **@include** directive, add the following properties:
 
@@ -258,13 +258,143 @@ The main tasks for this exercise are as follows:
     - letter-spacing: **1px**
     - color: **#736454**
     - margin: **60px**
+    
+5. After the **div** selector, add a **.main-title** selector with the following properties:
+
+    - background-image: **url("/images/banner-1.jpg")**
+    - width: **100%**
+    - background-size: **cover**
+    - background-position: **center center**
+    - min-height: **400px**
+    - display: **flex**
+    - flex-direction: **column**
+    - justify-content: **center**
+    - align-items: **center**
+    
+6. Inside the **.main-title** selector, add a nested **h1** selector.
+
+7. Inside the **h1** selector, add the **normalized-text** mixin using the **@include** directive. 
+
+8. After the **@include** directive, add the following properties:
+
+    - color: **$highlights**
+    - font-size: **50px**
+    - text-shadow: **0px 2px 5px #aba8a8**
+    - font-weight: **bolder**
+    - text-align: **center**
+    
+9.  After the **h1** selector, add a **button** selector.
+
+10. Inside the **button** selector, add the **normalized-text** mixin using the **@include** directive. 
+
+11. After the **@include** directive, add the following properties:
+
+    - transition: **none**
+    - color: **lighten(#ffffff,90%)**
+    - text-align: **inherit**
+    - line-height: **13px**
+    - border: **1px solid #d3c0c0**
+    - margin: **0px**
+    - padding: **12px 24px**
+    - letter-spacing: **0px**
+    - font-weight: **400**
+    - font-size: **16px**
+    - font-weight: **bold**
+    - background-color: **#736454**    
+
+12. After the **.main-title** selector, add a **.img-container** selector with the following properties:
+
+    - display: **flex**
+    - flex-wrap: **wrap**
+    - justify-content: **space-around**
+    - align-items: **flex-end**  
+    
+13. Inside the **.img-container** selector, add a nested **.item** selector with the following properties:
+    - color: **white**
+    - width: **200px**
+    - display: **flex**
+    - flex-direction: **column**
+    - justify-content: **space-between**
+   
+    
+14. Inside the **.item** selector, add a nested **h3** selector.
+
+15. Inside the **h3** selector, add the **normalized-text** mixin using the **@include** directive. 
+
+16. After the **@include** directive, add the following properties:
+    - color: **#736454**
+    - font-size: **20px**
+
+17. After the **h3** selector, add a **div** selector.  
+
+18. Inside the **div** selector, add a nested **img** selector. 
+
+19. Inside the **img** selector, add the **normalized-image** mixin using the **@include** directive. 
+ 
+20. After the **div** selector, add a **div** selector.  
+
+21. Inside the **div** selector, add a nested **p** selector. 
+
+22. Inside the **p** selector, add the **normalized-text** mixin using the **@include** directive.
+
+23. After the **@include** directive, add the following properties:
+    - color: **#736454**
+    - font-size: **20px**
+    - margin: **70px**
+    
+24. After the **.img-container** selector, add a **.container** selector.
+
+25. Inside the **.container** selector, add a nested **.checkout** selector with the following properties:
+    - border: **1px solid #ccc**
+    - box-shadow: **0 0 5px #ccc**
+    - padding: **20px**
+    - width: **800px**
+    - margin: **0 auto**
+    - border-radius: **4px**
+    - background-color: **#f9f9f9**
+   
+26. Inside the **.checkout** selector, add a nested **.row justify-content-center intro-row** selector with the following properties:
+    - font-weight: **bold**
+    
+27. After the **.container** selector, add a **.justify-content-center** selector with the following properties:
+    -  justify-content: **center !important**
+    -  align-items: **center**
+
+28. After the **.justify-content-center** selector, add a **nav** selector with the following properties:
+    -  width: **450px**
+    
+28. After the **nav** selector, add a **img** selector with the following properties:
+    -  height: **35px**
+    -  width: **35px**
+    
+29. After the **img** selector, add a **.navbar-nav > li** selector with the following properties:
+    -  float: **left**
+    -  position: **relative**
+
+29. After the **.navbar-nav > li** selector, add a **.row** selector with the following properties:
+    -  margin: **10px**
+
+30. After the **.row** selector, add a **.imageDisplay** selector.
+
+31. Inside the **imageDisplay** selector, add the **normalized-image** mixin using the **@include** directive.
+
    
 #### Task 5: Run the task
 
-1. 
+1. Save all changes.
 
+    > **Note**: In **Task Runner Explorer**, if the **Tasks** list is not updated click **Refresh**.
 
->**Results** : After completing this exercise, you will be able to 
+2. In the **Task Runner Explorer** window, right-click **min:scss**, and then click **Run**.
+
+3. Right-click **sass-watcher**, and then click **Run**.
+
+4. Right-click **js-watcher**, and then click **Run**.
+
+    > **Note**: In **Solution Explorer**, under **wwwroot**, under **css**, a new css File has been added named **main.min.css**.
+
+>**Results** : After completing this exercise, you will be able to use gulp SASS task to compile bundle and minify SASS file to css.
+
 
 ### Exercise 3: Using Bootstrap
 
