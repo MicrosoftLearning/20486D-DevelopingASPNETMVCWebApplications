@@ -45,7 +45,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Use Node to install gulp
 
-1. In the **Command Prompt**, run the command **cd _<The location of  Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin folder on your machine>_** 
+1. In the **Command Prompt**, run the command **cd _&lt;The location of  Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin folder on your machine&gt;_** 
 
 2. Run the command  **npm install** command.
 
@@ -367,11 +367,11 @@ The main tasks for this exercise are as follows:
     -  height: **35px**
     -  width: **35px**
     
-29. After the **img** selector, add a **.navbar-nav > li** selector with the following properties:
+29. After the **img** selector, add a **.navbar-nav &gt; li** selector with the following properties:
     -  float: **left**
     -  position: **relative**
 
-29. After the **.navbar-nav > li** selector, add a **.row** selector with the following properties:
+29. After the **.navbar-nav &gt; li** selector, add a **.row** selector with the following properties:
     -  margin: **10px**
 
 30. After the **.row** selector, add a **.imageDisplay** selector.
@@ -480,16 +480,332 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Style the layout using Bootstrap
 
-1. 
+1. In the **_Layout.cshtml** file, before the **DIV** element with @RenderBody() content, add a **DIV**.
 
+2. In the new **DIV** element, add a **NAV** element with the following information:
+    - Class: **navbar navbar-expand-lg navbar-light bg-light mx-auto**
+    
+3. In the **NAV** element, add a **A** element with the following information:
+    - Class: **navbar-brand**
+    - Href: **@Url.Action("Index", "IceCream")**
+     Content: **Ice Cream of Dreams**
+
+4. In the **A** element, before its content, add a **IMG** element with the following information:
+    - Src: **~/images/brand.jpg**
+    - Class: **d-inline-block align-top**
+    - Alt: **""**
+ 
+5. After the **A** element, add **DIV** element with the following information:
+
+    - Class: **collapse navbar-collapse**
+    - Id: **nav-content**   
+    
+6. In the new **DIV** element, add **UL** element with the following information:
+
+    - Class: **navbar-nav**
+    - Id: **nav-content**  
+    
+7. In the **UL** element, add **LI** element with the following information:
+
+    - Class: **nav-item active**
+
+8. In the **LI** element, add **A** element with the following information:
+
+    - Class: **nav-link**
+    - Href: **@Url.Action("Index", "IceCream")**
+    - Content: **Home**
+
+9. In the new **A** element, after its content, add a **SPAN** element with the following information:
+    - Class: **sr-only**
+    - Content: **(current)**
+
+10. After the last **LI** element, add **LI** element with the following information:
+
+    - Class: **nav-item**
+    
+11. In the **LI** element, add **A** element with the following information:
+
+    - Class: **nav-link**
+    - Href: **@Url.Action("Buy", "IceCream")**
+    - Content: **Buy ice cream**
+    
+12. After the **DIV** element with the **NAV** element inside, add **DIV** element with the following information:
+
+    - Class: **main-title**
+    
+13. In the **DIV** element, add **H1** element with the following information:
+
+    - Content: **The best ice cream you will taste in your life**
+    
+14. After the **H1** element, add **BUTTON** element with the following information:
+
+    - Type: **button**
+    - Onclick: **location.href='@Url.Action("Buy", "IceCream")'**
+    - Content: **Buy ice cream**
+
+    
 #### Task 6: Apply the Bootstrap grid system to make the site responsive
 
-1. 
+1. In the **IceCreamController** class, right-click on the **Buy** action name, and then click **Add View**.
+
+2. Create a new **View** using the **Add MVC View** dialog box, with the following information:
+
+    - View Name: **Buy**
+    - Template: **Empty (without model**
+    - Create as Partial View: **False**
+    - Use a layout page: **True**
+
+3. At the beginning of the **Buy.cshtml** view, add a **@model** directive with the following information:
+
+    - Type: **IceCreamCompany.Models.Customer**.
+    
+4. Remove the **H2** element. 
+
+5. Add **DIV** element with the following information:
+
+    - Class: **container**
+    
+6. In the **DIV** element, add **H1** element with the following information:
+
+    - Content: **Choose your flavor**
+    
+7. After the **H1** element, add **DIV** element with the following information:
+
+    - Class: **checkout**
+    
+8. In the new **DIV** element, add **DIV** element with the following information:
+
+    - Class: **row justify-content-center intro-row**
+    
+9. In the new **DIV** element, add **DIV** element with the following information:
+
+    - Class: **col-4**
+    - Content: **Ice Cream Flavors**
+
+10. After the new **DIV** element, add **DIV** element with the following information:
+
+    - Class: **col-2**
+    - Content: **Buy bulk(lbs)**
+
+11. After the new **DIV** element, add **DIV** element with the following information:
+
+    - Class: **col-2**
+    - Content: **Total amount(lbs)**
+    
+12. After the new **DIV** element, add **DIV** element.
+
+13. After the **DIV** element with the **row justify-content-center intro-row** classes, add **DIV** element with the following information:
+
+    - Class: **row justify-content-center**
+    
+14. In the new **DIV** element, add **DIV** element with the following information:
+
+    - Class: **col-4**
+
+15. In the new **DIV** element, add **SELECT** element with the following information:
+
+    - Class: **form-control**
+    - Id: **flavor**
+
+16. In the **SELECT** element, add **OPTION** element with the following information:
+
+    - Content: **Select**
+    
+17. Add **OPTION** element with the following information:
+
+    - Content: **Vanilla Ice Cream with Caramel Ripple and Almonds**
+
+18. Add **OPTION** element with the following information:
+
+    - Content: **Vanilla Ice Cream with Cherry Dark Chocolate Ice Cream**
+    
+19. Add **OPTION** element with the following information:
+
+    - Content: **Vanilla Ice Cream with Pistachio**
+
+20. After the last **DIV** element with the **col-2** class, add **DIV** element with the following information:
+
+    - Class: **col-2**
+
+21. In the new **DIV** element, add **SELECT** element with the following information:
+
+    - Class: **form-control**
+    - Id: **quantity**
+    
+22. In the **SELECT** element, add **OPTION** element with the following information:
+
+    - Content: **1**
+    
+23. Add **OPTION** element with the following information:
+
+    - Content: **2**
+
+24. Add **OPTION** element with the following information:
+
+    - Content: **3**
+    
+25. Add **OPTION** element with the following information:
+
+    - Content: **4**
+
+26. After the last **DIV** element with the **col-2** class, add **DIV** element with the following information:
+
+    - Class: **col-2**
+    
+27. In the new **DIV** element, add **div** element with the following information:
+
+    - Id: **totalAmount**   
+
+28. After the last **DIV** element with the **col-2** class, add **DIV** element with the following information:
+
+    - Class: **col-2**
+    
+29.  In the new **DIV** element, add **DIV** element.
+
+30.  In the new **DIV** element, add **IMG** element with the following information:
+
+     - Class: **imageDisplay**
+     - Src: **~/images/**
+     - Id: **iceCreamImage**
+     - Alt: **""**
 
 #### Task 7: Style a form using Bootstrap
 
-1. 
+1. At the bottom of the **Buy.cshtml** view, add **DIV** element with the following information:
 
+    - Class: **row justify-content-center**
+    
+2. In the new **DIV** element, add **DIV** element with the following information:
+
+    - Class: **col-5**
+
+3. In the new **DIV** element, add **FORM** element with the following information:
+
+    - Method: **post**
+    - Enctype: **multipart/form-data**
+    - Asp-action: **Buy**
+
+4. In the **FORM** element, add **DIV** element with the following information:
+
+    - Class: **form-group row**
+
+5. In the new **DIV** element, add **LABEL** element with the following information:
+
+    - Asp-for: **FirstName**
+    - Class: **col-sm-4 col-form-label**
+
+6. After the **LABEL** element, add **DIV** element with the following information:
+
+    - Class: **col-sm-6**
+
+7. In the new **DIV** element, add **INPUT** element with the following information:
+
+    - Asp-for: **FirstName**
+    - Type: **text**
+    - Class: **form-control**
+    - Placeholder: **First Name**
+    - Required: **required**
+
+8. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+
+    - Class: **form-group row**
+
+9. In the new **DIV** element, add **LABEL** element with the following information:
+
+    - Asp-for: **LastName**
+    - Class: **col-sm-4 col-form-label**
+
+10. After the **LABEL** element, add **DIV** element with the following information:
+
+    - Class: **col-sm-6**
+
+11. In the new **DIV** element, add **INPUT** element with the following information:
+
+    - Asp-for: **LastName**
+    - Type: **text**
+    - Class: **form-control**
+    - Placeholder: **Last Name**
+    - Required: **required**
+    
+12. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+
+    - Class: **form-group row**
+
+13. In the new **DIV** element, add **LABEL** element with the following information:
+
+    - Asp-for: **Address**
+    - Class: **col-sm-4 col-form-label**
+
+
+14. After the **LABEL** element, add **DIV** element with the following information:
+
+    - Class: **col-sm-6**
+
+15. In the new **DIV** element, add **INPUT** element with the following information:
+
+    - Asp-for: **Address**
+    - Type: **text**
+    - Class: **form-control**
+    - Placeholder: **Address**
+    - Required: **required**
+ 
+16. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+
+    - Class: **form-group row**
+
+17. In the new **DIV** element, add **LABEL** element with the following information:
+
+    - Asp-for: **Email**
+    - Class: **col-sm-4 col-form-label**
+
+18. After the **LABEL** element, add **DIV** element with the following information:
+
+    - Class: **col-sm-6**
+
+19. In the new **DIV** element, add **INPUT** element with the following information:
+
+    - Asp-for: **Email**
+    - Type: **email**
+    - Class: **form-control**
+    - Placeholder: **email@example.com**
+    - Required: **required**
+  
+20. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+
+    - Class: **form-group row**
+
+21. In the new **DIV** element, add **LABEL** element with the following information:
+
+    - Asp-for: **PhoneNumber**
+    - Class: **col-sm-4 col-form-label**
+
+22. After the **LABEL** element, add **DIV** element with the following information:
+
+    - Class: **col-sm-6**
+
+23. In the new **DIV** element, add **INPUT** element with the following information:
+
+    - Asp-for: **PhoneNumber**
+    - Type: **number**
+    - Class: **form-control**
+    - Placeholder: **Phone Number**
+    - Required: **required**
+    
+24. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+
+    - Class: **form-group row**
+
+25. In the new **DIV** element, add **DIV** element with the following information:
+
+    - Class: **col-sm-10**
+
+19. In the new **DIV** element, add **BUTTON** element with the following information:
+
+    - Id: **formButton**
+    - Type: **submit**
+    - Class: **btn btn-outline-primary**
+ 
+ 
 #### Task 8: Run the application
 
 1. Save all changes.
@@ -498,19 +814,19 @@ The main tasks for this exercise are as follows:
 
 3. Click **Buy ice cream**.
 
-4. In the **Ice Cream Flavors** list, select _<An ice cream flavor of your choice>_.
+4. In the **Ice Cream Flavors** list, select _&lt;An ice cream flavor of your choice&gt;_.
     
-5. In the **Buy bulk(lbs)** list, select _<A bulk of your choice>_.
+5. In the **Buy bulk(lbs)** list, select _&lt;A bulk of your choice&gt;_.
 
-6. In the **First Name** text box,, select _<A first name of your choice>_.
+6. In the **First Name** text box, select _&lt;A first name of your choice&gt;_.
 
-7. In the **Last Name** text box,, select _<A last  name of your choice>_.
+7. In the **Last Name** text box,, select _&lt;A last  name of your choice&gt;_.
     
-8. In the **Address** text box, select _<A address of your choice>_.
+8. In the **Address** text box, select _&lt;A address of your choice&gt;_.
     
-9. In the **Email** text box, select _<A email of your choice>_.
+9. In the **Email** text box, select _&lt;A email of your choice&gt;_.
 
-10. In the **Phone Number** text box, select _<A phone number of your choice>_, and then click **Make a purchase**.
+10. In the **Phone Number** text box, select _&lt;A phone number of your choice&gt;_, and then click **Make a purchase**.
     
 11. On the **Thank you** page, in the **menu bar** click **Home**, and examine the browser content.
 
