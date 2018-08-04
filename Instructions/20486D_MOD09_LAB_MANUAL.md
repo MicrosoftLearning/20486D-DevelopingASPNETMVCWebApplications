@@ -463,7 +463,20 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Link the layout to Bootstrap
 
-1. 
+1. In the **_Layout.cshtml** file, after the **TITLE** element, add a **SCRIPT** with the following information:
+    - Src: **~/lib/vendor.min.js**
+    
+2. After the **SCRIPT** element, add a **SCRIPT** with the following information:
+    - Src: **~/script/script.min.js**
+    
+3. After the **SCRIPT** element, add a **LINK** with the following information:
+    - Href: **~/css/main.min.css**
+    - rel: **stylesheet**
+    
+4. After the **LINK** element, add a **LINK** with the following information:
+    - Href: **~/css/vendor.min.css**
+    - rel: **stylesheet**
+
 
 #### Task 5: Style the layout using Bootstrap
 
@@ -479,10 +492,35 @@ The main tasks for this exercise are as follows:
 
 #### Task 8: Run the application
 
-1. 
+1. Save all changes.
 
+2. Start the application without debugging. 
 
->**Results**: After completing this exercise, you should have
+3. Click **Buy ice cream**.
+
+4. In the **Ice Cream Flavors** list, select _<An ice cream flavor of your choice>_.
+    
+5. In the **Buy bulk(lbs)** list, select _<A bulk of your choice>_.
+
+6. In the **First Name** text box,, select _<A first name of your choice>_.
+
+7. In the **Last Name** text box,, select _<A last  name of your choice>_.
+    
+8. In the **Address** text box, select _<A address of your choice>_.
+    
+9. In the **Email** text box, select _<A email of your choice>_.
+
+10. In the **Phone Number** text box, select _<A phone number of your choice>_, and then click **Make a purchase**.
+    
+11. On the **Thank you** page, in the **menu bar** click **Home**, and examine the browser content.
+
+12. Close **Microsoft Edge**.
+
+13. Stop Debugging
+
+13. Close **Microsoft Visual Studio**.
+
+>**Results** : After completing this exercise, you should have created a ice cream company application in which users can view ice cream details, and buy some as well.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
