@@ -83,7 +83,7 @@ The main tasks for this exercise are as follows:
 
 6. Assign the **destinationJsFolder** property of the **paths** variable the value of **paths.webroot + "lib/"**.
 
-7. Call the **task** method of the **paths** variable. Pass **"copy-js-file"** and an **anonymous function** as parameters to the **task** function.
+7. Call the **task** method of the **gulp** variable. Pass **"copy-js-file"** and an **anonymous function** as parameters to the **task** function.
 
 8. In the **anonymous function** code block, return the **gulp.src(paths.jqueryjs)** function call result. 
 
@@ -109,7 +109,7 @@ The main tasks for this exercise are as follows:
 
 4. Remove the **gulp.task** method call.
 
-5. Call the **task** method of the **paths** variable. Pass **"min-vendor:js"** and an **anonymous function** as parameters to the **task** function.
+5. Call the **task** method of the **gulp** variable. Pass **"min-vendor:js"** and an **anonymous function** as parameters to the **task** function.
 
 6. In the **anonymous function** code block, return the **gulp.src(paths.jqueryjs)** function call result. 
 
@@ -122,17 +122,46 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Write a task to bundle and minify an existing file js file
 
-1. 
+1. Before the **gulp.task** method call, assign the **JsFiles** propery of the **path** variable the value of **"./Scripts/*.js"**.
+
+2. Assign the **JsFileName** propery of the **path** variable the value of **"script.min.js"**.
+
+3. Assign the **destinationExistingJsFolder** propery of the **path** variable the value of **paths.webroot + "script/"**.
+
+4. After the **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:js"** and an **anonymous function** as parameters to the **task** function.
+
+5. In the **anonymous function** code block, return the **gulp.src(paths.JsFiles)** function call result. 
+
+6. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.JsFileName)** as a parameter to the pipe function. 
+
+7. Chain a **pipe** function call to the **pipe** function call. Pass **uglify()** as a parameter to the pipe function. 
+
+8. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationExistingJsFolder)** as a parameter to the pipe function. 
 
 #### Task 6: Add a watcher task
 
-1. 
+1. After the **uglify** variable assigment, add a variable named **watch** of type **var** with the value of **require('gulp-watch-sass')**.
+
+2. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"js-watcher"** and an **anonymous function** as parameters to the **task** function.
+
+3. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Scripts/*.js"** and **["min:js"]** as parameters to the **gulp.watch** function.
+
+4. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"sass-watcher"** and an **anonymous function** as parameters to the **task** function.
+
+5. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Styles/*.scss"** and **["min:scss"]** as parameters to the **gulp.watch** function.
+
 
 #### Task 7: Run the task
 
-1. 
+1. Save all changes.
 
->**Results** : After completing this exercise, you will be able to 
+2. In the **Task Runner Explorer** window, right-click **min-vendor:js**, and then click **Run**.
+
+3. Right-click **min:js**, and then click **Run**.
+
+4. Right-click **js-watcher**, and then click **Run**.
+
+>**Results** : After completing this exercise, you will be able to use **gulp** to copy, bundle and minify js files, furthermore add watcher tasks.
 
 ### Exercise 2: Styling Using SASS
 
