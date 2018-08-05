@@ -62,7 +62,7 @@
             _people.Add(new Person() {Id = 4, FirstName = "Bessie", LastName = "Duppstadt" });
        }
 ```
-15. Ensure that the cursor is at the end of the **PersonController** method code block, press Enter twice, and then type the following code:
+15. Ensure that the cursor is at the end of the **PersonController** contractor code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet]
        public ActionResult<List<Person>> GetAll()
@@ -168,7 +168,7 @@
             _animals.Add(new Animal() { Id = 3, Name = "Shark", Family = "Fish", Facts = "Sharks live in the ocean, and average shark has 40-45 teeth" });
        }
 ```
-19. Ensure that the cursor is at the end of the **AnimalsController** method code block, press Enter twice, and then type the following code:
+19. Ensure that the cursor is at the end of the **AnimalsController** contractor code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet]
        [Produces("application/xml")]
@@ -189,6 +189,174 @@
 23. In **Microsoft Edge**, click **Close**.
 
 24. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+
+
+# Lesson 3: Calling a Web API 
+
+### Demonstration: How to Call Web APIs Using jQuery Code
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+
+#### Demonstration Steps
+
+1. Navigate to **Allfiles\Mod13\Democode\03_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
+
+2. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
+
+3. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
+
+4. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **PizzashopController**, and then click **Add**.
+
+5. In the **PizzashopController.cs** code window, locate the following code:
+  ```cs
+       using Microsoft.AspNetCore.Mvc;
+```
+6. Ensure that the cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
+  ```cs
+       using JQueryExample.Models;
+```
+
+7. In the **PizzashopController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+  ```cs
+       private List<Pizza> _pizzas = new List<Pizza>();
+
+       public PizzashopController()
+       {
+            _pizzas.Add(new Pizza() { Id = 1, Toppings = "Mushrooms", Price = 10 });
+            _pizzas.Add(new Pizza() { Id = 2, Toppings = "Extra cheese", Price = 8 });
+            _pizzas.Add(new Pizza() { Id = 3, Toppings = "Black olives", Price = 9 });
+            _pizzas.Add(new Pizza() { Id = 4, Toppings = "Pineapple", Price = 12 });
+       }
+```
+8. Ensure that the cursor is at the end of the **PizzashopController** contractor code block, press Enter twice, and then type the following code:
+  ```cs
+       [HttpGet("{id}")]
+       public ActionResult GetById(int id)
+       {
+       }
+```
+9. In the **GetById** action code block, type the following code:
+  ```cs
+       Pizza pizza = _pizzas.SingleOrDefault(p => p.Id == id);
+       if (pizza == null)
+       {
+            return NotFound();
+       }
+       return new ObjectResult(pizza);
+```
+8. Ensure that the cursor is at the end of the **GetById** method code block, press Enter twice, and then type the following code:
+  ```cs
+       [HttpPost]
+       public ActionResult<Pizza> Post([FromBody] Pizza pizza)
+       {
+       }
+```
+9. In the **Post** action code block, type the following code:
+  ```cs
+       if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            _pizzas.Add(pizza);
+            return CreatedAtAction(nameof(GetById), new { id = pizza.Id }, pizza);
+```
+10. In the **JQueryExample - Microsoft Visual Studio** window, in the **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+
+11. In the **NewFolder** text box, type **js**, and then press Enter.
+
+12. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+
+13. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+
+14. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **pizza-get**, and then click **Add**.
+
+15. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, under **js**, click **pizza-get.js**.
+
+16. In the **pizza-get.js** code window, type the following code:
+  ```cs
+       $(document).ready(function () {
+            $(".btn-get").click(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:59216/api/Pizzashop/1",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        $(".result").text('Ajax Result: you ordered pizza with ' + response.toppings + ' for ' + response.price + '$');
+                    },
+                    error: function (response) {
+                        alert('An error has occurred');
+                    }
+                });
+            });
+       });
+```
+
+17. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+
+18. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+
+19. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **pizza-post**, and then click **Add**.
+
+20. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, under **js**, click **pizza-post.js**.
+
+21. In the **pizza-post.js** code window, type the following code:
+  ```cs
+       $(document).ready(function () {
+            $(".btn-post").click(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:59216/api/Pizzashop",
+                    data: JSON.stringify({
+                        id: 6,
+                        toppings: "Pineapple",
+                        price: 10.99
+                    }),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (result) {
+                        $(".result").text('Ajax Result: Pizza object added successfully with the following information id ' + result.id + ', toppings: ' + result.toppings + ', price ' + result.price + '$');
+                    },
+                    error: function (result) {
+                        alert('An error has occurred');
+                    }
+                });
+            });
+       });
+```
+
+22. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **Views**, click **Index.cshtml**.
+
+23. In the **Index.cshtml** file, locate the following code:
+  ```cs
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+```
+24. Place the cursor after the **>** (greater than) sign of the **&lt;/script&gt;** tag, press Enter, and then type the following code: 
+  ```cs
+       <script src="~/js/pizza-get.js"></script>
+       <script src="~/js/pizza-post.js"></script>
+```
+25. In the **Index.cshtml** file, in the **BODY** element, type the following code:
+  ```cs
+       <h1>Welcome to Model 13 - Demo 1</h1>
+       <button type="button" class="btn-get btn-outline-info">Get Ajax Function</button>
+       <button type="button" class="btn-post btn-outline-info">Post Ajax Function</button>
+       <div class="result"></div>
+```
+26. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+
+27. In the **JQueryExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+28. On the **Home** page, click **Get Ajax Function**, and examine the outcome.
+
+29. On the **Home** page, click **Post Ajax Function**, and examine the outcome.
+
+30. In **Microsoft Edge**, click **Close**.
+
+31. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
