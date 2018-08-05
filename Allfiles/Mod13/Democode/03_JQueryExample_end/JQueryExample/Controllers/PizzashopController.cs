@@ -16,21 +16,21 @@ namespace JQueryExample.Controllers
 
         public PizzashopController()
         {
-            _pizzas.Add(new Pizza() {Id = 1, Toppings = "Mushrooms", Price =  10 });
+            _pizzas.Add(new Pizza() { Id = 1, Toppings = "Mushrooms", Price = 10 });
             _pizzas.Add(new Pizza() { Id = 2, Toppings = "Extra cheese", Price = 8 });
             _pizzas.Add(new Pizza() { Id = 3, Toppings = "Black olives", Price = 9 });
-            _pizzas.Add(new Pizza() { Id = 4, Toppings = "Pineapple", Price =  12});
+            _pizzas.Add(new Pizza() { Id = 4, Toppings = "Pineapple", Price = 12 });
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Pizza> GetById(int id)
+        public ActionResult GetById(int id)
         {
             Pizza pizza = _pizzas.SingleOrDefault(p => p.Id == id);
             if (pizza == null)
             {
                 return NotFound();
             }
-            return pizza;
+            return new ObjectResult(pizza);
         }
 
         [HttpPost]
