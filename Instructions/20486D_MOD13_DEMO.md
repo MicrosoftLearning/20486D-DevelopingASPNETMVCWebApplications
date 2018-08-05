@@ -256,11 +256,11 @@
 9. In the **Post** action code block, type the following code:
   ```cs
        if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            _pizzas.Add(pizza);
-            return CreatedAtAction(nameof(GetById), new { id = pizza.Id }, pizza);
+       {
+            return BadRequest(ModelState);
+       }
+       _pizzas.Add(pizza);
+       return CreatedAtAction(nameof(GetById), new { id = pizza.Id }, pizza);
 ```
 10. In the **JQueryExample - Microsoft Visual Studio** window, in the **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
 
@@ -272,9 +272,7 @@
 
 14. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **pizza-get**, and then click **Add**.
 
-15. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, under **js**, click **pizza-get.js**.
-
-16. In the **pizza-get.js** code window, type the following code:
+15. In the **pizza-get.js** code window, type the following code:
   ```cs
        $(document).ready(function () {
             $(".btn-get").click(function (e) {
@@ -295,15 +293,13 @@
        });
 ```
 
-17. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+16. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
 
-18. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+17. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
 
-19. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **pizza-post**, and then click **Add**.
+18. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **pizza-post**, and then click **Add**.
 
-20. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, under **js**, click **pizza-post.js**.
-
-21. In the **pizza-post.js** code window, type the following code:
+19. In the **pizza-post.js** code window, type the following code:
   ```cs
        $(document).ready(function () {
             $(".btn-post").click(function (e) {
@@ -328,35 +324,35 @@
        });
 ```
 
-22. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **Views**, click **Index.cshtml**.
+20. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **Views**, under **Home** click **Index.cshtml**.
 
-23. In the **Index.cshtml** file, locate the following code:
+21. In the **Index.cshtml** file, locate the following code:
   ```cs
        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 ```
-24. Place the cursor after the **>** (greater than) sign of the **&lt;/script&gt;** tag, press Enter, and then type the following code: 
+22. Place the cursor after the **>** (greater than) sign of the **&lt;/script&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <script src="~/js/pizza-get.js"></script>
        <script src="~/js/pizza-post.js"></script>
 ```
-25. In the **Index.cshtml** file, in the **BODY** element, type the following code:
+23. In the **Index.cshtml** file, in the **BODY** element, type the following code:
   ```cs
        <h1>Welcome to Model 13 - Demo 1</h1>
        <button type="button" class="btn-get btn-outline-info">Get Ajax Function</button>
        <button type="button" class="btn-post btn-outline-info">Post Ajax Function</button>
        <div class="result"></div>
 ```
-26. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+24. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-27. In the **JQueryExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+25. In the **JQueryExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-28. On the **Home** page, click **Get Ajax Function**, and examine the outcome.
+26. On the **Home** page, click **Get Ajax Function**, and examine the outcome.
 
-29. On the **Home** page, click **Post Ajax Function**, and examine the outcome.
+27. On the **Home** page, click **Post Ajax Function**, and examine the outcome.
 
-30. In **Microsoft Edge**, click **Close**.
+28. In **Microsoft Edge**, click **Close**.
 
-31. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+29. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
