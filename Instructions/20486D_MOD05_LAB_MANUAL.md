@@ -206,7 +206,7 @@ The main tasks for this exercise are as follows:
 
 5. Close **Microsoft Edge**.
 
->**Result**: At the end of this exercise, you will be able to add views to an **MVC** application, passing data from a controller to the a view using **ViewBag**, and navigate between pages using helpers.
+>**Result**: At the end of this exercise, you will be able to add views to an **MVC** application, passing data from a controller to a view using **ViewBag**, and navigate between pages using helpers.
 
 ##	Exercise 2: Adding a Partial View
 
@@ -278,7 +278,7 @@ The main tasks for this exercise are as follows:
 
 4. Close **Microsoft Edge**.
 
->**Result**: At the end of this exercise, you will be able to write and use partial views, and use services inside a view using the **@@Inject**@ directive.
+>**Result**: At the end of this exercise, you will be able to write and use partial views, and use services inside a view using the **@Inject** directive.
 
 ##	Exercise 3: Adding a View Component
 
@@ -345,14 +345,14 @@ The main tasks for this exercise are as follows:
         - Type: **string**
         - Name: **cityName**
 
-10. In the **GetCity** method code block, return a **Task&lt;City&gt;** using the  **Task.FromResult&lt;City&gt;** method. Pass **_cities[cityName]** as a parameter to the **Task.FromResult&lt;City&gt;** method.
+10. In the **GetCity** method code block, return **Task&lt;City&gt;** using the  **Task.FromResult&lt;City&gt;** method. Pass **_cities[cityName]** as a parameter to the **Task.FromResult&lt;City&gt;** method.
  
 11. In the **InvokeAsync** method code block, save the following key and value in the **ViewBag** property:
 
     - Key: **CurrentCity**
     - Value: **await GetCity(cityName)**
  
-12. Return the **ViewViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
+12. Return the **ViewViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the **View** method.
 
 ####	Task 2: Add a view component view
 
