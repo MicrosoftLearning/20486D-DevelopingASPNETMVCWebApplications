@@ -206,7 +206,7 @@ The main tasks for this exercise are as follows:
 
 5. Close **Microsoft Edge**.
 
->**Result**: At the end of this exercise, you will be able to add views to an **MVC** application, passing data from a controller to a view using **ViewBag**, and navigate between pages using helpers.
+>**Result**: At the end of this exercise, you will be able to add views to an **MVC** application, pass data from a controller to a view using **ViewBag**, and navigate between pages using helpers.
 
 ##	Exercise 2: Adding a Partial View
 
