@@ -251,7 +251,7 @@ The main tasks for this exercise are as follows:
     - Path: **/poll-questions.html**
 
 5. Select **Basketball**, and then click **Submit Poll**.
-    > **Note**: The browser displays the **poll-questions.html** file content located under **wwwroot** folder, since the request was captured by **UseStaticFiles** middleware without executing the **app.Use** middleware.
+    > **Note**: The browser displays the **poll-questions.html** file content located under **wwwroot** folder, since the request was captured by the **UseStaticFiles** middleware without executing the **app.Use** middleware.
 
 6. Close **Microsoft Edge**.
 
