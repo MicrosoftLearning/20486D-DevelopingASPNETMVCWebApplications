@@ -56,6 +56,7 @@ The main tasks for this exercise are as follows:
 1. From **Allfiles\Mod08\Labfiles\01_Zoo_begin** open the **Zoo.sln**.
 
 2. Create a new folder with the following information:
+
    - Parent folder: **Views**
    - Folder name: **Shared**
 
