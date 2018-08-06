@@ -38,6 +38,7 @@ In this exercise, you will:
 - Browse through the resulting web application.
 
 The main tasks for this exercise are as follows:
+
 1. Create a new layout.
 
 2. Add a view and link it to a layout.
