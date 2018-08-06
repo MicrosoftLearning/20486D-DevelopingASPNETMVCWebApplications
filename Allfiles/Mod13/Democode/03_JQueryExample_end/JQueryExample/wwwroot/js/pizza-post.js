@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $(".btn-post").click(function (e) {
         e.preventDefault();
-
         $.ajax({
             type: "POST",
             url: "http://localhost:59216/api/Pizzashop",
