@@ -618,7 +618,7 @@ The main tasks for this exercise are as follows:
 
 19. Save all the changes.
 
-#### Task 2: Inject the ILogger to the controller in the testing project using a mocking framework
+#### Task 2: Test the controller using a mocking framework
 
 1. Open **Package Manager Console**. 
 
