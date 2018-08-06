@@ -174,7 +174,7 @@ The main tasks for this exercise are as follows:
 
 2. In the  **_ViewImports**  file, add a **@addTagHelper** directive with the following information:
 
-    - Tag Helpers: &lt;strong&gt;*&lt;/strong&gt;
+    - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
 3. In the **ShowDataForCity** view, after the **SPAN** add an **A** element with the following information:
