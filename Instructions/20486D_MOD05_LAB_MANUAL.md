@@ -177,7 +177,7 @@ The main tasks for this exercise are as follows:
     - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
-3. In the **ShowDataForCity** view, after the **SPAN** add an **A** element with the following information:
+3. In the **ShowDataForCity** view, after the **SPAN** element add an **A** element with the following information:
     - asp-action: **ShowCities**
     - Content: **Back**
 
