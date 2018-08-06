@@ -183,7 +183,7 @@ The main tasks for this exercise are as follows:
 
 4. In the **ShowCities** view, remove the **P** element with its content.
 
-5. In the  **FOREACH** statement block, add an **H2** element.
+5. In the  **FOREACH** statement block, add a **H2** element.
 
 6. In the  **H2** element, add an **A** element with the following information:
 
@@ -251,7 +251,7 @@ The main tasks for this exercise are as follows:
 6. Add a **H3** element with the following information:
     - Content:  **City Population (@population.Year)**
 
-7. After the **P** element, add another **P** element with the following information:
+7. After the **H3** element, add a **P** element with the following information:
     - Content:  **City: @cityFormatter.GetFormattedPopulation(@population.City)**
 
 8. After the last **P** element, add another **P** element with the following information:
