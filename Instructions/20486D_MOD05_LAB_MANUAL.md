@@ -177,13 +177,13 @@ The main tasks for this exercise are as follows:
     - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
-3. In the **ShowDataForCity** view, after the **SPAN** add an **A** element with the following information:
+3. In the **ShowDataForCity** view, after the **SPAN** element add an **A** element with the following information:
     - asp-action: **ShowCities**
     - Content: **Back**
 
 4. In the **ShowCities** view, remove the **P** element with its content.
 
-5. In the  **FOREACH** statement block, add an **H2** element.
+5. In the  **FOREACH** statement block, add a **H2** element.
 
 6. In the  **H2** element, add an **A** element with the following information:
 
@@ -206,7 +206,7 @@ The main tasks for this exercise are as follows:
 
 5. Close **Microsoft Edge**.
 
->**Result**: At the end of this exercise, you will be able to add views to an **MVC** application, passing data from a controller to a view using **ViewBag**, and navigate between pages using helpers.
+>**Result**: At the end of this exercise, you will be able to add views to an **MVC** application, pass data from a controller to a view using **ViewBag**, and navigate between pages using helpers.
 
 ##	Exercise 2: Adding a Partial View
 
@@ -251,7 +251,7 @@ The main tasks for this exercise are as follows:
 6. Add a **H3** element with the following information:
     - Content:  **City Population (@population.Year)**
 
-7. After the **P** element, add another **P** element with the following information:
+7. After the **H3** element, add a **P** element with the following information:
     - Content:  **City: @cityFormatter.GetFormattedPopulation(@population.City)**
 
 8. After the last **P** element, add another **P** element with the following information:
