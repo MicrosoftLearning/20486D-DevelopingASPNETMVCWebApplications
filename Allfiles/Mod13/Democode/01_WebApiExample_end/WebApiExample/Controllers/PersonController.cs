@@ -29,7 +29,7 @@ namespace WebApiExample.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult GetLastNameById(int id)
+        public ActionResult<Person> GetLastNameById(int id)
         {
             var person = _people.FirstOrDefault(p => p.Id == id);
 
@@ -38,7 +38,7 @@ namespace WebApiExample.Controllers
                 return NotFound();
             }
 
-            return new ObjectResult(person.LastName);
+            return person;
         }
     }
 }
