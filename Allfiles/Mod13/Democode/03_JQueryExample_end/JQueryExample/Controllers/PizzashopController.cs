@@ -23,18 +23,18 @@ namespace JQueryExample.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult GetById(int id)
+        public ActionResult<Pizza> GetById(int id)
         {
             Pizza pizza = _pizzas.SingleOrDefault(p => p.Id == id);
             if (pizza == null)
             {
                 return NotFound();
             }
-            return new ObjectResult(pizza);
+            return pizza;
         }
 
         [HttpPost]
-        public ActionResult<Pizza> Post([FromBody] Pizza pizza)
+        public ActionResult<Pizza> Post(Pizza pizza)
         {
             if (!ModelState.IsValid)
             {

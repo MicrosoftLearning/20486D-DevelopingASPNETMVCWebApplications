@@ -76,7 +76,7 @@
 17. Ensure that the cursor is at the end of the **GetAll** action code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet("{id}")]
-       public ActionResult GetLastNameById(int id)
+       public ActionResult<Person> GetLastNameById(int id)
        {
        }
 ```
@@ -89,7 +89,7 @@
             return NotFound();
        }
 
-       return new ObjectResult(person.LastName);
+       return person;
 ```
 
 19. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
@@ -233,7 +233,7 @@
 8. Ensure that the cursor is at the end of the **PizzashopController** contractor code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet("{id}")]
-       public ActionResult GetById(int id)
+       public ActionResult<Pizza> GetById(int id)
        {
        }
 ```
@@ -244,12 +244,12 @@
        {
             return NotFound();
        }
-       return new ObjectResult(pizza);
+       return pizza;
 ```
 10. Ensure that the cursor is at the end of the **GetById** method code block, press Enter twice, and then type the following code:
   ```cs
        [HttpPost]
-       public ActionResult<Pizza> Post([FromBody] Pizza pizza)
+       public ActionResult<Pizza> Post(Pizza pizza)
        {
        }
 ```
