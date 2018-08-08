@@ -378,38 +378,47 @@
 
 7. In **Solution Explorer**, right-click **ClientSide**, point to **Add**, and then click **Reference**. 
 
-8. In the **Reference Manager - ClientSide** dialog box, click **Projects**, in the result pane, ensure that the **ServerSide** check box is **checked**, and then click **Add**.
+8. In the **Reference Manager - ClientSide** dialog box, click **Projects**, in the result pane, ensure that the **ServerSide** check box is **checked**, and then click **OK**.
 
-9. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide**, under **Controllers** click **HomeController.cs**.
+9. In the **HomeController.cs** code window, locate the following code:
+  ```cs
+      using Microsoft.AspNetCore.Mvc;
+```
+10. Ensure that the cursor is at the end of the  **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
+  ```cs
+      using ServerSide.Models;
+      using System.Net.Http;
+      using System.Net.Http.Headers;
+```
 
-10. In the **HomeController.cs** code window, select the following code, and then press Delete.
+11. In the **HomeController.cs** code window, select the following code, and then press Delete.
   ```cs
        public IActionResult Index()
        {
            return View();
        }
 ```
-11. In the **HomeController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+12. In the **HomeController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
        private HttpClient _client;
 
        public HomeController()
        {
           _client = new HttpClient();
-          _client.BaseAddress = new Uri("http://localhost:64231/");
+          _client.BaseAddress = new Uri("http://localhost:55388/");
           _client.DefaultRequestHeaders.Accept.Clear();
           _client.DefaultRequestHeaders.Accept.Add(
               new MediaTypeWithQualityHeaderValue("application/json"));
        } 
 ``` 
 
-12. Ensure that the cursor is at the end of the **HomeController** constructor code block, press Enter twice, and then type the following code:
+13. Ensure that the cursor is at the end of the **HomeController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        public async Task<IActionResult> GetByIdAsync()
        {
        }
 ```
-13. In the **GetByIdAsync** action code block, type the following code:
+14. In the **GetByIdAsync** action code block, type the following code:
   ```cs
        GroceryStore grocery = null;
        HttpResponseMessage response = await _client.GetAsync("api/store/1");
@@ -420,40 +429,40 @@
        return new ObjectResult(grocery);
 ```
 
-14. Ensure that the cursor is at the end of the **GetByIdAsync** action code block, press Enter twice, and then type the following code:
+15. Ensure that the cursor is at the end of the **GetByIdAsync** action code block, press Enter twice, and then type the following code:
   ```cs
        public async Task<IActionResult> PostAsync()
        {
        }
 ```
-15. In the **PostAsync** action code block, type the following code:
+16. In the **PostAsync** action code block, type the following code:
   ```cs
        GroceryStore newGrocery = new GroceryStore { Id = 3, Name = "Martin General Stores", Address = "4160  Oakwood Avenue" };
        HttpResponseMessage response = await _client.PostAsJsonAsync("api/store", newGrocery);
        response.EnsureSuccessStatusCode();
        return new ObjectResult(newGrocery);
 ```
-16. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ServerSide**, under **Controllers** click **StoreController.cs**.
+17. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ServerSide**, under **Controllers** click **StoreController.cs**.
 
-17. Examine the **StoreController.cs** class content.
+18. Examine the **StoreController.cs** class content.
 
-18. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+19. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-19. In **Solution Explorer**, right-click **ClientSide**, and then click **Set as StartUp Project**. 
+20. In **Solution Explorer**, right-click **ClientSide**, and then click **Set as StartUp Project**. 
 
-20. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+21. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-21. In **Solution Explorer**, right-click **ServerSide**, point to **Debug**, and then click **Start new instance**.
+22. In **Solution Explorer**, right-click **ServerSide**, point to **Debug**, and then click **Start new instance**.
 
     >**Note:** The browser displays a grocery store in **JSON** format.
 
-22. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/api/home/PostAsync**, and then press Enter.
+23. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
 
     >**Note:** The browser displays the new added grocery store in **JSON** format.
 
-23. In **Microsoft Edge**, click **Close**.
+24. In **Microsoft Edge**, click **Close**.
 
-24. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+25. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
