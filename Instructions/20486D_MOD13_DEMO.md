@@ -62,7 +62,7 @@
             _people.Add(new Person() {Id = 4, FirstName = "Bessie", LastName = "Duppstadt" });
        }
 ```
-15. Ensure that the cursor is at the end of the **PersonController** contractor code block, press Enter twice, and then type the following code:
+15. Ensure that the cursor is at the end of the **PersonController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet]
        public ActionResult<List<Person>> GetAll()
@@ -168,7 +168,7 @@
             _animals.Add(new Animal() { Id = 3, Name = "Shark", Family = "Fish", Facts = "Sharks live in the ocean, and average shark has 40-45 teeth" });
        }
 ```
-19. Ensure that the cursor is at the end of the **AnimalsController** contractor code block, press Enter twice, and then type the following code:
+19. Ensure that the cursor is at the end of the **AnimalsController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet]
        [Produces("application/xml")]
@@ -230,7 +230,7 @@
             _pizzas.Add(new Pizza() { Id = 4, Toppings = "Pineapple", Price = 12 });
        }
 ```
-8. Ensure that the cursor is at the end of the **PizzashopController** contractor code block, press Enter twice, and then type the following code:
+8. Ensure that the cursor is at the end of the **PizzashopController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet("{id}")]
        public ActionResult<Pizza> GetById(int id)
@@ -353,6 +353,107 @@
 30. In **Microsoft Edge**, click **Close**.
 
 31. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+
+# Lesson 3: Calling a Web API 
+
+### Demonstration: How to Call Web APIs Using Server-Side Code
+
+#### Preparation Steps 
+
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+
+#### Demonstration Steps
+
+1. Navigate to **Allfiles\Mod13\Democode\04_HttpClientExample_begin**, and then double-click **HttpClientExample.sln**.
+
+2. In **Solution Explorer**, right-click **ClientSide**, point to **Add**, and then click **New Folder**.
+
+3. In the **NewFolder** text box, type **Controllers**, and then press Enter.
+
+4. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide** right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
+
+5. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
+
+6. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **HomeController**, and then click **Add**.
+
+7. In **Solution Explorer**, right-click **ClientSide**, point to **Add**, and then click **Reference**. 
+
+8. In the **Reference Manager - ClientSide** dialog box, click **Projects**, in the result pane, ensure that the **ServerSide** check box is **checked**, and then click **Add**.
+
+9. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide**, under **Controllers** click **HomeController.cs**.
+
+10. In the **HomeController.cs** code window, select the following code, and then press Delete.
+  ```cs
+       public IActionResult Index()
+       {
+           return View();
+       }
+```
+11. In the **HomeController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+  ```cs
+       private HttpClient _client;
+
+       public HomeController()
+       {
+          _client = new HttpClient();
+          _client.BaseAddress = new Uri("http://localhost:64231/");
+          _client.DefaultRequestHeaders.Accept.Clear();
+          _client.DefaultRequestHeaders.Accept.Add(
+              new MediaTypeWithQualityHeaderValue("application/json"));
+       } 
+``` 
+
+12. Ensure that the cursor is at the end of the **HomeController** constructor code block, press Enter twice, and then type the following code:
+  ```cs
+       public async Task<IActionResult> GetByIdAsync()
+       {
+       }
+```
+13. In the **GetByIdAsync** action code block, type the following code:
+  ```cs
+       GroceryStore grocery = null;
+       HttpResponseMessage response = await _client.GetAsync("api/store/1");
+       if (response.IsSuccessStatusCode)
+       {
+          grocery = await response.Content.ReadAsAsync<GroceryStore>();
+       }
+       return new ObjectResult(grocery);
+```
+
+14. Ensure that the cursor is at the end of the **GetByIdAsync** action code block, press Enter twice, and then type the following code:
+  ```cs
+       public async Task<IActionResult> PostAsync()
+       {
+       }
+```
+15. In the **PostAsync** action code block, type the following code:
+  ```cs
+       GroceryStore newGrocery = new GroceryStore { Id = 3, Name = "Martin General Stores", Address = "4160  Oakwood Avenue" };
+       HttpResponseMessage response = await _client.PostAsJsonAsync("api/store", newGrocery);
+       response.EnsureSuccessStatusCode();
+       return new ObjectResult(newGrocery);
+```
+16. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ServerSide**, under **Controllers** click **StoreController.cs**.
+
+17. Examine the **StoreController.cs** class content.
+
+18. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+
+19. In **Solution Explorer**, right-click **ClientSide**, and then click **Set as StartUp Project**. 
+
+20. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+21. In **Solution Explorer**, right-click **ServerSide**, point to **Debug**, and then click **Start new instance**.
+
+    >**Note:** The browser displays a grocery store in **JSON** format.
+
+22. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/api/home/PostAsync**, and then press Enter.
+
+    >**Note:** The browser displays the new added grocery store in **JSON** format.
+
+23. In **Microsoft Edge**, click **Close**.
+
+24. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
