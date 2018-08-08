@@ -218,9 +218,9 @@ The main tasks for this exercise are as follows:
 
 3. Inside the **IF** statment,  add a variable named **selectedValue** of type **string** with the value of **context.Request.Query["favorite"]**.
 
-4. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Selected Value is: " + selectedValue** as a parameter to the **WriteAsync** method. 
+4. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Selected value is: " + selectedValue** as a parameter to the **WriteAsync** method.
 
-5. After the **IF** statment, add  an **ELSE** statemet.
+5. After the **IF** statment, add an **ELSE** statement.
 
 6. Inside the **ELSE** statment, call the **Invoke** method of the **next** parameter using the **await** operator.
 
@@ -235,7 +235,7 @@ The main tasks for this exercise are as follows:
 
 4. Select **Basketball**, and then click **Submit Poll**.
     > **Note**: The browser displays the following text:<br>
-"Selected Value is: basketball"
+"Selected value is: Basketball"
 
 5. Close **Microsoft Edge**.
 
@@ -251,25 +251,25 @@ The main tasks for this exercise are as follows:
     - Path: **/poll-questions.html**
 
 5. Select **Basketball**, and then click **Submit Poll**.
-    > **Note**: The browser displays the **poll-questions.html** file content located under **wwwroot** folder, since the request was captured by **UseStaticFiles** without executing the **app.Use** middleware.
+    > **Note**: The browser displays the **poll-questions.html** file content located under **wwwroot** folder, since the request was captured by the **UseStaticFiles** middleware without executing the **app.Use** middleware.
 
 6. Close **Microsoft Edge**.
 
-8. Move the **app.UseStaticFiles** method call to be between the **app.Use** middleware and the **app.Run** middleware.
+7. Move the **app.UseStaticFiles** method call to be between the **app.Use** middleware and the **app.Run** middleware.
 
-9. In the **app.Use** middleware call, comment out the **ELSE** statement that would run in case the "favorite" query parameter does not exist.
+8. In the **app.Use** middleware call, comment out the **ELSE** statement that would run in case the "favorite" query string parameter does not exist.
 
-10. Save all the changes.
+9. Save all the changes.
 
-11. Start the application without debugging.
+10. Start the application without debugging.
 
-12. Access the following relative path:
+11. Access the following relative path:
     - Path: **/poll-questions.html**
     > **Note**: The browser displays a blank page.
 
-13. Close **Microsoft Edge**.
+12. Close **Microsoft Edge**.
 
-15. Uncomment the **ELSE** statement that would run in case the "favorite" query parameter does not exist.
+13. Uncomment the **ELSE** statement that would run in case the "favorite" query string parameter does not exist.
 
 >**Result**: At the end of this exercise, you will be able to create a custom middleware and receive HTML form calls to it.
 
@@ -321,7 +321,7 @@ The main tasks for this exercise are as follows:
 
 5. Declare a method with following information:
     - Name: **GetVoteResult**
-    - Return type: **SortedDictionary**<**SelectedGame**, **int**>
+    - Return type: **SortedDictionary**&lt;**SelectedGame**, **int**&gt;
 
 ####	Task 2: Define an implementation for the service
 
@@ -334,13 +334,13 @@ The main tasks for this exercise are as follows:
 
 3. Add a new field with the following information:
     - Scope: **private**
-    - Type: **Dictionary**<**SelectedGame**, **int**>
+    - Type: **Dictionary**&lt;**SelectedGame**, **int**&gt;
     - Name: **_selectionVotes**
 
 4. Add a parameterless constructor with the following information:
     - Scope: **public**
 
-5. In the constructor, initialize the  **_selectionVotes** using the **SortedDictionary<SelectedGame, int>** constructor.
+5. In the constructor, initialize the **_selectionVotes** field using the **SortedDictionary&lt;SelectedGame, int&gt;** constructor.
 
 6. Add a method with the following information:
     - Scope: **public**
@@ -356,16 +356,16 @@ The main tasks for this exercise are as follows:
 
 9. After the **IF** statement, add an **ELSE** statement.
 
-10.  In the **ELSE** statement code block, call the **Add** method of the **_selectionVotes** field. Pass **game** and **1** as a parameters to the **Add** method.
+10.  In the **ELSE** statement code block, call the **Add** method of the **_selectionVotes** field. Pass **game** and **1** as parameters to the **Add** method.
 
 11. Add a method with the following information:
     - Scope: **public**
-    - Return Type: **SortedDictionary<SelectedGame, int>**
+    - Return Type: **SortedDictionary&lt;SelectedGame, int&gt;**
     - Name: **GetVoteResult**
 
-12. In the **GetVoteResult** method code block, return a new **SortedDictionary<SelectedGame, int>** result using the **SortedDictionary<SelectedGame, int>*** constructor. 
+12. In the **GetVoteResult** method code block, return a new **SortedDictionary&lt;SelectedGame, int&gt;** object using the **SortedDictionary&lt;SelectedGame, int&gt;** constructor. 
 
-13. Pass **_selectionVotes** field as a parameter to the **SortedDictionary<SelectedGame, int>** constructor.
+13. Pass **_selectionVotes** field as a parameter to the **SortedDictionary&lt;SelectedGame, int&gt;** constructor.
 
 
 ####	Task 3: Use dependency injection
@@ -398,11 +398,11 @@ The main tasks for this exercise are as follows:
 
 7. Call the **AddVote** method of the **pollResults** parameter. Pass **selectedGame** variable as a parameter to the **AddVote** method.
 
-8. Add a variable named **gameVotes** of type **SortedDictionary<SelectedGame, int>**.  Initialize the **gameVotes** variable with the result of **pollResults.GetVoteResult** method call.
+8. Add a variable named **gameVotes** of type **SortedDictionary&lt;SelectedGame, int&gt;**.  Initialize the **gameVotes** variable with the result of **pollResults.GetVoteResult** method call.
 
 9. Create a **FOREACH** statement block, with the following information:
 
-    - Variable Type: **KeyValuePair<SelectedGame,int>**
+    - Variable Type: **KeyValuePair&lt;SelectedGame, int&gt;**
     - Variable Name: **currentVote**
     - Collection: **gameVotes**
 
@@ -478,7 +478,7 @@ The main tasks for this exercise are as follows:
     - Template: **MVC Controller - Empty**
     - Folder: **Controllers**
 
-3. In the **Index** action, return the **ViewResult** result using the **Content** method. Pass **"Hello from controller."** as a parameter to the **Content** method.
+3. In the **Index** action, return the **ContentResult** result using the **Content** method. Pass **"Hello from controller."** as a parameter to the **Content** method.
 
 
 ####	Task 3: Run the application
@@ -488,22 +488,24 @@ The main tasks for this exercise are as follows:
 2. Start the application without debugging.
     > **Note**: The browser displays the following text: "Hello from controller."
 
-3. In **Startup** class, move the **app.UseStaticFiles** to be first middleware in the pipeline.
+3. Close **Microsoft Edge**.
 
-4. Save all the changes.
+4. In **Startup** class, move the **app.UseStaticFiles** to be first middleware in the pipeline.
 
-5. Start the application without debugging.
+5. Save all the changes.
+
+6. Start the application without debugging.
     > **Note**: The browser displays: "This text was generated by the app.Run middleware. wwwroot folder path:" [local path to your wwwroot folder]."<br />
 
-6. Close **Microsoft Edge**.
+7. Close **Microsoft Edge**.
 
-7. Move the **app.Run**  to be the last middleware in the pipeline.
+8. Move the **app.Run**  to be the last middleware in the pipeline.
 
 ####	Task 4: Use Dependency Injection in a controller
 
 1. In **Startup** class, in the **Configure** method, remove the **gameVotes** variable, the **FOREACH** statement and its content.
 
-2. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Thank you for submitting the poll. You may look at the Poll Results <a href='/?submitted=true'>Here</a>."** as a parameter to the **WriteAsync** method.
+2. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Thank you for submitting the poll. You may look at the Poll Results &lt;a href='/?submitted=true'&gt;Here&lt;/a&gt;."** as a parameter to the **WriteAsync** method.
 
 3. In **HomeController** class, add **USING** statements for the following namespaces:
     - **PollBall.Services**
@@ -525,31 +527,27 @@ The main tasks for this exercise are as follows:
 
 8. In the **Index** action, add an **IF** statemet that checks if the  **Request.Query.ContainsKey** method returns **TRUE**. Pass **"submitted"** as a parameter to the **ContainsKey** method. 
 
-9. Inside the **IF** statment,  add a variable named **selectedValue** of type **string** with the value of **context.Request.Query["favorite"]**.
+9. Inside the **IF** statment, add a variable named **results** of type **StringBuilder**.
 
-10. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Selected Value is: " + selectedValue** as a parameter to the **WriteAsync** method. 
+10. Initialize the **results** varaible using the **StringBuilder** constructor.
 
-11. Inside the **IF** statment, add a variable named **results** of type **StringBuilder**.
+11. Add a variable named **voteList** of type **&lt;SortedDictionary&lt;SelectedGame, int&gt;&gt;**.
 
-12. Initialize the **results** varaible using the **StringBuilder** constructor.
+12. Initialize the **voteList** variable with the result of **_pollResults.GetVoteResult** method call.
 
-13. Add a variable named **voteList** of type **<SortedDictionary<SelectedGame, int>**.
-
-14. Initialize the **voteList** varaible with the result of **_pollResults.GetVoteResult** method call.
-
-15. Create a **FOREACH** statement block, with the following information:
+13. Create a **FOREACH** statement block, with the following information:
 
     - Variable Type: **var**
     - Variable Name: **gameVotes**
     - Collection: **voteList**
 
-16. In the **FOREACH** statement block, call the **Append** method of the **results** variable. Pass **$"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}"** as a parameter to the **Append** method. 
+14. In the **FOREACH** statement block, call the **Append** method of the **results** variable. Pass **$"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}"** as a parameter to the **Append** method. 
 
-17. After the **FOREACH** statement block, return the **ContentResult** result using the **Content** method. Pass **results.ToString()** string as a parameter to the **Content** method.
+15. After the **FOREACH** statement block, return the **ContentResult** result using the **Content** method. Pass **results.ToString()** string as a parameter to the **Content** method.
 
-18. After the **IF** statment, add  an **ELSE** statemet.
+16. After the **IF** statment, add  an **ELSE** statemet.
 
-19. Inside the **ELSE** statment, return the **RedirectResult** result using the **Redirect** method. Pass **"poll-questions.html"** as a parameter to the **Redirect** method.
+17. Inside the **ELSE** statment, return the **RedirectResult** result using the **Redirect** method. Pass **"poll-questions.html"** as a parameter to the **Redirect** method.
 
 ####	Task 5: Run the application
 
@@ -561,7 +559,7 @@ The main tasks for this exercise are as follows:
 3. Select **Basketball**, and then click **Submit Poll**.
     > **Note**: The browser displays: "Thank you for submitting the poll. You may look at the Poll Results **Here**."
 
-4. click **Here**
+4. click **Here**.
     > **Note**: The browser displays the following text:<br>
 "Game name: Basketball, Votes: 1
 
@@ -574,12 +572,14 @@ The main tasks for this exercise are as follows:
     > **Note**: The browser displays the following text:<br>
 "Thank you for submitting the poll. You may look at the Poll Results **Here**."
 
-8. click **Here**
+8. click **Here**.
     > **Note**: The browser displays the following text:<br>
 "Game name: Basketball, Votes: 1 <br> 
 Game name: Football, Votes: 1"
 
 9. Close all the **Microsoft Edge** windows.
+
+10. Close **Microsoft Visual Studio**.
 
 >**Result**: At the end of this exercise, you will be able to create controller, and inject a service into it with **Dependency Injection**. 
 

@@ -19,8 +19,9 @@ namespace Zoo.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Photo>().HasData(
-                 new Photo
+                new Photo
                  {
+                     PhotoID =1,
                      Title = "Butterfly Garden",
                      Description = "In computing, a code segment, also known as a text segment or simply as text",
                      PhotoFileName = "butterfly.jpg",
@@ -28,6 +29,7 @@ namespace Zoo.Data
                  },
                 new Photo
                 {
+                    PhotoID = 2,
                     Title = "African Animals",
                     Description = "In computing, a code segment, also known as a text segment or simply as text",
                     PhotoFileName = "lion.jpg",
@@ -35,6 +37,7 @@ namespace Zoo.Data
                 },
                 new Photo
                 {
+                    PhotoID = 3,
                     Title = "Underwater World",
                     Description = "In computing, a code segment, also known as a text segment or simply as text",
                     PhotoFileName = "octopus.jpg",
@@ -42,6 +45,7 @@ namespace Zoo.Data
                 },
                 new Photo
                 {
+                    PhotoID = 4,
                     Title = "Sea Birds",
                     Description = "In computing, a code segment, also known as a text segment or simply as text",
                     PhotoFileName = "swan.jpg",
