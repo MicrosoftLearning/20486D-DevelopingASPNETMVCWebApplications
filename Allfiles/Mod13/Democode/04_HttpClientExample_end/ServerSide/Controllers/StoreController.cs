@@ -17,16 +17,8 @@ namespace ServerSide.Controllers
 
         public StoreController()
         {
-            _groceryStores.Add(new GroceryStore() { Id = 1, Name = "", Address = "" });
-            _groceryStores.Add(new GroceryStore() { Id = 2, Name = "", Address = "" });
-            _groceryStores.Add(new GroceryStore() { Id = 3, Name = "", Address = "" });
-            _groceryStores.Add(new GroceryStore() { Id = 4, Name = "", Address = "" });
-        }
-
-        [HttpGet]
-        public ActionResult<List<GroceryStore>> Get()
-        {
-            return _groceryStores;
+            _groceryStores.Add(new GroceryStore() { Id = 1, Name = "Market Base", Address = "1882  State Street" });
+            _groceryStores.Add(new GroceryStore() { Id = 2, Name = "Food Land", Address = "4122  Aaron Smith Drive" });
         }
 
         [HttpGet("{id}")]
@@ -41,7 +33,7 @@ namespace ServerSide.Controllers
         }
 
         [HttpPost]
-        public ActionResult<GroceryStore> Post(GroceryStore groceryStore)
+        public ActionResult<GroceryStore> Create(GroceryStore groceryStore)
         {
             if (!ModelState.IsValid)
             {
@@ -50,5 +42,7 @@ namespace ServerSide.Controllers
             _groceryStores.Add(groceryStore);
             return CreatedAtAction(nameof(GetById), new { id = groceryStore.Id }, groceryStore);
         }
+
+
     }
 }
