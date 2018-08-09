@@ -12,13 +12,12 @@
             $("#summery").addClass("display-div").removeClass("hidden-div");
 
             var correctCost = (price.text().substring(1, price.text().length));
-            var calc = parseFloat(value * correctCost).toFixed(2);
+            var calc = parseInt(value * correctCost);
 
             var msg = label.text() + " ticket - " + value.toString() + "x" + price.text() + " = <span class='sum'>" + calc +'</span>';
             var row = $("<tr id='" + label.text() +"'>");
             row.append($("<td>").html(msg));
             $("#totalAmount").append(row);
-
         } 
         if ($("#totalAmount tr").length == 0) {
             $("#summery").addClass("hidden-div").removeClass("display-div");
