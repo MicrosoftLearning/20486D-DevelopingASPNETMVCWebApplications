@@ -220,8 +220,6 @@
 
 36. On the **Welcome to the University** page, select a student of your choice, and then click **Details**.
 
-      >**Note:** The footer content in the **Student details** page changed.
-
 37. On the **Student details** page, examine the student details, and then click **Back to List**.
       
 38. In **Microsoft Edge**, click **Close**.
