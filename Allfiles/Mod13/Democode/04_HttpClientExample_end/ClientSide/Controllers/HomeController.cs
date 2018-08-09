@@ -12,21 +12,21 @@ namespace ClientSide.Controllers
 {
     public class HomeController : Controller
     {
-        private HttpClient _client;
+        private IHttpClientFactory _httpClient;
+        private GroceryStore grocery;
 
-        public HomeController()
+        public HomeController(IHttpClientFactory httpClient)
         {
-            _client = new HttpClient();
-            _client.BaseAddress = new Uri("http://localhost:64231/");
-            _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+            _httpClient = httpClient;
         }
 
         public async Task<IActionResult> GetByIdAsync()
         {
-            GroceryStore grocery = null;
-            HttpResponseMessage response = await _client.GetAsync("api/store/1");
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:64231/api/store/1");
+            request.Headers.Add("Accept", "application/json");
+            var client = _httpClient.CreateClient();
+
+            var response = await client.SendAsync(request);
             if (response.IsSuccessStatusCode)
             {
                 grocery = await response.Content.ReadAsAsync<GroceryStore>();
@@ -36,8 +36,9 @@ namespace ClientSide.Controllers
 
         public async Task<IActionResult> PostAsync()
         {
+            var client = _httpClient.CreateClient();
             GroceryStore newGrocery = new GroceryStore { Id = 3, Name = "Martin General Stores", Address = "4160  Oakwood Avenue" };
-            HttpResponseMessage response = await _client.PostAsJsonAsync("api/store", newGrocery);
+            var response = await client.PostAsJsonAsync("http://localhost:64231/api/store", newGrocery);
             response.EnsureSuccessStatusCode();
             return new ObjectResult(newGrocery);
         }
