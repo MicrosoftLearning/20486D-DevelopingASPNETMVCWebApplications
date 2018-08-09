@@ -190,7 +190,7 @@ The main tasks for this exercise are as follows:
 3. Close **Microsoft Edge**.
 
 
->**Result**: At the end of this exercise, you will be able to add and work with static files inside an **ASP.NET Core** project.
+>**Result**: At the end of this exercise, you will be able to work with static files inside an ASP.NET Core project.
 
 ### Exercise 2: Creating Custom Middleware
 
