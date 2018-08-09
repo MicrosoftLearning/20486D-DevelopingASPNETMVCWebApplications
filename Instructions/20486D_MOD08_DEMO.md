@@ -47,9 +47,7 @@
 
 13. Place the cursor before the **<** (less then) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
   ```cs
-       <div>
-            <h1>Welcome to the University</h1>
-       </div>
+       <h1>Welcome to the University</h1>
 ```
 
 14. In the **_Layout.cshtml** file, locate the following code:
@@ -61,9 +59,7 @@
 
 15. Place the cursor after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter, and then type the following code: 
   ```cs
-       <footer>
-           @RenderSection("footer", required: false)
-       </footer>
+       @RenderSection("footer", false)
 ```
 
 16. In **Solution Explorer**, expand **Controllers**, and then click **StudentController.cs**.
@@ -90,109 +86,85 @@
 
 23. Replace the selected code with the following code: 
   ```cs
-       @section footer{
-            <div>
-                <p>
-                    The University, established in 1980.
-                </p>
-             </div>
-       }
-```
-
-24. In the **Index.cshtml** code window, locate the following code:
-  ```cs
-       @section footer{
-            <div>
-                <p>
-                    The University, established in 1980.
-                </p>
-             </div>
-       }
-```
-
-25. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
-  ```cs
        <h2>Students list</h2>
        <div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-                             @Html.DisplayNameFor(model => model.FirstName)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.LastName)
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
+           <table class="table">
+               <thead>
+                   <tr>
+                       <th>
+                           @Html.DisplayNameFor(model => model.FirstName)
+                       </th>
+                       <th>
+                           @Html.DisplayNameFor(model => model.LastName)
+                       </th>
+                       <th></th>
+                   </tr>
+               </thead>
+               <tbody>
+                   @foreach (var item in Model)
+                   {
+                       <tr>
+                           <td>
                                 @Html.DisplayFor(modelItem => item.FirstName)
-                            </td>
-                            <td>
+                           </td>
+                           <td>
                                 @Html.DisplayFor(modelItem => item.LastName)
-                            </td>
-                            <td>
+                           </td>
+                           <td>
                                 <a asp-action="Details" asp-route-id="@item.StudentId">Details</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+                           </td>
+                       </tr>
+                   }
+               </tbody>
+           </table>
        </div>
 ```
+24. In **Solution Explorer**, under **Controllers**, click **StudentController.cs**.
 
-26. In **Solution Explorer**, under **Controllers**, click **StudentController.cs**.
-
-27. In the **StudentController.cs** code window, right-click the following code, and then click **Add View**.
+25. In the **StudentController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Details(int? id)
 ```
 
-28. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Details**.  
+26. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Details**.  
 
-29. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
+27. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-30. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+28. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
 
-31. In the **Details.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
+29. In the **Details.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
   ```cs
        @model Student
 ```
 
-32. In the **Details.cshtml** code window, select the following code:
+30. In the **Details.cshtml** code window, select the following code:
   ```cs
        <h2>Details</h2>
 ```
 
-33. Replace the selected code with the following code: 
+31. Replace the selected code with the following code: 
   ```cs
-       @section footer{
+       @section footer {
             <div>
                 <a asp-action="Index">Back to List</a>
             </div>
        }
 ```
 
-34. In the **Details.cshtml** code window, locate the following code:
+32. In the **Details.cshtml** code window, locate the following code:
   ```cs
-       @section footer{
+       @section footer {
             <div>
                 <a asp-action="Index">Back to List</a>
              </div>
        }
 ```
 
-35. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
+33. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
   ```cs
        <h2>Student details</h2>
 
        <div>
-            <hr />
             <dl>
                 <dt>
                     @Html.DisplayNameFor(model => model.FirstName)
@@ -240,21 +212,21 @@
        </div>
 ```
 
-36. In the **LayoutExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+34. In the **LayoutExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-37. In the **LayoutExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+35. In the **LayoutExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
       >**Note:** The browser displays the **Index.cshtml** file combined with the **_Layout.cshtml** file.
 
-38. On the **Welcome to the University page** page, select a student of your choice, and then click **Details**.
+36. On the **Welcome to the University** page, select a student of your choice, and then click **Details**.
 
       >**Note:** The footer content in the **Student details** page changed.
 
-39. On the **Student details** page, examine the student details, and then click **Back to List**.
+37. On the **Student details** page, examine the student details, and then click **Back to List**.
       
-40. In **Microsoft Edge**, click **Close**.
+38. In **Microsoft Edge**, click **Close**.
 
-41. In the **LayoutExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+39. In the **LayoutExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Using CSS and JavaScript
 
