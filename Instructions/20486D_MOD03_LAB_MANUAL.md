@@ -167,7 +167,7 @@ The main tasks for this exercise are as follows:
 
 8. Access the following relative path: 
     - Path: **/poll-questions.html**
-    > **Note**: The browser displays the **poll-questions.html** content, the HTML content is designed by the **style.css**.
+    > **Note**: The browser displays the **poll-questions.html** file content that is designed by the **style.css**.
 
 9. Close **Microsoft Edge**.
 
