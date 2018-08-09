@@ -299,7 +299,7 @@
        {
 ```
 
-10. Place the cursor after the located code, type the following code, and then press Enter twice.
+10. Place the cursor after the located code, press Enter, type the following code, and then press Enter.
   ```cs
        app.UseStaticFiles();
 
@@ -308,7 +308,7 @@
 
 11. In **Solution Explorer**, right-click **JSLibraryExample**, point to **Add**, and then click **New Folder**.
 
-12. In the **NewFolder** box, type **Middleware**, and then press Enter.
+12. In the **NewFolder** text box, type **Middleware**, and then press Enter.
 
 13. In **Solution Explorer**, right-click **Middleware**, point to **Add**, and then click **Class**.
 
@@ -376,7 +376,7 @@
 
 25. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
 
-26. In the **HomeController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+26. In the **HomeController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
@@ -449,7 +449,6 @@
           font-size: x-large;
           font-weight: bold;
        }
-
 ```
 
 39. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Shared**, click **_Layout.cshtml**.
@@ -542,7 +541,7 @@
 
 11. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **GradeBookController.cs**.
 
-12. In the **GradeBookController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+12. In the **GradeBookController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
@@ -618,11 +617,11 @@
 
 21. In the **JQueryExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** In **Microsoft Edge**, click **Apply JQuery** button to verify that **jQuery** function implemented correctly in the application.
+22. In **Microsoft Edge**, click **Apply JQuery**.
       
-22. In **Microsoft Edge**, click **Close**.
+23. In **Microsoft Edge**, click **Close**.
 
-23. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+24. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
