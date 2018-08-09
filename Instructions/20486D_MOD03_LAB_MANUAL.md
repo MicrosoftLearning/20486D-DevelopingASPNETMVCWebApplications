@@ -196,7 +196,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-The server must receive the client’s request and notify the company about the poll submission.
+The server need to handle the client’s request. You have been asked to find which ball game was chosen by the user and show a summary of submitions of all clients till now. To do this you will create a middleware.
 
 The main tasks for this exercise are as follows: 
 
