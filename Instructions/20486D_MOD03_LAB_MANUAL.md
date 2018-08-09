@@ -121,7 +121,7 @@ The main tasks for this exercise are as follows:
     - Type: **submit**
     - Value: **Submit Poll**
 
-12. In the **DIV** element with the **main-div** class attribute, copy the content of **html-text.txt** file, with following information:
+12. Copy the content of **html-text.txt** file, with following information:
     - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
 
 13. In the **poll-questions.html** file, paste the copied content into the **DIV** element with the **main-div** class.
