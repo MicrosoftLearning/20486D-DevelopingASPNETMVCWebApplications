@@ -32,14 +32,14 @@ Estimated Time: **60 minutes**
 
 In this exercise, you will:
 
-- Create a new layout and link the application to the view by using a _ViewStart.cshtml file.
+- Create a new layout and link the application to the view by using a **_ViewStart.cshtml** file.
 - Modify the index view to use the new layout.
 - Add existing views to the layout.
 - Browse through the resulting web application.
 
 The main tasks for this exercise are as follows:
 
-1. Create a new layout.
+1. Create a layout.
 
 2. Add a view and link it to a layout.
 
@@ -53,7 +53,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 1: Create a layout
-1. From **Allfiles\Mod08\Labfiles\01_Zoo_begin** open the **Zoo.sln**.
+1. From **Allfiles\Mod08\Labfiles\01_Zoo_begin** open **Zoo.sln**.
 
 2. Create a new folder with the following information:
 
@@ -62,7 +62,7 @@ The main tasks for this exercise are as follows:
 
 3. Add a new **Razor Layout** with the following information:
 
-	- Folder: **/Views/Shared**
+	- Folder: **Views/Shared**
 	- Name: **_Layout**	
 
 4. In the **_Layout.cshtml** file, in the **BODY** element, add a **UL** element with the following information:
@@ -73,19 +73,19 @@ The main tasks for this exercise are as follows:
 
 6. In the **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("Index", "Zoo")"**
+	- Href: **@Url.Action("Index", "ZooSite")"**
 	- Content: **Attractions**
 
-7. After the **LI** element, add a **LI** element.
+7. After the **LI** element, add a second **LI** element.
 
-8. In the last **LI** element, add an **A** element with the following information:
+8. In the seconds **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("VisitorDetails", "Zoo")"**
+	- Href: **@Url.Action("VisitorDetails", "ZooSite")"**
 	- Content: **Visitor Info**
 
-9. After the last **LI** element, add a **LI** element.
+9. After the second **LI** element, add a third **LI** element **LI** element.
 
-10. In the last **LI** element, add an **A** element with the following information:
+10. In the third **LI** element, add an **A** element with the following information:
 
 	- Href: **@Url.Action("BuyTickets", "Zoo")"**
 	- Content: **Tickets**
@@ -103,13 +103,13 @@ The main tasks for this exercise are as follows:
 
 	- Class:**slider-buttons**
 
-14. In the **DIV** element, add a **IMG** element with the following information:
+14. In the **DIV** element, add an **IMG** element with the following information:
 
-	- Class:**prev**
     - Src: **~/images/prevArrow.png**
+	- Class:**prev**
     - Onclick: **prevImage()**
 
-15. After the **IMG** element, add a **IMG** element with the following information:
+15. After the **IMG** element, add an **IMG** element with the following information:
 
 	- Class:**next**
     - Src: **~/images/nextArrow.png**
@@ -128,46 +128,44 @@ The main tasks for this exercise are as follows:
     - Use a layout page: **True**
     - Layout Page: **_Layout.cshtml**
 
-3. Delete the contents of the **Index.cshtml** view.
-
-4. Add a **@model** directive with the following information:
+3. Add a **@model** directive with the following information:
 
    - Type: **IEnumerable&lt;Zoo.Models.Photo&gt;**
 
-5.  Add a **H1** element with the following information:
+4.  Replace <h2>Index</h2> with **H1** element with the following information:
 
 	- Class: **main-title**
     - Content: **Zoo Attractions**
 
-6.  Add a **DIV** element with the following information:
+5.  Add a **DIV** element with the following information:
 
 	- Class: **container**
 
-7. In the **DIV** element, create a **FOREACH** statement, with the following information:
+6. In the **DIV** element, create a **FOREACH** statement, with the following information:
 
 	- Variable Type: **var**
 	- Variable Name: **item**
 	- Collection: **Model**
 
-8. In the **FOREACH** statement block, create an **IF** statement that checks that the value of **item.PhotoFileName** is not **NULL**.
+7. In the **FOREACH** statement block, create an **IF** statement that checks that the value of **item.PhotoFileName** is not **NULL**.
 
-9. In the **IF** statement, add a **DIV** element with the following information:
+8. In the **IF** statement, add a **DIV** element with the following information:
 
 	- Class:**image-wrapper**
 
-10. In the **DIV** element, add a **IMG** element with the following information:
+9. In the **DIV** element, add an **IMG** element with the following information:
 
 	- Class:**photo-display-img**
-    - Src: **@Url.Action("GetImage", "Zoo", new { PhotoId = item.PhotoID })**
+    - Src: **@Url.Action("GetImage", "ZooSite", new { PhotoId = item.PhotoID })**
 
-11. After the **IF** statement, add a **H3** element with the following information:
+10. After the **IF** statement, add an **H3** element with the following information:
 
 	- Class:**display-picture-title**
     - Content: **@Html.DisplayFor(modelItem  => item.Title)**
 
-12. Add a **DIV** element.
+11. Add a **DIV** element.
 
-13. In the **DIV** element, add a **SPAN** element with the following information:
+12. In the **DIV** element, add a **SPAN** element with the following information:
 
 	- Class:**display**
     - Content: **@Html.DisplayFor(model => item.Description)**
@@ -179,11 +177,11 @@ The main tasks for this exercise are as follows:
     - Name: **_ViewStart**
     - Folder: **Views**
 
-2. At the beginning of the **Index.cshtml** view, remove the **Layout** property and its value.
+2. At the beginning of the **Index.cshtml** view, remove the **Layout** property with its value.
 
 #### Task 4: Add existing views to the layout
 
-1. Copy the existing **.cshtml** files to the **Zoo** project, with the following information:
+1. Add existing **.cshtml** files to the **Zoo** project, with the following information:
 
     - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
 	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\Views**
@@ -193,7 +191,7 @@ The main tasks for this exercise are as follows:
 
 1. In the **_Layout.cshtml** file, after the **DIV** element with **@RenderBody()** content, call the **RenderSection** method. 
 
-2. Pass **"Scripts"** and **required: false** as parameters to the **RenderSection** method.
+2. Pass **"Scripts"** and **false** as parameters to the **RenderSection** method.
 
 
 #### Task 6: Run the application
@@ -208,7 +206,7 @@ The main tasks for this exercise are as follows:
 
 5. Close the **Microsoft Edge** window.
 
->**Results**: After completing this exercise, you will be able to add layout and link it to views. You will also be able to add _ViewStart file and apply it to views.  
+>**Results**: After completing this exercise, you will be able to add layout and link it to views. You will also be able to add **_ViewStart** file and apply it to views.  
 
 ### Exercise 2: Using CSS 
 
@@ -239,7 +237,7 @@ The main tasks for this exercise are as follows:
 	- Folder name: **css**
 	- Parent folder: **wwwroot**
 
-2. Copy the **zoo-style.css*** file to the **Zoo** project, with the following information:
+2. Add existing the **zoo-style.css*** file to the **Zoo** project, with the following information:
 
 	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
 	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\wwwroot\css**
@@ -250,7 +248,7 @@ The main tasks for this exercise are as follows:
 
 	- Type: **text/css**
 	- Rel: **stylesheet**
-	- Href: **css/zoo-style.css**
+	- Href: **~/css/zoo-style.css**
 
 #### Task 3: Style the menu
 
@@ -362,7 +360,7 @@ The main tasks for this exercise are as follows:
 
 1. Add a JavaScript file.
 
-2. Link the JavaScript file to a view.
+2. Link a view to the JavaScript file.
 
 3. Write the code of the JavaScript file.
 
@@ -374,10 +372,10 @@ The main tasks for this exercise are as follows:
 	- Folder name: **js**
 	- Parent folder: **wwwroot**
 
-2. Add a **JavaScript** file with the following information:
+2. Add a **JavaScript** **File** with the following information:
 
-	- Folder: **/wwwroot/js**
-	- Name: **form-functions.js**	
+	- Folder: **wwwroot/js**
+	- Name: **form-functions**	
 
 #### Task 2: Link a view to the JavaScript file
 
@@ -386,11 +384,11 @@ The main tasks for this exercise are as follows:
 	- Src: **~/js/form-functions.js**
 
 #### Task 3: Write the code of the JavaScript file
-1. In the **form-functions.js** file, add a **method** with the following information:
+1. In the **form-functions.js** file, add a **function** with the following information:
 
 	- Name: **calculateSum**
 
-2. In the **calculateSum** method code block, add a new variable named **rows** with the value of **document.querySelectorAll("#totalAmount tr .sum")**.
+2. In the **calculateSum** function code block, add a new variable named **rows** with the value of **document.querySelectorAll("#totalAmount tr .sum")**.
 
 3. Add a new variable named **sum** with the value of **0**.
 
@@ -406,7 +404,7 @@ The main tasks for this exercise are as follows:
 
 7. Assign the **innerHTML** property of the **sumElement** variable the value of **"Total: $" + sum**.
 
->**Results**: After completing this exercise, you will be able to add a JavaScript file and write JavaScript code to handle user interactions. 
+>**Results**: After completing this exercise, you will be able to add a **JavaScript File** and write JavaScript code to handle user interactions. 
 
 ### Exercise 4: Using jQuery
 
@@ -434,20 +432,20 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Use NPM to add jQuery
 
-1. Add a new **package.json** file to the **Zoo** project.
+1. Add a new **npm Configuration File** to the **Zoo** project.
 
 2. In the  **package.json** file, add the following key and value in the **dependencies** object:
 
 	- Key: **"jquery"**
 	- Value: **"3.3.1"**
 
-3. Save all the changes.
+3. Save **package.json**.
 
 >**Note:** In the Solution Explorer pane, under **Depenndencies**, a new folder has been added named **npm** with the **jquery** package.
 
 4. In **Startup** class, in the **Configure** method, before the **app.UseMVC** middleware, call the **UseStaticFiles** method of the **app** parameter.
 
-5. Call the **UseNodeModules** method of the **app** parameter. Pass **env.ContentRootPath** as a parameter to the **UseNodeModules** method.
+5. Call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
 
 6. Create a new folder with the following information:
 
@@ -463,7 +461,7 @@ The main tasks for this exercise are as follows:
    - **System.IO**
    - **Microsoft.Extensions.FileProviders**
 
-9. Add the **static** keyword to the **ApplicationBuilderExtensions** class declaration.
+9. Add a **static** keyword to the **ApplicationBuilderExtensions** class declaration.
 
 10. Relace the **ApplicationBuilderExtensions** class namespace with the following information:
    
@@ -539,7 +537,7 @@ The main tasks for this exercise are as follows:
 
 5. Create a variable named **correctCost** and assign it the value of **(price.text().substring(1, price.text().length))**.
 
-6. Create a variable named **calc** and assign it the value of ** parseFloat(value * correctCost).toFixed(2)**.
+6. Create a variable named **calc** and assign it the value of **parseFloat(value * correctCost).toFixed(2)**.
 
 7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" + calc +'&lt;/span&gt;'**.
 
@@ -553,7 +551,7 @@ The main tasks for this exercise are as follows:
 
 12. Chain an **append** function call to the **$** function call. Pass **row** as a parameter to the **append** function.
 
-13. After the **IF** statement code block, add and **IF** statement that checks that the value of **$("#totalAmount tr").length** is equal to **0**.
+13. After the **IF** statement code block, add and **IF** statement if checks that the value of **$("#totalAmount tr").length** is equal to **0**.
 
 14. Inside the **IF** statement code block, call the **$** function and pass **'#summery'** as a parameter. 
 
@@ -584,10 +582,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Use jQuery to change a style
 
-1. Add a **JavaScript** file with the following information:
+1. Add a **JavaScript File** with the following information:
 
-	- Folder: **/wwwroot/js**
-	- Name: **menubar-functions.js**	
+	- Folder: **js**
+	- Name: **menubar-functions**	
 
 2. In the beginning of the **menubar-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
 
@@ -601,7 +599,7 @@ The main tasks for this exercise are as follows:
 
 7. Inside the anonymous function passed to the **each** method, create a variable named **href** and assign it the value of **$(value).attr('href')**.
 
-8. Create an **IF** statement that checks that the value of **path** is equal to the value of **href**.
+8. Create an **IF** statement that checks that the value of **path** is equal to **href**.
 
 9. Inside the **IF** statement code block, call the **$** function and pass **this** as a parameter. 
 
@@ -609,16 +607,16 @@ The main tasks for this exercise are as follows:
 
 11. Chain a **addClass** function call to the **closest** function call. Pass **'active'** to the **addClass** function.
 
-12. Add a **JavaScript** file with the following information:
+12. Add a **JavaScript File** with the following information:
 
 	- Folder: **/wwwroot/js**
-	- Name: **slider-functions.js**	
+	- Name: **slider-functions**	
 
 13. In the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
 
 14. Add a new variable named **current** with the value of **0**.
 
-15. Add a new function with the following information:
+15. Add a new **function** with the following information:
     - Name: **nextImage**
 
 16. In the **nextImage** function code block, increment the **current** variable by 1.
@@ -631,7 +629,7 @@ The main tasks for this exercise are as follows:
 
 19. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
 
-20. Add a new function with the following information:
+20. Add a new **function** with the following information:
     - Name: **prevImage**
 
 21. In the **prevImage** function code block, decrement the **current** variable by 1.
@@ -673,12 +671,12 @@ The main tasks for this exercise are as follows:
 
 4. In the menu bar, click **Tickets**.
 
-5. On the **Step 1 - Choose Tickets**, select the following:
+5. On **Step 1 - Choose Tickets**, select the following:
 
 	- Adult: **_&lt;As many tickets as you like&gt;_**
 	- Senior: **_&lt;As many tickets as you like&gt;_**
 
-6.  On the **Step 2 - Buy Tickets**, type the following:
+6.  On **Step 2 - Buy Tickets**, type the following:
 
 	- First Name: **_&lt;A first name of your choice&gt;_**
 	- Last Name: **_&lt;A last name of your choice&gt;_**
@@ -686,7 +684,7 @@ The main tasks for this exercise are as follows:
 	- Email: **_&lt;An email of your choice&gt;_**
 	- Phone Number **_&lt; A phone number of your choice&gt;_**
 
-7. Click **Submit**.
+7. Click **Buy**.
 
 8. Close **Microsoft Edge**.
 
