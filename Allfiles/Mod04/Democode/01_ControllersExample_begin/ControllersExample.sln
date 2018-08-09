@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllersExample", "ControllersExample\ControllersExample.csproj", "{57E1D5E1-2A2B-4105-AC6F-54ABD11C4828}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllersExample", "ControllersExample\ControllersExample.csproj", "{A77DE51F-BAB4-4081-AB87-CDAA5DCCD7BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57E1D5E1-2A2B-4105-AC6F-54ABD11C4828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57E1D5E1-2A2B-4105-AC6F-54ABD11C4828}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57E1D5E1-2A2B-4105-AC6F-54ABD11C4828}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57E1D5E1-2A2B-4105-AC6F-54ABD11C4828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A77DE51F-BAB4-4081-AB87-CDAA5DCCD7BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77DE51F-BAB4-4081-AB87-CDAA5DCCD7BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77DE51F-BAB4-4081-AB87-CDAA5DCCD7BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77DE51F-BAB4-4081-AB87-CDAA5DCCD7BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6413C030-4E1F-4714-9C6E-D78D878665C2}
+		SolutionGuid = {DAF9AAC1-4627-4CC8-BA71-EBB893430373}
 	EndGlobalSection
 EndGlobal

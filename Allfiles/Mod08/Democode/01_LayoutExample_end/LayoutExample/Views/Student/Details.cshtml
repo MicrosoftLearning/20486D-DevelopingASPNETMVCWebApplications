@@ -1,0 +1,63 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+@section footer {
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+}
+
+<h2>Student details</h2>
+
+<div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Birthdate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Birthdate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Course)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartedUniversityDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartedUniversityDate)
+        </dd>
+    </dl>
+</div>
+
+
+
