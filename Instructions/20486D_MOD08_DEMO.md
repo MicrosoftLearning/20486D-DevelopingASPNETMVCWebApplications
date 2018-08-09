@@ -14,77 +14,83 @@
 
 2. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
 
-3. In the **Add New Item – LayoutExample** dialog box, click **Web**, in the result pane, click **Razor View Start**, and then click **Add**.
+3. In **Add New Item – LayoutExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
 
-4. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
+4. In **Add New Item – LayoutExample** dialog box, in the result pane, click **Razor View Start**, and then click **Add**.
 
-5. In the **NewFolder** text box, type **Shared**, and then press Enter.
+5. In the **Add New Item – LayoutExample** dialog box, click **Web**, in the result pane, click **Razor View Start**, and then click **Add**.
 
-6. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
+6. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
 
-7. In the **Add New Item – LayoutExample** dialog box, click **Web**, in the result pane, click **Razor Layout**, and then click **Add**.
+7. In the **NewFolder** text box, type **Shared**, and then press Enter.
 
-8. In the **_Layout.cshtml** file, locate the following code:
+8. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
+
+9. In **Add New Item – LayoutExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
+
+10. In the **Add New Item – LayoutExample** dialog box, click **Web**, in the result pane, click **Razor Layout**, and then click **Add**.
+
+11. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <title>@ViewBag.Title</title>
 ```
 
-9. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
+12. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <link type="text/css" rel="stylesheet" href="~/css/style-layout-example.css" />
 ```
 
-10. In the **_Layout.cshtml** file, locate the following code:
+13. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <div>
            @RenderBody()
        </div>
 ```
 
-11. Place the cursor before the **<** (less then) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
+14. Place the cursor before the **<** (less then) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
   ```cs
        <div>
             <h1>Welcome to the University</h1>
        </div>
 ```
 
-12. In the **_Layout.cshtml** file, locate the following code:
+15. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <div>
            @RenderBody()
        </div>
 ```
 
-13. Place the cursor after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter, and then type the following code: 
+16. Place the cursor after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <footer>
            @RenderSection("footer", required: false)
        </footer>
 ```
 
-14. In the Solution Explorer pane, under **LayoutExample**, expand **Controllers**, and then click **StudentController.cs**.
+17. In **Solution Explorer**, expand **Controllers**, and then click **StudentController.cs**.
 
-15. In the **StudentController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+18. In the **StudentController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-16. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
+19. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
 
-17. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
+20. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-18. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+21. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
 
-19. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
+22. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
   ```cs
        @model IEnumerable<Student>
 ```
-20. In the **Index.cshtml** code window, select the following code:
+23. In the **Index.cshtml** code window, select the following code:
   ```cs
        <h2>Index</h2>
 ```
 
-21. Replace the selected code with the following code: 
+24. Replace the selected code with the following code: 
   ```cs
        @section footer{
             <div>
@@ -95,7 +101,7 @@
        }
 ```
 
-22. In the **Index.cshtml** code window, locate the following code:
+25. In the **Index.cshtml** code window, locate the following code:
   ```cs
        @section footer{
             <div>
@@ -106,7 +112,7 @@
        }
 ```
 
-23. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
+26. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
   ```cs
        <h2>Students list</h2>
        <div>
@@ -142,30 +148,30 @@
        </div>
 ```
 
-24. In the Solution Explorer pane, under **LayoutExample**, under **Controllers**, click **StudentController.cs**.
+27. In **Solution Explorer**, under **Controllers**, click **StudentController.cs**.
 
-25. In the **StudentController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+28. In the **StudentController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Details(int? id)
 ```
 
-26. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Details**.  
+29. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Details**.  
 
-27. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
+30. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-28. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+31. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
 
-29. In the **Details.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
+32. In the **Details.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
   ```cs
        @model Student
 ```
 
-30. In the **Details.cshtml** code window, select the following code:
+33. In the **Details.cshtml** code window, select the following code:
   ```cs
        <h2>Details</h2>
 ```
 
-31. Replace the selected code with the following code: 
+34. Replace the selected code with the following code: 
   ```cs
        @section footer{
             <div>
@@ -174,7 +180,7 @@
        }
 ```
 
-32. In the **Details.cshtml** code window, locate the following code:
+35. In the **Details.cshtml** code window, locate the following code:
   ```cs
        @section footer{
             <div>
@@ -183,7 +189,7 @@
        }
 ```
 
-33. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
+36. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
   ```cs
        <h2>Student details</h2>
 
@@ -236,21 +242,21 @@
        </div>
 ```
 
-34. In the **LayoutExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+37. In the **LayoutExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-35. In the **LayoutExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+38. In the **LayoutExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
       >**Note:** The browser displays the **Index.cshtml** file combined with the **_Layout.cshtml** file.
 
-36. On the **Welcome to the University page** page, select a student of your choice, and then click **Details**.
+39. On the **Welcome to the University page** page, select a student of your choice, and then click **Details**.
 
       >**Note:** The footer content in the **Student details** page changed.
 
-37. On the **Student details** page, examine the student details, and then click **Back to List**.
+40. On the **Student details** page, examine the student details, and then click **Back to List**.
       
-38. In **Microsoft Edge**, click Close.
+41. In **Microsoft Edge**, click **Close**.
 
-39. In the **LayoutExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+42. In the **LayoutExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Using CSS and JavaScript
 
@@ -339,7 +345,7 @@
        namespace Microsoft.AspNetCore.Builder
 ```
 
-21. In the **ApplicationBuilderExtensions.cs** code block, place the cursor after the second **{** (opening brackets) sign, press Enter, and then type the following code:
+21. In the **ApplicationBuilderExtensions.cs** code block, place the cursor after the second **{** (opening brace) sign, press Enter, and then type the following code:
   ```cs
        public static IApplicationBuilder UseNodeModules(this IApplicationBuilder applicationBuilder, string root)
        {
