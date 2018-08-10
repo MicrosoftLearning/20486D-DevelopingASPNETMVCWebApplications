@@ -296,7 +296,7 @@ The main tasks for this exercise are as follows:
 
 6. Save all the changes.
 
-#### Task 6: Run the unit test – it succeeds
+#### Task 7: Run the unit test – it succeeds
 
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 2 passed tests: **IsIndexReturnsAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
@@ -307,7 +307,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-After the model and the controller has been tested it is time to add the finishing touches for the application to be running, using **Entity Framework Core** you will implement the **ShirtRepository** against the **ShirtDbContext**, register it as a service using **Dependency Injection**, and then run the application.
+After the model and the controller has been tested, it is time to add the final touches to the application. Using **Entity Framework Core** you will implement the **ShirtRepository** using the **ShirtDbContext**, register it as a service using **Dependency Injection**, and then run the application.
 
 The main tasks for this exercise are as follows:
 
