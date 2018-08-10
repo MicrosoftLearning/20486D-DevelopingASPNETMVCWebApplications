@@ -87,15 +87,90 @@
 
 
 
+# Lesson 3: Microsoft Azure Fundamentals
 
+### Demonstration: How to Upload an Image to Microsoft Azure Blob Storage
 
+#### Preparation Steps 
 
+1. Make sure you have a valid **Microsoft Azure** Account.
 
+#### Demonstration Steps 
 
+1.	Open **Microsoft Edge** and in the address bar type **http://portal.azure.com** and press Enter
 
+2.	After sign-in , in the left hand pane locate **Storage Accounts** and click on it.
 
+3.	In the **Storage accounts** section, in the top bar, click on **Add**
 
+4.	In the **Create Storage Account** pane , in the **Name** textbox type **blobdemo<yourmobileno>**
 
+5.	In the **Create Storage Account** pane, under **Resource Group** type **blobdemo**
 
+6.	In the **Create Storage Account** pane locate the **Create** button at the bottom and click on it.
+
+7.	In the **Storage accounts** section click on  **Refresh**
+>**Note**: Creation of your account could take a while, so if you do not see the account, click on refresh after a few seconds.
+
+8.	In the **Storage accounts** section click on **blobdemo<yourmobileno>**
+
+9.	In the left hand section of **Storage Accounts > blobdemo<yourmobileno>** page, locate **Blob Service** and click on **Blobs** under it
+
+10.	In the right hand section of **Storage Accounts > blobdemo<yourmobileno> - Blobs ** page, click on **Container**
+
+11.	In the **New container** window , in the **Name** textbox type **myfirstcontainer**. Click on **OK**
+
+12.	In the **Storage Accounts > blobdemo<yourmobileno> - Blobs ** page, click on **myfirstcontainer**
+
+13.	In the **myfirstcontainer** page click on **Upload**
+
+14.	In the **Upload blob** page click on the **Choose file** icon. 
+
+15.	In the file explorer window, navigate to the image to be uploaded and click **Open**.
+
+16.	In the **Upload blob** page click on the **Upload** button.
+
+17.	Click on close in the **Upload blob** pane.
+
+18.	In the navigation pane click on **blobdemo<yourmobileno> - Blobs**
+
+19.	In the **blobdemo<yourmobileno> - Blobs** on the left hand pane click on **Access Keys**
+
+20.	In the **blobdemo<yourmobileno> - Access Keys** page, on the right pane, locate the first instance of **Connection String**. Click on **Click to Copy** besides the **Connection String** text box.
+
+21.	 Close **Microsoft Edge**.
+
+22.	Open **Microsoft Visual Studio 2017** 
+
+23.	In the **Start Page - Microsoft Visual Studio** window, on the **FILE** menu, point to **Open**, and then click **Project/Solution**.
+
+24.	In the **Filename** text box, type **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin**, and then click **OK**. 
+
+25.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in **Solution Explorer**, expand **AzureStorageDemo** , expand **Controllers** and click on **BlobController.cs**
+
+26.	In the **BlobController.cs** navigate to the method **BlobHandling** and locate the line 
+```cs
+string connectionString = "CONNECTION_STRING";
+```
+Replace **"CONNECTION_STRING"** with the connection string copied to the clipboard.
+
+27.	In the **AzureStorageDemo – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+28.	In the **Microsoft Edge** window that opens automatically click on **Choose File** 
+
+29.	In the explorer window navigate to a folder with an image and choose the image.
+
+30. In the **Microsoft Edge** window click on **Submit** 
+>**Note** The browser will display the image uploaded.
+
+31. In a new tab in **Microsoft Edge** go to address bar and type **http://portal.azure.com**.
+
+30.	After sign-in, in the left hand pane locate **Storage Accounts** and click on it.
+
+31.	In the **Storage Accounts** pane, locate **blobdemo<yourmobileno>** and click on it.
+
+32.	In the left-hand section of **Storage Accounts > blobdemo<yourmobileno>** page, locate **Blob Service** and click on **Blobs** under it
+
+33.	In the left-hand section of **Storage Accounts > blobdemo<yourmobileno> > blobs** page, locate **myimagecontainer** and click on it.
 
 
