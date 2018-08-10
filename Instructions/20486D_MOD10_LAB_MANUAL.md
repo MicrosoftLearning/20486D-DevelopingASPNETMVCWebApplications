@@ -4,21 +4,21 @@
 
 #### Scenario
 
-You have been asked to develop a website in a Test Driven Development.
+You have been asked to develop a website using a Test Driven Development process.
 The development process should consist of creating a model or an interface, creating a fake dependency for the test subject, adding a test, and then adding or fixing code while testing.
 
-You have also been asked that when an error occurs the browser would display a detailed exception page on development environment, and a custom error page on production environment.
+You have also been asked that when an error occurs, the browser would display a detailed exception page on a development environment, and a custom error page on a production environment.
 
-In addition, You are required to provide Logging in each time an action is called.
+In addition you have a logging requirement that states that each time an action is called, it should be logged.
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
-- Add a Testing project to an ASP.NET Core MVC application.
+- Add a testing project to an ASP.NET Core MVC application.
 - Create a fake dependency for the test subject.
-- Add Exception Handling for the different environments. 
-- Add Logging to an ASP.NET Core MVC application.
+- Add exception handling for the different environments. 
+- Add logging to an ASP.NET Core MVC application.
 
 #### Lab Setup
 
@@ -33,7 +33,7 @@ Estimated Time: **60 minutes**
 #### Scenario
 
 You are required to develop an **ASP.NET Core MVC** application in a Test Driven Environment.
-In this exercise you will create an **MSTest** Testing project and add it to the solution, add the **ASP.NET Core MVC** website application to its list of dependencies, and then test the **Shirt** model. 
+In this exercise you will create a **MSTest** testing project and add it to the solution, add the **ASP.NET Core MVC** website application to its list of dependencies, and then test the **Shirt** model. 
 
 The main tasks for this exercise are as follows:
 
@@ -56,42 +56,39 @@ The main tasks for this exercise are as follows:
     - Project name : **ShirtStoreWebsite.Tests**
     - Project template : **MSTest Test Project (.NET Core)**
 
-3. In the **ShirtStoreWebsite.Tests** project, add a reference of **ShirtStoreWebsite** to its dependencies.
+#### Task 2: Write a test for a model
+
+3. In the **ShirtStoreWebsite.Tests** project dependencies, add a reference to the **ShirtStoreWebsite** project. 
 
 4. Rename the **UnitTest1** class, to **ShirtTest**.
 
 5. In the **ShirtTest** class code block, rename **TestMethod1** to **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
-6. In the **ShirtTest** class, add **using** statements for the following namespaces:
+6. In the **ShirtTest** class, add **using** statements for the following namespace:
    - **ShirtStoreWebsite.Models**
 
-7. Add a new variable with the following information:
-    - Type: **Shirt**
-    - Name: **shirt**
-    - Value: **new Shirt { Price = 10F }**
+7. In the **TestMethod1** method, create a **shirt** variable of type **Shirt** and assign it the value of **new Shirt { Price = 10F } **.
 
-8. Add a new variable with the following information:
-    - Type: **string**
-    - Name: **taxedPrice**
-    - Value: **shirt.GetFormattedTaxedPrice(1.2F)**
+8. Create a **taxedPrice** variable of type **string** and assign it the value of **shirt.GetFormattedTaxedPrice(1.2F)**.
 
-9. Call the static **AreEqual** method of the **Assert** class, pass **"$12.00"** and the **taxedPrice** variable as parameters to the **AreEqual** method.
+9. Call the static **AreEqual** method of the **Assert** class. Pass **"$12.00"** and the **taxedPrice** variable as parameters to the **AreEqual** method.
 
 10. Save all the changes.
 
-#### Task 2: Run the unit test – it should fail
+#### Task 3: Run the unit test – it should fail
 
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 1 failed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
-#### Task 3: Implement the model class so the test will pass
+#### Task 4: Implement the model class so the test will pass
 
-1. In the **Shirt** class, replace **GetFormattedTaxedPrice** return value using the following information:
-    - Value: **(Price * tax).ToString($"C2", CultureInfo.GetCultureInfo("en-US"))** 
+1. In the **ShirtStoreWebsite** project, in the **Shirt** class,  inside the **GetFormattedTaxedPrice** method, remove the return statement. 
 
-2. Save all the changes.
+2. Return the **string** result using the **(Price * tax).ToString($"C2", CultureInfo.GetCultureInfo("en-US"))** method.
 
-#### Task 4: Run the unit test – it succeeds
+3. Save all the changes.
+
+#### Task 5: Run the unit test – it succeeds
 
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
