@@ -14,38 +14,28 @@
 
 2. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
 
-3. In the **Add New Item – LayoutExample** dialog box, click **Web**, in the result pane, click **Razor View Start**, and then click **Add**.
+3. In **Add New Item – LayoutExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
 
-4. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
+4. In **Add New Item – LayoutExample** dialog box, in the result pane, click **Razor View Start**, and then click **Add**.
 
-5. In the **NewFolder** text box, type **Shared**, and then press Enter.
+5. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
 
-6. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
+6. In the **NewFolder** text box, type **Shared**, and then press Enter.
 
-7. In the **Add New Item – LayoutExample** dialog box, click **Web**, in the result pane, click **Razor Layout**, and then click **Add**.
+7. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
 
-8. In the **_Layout.cshtml** file, locate the following code:
+8. In **Add New Item – LayoutExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
+
+9. In the **Add New Item – LayoutExample** dialog box, in the result pane, click **Razor Layout**, and then click **Add**.
+
+10. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <title>@ViewBag.Title</title>
 ```
 
-9. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
+11. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <link type="text/css" rel="stylesheet" href="~/css/style-layout-example.css" />
-```
-
-10. In the **_Layout.cshtml** file, locate the following code:
-  ```cs
-       <div>
-           @RenderBody()
-       </div>
-```
-
-11. Place the cursor before the **<** (less then) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
-  ```cs
-       <div>
-            <h1>Welcome to the University</h1>
-       </div>
 ```
 
 12. In the **_Layout.cshtml** file, locate the following code:
@@ -55,96 +45,83 @@
        </div>
 ```
 
-13. Place the cursor after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter, and then type the following code: 
+13. Place the cursor before the **<** (less then) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
   ```cs
-       <footer>
-           @RenderSection("footer", required: false)
-       </footer>
+       <h1>Welcome to the University</h1>
 ```
 
-14. In the Solution Explorer pane, under **LayoutExample**, expand **Controllers**, and then click **StudentController.cs**.
+14. In the **_Layout.cshtml** file, locate the following code:
+  ```cs
+       <div>
+           @RenderBody()
+       </div>
+```
 
-15. In the **StudentController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+15. Place the cursor after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter, and then type the following code: 
+  ```cs
+       @RenderSection("footer", false)
+```
+
+16. In **Solution Explorer**, expand **Controllers**, and then click **StudentController.cs**.
+
+17. In the **StudentController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-16. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
+18. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
 
-17. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
+19. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-18. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+20. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
 
-19. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
+21. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
   ```cs
        @model IEnumerable<Student>
 ```
-20. In the **Index.cshtml** code window, select the following code:
+22. In the **Index.cshtml** code window, select the following code:
   ```cs
        <h2>Index</h2>
 ```
 
-21. Replace the selected code with the following code: 
-  ```cs
-       @section footer{
-            <div>
-                <p>
-                    The University, established in 1980.
-                </p>
-             </div>
-       }
-```
-
-22. In the **Index.cshtml** code window, locate the following code:
-  ```cs
-       @section footer{
-            <div>
-                <p>
-                    The University, established in 1980.
-                </p>
-             </div>
-       }
-```
-
-23. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
+23. Replace the selected code with the following code: 
   ```cs
        <h2>Students list</h2>
        <div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-                             @Html.DisplayNameFor(model => model.FirstName)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.LastName)
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
+           <table class="table">
+               <thead>
+                   <tr>
+                       <th>
+                           @Html.DisplayNameFor(model => model.FirstName)
+                       </th>
+                       <th>
+                           @Html.DisplayNameFor(model => model.LastName)
+                       </th>
+                       <th></th>
+                   </tr>
+               </thead>
+               <tbody>
+                   @foreach (var item in Model)
+                   {
+                       <tr>
+                           <td>
                                 @Html.DisplayFor(modelItem => item.FirstName)
-                            </td>
-                            <td>
+                           </td>
+                           <td>
                                 @Html.DisplayFor(modelItem => item.LastName)
-                            </td>
-                            <td>
+                           </td>
+                           <td>
                                 <a asp-action="Details" asp-route-id="@item.StudentId">Details</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+                           </td>
+                       </tr>
+                   }
+               </tbody>
+           </table>
        </div>
 ```
+24. In **Solution Explorer**, under **Controllers**, click **StudentController.cs**.
 
-24. In the Solution Explorer pane, under **LayoutExample**, under **Controllers**, click **StudentController.cs**.
-
-25. In the **StudentController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+25. In the **StudentController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Details(int? id)
 ```
@@ -167,7 +144,7 @@
 
 31. Replace the selected code with the following code: 
   ```cs
-       @section footer{
+       @section footer {
             <div>
                 <a asp-action="Index">Back to List</a>
             </div>
@@ -176,7 +153,7 @@
 
 32. In the **Details.cshtml** code window, locate the following code:
   ```cs
-       @section footer{
+       @section footer {
             <div>
                 <a asp-action="Index">Back to List</a>
              </div>
@@ -188,7 +165,6 @@
        <h2>Student details</h2>
 
        <div>
-            <hr />
             <dl>
                 <dt>
                     @Html.DisplayNameFor(model => model.FirstName)
@@ -242,13 +218,11 @@
 
       >**Note:** The browser displays the **Index.cshtml** file combined with the **_Layout.cshtml** file.
 
-36. On the **Welcome to the University page** page, select a student of your choice, and then click **Details**.
-
-      >**Note:** The footer content in the **Student details** page changed.
+36. On the **Welcome to the University** page, select a student of your choice, and then click **Details**.
 
 37. On the **Student details** page, examine the student details, and then click **Back to List**.
       
-38. In **Microsoft Edge**, click Close.
+38. In **Microsoft Edge**, click **Close**.
 
 39. In the **LayoutExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -283,9 +257,9 @@
        }
 ```
 
-7. In the **LayoutExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
+7. In the **JSLibraryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
 
-    >**Note:** In Solution Explorer, under **Depenndencies**, a new folder has been added named **npm** with the **jquery** package.
+    >**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder has been added named **npm** with the **jquery** package.
 
 8. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
@@ -295,7 +269,7 @@
        {
 ```
 
-10. Place the cursor after the located code, type the following code, and then press Enter twice.
+10. Place the cursor after the located code, press Enter, type the following code, and then press Enter.
   ```cs
        app.UseStaticFiles();
 
@@ -304,7 +278,7 @@
 
 11. In **Solution Explorer**, right-click **JSLibraryExample**, point to **Add**, and then click **New Folder**.
 
-12. In the **NewFolder** box, type **Middleware**, and then press Enter.
+12. In the **NewFolder** text box, type **Middleware**, and then press Enter.
 
 13. In **Solution Explorer**, right-click **Middleware**, point to **Add**, and then click **Class**.
 
@@ -339,7 +313,7 @@
        namespace Microsoft.AspNetCore.Builder
 ```
 
-21. In the **ApplicationBuilderExtensions.cs** code block, place the cursor after the second **{** (opening brackets) sign, press Enter, and then type the following code:
+21. In the **ApplicationBuilderExtensions.cs** code block, place the cursor after the second **{** (opening brace) sign, press Enter, and then type the following code:
   ```cs
        public static IApplicationBuilder UseNodeModules(this IApplicationBuilder applicationBuilder, string root)
        {
@@ -372,7 +346,7 @@
 
 25. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
 
-26. In the **HomeController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+26. In the **HomeController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
@@ -445,7 +419,6 @@
           font-size: x-large;
           font-weight: bold;
        }
-
 ```
 
 39. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Shared**, click **_Layout.cshtml**.
@@ -538,7 +511,7 @@
 
 11. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **GradeBookController.cs**.
 
-12. In the **GradeBookController.cs** code window, locate the following code, right-click the code, and then click **Add View**.
+12. In the **GradeBookController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
@@ -614,11 +587,11 @@
 
 21. In the **JQueryExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** In **Microsoft Edge**, click **Apply JQuery** button to verify that **jQuery** function implemented correctly in the application.
+22. In **Microsoft Edge**, click **Apply JQuery**.
       
-22. In **Microsoft Edge**, click **Close**.
+23. In **Microsoft Edge**, click **Close**.
 
-23. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+24. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
