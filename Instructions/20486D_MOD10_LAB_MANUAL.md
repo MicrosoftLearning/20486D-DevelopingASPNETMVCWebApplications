@@ -178,12 +178,12 @@ The main tasks for this exercise are as follows:
 
 6. In the **GetShirts** method, return the **IEnumerable&lt;Cupcake&gt;** result using the following information:
 
-    - Value: new List&lt;Shirt&gt;()<br>
+    - Value: **new List&lt;Shirt&gt;()<br>
     {<br>
             new Shirt { Color = ShirtColor.Black, Size = ShirtSize.S, Price = 11F },<br>
             new Shirt { Color = ShirtColor.Gray, Size = ShirtSize.M, Price = 12F },<br>
             new Shirt { Color = ShirtColor.White, Size = ShirtSize.L, Price = 13F }<br>
-    }
+    }**
 
 7. Add a method with the following information:
 
@@ -194,7 +194,7 @@ The main tasks for this exercise are as follows:
         - Type: **Shirt**
         - Name: **shirt**
 
-8. In the **AddShirt** method, return true.
+8. In the **AddShirt** method, return **true**.
 
 9. Add a method with the following information:
 
@@ -205,7 +205,7 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-10. In the **RemoveShirt** method, return true.
+10. In the **RemoveShirt** method, return **true**.
 
 #### Task 3: Pass the fake repository to the constructor of a controller
 
@@ -267,24 +267,20 @@ The main tasks for this exercise are as follows:
 11. Initialize the **shirtController** variable using the **shirtController** constructor and pass it the following parameters:
     - **fakeShirtRepository** 
 
-12. Add a varible named **viewResult** of type **ViewResult**.
+12. Add a varible named **viewResult** of type **ViewResult** with the value of **shirtController.Index() as ViewResult**.
 
-13. Initialize the **viewResult** variable using the **Index** method of the **shirtController** variable, store the return value as of type **ViewResult** using the **as** operator.
+13. Add a varible named **shirts** of type **List&lt;Shirt&gt;** with the value of **viewResult.Model as List<Shirt>**.
 
-14. Add a varible named **shirts** of type **List&lt;Shirt&gt;**.
+14. Call the static **AreEqual** method of the **Assert** class, pass the **Count** property of the **shirts** variable and the integer **3**.
 
-15. Initialize the **shirts** variable using the **Model** property of the **viewResult** variable, store the value as of type **List&lt;Shirt&gt;** using the **as** operator.
+15. Save all the changes.
 
-16. Call the static **AreEqual** method of the **Assert** class, pass the **Count** property of the **shirts** variable and the integer **3**.
-
-17. Save all the changes.
-
-#### Task 4: Run the unit test – it should fail
+#### Task 5: Run the unit test – it should fail
 
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 1 failed test: **IsIndexReturnsAllShirts**, and 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
-#### Task 5: Implement the controller class so the test will pass
+#### Task 6: Implement the controller class so the test will pass
 
 1. In the **ShirtController** class, in the **Index** action, remove its contents.
 
@@ -294,9 +290,9 @@ The main tasks for this exercise are as follows:
 
 3. Return the **ViewResult** result using the **View** method. Pass the **shirts** variable as a parameter to the **View** method.
 
-4. In the **AddShirt** action, at the start of the method's scope, call the **AddShirt** of the **_repository** field. Pass the **shirt** parameter as a parameter to the **AddShirt** method.
+4. In the **AddShirt** action, at the start of the method's scope, call the **AddShirt** method of the **_repository** field. Pass the **shirt** parameter as a parameter to the **AddShirt** method.
 
-5. In the **Delete** action, at the start of the method's scope, call the **RemoveShirt** of the **_repository** field. Pass the **id** parameter as a parameter to the **RemoveShirt** method.
+5. In the **Delete** action, at the start of the method's scope, call the **RemoveShirt** method of the **_repository** field. Pass the **id** parameter as a parameter to the **RemoveShirt** method.
 
 6. Save all the changes.
 
