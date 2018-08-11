@@ -491,8 +491,8 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-You are required to provide logging to the ASP.NET Core MVC application using the Serilog library, while configuring the Logging separately using appsettings.json files to the difference environments:
-Any trace log level logs in development would be displayed to the console, while any warning level logs in production would be written to its dedicated file.
+You are required to provide logging to the ASP.NET Core MVC application using the Serilog library, while configuring the logging for the different environments separately, using appsettings.json files. 
+Any trace level logs in development would be displayed to the console, while any warning level logs in production would be written to its dedicated file.
 This would also require injecting the ILogger to the controller, thus would require to update the controller’s test.
 
 The main tasks for this exercise are as follows:
@@ -552,7 +552,7 @@ The main tasks for this exercise are as follows:
 7. In the **Program** class, chain the method **ConfigureLogging** after the **CreateDefaultBuilder** method. Pass a **lambda expression** as a parameter to the **ConfigureLogging** method with the following information:
     - Lambda Expression: **(hostingContext, logging) => { }**
 
-8. In the **lambda expression**, add a varible named **env** of type **var**.
+8. In the **lambda expression** code block, add a varible named **env** of type **var**.
 
 9. Initialize the **env** variable using the **HostingEnvironment** property of the **hostingContext** parameter.
 
@@ -562,11 +562,11 @@ The main tasks for this exercise are as follows:
 
 12. Call the **ClearProviders** method of the **logging** parameter.
 
-13. Create an **IF** statement that checks that the value of the **IsDevelopment** method of the **env** variable.
+13. Create an **IF** statement that checks that the value returned from the **IsDevelopment** method of the **env** variable is **true**.
 
 14. Inside the **IF** statement code block, call the **AddConfiguration** method of the **logging** parameter. Pass the **config** variable to the **AddConfiguration** method.
 
-15. Inside the **IF** statement code block, call the **AddConsole** method of the **logging** parameter.
+15. Call the **AddConsole** method of the **logging** parameter.
 
 16. After the **IF** statement code block, add an **ELSE** statement. 
 
@@ -596,20 +596,20 @@ The main tasks for this exercise are as follows:
 
 14. Inside the **TRY** statement code block, call the **RemoveShirt** method of the **_repository** parameter. Pass the **id** parameter to the **RemoveShirt** method.
 
-15. Inside the **TRY** statement code block, call the **LogDebug** method of the **_logger** parameter. Pass **$"A shirt with id {id} was removed successfully."** as parameter to the **LogDebug** method.
+15. Call the **LogDebug** method of the **_logger** parameter. Pass **$"A shirt with id {id} was removed successfully."** as parameter to the **LogDebug** method.
 
-16. Inside the **TRY** statement code block, return the **RedirectToActionResult** using the **RedirectToAction** method. Pass **"Index"** as parameter to the **RedirectToAction** method.
+16. Return the **RedirectToActionResult** using the **RedirectToAction** method. Pass **"Index"** as parameter to the **RedirectToAction** method.
 
-16. After the **TRY** statement code block, add a **CATCH** statement with the following information:
+17. After the **TRY** statement code block, add a **CATCH** statement with the following information:
     - Parameter:
         - Type: **Exception**
         - Name: **ex**
 
-17. Inside the **CATCH** statement code block, call the **LogDebug** method of the **_logger** parameter. Pass the **ex** parameter and **$"An error occured while trying to delete shirt with id of {id}."** as parameter to the **LogDebug** method.
+18. Inside the **CATCH** statement code block, call the **LogDebug** method of the **_logger** parameter. Pass the **ex** parameter and **$"An error occured while trying to delete shirt with id of {id}."** as parameter to the **LogDebug** method.
 
-18. Inside the **CATCH** statement code block, throw the **ex** parameter.
+19. Throw the **ex** parameter.
 
-19. Save all the changes.
+20. Save all the changes.
 
 #### Task 2: Test the controller using a mocking framework
 
@@ -627,7 +627,7 @@ The main tasks for this exercise are as follows:
     - Name: **mockLogger**
     - Value: **new Mock&lt;ILogger&lt;ShirtController&gt;&gt;()**
 
-5. In the initialization of the **shirtController** variable, pass **mockLogger.Object** as a second parameter to its constructor.
+5. In the initialization of the **shirtController** variable, pass **mockLogger.Object** as a second parameter of the constructor.
 
 6. Save all the changes.
 
