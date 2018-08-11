@@ -104,9 +104,9 @@ In order to do so you will need to create a repository interface as a dependency
 
 The main tasks for this exercise are as follows:
 
-1.	Create an interface repository.
+1.	Create a repository interface.
 
-2.	Implement the interface repository using a fake repository.
+2.	Implement the repository interface using a fake repository.
 
 3.	Pass the fake repository to the constructor of a controller.
 
@@ -117,7 +117,7 @@ The main tasks for this exercise are as follows:
 6.	Implement the controller class so the test will pass.
 
 
-#### Task 1: Create an interface repository
+#### Task 1: Create an repository interface
 
 1. Create a new folder with the following information:
 
@@ -151,7 +151,7 @@ The main tasks for this exercise are as follows:
         - Type: **int** 
         - Name: **id**
 
-#### Task 2: Implement the interface repository using a fake repository
+#### Task 2: Implement the repository interface using a fake repository
 
 1. Create a new folder with the following information:
 
@@ -311,13 +311,13 @@ After the model and the controller has been tested, it is time to add the final 
 
 The main tasks for this exercise are as follows:
 
-1.	Implement the interface repository in a repository class.
+1.	Implement the repository interface in a repository class.
 
 2.	Register the repository as a service.
 
 3.	Run the MVC application.
 
-#### Task 1: Implement the interface repository in a repository class
+#### Task 1: Implement the repository interface in a repository class
 
 1. Create a new class with the following information:
 
@@ -437,7 +437,7 @@ The main tasks for this exercise are as follows:
 
 1.	Add exception handling in Startup.cs.
 
-2.	Create a temporary Exception for testing.
+2.	Create a temporary exception for testing.
 
 3.	Run the application in development environment.
 
@@ -447,7 +447,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add exception handling in Startup.cs
 
-1. In the **Startup** class, in the **Configure** method, create an **IF** statement that checks that the return value of the **env.IsDevelopment** method.
+1. In the **Startup** class, in the **Configure** method, create an **IF** statement that checks that the return value of the **env.IsDevelopment** method is **true**.
 
 2. Inside the **IF** statement code block, call the **UseDeveloperExceptionPage** method of the **app** parameter.
 
@@ -465,7 +465,7 @@ The main tasks for this exercise are as follows:
 
 1. Select the **development** environment, and then start the application without debugging.
 
-2. In **Microsoft Edge**, click on the delete link of the top **shirt**.
+2. In **Microsoft Edge**, on the **Shirts in stock** table, click on the top **Delete** link.
     >**Note**: The browser displays the detailed exception page.
 
 3. Close the **Microsoft Edge** window.
@@ -474,8 +474,8 @@ The main tasks for this exercise are as follows:
 
 1. Select the **production** environment, and then start the application without debugging.
 
-2. In **Microsoft Edge**, click on the delete link of the top **shirt**.
-    >**Note**: The browser displays a custom error page: error.html, which is located in the wwwroot folder.
+2.In **Microsoft Edge**, on the **Shirts in stock** table, click on the top **Delete** link.
+    >**Note**: The browser displays a custom error page: ** error.html**, which is located in the **wwwroot** folder.
 
 3. Close the **Microsoft Edge** window.
 
@@ -485,7 +485,7 @@ The main tasks for this exercise are as follows:
 
 2. Save all the changes.
 
->**Results** : After completing this exercise, you will know how to add exception handling to an MVC application, by displaying a custom error page or the developers page in case there is an exception that is thrown.
+>**Results** : After completing this exercise, you will know how to add exception handling to an MVC application, by displaying a custom error page in case of an exception on production environment and  by displaying a detailed exception page in case of an exception on development environment.
 
 ### Exercise 5: Adding Logging
 
