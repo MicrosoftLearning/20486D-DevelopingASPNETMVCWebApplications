@@ -307,7 +307,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-After the model and the controller has been tested, it is time to add the final touches to the application. Using **Entity Framework Core** you will implement the **ShirtRepository** using the **ShirtDbContext**, register it as a service using **Dependency Injection**, and then run the application.
+After the model and the controller has been tested, it is time to add the final touches to the application. Using **Entity Framework Core** you will implement the **ShirtRepository** which will use the **ShirtDbContext**, you will register it as a service using **Dependency Injection**, and then run the application.
 
 The main tasks for this exercise are as follows:
 
@@ -408,7 +408,7 @@ The main tasks for this exercise are as follows:
 1. In the **Startup** class, add **using** statements for the following namespaces:
    - **ShirtStoreWebsite.Services**
 
-2. In the **ConfigureServices** method, call the **AddScoped** method of **services** parameter with the following information:
+2. In the **ConfigureServices** method, after the **AddDbContext** method call, call the **AddScoped** method of **services** parameter with the following information:
 
     - Interface: **IShirtRepository**
     - Implementation: **ShirtRepository**
