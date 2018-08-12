@@ -83,14 +83,14 @@ The main tasks for this exercise are as follows:
 	- Href: **@Url.Action("VisitorDetails", "ZooSite")"**
 	- Content: **Visitor Info**
 
-9. After the second **LI** element, add a third **LI** element **LI** element.
+9. After the second **LI** element, add a third **LI** element.
 
 10. In the third **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("BuyTickets", "Zoo")"**
+	- Href: **@Url.Action("BuyTickets", "ZooSite")"**
 	- Content: **Tickets**
 
-11. After the **UL** element, add a **DIV** element with the following information:
+11. After the third **UL** element, add a **DIV** element with the following information:
 
 	- Class:**header-container**
 
@@ -132,7 +132,8 @@ The main tasks for this exercise are as follows:
 
    - Type: **IEnumerable&lt;Zoo.Models.Photo&gt;**
 
-4.  Replace <h2>Index</h2> with **H1** element with the following information:
+
+4.  Replace **_&lt;h2&gt;_Index_&lt;/h2&gt;_** with **H1** element, using the following information:
 
 	- Class: **main-title**
     - Content: **Zoo Attractions**
@@ -237,7 +238,7 @@ The main tasks for this exercise are as follows:
 	- Folder name: **css**
 	- Parent folder: **wwwroot**
 
-2. Add existing the **zoo-style.css*** file to the **Zoo** project, with the following information:
+2. Add **zoo-style.css** file to the **Zoo** project, with the following information:
 
 	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
 	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\wwwroot\css**
@@ -374,7 +375,7 @@ The main tasks for this exercise are as follows:
 
 2. Add a **JavaScript** **File** with the following information:
 
-	- Folder: **wwwroot/js**
+	- Folder: **js**
 	- Name: **form-functions**	
 
 #### Task 2: Link a view to the JavaScript file
@@ -441,7 +442,7 @@ The main tasks for this exercise are as follows:
 
 3. Save **package.json**.
 
->**Note:** In the Solution Explorer pane, under **Depenndencies**, a new folder has been added named **npm** with the **jquery** package.
+>**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder has been added named **npm** with the **jquery** package.
 
 4. In **Startup** class, in the **Configure** method, before the **app.UseMVC** middleware, call the **UseStaticFiles** method of the **app** parameter.
 
@@ -609,7 +610,7 @@ The main tasks for this exercise are as follows:
 
 12. Add a **JavaScript File** with the following information:
 
-	- Folder: **/wwwroot/js**
+	- Folder: **js**
 	- Name: **slider-functions**	
 
 13. In the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
@@ -674,6 +675,7 @@ The main tasks for this exercise are as follows:
 5. On **Step 1 - Choose Tickets**, select the following:
 
 	- Adult: **_&lt;As many tickets as you like&gt;_**
+	- Child: **_&lt;As many tickets as you like&gt;_**
 	- Senior: **_&lt;As many tickets as you like&gt;_**
 
 6.  On **Step 2 - Buy Tickets**, type the following:
