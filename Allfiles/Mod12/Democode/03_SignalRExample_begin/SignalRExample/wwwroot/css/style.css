@@ -1,4 +1,8 @@
-﻿.square-wrapper {
+﻿body {
+    background-color: lightgreen;
+}
+
+.square-wrapper {
     width: 200px;
     height: 200px;
     display: flex;
@@ -9,6 +13,7 @@
     width: 60px;
     height: 60px;
     margin: 3px;
+    border-radius: 20px;
 }
 
 .blue {

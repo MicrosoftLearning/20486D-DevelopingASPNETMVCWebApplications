@@ -82,6 +82,7 @@
 12. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     using Microsoft.AspNetCore.SignalR;
+    using SignalRExample.Services;
 ```
 13. In the **SquaresHub.cs** code window, select the following code:
 ```cs
@@ -101,10 +102,18 @@
 
 16. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-        public async Task SwapColor(int rowIndex, int columnIndex)
-        {
-            await Clients.Others.SendAsync("SwapSquareColor", rowIndex, columnIndex);
-        }
+    private ISquareManager _manager;
+
+    public SquaresHub(ISquareManager manager)
+    {
+        _manager = manager;
+    }
+
+    public async Task SwapColor(int rowIndex, int columnIndex)
+    {
+        _manager.SwapColor(rowIndex, columnIndex);
+        await Clients.Others.SendAsync("SwapSquareColor", rowIndex, columnIndex);
+    }
 ```
 
 17. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
@@ -194,9 +203,14 @@
 37. In **Microsoft Edge**, click one of the squares.
     >**Note**: Notice that in both **Microsoft Edge** windows, the square that was clicked is now red.
 
-38. Close all the **Microsoft Edge** windows.
+38. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-39. In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+39. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]**, and then press Enter.
+    >**Note**: The browser displays the 8 blue squares and 1 red square.
+
+40.  Close all the **Microsoft Edge** windows.
+
+41.  In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
