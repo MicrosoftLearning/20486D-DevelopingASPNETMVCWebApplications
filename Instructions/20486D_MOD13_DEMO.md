@@ -366,103 +366,114 @@
 
 1. Navigate to **Allfiles\Mod13\Democode\04_HttpClientExample_begin**, and then double-click **HttpClientExample.sln**.
 
-2. In **Solution Explorer**, right-click **ClientSide**, point to **Add**, and then click **New Folder**.
+2. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide**, click **Startup.cs**.
 
-3. In the **NewFolder** text box, type **Controllers**, and then press Enter.
+3. In the **Startup.cs** code window, locate the following code:
+  ```cs
+      services.AddMvc();
+```
+4. Place the cursor after the located code, press Enter, and then type the following code:
+  ```cs
+      services.AddHttpClient();
+```
+5. In **Solution Explorer**, right-click **ClientSide**, point to **Add**, and then click **New Folder**.
 
-4. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide** right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
+6. In the **NewFolder** text box, type **Controllers**, and then press Enter.
 
-5. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
+7. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide** right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
 
-6. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **HomeController**, and then click **Add**.
+8. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
-7. In **Solution Explorer**, right-click **ClientSide**, point to **Add**, and then click **Reference**. 
+9. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **HomeController**, and then click **Add**.
 
-8. In the **Reference Manager - ClientSide** dialog box, click **Projects**, in the result pane, ensure that the **ServerSide** check box is **checked**, and then click **OK**.
+10. In **Solution Explorer**, right-click **ClientSide**, point to **Add**, and then click **Reference**. 
 
-9. In the **HomeController.cs** code window, locate the following code:
+11. In the **Reference Manager - ClientSide** dialog box, click **Projects**, in the result pane, ensure that the **ServerSide** check box is **checked**, and then click **OK**.
+
+12. In the **HomeController.cs** code window, locate the following code:
   ```cs
       using Microsoft.AspNetCore.Mvc;
 ```
-10. Ensure that the cursor is at the end of the  **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
+13. Ensure that the cursor is at the end of the  **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
   ```cs
       using ServerSide.Models;
       using System.Net.Http;
       using System.Net.Http.Headers;
 ```
 
-11. In the **HomeController.cs** code window, select the following code, and then press Delete.
+14. In the **HomeController.cs** code window, select the following code, and then press Delete.
   ```cs
        public IActionResult Index()
        {
            return View();
        }
 ```
-12. In the **HomeController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+15. In the **HomeController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
-       private HttpClient _client;
+       private IHttpClientFactory _httpClient;
+       private GroceryStore grocery;
 
-       public HomeController()
+       public HomeController(IHttpClientFactory httpClient)
        {
-          _client = new HttpClient();
-          _client.BaseAddress = new Uri("http://localhost:55388/");
-          _client.DefaultRequestHeaders.Accept.Clear();
-          _client.DefaultRequestHeaders.Accept.Add(
-              new MediaTypeWithQualityHeaderValue("application/json"));
+           _httpClient = httpClient;
        } 
 ``` 
 
-13. Ensure that the cursor is at the end of the **HomeController** constructor code block, press Enter twice, and then type the following code:
+16. Ensure that the cursor is at the end of the **HomeController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        public async Task<IActionResult> GetByIdAsync()
        {
        }
 ```
-14. In the **GetByIdAsync** action code block, type the following code:
+17. In the **GetByIdAsync** action code block, type the following code:
   ```cs
-       GroceryStore grocery = null;
-       HttpResponseMessage response = await _client.GetAsync("api/store/1");
+       var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:64231/api/store/1");
+       request.Headers.Add("Accept", "application/json");
+       var client = _httpClient.CreateClient();
+
+       var response = await client.SendAsync(request);
        if (response.IsSuccessStatusCode)
        {
-          grocery = await response.Content.ReadAsAsync<GroceryStore>();
+           grocery = await response.Content.ReadAsAsync<GroceryStore>();
        }
        return new ObjectResult(grocery);
 ```
 
-15. Ensure that the cursor is at the end of the **GetByIdAsync** action code block, press Enter twice, and then type the following code:
+18. Ensure that the cursor is at the end of the **GetByIdAsync** action code block, press Enter twice, and then type the following code:
   ```cs
        public async Task<IActionResult> PostAsync()
        {
        }
 ```
-16. In the **PostAsync** action code block, type the following code:
+19. In the **PostAsync** action code block, type the following code:
   ```cs
+       var client = _httpClient.CreateClient();
        GroceryStore newGrocery = new GroceryStore { Id = 3, Name = "Martin General Stores", Address = "4160  Oakwood Avenue" };
-       HttpResponseMessage response = await _client.PostAsJsonAsync("api/store", newGrocery);
+       var response = await client.PostAsJsonAsync("http://localhost:64231/api/store", newGrocery);
        response.EnsureSuccessStatusCode();
        return new ObjectResult(newGrocery);
 ```
-17. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ServerSide**, under **Controllers** click **StoreController.cs**.
+20. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ServerSide**, under **Controllers** click **StoreController.cs**.
 
-18. Examine the **StoreController.cs** class content.
+21. Examine the **StoreController.cs** class content.
 
-19. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+22. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-20. In **Solution Explorer**, right-click **ClientSide**, and then click **Set as StartUp Project**. 
+23. In **Solution Explorer**, right-click **ClientSide**, and then click **Set as StartUp Project**. 
 
-21. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+24. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-22. In **Solution Explorer**, right-click **ServerSide**, point to **Debug**, and then click **Start new instance**.
+25. In **Solution Explorer**, right-click **ServerSide**, point to **Debug**, and then click **Start new instance**.
 
     >**Note:** The browser displays a grocery store in **JSON** format.
 
-23. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
+26. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
 
     >**Note:** The browser displays the new added grocery store in **JSON** format.
 
-24. In **Microsoft Edge**, click **Close**.
+27. In **Microsoft Edge**, click **Close**.
 
-25. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+28. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
