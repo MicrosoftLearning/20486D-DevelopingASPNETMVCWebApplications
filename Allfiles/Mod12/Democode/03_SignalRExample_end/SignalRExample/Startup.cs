@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using SignalRExample.Services;
+using SignalRExample.Hubs;
 
 namespace SignalRExample
 {
@@ -16,6 +17,7 @@ namespace SignalRExample
         {
             services.AddMvc();
             services.AddSingleton<ISquareManager, SquareManager>();
+            services.AddSignalR();
         }
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -23,6 +25,11 @@ namespace SignalRExample
             app.UseStaticFiles();
 
             app.UseNodeModules(env.ContentRootPath);
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<SquaresHub>("/squareshub");
+            });
 
             app.UseMvc(routes =>
             {
