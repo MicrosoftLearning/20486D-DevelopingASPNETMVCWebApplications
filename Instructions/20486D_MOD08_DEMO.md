@@ -259,7 +259,7 @@
 
 7. In the **JSLibraryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
 
-    >**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder has been added named **npm** with the **jquery** package.
+    >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder has been added named **npm** with the **jquery** package.
 
 8. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
