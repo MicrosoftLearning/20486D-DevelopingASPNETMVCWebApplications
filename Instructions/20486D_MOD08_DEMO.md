@@ -369,8 +369,6 @@
        </div>
 ```
 
->**Note:** This code block contains **CSS ID Selector** and **CSS Class Selector**.
-
 32. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
 
 33. In the **NewFolder** text box, type **css**, and then press Enter.
