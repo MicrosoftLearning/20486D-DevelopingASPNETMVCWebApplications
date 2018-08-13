@@ -329,8 +329,6 @@
        }
 ```
 
->**Note:** This code block represent the **UseStaticFiles** extension, the meaning of this extension is exposing the **node_modules** directory. As a result a request can access the **jquery** package.
-
 22. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
 
 23. In the **_Layout.cshtml** file, locate the following code:
