@@ -429,8 +429,6 @@
        <link href="~/css/style-js-example.css" rel="stylesheet" />
 ```
 
->**Note:** This line of code represents a link between the **Layout** and the **Style Sheet**.
-
 42. In the **JSLibraryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 43. In the **JSLibraryExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
