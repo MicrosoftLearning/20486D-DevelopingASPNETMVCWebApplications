@@ -34,7 +34,7 @@ In this exercise, you will:
 
 - Add a Cupcake model and a Bakery model.
 - Add a CupcakeContext class.
-- Set CupcakeContext as an In Memory database.
+- Set Entity Framework to use SQLite.
 - Add a OnModelCreating method and populate the database.
 
 The main tasks for this exercise are as follows:
@@ -444,7 +444,9 @@ The main tasks for this exercise are as follows:
 
 3. Use Entity Framework to retrieve data.
 
-4. Manipulating data using Entity Framework. 
+4. Manipulating data using Entity Framework.
+
+5. Run the application. 
 
 #### Task 1: Create a repository
 
@@ -496,7 +498,6 @@ The main tasks for this exercise are as follows:
    - Name: **SaveChanges**
    - Return type: **void**
 
-
 9. Declare a method with following information:
 
    - Name: **PopulateBakeriesDropDownList**
@@ -507,7 +508,6 @@ The main tasks for this exercise are as follows:
    - Folder: **Repositories**
    - Name:  **CupcakeRepository**
    - Scope: **public**
-
 
 11. In the **CupcakeRepository** class, add **USING** statements for the following namespaces:
 
@@ -533,47 +533,13 @@ The main tasks for this exercise are as follows:
 
 16. Add a method with the following information:
 
-       - Scope: **public**
-       - Return Type: **void**
-       - Name: **CreateCupcake**
-       - Parameter:
-            - Type: **Cupcake**
-            - Name: **cupcake**
+    - Scope: **public**
+    - Return Type: **IEnumerable&lt;Cupcake&gt;**
+    - Name: **GetCupcakes**
 
-17. In the **CreateCupcake** method, create an **IF** statement that checks that the value of **cupcake.PhotoAvatar** is not **NULL** and that **cupcake.PhotoAvatar.Length** is bigger than **0**.
+17. In the **GetCupcakes** method, return the **IEnumerable&lt;Cupcake&gt;** result using the **_context.Cupcakes.ToList();** method.
 
-18. Assign the **ImageMimeType** property of the **cupcake** parameter, the value of **cupcake.PhotoAvatar.ContentType**.
-
-19. Assign the **ImageName** property of the **cupcake** parameter, the value of **Path.GetFileName(cupcake.PhotoAvatar.FileName)**.
-
-20. Create a variable named **memoryStream** of type **MemoryStream** inside a **USING** statement.
-
-21. Initialize the **memoryStream** varaible using the **MemoryStream** constructor.
-
-22. In the **USING** statement block, call the **CopyTo** method, of the **cupcake.PhotoAvatar** property. Pass **memoryStream** as a parameter to the the **CopyTo** method.
-
-23. Assign the **PhotoFile** property of the **cupcake** parameter, the value of **memoryStream.ToArray()**.
-
-24. After the **IF** statement, call the **Add** method of the **_context** field. Pass **cupcake** as a parameter to the **Add** method.
-
-25. Call the **SaveChanges** method of the **_context** field.
-
-26. Add a method with the following information:
-
-       - Scope: **public**
-       - Return Type: **void**
-       - Name: **DeleteCupcake**
-       - Parameter:
-            - Type: **int**
-            - Name: **id**
-
-27. In the **DeleteCupcake** method, create a **cupcake** varible of type **var** and assign it the value of  **_context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id)** .
-
-28. Call the **Remove** method of the **_context.Cupcakes** property. Pass **cupcake** as a parameter to the **Remove** method.
-
-29. Call the **SaveChanges** method of the **_context** field.
-
-30. Add a method with the following information:
+18. Add a method with the following information:
 
     - Scope: **public**
     - Return Type: **Cupcake**
@@ -582,37 +548,71 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-31. In the **GetCupcakeById** method, return the **Cupcake** result using the **_context.Cupcakes.Include(b => b.Bakery).SingleOrDefault(c => c.CupcakeId == id)** method.
+19. In the **GetCupcakeById** method, return the **Cupcake** result using the **_context.Cupcakes.Include(b => b.Bakery).SingleOrDefault(c => c.CupcakeId == id)** method.
 
-32. Add a method with the following information:
+20. Add a method with the following information:
 
-    - Scope: **public**
-    - Return Type: **IEnumerable&lt;Cupcake&gt;**
-    - Name: **GetCupcakes**
+       - Scope: **public**
+       - Return Type: **void**
+       - Name: **CreateCupcake**
+       - Parameter:
+            - Type: **Cupcake**
+            - Name: **cupcake**
 
-33. In the **GetCupcakes** method, return the **IEnumerable&lt;Cupcake&gt;** result using the **_context.Cupcakes.ToList();** method.
+21. In the **CreateCupcake** method, create an **IF** statement that checks that the value of **cupcake.PhotoAvatar** is not **NULL** and that **cupcake.PhotoAvatar.Length** is bigger than **0**.
+
+22. Assign the **ImageMimeType** property of the **cupcake** parameter, the value of **cupcake.PhotoAvatar.ContentType**.
+
+23. Assign the **ImageName** property of the **cupcake** parameter, the value of **Path.GetFileName(cupcake.PhotoAvatar.FileName)**.
+
+24. Create a variable named **memoryStream** of type **MemoryStream** inside a **USING** statement.
+
+25. Initialize the **memoryStream** varaible using the **MemoryStream** constructor.
+
+26. In the **USING** statement block, call the **CopyTo** method, of the **cupcake.PhotoAvatar** property. Pass **memoryStream** as a parameter to the the **CopyTo** method.
+
+27. Assign the **PhotoFile** property of the **cupcake** parameter, the value of **memoryStream.ToArray()**.
+
+28. After the **IF** statement, call the **Add** method of the **_context** field. Pass **cupcake** as a parameter to the **Add** method.
+
+29. Call the **SaveChanges** method of the **_context** field.
+
+30. Add a method with the following information:
+
+       - Scope: **public**
+       - Return Type: **void**
+       - Name: **DeleteCupcake**
+       - Parameter:
+            - Type: **int**
+            - Name: **id**
+
+31. In the **DeleteCupcake** method, create a **cupcake** varible of type **var** and assign it the value of  **_context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id)**.
+
+32. Call the **Remove** method of the **_context.Cupcakes** property. Pass **cupcake** as a parameter to the **Remove** method.
+
+33. Call the **SaveChanges** method of the **_context** field.
 
 34. Add a method with the following information:
-
-    - Scope: **public**
-    - Return Type: **IQueryable&lt;Bakery&gt;**
-    - Name: **PopulateBakeriesDropDownList**
-
-35. In the **PopulateBakeriesDropDownList** method, create a variable named **BakeriesQuery** of type **var** and assign it the value of the following **LINQ**query:
-
-    - From: **b in _context.Bakeries**
-    - Orderby: **BakeryName**
-    - Select: **b**
-
-36.  Return the **IQueryable&lt;Bakery&gt;** result using the **BakeriesQuery** variable.
-
-37. Add a method with the following information:
 
     - Scope: **public**
     - Return Type: **void**
     - Name: **SaveChanges**
 
-38. In the **SaveChanges** method, call the **SaveChanges** method of the **_context** field.
+35. In the **SaveChanges** method, call the **SaveChanges** method of the **_context** field.
+
+36. Add a method with the following information:
+
+    - Scope: **public**
+    - Return Type: **IQueryable&lt;Bakery&gt;**
+    - Name: **PopulateBakeriesDropDownList**
+
+37. In the **PopulateBakeriesDropDownList** method, create a variable named **BakeriesQuery** of type **var** and assign it the value of the following **LINQ**query:
+
+    - From: **b in _context.Bakeries**
+    - Orderby: **BakeryName**
+    - Select: **b**
+
+38.  Return the **IQueryable&lt;Bakery&gt;** result using the **BakeriesQuery** variable.
 
 39. In the **Startup** class, add **USING** statement for the following namespace:
 
@@ -622,7 +622,6 @@ The main tasks for this exercise are as follows:
 
     - Interface: **ICupcakeRepository**
     - Implementation: **CupcakeRepository**
-
 
 #### Task 2: Update a controller to use a repository
 
@@ -658,7 +657,6 @@ The main tasks for this exercise are as follows:
 5. In the **CupcakeController** constructor, initialize the **_repository** field with the value of the **repository** parameter.
 
 6. Initialize the **_environment** field with the value of the **environment** parameter.
-
 
 #### Task 3: Use Entity Framework to retrieve data
 
@@ -821,7 +819,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application..
+2. Start the application without debugging.
 
 3. In **Microsoft Edge**, click **Add Cupcakes**.
 
@@ -860,8 +858,6 @@ The main tasks for this exercise are as follows:
 
 16. Close **Microsoft Edge.**
 
-17. **Stop debugging**.
-
 >**Results**: After completing this exercise, you will be able to use Entity Framework Core to retrieve and store data through a Repository in the **CupcakeController**. 
 
 ### Exercise 3: Use Entity Framework Core to Connect to Microsoft SQL Server
@@ -883,15 +879,23 @@ The main tasks for this exercise are as follows:
 
 3. Use Migrations.
 
+4. Run the application.
+
+5. Use Migrations to update database schema.
+
+6. Run the application.
+
 #### Task 1: Connecting to a Microsoft SQL Server
 
-1. In the **Startup** class, in the **ConfigureServices** method, replace the lambda expression parameter in the **AddDbContext** method call with:  *options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**.
+1. In the **Startup** class, in the **ConfigureServices** method, add a varible named **connectionString** of type **string**, with the value of **"Server=(localdb)\\MSSQLLocalDB;Database=BakeriesDb;Trusted_Connection=True;MultipleActiveResultSets=true";**.
 
-2. In the **Configure** method, remove the **cupcakeContext** parameter from the method signature. 
+2. In the **Startup** class, in the **ConfigureServices** method, replace the lambda expression parameter in the **AddDbContext** method call with: **options => options.UseSqlServer(connectionString));**.
 
-3. Remove the **cupcakeContext.Database.EnsureDeleted** method call. 
+3. In the **Configure** method, remove the **cupcakeContext** parameter from the method signature. 
 
-4. Remove the **cupcakeContext.Database.EnsureCreated** method call.
+4. Remove the **cupcakeContext.Database.EnsureDeleted** method call. 
+
+5. Remove the **cupcakeContext.Database.EnsureCreated** method call.
 
 #### Task 2: Specifying a connection string in a configuration file
 
@@ -899,48 +903,31 @@ The main tasks for this exercise are as follows:
      - File Name: **appsettings.json**
      - Folder: **/**
 
-2. In the **App Settings** File, change the **Database** property value to **BakeriesDb**
+2. In the **App Settings** File, change the **Database** property value to **BakeriesDb**.
+
+3. In the **Startup** class, in the **ConfigureServices** method, delete a varible named **connectionString** of type **string**, with the value of **"Server=(localdb)\\MSSQLLocalDB;Database=BakeriesDb;Trusted_Connection=True;MultipleActiveResultSets=true";**. 
+
+4. In the **Startup** class, in the **ConfigureServices** method, replace the lambda expression parameter in the **AddDbContext** method call with: **options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**.
 
 #### Task 3: Use Migrations
 
-1. In the **Cupcakes.csproj** file, at the end of the **Project** element, add a **ItemGroup** element. 
+1. Open **Package Manager Console**. 
 
-2. In the **ItemGroup** element, add a **DotNetCliToolReference** element with the following information:
-    - Include: **Microsoft.EntityFrameworkCore.Tools.DotNet**
-    - Version: **2.0.0**
+2. In the **Package Manager Console** tab, type the following command: **Add-Migration InitialCreate**.
 
-2. Save all the changes.
+    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, in **Solution Explorer**, new folder named **Migrations** created with multiple files.
 
-3. In **Solution Explorer**, click on **Open Folder in File Explorer**.
+3. Type the following command: **Update-Database**.
 
-4. In the address bar type **cmd**, and press Enter.
+4. Open **SQL Server Object Explorer**. 
 
-5. In the **Command Line** window, type the following command: **dotnet ef**.
-
-    >**Note:** Verify that the Entity Framework tools for the command-line interface provided correctly in **Microsoft.EntityFrameworkCore.Tools.DotNet**.
-
-6. Type the following command: **dotnet ef dbcontext info**.
-
-    >**Note:** Verify that the **Database name** is identical to the name in the **appsettings.json** file.
-
-7.  Type the following command: **dotnet ef database drop**.
-
-8. Type the following command: **y**.
-    >**Note:** Enter y to ensure that there are no database conflicts.
-
-9. Type the following command: **dotnet ef migrations add InitialCreate**.
-
-    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, in the **Solution Explorer**, that the newly added folder **Migrations** contains two cs files.
-
-10. Type the following command: **dotnet ef database update**.
-
-    >**Note:** In the **SQL Server Object Explorer** pane of the **Cupcakes - Microsoft Visual Studio** window, verify the **BakeriesDb **tables.
+5. In **SQL Server Object Explorer**, view the **BakeriesDb** database tables.
 
 #### Task 4: Run the application
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In **Microsoft Edge**, click **Add Cupcakes**.
 
@@ -979,7 +966,103 @@ The main tasks for this exercise are as follows:
 
 16. Close **Microsoft Edge.**
 
-17. **Stop debugging** and close **Microsoft Visual Studio**.
+
+#### Task 5: Use Migrations to update database schema
+
+1. In the **Cupcake** class, add a new property with the following information:
+
+   - Scope:   **public**
+   - Name: **CaloricValue**
+   - Type: **int**
+   - Access: **Read and write**
+
+2. Add a **Display** attribute with the following information:
+
+    - Name: **Caloric Value:**
+
+3. In the **CupcakeContext** class, locate the capcake object with the following information:
+
+    - Parameter:
+        - Name: **CupcakeId**
+        - Value: **1**
+
+4. Add a new property with the following information:
+
+    - Parameter:
+        - Name: **CaloricValue**
+        - Value: **355**
+
+5. In the **CupcakeContext** class, locate the capcake object with the following information:
+
+    - Parameter:
+        - Name: **CupcakeId**
+        - Value: **2**
+
+6. Add a new property with the following information:
+
+    - Parameter:
+        - Name: **CaloricValue**
+        - Value: **195**   
+
+7. In the **CupcakeContext** class, locate the capcake object with the following information:
+
+    - Parameter:
+        - Name: **CupcakeId**
+        - Value: **3**
+
+8. Add a new property with the following information:
+
+    - Parameter:
+        - Name: **CaloricValue**
+        - Value: **295**   
+
+9. In the **CupcakeContext** class, locate the capcake object with the following information:
+
+    - Parameter:
+        - Name: **CupcakeId**
+        - Value: **4**
+
+10. Add a new property with the following information:
+
+    - Parameter:
+        - Name: **CaloricValue**
+        - Value: **360**  
+
+11. In the **Details.cshtml** file, add a **DIV** element.
+
+12. In the **DIV** element, add a **P** element with the following information:
+
+	- Class:**display-label**
+    - Content: ***@Html.DisplayNameFor(model => model.CaloricValue)**
+
+13. After the **P** element, add a **P** element with the following information:
+
+	- Class:**display-field**
+    - Content: ***@Html.DisplayFor(model => model.CaloricValue)**
+
+14. Open **Package Manager Console**. 
+
+15. In the **Package Manager Console** tab, type the following command: **Add-Migration AddCupcakeCaloricValue**.
+
+    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, in **Solution Explorer**, under  **Migrations**, a new file created.
+
+16. Type the following command: **Update-Database**.
+
+#### Task 6: Run the application
+
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+3. Select a cupcake of your choice, and click on **Details**.
+
+    >**Note:** The database schema updated successfully a new property added named **Caloric Value** with it`s value. 
+
+4. Verify the cupcake details, and then click **Back to List**.
+
+5. Close **Microsoft Edge.**
+
+6. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you should have created a cupcakes shop application in which users can submit, edit, delete and view cupcales details.
 

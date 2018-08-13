@@ -113,7 +113,7 @@
 
 22. In the **BindViewsExample - Microsoft Visual Studio** window, On the **FILE** menu, click **Save All**.
 
-23. In the **BindViewsExample - Microsoft Visual Studio** window, On the **DEBUG** menu, click **Start Debugging**.
+23. In the **BindViewsExample - Microsoft Visual Studio** window, On the **DEBUG** menu, click **Start Without Debugging**.
 
        >**Note:** The browser window displays the **Index.cshtml** view. 
 
@@ -123,9 +123,7 @@
 
 25. In **Microsoft Edge**, click **Close**.
 
-26. In the **BindViewsExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-27. In **BindViewsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+26. In **BindViewsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Working with Forms
 
@@ -257,7 +255,7 @@
 
 17. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-18. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+18. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 19. On the **Register** page, in the **Full Name** text box, type _&lt;A full name of your choice&gt;._
 
@@ -271,9 +269,7 @@
 
 23. In **Microsoft Edge**, click **Close**.
 
-24. In the **DataAnnotationsExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-25. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+24. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Validating MVC Applications
 
@@ -393,7 +389,7 @@
 
 17. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-18. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+18. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 19. On the **Submit Personal Information** page, in the **First Name** text box, leave the field blank.
 
@@ -417,9 +413,7 @@
 
 27. In **Microsoft Edge**, click **Close**.
 
-28. In the **DataAnnotationsExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-29. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+28. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Validating MVC Applications
 
@@ -497,7 +491,7 @@
 
 16. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-17. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+17. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 18. On the **Submit Student Information** page, in the **First Name** text box, type _&lt;A first name of your choice with at least one character&gt;._
 
@@ -515,9 +509,7 @@
 
 23. In **Microsoft Edge**, click **Close**.
 
-24. In the **DataAnnotationsExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-25. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+24. In the **DataAnnotationsExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 

@@ -97,7 +97,7 @@
 
 19. In the **ControllersExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save HomeController.cs**.
 
-20. In the **ControllersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+20. In the **ControllersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
       >**Note:** The **Welcome to module 4 demo 1** text is the action result you added to the **Index** action.
 
@@ -119,9 +119,7 @@
 
 25. In **Microsoft Edge**, click **Close**.
 
-26. In the **ControllersExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-27. In the **ControllersExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+26. In the **ControllersExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Configuring Routes
 
@@ -243,7 +241,7 @@
 
 22. In the **RoutesExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-23. In the **RoutesExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+23. In the **RoutesExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
       >**Note:** The browser window displays the **This is the Home controller with default param: 50** message. You reached the **Index** action of the **Home** controller because of a convention-based route.
 
@@ -269,9 +267,7 @@
 
 29. In **Microsoft Edge**, click **Close**.
 
-30. In the **RoutesExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-31. In the **RoutesExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+30. In the **RoutesExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Writing Action Filters
 
@@ -401,11 +397,11 @@
 
 24. In the **FiltersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, point to **Windows** and, then click **Output**.
 
-25. In the **FiltersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
+25. In the **FiltersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 26. On the taskbar, click **FiltersExample - Microsoft Visual Studio**.
 
-27. In the **FiltersExample (Running) - Microsoft Visual Studio** window, in the **Output** pane, click the **Output** tab.
+27. In the **FiltersExample - Microsoft Visual Studio** window, in the **Output** pane, click the **Output** tab.
 
 28. On the **Output** tab, in the **Show output from** text box, select **Debug**.
 
@@ -420,9 +416,7 @@
 
 30. In **Microsoft Edge**, click **Close**.
 
-31. In the **FiltersExample (Running) - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Stop Debugging**.
-
-32. In the **FiltersExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+31. In the **FiltersExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

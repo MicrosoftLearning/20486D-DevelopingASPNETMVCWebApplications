@@ -1,25 +1,25 @@
-﻿$(function () {
+﻿
+$(function () {
     $('.pricing select').change(function (event) {
         var target = $(event.target);
         var value = parseInt(target.val());
         var container = target.parent();
         var price = container.prev();
         var label = price.prev();
- 
+
         $("#" + label.text()).remove();
 
         if (value) {
             $("#summery").addClass("display-div").removeClass("hidden-div");
 
             var correctCost = (price.text().substring(1, price.text().length));
-            var calc = parseFloat(value * correctCost).toFixed(2);
+            var calc = parseInt(value * correctCost);
 
-            var msg = label.text() + " ticket - " + value.toString() + "x" + price.text() + " = <span class='sum'>" + calc +'</span>';
-            var row = $("<tr id='" + label.text() +"'>");
+            var msg = label.text() + " ticket - " + value.toString() + "x" + price.text() + " = <span class='sum'>" + calc + '</span>';
+            var row = $("<tr id='" + label.text() + "'>");
             row.append($("<td>").html(msg));
             $("#totalAmount").append(row);
-
-        } 
+        }
         if ($("#totalAmount tr").length == 0) {
             $("#summery").addClass("hidden-div").removeClass("display-div");
             $("#formButtons input").attr('disabled', 'disabled');
@@ -28,7 +28,7 @@
             $("#formButtons input").removeAttr('disabled');
             $("#comment").hide();
         }
-        
+
         calculateSum();
     });
 
@@ -37,9 +37,9 @@
         var sum = 0;
 
         for (var i = 0; i < rows.length; i++) {
-            sum += parseFloat(parseFloat(rows[i].innerHTML).toFixed(2));
+            sum = sum + parseFloat(parseFloat(rows[i].innerHTML).toFixed(2));
         }
 
-        document.getElementById("sum").innerHTML = "Total: $" + sum ;
+        document.getElementById("sum").innerHTML = "Total: $" + sum;
     }
 });

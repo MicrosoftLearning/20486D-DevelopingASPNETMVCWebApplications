@@ -192,13 +192,11 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3.  Click the **London** area on the **Earth** image. Note the red arrow at the center of the **Earth** image.
 
 4. Close **Microsoft Edge**.
-
-5. Stop debugging.
 
 >**Results**: After completing this exercise, you will be able to create MVC controllers that implement common actions for the **City** model class in the application. 
 
@@ -237,15 +235,12 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. In the **Microsoft Edge** window, request the following relative URL.
    - URL: **/Traveler/Index**
 
 4. Close **Microsoft Edge**.
-
-5. Stop debugging.
-
 
 #### Task 3: Register new routes in the routing table
 
@@ -266,11 +261,9 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. Close **Microsoft Edge**.
-
-4. Stop debugging.
 
 >**Results**: After completing this exercise, you will be able to register new custom routes in the request pipeline for controllers in the application.
 
@@ -296,7 +289,7 @@ The main tasks for this exercise is as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. Using the **Developer Tools**, move your cursor over the **Go Next** button, and verify that the **href** attribute value in the **a** tag is **/WorldJourney**.
 
@@ -307,8 +300,6 @@ The main tasks for this exercise is as follows:
 6. On the **Earth** image, click the **London** area. Note the red arrow at the center of the **Earth** image.
 
 7. Close **Microsoft Edge**.
-
-8. Stop debugging.
 
 >**Results**: After completing this exercise, you will be able to add custom routes to  the **City** controller by using the **Route** attribute.
 
@@ -490,7 +481,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. Start debugging the application.
+2. Start the application without debugging.
 
 3. Click **Go Next**. 
 
@@ -500,11 +491,9 @@ The main tasks for this exercise are as follows:
 
 6. Close **Microsoft Edge**.
 
-7. Stop debugging.
+7. Close Microsoft Visual Studio.
 
-8. Close Microsoft Visual Studio.
-
-9. Navigate to the **Allfiles\Mod04\Labfiles\01_WorldJourney_begin\WorldJourney\LogFile**.
+8. Navigate to the **Allfiles\Mod04\Labfiles\01_WorldJourney_begin\WorldJourney\LogFile**.
 
     >**Note:** The text file displays the new filter result.
 

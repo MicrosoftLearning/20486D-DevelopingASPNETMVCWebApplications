@@ -23,15 +23,15 @@ namespace EntityFrameworkExample.Controllers
             return View(list);
         }
 
-        public IActionResult Edit(int id)
-        {
-            _repository.UpdatePerson(id);
-            return RedirectToAction(nameof(Index));
-        }
-
         public IActionResult Create()
         {
             _repository.CreatePerson();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Edit(int id)
+        {
+            _repository.UpdatePerson(id);
             return RedirectToAction(nameof(Index));
         }
 

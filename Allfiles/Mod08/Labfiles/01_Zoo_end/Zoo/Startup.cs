@@ -29,9 +29,12 @@ namespace Zoo
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ZooContext zooContext)
         {
-            app.UseStaticFiles();
+			zooContext.Database.EnsureDeleted();
+			zooContext.Database.EnsureCreated();
+
+			app.UseStaticFiles();
 
             app.UseNodeModules(env.ContentRootPath);
 
