@@ -1,18 +1,22 @@
 ﻿@model BindViewsExample.Models.Restaurant
 
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Display</title>
-    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css"/>
+    <title>AnotherWayToDisplay</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style-sheet.css" />
 </head>
 <body>
     <h1>Restaurant Information</h1>
     <div>
         @Html.EditorForModel()
     </div>
-    <p id="remark">The Second Way to Pass a Model From an Action to a View</p>
+    <p id="remark">The second way to pass a model from an action to a view</p>
 </body>
 </html>

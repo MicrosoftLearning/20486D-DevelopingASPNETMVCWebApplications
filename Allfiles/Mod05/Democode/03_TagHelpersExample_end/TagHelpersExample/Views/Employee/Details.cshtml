@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <p>
+        Name: @ViewBag.SelectedEmployee
+    </p>
+    <img src="@Url.Action("GetImage", new {employeeName = ViewBag.SelectedEmployee })" width="500" />
+    <p><a asp-action="Index">Back to employee selection list</a></p>
+</body>
+</html>

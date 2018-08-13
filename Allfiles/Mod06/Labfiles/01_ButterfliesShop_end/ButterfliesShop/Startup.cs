@@ -16,10 +16,10 @@ namespace ButterfliesShop
         {
             services.AddMvc();
             services.AddSingleton<IDataService, DataService>();
-            services.AddSingleton<IButterfliesQuantityService,ButterfliesQuantityService>();
+            services.AddSingleton<IButterfliesQuantityService, ButterfliesQuantityService>();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseStaticFiles();
             app.UseMvc(routes =>

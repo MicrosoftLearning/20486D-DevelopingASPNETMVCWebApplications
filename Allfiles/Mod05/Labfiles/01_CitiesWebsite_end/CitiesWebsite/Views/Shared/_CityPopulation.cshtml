@@ -1,0 +1,10 @@
+﻿@inject CitiesWebsite.Services.ICityFormatter cityFormatter
+
+@{
+    CitiesWebsite.Models.CityPopulation population = ViewBag.City.Population;
+}
+
+<h3>City Population (@population.Year)</h3>
+<p>City: @cityFormatter.GetFormattedPopulation(population.City)</p>
+<p>Urban: @cityFormatter.GetFormattedPopulation(population.Urban)</p>
+<p>Metro: @cityFormatter.GetFormattedPopulation(population.Metro)</p>

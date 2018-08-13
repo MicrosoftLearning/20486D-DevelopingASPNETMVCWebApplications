@@ -1,0 +1,97 @@
+﻿body {
+    text-align: center;
+    background-color: #feffd9;
+}
+
+input, textarea {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    width: 250px;
+    margin-top: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 340px;
+    margin: 0 1px 25px 1px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+}
+
+span, li {
+    color: red;
+    font-size: 20px;
+    width: 350px;
+}
+
+
+ul {
+    display: inline-block;
+    text-align: left;
+    width: 350px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 33px;
+    color: darkgreen;
+    text-align: center;
+}
+
+input[type=checkbox] {
+    width: 250px;
+    height: 22px;
+}
+
+input[type=submit] {
+    width: 200px;
+    background-color: darkgreen;
+    color: white;
+    margin: 30px auto;
+}
+
+form {
+    text-align: center;
+}
+
+.display-prop-name {
+    display: inline-block;
+    width: 350px;
+    margin: 25px 1px 5px 1px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.display-prop-value {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+}
+
+.form-field {
+    max-width: 605px;
+    margin: 0 auto;
+}
+
+    .form-field .validation-error,
+    .form-field .field-validation-error {
+        display: block;
+        text-align: left;
+    }
+
+.input-span {
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+}
+
+.container {
+    max-width: 760px;
+    max-height: 780px;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 0 0 20px #1e004f;
+}

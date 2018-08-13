@@ -1,0 +1,67 @@
+﻿body {
+    text-align: center;
+    background-color: #feffd9;
+}
+
+input {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    width: 250px;
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    width: 180px;
+    margin: 25px 1px 5px 1px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 33px;
+    color: darkgreen;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+input[type=submit] {
+    width: 200px;
+    background-color: darkgreen;
+    color: white;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.display-prop-name {
+    display: inline-block;
+    width: 350px;
+    margin: 25px 1px 5px 1px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.display-prop-value {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+}
+
+.container {
+    max-width: 760px;
+    max-height: 780px;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 0 0 20px #1e004f;
+}

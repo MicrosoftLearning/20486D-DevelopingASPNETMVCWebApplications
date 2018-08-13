@@ -28,4 +28,5 @@ namespace DataAnnotationsExample.Models
         [Display(Name = "Description:")]
         public string Description { get; set; }
     }
+
 }

@@ -1,37 +1,49 @@
 ﻿@model DataAnnotationsExample.Models.Student
 
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link type="text/css" rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link type="text/css" rel="stylesheet" href="~/css/style-sheet.css" />
 </head>
 <body>
-    <h1>Submit Student Information</h1>
-    <div>
+    <div class="container">
+        <h1>Submit Student Information</h1>
         <form asp-action="Details">
             <div asp-validation-summary="All"></div>
             <div class="form-field">
                 <label asp-for="FirstName"></label>
-                <input asp-for="FirstName" />
-                <span asp-validation-for="FirstName"></span>
+                <span class="input-span">
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName"></span>
+                </span>
             </div>
             <div class="form-field">
                 <label asp-for="LastName"></label>
-                <input asp-for="LastName" />
-                <span asp-validation-for="LastName"></span>
+                <span class="input-span">
+                    <input asp-for="LastName" />
+                    <span asp-validation-for="LastName"></span>
+                </span>
             </div>
             <div class="form-field">
                 <label asp-for="Birthdate"></label>
-                <input asp-for="Birthdate" />
-                <span asp-validation-for="Birthdate"></span>
+                <span class="input-span">
+                    <input asp-for="Birthdate" />
+                    <span asp-validation-for="Birthdate"></span>
+                </span>
             </div>
             <div class="form-field">
                 <label asp-for="UniversityStudent"></label>
-                <input asp-for="UniversityStudent" />
-                <span asp-validation-for="UniversityStudent"></span>
+                <span class="input-span">
+                    <input asp-for="UniversityStudent" />
+                    <span asp-validation-for="UniversityStudent"></span>
+                </span>
             </div>
             <div class="form-field">
                 <input type="submit" value="Submit" />

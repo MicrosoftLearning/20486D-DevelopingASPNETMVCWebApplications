@@ -1,0 +1,70 @@
+﻿@model IEnumerable<GridExample.Models.Game>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="title">
+        <h1>Chess League</h1>
+        <p>hey, these are the results</p>
+    </div>
+
+    <div class="container">
+        <div class="row grid-header align-items-center">
+            <div class="col-2">
+            </div>
+            <div class="col-4">
+                Competitors
+            </div>
+            <div class="col-3">
+                Quantity
+            </div>
+            <div class="col-3">
+                Results
+            </div>
+        </div>
+        <div class="row align-items-center">
+            @foreach (var item in Model)
+            {
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <img src="~/images/@item.FirstCompetitorPhotoFileName" />
+                    </div>
+                    <div class="row justify-content-center">
+                        <img src="~/images/@item.SecondCompetitorPhotoFileName" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        @Html.DisplayFor(model => item.FirstCompetitorName)
+                    </div>
+                    <div class="row">
+                        @Html.DisplayFor(model => item.SecondCompetitorName)
+                    </div>
+                </div>
+                <div class="col-3">
+                    @Html.DisplayFor(model => item.GamesQuantity)
+                </div>
+                <div class="col-3">
+                    @Html.DisplayFor(model => item.FinalScore)
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="~/js/alert-function.js"></script>
+</body>
+</html>
