@@ -246,15 +246,15 @@
 
 5. In the **package.json** file, locate the following code:
   ```cs
-       "devDependencies": {
-       }
+        "devDependencies": {
+        }
 ```
 6. Place the cursor after the **}** (closing bracket) sign, and then type the following code:
   ```cs
-       ,
-       "dependencies": {
-       "jquery": "3.3.1"
-       }
+        ,
+        "dependencies": {
+            "jquery": "3.3.1"
+        }
 ```
 
 7. In the **JSLibraryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
