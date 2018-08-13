@@ -156,7 +156,7 @@
        @section footer {
             <div>
                 <a asp-action="Index">Back to List</a>
-             </div>
+            </div>
        }
 ```
 
