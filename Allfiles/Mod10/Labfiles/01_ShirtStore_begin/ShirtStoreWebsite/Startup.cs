@@ -29,8 +29,11 @@ namespace ShirtStoreWebsite
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ShirtContext shirtContext)
         {
+            shirtContext.Database.EnsureDeleted();
+            shirtContext.Database.EnsureCreated();
+
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
