@@ -503,7 +503,7 @@ The main tasks for this exercise are as follows:
 
 1. In **Startup** class, in the **Configure** method, remove the **gameVotes** variable, the **FOREACH** statement and its content.
 
-2. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Thank you for submitting the poll. You may look at the Poll Results &lt;a href='/?submitted=true'&gt;Here&lt;/a&gt;."** as a parameter to the **WriteAsync** method.
+2. Call the **context.Response.WriteAsync** method using the **await** operator. Pass **"Thank you for submitting the poll. You may look at the poll results &lt;a href='/?submitted=true'&gt;Here&lt;/a&gt;."** as a parameter to the **WriteAsync** method.
 
 3. In **HomeController** class, add **USING** statements for the following namespaces:
     - **PollBall.Services**
@@ -552,12 +552,12 @@ The main tasks for this exercise are as follows:
 1. Save all the changes.
 
 2. Start the application without debugging.
-    >**Note**: The browser displays: **http://localhost:[port]/poll-questions.html** page.
+    >**Note**: The browser displays the **http://localhost:[port]/poll-questions.html** page.
 
 3. Select **Basketball**, and then click **Submit Poll**.
-    > **Note**: The browser displays: "Thank you for submitting the poll. You may look at the Poll Results **Here**."
+    > **Note**: The browser displays: "Thank you for submitting the poll. You may look at the poll results **Here**."
 
-4. click **Here**.
+4. Click **Here**.
     > **Note**: The browser displays the following text:<br>
 "Game name: Basketball, Votes: 1
 
@@ -568,9 +568,9 @@ The main tasks for this exercise are as follows:
 
 7. Select **Football**, and then click **Submit Poll**.
     > **Note**: The browser displays the following text:<br>
-"Thank you for submitting the poll. You may look at the Poll Results **Here**."
+"Thank you for submitting the poll. You may look at the poll results **Here**."
 
-8. click **Here**.
+8. Click **Here**.
     > **Note**: The browser displays the following text:<br>
 "Game name: Basketball, Votes: 1 <br> 
 Game name: Football, Votes: 1"
