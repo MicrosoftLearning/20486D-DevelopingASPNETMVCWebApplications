@@ -263,8 +263,8 @@
 
 8. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, in **Explorer Toolbar Options** click **Show All Files**.
 
-      >**Note:** In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, new folder created named **node_modules** has been added which contains the **jquery** package.
-
+      >**Note:** In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
+      
 9. In **Solution Explorer**, right-click **JSLibraryExample**, point to **Add**, and then click **New Folder**.
 
 10. In the **NewFolder** text box, type **Middleware**, and then press Enter.
