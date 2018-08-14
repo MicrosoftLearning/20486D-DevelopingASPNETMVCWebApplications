@@ -499,7 +499,7 @@
 
 9. In the **_Layout.cshtml** file, locate the following code:
   ```cs
-       <link href="~/css/style-jquery-example.css" rel="stylesheet" />
+       <link href="~/css/style-example.css" rel="stylesheet" />
 ```
 
 10. Place the cursor after the **>** (greater than) sign of the **link** tag, press Enter, and then type the following code: 
