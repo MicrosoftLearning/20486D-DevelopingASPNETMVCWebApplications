@@ -442,34 +442,30 @@ The main tasks for this exercise are as follows:
 
 3. Save **package.json**.
 
->**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder has been added named **npm** with the **jquery** package.
+>**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder named **npm** has been added which contains the **jquery** package.
 
-4. In **Startup** class, in the **Configure** method, before the **app.UseMVC** middleware, call the **UseStaticFiles** method of the **app** parameter.
+4. In **Explorer Toolbar Options** click **Show All Files**.
 
-5. Call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
+      >**Note:** In the **Zoo - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
 
-6. Create a new folder with the following information:
+5. Create a new folder with the following information:
 
    - Folder name: **Middleware**
 
-7. Add a new class with the following information:
+6. Add a new class with the following information:
 
 	- Folder: **Middleware**
 	- Name: **ApplicationBuilderExtensions**
 
-8. In the **ApplicationBuilderExtensions** class, add **USING** statements for the following namespaces:
+7. In the **ApplicationBuilderExtensions** class, add **USING** statements for the following namespaces:
 
    - **System.IO**
+   - **Microsoft.AspNetCore.Builder**
    - **Microsoft.Extensions.FileProviders**
 
-9. Add a **static** keyword to the **ApplicationBuilderExtensions** class declaration.
+8. Add a **static** keyword to the **ApplicationBuilderExtensions** class declaration.
 
-10. Relace the **ApplicationBuilderExtensions** class namespace with the following information:
-   
-    - Current namespace: **Zoo.Middleware**
-    - New namespace: **Microsoft.AspNetCore.Builder**
-
-11. Add a method with the following information:
+9. Add a method with the following information:
 
     - Scope: **public**
 	- Modifier: **static**
@@ -483,21 +479,30 @@ The main tasks for this exercise are as follows:
 			- Type: **string**
 			- Name: **root**
 
-12. In the **UseNodeModules** method, add a variable named **path** of type **var** with the value of **Path.Combine(root, "node_modules")**.
+10. In the **UseNodeModules** method, add a variable named **path** of type **var** with the value of **Path.Combine(root, "node_modules")**.
 
-13. Add a variable named **fileProvider** of type **var** with the value of **new PhysicalFileProvider(path)**.
+11. Add a variable named **fileProvider** of type **var** with the value of **new PhysicalFileProvider(path)**.
 
-14. Add a variable named **options** of type **var** with the value of **new StaticFileOptions()**.
+12. Add a variable named **options** of type **var** with the value of **new StaticFileOptions()**.
 
-15. Assign the **RequestPath** property of the **options** variable the value of **/node_modules**.
+13. Assign the **RequestPath** property of the **options** variable the value of **/node_modules**.
 
-16. Assign the **FileProvider** property of the **options** variable the value of **fileProvider** variable.
+14. Assign the **FileProvider** property of the **options** variable the value of **fileProvider** variable.
 
-17. Call the **UseStaticFiles** method of the **applicationBuilder** parameter. Pass **options** variable as a parameter to the **UseStaticFiles** method.
+15. Call the **UseStaticFiles** method of the **applicationBuilder** parameter. Pass **options** variable as a parameter to the **UseStaticFiles** method.
 
-18. Return the **IApplicationBuilder**  result using the **applicationBuilder** variable.
+16. Return the **IApplicationBuilder**  result using the **applicationBuilder** variable.
 
-19. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
+17. In the **Startup** class, add **USING** statement for the following namespace:
+
+   - **Zoo.Middleware**
+
+18. In **Startup** class, in the **Configure** method, before the **app.UseMVC** middleware, call the **UseStaticFiles** method of the **app** parameter.
+
+19. Call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
+
+
+20. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
 
 	- Src:**~/node_modules/jquery/dist/jquery.min.js**
 
