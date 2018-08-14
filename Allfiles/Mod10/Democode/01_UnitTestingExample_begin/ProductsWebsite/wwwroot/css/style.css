@@ -1,0 +1,29 @@
+﻿body {
+    display: flex;
+    flex-direction: column;
+    background-color: #c3d9fa;
+}
+
+h1, h2 {
+    color: #015072;
+}
+
+div {
+    padding: 5px;
+    font-size: 25px;
+}
+
+.product-wrapper {
+    flex-direction: row;
+    display: flex;
+}
+
+.product-display > div {
+    flex-direction: column;
+    max-width: 300px;
+    max-width: 300px;
+}
+
+.product-img {
+    border: solid 1px #015072;
+}
