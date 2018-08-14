@@ -21,7 +21,7 @@ namespace LayoutExample.Data
             modelBuilder.Entity<Student>().HasData(
                  new Student
                  {
-                     StudentId =1,
+                     StudentId = 1,
                      FirstName = "Tara",
                      LastName = "Brewer",
                      City = "Ocala",

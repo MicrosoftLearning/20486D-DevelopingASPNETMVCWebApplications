@@ -11,17 +11,17 @@ namespace CitiesWebsite.Services
     {
         Dictionary<string, City> _cities;
 
+        public CityProvider()
+        {
+
+        }
+
         public City this[string name]
         {
             get
             {
                 return _cities[name];
             }
-        }
-
-        public CityProvider()
-        {
-
         }
 
         private Dictionary<string, City> CityInitializer()

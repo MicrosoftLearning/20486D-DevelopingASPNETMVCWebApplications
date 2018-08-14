@@ -167,23 +167,23 @@ The main tasks for this exercise are as follows:
 
 ####	Task 4: Add links to the views using tag helpers
 
-1. In the **ShowDataForCity** view, after the **SPAN** add an **A** element with the following information:
-    - asp-action: **ShowCities**
-    - Content: **Back**
-
-2. Create a new **_ViewImports.cshtml** file with the following information:
+1. Create a new **_ViewImports.cshtml** file with the following information:
 
     - Name: **_ViewImports**
     - Folder: **Views**
 
-3. In the  **_ViewImports**  file, add a **@addTagHelper** directive with the following information:
+2. In the  **_ViewImports**  file, add a **@addTagHelper** directive with the following information:
 
     - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
+3. In the **ShowDataForCity** view, after the **SPAN** element add an **A** element with the following information:
+    - asp-action: **ShowCities**
+    - Content: **Back**
+
 4. In the **ShowCities** view, remove the **P** element with its content.
 
-5. In the  **FOREACH** statement block, add a **H2**.
+5. In the  **FOREACH** statement block, add a **H2** element.
 
 6. In the  **H2** element, add an **A** element with the following information:
 
@@ -206,7 +206,7 @@ The main tasks for this exercise are as follows:
 
 5. Close **Microsoft Edge**.
 
->**Result**: At the end of this exercise, you will be able to add a **Razor view** templates to an **MVC** application, passing data from the **Controller** to the **View** using **ViewBag**, and navigate between them using **URL.Action** and **Tag Helpers**. 
+>**Result**: At the end of this exercise, you will be able to add views to an **MVC** application, pass data from a controller to a view using **ViewBag**, and navigate between pages using helpers.
 
 ##	Exercise 2: Adding a Partial View
 
@@ -248,18 +248,16 @@ The main tasks for this exercise are as follows:
     - Name: **population**
     - Value: **ViewBag.City.Population**
 
-6. Add a **P** element.
+6. Add a **H3** element with the following information:
+    - Content:  **City Population (@population.Year)**
 
-7. In the **P** element, add a **H3** element with the following information:
-    - Content:  **City Population(@population.Year)**
-
-8. After the **P** element, add another **P** element with the following information:
+7. After the **H3** element, add a **P** element with the following information:
     - Content:  **City: @cityFormatter.GetFormattedPopulation(@population.City)**
 
-9. After the last **P** element, add another **P** element with the following information:
+8. After the last **P** element, add another **P** element with the following information:
     - Content:  **Urban: @cityFormatter.GetFormattedPopulation(@population.Urban)**
 
-10. After the last **P** element, add another **P** element with the following information:
+9. After the last **P** element, add another **P** element with the following information:
     - Content:  **Metro: @cityFormatter.GetFormattedPopulation(@population.Metro)**
 
 ####	Task 2: Use the partial view in the ShowDataForCity view
@@ -280,7 +278,7 @@ The main tasks for this exercise are as follows:
 
 4. Close **Microsoft Edge**.
 
->**Result**: At the end of thise exercise, you will be able to add and render **Partial Views** in **Views**, and inject and use services using the **@Inject** directive.
+>**Result**: At the end of this exercise, you will be able to write and use partial views, and use services inside a view using the **@Inject** directive.
 
 ##	Exercise 3: Adding a View Component
 
@@ -318,7 +316,7 @@ The main tasks for this exercise are as follows:
 5. Create a new field with the following information:
  
     - Scope: **private**
-    - Class: **ICityProvider**
+    - Type: **ICityProvider**
     - Name: **_cities**
 
 6. Add a constructor with the following parameter: 
@@ -328,10 +326,11 @@ The main tasks for this exercise are as follows:
 
 7. In the constructor, initialize the **_cities** field with the value of the **cities** parameter.
 
-8. Add an asynchronous method with the following information:
+8. Add a method with the following information:
 
     - Scope: **public**
-    - Return Type: **Task<IViewComponentResult>**
+    - Keyword: **async**
+    - Return Type: **Task&lt;IViewComponentResult&gt;**
     - Name: **InvokeAsync**
     - Parameter:
         - Type: **string**
@@ -340,19 +339,20 @@ The main tasks for this exercise are as follows:
 9. Add a method with the following information:
 
     - Scope: **private**
-    - Return Type: **Task<City>**
+    - Return Type: **Task&lt;City&gt;**
     - Name: **GetCity**
     - Parameter:
         - Type: **string**
         - Name: **cityName**
 
-10. In the **GetCity** method code block, return a **Task<City>** result using the  **Task.FromResult<City>** method. Pass **_cities[cityName]** as a parameter to the **Task.FromResult<City>** method.
+10. In the **GetCity** method code block, return **Task&lt;City&gt;** using the  **Task.FromResult&lt;City&gt;** method. Pass **_cities[cityName]** as a parameter to the **Task.FromResult&lt;City&gt;** method.
+ 
+11. In the **InvokeAsync** method code block, save the following key and value in the **ViewBag** property:
 
-11. In the **InvokeAsync** method code block, call the **GetCity** method using the **await** operator. Pass  **cityName** as a parameter to the **GetCity** method.
-
-12. Assign the result of **GetCity** method call to **ViewBag.CurrentCity** property.
-
-13. Return the **ViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the View method.
+    - Key: **CurrentCity**
+    - Value: **await GetCity(cityName)**
+ 
+12. Return the **ViewViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the **View** method.
 
 ####	Task 2: Add a view component view
 
@@ -393,8 +393,6 @@ The main tasks for this exercise are as follows:
 
 1. In the **ShowCities** view, delete the content of the **FOREACH** statment and add the following: **@await Component.InvokeAsync("City", item.Key)**
 
-    > **Note**: The key of the  **CityProvider** item contains the city name.
-
 ####	Task 4: Run the application
 
 1. Save all the changes.
@@ -409,7 +407,7 @@ The main tasks for this exercise are as follows:
 
 5. Close **Visual Studio**.
 
->**Result**: At the end of this exercise, you will be able to create **View Components**, and invoke and render **View Components** from a **View**.
+>**Result**: At the end of this exercise, you will be able to create view components, and embed them in a view.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
