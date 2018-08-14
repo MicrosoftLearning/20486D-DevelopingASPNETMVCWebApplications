@@ -311,7 +311,7 @@
 ```
 18. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
-19. 15. In the **Startup.cs** code window, locate the following code:
+19. In the **Startup.cs** code window, locate the following code:
   ```cs
        using Microsoft.Extensions.DependencyInjection;
 ```
@@ -369,7 +369,7 @@
        <div>
             <h1>Use NPM to Add a JavaScript Library</h1>
             <button id="btn-jquery-func">Run jQuery Function</button>
-            <div class="box">jQuery animation</div>
+            <div class="box"></div>
        </div>
 ```
 
