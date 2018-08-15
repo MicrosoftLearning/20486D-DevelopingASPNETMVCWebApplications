@@ -415,13 +415,13 @@ The main tasks for this exercise are as follows:
         - Type: **int?**
         - Name: **id**
 
-20. In the **GetById** action, add a varible named **item** of type **var** and initialize it with the value of **_data.GetCakeById(id)**.
+20. In the **GetById** action, add a variable named **item** of type **var** and initialize it with the value of **_data.GetCakeById(id)**.
 
-21. Add an **IF** statement that checks that the value of the **item** varible is **NULL**.
+21. Add an **IF** statement that checks that the value of the **item** variable is **NULL**.
 
 22. In the **IF**  statement code block, return the **NotFoundResult** result using the **NotFound** method.
 
-23. After the **IF**  statement, return a new **ObjectResult** result using the **ObjectResult** constructor. Pass **item** varible as a parameter to the **ObjectResult** constructor.
+23. After the **IF**  statement, return a new **ObjectResult** result using the **ObjectResult** constructor. Pass **item** variable as a parameter to the **ObjectResult** constructor.
 
 24. Above the **GetById** action, add a **HttpGet** attribute with the following information:
      - template : **"/api/CakeStore/{id}"**
@@ -635,15 +635,15 @@ The main tasks for this exercise are as follows:
 
 25. In the constructor, initialize the **_tempData** field with the value of the **tempData** parameter.
 
-26.  In the **Index** action code block, add a varible named **animals** of type  **List&lt;Animal&gt;**. 
+26.  In the **Index** action code block, add a variable named **animals** of type  **List&lt;Animal&gt;**. 
 
-27. Initialize the **animals** varible  with the value of **_tempData.AnimalsInitializeData()**.
+27. Initialize the **animals** variable  with the value of **_tempData.AnimalsInitializeData()**.
 
-28. Add a varible named **indexViewModel** of type **IndexViewModel**.
+28. Add a variable named **indexViewModel** of type **IndexViewModel**.
 
-29. Initialize the  **indexViewModel** varible using a **IndexViewModel** parameterless constructor.
+29. Initialize the  **indexViewModel** variable using a **IndexViewModel** parameterless constructor.
 
-30. Initialize  the  **Animals** property of the **indexViewModel** varible with the value of **animals** varible.
+30. Initialize  the  **Animals** property of the **indexViewModel** variable with the value of **animals** variable.
 
 31. Return the **ViewResult** result using the **View** method. Pass **indexViewModel** as a parameter to the **View** method.
 
@@ -655,13 +655,13 @@ The main tasks for this exercise are as follows:
         - Type: **int?**
         - Name: **id**
 
-33.  In the **Details** action code block, add a varible named **model** of type  **var** initialize it with the value of **_tempData.GetAnimalById(id)**.
+33.  In the **Details** action code block, add a variable named **model** of type  **var** initialize it with the value of **_tempData.GetAnimalById(id)**.
 
-34. Add an **IF** statement that checks that the value of the **model** varible is **NULL**.
+34. Add an **IF** statement that checks that the value of the **model** variable is **NULL**.
 
 35. In the **IF**  statement code block, return the **NotFoundResult** result using the **NotFound** method.
 
-36. After the **IF**  statement, return a new **ViewResult** result using the **View** method. Pass **model** varible as a parameter to the **View** method.
+36. After the **IF**  statement, return a new **ViewResult** result using the **View** method. Pass **model** variable as a parameter to the **View** method.
 
 37. Copy the **images** folder content to the **AnimalMvc** project, with the following information:
 
