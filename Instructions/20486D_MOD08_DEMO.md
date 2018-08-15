@@ -453,22 +453,45 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
+1. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_end\JQueryExample**, copy the address in the address bar.
 
-2. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+2. Go to **Start**, and then type **cmd**.
 
-3. In the **NewFolder** text box, type **js**, and then press Enter.
+3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
-4. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+4. In the **User Account Control** dialog box, click **Yes**.
 
-5. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+  ```cs
+       cd  {copied folder path}
+```
 
-6. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **jquery-functions**, and then click **Add**.
+>**Note:** If the **{copied folder path}** is in disk drive D, then you should type **d:** before typing the **cd  {copied folder path}** command.
 
-7. In the **jquery-functions.js** code window, type the following code: 
+6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+  ```cs
+       npm install
+```
+7. Close the window.
+
+8. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin** and then double-click **JQueryExample.sln**.
+
+    >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package as a result of executing the command **npm install**.
+
+9. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+
+10. In the **NewFolder** text box, type **js**, and then press Enter.
+
+11. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+
+12. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+
+13. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **jquery-functions**, and then click **Add**.
+
+14. In the **jquery-functions.js** code window, type the following code: 
   ```cs
        var passingGrade = 55;
-       $(function () {
+       $(function() {
            $("#jqueryButton").click(function (event) {
                 var firstGrade = parseInt($("#studentGrade1").text());
                 var secondGrade = parseInt($("#studentGrade2").text());
@@ -476,56 +499,59 @@
 
                 if (firstGrade > passingGrade) {
                     $("#studentGrade1").addClass("goodGrade");
-                } else {
+                } 
+                else {
                     $("#studentGrade1").addClass("badGrade");
                 }
 
                 if (secondGrade > passingGrade) {
                     $("#studentGrade2").addClass("goodGrade");
-                } else {
+                } 
+                else {
                     $("#studentGrade2").addClass("badGrade");
                 }
 
                 if (thirdGrade > passingGrade) {
                     $("#studentGrade3").addClass("goodGrade");
-                } else {
+                } 
+                else {
                     $("#studentGrade3").addClass("badGrade");
                 }
            });
        });
 ```
 
-8. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
+15. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
 
-9. In the **_Layout.cshtml** file, locate the following code:
+16. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <link href="~/css/style-example.css" rel="stylesheet" />
 ```
 
-10. Place the cursor after the **>** (greater than) sign of the **link** tag, press Enter, and then type the following code: 
+17. Place the cursor after the **>** (greater than) sign of the **link** tag, press Enter, and then type the following code: 
   ```cs
        <script src="~/js/jquery-functions.js"></script>
 ```
 
-11. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **GradeBookController.cs**.
+18. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **GradeBookController.cs**.
 
-12. In the **GradeBookController.cs** code window, right-click the following code, and then click **Add View**.
+19. In the **GradeBookController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-13. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
+20. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
 
-14. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
+21. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-15. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+22. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
 
-16. In the **Index.cshtml** code window, select the following code:
+23. In the **Index.cshtml** code window, select the following code:
   ```cs
        <h2>Index</h2>
 ```
 
-17. Replace the selected code with the following code: 
+24. Replace the selected code with the following code: 
   ```cs
        <h1>Students GradeBook</h1>
        <h2>Course Name: Mathematics and Computer Science</h2>
@@ -541,7 +567,7 @@
        <button id="jqueryButton">Apply JQuery</button>
 ```
 
-18. Place the cursor in the **THEAD** element, press Enter, and then type the following code: 
+25. Place the cursor in the **THEAD** element, press Enter, and then type the following code: 
   ```cs
        <tr>
            <th>
@@ -559,7 +585,7 @@
        </tr>
 ```
 
-19. Place the cursor in the **TBODY** element, press Enter, and then type the following code: 
+26. Place the cursor in the **TBODY** element, press Enter, and then type the following code: 
   ```cs
        <tr>
            <td>Thomas M. Hacker</td>
@@ -581,15 +607,15 @@
        </tr>
 ```
 
-20. In the **JQueryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+27. In the **JQueryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-21. In the **JQueryExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+28. In the **JQueryExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-22. In **Microsoft Edge**, click **Apply JQuery**.
+29. In **Microsoft Edge**, click **Apply JQuery**.
       
-23. In **Microsoft Edge**, click **Close**.
+30. In **Microsoft Edge**, click **Close**.
 
-24. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+31. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
