@@ -33,7 +33,7 @@ Estimated Time: **60 minutes**
 #### Scenario
 
 You are required to develop an **ASP.NET Core MVC** application in a Test Driven Environment.
-In this exercise you will create an **MSTest** Testing project and add it to the solution, add the **ASP.NET Core MVC** website application to its list of dependencies, and then test the **Shirt** model. 
+In this exercise you will create an **MSTest** testing project and add it to the solution, add the **ASP.NET Core MVC** website application to its list of dependencies, and then test the **Shirt** model. 
 
 The main tasks for this exercise are as follows:
 
@@ -45,10 +45,10 @@ The main tasks for this exercise are as follows:
 
 4.	Implement the model class so the test will pass.
 
-5.	Run the unit test – it should pass.
+5.	Run the unit test – it succeeds.
 
 
-#### Task 1: Write a test for a model
+#### Task 1: Add a Testing Project
 
 1. From **Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, open the **ShirtStore.sln**.
 
@@ -58,40 +58,42 @@ The main tasks for this exercise are as follows:
 
 3. In the **ShirtStoreWebsite.Tests** project, add a reference of **ShirtStoreWebsite** to its dependencies.
 
-4. Rename the **UnitTest1** class, to **ShirtTest**.
+#### Task 2: Write a test for a model
 
-5. In the **ShirtTest** class code block, rename **TestMethod1** to **IsGetFormattedTaxedPriceReturnsCorrectly**.
+1. In the **ShirtStoreWebsite.Tests** project, rename the **UnitTest1** class to **ShirtTest**.
 
-6. In the **ShirtTest** class, add **using** statements for the following namespaces:
+2. In the **ShirtTest** class, add **USING** statement for the following namespace:
    - **ShirtStoreWebsite.Models**
 
-7. Add a new variable with the following information:
+3. In the **ShirtTest** class code block, rename **TestMethod1** to **IsGetFormattedTaxedPriceReturnsCorrectly**.
+
+4. In the **IsGetFormattedTaxedPriceReturnsCorrectly** method, add a new variable with the following information:
     - Type: **Shirt**
     - Name: **shirt**
     - Value: **new Shirt { Price = 10F }**
 
-8. Add a new variable with the following information:
+5. Add a new variable with the following information:
     - Type: **string**
     - Name: **taxedPrice**
     - Value: **shirt.GetFormattedTaxedPrice(1.2F)**
 
-9. Call the static **AreEqual** method of the **Assert** class, pass **"$12.00"** and the **taxedPrice** variable as parameters to the **AreEqual** method.
+6. Call the static **AreEqual** method of the **Assert** class, pass **"$12.00"** and the **taxedPrice** as parameters to the **AreEqual** method.
 
-10. Save all the changes.
+7.  Save all the changes.
 
-#### Task 2: Run the unit test – it should fail
+#### Task 3: Run the unit test – it should fail
 
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 1 failed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
-#### Task 3: Implement the model class so the test will pass
+#### Task 4: Implement the model class so the test will pass
 
-1. In the **Shirt** class, replace **GetFormattedTaxedPrice** return value using the following information:
+1. In the **Shirt** class, replace **GetFormattedTaxedPrice** return value, using the following information:
     - Value: **(Price * tax).ToString($"C2", CultureInfo.GetCultureInfo("en-US"))** 
 
 2. Save all the changes.
 
-#### Task 4: Run the unit test – it succeeds
+#### Task 5: Run the unit test – it succeeds
 
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
@@ -103,7 +105,7 @@ The main tasks for this exercise are as follows:
 #### Scenario
 
 After creating a testing project and testing the model, you are now required to test the controller.
-In order to do so you will need to create a repository interface as a dependency for the controller to gain access to the data. In order to test the controller, you will create a fake repository as a substitute then provide it to controller via its constructor.
+In order to do this, you will need to create a repository interface as a dependency for the controller to gain access to the data. In order to test the controller, you will create a fake repository as a substitute then provide it to controller via its constructor.
 
 The main tasks for this exercise are as follows:
 
@@ -119,13 +121,14 @@ The main tasks for this exercise are as follows:
 
 6.	Implement the controller class so the test will pass.
 
+7. Run the unit test – it succeeds
 
 #### Task 1: Create an interface repository
 
 1. Create a new folder with the following information:
 
     - Folder name: **Services**
-    - Parent folder: **ShirtStoreWebsite**
+    - Project: **ShirtStoreWebsite**
 
 2. Create a new interface with the following information:
 
@@ -133,7 +136,7 @@ The main tasks for this exercise are as follows:
      - Name:  **IShirtRepository**
      - Scope: **public**
 
-3. In the **IShirtRepository** interface, add **using** statements for the following namespaces:
+3. In the **IShirtRepository** interface, add **USING** statements for the following namespaces:
    - **ShirtStoreWebsite.Models**
 
 4. Declare a method with the following information:
@@ -159,7 +162,7 @@ The main tasks for this exercise are as follows:
 1. Create a new folder with the following information:
 
     - Folder name: **FakeRepositories**
-    - Parent folder: **ShirtStoreWebsite.Tests**
+    - Project: **ShirtStoreWebsite.Tests**
 
 2. Create a new class with the following information:
 
@@ -167,7 +170,7 @@ The main tasks for this exercise are as follows:
      - Name:  **FakeShirtRepository**
      - Scope: **internal**
 
-3. In the **FakeShirtRepository** class, add **using** statements for the following namespaces:
+3. In the **FakeShirtRepository** class, add **USING** statements for the following namespaces:
    - **ShirtStoreWebsite.Services**
    - **ShirtStoreWebsite.Models**
 
@@ -181,12 +184,13 @@ The main tasks for this exercise are as follows:
 
 6. In the **GetShirts** method, return the **IEnumerable&lt;Cupcake&gt;** result using the following information:
 
-    - Value: new List&lt;Shirt&gt;()<br>
+    - Value:<br/>
+    **new List&lt;Shirt&gt;()<br>
     {<br>
             new Shirt { Color = ShirtColor.Black, Size = ShirtSize.S, Price = 11F },<br>
             new Shirt { Color = ShirtColor.Gray, Size = ShirtSize.M, Price = 12F },<br>
             new Shirt { Color = ShirtColor.White, Size = ShirtSize.L, Price = 13F }<br>
-    }
+    }**
 
 7. Add a method with the following information:
 
@@ -197,7 +201,7 @@ The main tasks for this exercise are as follows:
         - Type: **Shirt**
         - Name: **shirt**
 
-8. In the **AddShirt** method, return true.
+8. In the **AddShirt** method, return **true**.
 
 9. Add a method with the following information:
 
@@ -208,11 +212,11 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-10. In the **RemoveShirt** method, return true.
+10. In the **RemoveShirt** method, return **true**.
 
 #### Task 3: Pass the fake repository to the constructor of a controller
 
-1. In the **ShirtController** class, add **USING** statements for the following namespaces:
+1. In the **ShirtController** class, add **USING** statement for the following namespace:
 
       - **ShirtStoreWebsite.Services**
 
@@ -239,11 +243,11 @@ The main tasks for this exercise are as follows:
 
 3. Create a new class with the following information:
 
-     - Folder: **ShirtStoreWebsite.Tests**
+     - Project: **ShirtStoreWebsite.Tests**
      - Name:  **ShirtControllerTest**
      - Scope: **public**
 
-3. In the **ShirtControllerTest** class, add **using** statements for the following namespaces:
+3. In the **ShirtControllerTest** class, add **USING** statements for the following namespaces:
     - **Microsoft.VisualStudio.TestTools.UnitTesting**
     - **Microsoft.AspNetCore.Mvc**
     - **ShirtStoreWebsite.Controllers**
@@ -261,49 +265,53 @@ The main tasks for this exercise are as follows:
 
 6. Add a **TestMethod** attribute to the **IsIndexReturnsAllShirts** method.
 
-7. Add a varible named **fakeShirtRepository** of type **IShirtRepository**
+7. Create a variable named **fakeShirtRepository** of type **IShirtRepository**
 
 9. Initialize the **fakeShirtRepository** variable using the **fakeShirtRepository** constructor.
 
-10. Add a varible named **shirtController** of type **ShirtController**.
+10. Create a variable named **shirtController** of type **ShirtController**.
 
-11. Initialize the **shirtController** variable using the **shirtController** constructor and pass it the following parameters:
+11. Initialize the **shirtController** variable using the **shirtController** constructor and pass the following parameters:
     - **fakeShirtRepository** 
 
-12. Add a varible named **viewResult** of type **ViewResult**.
+12. reate a variable named **viewResult** of type **ViewResult**.
 
-13. Initialize the **viewResult** variable using the **Index** method of the **shirtController** variable, store the return value as of type **ViewResult** using the **as** operator.
+13. Initialize the **viewResult** variable using the **Index** method of the **shirtController** variable, store the return value as a **ViewResult** type using the **as** operator.
 
-14. Add a varible named **shirts** of type **List&lt;Shirt&gt;**.
+14. Create a variable named **shirts** of type **List&lt;Shirt&gt;**.
 
-15. Initialize the **shirts** variable using the **Model** property of the **viewResult** variable, store the value as of type **List&lt;Shirt&gt;** using the **as** operator.
+15. Initialize the **shirts** variable using the **Model** property of the **viewResult** variable, store the value as **List&lt;Shirt&gt;** type using the **as** operator.
 
 16. Call the static **AreEqual** method of the **Assert** class, pass the **Count** property of the **shirts** variable and the integer **3**.
 
 17. Save all the changes.
 
-#### Task 4: Run the unit test – it should fail
+#### Task 5: Run the unit test – it should fail
 
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 1 failed test: **IsIndexReturnsAllShirts**, and 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
-#### Task 5: Implement the controller class so the test will pass
+#### Task 6: Implement the controller class so the test will pass
 
 1. In the **ShirtController** class, in the **Index** action, remove its contents.
 
-2. Add a varible named **shirts** of type **IEnumerable&lt;Shirt&gt;**.
+2. Add a variable named **shirts** of type **IEnumerable&lt;Shirt&gt;**, and assign it the value of the **GetShirts** method of the **_repository** field. 
 
-2. Initialize the **shirts** variable using the **GetShirts** method of the **_repository** field. 
+3. Return the **ViewResult** result using the **View** method.
 
-3. Return the **ViewResult** result using the **View** method. Pass the **shirts** variable as a parameter to the **View** method.
+4. Pass the **shirts** variable as parameter to the **View** method.
 
-4. In the **AddShirt** action, at the start of the method's scope, call the **AddShirt** of the **_repository** field. Pass the **shirt** parameter as a parameter to the **AddShirt** method.
+5. In the **AddShirt** action, at the start of the method's scope, call the **AddShirt** of the **_repository** field. 
 
-5. In the **Delete** action, at the start of the method's scope, call the **RemoveShirt** of the **_repository** field. Pass the **id** parameter as a parameter to the **RemoveShirt** method.
+6. Pass the **shirt** as parameter to the **AddShirt** method.
 
-6. Save all the changes.
+7. In the **Delete** action, at the start of the method's scope, call the **RemoveShirt** of the **_repository** field. 
 
-#### Task 6: Run the unit test – it succeeds
+8. Pass the **id** as parameter to the **RemoveShirt** method.
+
+9. Save all the changes.
+
+#### Task 7: Run the unit test – it succeeds
 
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 2 passed tests: **IsIndexReturnsAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
@@ -332,7 +340,7 @@ The main tasks for this exercise are as follows:
      - Name:  **ShirtRepository**
      - Scope: **public**
 
-2. In the **ShirtRepository** class, add **using** statements for the following namespaces:
+2. In the **ShirtRepository** class, add **USING** statements for the following namespaces:
    - **ShirtStoreWebsite.Models**
    - **ShirtStoreWebsite.Data**
 
@@ -369,21 +377,23 @@ The main tasks for this exercise are as follows:
         - Type: **Shirt**
         - Name: **shirt**
 
-10. In the **AddShirt** method, call the **Add** method of the **_context** field. Pass **shirt** as a parameter to the **Add** method.
+10. In the **AddShirt** method, call the **Add** method of the **_context** field. 
 
-11. Add a varible named **entries** of type **int**.
+11. Pass **shirt** as parameter to the **Add** method.
 
-12. Initialize the **entries** variable using the **SaveChanges** method of the **_context** field. 
+12. Add a variable named **entries** of type **int**.
 
-13. Create an **IF** statement that checks that the value of **entries** is greater then **0**.
+13. In the AddShirt method, initialize the **entries** variable using the **SaveChanges** method of the **_context** field. 
 
-14. Inside the **IF** statement code block, return true.
+14. Create an **IF** statement that checks that the value of **entries** is greater then **0**.
 
-15. After the **IF** statement code block, add an **ELSE** statement. 
+15. Inside the **IF** statement code block, return **true**.
 
-16. Inside the **ELSE** statement code block, return false.
+16. After the **IF** statement code block, add an **ELSE** statement. 
 
-17. Add a method with the following information:
+17. Inside the **ELSE** statement code block, return **false**.
+
+18. Add a method with the following information:
 
     - Scope: **public**
     - Return Type: **bool**
@@ -392,27 +402,27 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-18. In the **RemoveShirt** method, add a varible named **shirt** of type **var**.
+19. In the **RemoveShirt** method, add a variable named **shirt** of type **var**.
 
-19. Initialize the **shirt** variable using the **_context.Shirts.SingleOrDefault(m => m.Id == id)** method.
+20. Initialize the **shirt** variable using the **_context.Shirts.SingleOrDefault(m => m.Id == id)** method.
 
-20. Call the **Remove** method of the **_context.Shirts** property. Pass **shirt** as a parameter to the **Remove** method.
+21. Call the **Remove** method of the **_context.Shirts** property. Pass **shirt** as a parameter to the **Remove** method.
 
-21. Add a varible named **entries** of type **int**.
+22. Add a variable named **entries** of type **int**.
 
-22. Initialize the **entries** variable using the **SaveChanges** method of the **_context** field. 
+23. Initialize the **entries** variable using the **SaveChanges** method of the **_context** field. 
 
-23. Create an **IF** statement that checks that the value of **entries** is greater then **0**.
+24. Create an **IF** statement that checks that the value of **entries** is greater then **0**.
 
-24. Inside the **IF** statement code block, return true.
+25. Inside the **IF** statement code block, return **true**.
 
-25. After the **IF** statement code block, add an **ELSE** statement. 
+26. After the **IF** statement code block, add an **ELSE** statement. 
 
-26. Inside the **ELSE** statement code block, return false.
+27. Inside the **ELSE** statement code block, return **false**.
 
 #### Task 2: Pass the repository to the controller
 
-1. In the **Startup** class, add **using** statements for the following namespaces:
+1. In the **Startup** class, add **USING** statement for the following namespace:
    - **ShirtStoreWebsite.Services**
 
 2. In the **ConfigureServices** method, call the **AddScoped** method of **services** parameter with the following information:
@@ -425,9 +435,9 @@ The main tasks for this exercise are as follows:
 #### Task 3: Run the MVC Application
 
 1. Start the application without debugging.
-    >**Note**: The browser displays the **Shirt** Store page.
+    >**Note**: The browser displays the **Shirt Store** page.
 
-2. Close the **Microsoft Edge** window.
+2. Close **Microsoft Edge**.
 
 >**Results** : After completing this exercise, alongside testing, you have developed a functional MVC Application.
 
@@ -454,13 +464,15 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add exception handling in Startup.cs
 
-1. In the **Startup** class, in the **Configure** method, create an **IF** statement that checks that the return value of the **env.IsDevelopment** method.
+1. In the **Startup** class, in the **Configure** method, after the **shirtContext.Database.EnsureCreated** method, create an **IF** statement that checks that the return value of the **env.IsDevelopment** method.
 
 2. Inside the **IF** statement code block, call the **UseDeveloperExceptionPage** method of the **app** parameter.
 
 3. After the **IF** statement code block, add an **ELSE** statement. 
 
-4. Inside the **ELSE** statement code block, call the **UseExceptionHandler** method of the **app** parameter. pass **"/error.html"** as a parameter to the **UseExceptionHandler** method.
+4. Inside the **ELSE** statement code block, call the **UseExceptionHandler** method of the **app** parameter. 
+
+5. Pass **"/error.html"** as parameter to the **UseExceptionHandler** method.
 
 #### Task 2: Create a temporary Exception for testing
 
@@ -470,21 +482,21 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Run the application in development environment
 
-1. Select the **development** environment, and then start the application without debugging.
+1. Select the **Development** environment, and then start the application without debugging.
 
-2. In **Microsoft Edge**, click on the delete link of the top **shirt**.
+2. In **Microsoft Edge**, click on the **Delete** link of the top shirt.
     >**Note**: The browser displays the detailed exception page.
 
 3. Close the **Microsoft Edge** window.
 
 #### Task 4: Run the application in production environment
 
-1. Select the **production** environment, and then start the application without debugging.
+1. Select the **Production** environment, and then start the application without debugging.
 
-2. In **Microsoft Edge**, click on the delete link of the top **shirt**.
-    >**Note**: The browser displays a custom error page: error.html, which is located in the wwwroot folder.
+2. In **Microsoft Edge**, click on the **Delete** link of the top shirt.
+    >**Note**: The browser displays a custom error page: **error.html**, which is located in the **wwwroot** folder.
 
-3. Close the **Microsoft Edge** window.
+3. Close **Microsoft Edge**.
 
 #### Task 5: Run the application in production environment
 
@@ -506,7 +518,7 @@ The main tasks for this exercise are as follows:
 
 1.	Add logging to the MVC application.
 
-2.	Inject the ILogger to the controller in the testing project using a mocking framework.
+2.	Test the controller using a mocking framework.
 
 3.	Run the unit test.
 
@@ -517,11 +529,11 @@ The main tasks for this exercise are as follows:
 #### Task 1: Add logging to the MVC application
 
 
-1. In the **ShirtStoreWebsite** project, create a new top-level **App Setting** file with the following information:
+1. In the **ShirtStoreWebsite** project, create a new top-level **App Setting File** with the following information:
      - File Name: **appsettings.development.json**
      - Folder: **/**
 
-2. Delete the contents of the **appsettings.development.json** file.
+2. Delete the content of the **appsettings.development.json** file.
 
 3. In the **appsettings.development.json** file, add new values using the following information:
     - Property: **"Logging"**
@@ -534,11 +546,11 @@ The main tasks for this exercise are as follows:
             - Type: **string**
             - Value: **"Trace"**
 
-4. In the **ShirtStoreWebsite** project, create a new top-level **App Setting** file with the following information:
+4. In the **ShirtStoreWebsite** project, create a new top-level **App Setting File** with the following information:
      - File Name: **appsettings.production.json**
      - Folder: **/**
 
-5. Delete the contents of the **appsettings.production.json** file.
+5. Delete the content of the **appsettings.production.json** file.
 
 6. In the **appsettings.production.json** file, add new values using the following information:
     - Property: **"Logging"**
@@ -556,67 +568,85 @@ The main tasks for this exercise are as follows:
                 - Type: **string**
                 - Value: **"Warning"**
 
-7. In the **Program** class, chain the method **ConfigureLogging** after the **CreateDefaultBuilder** method. Pass a **lambda expression** as a parameter to the **ConfigureLogging** method with the following information:
+7. In the **Program** class, chain the method **ConfigureLogging** after the **CreateDefaultBuilder** method. 
+
+8. Pass a **lambda expression** as parameter to the **ConfigureLogging** method with the following information:
     - Lambda Expression: **(hostingContext, logging) => { }**
 
-8. In the **lambda expression**, add a varible named **env** of type **var**.
+9. In the **lambda expression**, add a variable named **env** of type **var**.
 
-9. Initialize the **env** variable using the **HostingEnvironment** property of the **hostingContext** parameter.
+10. Initialize the **env** variable using the **HostingEnvironment** property of the **hostingContext** parameter.
 
-10. In the **lambda expression**, add a varible named **config** of type **var**.
+11. In the **lambda expression**, add a variable named **config** of type **var**.
 
-11. Initialize the **config** variable using the **GetSection** method of the **hostingContext.Configuration** property. Pass **"Logging"** as a parameter to the **GetSection** method.
+12. Initialize the **config** variable using the **GetSection** method of the **hostingContext.Configuration** property. 
 
-12. Call the **ClearProviders** method of the **logging** parameter.
+13. Pass **"Logging"** as parameter to the **GetSection** method.
 
-13. Create an **IF** statement that checks that the value of the **IsDevelopment** method of the **env** variable.
+14. Call the **ClearProviders** method of the **logging** parameter.
 
-14. Inside the **IF** statement code block, call the **AddConfiguration** method of the **logging** parameter. Pass the **config** variable to the **AddConfiguration** method.
+15. Create an **IF** statement that checks that the return value of the **IsDevelopment** method of the **env** parameter.
 
-15. Inside the **IF** statement code block, call the **AddConsole** method of the **logging** parameter.
+16. Inside the **IF** statement code block, call the **AddConfiguration** method of the **logging** parameter. 
 
-16. After the **IF** statement code block, add an **ELSE** statement. 
+17. Pass the **config** variable to the **AddConfiguration** method.
 
-17. Inside the **ELSE** statement code block, call the **AddFile** method of the **logging** parameter. Pass the **config** variable to the **AddFile** method.
+18. Inside the **IF** statement code block, call the **AddConsole** method of the **logging** parameter.
 
-18. In the **ShirtController** class, add **using** statements for the following namespaces:
+19. After the **IF** statement code block, add an **ELSE** statement. 
+
+20. Inside the **ELSE** statement code block, call the **AddFile** method of the **logging** parameter. 
+
+21. Pass the **config** variable to the **AddFile** method.
+
+22. In the **ShirtController** class, add **USING** statement for the following namespace:
    - **Microsoft.Extensions.Logging**
 
-19. Create a new field with the following information:
+23. Create a new field with the following information:
 
    - Scope: **private**
    - Type: **ILogger**
    - Name: **_logger**
 
-20. In the constructor, accept an additional parameter using the following information:
+24. In the constructor, accept an additional parameter using the following information:
 
    - Type: **ILogger&lt;ShirtController&gt;**
    - Name: **logger**
 
-21. In the **ShirtController** constructor, initialize the **_logger** field with the value of the **logger** parameter.
+25. In the **ShirtController** constructor, initialize the **_logger** field with the value of the **logger** parameter.
 
-22. In the **AddShirt** method, after calling the **AddShirt** method of the **_repository** variable, call the **LogDebug** method of the **_logger** variable. Pass **$"A {shirt.Color.ToString()} shirt of size {shirt.Size.ToString()} with a price of {shirt.GetFormattedTaxedPrice(1.2F)} was added successfully."** as a parameter to the **LogDebug** method.
+26. In the **AddShirt** method, after calling the **AddShirt** method of the **_repository** variable, call the **LogDebug** method of the **_logger** variable. 
 
-22. Delete the contents of the **Delete** method.
+27. Pass **$"A {shirt.Color.ToString()} shirt of size {shirt.Size.ToString()} with a price of {shirt.GetFormattedTaxedPrice(1.2F)} was added successfully."** as parameter to the **LogDebug** method.
 
-23. In the **Delete** method, create an **TRY** statement.
+28. Delete the contents of the **Delete** method.
 
-14. Inside the **TRY** statement code block, call the **RemoveShirt** method of the **_repository** parameter. Pass the **id** parameter to the **RemoveShirt** method.
+29. In the **Delete** method, create an **TRY** statement.
 
-15. Inside the **TRY** statement code block, call the **LogDebug** method of the **_logger** parameter. Pass **$"A shirt with id {id} was removed successfully."** as parameter to the **LogDebug** method.
+30. Inside the **TRY** statement code block, call the **RemoveShirt** method of the **_repository** parameter. 
 
-16. Inside the **TRY** statement code block, return the **RedirectToActionResult** using the **RedirectToAction** method. Pass **"Index"** as parameter to the **RedirectToAction** method.
+31. Pass the **id** parameter to the **RemoveShirt** method.
 
-16. After the **TRY** statement code block, add a **CATCH** statement with the following information:
+32. Inside the **TRY** statement code block, call the **LogDebug** method of the **_logger** parameter. 
+
+33. Pass **$"A shirt with id {id} was removed successfully."** as parameter to the **LogDebug** method.
+
+34. Inside the **TRY** statement code block, return the **RedirectToActionResult** using the **RedirectToAction** method. 
+
+35. Pass **"Index"** as parameter to the **RedirectToAction** method.
+
+36. After the **TRY** statement code block, add a **CATCH** statement with the following information:
     - Parameter:
         - Type: **Exception**
         - Name: **ex**
 
-17. Inside the **CATCH** statement code block, call the **LogDebug** method of the **_logger** parameter. Pass the **ex** parameter and **$"An error occured while trying to delete shirt with id of {id}."** as parameter to the **LogDebug** method.
+37. Inside the **CATCH** statement code block, call the **LogDebug** method of the **_logger** parameter. 
 
-18. Inside the **CATCH** statement code block, throw the **ex** parameter.
+38. Pass the **ex** parameter and **$"An error occured while trying to delete shirt with id of {id}."** as parameter to the **LogDebug** method.
 
-19. Save all the changes.
+39. Inside the **CATCH** statement code block, throw the **ex** parameter.
+
+40. Save all the changes.
 
 #### Task 2: Test the controller using a mocking framework
 
@@ -625,7 +655,7 @@ The main tasks for this exercise are as follows:
 2. In the **Package Manager Console** tab, type the following command: 
     - **Install-Package Moq -Version 4.9.0 -ProjectName ShirtStoreWebsite.Tests**.
 
-3. In the **ShirtControllerTest** class, add **using** statements for the following namespaces:
+3. In the **ShirtControllerTest** class, add **USING** statements for the following namespaces:
    - **Microsoft.Extensions.Logging**
    - **moq**
 
@@ -634,7 +664,7 @@ The main tasks for this exercise are as follows:
     - Name: **mockLogger**
     - Value: **new Mock&lt;ILogger&lt;ShirtController&gt;&gt;()**
 
-5. In the initialization of the **shirtController** variable, pass **mockLogger.Object** as a second parameter to its constructor.
+5. In the initialization of the **shirtController** variable, pass **mockLogger.Object** as second parameter to its constructor.
 
 6. Save all the changes.
 
@@ -660,12 +690,12 @@ The main tasks for this exercise are as follows:
 
 5. In the **Output** tab, clear all text.
 
-6. In **Microsoft Edge**, delete the top **Shirt** in stock.
+6. In **Microsoft Edge**, delete the top Shirt in stock.
 
 7. In the **Output** tab, locate the following text:
     - **A shirt with id 1 was removed successfully.**
 
-8. Close the **Microsoft Edge** window.
+8. Close **Microsoft Edge**.
 
 #### Task 5: Run the application in production environment
 
@@ -679,7 +709,7 @@ The main tasks for this exercise are as follows:
 4. In **File Explorer**, navigate to **Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and open the **shirt_store_logs-XXXXXXXX.txt** file.
     >**Note:** Inspect the **ArgumentNullException** stack trace.
 
-5. Close the **shirt_store_logs-XXXXXXXX.txt** file.
+5. Close **shirt_store_logs-XXXXXXXX.txt**.
 
 6. Close **Microsoft Visual Studio**.
 
