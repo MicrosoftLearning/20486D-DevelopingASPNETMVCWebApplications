@@ -1,0 +1,27 @@
+﻿@model ProductsWebsite.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetProduct</title>
+    <link type="text/css" rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="product-wrapper">
+        <div>
+            <h1>@Html.DisplayFor(modelItem => Model.Name)</h1>
+            <div>@Html.DisplayFor(modelItem => Model.FormattedPrice)</div>
+            <div>@Html.DisplayFor(modelItem => Model.Description)</div>
+            <div><a asp-action="Index">Back</a></div>
+        </div>
+        <div>
+            <img class="product-img" src="@Url.Action("GetImage", new {name = Model.ImageName })" />
+        </div>
+    </div>
+</body>
+</html>
