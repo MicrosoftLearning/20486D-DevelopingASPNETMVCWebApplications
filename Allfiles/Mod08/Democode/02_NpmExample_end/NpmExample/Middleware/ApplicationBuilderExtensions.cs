@@ -6,7 +6,7 @@ using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.FileProviders;
 
-namespace JSLibraryExample.Middleware
+namespace NpmExample.Middleware
 {
     public static class ApplicationBuilderExtensions
     {

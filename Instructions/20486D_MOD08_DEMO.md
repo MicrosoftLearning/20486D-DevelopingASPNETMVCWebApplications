@@ -228,7 +228,7 @@
 
 # Lesson 2: Using CSS and JavaScript
 
-### Demonstration: How to Use NPM to Add a JavaScript Library
+### Demonstration: How to use NPM to add a Library
 
 #### Preparation Steps 
 
@@ -236,13 +236,13 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod08\Democode\02_JSLibraryExample_begin**, and then double-click **JSLibraryExample.sln**.
+1. Navigate to **Allfiles\Mod08\Democode\02_NpmExample_begin**, and then double-click **NpmExample.sln**.
 
-2. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **JSLibraryExample**, point to **Add**, and then click **New Item**.
+2. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **NpmExample**, point to **Add**, and then click **New Item**.
 
-3. In the **Add New Item - JSLibraryExample** dialog box, in the search box type **npm**, and then press Enter.
+3. In the **Add New Item - NpmExample** dialog box, in the search box type **npm**, and then press Enter.
 
-4. In the **Add New Item - JSLibraryExample** dialog box, click **npm Configuration File**, and then click **Add**.
+4. In the **Add New Item - NpmExample** dialog box, click **npm Configuration File**, and then click **Add**.
 
 5. In the **package.json** file, locate the following code:
   ```cs
@@ -257,21 +257,21 @@
         }
 ```
 
-7. In the **JSLibraryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
+7. In the **NpmExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
 
     >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package.
 
-8. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, in **Explorer Toolbar Options** click **Show All Files**.
+8. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, in **Explorer Toolbar Options** click **Show All Files**.
 
-      >**Note:** In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
+      >**Note:** In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
       
-9. In **Solution Explorer**, right-click **JSLibraryExample**, point to **Add**, and then click **New Folder**.
+9. In **Solution Explorer**, right-click **NpmExample**, point to **Add**, and then click **New Folder**.
 
 10. In the **NewFolder** text box, type **Middleware**, and then press Enter.
 
 11. In **Solution Explorer**, right-click **Middleware**, point to **Add**, and then click **Class**.
 
-12. In the **Add New Item – JSLibraryExample** dialog box, in the **Name** text box, type **ApplicationBuilderExtensions**, and then click **Add**.
+12. In the **Add New Item – NpmExample** dialog box, in the **Name** text box, type **ApplicationBuilderExtensions**, and then click **Add**.
 
 13. In the **ApplicationBuilderExtensions.cs** code window, locate the following code:
   ```cs
@@ -309,7 +309,7 @@
           return applicationBuilder;
        }
 ```
-18. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+18. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
 19. In the **Startup.cs** code window, locate the following code:
   ```cs
@@ -317,7 +317,7 @@
 ```
 20. Ensure that the cursor is at the end of the **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
   ```cs
-       using JSLibraryExample.Middleware;
+       using NpmExample.Middleware;
 ```
 
 21. In the **Startup.cs** code window, locate the following code: 
@@ -333,7 +333,7 @@
        app.UseNodeModules(env.ContentRootPath);
 ```
 
-23. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
+23. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
 
 24. In the **_Layout.cshtml** file, locate the following code:
   ```cs
@@ -346,7 +346,7 @@
        <script src="~/js/jquery-function.js"></script>
 ```
 
-26. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
+26. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
 
 27. In the **HomeController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
@@ -373,15 +373,15 @@
        </div>
 ```
 
-33. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+33. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
 
 34. In the **NewFolder** text box, type **css**, and then press Enter.
 
-35. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **css**, point to **Add**, and then click **New Item**.
+35. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **css**, point to **Add**, and then click **New Item**.
 
-36. In the **Add New Item – JSLibraryExample** dialog box, click **Web**, and then, in the result pane, click **Style Sheet**.
+36. In the **Add New Item – NpmExample** dialog box, click **Web**, and then, in the result pane, click **Style Sheet**.
 
-37. In the **Add New Item – JSLibraryExample** dialog box, in the **Name** text box, type **style-example**, and then click **Add**.
+37. In the **Add New Item – NpmExample** dialog box, in the **Name** text box, type **style-example**, and then click **Add**.
 
 38. In the **style-example.css** code window, select the following code: 
   ```cs
@@ -421,7 +421,7 @@
        }
 ```
 
-40. In the **JSLibraryExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Shared**, click **_Layout.cshtml**.
+40. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Shared**, click **_Layout.cshtml**.
 
 41. In the **_Layout.cshtml** file, locate the following code:
   ```cs
@@ -433,15 +433,15 @@
        <link href="~/css/style-example.css" rel="stylesheet" />
 ```
 
-43. In the **JSLibraryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+43. In the **NpmExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-44. In the **JSLibraryExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+44. In the **NpmExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 45. In **Microsoft Edge**, click **Run jQuery Function** button to verify that **jquery** package added correctly using **NPM**.
       
 46. In **Microsoft Edge**, click **Close**.
 
-47. In the **JSLibraryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+47. In the **NpmExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Using jQuery
 
