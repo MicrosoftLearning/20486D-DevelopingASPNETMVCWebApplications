@@ -100,7 +100,7 @@ The main tasks for this exercise are as follows:
 
 >**Results** : After completing this exercise, you will be able to create a Test project and test a model while fixing its code, as in a Test Driven Development environment.
 
-### Exercise 2: Testing a Controller Using a Fake Repository
+### Exercise 2: Testing a Controller using a Fake Repository
 
 #### Scenario
 
@@ -121,7 +121,7 @@ The main tasks for this exercise are as follows:
 
 6.	Implement the controller class so the test will pass.
 
-7. Run the unit test – it succeeds
+1. Run the unit test – it succeeds
 
 #### Task 1: Create an interface repository
 
