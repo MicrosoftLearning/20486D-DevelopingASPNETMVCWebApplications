@@ -121,7 +121,7 @@ The main tasks for this exercise are as follows:
 
 6.	Implement the controller class so the test will pass.
 
-1. Run the unit test – it succeeds
+7. Run the unit test – it succeeds
 
 #### Task 1: Create an interface repository
 
