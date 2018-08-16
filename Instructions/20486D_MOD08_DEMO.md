@@ -439,7 +439,7 @@
 
 45. In the **NpmExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-46. In **Microsoft Edge**, click **Run jQuery Function** and then verify that the **jquery** package added correctly using **NPM**.
+46. In **Microsoft Edge**, click **Run jQuery Function**.
       
 47. In **Microsoft Edge**, click **Close**.
 
