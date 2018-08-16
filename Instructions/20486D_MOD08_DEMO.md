@@ -263,7 +263,7 @@
 
     >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package.
 
-9. In **Solution Explorer** menu bar, click **Show All Files**
+9. In **Solution Explorer** menu bar, click **Show All Files**.
 
       >**Note:** In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added, which contains the **jquery** package.
       
@@ -455,7 +455,7 @@
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_end\JQueryExample**, copy the address in the address bar.
+1. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin\JQueryExample**, copy the address in the address bar.
 
 2. Go to **Start**, and then type **cmd**.
 
