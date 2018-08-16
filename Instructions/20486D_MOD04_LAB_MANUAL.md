@@ -5,19 +5,19 @@
 #### Scenario
 
 You have been asked to add controllers to a new application.
-The controllers should include actions that return a view, there should also be an action that returns the photo as a .jpg file to be displayed on a webpage and an action that redirects to another action in another controller.
+The controllers should include actions that return a view, also add an action that returns the photo as a .jpg file to show on a webpage and an action that redirects to another action in another controller.
 Additionally, you are asked to configure routes in a variety of ways.
 
-The members of your development team are new to ASP.NET Core MVC and they find the use of controller actions confusing. Therefore, you need to help them by adding a component that displays action parameters in an external file whenever an action is executed. To achieve this, you will add an action filter.
+The members of your development team are new to ASP.NET Core MVC and they find the use of controller actions confusing. Therefore, you need to help them by adding a component that displays action parameters in an external file whenever an action runs. To achieve this, you will add an action filter.
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
 - Add an MVC controller to a web application.
-- Write actions in an MVC controller that responds to user operations.
+- Write actions in an MVC controller that respond to user operations.
 - Add custom routes to a web application. 
-- Write action filters that runs code for multiple actions.
+- Write action filters that run code for multiple actions.
 
 #### Lab Setup
 
@@ -90,11 +90,11 @@ The main tasks for this exercise are as follows:
     - Key: **Page**
     - Value: **Selected city**
 
-5. Add a variable named **city** of type **City** with the value of **null**. 
+5. Add a varible named **city** of type **City** with the value of **null**. 
 
-6. Create an **IF** statement that checks that the value of the **city** variable is  **null**. If the value is **null**, return the **NotFoundResult** result using the **NotFound** method.
+6. Create an **IF** statement that checks that the value of the **city** varible is  **null**. If the value is **null**, return the **NotFoundResult** result using the **NotFound** method.
 
-7. After the **IF** statement, return the **ViewResult** result using the **View** method. Pass the **city** variable as a parameter to the **View** method.
+7. After the **IF** statement, return the **ViewResult** result using the **View** method. Pass the **city** varible as a parameter to the **View** method.
 
 8. Add a method for the **GetImage** action with the following information:
     - Scope: **public**
@@ -105,13 +105,13 @@ The main tasks for this exercise are as follows:
     - Key: **Message**
     - Value: **Display Image**
 
-10. Add a variable named **requestedCity** of type **City** with the value of **null**.
+10. Add a varible named **requestedCity** of type **City** with the value of **null**.
 
-11. Create an **IF** statement that checks that the value of the **requestedCity** variable is not null. 
+11. Create an **IF** statement that checks that the value of the **requestedCity** varible is not null. 
 
-12. Inside the **IF** statement, add a variable named **fullPath** of type **string** with a value of empty string (**""**).
+12. Inside the **IF** statement, add a varible named **fullPath** of type **string** with a value of empty string (**""**).
 
-13. Add a variable named **fileOnDisk** of type **FileStream**. 
+13. Add a varible named **fileOnDisk** of type **FileStream**. 
 
 14. Initialize the **fileOnDisk** varaible using the **FileStream** constructor and pass it the following parameters: **fullPath** and **FileMode.Open**. 
 
@@ -120,7 +120,7 @@ The main tasks for this exercise are as follows:
 16. Create a variable named **br** of type **BinaryReader** inside a **USING** statement.
 
 17. Initialize the **br** varaible using the **BinaryReader** constructor, and pass it the following parameter: **fileOnDisk**.  
-18. Inside the **USING** statement block, assign the **fileBytes** variable the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
+18. Inside the **USING** statement block, assign the **fileBytes** varible the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
 
 19. After the **USING** statement block, return a **FileResult** result using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedCity**. 
 
@@ -171,15 +171,15 @@ The main tasks for this exercise are as follows:
 
 6. Call the **CityInitializeData** method of the **_data** field. 
 
-7. In the **Details** action, initiate the **city** variable with the value of **_data.GetCityById(id)** instead of **null**.
+7. In the **Details** action, initiate the **city** varible with the value of **_data.GetCityById(id)** instead of **null**.
 
-8. In the **GetImage** action, initiate the **requestedCity** variable with the value of **_data.GetCityById(cityId)** instead of **null**.
+8. In the **GetImage** action, initiate the **requestedCity** varible with the value of **_data.GetCityById(cityId)** instead of **null**.
 
-9. At the beginning of **IF** statment, add a variable named **webRootpath** of type **string** with the value of **_environment.WebRootPath**. 
+9. At the beginning of **IF** statment, add a varible named **webRootpath** of type **string** with the value of **_environment.WebRootPath**. 
 
-10. Add a variable named **folderPath** of type **string** with the value of  **"\\images\\"**.
+10. Add a varible named **folderPath** of type **string** with the value of  **"\\images\\"**.
 
-11. Initiate the value of the **fullPath** variable with the value of  **webRootpath + folderPath + requestedCity.ImageName** instead of empty string **("")**.
+11. Initiate the value of the **fullPath** varible with the value of  **webRootpath + folderPath + requestedCity.ImageName** instead of empty string **("")**.
 
 
 #### Task 6: Store the result in a ViewBag property
@@ -204,7 +204,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-An important design priority for the application is that the visitors should be able to easily and logically locate cities. To implement these priority, you have been asked to configure routes by using the routing table that enables the entry of user-friendly URLs to access cities.
+An important design priority for the application is that the visitors should be able to easily and logically locate cities. To implement these priorities, you have been asked to configure routes by using the routing table that enables the entry of user-friendly URLs to access cities.
 
 The main tasks for this exercise are as follows:
 
@@ -391,21 +391,21 @@ The main tasks for this exercise are as follows:
 
 3. In the **OnActionExecuting** method code block, call the static **CreateDirectory** method of the **Directory** class, and pass the **_logPath** field as a parameter.
 
-4. Add a variable named **actionName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
+4. Add a varible named **actionName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
 
-5. Add a variable named **controllerName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
+5. Add a varible named **controllerName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
 
-6. Create a variable of type **FileStream** named **fs** inside a **USING** statement. 
+6. Create a varible of type **FileStream** named **fs** inside a **USING** statement. 
 
 7. Initialize the **fs** variable using the **FileStream** constructor, and pass it the following parameters: **_fullPath**, and **FileMode.Create**.  
 
 8. In the **USING** statement code block, create a nested **USING** statement.
 
-9. In the nested **USING** statement create a variable of type **StreamWriter** named **sw**.
+9. In the nested **USING** statement create a varible of type **StreamWriter** named **sw**.
 
-10. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  variable as a parameter.
+10. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  varible as a parameter.
 
-11. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** variable, and pass it the following string **$"The action {actionName} in {controllerName} controller started, event fired: OnActionExecuting"** as a parameter.
+11. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** varible, and pass it the following string **$"The action {actionName} in {controllerName} controller started, event fired: OnActionExecuting"** as a parameter.
 
 
 #### Task 3: Add a handler for the OnActionExecuted event
@@ -419,21 +419,21 @@ The main tasks for this exercise are as follows:
     - Type: **ActionExecutedContext** 
     - Name: **filterContext**
 
-3. Add a variable named **actionName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
+3. Add a varible named **actionName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
 
-4. Add a variable named **controllerName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
+4. Add a varible named **controllerName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
 
-5. Create a variable of type **FileStream** named **fs** inside a **USING** statement. 
+5. Create a varible of type **FileStream** named **fs** inside a **USING** statement. 
 
 6. Initialize the **fs** variable using the **FileStream** constructor, and pass it the following parameters: **_fullPath**, **FileMode.Create**.  
 
 7. In the **USING** statement code block, create a nested **USING** statement.
 
-8. In the nested **USING** statement create a variable of type **StreamWriter** named **sw**.
+8. In the nested **USING** statement create a varible of type **StreamWriter** named **sw**.
 
-9. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  variable as a parameter.
+9. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  varible as a parameter.
 
-10. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** variable, and pass it the following string **$"The action {actionName} in {controllerName} controller finished, event fired: OnActionExecuted"** as a parameter.
+10. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** varible, and pass it the following string **$"The action {actionName} in {controllerName} controller finished, event fired: OnActionExecuted"** as a parameter.
 
 
 #### Task 4: Add a handler for the OnResultExecuted event
@@ -447,23 +447,23 @@ The main tasks for this exercise are as follows:
     - Type: **ResultExecutedContext** 
     - Name: **filterContext**
 
-3. Add a variable named **actionName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
+3. Add a varible named **actionName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["action"]**.
 
-4. Add a variable named **controllerName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
+4. Add a varible named **controllerName** of type **string**, and initialize it with the value **filterContext.ActionDescriptor.RouteValues["controller"]**.
 
-5. Add a variable named **result** of type **ViewResult**, and initialize it with the value **(ViewResult)filterContext.Result**.
+5. Add a varible named **result** of type **ViewResult**, and initialize it with the value **(ViewResult)filterContext.Result**.
 
-6. Create a variable of type **FileStream** named **fs** inside a **USING** statement. 
+6. Create a varible of type **FileStream** named **fs** inside a **USING** statement. 
 
 7. Initialize the **fs** variable using the **FileStream** constructor, and pass it the following parameters: **_fullPath**, **FileMode.Create**.  
 
 8. In the **USING** statement code block, create a nested **USING** statement.
 
-9. In the nested **USING** statement create a variable of type **StreamWriter** named **sw**.
+9. In the nested **USING** statement create a varible of type **StreamWriter** named **sw**.
 
-10. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  variable as a parameter.
+10. Initialize the **sw** varaible using the **StreamWriter** constructor with **fs**  varible as a parameter.
 
-11. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** variable, and pass it the following string **$"The action {actionName} in {controllerName} controller has the following viewData : {result.ViewData.Values.FirstOrDefault()}, event fired: OnResultExecuted""** as a parameter.
+11. Inside the nested **USING** statement code block, call the **WriteLine** method of the **sw** varible, and pass it the following string **$"The action {actionName} in {controllerName} controller has the following viewData : {result.ViewData.Values.FirstOrDefault()}, event fired: OnResultExecuted""** as a parameter.
 
 #### Task 5: Apply the action filter to the controller action
 
