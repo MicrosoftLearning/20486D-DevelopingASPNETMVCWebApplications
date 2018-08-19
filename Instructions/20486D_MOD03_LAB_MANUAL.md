@@ -104,9 +104,9 @@ The main tasks for this exercise are as follows:
 5. In the **BODY** element, add a **P** element.
 
 6. In the **P** element, add a **H1** element with the following information: 
-    - Content: **Favorite ball game poll**
+    - Content: **Favorite Ball Game Poll**
 
-7. After the **H1** element, add the following content: **Please select your favorite ball game and then press Submit Poll. The poll is anonymous and does not contain names.**
+7. After the **H1** element, add the following content: **Please select your favorite ball game and then press Submit Poll.**
 
 8. After the **P** element, add a **FORM** element with the following information: 
     - Class: **submit-form**
