@@ -228,7 +228,7 @@
 
 # Lesson 2: Using CSS and JavaScript
 
-### Demonstration: How to Use NPM to Add a Library
+### Demonstration: How to Use npm to Add a Library
 
 #### Preparation Steps 
 
@@ -369,7 +369,7 @@
 33. Replace the selected code with the following code: 
   ```cs
        <div>
-            <h1>Use NPM to Add a JavaScript Library</h1>
+            <h1>Use npm to Add a Library</h1>
             <button id="btn-jquery-func">Run jQuery Function</button>
             <div class="box"></div>
        </div>
@@ -468,7 +468,7 @@
        cd  {copied folder path}
 ```
 
->**Note:** If the **{copied folder path}** is in disk drive D, then you should type **d:** before typing the **cd  {copied folder path}** command.
+>**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
