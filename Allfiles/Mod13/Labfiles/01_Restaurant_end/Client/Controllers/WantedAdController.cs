@@ -15,12 +15,6 @@ namespace Client.Controllers
         }
 
         [HttpGet]
-        public IActionResult Details(int id)
-        {
-            return View();
-        }
-
-        [HttpGet]
         public IActionResult Create()
         {
             return View();

@@ -1,7 +1,23 @@
-﻿
+﻿@model IEnumerable<Server.Models.RestaurantBranch>
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
 
+<div class="img-container">
+    @foreach (var item in Model)
+    {
+    <div class="item">
+        <h3>
+            @Html.DisplayFor(modelItem => item.City)
+            @Html.DisplayFor(modelItem => item.Street)
+        </h3>
+        <div>
+            <p>
+                @Html.DisplayFor(model => item.Open)
+            </p>
+        </div>
+    </div>
+    }
+</div>

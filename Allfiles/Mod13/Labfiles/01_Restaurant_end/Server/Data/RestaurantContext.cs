@@ -16,6 +16,7 @@ namespace Server.Data
 
         public DbSet<RestaurantBranch> RestaurantBranches { get; set; }
         public DbSet<EmployeeRequirements> EmployeesRequirements { get; set; }
+        public DbSet<OrderTable> ReservationsTables { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,7 +37,6 @@ namespace Server.Data
                    City = "LESNEWTH",
                    Open = true,
                    PhoneNumber = "070-1136-7991"
-
                },
                 new RestaurantBranch
                 {

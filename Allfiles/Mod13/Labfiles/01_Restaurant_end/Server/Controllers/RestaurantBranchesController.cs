@@ -21,7 +21,7 @@ namespace Server.Controllers
         }
 
         [HttpGet]
-        [Produces("application/xml")]
+        //[Produces("application/xml")]
         public ActionResult<List<RestaurantBranch>> Get()
         {
             return _context.RestaurantBranches.ToList();
@@ -37,17 +37,6 @@ namespace Server.Controllers
             }
 
             return restaurant;
-        }
-
-        [HttpPost]
-        public ActionResult<RestaurantBranch> Post(RestaurantBranch restaurantBranch)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            _context.Add(restaurantBranch);
-            return CreatedAtAction(nameof(GetById), new { id = restaurantBranch.Id }, restaurantBranch);
         }
     }
 }

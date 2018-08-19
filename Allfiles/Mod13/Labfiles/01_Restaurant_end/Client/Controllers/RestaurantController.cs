@@ -21,7 +21,7 @@ namespace Client.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:64231/api/RestaurantBranches");
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches");
             request.Headers.Add("Accept", "application/json");
 
             var client = _httpClient.CreateClient();
@@ -34,9 +34,9 @@ namespace Client.Controllers
         }
 
         [HttpGet("/Details")]
-        public async Task<IActionResult> DetailsAsync(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:64231/api/RestaurantBranches/" + id);
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches/" + id);
             request.Headers.Add("Accept", "application/json");
             var client = _httpClient.CreateClient();
 
@@ -46,21 +46,6 @@ namespace Client.Controllers
                 _RestaurantBranch = await response.Content.ReadAsAsync<RestaurantBranch>();
             }
             return View(_RestaurantBranch);
-        }
-
-        [HttpGet("/Restaurant")]
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost("/Restaurant")]
-        public async Task<IActionResult> CreatePostAsync(RestaurantBranch restaurant)
-        {
-            var client = _httpClient.CreateClient();
-            var response = await client.PostAsJsonAsync("http://localhost:64231/api/RestaurantBranches", restaurant);
-            response.EnsureSuccessStatusCode();
-            return View(restaurant);
         }
     }
 }

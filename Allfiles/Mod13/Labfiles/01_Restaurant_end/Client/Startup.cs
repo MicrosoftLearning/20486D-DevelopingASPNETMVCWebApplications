@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Client.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,6 +15,7 @@ namespace Client
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
             services.AddHttpClient();
         }
 
@@ -21,19 +23,25 @@ namespace Client
         {
             app.UseStaticFiles();
 
+            app.UseNodeModules(env.ContentRootPath);
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "RestaurantRoute",
+                     name: "RestaurantRoute",
                     template: "{controller}/{action}/{id?}",
                     defaults: new { controller = "Restaurant", action = "Index" },
                     constraints: new { id = "[0-9]+" });
                 routes.MapRoute(
-                     name: "EmployeeRoute",
+                    name: "ReservationRoute",
                     template: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "Employee", action = "Index" },
-                    constraints: new { id = "[0-9]+" }
-                    );
+                    defaults: new { controller = "Reservation", action = "Create" });
+                routes.MapRoute(
+                     name: "WantedAdRoute",
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "WantedAd", action = "Index" },
+                    constraints: new { id = "[0-9]+" });
+
             });
         }
     }
