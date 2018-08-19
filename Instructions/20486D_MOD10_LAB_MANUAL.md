@@ -136,7 +136,7 @@ The main tasks for this exercise are as follows:
      - Name:  **IShirtRepository**
      - Scope: **public**
 
-3. In the **IShirtRepository** interface, add **USING** statements for the following namespaces:
+3. In the **IShirtRepository** interface, add **USING** statement for the following namespace:
    - **ShirtStoreWebsite.Models**
 
 4. Declare a method with the following information:
@@ -201,7 +201,7 @@ The main tasks for this exercise are as follows:
         - Type: **Shirt**
         - Name: **shirt**
 
-8. In the **AddShirt** method, return **true**.
+8. In the **AddShirt** method, return **TRUE**.
 
 9. Add a method with the following information:
 
@@ -212,7 +212,7 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-10. In the **RemoveShirt** method, return **true**.
+10. In the **RemoveShirt** method, return **TRUE**.
 
 #### Task 3: Pass the fake repository to the constructor of a controller
 
@@ -255,7 +255,7 @@ The main tasks for this exercise are as follows:
     - **ShirtStoreWebsite.Services**
     - **ShirtStoreWebsite.Tests.FakeRepositories**
 
-4. Add a **TestClass** attribute to the **ShirtControllerTest** class.
+4. Above the **ShirtControllerTest** class, add a **TestClass** attribute.
 
 5. Add a method with the following information:
 
@@ -263,28 +263,28 @@ The main tasks for this exercise are as follows:
     - Return Type: **void**
     - Name: **IsIndexReturnsAllShirts**
 
-6. Add a **TestMethod** attribute to the **IsIndexReturnsAllShirts** method.
+6. Above the **IsIndexReturnsAllShirts** method, add a **TestMethod** attribute.
 
-7. Create a variable named **fakeShirtRepository** of type **IShirtRepository**
+7. Create a variable named **fakeShirtRepository** of type **IShirtRepository**.
 
-9. Initialize the **fakeShirtRepository** variable using the **fakeShirtRepository** constructor.
+8. Initialize the **fakeShirtRepository** variable using the **fakeShirtRepository** constructor.
 
-10. Create a variable named **shirtController** of type **ShirtController**.
+9.  Create a variable named **shirtController** of type **ShirtController**.
 
-11. Initialize the **shirtController** variable using the **shirtController** constructor and pass the following parameters:
+10. Initialize the **shirtController** variable using the **shirtController** constructor and pass the following parameter:
     - **fakeShirtRepository** 
 
-12. reate a variable named **viewResult** of type **ViewResult**.
+11. reate a variable named **viewResult** of type **ViewResult**.
 
-13. Initialize the **viewResult** variable using the **Index** method of the **shirtController** variable, store the return value as a **ViewResult** type using the **as** operator.
+12. Initialize the **viewResult** variable using the **Index** method of the **shirtController** variable, store the return value as a **ViewResult** type using the **as** operator.
 
-14. Create a variable named **shirts** of type **List&lt;Shirt&gt;**.
+13. Create a variable named **shirts** of type **List&lt;Shirt&gt;**.
 
-15. Initialize the **shirts** variable using the **Model** property of the **viewResult** variable, store the value as **List&lt;Shirt&gt;** type using the **as** operator.
+14. Initialize the **shirts** variable using the **Model** property of the **viewResult** variable, store the value as **List&lt;Shirt&gt;** type using the **as** operator.
 
-16. Call the static **AreEqual** method of the **Assert** class, pass the **Count** property of the **shirts** variable and the integer **3**.
+15. Call the static **AreEqual** method of the **Assert** class, pass the **Count** property of the **shirts** variable and the integer **3**.
 
-17. Save all the changes.
+16. Save all the changes.
 
 #### Task 5: Run the unit test – it should fail
 
@@ -387,11 +387,11 @@ The main tasks for this exercise are as follows:
 
 14. Create an **IF** statement that checks that the value of **entries** is greater then **0**.
 
-15. Inside the **IF** statement code block, return **true**.
+15. Inside the **IF** statement code block, return **TRUE**.
 
 16. After the **IF** statement code block, add an **ELSE** statement. 
 
-17. Inside the **ELSE** statement code block, return **false**.
+17. Inside the **ELSE** statement code block, return **FALSE**.
 
 18. Add a method with the following information:
 
@@ -406,19 +406,21 @@ The main tasks for this exercise are as follows:
 
 20. Initialize the **shirt** variable using the **_context.Shirts.SingleOrDefault(m => m.Id == id)** method.
 
-21. Call the **Remove** method of the **_context.Shirts** property. Pass **shirt** as a parameter to the **Remove** method.
+21. Call the **Remove** method of the **_context.Shirts** property. 
 
-22. Add a variable named **entries** of type **int**.
+22. Pass **shirt** as a parameter to the **Remove** method.
 
-23. Initialize the **entries** variable using the **SaveChanges** method of the **_context** field. 
+23. Add a variable named **entries** of type **int**.
 
-24. Create an **IF** statement that checks that the value of **entries** is greater then **0**.
+24. Initialize the **entries** variable using the **SaveChanges** method of the **_context** field. 
 
-25. Inside the **IF** statement code block, return **true**.
+25. Create an **IF** statement that checks that the value of **entries** is greater then **0**.
 
-26. After the **IF** statement code block, add an **ELSE** statement. 
+26. Inside the **IF** statement code block, return **TRUE**.
 
-27. Inside the **ELSE** statement code block, return **false**.
+27. After the **IF** statement code block, add an **ELSE** statement. 
+
+28. Inside the **ELSE** statement code block, return **FALSE**.
 
 #### Task 2: Pass the repository to the controller
 
@@ -482,16 +484,16 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Run the application in development environment
 
-1. Select the **Development** environment, and then start the application without debugging.
+1. Select **Development** environment, and then start the application without debugging.
 
 2. In **Microsoft Edge**, click on the **Delete** link of the top shirt.
     >**Note**: The browser displays the detailed exception page.
 
-3. Close the **Microsoft Edge** window.
+3. Close **Microsoft Edge**.
 
 #### Task 4: Run the application in production environment
 
-1. Select the **Production** environment, and then start the application without debugging.
+1. Select **Production** environment, and then start the application without debugging.
 
 2. In **Microsoft Edge**, click on the **Delete** link of the top shirt.
     >**Note**: The browser displays a custom error page: **error.html**, which is located in the **wwwroot** folder.
@@ -690,7 +692,7 @@ The main tasks for this exercise are as follows:
 
 5. In the **Output** tab, clear all text.
 
-6. In **Microsoft Edge**, delete the top Shirt in stock.
+6. In **Microsoft Edge**, delete the top shirt in stock.
 
 7. In the **Output** tab, locate the following text:
     - **A shirt with id 1 was removed successfully.**
@@ -701,10 +703,10 @@ The main tasks for this exercise are as follows:
 
 1. Select the **production** environment, and then start the application without debugging.
 
-2. In **Microsoft Edge**, navigate to the following **URL**:
-    - URL: **http://localhost:[port]/Shirt/Delete/-1**
+2. In **Microsoft Edge**, access the following relative path:
+    - Path: **http://localhost:[port]/Shirt/Delete/-1**
 
-3. Close the **Microsoft Edge** window.
+3. Close **Microsoft Edge**.
 
 4. In **File Explorer**, navigate to **Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and open the **shirt_store_logs-XXXXXXXX.txt** file.
     >**Note:** Inspect the **ArgumentNullException** stack trace.
