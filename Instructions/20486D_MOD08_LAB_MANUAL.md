@@ -90,7 +90,7 @@ The main tasks for this exercise are as follows:
 	- Href: **@Url.Action("BuyTickets", "ZooSite")**
 	- Content: **Tickets**
 
-11. After the third **UL** element, add a **DIV** element with the following information:
+11. After the **UL** element, add a **DIV** element with the following information:
 
 	- Class: **header-container**
 
