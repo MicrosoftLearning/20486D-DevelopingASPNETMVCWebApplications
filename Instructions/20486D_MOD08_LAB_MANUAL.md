@@ -682,4 +682,4 @@ The main tasks for this exercise are as follows:
 
 9. Close **Microsoft Visual Studio**.
 
->**Results**: After completing this exercise, you will be able to add jQuery to web application using NPM, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 
+>**Results**: After completing this exercise, you will be able to add jQuery to a web application using npm, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 
