@@ -252,98 +252,87 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Style the menu
 
-1. In the bottom of the **zoo-style.css** file, add a **.nav** selector with the following information:
+1. In the bottom of the **zoo-style.css** file, add a **.nav** selector with the following properties:
 
-	- Properties:
-		- list-style-type: **none**
-		- margin: **0**
-		- padding: **0**
-		- overflow: **hidden**
-		- background-color: **#85754e**
-		- Position: **fixed**
-		- top: **0**
-		- left: **0**
-		- width: **100%**
+	- list-style-type: **none**
+	- margin: **0**
+	- padding: **0**
+	- overflow: **hidden**
+	- background-color: **#85754e**
+	- Position: **fixed**
+	- top: **0**
+	- left: **0**
+	- width: **100%**
 
-2. Add a **.nav li** selector with the following information:
+2. Add a **.nav li** selector with the following property:
 
-	- Properties:
-		- float: **left**
+	- float: **left**
 
-3. Add a **.nav li a** selector with the following information:
+3. Add a **.nav li a** selector with the following properties:
 
-	- Properties:
-		- display: **block**
-		- color: **white**
-		- text-align: **center**
-		- padding: **14px 16px**
-		- text-decoration: **none**
+	- display: **block**
+	- color: **white**
+	- text-align: **center**
+	- padding: **14px 16px**
+	- text-decoration: **none**
 
-4. Add a **.nav li a:hover:not(.active)** selector with the following information:
+4. Add a **.nav li a:hover:not(.active)** selector with the following property:
 
-	- Properties:
-		- background-color: **#016b6b**
+	- background-color: **#016b6b**
 
-5. Add a **.active** selector with the following information:
+5. Add a **.active** selector with the following properties:
 
-	- Properties:
-		- background-color: **#008484**		
-		- color: **#fff**
+	- background-color: **#008484**		
+	- color: **#fff**
 
 
 #### Task 4: Style the photos section in Index.cshtml
 
-1. Add a **.photo-index-card** selector with the following information:
+1. Add a **.photo-index-card** selector with the following properties:
 
-	- Properties:
-		- background-color: **#ffffff**
-		- padding: **0**
-		- margin: **10px 5px 15px 18px**
-		- padding-bottom: **25px**
-		- width: **355px**
-		- border: **1px solid #d6d4d4**
-		- border-radius: **10px**
-		- overflow: **hidden**
+	- background-color: **#ffffff**
+	- padding: **0**
+	- margin: **10px 5px 15px 18px**
+	- padding-bottom: **25px**
+	- width: **355px**
+	- border: **1px solid #d6d4d4**
+	- border-radius: **10px**
+	- overflow: **hidden**
 
 #### Task 5: Style a form in BuyTickets.cshtml
 
-1. Add a **.info .form-field** selector with the following information:
+1. Add a **.info .form-field** selector with the following property:
 
-	- Properties:
-		- text-align: **left**
+	- text-align: **left**
 
-2. Add a **.info label** selector with the following information:
+2. Add a **.info label** selector with the following properties:
 
-	- Properties:
-		- width: **118px**
-		- display: **inline-block**
-		- margin-bottom: **10px**
+	- width: **118px**
+	- display: **inline-block**
+	- margin-bottom: **10px**
 
-3. Add a **.info input** selector with the following information:
+3. Add a **.info input** selector with the following properties:
 
-	- Properties:
-		- border-radius: **2px**
-		- line-height: **20px**
-		- border: **1px solid #ccc6c6**
-		- background-color: **#f9f6f6**
+	- border-radius: **2px**
+	- line-height: **20px**
+	- border: **1px solid #ccc6c6**
+	- background-color: **#f9f6f6**
 
-4. Add a **input.submit-btn** selector with the following information:
+4. Add a **input.submit-btn** selector with the following properties:
 
-	- Properties:
-		- width: **100px**
-		- margin-top: **12px**
-		- height: **29px**
-		- background-color: **orange**
-		- font-weight: **bold**
-		- box-shadow: **inset 0px 0px 4px #b77006**
-		- border: **1px solid #a59797**
+	- width: **100px**
+	- margin-top: **12px**
+	- height: **29px**
+	- background-color: **orange**
+	- font-weight: **bold**
+	- box-shadow: **inset 0px 0px 4px #b77006**
+	- border: **1px solid #a59797**
 
-5. Add a **input.submit-btn[disabled]** selector with the following information:
+5. Add a **input.submit-btn[disabled]** selector with the following properties:
 
-	- Properties:
-		- opacity: **0.8**
-		- background-color: **whitesmoke**
-		- box-shadow: **none**
+	- opacity: **0.8**
+	- background-color: **whitesmoke**
+	- box-shadow: **none**
 
 >**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, link the CSS file to the layout and add new CSS rules. 
 
