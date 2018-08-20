@@ -386,9 +386,7 @@ The main tasks for this exercise are as follows:
 
 5. In the **FOR** loop code block, assign the **sum** variable the value of **sum + parseFloat(parseFloat(rows[i].innerHTML).toFixed(2))**.
 
-6. After the **FOR** loop code block, create a variable named **sumElement** with the value of **document.getElementById("sum")**.
-
-7. Assign the **innerHTML** property of the **sumElement** variable the value of **"Total: $" + sum**.
+6. Assign the **innerHTML** property of **document.getElementById("sum")** to **"Total: $" + sum**.
 
 >**Results**: After completing this exercise, you will be able to add a **JavaScript File** and write JavaScript code to handle user interactions. 
 
