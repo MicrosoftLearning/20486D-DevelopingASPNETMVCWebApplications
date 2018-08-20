@@ -337,10 +337,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will:
-
-- Add and link a javascript file to a view.
-- Add a function to calculate the total cost of the tickets.
+To calculate the total cost of the tickets, you have been asked to add a function in JavaScript. In this exercise you will add a JavaScript file and add a link to the JavaScript file from a view.
 
 The main tasks for this exercise are as follows:
 
