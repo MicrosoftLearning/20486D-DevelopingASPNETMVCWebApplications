@@ -513,7 +513,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 3: Use jQuery to modify an element with a particular id
-1. At the end of the **calculateSum** function, add an **IF** statement that checks that value of **value** variable is not empty.
+1. At the end of the **$** function, add an **IF** statement that checks that value of **value** variable is not empty.
 
 2. Inside the **IF** statement, call the **$** function and pass **'#summery'** as a parameter. 
 
