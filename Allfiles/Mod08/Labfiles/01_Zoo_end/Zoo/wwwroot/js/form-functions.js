@@ -1,6 +1,6 @@
 ﻿
 $(function() {
-    $('.pricing select').change(function (event) {
+    $('.pricing select').change(function(event) {
         var target = $(event.target);
         var value = parseInt(target.val());
         var container = target.parent();
