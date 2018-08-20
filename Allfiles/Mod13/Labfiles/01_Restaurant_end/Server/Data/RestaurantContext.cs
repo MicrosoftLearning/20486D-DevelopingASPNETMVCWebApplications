@@ -34,7 +34,7 @@ namespace Server.Data
                {
                    Id = 2,
                    Street = "106  Jedburgh Road",
-                   City = "LESNEWTH",
+                   City = "Lesnewth",
                    Open = true,
                    PhoneNumber = "070-1136-7991"
                },
@@ -51,7 +51,7 @@ namespace Server.Data
                  {
                      Id = 4,
                      Street = "20 Fitzroy Street",
-                     City = "GREENDALE",
+                     City = "Greendale",
                      Open = true,
                      PhoneNumber = "(03)-8622-6758"
 

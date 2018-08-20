@@ -11,7 +11,7 @@ namespace Server.Models
         public int Id { get; set; }
 
         [StringLength(60, MinimumLength = 3)]
-        public string FistName { get; set; }
+        public string FirstName { get; set; }
 
         [StringLength(60, MinimumLength = 3)]
         public string LastName { get; set; }

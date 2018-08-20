@@ -4,20 +4,24 @@
     ViewData["Title"] = "Index";
 }
 
+<h2 class="title">
+    <span class="span-col-f">Dive Into Our</span>
+    <span class="span-col-s">Restaurant Branches</span>
+</h2>
 
-<div class="img-container">
+<div class="container">
     @foreach (var item in Model)
     {
-    <div class="item">
-        <h3>
-            @Html.DisplayFor(modelItem => item.City)
-            @Html.DisplayFor(modelItem => item.Street)
-        </h3>
-        <div>
-            <p>
-                @Html.DisplayFor(model => item.Open)
-            </p>
+        <div class="photo-index-card">
+            <div class="image-wrapper">
+                <img class="photo-display-img" src="~/images/table-setting.jpg" />
+            </div>
+            <div class="display-picture-title">
+                <h6>@Html.DisplayFor(modelItem => item.City)</h6>
+                <h6>@Html.DisplayFor(modelItem => item.Street)</h6>
+                <h6>@Html.DisplayFor(modelItem => item.PhoneNumber)</h6>                
+            </div>
         </div>
-    </div>
     }
 </div>
+

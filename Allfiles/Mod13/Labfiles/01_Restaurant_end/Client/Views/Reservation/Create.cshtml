@@ -1,9 +1,40 @@
-﻿
+﻿@model Server.Models.OrderTable
+
 @{
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<form method="post" enctype="multipart/form-data" asp-action="Create">
+    <div asp-validation-summary="All"></div>
+    <div class="form-field">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div class="form-field">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div class="form-field">
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" />
+        <span asp-validation-for="PhoneNumber"></span>
+    </div>
+    <div class="form-field">
+        <label asp-for="ReservationTime"></label>
+        <input asp-for="ReservationTime" />
+        <span asp-validation-for="ReservationTime"></span>
+    </div>
+    <div class="form-field">
+        <label asp-for="dinnerGuests"></label>
+        <input asp-for="dinnerGuests" />
+        <span asp-validation-for="dinnerGuests"></span>
+    </div>
+    <div class="form-field">
+        <input type="submit" value="Submit" />
+    </div>
+</form>
 
 
 
