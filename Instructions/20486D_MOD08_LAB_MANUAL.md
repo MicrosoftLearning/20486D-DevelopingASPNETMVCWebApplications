@@ -636,11 +636,25 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Client-side validation using jQuery
 
-1. In the **BuyTickets** view, in the beginning of the **Scripts** section code block, add a **SCRIPT** element with the following information:
+1. In the  **package.json** file, add the following key and value in the **dependencies** object:
+
+	- Key: **"jquery-validation"**
+	- Value: **"1.17.0"**
+
+2. In the  **package.json** file, add the following key and value in the **dependencies** object:
+
+	- Key: **"jquery-validation-unobtrusive"**
+	- Value: **"3.2.10"**
+
+3. Save **package.json**.
+
+    >**Note:** In **Solution Explorer**, under **Dependencies**, under **npm** new packages have been added named **jquery-validation**, and **jquery-validation-unobtrusive**.
+
+4. In the **BuyTickets** view, in the beginning of the **Scripts** section code block, add a **SCRIPT** element with the following information:
 
 	- Src: **~/node_modules/jquery-validation/dist/jquery.validate.min.js**
 
-2. Add a **SCRIPT** element with the following information:
+5. Add a **SCRIPT** element with the following information:
 
 	- Src: **~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js**
 
