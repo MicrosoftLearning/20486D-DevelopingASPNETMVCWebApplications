@@ -477,7 +477,7 @@ The main tasks for this exercise are as follows:
 
    - **Zoo.Middleware**
 
-18. In **Startup** class, in the **Configure** method, before the **app.UseMVC** middleware, call the **UseStaticFiles** method of the **app** parameter.
+18. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
 
 19. Call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
 
