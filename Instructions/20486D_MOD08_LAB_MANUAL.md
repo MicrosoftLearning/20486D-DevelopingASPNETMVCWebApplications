@@ -471,7 +471,7 @@ The main tasks for this exercise are as follows:
 
 15. Call the **UseStaticFiles** method of the **applicationBuilder** parameter. Pass **options** variable as a parameter to the **UseStaticFiles** method.
 
-16. Return the **IApplicationBuilder**  result using the **applicationBuilder** variable.
+16. Return the value of the **applicationBuilder** variable.
 
 17. In the **Startup** class, add **USING** statement for the following namespace:
 
