@@ -92,26 +92,26 @@ The main tasks for this exercise are as follows:
 
 11. After the third **UL** element, add a **DIV** element with the following information:
 
-	- Class:**header-container**
+	- Class: **header-container**
 
 12. In the **DIV** element, add an **H1** element with the following information:
 
-	- Class:**content**
+	- Class: **content**
 	- Content: **Welcome to Zoo Center**
 
 13. After the **H1** element, add a **DIV** element with the following information:
 
-	- Class:**slider-buttons**
+	- Class: **slider-buttons**
 
 14. In the **DIV** element, add an **IMG** element with the following information:
 
     - Src: **~/images/prevArrow.png**
-	- Class:**prev**
+	- Class: **prev**
     - Onclick: **prevImage()**
 
 15. After the **IMG** element, add an **IMG** element with the following information:
 
-	- Class:**next**
+	- Class: **next**
     - Src: **~/images/nextArrow.png**
     - Onclick: **nextImage()**
 
