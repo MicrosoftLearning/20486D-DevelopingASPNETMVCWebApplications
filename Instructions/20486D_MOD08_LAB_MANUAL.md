@@ -334,7 +334,7 @@ The main tasks for this exercise are as follows:
 	- background-color: **whitesmoke**
 	- box-shadow: **none**
 
->**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, link the CSS file to the layout and add new CSS rules. 
+>**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, add a link form a layout to the CSS file and add new CSS selectors. 
 
 ### Exercise 3: Using JavaScript
 
