@@ -212,10 +212,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will:
-
-- Add existing CSS file to the web application and link it to the layout. 
-- Style the main menu  and the elements inside the views by adding new CSS rules to an existing CSS file.
+To improve the appearance of the web application, a CSS should be used. In this exercise you will add a CSS file to the web application, and add a link from the layout to the CSS file.
 
 The main tasks for this exercise are as follows:
 
