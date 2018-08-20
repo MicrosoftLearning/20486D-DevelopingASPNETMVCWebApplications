@@ -4,11 +4,11 @@
 
 #### Scenario
 
-You have been asked to add a slideshow to the homepage of the web application that will show some of the animal photos in the database. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
+You have been asked to add a slideshow to the homepage of the zoo web application that will show some of the animals’ photos. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
 
 You want to use jQuery to create this slideshow because you want to cycle through the photos in the browser, without reloading the page each time. 
 
-Also, you have been asked to add a purchase page to enable customers to buy Adult, Child and Senior tickets to the zoo. 
+You have been also asked to add a purchase page to enable customers to buy adult, child and senior tickets to the zoo. To do calculations in the page you will use jQuery. You will also use client-side validation to validate the input typed by the users.
 
 #### Objectives
 
@@ -17,7 +17,7 @@ After completing this lab, you will be able to:
 - Apply a consistent look and feel to the web application.
 - Use layouts to ensure that common interface features, such as the headers, are consistent across the entire web application.
 - Render and execute JavaScript code in the browser.
-- Use the jQuery script library to update and animate page components.
+- Use the jQuery script library to update and animate page elements.
 
 ### Lab Setup
 
