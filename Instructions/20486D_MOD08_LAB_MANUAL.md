@@ -184,7 +184,7 @@ The main tasks for this exercise are as follows:
 
 2. At the beginning of the **Index.cshtml** view, remove the **Layout** property with its value.
 
-#### Task 4: Add existing views to the layout
+#### Task 4: Add existing views to the web application
 
 1. Add existing **.cshtml** files to the **Zoo** project, with the following information:
 
