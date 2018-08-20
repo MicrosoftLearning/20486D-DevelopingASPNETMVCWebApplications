@@ -152,7 +152,7 @@ The main tasks for this exercise are as follows:
 
 	- Class: **photo-index-card**
 
-8. create an **IF** statement that checks that the value of **item.PhotoFileName** is not **NULL**.
+8. Create an **IF** statement that checks that the value of the **item.PhotoFileName** property is not **NULL**.
 
 9. In the **IF** statement, add a **DIV** element with the following information:
 
