@@ -47,7 +47,7 @@ The main tasks for this exercise are as follows:
 
 4. Add existing views to the web application.
 
-5. Add sections to layout and views.
+5. Add a section to the layout.
 
 6. Run the application.
 
@@ -192,7 +192,7 @@ The main tasks for this exercise are as follows:
 	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\Views**
 
 
-#### Task 5: Add sections to layout and views
+#### Task 5: Add a section to the layout
 
 1. In the **_Layout.cshtml** file, after the **DIV** element with **@RenderBody()** content, call the **RenderSection** method. 
 
