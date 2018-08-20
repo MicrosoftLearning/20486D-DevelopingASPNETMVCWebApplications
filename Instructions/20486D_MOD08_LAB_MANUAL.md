@@ -411,7 +411,7 @@ The main tasks for this exercise are as follows:
 
 6. Run the application.
 
-#### Task 1: Use NPM to add jQuery
+#### Task 1: Use npm to add jQuery
 
 1. Add a new **npm Configuration File** to the **Zoo** project.
 
