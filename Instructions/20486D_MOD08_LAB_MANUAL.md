@@ -67,7 +67,7 @@ The main tasks for this exercise are as follows:
 
 4. In the **_Layout.cshtml** file, in the **BODY** element, add a **UL** element with the following information:
 
-	- Class:**nav**
+	- Class: **nav**
 
 5. In the **UL** element, add a **LI** element.
 
