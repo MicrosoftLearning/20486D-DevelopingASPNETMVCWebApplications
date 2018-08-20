@@ -517,7 +517,7 @@ The main tasks for this exercise are as follows:
 
 2. Inside the **IF** statement, call the **$** function and pass **'#summery'** as a parameter. 
 
-3. Chain a **addClass** function call to the **$** function call. Pass **"display-div"** as a parameter as a parameter to the **addClass** function.
+3. Chain a **addClass** function call to the **$** function call. Pass **"display-div"** as a parameter to the **addClass** function.
 
 4. Chain a **removeClass** function call to the **addClass** function call. Pass **"hidden-div"** as a parameter as a parameter to the **addClass** function.
 
