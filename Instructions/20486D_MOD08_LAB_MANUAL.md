@@ -148,27 +148,31 @@ The main tasks for this exercise are as follows:
 	- Variable Name: **item**
 	- Collection: **Model**
 
-7. In the **FOREACH** statement block, create an **IF** statement that checks that the value of **item.PhotoFileName** is not **NULL**.
+7. In the **FOREACH** statement block, Add a **DIV** element with the following information:
 
-8. In the **IF** statement, add a **DIV** element with the following information:
+	- Class: **photo-index-card**
 
-	- Class:**image-wrapper**
+8. create an **IF** statement that checks that the value of **item.PhotoFileName** is not **NULL**.
 
-9. In the **DIV** element, add an **IMG** element with the following information:
+9. In the **IF** statement, add a **DIV** element with the following information:
 
-	- Class:**photo-display-img**
+	- Class: **image-wrapper**
+
+10. In the **DIV** element, add an **IMG** element with the following information:
+
+	- Class: **photo-display-img**
     - Src: **@Url.Action("GetImage", "ZooSite", new { PhotoId = item.PhotoID })**
 
-10. After the **IF** statement, add an **H3** element with the following information:
+11. After the **IF** statement, add an **H3** element with the following information:
 
-	- Class:**display-picture-title**
+	- Class: **display-picture-title**
     - Content: **@Html.DisplayFor(modelItem  => item.Title)**
 
-11. Add a **DIV** element.
+12. Add a **DIV** element.
 
-12. In the **DIV** element, add a **SPAN** element with the following information:
+13. In the **DIV** element, add a **SPAN** element with the following information:
 
-	- Class:**display**
+	- Class: **display**
     - Content: **@Html.DisplayFor(model => item.Description)**
 
 #### Task 3: Add _ViewStart.cshtml
