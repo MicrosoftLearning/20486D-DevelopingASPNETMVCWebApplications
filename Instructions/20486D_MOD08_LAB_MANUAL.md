@@ -557,11 +557,11 @@ The main tasks for this exercise are as follows:
 
 22. Inside the **ELSE** statement code block, call the **$** function and pass **'#formButtons input'** as a parameter. 
 
-23. Chain an **removeAttr** function call to the **$** function call. Pass **"disabled"** as a parameter to the **removeAttr** function.
+23. Chain a **removeAttr** function call to the **$** function call. Pass **"disabled"** as a parameter to the **removeAttr** function.
 
 24. Call the **$** function and pass **'#comment'** as a parameter. 
 
-25. Chain an **hide** function call to the **$** function call. 
+25. Chain a **hide** function call to the **$** function call. 
 
 26. After the **ELSE** ststement call block, call the **calculateSum** function.
 
