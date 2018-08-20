@@ -211,7 +211,7 @@ The main tasks for this exercise are as follows:
 
 5. Close the **Microsoft Edge** window.
 
->**Results**: After completing this exercise, you will be able to add layout and link it to views. You will also be able to add **_ViewStart** file and apply it to views.  
+>**Results**: After completing this exercise, you will be able to add a layout and link views to it. You will also be able to use the **_ViewStart** file in the web application.  
 
 ### Exercise 2: Using CSS 
 
