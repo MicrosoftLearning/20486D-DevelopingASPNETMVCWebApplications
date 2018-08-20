@@ -391,11 +391,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will:
-
-- Use NPM to add jQuery package by editing the package.json file.
-- Add and edit javascript files to handle click events, modify elements and change the style of the application.
-- Add client-side validation using jQuery validation package.
+You have been asked to handle click events, modify elements and change the style of elements. You were also asked to apply client-side validation in the web application. In this exercise you will use npm to add several client-side packages to the web application, and you will use the packages to make various operations in the client-side.
 
 The main tasks for this exercise are as follows:
 
@@ -403,13 +399,11 @@ The main tasks for this exercise are as follows:
 
 2. Use jQuery to add event handlers.
 
-3. Use jQuery to modify an element with a particular id.
+3. Use jQuery to modify elements.
 
-4. Use jQuery to change a style.
+4. Client-side validation using jQuery.
 
-5. Client-side validation using jQuery.
-
-6. Run the application.
+5. Run the application.
 
 #### Task 1: Use npm to add jQuery
 
