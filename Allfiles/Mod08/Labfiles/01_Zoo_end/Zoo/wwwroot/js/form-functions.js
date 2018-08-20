@@ -24,7 +24,8 @@ $(function() {
             $("#summery").addClass("hidden-div").removeClass("display-div");
             $("#formButtons input").attr('disabled', 'disabled');
             $("#comment").show();
-        } else {
+        } 
+        else {
             $("#formButtons input").removeAttr('disabled');
             $("#comment").hide();
         }
