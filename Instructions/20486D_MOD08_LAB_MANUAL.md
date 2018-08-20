@@ -395,7 +395,7 @@ You have been asked to handle click events, modify elements and change the style
 
 The main tasks for this exercise are as follows:
 
-1. Use NPM to add jQuery.
+1. Use npm to add jQuery.
 
 2. Use jQuery to add event handlers.
 
