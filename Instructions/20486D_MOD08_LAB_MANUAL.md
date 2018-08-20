@@ -227,7 +227,7 @@ The main tasks for this exercise are as follows:
 
 4. Style the photos section in Index.cshtml.
 
-5. Style the form.
+5. Style a form in BuyTickets.cshtml
 
 
 #### Task 1: Add existing CSS file to the project
@@ -305,7 +305,7 @@ The main tasks for this exercise are as follows:
 		- border-radius: **10px**
 		- overflow: **hidden**
 
-#### Task 5: Style the form
+#### Task 5: Style a form in BuyTickets.cshtml
 
 1. Add a **.info .form-field** selector with the following information:
 
