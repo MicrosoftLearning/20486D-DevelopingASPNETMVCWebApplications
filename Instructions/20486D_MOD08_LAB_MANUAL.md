@@ -527,7 +527,7 @@ The main tasks for this exercise are as follows:
 
 7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" + calc +'&lt;/span&gt;'**.
 
-8. Create a variable named **row** and assign it the value of **$("&lt;tr id='" + label.text() +"'&gt;")**
+8. Create a variable named **row** and assign it the value of **$("&lt;tr id='" + label.text() +"'&gt;")**.
 
 9. Call the **append** method of the **row** variable. Pass **$("&lt;td&gt;")** as a parameter to the **append** function.
 
@@ -537,7 +537,7 @@ The main tasks for this exercise are as follows:
 
 12. Chain an **append** function call to the **$** function call. Pass **row** as a parameter to the **append** function.
 
-13. After the **IF** statement code block, add and **IF** statement if checks that the value of **$("#totalAmount tr").length** is equal to **0**.
+13. After the **IF** statement code block, add an **IF** statement that checkes if the value of **$("#totalAmount tr").length** is equal to **0**.
 
 14. Inside the **IF** statement code block, call the **$** function and pass **'#summery'** as a parameter. 
 
