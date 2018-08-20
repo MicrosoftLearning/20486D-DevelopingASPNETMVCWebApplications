@@ -30,30 +30,25 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-In this exercise, you will:
-
-- Create a new layout and link the application to the view by using a _ViewStart.cshtml file.
-- Modify the index view to use the new layout.
-- Add existing views to the layout.
-- Browse through the resulting web application.
+To construct a consistent look and feel of a web application, a layout should be added to the web application. In this exercise you will create a layout and link views to it.
 
 The main tasks for this exercise are as follows:
 
-1. Create a new layout.
+1. Create a layout.
 
 2. Add a view and link it to a layout.
 
 3. Add _ViewStart.cshtml.
 
-4. Add existing views to the layout.
+4. Add existing views to the web application.
 
-5. Add sections to layout and views.
+5. Add a section to the layout.
 
 6. Run the application.
 
 
 #### Task 1: Create a layout
-1. From **Allfiles\Mod08\Labfiles\01_Zoo_begin** open the **Zoo.sln**.
+1. From **Allfiles\Mod08\Labfiles\01_Zoo_begin** open **Zoo.sln**.
 
 2. Create a new folder with the following information:
 
@@ -62,56 +57,56 @@ The main tasks for this exercise are as follows:
 
 3. Add a new **Razor Layout** with the following information:
 
-	- Folder: **/Views/Shared**
+	- Folder: **Views/Shared**
 	- Name: **_Layout**	
 
 4. In the **_Layout.cshtml** file, in the **BODY** element, add a **UL** element with the following information:
 
-	- Class:**nav**
+	- Class: **nav**
 
 5. In the **UL** element, add a **LI** element.
 
 6. In the **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("Index", "Zoo")"**
+	- Href: **@Url.Action("Index", "ZooSite")**
 	- Content: **Attractions**
 
-7. After the **LI** element, add a **LI** element.
+7. After the **LI** element, add a second **LI** element.
 
-8. In the last **LI** element, add an **A** element with the following information:
+8. In the second **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("VisitorDetails", "Zoo")"**
+	- Href: **@Url.Action("VisitorDetails", "ZooSite")**
 	- Content: **Visitor Info**
 
-9. After the last **LI** element, add a **LI** element.
+9. After the second **LI** element, add a third **LI** element.
 
-10. In the last **LI** element, add an **A** element with the following information:
+10. In the third **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("BuyTickets", "Zoo")"**
+	- Href: **@Url.Action("BuyTickets", "ZooSite")**
 	- Content: **Tickets**
 
 11. After the **UL** element, add a **DIV** element with the following information:
 
-	- Class:**header-container**
+	- Class: **header-container**
 
 12. In the **DIV** element, add an **H1** element with the following information:
 
-	- Class:**content**
+	- Class: **content**
 	- Content: **Welcome to Zoo Center**
 
 13. After the **H1** element, add a **DIV** element with the following information:
 
-	- Class:**slider-buttons**
+	- Class: **slider-buttons**
 
-14. In the **DIV** element, add a **IMG** element with the following information:
+14. In the **DIV** element, add an **IMG** element with the following information:
 
-	- Class:**prev**
     - Src: **~/images/prevArrow.png**
+	- Class: **prev**
     - Onclick: **prevImage()**
 
-15. After the **IMG** element, add a **IMG** element with the following information:
+15. After the **IMG** element, add an **IMG** element with the following information:
 
-	- Class:**next**
+	- Class: **next**
     - Src: **~/images/nextArrow.png**
     - Onclick: **nextImage()**
 
@@ -128,48 +123,51 @@ The main tasks for this exercise are as follows:
     - Use a layout page: **True**
     - Layout Page: **_Layout.cshtml**
 
-3. Delete the contents of the **Index.cshtml** view.
-
-4. Add a **@model** directive with the following information:
+3. Add a **@model** directive with the following information:
 
    - Type: **IEnumerable&lt;Zoo.Models.Photo&gt;**
 
-5.  Add a **H1** element with the following information:
+
+4.  Replace **_&lt;h2&gt;_Index_&lt;/h2&gt;_** with **H1** element, using the following information:
 
 	- Class: **main-title**
     - Content: **Zoo Attractions**
 
-6.  Add a **DIV** element with the following information:
+5.  Add a **DIV** element with the following information:
 
 	- Class: **container**
 
-7. In the **DIV** element, create a **FOREACH** statement, with the following information:
+6. In the **DIV** element, create a **FOREACH** statement, with the following information:
 
 	- Variable Type: **var**
 	- Variable Name: **item**
 	- Collection: **Model**
 
-8. In the **FOREACH** statement block, create an **IF** statement that checks that the value of **item.PhotoFileName** is not **NULL**.
+7. In the **FOREACH** statement block, Add a **DIV** element with the following information:
+
+	- Class: **photo-index-card**
+
+8. Create an **IF** statement that checks that the value of the **item.PhotoFileName** property is not **NULL**.
 
 9. In the **IF** statement, add a **DIV** element with the following information:
 
-	- Class:**image-wrapper**
+	- Class: **image-wrapper**
 
-10. In the **DIV** element, add a **IMG** element with the following information:
+10. In the **DIV** element, add an **IMG** element with the following information:
 
-	- Class:**photo-display-img**
-    - Src: **@Url.Action("GetImage", "Zoo", new { PhotoId = item.PhotoID })**
+	- Class: **photo-display-img**
+    - Src: **@Url.Action("GetImage", "ZooSite", new { PhotoId = item.PhotoID })**
 
-11. After the **IF** statement, add a **H3** element with the following information:
+11. After the **IF** statement, add an **H3** element with the following information:
 
-	- Class:**display-picture-title**
+	- Class: **display-picture-title**
     - Content: **@Html.DisplayFor(modelItem  => item.Title)**
 
 12. Add a **DIV** element.
 
 13. In the **DIV** element, add a **SPAN** element with the following information:
 
-	- Class:**display**
+	- Class: **display**
     - Content: **@Html.DisplayFor(model => item.Description)**
 
 #### Task 3: Add _ViewStart.cshtml
@@ -179,21 +177,21 @@ The main tasks for this exercise are as follows:
     - Name: **_ViewStart**
     - Folder: **Views**
 
-2. At the beginning of the **Index.cshtml** view, remove the **Layout** property and its value.
+2. At the beginning of the **Index.cshtml** view, remove the **Layout** property with its value.
 
-#### Task 4: Add existing views to the layout
+#### Task 4: Add existing views to the web application
 
-1. Copy the existing **.cshtml** files to the **Zoo** project, with the following information:
+1. Add existing **.cshtml** files to the **Zoo** project, with the following information:
 
     - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
 	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\Views**
 
 
-#### Task 5: Add sections to layout and views
+#### Task 5: Add a section to the layout
 
 1. In the **_Layout.cshtml** file, after the **DIV** element with **@RenderBody()** content, call the **RenderSection** method. 
 
-2. Pass **"Scripts"** and **required: false** as parameters to the **RenderSection** method.
+2. Pass **"Scripts"** and **false** as parameters to the **RenderSection** method.
 
 
 #### Task 6: Run the application
@@ -208,16 +206,13 @@ The main tasks for this exercise are as follows:
 
 5. Close the **Microsoft Edge** window.
 
->**Results**: After completing this exercise, you will be able to add layout and link it to views. You will also be able to add _ViewStart file and apply it to views.  
+>**Results**: After completing this exercise, you will be able to add a layout and link views to it. You will also be able to use the **_ViewStart** file in the web application.  
 
 ### Exercise 2: Using CSS 
 
 #### Scenario
 
-In this exercise, you will:
-
-- Add existing CSS file to the web application and link it to the layout. 
-- Style the main menu  and the elements inside the views by adding new CSS rules to an existing CSS file.
+To improve the appearance of the web application, a CSS should be used. In this exercise you will add a CSS file to the web application, and add a link from the layout to the CSS file.
 
 The main tasks for this exercise are as follows:
 
@@ -227,9 +222,9 @@ The main tasks for this exercise are as follows:
 
 3. Style the menu.
 
-4. Style the RenderBody section.
+4. Style the photos section in Index.cshtml.
 
-5. Style the form.
+5. Style a form in BuyTickets.cshtml
 
 
 #### Task 1: Add existing CSS file to the project
@@ -239,7 +234,7 @@ The main tasks for this exercise are as follows:
 	- Folder name: **css**
 	- Parent folder: **wwwroot**
 
-2. Copy the **zoo-style.css*** file to the **Zoo** project, with the following information:
+2. Add **zoo-style.css** file to the **Zoo** project, with the following information:
 
 	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
 	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\wwwroot\css**
@@ -250,119 +245,105 @@ The main tasks for this exercise are as follows:
 
 	- Type: **text/css**
 	- Rel: **stylesheet**
-	- Href: **css/zoo-style.css**
+	- Href: **~/css/zoo-style.css**
 
 #### Task 3: Style the menu
 
-1. In the bottom of the **zoo-style.css** file, add a **.nav** selector with the following information:
+1. In the bottom of the **zoo-style.css** file, add a **.nav** selector with the following properties:
 
-	- Properties:
-		- list-style-type: **none**
-		- margin: **0**
-		- padding: **0**
-		- overflow: **hidden**
-		- background-color: **#85754e**
-		- Position: **fixed**
-		- top: **0**
-		- left: **0**
-		- width: **100%**
+	- list-style-type: **none**
+	- margin: **0**
+	- padding: **0**
+	- overflow: **hidden**
+	- background-color: **#85754e**
+	- Position: **fixed**
+	- top: **0**
+	- left: **0**
+	- width: **100%**
 
-2. Add a **.nav li** selector with the following information:
+2. Add a **.nav li** selector with the following property:
 
-	- Properties:
-		- float: **left**
+	- float: **left**
 
-3. Add a **.nav li a** selector with the following information:
+3. Add a **.nav li a** selector with the following properties:
 
-	- Properties:
-		- display: **block**
-		- color: **white**
-		- text-align: **center**
-		- padding: **14px 16px**
-		- text-decoration: **none**
+	- display: **block**
+	- color: **white**
+	- text-align: **center**
+	- padding: **14px 16px**
+	- text-decoration: **none**
 
-4. Add a **.nav li a:hover:not(.active)** selector with the following information:
+4. Add a **.nav li a:hover:not(.active)** selector with the following property:
 
-	- Properties:
-		- background-color: **#016b6b**
+	- background-color: **#016b6b**
 
-5. Add a **.active** selector with the following information:
+5. Add a **.active** selector with the following properties:
 
-	- Properties:
-		- background-color: **#008484**		
-		- color: **#fff**
+	- background-color: **#008484**		
+	- color: **#fff**
 
 
-#### Task 4: Style the RenderBody section
+#### Task 4: Style the photos section in Index.cshtml
 
-1. Add a **.photo-index-card** selector with the following information:
+1. Add a **.photo-index-card** selector with the following properties:
 
-	- Properties:
-		- background-color: **#ffffff**
-		- padding: **0**
-		- margin: **10px 5px 15px 18px**
-		- padding-bottom: **25px**
-		- width: **355px**
-		- border: **1px solid #d6d4d4**
-		- border-radius: **10px**
-		- overflow: **hidden**
+	- background-color: **#ffffff**
+	- padding: **0**
+	- margin: **10px 5px 15px 18px**
+	- padding-bottom: **25px**
+	- width: **355px**
+	- border: **1px solid #d6d4d4**
+	- border-radius: **10px**
+	- overflow: **hidden**
 
-#### Task 5: Style the form
+#### Task 5: Style a form in BuyTickets.cshtml
 
-1. Add a **.info .form-field** selector with the following information:
+1. Add a **.info .form-field** selector with the following property:
 
-	- Properties:
-		- text-align: **left**
+	- text-align: **left**
 
-2. Add a **.info label** selector with the following information:
+2. Add a **.info label** selector with the following properties:
 
-	- Properties:
-		- width: **118px**
-		- display: **inline-block**
-		- margin-bottom: **10px**
+	- width: **118px**
+	- display: **inline-block**
+	- margin-bottom: **10px**
 
-3. Add a **.info input** selector with the following information:
+3. Add a **.info input** selector with the following properties:
 
-	- Properties:
-		- border-radius: **2px**
-		- line-height: **20px**
-		- border: **1px solid #ccc6c6**
-		- background-color: **#f9f6f6**
+	- border-radius: **2px**
+	- line-height: **20px**
+	- border: **1px solid #ccc6c6**
+	- background-color: **#f9f6f6**
 
-4. Add a **input.submit-btn** selector with the following information:
+4. Add a **input.submit-btn** selector with the following properties:
 
-	- Properties:
-		- width: **100px**
-		- margin-top: **12px**
-		- height: **29px**
-		- background-color: **orange**
-		- font-weight: **bold**
-		- box-shadow: **inset 0px 0px 4px #b77006**
-		- border: **1px solid #a59797**
+	- width: **100px**
+	- margin-top: **12px**
+	- height: **29px**
+	- background-color: **orange**
+	- font-weight: **bold**
+	- box-shadow: **inset 0px 0px 4px #b77006**
+	- border: **1px solid #a59797**
 
-5. Add a **input.submit-btn[disabled]** selector with the following information:
+5. Add a **input.submit-btn[disabled]** selector with the following properties:
 
-	- Properties:
-		- opacity: **0.8**
-		- background-color: **whitesmoke**
-		- box-shadow: **none**
+	- opacity: **0.8**
+	- background-color: **whitesmoke**
+	- box-shadow: **none**
 
->**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, link the CSS file to the layout and add new CSS rules. 
+>**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, add a link form a layout to the CSS file and add new CSS selectors. 
 
 ### Exercise 3: Using JavaScript
 
 #### Scenario
 
-In this exercise, you will:
-
-- Add and link a javascript file to a view.
-- Add a function to calculate the total cost of the tickets.
+To calculate the total cost of the tickets, you have been asked to add a function in JavaScript. In this exercise you will add a JavaScript file and add a link to the JavaScript file from a view.
 
 The main tasks for this exercise are as follows:
 
 1. Add a JavaScript file.
 
-2. Link the JavaScript file to a view.
+2. Link a view to the JavaScript file.
 
 3. Write the code of the JavaScript file.
 
@@ -374,10 +355,10 @@ The main tasks for this exercise are as follows:
 	- Folder name: **js**
 	- Parent folder: **wwwroot**
 
-2. Add a **JavaScript** file with the following information:
+2. Add a **JavaScript** **File** with the following information:
 
-	- Folder: **/wwwroot/js**
-	- Name: **form-functions.js**	
+	- Folder: **js**
+	- Name: **form-functions**	
 
 #### Task 2: Link a view to the JavaScript file
 
@@ -386,11 +367,11 @@ The main tasks for this exercise are as follows:
 	- Src: **~/js/form-functions.js**
 
 #### Task 3: Write the code of the JavaScript file
-1. In the **form-functions.js** file, add a **method** with the following information:
+1. In the **form-functions.js** file, add a **function** with the following information:
 
 	- Name: **calculateSum**
 
-2. In the **calculateSum** method code block, add a new variable named **rows** with the value of **document.querySelectorAll("#totalAmount tr .sum")**.
+2. In the **calculateSum** function code block, add a new variable named **rows** with the value of **document.querySelectorAll("#totalAmount tr .sum")**.
 
 3. Add a new variable named **sum** with the value of **0**.
 
@@ -402,11 +383,9 @@ The main tasks for this exercise are as follows:
 
 5. In the **FOR** loop code block, assign the **sum** variable the value of **sum + parseFloat(parseFloat(rows[i].innerHTML).toFixed(2))**.
 
-6. After the **FOR** loop code block, create a variable named **sumElement** with the value of **document.getElementById("sum")**.
+6. Assign the **innerHTML** property of **document.getElementById("sum")** to **"Total: $" + sum**.
 
-7. Assign the **innerHTML** property of the **sumElement** variable the value of **"Total: $" + sum**.
-
->**Results**: After completing this exercise, you will be able to add a JavaScript file and write JavaScript code to handle user interactions. 
+>**Results**: After completing this exercise, you will be able to add a **JavaScript File** and write JavaScript code. 
 
 ### Exercise 4: Using jQuery
 
@@ -432,45 +411,41 @@ The main tasks for this exercise are as follows:
 
 6. Run the application.
 
-#### Task 1: Use NPM to add jQuery
+#### Task 1: Use npm to add jQuery
 
-1. Add a new **package.json** file to the **Zoo** project.
+1. Add a new **npm Configuration File** to the **Zoo** project.
 
 2. In the  **package.json** file, add the following key and value in the **dependencies** object:
 
 	- Key: **"jquery"**
 	- Value: **"3.3.1"**
 
-3. Save all the changes.
+3. Save **package.json**.
 
->**Note:** In the Solution Explorer pane, under **Depenndencies**, a new folder has been added named **npm** with the **jquery** package.
+>**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder named **npm** has been added which contains the **jquery** package.
 
-4. In **Startup** class, in the **Configure** method, before the **app.UseMVC** middleware, call the **UseStaticFiles** method of the **app** parameter.
+4. In **Explorer Toolbar Options** click **Show All Files**.
 
-5. Call the **UseNodeModules** method of the **app** parameter. Pass **env.ContentRootPath** as a parameter to the **UseNodeModules** method.
+      >**Note:** In the **Zoo - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
 
-6. Create a new folder with the following information:
+5. Create a new folder with the following information:
 
    - Folder name: **Middleware**
 
-7. Add a new class with the following information:
+6. Add a new class with the following information:
 
 	- Folder: **Middleware**
 	- Name: **ApplicationBuilderExtensions**
 
-8. In the **ApplicationBuilderExtensions** class, add **USING** statements for the following namespaces:
+7. In the **ApplicationBuilderExtensions** class, add **USING** statements for the following namespaces:
 
    - **System.IO**
+   - **Microsoft.AspNetCore.Builder**
    - **Microsoft.Extensions.FileProviders**
 
-9. Add the **static** keyword to the **ApplicationBuilderExtensions** class declaration.
+8. Add a **static** keyword to the **ApplicationBuilderExtensions** class declaration.
 
-10. Relace the **ApplicationBuilderExtensions** class namespace with the following information:
-   
-    - Current namespace: **Zoo.Middleware**
-    - New namespace: **Microsoft.AspNetCore.Builder**
-
-11. Add a method with the following information:
+9. Add a method with the following information:
 
     - Scope: **public**
 	- Modifier: **static**
@@ -484,26 +459,35 @@ The main tasks for this exercise are as follows:
 			- Type: **string**
 			- Name: **root**
 
-12. In the **UseNodeModules** method, add a variable named **path** of type **var** with the value of **Path.Combine(root, "node_modules")**.
+10. In the **UseNodeModules** method, add a variable named **path** of type **var** with the value of **Path.Combine(root, "node_modules")**.
 
-13. Add a variable named **fileProvider** of type **var** with the value of **new PhysicalFileProvider(path)**.
+11. Add a variable named **fileProvider** of type **var** with the value of **new PhysicalFileProvider(path)**.
 
-14. Add a variable named **options** of type **var** with the value of **new StaticFileOptions()**.
+12. Add a variable named **options** of type **var** with the value of **new StaticFileOptions()**.
 
-15. Assign the **RequestPath** property of the **options** variable the value of **/node_modules**.
+13. Assign the **RequestPath** property of the **options** variable the value of **/node_modules**.
 
-16. Assign the **FileProvider** property of the **options** variable the value of **fileProvider** variable.
+14. Assign the **FileProvider** property of the **options** variable the value of **fileProvider** variable.
 
-17. Call the **UseStaticFiles** method of the **applicationBuilder** parameter. Pass **options** variable as a parameter to the **UseStaticFiles** method.
+15. Call the **UseStaticFiles** method of the **applicationBuilder** parameter. Pass **options** variable as a parameter to the **UseStaticFiles** method.
 
-18. Return the **IApplicationBuilder**  result using the **applicationBuilder** variable.
+16. Return the value of the **applicationBuilder** variable.
 
-19. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
+17. In the **Startup** class, add **USING** statement for the following namespace:
+
+   - **Zoo.Middleware**
+
+18. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
+
+19. Call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
+
+
+20. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
 
 	- Src:**~/node_modules/jquery/dist/jquery.min.js**
 
 #### Task 2: Use jQuery to add event handlers
-1. In the beginning of the **form-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
+1. At the end of the **form-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
 
 2. Move the **calculateSum** function inside the anonymous function.
 
@@ -511,7 +495,7 @@ The main tasks for this exercise are as follows:
 
 4. Chain a **change** function call to the **$** function call. Pass anonymous function as a parameter to the **change** function.
 
-5. Change the signature of the anonymous function passed to the **change** method to accept a **event** parameter.
+5. Change the signature of the anonymous function passed to the **change** method to accept an **event** parameter.
 
 6. Inside the anonymous function passed to the **change** method, create a variable named **target** and assign it the value of **$(event.target)**.
 
@@ -529,21 +513,21 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 3: Use jQuery to modify an element with a particular id
-1. At the end of the **calculateSum** function, add an **IF** statement that checks that value of **value** variable is not empty.
+1. At the end of the **$** function, add an **IF** statement that checks that value of **value** variable is not empty.
 
 2. Inside the **IF** statement, call the **$** function and pass **'#summery'** as a parameter. 
 
-3. Chain a **addClass** function call to the **$** function call. Pass **"display-div"** as a parameter as a parameter to the **addClass** function.
+3. Chain a **addClass** function call to the **$** function call. Pass **"display-div"** as a parameter to the **addClass** function.
 
-4. Chain a **removeClass** function call to the **addClass** function call. Pass **"hidden-div"** as a parameter as a parameter to the **addClass** function.
+4. Chain a **removeClass** function call to the **addClass** function call. Pass **"hidden-div"** as a parameter to the **addClass** function.
 
 5. Create a variable named **correctCost** and assign it the value of **(price.text().substring(1, price.text().length))**.
 
-6. Create a variable named **calc** and assign it the value of ** parseFloat(value * correctCost).toFixed(2)**.
+6. Create a variable named **calc** and assign it the value of **parseInt(value * correctCost)**.
 
 7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" + calc +'&lt;/span&gt;'**.
 
-8. Create a variable named **row** and assign it the value of **$("&lt;tr id='" + label.text() +"'&gt;")**
+8. Create a variable named **row** and assign it the value of **$("&lt;tr id='" + label.text() +"'&gt;")**.
 
 9. Call the **append** method of the **row** variable. Pass **$("&lt;td&gt;")** as a parameter to the **append** function.
 
@@ -553,7 +537,7 @@ The main tasks for this exercise are as follows:
 
 12. Chain an **append** function call to the **$** function call. Pass **row** as a parameter to the **append** function.
 
-13. After the **IF** statement code block, add and **IF** statement that checks that the value of **$("#totalAmount tr").length** is equal to **0**.
+13. After the **IF** statement code block, add an **IF** statement that checkes if the value of **$("#totalAmount tr").length** is equal to **0**.
 
 14. Inside the **IF** statement code block, call the **$** function and pass **'#summery'** as a parameter. 
 
@@ -584,10 +568,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Use jQuery to change a style
 
-1. Add a **JavaScript** file with the following information:
+1. Add a **JavaScript File** with the following information:
 
-	- Folder: **/wwwroot/js**
-	- Name: **menubar-functions.js**	
+	- Folder: **js**
+	- Name: **menubar-functions**	
 
 2. In the beginning of the **menubar-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
 
@@ -601,7 +585,7 @@ The main tasks for this exercise are as follows:
 
 7. Inside the anonymous function passed to the **each** method, create a variable named **href** and assign it the value of **$(value).attr('href')**.
 
-8. Create an **IF** statement that checks that the value of **path** is equal to the value of **href**.
+8. Create an **IF** statement that checks that the value of **path** is equal to **href**.
 
 9. Inside the **IF** statement code block, call the **$** function and pass **this** as a parameter. 
 
@@ -609,16 +593,16 @@ The main tasks for this exercise are as follows:
 
 11. Chain a **addClass** function call to the **closest** function call. Pass **'active'** to the **addClass** function.
 
-12. Add a **JavaScript** file with the following information:
+12. Add a **JavaScript File** with the following information:
 
-	- Folder: **/wwwroot/js**
-	- Name: **slider-functions.js**	
+	- Folder: **js**
+	- Name: **slider-functions**	
 
 13. In the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
 
 14. Add a new variable named **current** with the value of **0**.
 
-15. Add a new function with the following information:
+15. Add a new **function** with the following information:
     - Name: **nextImage**
 
 16. In the **nextImage** function code block, increment the **current** variable by 1.
@@ -631,7 +615,7 @@ The main tasks for this exercise are as follows:
 
 19. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
 
-20. Add a new function with the following information:
+20. Add a new **function** with the following information:
     - Name: **prevImage**
 
 21. In the **prevImage** function code block, decrement the **current** variable by 1.
@@ -673,12 +657,13 @@ The main tasks for this exercise are as follows:
 
 4. In the menu bar, click **Tickets**.
 
-5. On the **Step 1 - Choose Tickets**, select the following:
+5. On **Step 1 - Choose Tickets**, select the following:
 
 	- Adult: **_&lt;As many tickets as you like&gt;_**
+	- Child: **_&lt;As many tickets as you like&gt;_**
 	- Senior: **_&lt;As many tickets as you like&gt;_**
 
-6.  On the **Step 2 - Buy Tickets**, type the following:
+6.  On **Step 2 - Buy Tickets**, type the following:
 
 	- First Name: **_&lt;A first name of your choice&gt;_**
 	- Last Name: **_&lt;A last name of your choice&gt;_**
@@ -686,7 +671,7 @@ The main tasks for this exercise are as follows:
 	- Email: **_&lt;An email of your choice&gt;_**
 	- Phone Number **_&lt; A phone number of your choice&gt;_**
 
-7. Click **Submit**.
+7. Click **Buy**.
 
 8. Close **Microsoft Edge**.
 

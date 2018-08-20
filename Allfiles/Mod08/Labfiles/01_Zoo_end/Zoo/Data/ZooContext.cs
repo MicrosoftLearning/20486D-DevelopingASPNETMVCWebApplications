@@ -23,7 +23,7 @@ namespace Zoo.Data
                  {
                      PhotoID = 1,
                      Title = "Butterfly Garden",
-                     Description = "In computing, a code segment, also known as a text segment or simply as text",
+                     Description = "The Butterfly Garden has more than 35 species of butterfly that can be seen by our visitors.",
                      PhotoFileName = "butterfly.jpg",
                      ImageMimeType = "image/jpeg"
                  },
@@ -31,7 +31,7 @@ namespace Zoo.Data
                 {
                     PhotoID = 2,
                     Title = "African Animals",
-                    Description = "In computing, a code segment, also known as a text segment or simply as text",
+                    Description = "The African Animals is the first sight that most people first notice upon entering the zoo, highly recommended.",
                     PhotoFileName = "lion.jpg",
                     ImageMimeType = "image/jpeg"
                 },
@@ -39,7 +39,7 @@ namespace Zoo.Data
                 {
                     PhotoID = 3,
                     Title = "Underwater World",
-                    Description = "In computing, a code segment, also known as a text segment or simply as text",
+                    Description = "Our Aquarium tank contains aquatic animals.",
                     PhotoFileName = "octopus.jpg",
                     ImageMimeType = "image/jpeg"
                 },
@@ -47,7 +47,7 @@ namespace Zoo.Data
                 {
                     PhotoID = 4,
                     Title = "Sea Birds",
-                    Description = "In computing, a code segment, also known as a text segment or simply as text",
+                    Description = "The zoo sea birds department has a lot of special sea birds shows.",
                     PhotoFileName = "swan.jpg",
                     ImageMimeType = "image/jpeg"
                 });
