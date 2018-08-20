@@ -73,21 +73,21 @@ The main tasks for this exercise are as follows:
 
 6. In the **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("Index", "ZooSite")"**
+	- Href: **@Url.Action("Index", "ZooSite")**
 	- Content: **Attractions**
 
 7. After the **LI** element, add a second **LI** element.
 
 8. In the second **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("VisitorDetails", "ZooSite")"**
+	- Href: **@Url.Action("VisitorDetails", "ZooSite")**
 	- Content: **Visitor Info**
 
 9. After the second **LI** element, add a third **LI** element.
 
 10. In the third **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("BuyTickets", "ZooSite")"**
+	- Href: **@Url.Action("BuyTickets", "ZooSite")**
 	- Content: **Tickets**
 
 11. After the third **UL** element, add a **DIV** element with the following information:
