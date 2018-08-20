@@ -30,12 +30,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-In this exercise, you will:
-
-- Create a new layout and link the application to the view by using a **_ViewStart.cshtml** file.
-- Modify the index view to use the new layout.
-- Add existing views to the layout.
-- Browse through the resulting web application.
+To construct a consistent look and feel of a web application, a layout should be added to the web application. In this exercise you will create a layout and link views to it.
 
 The main tasks for this exercise are as follows:
 
