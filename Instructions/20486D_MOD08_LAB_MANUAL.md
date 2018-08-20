@@ -78,7 +78,7 @@ The main tasks for this exercise are as follows:
 
 7. After the **LI** element, add a second **LI** element.
 
-8. In the seconds **LI** element, add an **A** element with the following information:
+8. In the second **LI** element, add an **A** element with the following information:
 
 	- Href: **@Url.Action("VisitorDetails", "ZooSite")"**
 	- Content: **Visitor Info**
