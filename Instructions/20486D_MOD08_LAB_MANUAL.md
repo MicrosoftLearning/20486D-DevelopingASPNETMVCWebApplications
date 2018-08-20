@@ -487,7 +487,7 @@ The main tasks for this exercise are as follows:
 	- Src:**~/node_modules/jquery/dist/jquery.min.js**
 
 #### Task 2: Use jQuery to add event handlers
-1. In the beginning of the **form-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
+1. At the end of the **form-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
 
 2. Move the **calculateSum** function inside the anonymous function.
 

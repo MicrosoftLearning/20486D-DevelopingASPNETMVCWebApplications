@@ -1,5 +1,5 @@
 ﻿
-$(function () {
+$(function() {
     $('.pricing select').change(function (event) {
         var target = $(event.target);
         var value = parseInt(target.val());
