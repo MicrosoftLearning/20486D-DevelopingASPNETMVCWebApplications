@@ -519,7 +519,7 @@ The main tasks for this exercise are as follows:
 
 3. Chain a **addClass** function call to the **$** function call. Pass **"display-div"** as a parameter to the **addClass** function.
 
-4. Chain a **removeClass** function call to the **addClass** function call. Pass **"hidden-div"** as a parameter as a parameter to the **addClass** function.
+4. Chain a **removeClass** function call to the **addClass** function call. Pass **"hidden-div"** as a parameter to the **addClass** function.
 
 5. Create a variable named **correctCost** and assign it the value of **(price.text().substring(1, price.text().length))**.
 
