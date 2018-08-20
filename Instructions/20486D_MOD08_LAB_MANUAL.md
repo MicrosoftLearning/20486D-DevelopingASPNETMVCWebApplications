@@ -225,7 +225,7 @@ The main tasks for this exercise are as follows:
 
 3. Style the menu.
 
-4. Style the RenderBody section.
+4. Style the photos section in Index.cshtml.
 
 5. Style the form.
 
@@ -291,7 +291,7 @@ The main tasks for this exercise are as follows:
 		- color: **#fff**
 
 
-#### Task 4: Style the RenderBody section
+#### Task 4: Style the photos section in Index.cshtml
 
 1. Add a **.photo-index-card** selector with the following information:
 
