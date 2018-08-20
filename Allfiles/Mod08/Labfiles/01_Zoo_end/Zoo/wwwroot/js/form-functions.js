@@ -20,7 +20,7 @@ $(function() {
             row.append($("<td>").html(msg));
             $("#totalAmount").append(row);
         }
-        if ($("#totalAmount tr").length == 0) {
+        if ($("#totalAmount tr").length === 0) {
             $("#summery").addClass("hidden-div").removeClass("display-div");
             $("#formButtons input").attr('disabled', 'disabled');
             $("#comment").show();
