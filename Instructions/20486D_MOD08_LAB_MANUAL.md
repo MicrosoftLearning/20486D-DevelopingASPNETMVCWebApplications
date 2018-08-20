@@ -388,7 +388,7 @@ The main tasks for this exercise are as follows:
 
 6. Assign the **innerHTML** property of **document.getElementById("sum")** to **"Total: $" + sum**.
 
->**Results**: After completing this exercise, you will be able to add a **JavaScript File** and write JavaScript code to handle user interactions. 
+>**Results**: After completing this exercise, you will be able to add a **JavaScript File** and write JavaScript code. 
 
 ### Exercise 4: Using jQuery
 
