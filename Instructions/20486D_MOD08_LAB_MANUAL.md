@@ -523,7 +523,7 @@ The main tasks for this exercise are as follows:
 
 5. Create a variable named **correctCost** and assign it the value of **(price.text().substring(1, price.text().length))**.
 
-6. Create a variable named **calc** and assign it the value of **parseFloat(value * correctCost).toFixed(2)**.
+6. Create a variable named **calc** and assign it the value of **parseInt(value * correctCost)**.
 
 7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" + calc +'&lt;/span&gt;'**.
 
