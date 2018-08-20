@@ -512,7 +512,7 @@ The main tasks for this exercise are as follows:
 12. Chain a **remove** function call to the **$** function call. 
 
 
-#### Task 3: Use jQuery to modify an element with a particular id
+#### Task 3: Use jQuery to modify elements
 1. At the end of the **$** function, add an **IF** statement that checks that value of **value** variable is not empty.
 
 2. Inside the **IF** statement, call the **$** function and pass **'#summery'** as a parameter. 
@@ -565,79 +565,76 @@ The main tasks for this exercise are as follows:
 
 26. After the **ELSE** ststement call block, call the **calculateSum** function.
 
-
-#### Task 4: Use jQuery to change a style
-
-1. Add a **JavaScript File** with the following information:
+27. Add a **JavaScript File** with the following information:
 
 	- Folder: **js**
 	- Name: **menubar-functions**	
 
-2. In the beginning of the **menubar-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
+28. In the beginning of the **menubar-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
 
-3. At the beginning of the anonymous function code block, add a new variable named **path** with the value of **window.location.pathname**.
+29. At the beginning of the anonymous function code block, add a new variable named **path** with the value of **window.location.pathname**.
 
-4. Call the **$** function and pass **'.nav li a'** as a parameter. 
+30. Call the **$** function and pass **'.nav li a'** as a parameter. 
 
-5. Chain a **each** function call to the **$** function call. Pass anonymous function as a parameter to the **each** function.
+31. Chain a **each** function call to the **$** function call. Pass anonymous function as a parameter to the **each** function.
 
-6. Change the signature of the anonymous function passed to the **each** method to accept **index** and **value** parameters.
+32. Change the signature of the anonymous function passed to the **each** method to accept **index** and **value** parameters.
 
-7. Inside the anonymous function passed to the **each** method, create a variable named **href** and assign it the value of **$(value).attr('href')**.
+33. Inside the anonymous function passed to the **each** method, create a variable named **href** and assign it the value of **$(value).attr('href')**.
 
-8. Create an **IF** statement that checks that the value of **path** is equal to **href**.
+34. Create an **IF** statement that checks that the value of **path** is equal to **href**.
 
-9. Inside the **IF** statement code block, call the **$** function and pass **this** as a parameter. 
+35. Inside the **IF** statement code block, call the **$** function and pass **this** as a parameter. 
 
-10. Chain a **closest** function call to the **$** function call. Pass **'li'** to the **closest** function.
+36. Chain a **closest** function call to the **$** function call. Pass **'li'** to the **closest** function.
 
-11. Chain a **addClass** function call to the **closest** function call. Pass **'active'** to the **addClass** function.
+37. Chain a **addClass** function call to the **closest** function call. Pass **'active'** to the **addClass** function.
 
-12. Add a **JavaScript File** with the following information:
+38. Add a **JavaScript File** with the following information:
 
 	- Folder: **js**
 	- Name: **slider-functions**	
 
-13. In the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
+39. In the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
 
-14. Add a new variable named **current** with the value of **0**.
+40. Add a new variable named **current** with the value of **0**.
 
-15. Add a new **function** with the following information:
+41. Add a new **function** with the following information:
     - Name: **nextImage**
 
-16. In the **nextImage** function code block, increment the **current** variable by 1.
+42. In the **nextImage** function code block, increment the **current** variable by 1.
 
-17. Create an **IF** statement that checks that the value of **current** is equal to **images.length**.
+43. Create an **IF** statement that checks that the value of **current** is equal to **images.length**.
 
-18. Inside the **IF** statement code block, assign the **current** variable the value of **0**.
+44. Inside the **IF** statement code block, assign the **current** variable the value of **0**.
 
-18. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
+45. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
 
-19. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
+46. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
 
-20. Add a new **function** with the following information:
+47. Add a new **function** with the following information:
     - Name: **prevImage**
 
-21. In the **prevImage** function code block, decrement the **current** variable by 1.
+48. In the **prevImage** function code block, decrement the **current** variable by 1.
 
-22. Create an **IF** statement that checks that the value of **current** is smaller than **0**.
+49. Create an **IF** statement that checks that the value of **current** is smaller than **0**.
 
-23. Inside the **IF** statement code block, assign the **current** variable the value of **images.length-1**.
+50. Inside the **IF** statement code block, assign the **current** variable the value of **images.length-1**.
 
-24. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
+51. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
 
-25. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
+52. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
 
-26. In the **_Layout.cshtml** file, in the bottom of the **HEAD** tag code block, add a **SCRIPT** element with the following information:
+53. In the **_Layout.cshtml** file, in the bottom of the **HEAD** tag code block, add a **SCRIPT** element with the following information:
 
 	- Src: **~/js/menubar-functions.js**
 
-27. Add a **SCRIPT** element with the following information:
+54. Add a **SCRIPT** element with the following information:
 
 	- Src: **~/js/slider-functions.js**
 
 
-#### Task 5: Client-side validation using jQuery
+#### Task 4: Client-side validation using jQuery
 
 1. In the **BuyTickets** view, in the beginning of the **Scripts** section code block, add a **SCRIPT** element with the following information:
 
@@ -647,7 +644,7 @@ The main tasks for this exercise are as follows:
 
 	- Src: **~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js**
 
-#### Task 6: Run the application
+#### Task 5: Run the application
 
 1. Save all the changes.
 
