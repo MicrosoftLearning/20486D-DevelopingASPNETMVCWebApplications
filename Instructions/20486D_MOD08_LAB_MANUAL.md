@@ -45,7 +45,7 @@ The main tasks for this exercise are as follows:
 
 3. Add _ViewStart.cshtml.
 
-4. Add existing views to the layout.
+4. Add existing views to the web application.
 
 5. Add sections to layout and views.
 
