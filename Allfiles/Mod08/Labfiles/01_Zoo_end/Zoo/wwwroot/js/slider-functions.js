@@ -3,7 +3,7 @@ var current = 0;
 
 function nextImage() {
     current++;
-    if (current == images.length) {
+    if (current === images.length) {
         current = 0;
     }
     $('.header-container').css('background-image', 'url(' + images[current] + ')');
