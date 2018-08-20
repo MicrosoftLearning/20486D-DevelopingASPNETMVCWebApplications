@@ -495,7 +495,7 @@ The main tasks for this exercise are as follows:
 
 4. Chain a **change** function call to the **$** function call. Pass anonymous function as a parameter to the **change** function.
 
-5. Change the signature of the anonymous function passed to the **change** method to accept a **event** parameter.
+5. Change the signature of the anonymous function passed to the **change** method to accept an **event** parameter.
 
 6. Inside the anonymous function passed to the **change** method, create a variable named **target** and assign it the value of **$(event.target)**.
 
