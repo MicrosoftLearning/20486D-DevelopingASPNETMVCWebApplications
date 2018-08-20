@@ -1,4 +1,4 @@
-﻿$(function () {
+﻿$(function() {
     var path = window.location.pathname;
 
     $(".nav li a").each(function (index, value) {
