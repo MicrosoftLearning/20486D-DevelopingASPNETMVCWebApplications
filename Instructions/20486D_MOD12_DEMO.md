@@ -112,7 +112,183 @@
 
 1. Navigate to **Allfiles\Mod05\Democode\02_StateExample_begin**, and then double-click **StateExample.sln**.
 
-2.  In the **StateExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+3. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+
+4. In the **Startup.cs** code window, locate the following code:
+```cs
+    public void ConfigureServices(IServiceCollection services)
+    {
+```
+
+5. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    services.AddSession();
+```
+
+6. In the **Startup.cs** code window, locate the following code:
+```cs
+    public void Configure(IApplicationBuilder app)
+    {
+```
+
+7. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    app.UseSession();
+```
+
+8. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
+
+9. In the **HomeController.cs** code window, locate the following code:
+```cs
+    using Microsoft.AspNetCore.Mvc;
+```
+
+10. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    using Microsoft.AspNetCore.Http;
+```
+
+11. In the **HomeController.cs** code window, locate the following code:
+```cs
+    public IActionResult Index()
+    {
+```
+
+12. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    int? overallVisitsNumber = HttpContext.Session.GetInt32("Overall");
+    int? controllerVisitsNumber = HttpContext.Session.GetInt32("Home");
+    if (overallVisitsNumber == null)
+    {
+        overallVisitsNumber = 1;
+    }
+    else
+    {
+        overallVisitsNumber++;
+    }
+    if (controllerVisitsNumber == null)
+    {
+        controllerVisitsNumber = 1;
+    }
+    else
+    {
+        controllerVisitsNumber++;
+    }
+    HttpContext.Session.SetInt32("Overall", overallVisitsNumber.Value);
+    HttpContext.Session.SetInt32("Home", controllerVisitsNumber.Value);
+```
+
+13. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, click **AnotherController.cs**.
+
+14. In the **AnotherController.cs** code window, locate the following code:
+```cs
+    using Microsoft.AspNetCore.Mvc;
+```
+
+15. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    using Microsoft.AspNetCore.Http;
+```
+
+16. In the **AnotherController.cs** code window, locate the following code:
+```cs
+    public IActionResult Index()
+    {
+```
+
+17. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    int? overallVisitsNumber = HttpContext.Session.GetInt32("Overall");
+    int? controllerVisitsNumber = HttpContext.Session.GetInt32("Another");
+    if (overallVisitsNumber == null)
+    {
+        overallVisitsNumber = 1;
+    }
+    else
+    {
+        overallVisitsNumber++;
+    }
+    if (controllerVisitsNumber == null)
+    {
+        controllerVisitsNumber = 1;
+    }
+    else
+    {
+        controllerVisitsNumber++;
+    }
+    HttpContext.Session.SetInt32("Overall", overallVisitsNumber.Value);
+    HttpContext.Session.SetInt32("Another", controllerVisitsNumber.Value);
+```
+
+18. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, and then click **_ViewImports.cshtml**.
+
+19. In the **_ViewImports.cshtml** code window, locate the following code:
+```cs
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+```
+
+20. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    @using Microsoft.AspNetCore.Http
+```
+
+21. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Home**, and then click **Index.cshtml**.
+
+22. In the **Index.cshtml** code window, locate the following code:
+```cs
+    <div class="info-panel">
+```
+
+23. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    <div>Number of times this controller was visited during this session: @Context.Session.GetInt32("Home")</div>
+    <div>Number of times this controller was visited during this session: @Context.Session.GetInt32("Another")</div>
+    <div>Number of times visited overall during this session: @Context.Session.GetInt32("Overall")</div>
+```
+
+24. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Another**, and then click **Index.cshtml**.
+
+25. In the **Index.cshtml** code window, locate the following code:
+```cs
+    <div class="info-panel">
+```
+
+26. Place the cursor at the end of the located code, press Enter, and then type the following code:
+```cs
+    <div>Number of times this controller was visited during this session: @Context.Session.GetInt32("Home")</div>
+    <div>Number of times this controller was visited during this session: @Context.Session.GetInt32("Another")</div>
+    <div>Number of times visited overall during this session: @Context.Session.GetInt32("Overall")</div>
+```
+
+27.  In the **StateExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+
+28. In the **StateExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+    >**Note**: The browser displays two link: **Home** and **Another**, and the following information : <br>
+    >Number of times this controller was visited during this session: 1<br>
+    >Number of times this controller was visited during this session: <br>
+    >Number of times visited overall during this session: 1
+
+29. In **Microsoft Edge**, click **Another**.
+    >**Note**: The browser displays the following information : <br>
+    >Number of times this controller was visited during this session: 1<br>
+    >Number of times this controller was visited during this session: 1<br>
+    >Number of times visited overall during this session: 2
+
+30. In **Microsoft Edge**, click **Home**.
+    >**Note**: The browser displays the following information : <br>
+    >Number of times this controller was visited during this session: 2<br>
+    >Number of times this controller was visited during this session: 1<br>
+    >Number of times visited overall during this session: 3
+
+31. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New InPrivate Window**.
+    >**Note**: The browser displays the following information : <br>
+    >Number of times this controller was visited during this session: 1<br>
+    >Number of times this controller was visited during this session: <br>
+    >Number of times visited overall during this session: 1
+    
+32.  Close all the **Microsoft Edge** windows.
+
+33. In the **StateExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Two-Way Communication
 
