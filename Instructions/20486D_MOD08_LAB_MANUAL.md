@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You have been asked to add a slideshow to the homepage of the zoo web application that will show some of the animals’ photos. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
+You have been asked to add a slideshow to the homepage of the zooSite web application that will show some of the animals’ photos. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
 
 You want to use jQuery to create this slideshow because you want to cycle through the photos in the browser, without reloading the page each time. 
 
@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 1: Create a layout
-1. From **Allfiles\Mod08\Labfiles\01_Zoo_begin** open **Zoo.sln**.
+1. From **Allfiles\Mod08\Labfiles\01_ZooSite_begin** open **ZooSite.sln**.
 
 2. Create a new folder with the following information:
 
@@ -68,21 +68,21 @@ The main tasks for this exercise are as follows:
 
 6. In the **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("Index", "ZooSite")**
+	- Href: **@Url.Action("Index", "Zoo")**
 	- Content: **Attractions**
 
 7. After the **LI** element, add a second **LI** element.
 
 8. In the second **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("VisitorDetails", "ZooSite")**
+	- Href: **@Url.Action("VisitorDetails", "Zoo")**
 	- Content: **Visitor Info**
 
 9. After the second **LI** element, add a third **LI** element.
 
 10. In the third **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("BuyTickets", "ZooSite")**
+	- Href: **@Url.Action("BuyTickets", "Zoo")**
 	- Content: **Tickets**
 
 11. After the **UL** element, add a **DIV** element with the following information:
@@ -113,7 +113,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Add a view and link it to a layout
 
-1. In the **ZooSiteController** class, right-click on the **Index** action name, and then click **Add View**. 
+1. In the **ZooController** class, right-click on the **Index** action name, and then click **Add View**. 
 
 2. Create a new view using the **Add MVC View** dialog box, with the following information:
 
@@ -125,7 +125,7 @@ The main tasks for this exercise are as follows:
 
 3. Add a **@model** directive with the following information:
 
-   - Type: **IEnumerable&lt;Zoo.Models.Photo&gt;**
+   - Type: **IEnumerable&lt;ZooSite.Models.Photo&gt;**
 
 
 4.  Replace **_&lt;h2&gt;_Index_&lt;/h2&gt;_** with **H1** element, using the following information:
@@ -156,7 +156,7 @@ The main tasks for this exercise are as follows:
 10. In the **DIV** element, add an **IMG** element with the following information:
 
 	- Class: **photo-display-img**
-    - Src: **@Url.Action("GetImage", "ZooSite", new { PhotoId = item.PhotoID })**
+    - Src: **@Url.Action("GetImage", "Zoo", new { PhotoId = item.PhotoID })**
 
 11. After the **IF** statement, add an **H3** element with the following information:
 
@@ -181,10 +181,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Add existing views to the web application
 
-1. Add existing **.cshtml** files to the **Zoo** project, with the following information:
+1. Add existing **.cshtml** files to the **ZooSite** project, with the following information:
 
     - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
-	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\Views**
+	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\Zoo\Views**
 
 
 #### Task 5: Add a section to the layout
@@ -234,10 +234,10 @@ The main tasks for this exercise are as follows:
 	- Folder name: **css**
 	- Parent folder: **wwwroot**
 
-2. Add **zoo-style.css** file to the **Zoo** project, with the following information:
+2. Add **zoo-style.css** file to the **ZooSite** project, with the following information:
 
 	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
-	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\wwwroot\css**
+	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\Zoo\wwwroot\css**
 
 #### Task 2: Link the layout to the CSS file
 
@@ -407,7 +407,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Use npm to add jQuery
 
-1. Add a new **npm Configuration File** to the **Zoo** project.
+1. Add a new **npm Configuration File** to the **ZooSite** project.
 
 2. In the  **package.json** file, add the following key and value in the **dependencies** object:
 
@@ -420,7 +420,7 @@ The main tasks for this exercise are as follows:
 
 4. In **Explorer Toolbar Options** click **Show All Files**.
 
-      >**Note:** In the **Zoo - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
+      >**Note:** In the **ZooSite - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
 
 5. Create a new folder with the following information:
 
@@ -469,7 +469,7 @@ The main tasks for this exercise are as follows:
 
 17. In the **Startup** class, add **USING** statement for the following namespace:
 
-   - **Zoo.Middleware**
+   - **ZooSite.Middleware**
 
 18. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
 
