@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ZooSite.Models.Photo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="main-title">Zoo Attractions</h1>
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="photo-index-card">
+            @if (item.PhotoFileName != null)
+            {
+            <div class="image-wrapper">
+                <img class="photo-display-img" src="@Url.Action("GetImage", "Zoo", new { PhotoId = item.PhotoID })" />
+            </div>
+            }
+            <h3 class="display-picture-title">
+                @Html.DisplayFor(modelItem => item.Title)
+            </h3>
+            <div>
+                <span class="display">
+                    @Html.DisplayFor(model => item.Description)
+                </span>
+            </div>
+        </div>
+    }
+</div>
