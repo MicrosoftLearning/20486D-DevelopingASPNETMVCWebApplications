@@ -21,7 +21,6 @@ namespace Server.Controllers
         }
 
         [HttpGet]
-        //[Produces("application/xml")]
         public ActionResult<List<RestaurantBranch>> Get()
         {
             return _context.RestaurantBranches.ToList();

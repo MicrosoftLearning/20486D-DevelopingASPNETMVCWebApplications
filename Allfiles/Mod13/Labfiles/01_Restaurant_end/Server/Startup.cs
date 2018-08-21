@@ -22,7 +22,7 @@ namespace Server
             services.AddDbContext<RestaurantContext>(options =>
                   options.UseSqlite("Data Source=restaurant.db"));
 
-            services.AddMvc().AddXmlSerializerFormatters();
+            services.AddMvc();
 
             services.AddCors();
         }
