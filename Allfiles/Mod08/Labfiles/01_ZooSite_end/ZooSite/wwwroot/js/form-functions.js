@@ -15,7 +15,7 @@ $(function() {
             var correctCost = (price.text().substring(1, price.text().length));
             var calc = parseInt(value * correctCost);
 
-            var msg = label.text() + " ticket - " + value.toString() + "x" + price.text() + " = <span class='sum'>" + calc + '</span>';
+            var msg = label.text() + " ticket - " + value.toString() + "x" + price.text() + " = <span class='sum'>" +'$' + calc + '</span>';
             var row = $("<tr id='" + label.text() + "'>");
             row.append($("<td>").html(msg));
             $("#totalAmount").append(row);
@@ -38,7 +38,7 @@ $(function() {
         var sum = 0;
 
         for (var i = 0; i < rows.length; i++) {
-            sum = sum + parseFloat(parseFloat(rows[i].innerHTML).toFixed(2));
+            sum = sum + parseFloat(parseFloat(rows[i].innerHTML.substring(1, rows[i].innerHTML.length)).toFixed(2));
         }
 
         document.getElementById("sum").innerHTML = "Total: $" + sum;

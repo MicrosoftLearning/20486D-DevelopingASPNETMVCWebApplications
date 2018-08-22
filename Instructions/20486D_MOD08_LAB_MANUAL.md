@@ -381,7 +381,7 @@ The main tasks for this exercise are as follows:
 	- Condition: **i < rows.length**
 	- Increment Expression: **i++**
 
-5. In the **FOR** loop code block, assign the **sum** variable the value of **sum + parseFloat(parseFloat(rows[i].innerHTML).toFixed(2))**.
+5. In the **FOR** loop code block, assign the **sum** variable the value of **sum + parseFloat(parseFloat(rows[i].innerHTML.substring(1, rows[i].innerHTML.length)).toFixed(2))**.
 
 6. Assign the **innerHTML** property of **document.getElementById("sum")** to **"Total: $" + sum**.
 
@@ -519,7 +519,7 @@ The main tasks for this exercise are as follows:
 
 6. Create a variable named **calc** and assign it the value of **parseInt(value * correctCost)**.
 
-7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" + calc +'&lt;/span&gt;'**.
+7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" +'$' + calc +'&lt;/span&gt;'**.
 
 8. Create a variable named **row** and assign it the value of **$("&lt;tr id='" + label.text() +"'&gt;")**.
 

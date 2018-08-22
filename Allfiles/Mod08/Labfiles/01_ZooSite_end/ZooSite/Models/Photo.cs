@@ -16,7 +16,6 @@ namespace ZooSite.Models
         public string Title { get; set; }
 
         [DisplayName("Picture")]
-        [MaxLength]
         public string PhotoFileName { get; set; }
 
         [HiddenInput(DisplayValue = false)]

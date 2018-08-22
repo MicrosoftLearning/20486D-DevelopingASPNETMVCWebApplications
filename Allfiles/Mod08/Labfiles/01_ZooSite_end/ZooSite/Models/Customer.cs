@@ -22,7 +22,8 @@ namespace ZooSite.Models
         [Required(ErrorMessage = "Please enter your email address")]
         public string Email { get; set; }
 
-        [Display(Name = "Phone Number"), DataType(DataType.PhoneNumber)]
+        [Display(Name = "Phone"), DataType(DataType.PhoneNumber)]
+        [Required(ErrorMessage = "Please enter your phone number")]
         public int PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Please enter your adress")]

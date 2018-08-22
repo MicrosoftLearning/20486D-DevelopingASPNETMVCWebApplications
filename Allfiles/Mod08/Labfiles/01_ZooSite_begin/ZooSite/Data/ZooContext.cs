@@ -23,7 +23,7 @@ namespace ZooSite.Data
                  {
                      PhotoID = 1,
                      Title = "Butterfly Garden",
-                     Description = "The Butterfly Garden has more than 35 species of butterfly that can be seen by our visitors.",
+                     Description = "The butterfly garden has more than 35 species of butterfly that can be seen by our visitors.",
                      PhotoFileName = "butterfly.jpg",
                      ImageMimeType = "image/jpeg"
                  },
@@ -31,7 +31,7 @@ namespace ZooSite.Data
                 {
                     PhotoID = 2,
                     Title = "African Animals",
-                    Description = "The African Animals is the first sight that most people first notice upon entering the zoo, highly recommended.",
+                    Description = "The African animals are the first sight that most people first notice upon entering the zoo, highly recommended.",
                     PhotoFileName = "lion.jpg",
                     ImageMimeType = "image/jpeg"
                 },
@@ -39,7 +39,7 @@ namespace ZooSite.Data
                 {
                     PhotoID = 3,
                     Title = "Underwater World",
-                    Description = "Our Aquarium tank contains aquatic animals.",
+                    Description = "Our aquarium tank contains aquatic animals.",
                     PhotoFileName = "octopus.jpg",
                     ImageMimeType = "image/jpeg"
                 },
