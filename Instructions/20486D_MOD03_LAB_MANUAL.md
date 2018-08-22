@@ -269,7 +269,7 @@ The main tasks for this exercise are as follows:
 
 13. Uncomment the **ELSE** statement that would run in case the "favorite" query string parameter does not exist.
 
->**Result**: At the end of this exercise, you will be able to create a custom middleware and receive HTML form calls to it.
+>**Result**: At the end of this exercise, you will be able to create a custom middleware and receive submitted form data to it.
 
 ### Exercise 3: Using Dependency Injection
 
