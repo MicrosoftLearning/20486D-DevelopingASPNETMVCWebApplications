@@ -98,6 +98,15 @@
     color: #C62828;
 }
 
-form{
-    margin:20px;
+form {
+    margin: 20px;
+    background-color: #d4e2b6;
+    padding: 15px;
+    width: 600px;
+    box-shadow: 5px 10px #888888;
+    border-radius: 10%;
+}
+
+.field-validation-error{
+    color:red;
 }

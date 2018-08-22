@@ -12,30 +12,35 @@
                 <label asp-for="FirstName" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
                     <input asp-for="FirstName" type="text" class="form-control" placeholder="First Name" required>
+                    <span asp-validation-for="FirstName"></span>
                 </div>
             </div>
             <div class="form-group row">
                 <label asp-for="LastName" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
                     <input asp-for="LastName" type="text" class="form-control" placeholder="Last Name" required>
+                    <span asp-validation-for="LastName"></span>
                 </div>
             </div>
             <div class="form-group row">
                 <label asp-for="PhoneNumber" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
                     <input asp-for="PhoneNumber" type="number" class="form-control" placeholder="Number" required>
+                    <span asp-validation-for="PhoneNumber"></span>
                 </div>
             </div>
             <div class="form-group row">
                 <label asp-for="ReservationTime" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
-                    <input asp-for="ReservationTime" type="datetime-local" class="form-control" placeholder="Reservation Time"  required>
+                    <input asp-for="ReservationTime" type="datetime-local" class="form-control" placeholder="Reservation Time">
+                    <span asp-validation-for="ReservationTime"></span>
                 </div>
             </div>
             <div class="form-group row">
                 <label asp-for="DinnerGuests" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
-                    <input asp-for="DinnerGuests" type="number" class="form-control" placeholder="Dinner Guests" required>
+                    <input asp-for="DinnerGuests" type="number" class="form-control" placeholder="Dinner Guests">
+                    <span asp-validation-for="DinnerGuests"></span>
                 </div>
             </div>
             <div class="form-group row">
@@ -51,7 +56,7 @@
 
 
 
-@*@section Scripts{
+@section Scripts{
     <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
-}*@
+}
