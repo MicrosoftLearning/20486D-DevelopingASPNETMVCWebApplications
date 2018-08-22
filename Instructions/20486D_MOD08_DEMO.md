@@ -160,7 +160,7 @@
        }
 ```
 
-33. Place the cursor after the **}** (closing bracket) sign, press Enter twice, and then type the following code: 
+33. Place the cursor after the **}** (closing brace) sign, press Enter twice, and then type the following code: 
   ```cs
        <h2>Student details</h2>
 
@@ -228,7 +228,7 @@
 
 # Lesson 2: Using CSS and JavaScript
 
-### Demonstration: How to use NPM to add a Library
+### Demonstration: How to Use npm to Add a Library
 
 #### Preparation Steps 
 
@@ -240,7 +240,7 @@
 
 2. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **NpmExample**, point to **Add**, and then click **New Item**.
 
-3. In the **Add New Item - NpmExample** dialog box, in the search box type **npm**, and then press Enter.
+3. In the **Add New Item - NpmExample** dialog box, in the search box, type **npm**, and then press Enter.
 
 4. In the **Add New Item - NpmExample** dialog box, click **npm Configuration File**, and then click **Add**.
 
@@ -249,7 +249,7 @@
         "devDependencies": {
         }
 ```
-6. Place the cursor after the **}** (closing bracket) sign, and then type the following code:
+6. Place the cursor after the **}** (closing brace) sign, and then type the following code:
   ```cs
         ,
         "dependencies": {
@@ -259,42 +259,44 @@
 
 7. In the **NpmExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
 
+8. Wait for the **Microsoft Visual Studio** dialog box to appears, and then click **Yes to All**.
+
     >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package.
 
-8. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, in **Explorer Toolbar Options** click **Show All Files**.
+9. In **Solution Explorer** menu bar, click **Show All Files**.
 
-      >**Note:** In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
+      >**Note:** In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added, which contains the **jquery** package.
       
-9. In **Solution Explorer**, right-click **NpmExample**, point to **Add**, and then click **New Folder**.
+10. In **Solution Explorer**, right-click **NpmExample**, point to **Add**, and then click **New Folder**.
 
-10. In the **NewFolder** text box, type **Middleware**, and then press Enter.
+11. In the **NewFolder** text box, type **Middleware**, and then press Enter.
 
-11. In **Solution Explorer**, right-click **Middleware**, point to **Add**, and then click **Class**.
+12. In **Solution Explorer**, right-click **Middleware**, point to **Add**, and then click **Class**.
 
-12. In the **Add New Item – NpmExample** dialog box, in the **Name** text box, type **ApplicationBuilderExtensions**, and then click **Add**.
+13. In the **Add New Item – NpmExample** dialog box, in the **Name** text box, type **ApplicationBuilderExtensions**, and then click **Add**.
 
-13. In the **ApplicationBuilderExtensions.cs** code window, locate the following code:
+14. In the **ApplicationBuilderExtensions.cs** code window, locate the following code:
   ```cs
        using System.Threading.Tasks;
 ```
-14. Ensure that the cursor is at the end of the **System.Threading.Tasks** namespace, press Enter, and then type the following code:
+15. Ensure that the cursor is at the end of the **System.Threading.Tasks** namespace, press Enter, and then type the following code:
   ```cs
        using System.IO;
        using Microsoft.AspNetCore.Builder;
        using Microsoft.Extensions.FileProviders;
 ```
 
-15. In the **ApplicationBuilderExtensions.cs** code window, select the following code:
+16. In the **ApplicationBuilderExtensions.cs** code window, select the following code:
   ```cs
       public class ApplicationBuilderExtensions
 ```
 
-16.  Replace the selected code with the following code:
+17.  Replace the selected code with the following code:
   ```cs
       public static class ApplicationBuilderExtensions
 ```
 
-17. In the **ApplicationBuilderExtensions.cs** code block, place the cursor after the second **{** (opening brace) sign, press Enter, and then type the following code:
+18. In the **ApplicationBuilderExtensions.cs** code block, place the cursor after the second **{** (opening brace) sign, press Enter, and then type the following code:
   ```cs
        public static IApplicationBuilder UseNodeModules(this IApplicationBuilder applicationBuilder, string root)
        {
@@ -309,87 +311,87 @@
           return applicationBuilder;
        }
 ```
-18. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+19. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
-19. In the **Startup.cs** code window, locate the following code:
+20. In the **Startup.cs** code window, locate the following code:
   ```cs
        using Microsoft.Extensions.DependencyInjection;
 ```
-20. Ensure that the cursor is at the end of the **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
+21. Ensure that the cursor is at the end of the **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
   ```cs
        using NpmExample.Middleware;
 ```
 
-21. In the **Startup.cs** code window, locate the following code: 
+22. In the **Startup.cs** code window, locate the following code: 
   ```cs
        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
        {
 ```
 
-22. Place the cursor after the located code, press Enter, type the following code, and then press Enter.
+23. Place the cursor after the located code, press Enter, type the following code, and then press Enter.
   ```cs
        app.UseStaticFiles();
 
        app.UseNodeModules(env.ContentRootPath);
 ```
 
-23. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
+24. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
 
-24. In the **_Layout.cshtml** file, locate the following code:
+25. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <title>@ViewBag.Title</title>
 ```
 
-25. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
+26. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
        <script src="~/js/jquery-function.js"></script>
 ```
 
-26. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
+27. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
 
-27. In the **HomeController.cs** code window, right-click the following code, and then click **Add View**.
+28. In the **HomeController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-28. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
+29. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
 
-29. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
+30. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-30. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+31. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
 
-31. In the **Index.cshtml** code window, select the following code:
+32. In the **Index.cshtml** code window, select the following code:
   ```cs
        <h2>Index</h2>
 ```
 
-32. Replace the selected code with the following code: 
+33. Replace the selected code with the following code: 
   ```cs
        <div>
-            <h1>Use NPM to Add a JavaScript Library</h1>
+            <h1>Use npm to Add a Library</h1>
             <button id="btn-jquery-func">Run jQuery Function</button>
             <div class="box"></div>
        </div>
 ```
 
-33. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+34. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
 
-34. In the **NewFolder** text box, type **css**, and then press Enter.
+35. In the **NewFolder** text box, type **css**, and then press Enter.
 
-35. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **css**, point to **Add**, and then click **New Item**.
+36. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **css**, point to **Add**, and then click **New Item**.
 
-36. In the **Add New Item – NpmExample** dialog box, click **Web**, and then, in the result pane, click **Style Sheet**.
+37. In the **Add New Item – NpmExample** dialog box, click **Web**, and then, in the result pane, click **Style Sheet**.
 
-37. In the **Add New Item – NpmExample** dialog box, in the **Name** text box, type **style-example**, and then click **Add**.
+38. In the **Add New Item – NpmExample** dialog box, in the **Name** text box, type **style-example**, and then click **Add**.
 
-38. In the **style-example.css** code window, select the following code: 
+39. In the **style-example.css** code window, select the following code: 
   ```cs
        body {
        }
 ```
 
-39. Replace the selected code with the following code:
+40. Replace the selected code with the following code:
   ```cs
        body {
           text-align: center;
@@ -421,27 +423,27 @@
        }
 ```
 
-40. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Shared**, click **_Layout.cshtml**.
+41. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Shared**, click **_Layout.cshtml**.
 
-41. In the **_Layout.cshtml** file, locate the following code:
+42. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <script src="~/js/jquery-function.js"></script>
 ```
 
-42. Place the cursor after the **>** (greater than) sign of the **&lt;/script&gt;** tag, press Enter, and then type the following code: 
+43. Place the cursor after the **>** (greater than) sign of the **&lt;/script&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <link href="~/css/style-example.css" rel="stylesheet" />
 ```
 
-43. In the **NpmExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+44. In the **NpmExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-44. In the **NpmExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+45. In the **NpmExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-45. In **Microsoft Edge**, click **Run jQuery Function** button to verify that **jquery** package added correctly using **NPM**.
+46. In **Microsoft Edge**, click **Run jQuery Function**.
       
-46. In **Microsoft Edge**, click **Close**.
+47. In **Microsoft Edge**, click **Close**.
 
-47. In the **NpmExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+48. In the **NpmExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Using jQuery
 
@@ -453,22 +455,45 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
+1. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin\JQueryExample**, copy the address in the address bar.
 
-2. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+2. Go to **Start**, and then type **cmd**.
 
-3. In the **NewFolder** text box, type **js**, and then press Enter.
+3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
-4. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+4. In the **User Account Control** dialog box, click **Yes**.
 
-5. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+  ```cs
+       cd  {copied folder path}
+```
 
-6. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **jquery-functions**, and then click **Add**.
+>**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
 
-7. In the **jquery-functions.js** code window, type the following code: 
+6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+  ```cs
+       npm install
+```
+7. Close the window.
+
+8. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin** and then double-click **JQueryExample.sln**.
+
+    >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package as a result of executing the command **npm install**.
+
+9. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+
+10. In the **NewFolder** text box, type **js**, and then press Enter.
+
+11. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+
+12. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+
+13. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **jquery-functions**, and then click **Add**.
+
+14. In the **jquery-functions.js** code window, type the following code: 
   ```cs
        var passingGrade = 55;
-       $(function () {
+       $(function() {
            $("#jqueryButton").click(function (event) {
                 var firstGrade = parseInt($("#studentGrade1").text());
                 var secondGrade = parseInt($("#studentGrade2").text());
@@ -476,56 +501,59 @@
 
                 if (firstGrade > passingGrade) {
                     $("#studentGrade1").addClass("goodGrade");
-                } else {
+                } 
+                else {
                     $("#studentGrade1").addClass("badGrade");
                 }
 
                 if (secondGrade > passingGrade) {
                     $("#studentGrade2").addClass("goodGrade");
-                } else {
+                } 
+                else {
                     $("#studentGrade2").addClass("badGrade");
                 }
 
                 if (thirdGrade > passingGrade) {
                     $("#studentGrade3").addClass("goodGrade");
-                } else {
+                } 
+                else {
                     $("#studentGrade3").addClass("badGrade");
                 }
            });
        });
 ```
 
-8. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
+15. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
 
-9. In the **_Layout.cshtml** file, locate the following code:
+16. In the **_Layout.cshtml** file, locate the following code:
   ```cs
        <link href="~/css/style-example.css" rel="stylesheet" />
 ```
 
-10. Place the cursor after the **>** (greater than) sign of the **link** tag, press Enter, and then type the following code: 
+17. Place the cursor after the **>** (greater than) sign of the **link** tag, press Enter, and then type the following code: 
   ```cs
        <script src="~/js/jquery-functions.js"></script>
 ```
 
-11. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **GradeBookController.cs**.
+18. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **GradeBookController.cs**.
 
-12. In the **GradeBookController.cs** code window, right-click the following code, and then click **Add View**.
+19. In the **GradeBookController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-13. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
+20. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
 
-14. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
+21. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-15. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+22. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
 
-16. In the **Index.cshtml** code window, select the following code:
+23. In the **Index.cshtml** code window, select the following code:
   ```cs
        <h2>Index</h2>
 ```
 
-17. Replace the selected code with the following code: 
+24. Replace the selected code with the following code: 
   ```cs
        <h1>Students GradeBook</h1>
        <h2>Course Name: Mathematics and Computer Science</h2>
@@ -541,7 +569,7 @@
        <button id="jqueryButton">Apply JQuery</button>
 ```
 
-18. Place the cursor in the **THEAD** element, press Enter, and then type the following code: 
+25. Place the cursor in the **THEAD** element, press Enter, and then type the following code: 
   ```cs
        <tr>
            <th>
@@ -559,7 +587,7 @@
        </tr>
 ```
 
-19. Place the cursor in the **TBODY** element, press Enter, and then type the following code: 
+26. Place the cursor in the **TBODY** element, press Enter, and then type the following code: 
   ```cs
        <tr>
            <td>Thomas M. Hacker</td>
@@ -581,15 +609,15 @@
        </tr>
 ```
 
-20. In the **JQueryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+27. In the **JQueryExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-21. In the **JQueryExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+28. In the **JQueryExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-22. In **Microsoft Edge**, click **Apply JQuery**.
+29. In **Microsoft Edge**, click **Apply JQuery**.
       
-23. In **Microsoft Edge**, click **Close**.
+30. In **Microsoft Edge**, click **Close**.
 
-24. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+31. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 

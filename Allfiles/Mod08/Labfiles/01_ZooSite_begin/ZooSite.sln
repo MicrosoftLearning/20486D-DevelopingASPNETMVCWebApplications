@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooSite", "ZooSite\ZooSite.csproj", "{5A3687F3-275A-44C1-BFC1-E24529E6BA4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A3687F3-275A-44C1-BFC1-E24529E6BA4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3687F3-275A-44C1-BFC1-E24529E6BA4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3687F3-275A-44C1-BFC1-E24529E6BA4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3687F3-275A-44C1-BFC1-E24529E6BA4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2980A180-904E-4937-86A5-E77D6E780A29}
+	EndGlobalSection
+EndGlobal
