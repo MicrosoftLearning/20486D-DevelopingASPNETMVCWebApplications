@@ -224,8 +224,9 @@ The main tasks for this exercise are as follows:
 
 4. Style the photos section in Index.cshtml.
 
-5. Style a form in BuyTickets.cshtml
+5. Style a form in BuyTickets.cshtml.
 
+6. Run the application.
 
 #### Task 1: Add existing CSS file to the project
 
