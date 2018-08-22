@@ -152,7 +152,7 @@ The main tasks for this exercise are as follows:
 
 3. Access the following relative path:
     - Path: **/poll-questions.html**
-    > **Note**: The browser displays the **poll-questions.html** file content, but the HTML content is not designed by a css file yet.
+    > **Note**: The browser displays the **poll-questions.html** file content, but the HTML content is not designed by a CSS file yet.
 
 4. Close **Microsoft Edge**.
 
@@ -269,7 +269,7 @@ The main tasks for this exercise are as follows:
 
 13. Uncomment the **ELSE** statement that would run in case the "favorite" query string parameter does not exist.
 
->**Result**: At the end of this exercise, you will be able to create a custom middleware and receive HTML form calls to it.
+>**Result**: At the end of this exercise, you will be able to create a custom middleware and receive submitted form data to it.
 
 ### Exercise 3: Using Dependency Injection
 
