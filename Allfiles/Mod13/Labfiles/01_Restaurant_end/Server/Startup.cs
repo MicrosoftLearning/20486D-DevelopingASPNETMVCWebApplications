@@ -23,8 +23,6 @@ namespace Server
                   options.UseSqlite("Data Source=restaurant.db"));
 
             services.AddMvc();
-
-            services.AddCors();
         }
 
         public void Configure(IApplicationBuilder app, RestaurantContext restaurantContext)

@@ -23,6 +23,6 @@ namespace Server.Models
         public DateTime ReservationTime { get; set; }
 
         [Range(1, 20)]
-        public int dinnerGuests { get; set; }
+        public int DinnerGuests { get; set; }
     }
 }
