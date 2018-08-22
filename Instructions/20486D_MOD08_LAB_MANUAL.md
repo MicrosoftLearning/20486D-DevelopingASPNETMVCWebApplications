@@ -239,6 +239,8 @@ The main tasks for this exercise are as follows:
 	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
 	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\Zoo\wwwroot\css**
 
+3. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
+
 #### Task 2: Link the layout to the CSS file
 
 1. In the **_Layout.cshtml** file, in the **HEAD** element, add a **LINK** element with the following information:
@@ -330,6 +332,42 @@ The main tasks for this exercise are as follows:
 	- opacity: **0.8**
 	- background-color: **whitesmoke**
 	- box-shadow: **none**
+
+#### Task 6: Run the application
+
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+3. On the **Zoo Attractions** page, in the header  click **right arrow**, and then click **left arrow**.
+
+    >**Note:** The browser displays the **header** with the slider, but functionality is not applied yet.
+
+4. In the menu bar, click **Visitor Info**.
+
+5. In the menu bar, click **Tickets**.
+
+6. On **Step 1 - Choose Tickets**, select the following:
+
+	- Adult: **_&lt;As many tickets as you like&gt;_**
+	- Child: **_&lt;As many tickets as you like&gt;_**
+	- Senior: **_&lt;As many tickets as you like&gt;_**
+
+    >**Note:** The browser displays **Step 1 - Choose Tickets**, but functionality is not applied yet.
+
+7.  On **Step 2 - Buy Tickets**, type the following:
+
+	- First Name: **_&lt;A first name of your choice&gt;_**
+	- Last Name: **_&lt;A last name of your choice&gt;_**
+	- Address: **_&lt;An address of your choice&gt;_**
+	- Email: **_&lt;abcd&gt;_**
+	- Phone Number **_&lt; A phone number of your choice&gt;_**
+
+8. Click **Buy**.
+
+    >**Note:** The browser displays **Step 2 - Buy Tickets**, but you cant buy the tickets and there is no validation, the functionality is not applied yet.
+
+9. Close **Microsoft Edge**.
 
 >**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, add a link form a layout to the CSS file and add new CSS selectors. 
 
@@ -471,12 +509,9 @@ The main tasks for this exercise are as follows:
 
    - **ZooSite.Middleware**
 
-18. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
+18. In **Startup** class, in the **Configure** method, after the call to the **UseStaticFiles** method, call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
 
-19. Call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
-
-
-20. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
+19. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
 
 	- Src:**~/node_modules/jquery/dist/jquery.min.js**
 
@@ -658,28 +693,42 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In the menu bar, click **Visitor Info**.
+3. On the **Zoo Attractions** page, in the header  click **right arrow**, and then click **left arrow**.
 
-4. In the menu bar, click **Tickets**.
+    >**Note:** The browser displays the **header** with the slider, and the slider functionality is applied.
 
-5. On **Step 1 - Choose Tickets**, select the following:
+4. In the menu bar, click **Visitor Info**.
+
+5. In the menu bar, click **Tickets**.
+
+    >**Note:** The **Buy** button is disabled, and there is a message **Please Choose Tickets** under the button.
+
+6. On **Step 1 - Choose Tickets**, select the following:
 
 	- Adult: **_&lt;As many tickets as you like&gt;_**
 	- Child: **_&lt;As many tickets as you like&gt;_**
 	- Senior: **_&lt;As many tickets as you like&gt;_**
 
-6.  On **Step 2 - Buy Tickets**, type the following:
+    >**Note:** The **Buy** button is enabled, and the message under the button disappeared.
+
+7.  On **Step 2 - Buy Tickets**, type the following:
 
 	- First Name: **_&lt;A first name of your choice&gt;_**
 	- Last Name: **_&lt;A last name of your choice&gt;_**
 	- Address: **_&lt;An address of your choice&gt;_**
+	- Email: **_&lt;abcd&gt;_**
+
+    >**Note:** Client side validation applied.
+
+8. On **Step 2 - Buy Tickets**, type the following:
+
 	- Email: **_&lt;An email of your choice&gt;_**
 	- Phone Number **_&lt; A phone number of your choice&gt;_**
 
-7. Click **Buy**.
+9. Click **Buy**.
 
-8. Close **Microsoft Edge**.
+10. Close **Microsoft Edge**.
 
-9. Close **Microsoft Visual Studio**.
+11. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you will be able to add jQuery to a web application using npm, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 

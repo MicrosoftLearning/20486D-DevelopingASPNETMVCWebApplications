@@ -39,7 +39,7 @@ namespace ZooSite
                 routes.MapRoute(
                     name: "ZooRoute",
                     template: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "ZooSite", action = "Index" },
+                    defaults: new { controller = "Zoo", action = "Index" },
                     constraints: new { id = "[0-9]+" });
             });
         }
