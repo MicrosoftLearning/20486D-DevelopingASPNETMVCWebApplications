@@ -10,9 +10,9 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod05\Democode\01_CachingExample_begin**, and then double-click **CachingExample.sln**.
+1. Navigate to **Allfiles\Mod12\Democode\01_CachingExample_begin**, and then double-click **CachingExample.sln**.
 
-2. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Models**, and then click **Product.cs**.
+2. In the **CachingExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Models**, and then click **Product.cs**.
 
 3. In the **Product.cs** code window, locate the following code:
 ```cs
@@ -31,7 +31,7 @@
     public DateTime LoadedFromDatabase { get; set; }
 ```
 
-5. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Repositories**, and then click **ProductRepository.cs**.
+5. In the **CachingExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Repositories**, and then click **ProductRepository.cs**.
 
 6. In the **ProductRepository.cs** code window, locate the following code:
 ```cs
@@ -46,7 +46,7 @@
     }
 ```
 
-8. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, expand **Components**, expand **Product**, and then click **SelectedProduct.cshtml**.
+8. In the **CachingExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, expand **Components**, expand **Product**, and then click **SelectedProduct.cshtml**.
 
 9. In the **SelectedProduct.cshtml** code window, locate the following code:
 ```cs
@@ -58,27 +58,29 @@
     <div>Last retrieved on : @Model.LoadedFromDatabase.ToString("G")</div>
 ```
 
-11. In the **CachingExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+11.  In the **CachingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+        
+12. In the **CachingExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
     >**Note**: The browser displays a list of products on the left.
 
-12. In **Microsoft Edge**, click **Basketball**.
+13. In **Microsoft Edge**, click **Basketball**.
     >**Note**: The browser displays the basketball details, which includes the last time the product was retrieved from the data base.
 
-13. In **Microsoft Edge**, click **Basketball**.
+14. In **Microsoft Edge**, click **Basketball**.
     >**Note**: The browser displays the same page, but the **Last retrieved on** has changed since the item was retrieved from data base.
 
-14.  In **Microsoft Edge**, click **Close**.
+15.  In **Microsoft Edge**, click **Close**.
    
-15. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Product**, and then click **Index.cshtml**.
+16. In the **CachingExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Product**, and then click **Index.cshtml**.
 
-16. In the **index.cshtml** code window, locate the following code:
+17. In the **index.cshtml** code window, locate the following code:
 ```cs
     <div>
         @await Component.InvokeAsync("Product", @ViewBag.SelectedProductId)
     </div>
 ```
 
-17. Replace the selected code with the following code:
+18. Replace the selected code with the following code:
 ```cs
     <cache vary-by="@ViewBag.SelectedProductId">
         <div>
@@ -87,18 +89,19 @@
     </cache>
 ```
 
-18. In the **CachingExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
-    >**Note**: The browser displays a list of products on the left.
+19.   In the **CachingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+    
+20. In the **CachingExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-19. In **Microsoft Edge**, click **Basketball**.
+21. In **Microsoft Edge**, click **Basketball**.
     >**Note**: The browser displays the basketball details, which includes the last time the product was retrieved from the data base.
 
-20. In **Microsoft Edge**, click **Basketball**.
+22. In **Microsoft Edge**, click **Basketball**.
     >**Note**: The browser displays the same page, but the **Last retrieved on** hasn't changed since the item was cached.
 
-21.  In **Microsoft Edge**, click **Close**.
+23.  In **Microsoft Edge**, click **Close**.
 
-22. In the **CachingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+24. In the **CachingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Managing State
 
@@ -110,7 +113,7 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod05\Democode\02_StateExample_begin**, and then double-click **StateExample.sln**.
+1. Navigate to **Allfiles\Mod12\Democode\02_StateExample_begin**, and then double-click **StateExample.sln**.
 
 3. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
@@ -300,7 +303,7 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod05\Democode\03_SignalRExample_begin**, and then double-click **SignalRExample.sln**.
+1. Navigate to **Allfiles\Mod12\Democode\03_SignalRExample_begin**, and then double-click **SignalRExample.sln**.
 
 2. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
@@ -412,7 +415,7 @@
 ```
 
 25. In the **SignalRExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
-    >**Note**: Visual studio will automatically install the **SignalR** package.
+    >**Note**: In **Solution Explorer**, under **Depenndencies**, a new folder named **npm** has been added, which contains the **@aspnet/signalr** package.
 
 26. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Square**, and then click **index.cshtml**.
 
@@ -434,7 +437,7 @@
         .withUrl("squareshub")
         .build();
 
-    connection.on("SwapColor"), (x, y) => {
+    connection.on(("SwapSquareColor"), (x, y) => {
         $('#' + x + y).toggleClass('blue red');
     });
     
@@ -460,13 +463,13 @@
 
 36. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]**, and then press Enter.
 
-37. In **Microsoft Edge**, click one of the squares.
-    >**Note**: Notice that in both **Microsoft Edge** windows, the square that was clicked is now red.
+37. In **Microsoft Edge**, click on one of the squares.
+    >**Note**: In both the **Microsoft Edge** windows, the square that was clicked is red.
 
 38. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-39. In the Address bar of the Microsoft Edge window, type **http://localhost:[port]**, and then press Enter.
-    >**Note**: The browser displays the 8 blue squares and 1 red square.
+39. In **Microsoft Edge**, in the Address bar, type **http://localhost:[port]**, and then press Enter.
+    >**Note**: The browser displays 8 blue squares and 1 red square.
 
 40.  Close all the **Microsoft Edge** windows.
 

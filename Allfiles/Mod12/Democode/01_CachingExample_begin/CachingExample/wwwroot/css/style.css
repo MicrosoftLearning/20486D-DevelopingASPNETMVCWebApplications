@@ -16,7 +16,6 @@ div {
 .product-wrapper {
     flex-direction: row;
     display: flex;
-    flex-wrap: wrap;
 }
 
 .product-display > div {
@@ -27,4 +26,8 @@ div {
 
 .product-img {
     border: solid 1px #015072;
+}
+
+.product-list {
+    width: 250px;
 }

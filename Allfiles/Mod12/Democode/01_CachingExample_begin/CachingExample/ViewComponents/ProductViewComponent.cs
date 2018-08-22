@@ -26,7 +26,7 @@ namespace CachingExample.ViewComponents
             }
             else
             {
-                return Task.FromResult<IViewComponentResult>(Content("Choose a product"));
+                return Task.FromResult<IViewComponentResult>(Content("Choose a product to be displayed here"));
             }
         }
     }
