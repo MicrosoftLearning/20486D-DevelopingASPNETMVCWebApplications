@@ -352,10 +352,9 @@ The main tasks for this exercise are as follows:
 
 	- Adult: **_&lt;As many tickets as you like&gt;_**
 	- Child: **_&lt;As many tickets as you like&gt;_**
-	- Senior: **_&lt;As many tickets as you like&gt;_**
-
-    
-	>**Note:** Besides the changes in the boxes there are no other changes in the page since there no JavaScript code has been added to the web application yet.
+	- Senior: **_&lt;As many tickets as you like&gt;_**   
+   
+	>**Note:** Beside the changes in the boxes there are no other changes in the page since there no JavaScript code has been added to the web application yet.
 
 7.  On **Step 2 - Buy Tickets**, type the following:
 
