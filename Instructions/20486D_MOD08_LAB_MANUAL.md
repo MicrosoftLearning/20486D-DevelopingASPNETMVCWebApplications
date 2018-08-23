@@ -342,7 +342,7 @@ The main tasks for this exercise are as follows:
 
 3. In the **Zoo Attractions** page, in the **Welcome to Zoo Center** header, click the **right arrow**.
 
-    >**Note:** Currently clicking the button has no effect since there is no JavaScript code in the web application.
+    >**Note:** Currently clicking the button has no effect since no JavaScript code has been added to the web application yet.
 
 4. In the menu bar, click **Visitor Info**.
 
@@ -354,7 +354,8 @@ The main tasks for this exercise are as follows:
 	- Child: **_&lt;As many tickets as you like&gt;_**
 	- Senior: **_&lt;As many tickets as you like&gt;_**
 
-    >**Note:** Besides the changes in the boxes there are no other changes in the page since there is no JavaScript code in the web application.
+    
+	>**Note:** Besides the changes in the boxes there are no other changes in the page since there no JavaScript code has been added to the web application yet.
 
 7.  On **Step 2 - Buy Tickets**, type the following:
 
