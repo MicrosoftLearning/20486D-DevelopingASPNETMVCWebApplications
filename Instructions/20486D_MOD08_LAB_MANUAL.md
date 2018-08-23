@@ -694,13 +694,13 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. On the **Zoo Attractions** page, in the header  click **right arrow**, and then click **left arrow**.
+3. In the **Zoo Attractions** page, in the header, click the **right arrow**, and then click the **left arrow**.
 
-    >**Note:** The browser displays the **header** with the slider, and the slider functionality is applied.
+    >**Note:** The browser displays the header with the slider, and the slider functionality is applied.
 
 4. In the menu bar, click **Visitor Info**.
 
-5. In the menu bar, click **Tickets**.
+5. Click **Tickets**.
 
     >**Note:** The **Buy** button is disabled, and there is a message **Please Choose Tickets** under the button.
 
