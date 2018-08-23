@@ -455,7 +455,7 @@ The main tasks for this exercise are as follows:
 
 3. Save **package.json**.
 
->**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder named **npm** has been added which contains the **jquery** package.
+>**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package.
 
 4. In **Explorer Toolbar Options** click **Show All Files**.
 
