@@ -370,7 +370,7 @@ The main tasks for this exercise are as follows:
 
 9. Close **Microsoft Edge**.
 
->**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, add a link form a layout to the CSS file and add new CSS selectors. 
+>**Results**: After completing this exercise, you will be able to add an existing CSS file to a web application, and add a link from a layout to the CSS file. You will also be able to add new CSS selectors to a CSS file. 
 
 ### Exercise 3: Using JavaScript
 
