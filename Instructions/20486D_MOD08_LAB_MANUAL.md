@@ -354,7 +354,7 @@ The main tasks for this exercise are as follows:
 	- Child: **_&lt;As many tickets as you like&gt;_**
 	- Senior: **_&lt;As many tickets as you like&gt;_**
 
-    >**Note:** The browser displays **Step 1 - Choose Tickets**, but functionality is not applied yet.
+    >**Note:** The browser displays the **Step 1 - Choose Tickets** section, but functionality is not applied yet.
 
 7.  On **Step 2 - Buy Tickets**, type the following:
 
