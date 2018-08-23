@@ -361,7 +361,7 @@ The main tasks for this exercise are as follows:
 	- First Name: **_&lt;A first name of your choice&gt;_**
 	- Last Name: **_&lt;A last name of your choice&gt;_**
 	- Address: **_&lt;An address of your choice&gt;_**
-	- Email: **_&lt;abcd&gt;_**
+	- Email: **abcd**
 	- Phone Number **_&lt;A phone number of your choice&gt;_**
 
 8. Click **Buy**.
