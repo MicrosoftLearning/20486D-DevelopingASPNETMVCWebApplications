@@ -725,7 +725,7 @@ The main tasks for this exercise are as follows:
 
 9. On **Step 2 - Buy Tickets**, type the following:
 
-	- Email: **_&lt;An email of your choice&gt;_**
+	- Email: **_&lt;A valid email of your choice&gt;_**
 	- Phone Number **_&lt; A phone number of your choice&gt;_**
 
 10. Click **Buy**.
