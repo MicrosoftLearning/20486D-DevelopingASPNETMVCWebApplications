@@ -710,7 +710,7 @@ The main tasks for this exercise are as follows:
 	- Child: **_&lt;As many tickets as you like&gt;_**
 	- Senior: **_&lt;As many tickets as you like&gt;_**
 
-    >**Note:** The **Buy** button is enabled, and the message under the button disappeared.
+    >**Note:** The **Buy** button is enabled, and the message under the button disappeared. In addition, an **Order Summary** section is added which shows the price of the tickets.
 
 7.  On **Step 2 - Buy Tickets**, type the following:
 
