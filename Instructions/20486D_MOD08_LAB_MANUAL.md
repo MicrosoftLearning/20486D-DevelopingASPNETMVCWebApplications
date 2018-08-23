@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You have been asked to add a slideshow to the homepage of the zooSite web application that will show some of the animals’ photos. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
+You have been asked to add a slideshow to the homepage of the zoo web application that will show some of the animals’ photos. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
 
 You want to use jQuery to create this slideshow because you want to cycle through the photos in the browser, without reloading the page each time. 
 
