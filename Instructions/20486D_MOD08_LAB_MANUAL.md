@@ -721,7 +721,7 @@ The main tasks for this exercise are as follows:
 
 8. After you fill the **Email** box, press Tab.
 
-    >**Note:** Client side validation applied.
+    >**Note:** Client side validation applies.
 
 9. On **Step 2 - Buy Tickets**, type the following:
 
