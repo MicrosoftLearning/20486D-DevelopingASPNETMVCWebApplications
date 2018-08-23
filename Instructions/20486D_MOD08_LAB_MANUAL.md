@@ -340,7 +340,7 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In the **Zoo Attractions** page, in the header click the **right arrow**.
+3. In the **Zoo Attractions** page, in the **Welcome to Zoo Center** header, click the **right arrow**.
 
     >**Note:** Currently clicking the button has no effect since there is no JavaScript code in the web application.
 
