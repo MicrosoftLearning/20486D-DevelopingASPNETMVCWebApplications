@@ -719,7 +719,7 @@ The main tasks for this exercise are as follows:
 	- Address: **_&lt;An address of your choice&gt;_**
 	- Email: **abcd**
 
-8. After you fill the **Email** box, press tab.
+8. After you fill the **Email** box, press Tab.
 
     >**Note:** Client side validation applied.
 
