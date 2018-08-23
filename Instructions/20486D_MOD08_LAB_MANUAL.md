@@ -717,19 +717,21 @@ The main tasks for this exercise are as follows:
 	- First Name: **_&lt;A first name of your choice&gt;_**
 	- Last Name: **_&lt;A last name of your choice&gt;_**
 	- Address: **_&lt;An address of your choice&gt;_**
-	- Email: **_&lt;abcd&gt;_**
+	- Email: **abcd**
+
+8. After filling the **Email** box, press tab.
 
     >**Note:** Client side validation applied.
 
-8. On **Step 2 - Buy Tickets**, type the following:
+9. On **Step 2 - Buy Tickets**, type the following:
 
 	- Email: **_&lt;An email of your choice&gt;_**
 	- Phone Number **_&lt; A phone number of your choice&gt;_**
 
-9. Click **Buy**.
+10. Click **Buy**.
 
-10. Close **Microsoft Edge**.
+11. Close **Microsoft Edge**.
 
-11. Close **Microsoft Visual Studio**.
+12. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you will be able to add jQuery to a web application using npm, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 
