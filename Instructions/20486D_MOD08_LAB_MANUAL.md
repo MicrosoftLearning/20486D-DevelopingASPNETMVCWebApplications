@@ -342,7 +342,7 @@ The main tasks for this exercise are as follows:
 
 3. On the **Zoo Attractions** page, in the header  click **right arrow**, and then click **left arrow**.
 
-    >**Note:** The browser displays the header with the slider, but functionality is not applied yet.
+    >**Note:** Currently clicking the button has no effect since there is no JavaScript code in the web application.
 
 4. In the menu bar, click **Visitor Info**.
 
