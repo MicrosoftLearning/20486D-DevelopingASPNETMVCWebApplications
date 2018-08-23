@@ -362,11 +362,11 @@ The main tasks for this exercise are as follows:
 	- Last Name: **_&lt;A last name of your choice&gt;_**
 	- Address: **_&lt;An address of your choice&gt;_**
 	- Email: **_&lt;abcd&gt;_**
-	- Phone Number **_&lt; A phone number of your choice&gt;_**
+	- Phone Number **_&lt;A phone number of your choice&gt;_**
 
 8. Click **Buy**.
 
-    >**Note:** The browser displays **Step 2 - Buy Tickets**, but you cant buy the tickets and there is no validation, the functionality is not applied yet.
+    >**Note:** Currently you can't buy the tickets and there is no validation since the functionality is not applied yet.
 
 9. Close **Microsoft Edge**.
 
