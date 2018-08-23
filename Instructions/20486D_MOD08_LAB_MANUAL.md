@@ -366,7 +366,7 @@ The main tasks for this exercise are as follows:
 
 8. Click **Buy**.
 
-    >**Note:** Currently you can't buy the tickets and there is no validation since the functionality is not applied yet.
+    >**Note:** Currently you can't buy the tickets and there is no validation since the functionality has not applied yet.
 
 9. Close **Microsoft Edge**.
 
