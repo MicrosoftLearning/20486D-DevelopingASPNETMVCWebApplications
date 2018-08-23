@@ -346,7 +346,7 @@ The main tasks for this exercise are as follows:
 
 4. In the menu bar, click **Visitor Info**.
 
-5. In the menu bar, click **Tickets**.
+5. Click **Tickets**.
 
 6. On **Step 1 - Choose Tickets**, select the following:
 
