@@ -46,6 +46,7 @@ namespace Server.Controllers
                 return BadRequest(ModelState);
             }
             _context.Add(employeeRequirements);
+            _context.SaveChanges();
             return CreatedAtAction(nameof(GetById), new { id = employeeRequirements.Id }, employeeRequirements);
         }
     }

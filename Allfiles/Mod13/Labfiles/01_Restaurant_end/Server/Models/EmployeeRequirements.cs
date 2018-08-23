@@ -11,7 +11,7 @@ namespace Server.Models
 
         public double MinimumAge { get; set; }
 
-        public string JobTitle { get; set; }
+        public JobTitle Job { get; set; }
 
         public double PricePerHour { get; set; }
 

@@ -25,17 +25,5 @@ namespace Server.Controllers
         {
             return _context.RestaurantBranches.ToList();
         }
-
-        [HttpGet("{id}")]
-        public ActionResult<RestaurantBranch> GetById(int id)
-        {
-            var restaurant = _context.RestaurantBranches.FirstOrDefault(p => p.Id == id);
-            if (restaurant == null)
-            {
-                return NotFound();
-            }
-
-            return restaurant;
-        }
     }
 }

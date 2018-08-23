@@ -17,6 +17,7 @@ namespace Server.Data
         public DbSet<RestaurantBranch> RestaurantBranches { get; set; }
         public DbSet<EmployeeRequirements> EmployeesRequirements { get; set; }
         public DbSet<OrderTable> ReservationsTables { get; set; }
+        public DbSet<JobApplication> JobApplications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -61,7 +62,7 @@ namespace Server.Data
                new EmployeeRequirements
                {
                    Id = 1,
-                   JobTitle = "",
+                   Job = JobTitle.test,
                    JobDescription = "",
                    MinimumAge = 16.5,
                    PricePerHour = 15
@@ -69,7 +70,7 @@ namespace Server.Data
                new EmployeeRequirements
                {
                    Id = 2,
-                   JobTitle = "",
+                   Job = JobTitle.test,
                    JobDescription = "",
                    MinimumAge = 15,
                    PricePerHour = 22
@@ -77,7 +78,7 @@ namespace Server.Data
                new EmployeeRequirements
                {
                    Id = 3,
-                   JobTitle = "",
+                   Job = JobTitle.test,
                    JobDescription = "",
                    MinimumAge = 22,
                    PricePerHour = 50
@@ -85,7 +86,7 @@ namespace Server.Data
                new EmployeeRequirements
                {
                    Id = 4,
-                   JobTitle = "",
+                   Job = JobTitle.test,
                    JobDescription = "",
                    MinimumAge = 18,
                    PricePerHour = 45
