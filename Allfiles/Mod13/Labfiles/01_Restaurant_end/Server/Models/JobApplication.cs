@@ -29,5 +29,9 @@ namespace Server.Models
         public string Address { get; set; }
 
         public JobTitle Job { get; set; }
+
+        public int EmployeeRequirementsId { get; set; }
+
+        public virtual EmployeeRequirements EmployeeRequirements { get; set; }
     }
 }

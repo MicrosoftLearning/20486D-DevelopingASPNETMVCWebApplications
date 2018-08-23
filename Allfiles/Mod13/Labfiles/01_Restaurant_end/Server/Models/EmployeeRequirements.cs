@@ -16,5 +16,7 @@ namespace Server.Models
         public double PricePerHour { get; set; }
 
         public string JobDescription { get; set; }
+
+        public virtual ICollection<JobApplication> JobApplications { get; set; }
     }
 }

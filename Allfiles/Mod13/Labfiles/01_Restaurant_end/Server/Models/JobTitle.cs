@@ -7,6 +7,12 @@ namespace Server.Models
 {
     public enum JobTitle
     {
-        test
+        Bartender,
+        Waiter,
+        Waitress,
+        Hostess,
+        Dishwasher,
+        Cook,
+        Manager
     }
 }

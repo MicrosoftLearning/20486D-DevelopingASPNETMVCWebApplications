@@ -3,7 +3,7 @@
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "http://localhost:59216/api/RestaurantWantedAd",
+            url: "http://localhost:54517/api/RestaurantWantedAd",
             data: $('#myForm').serialize(),
             contentType: "application/json;charset=utf-8",
             success: function (result) {

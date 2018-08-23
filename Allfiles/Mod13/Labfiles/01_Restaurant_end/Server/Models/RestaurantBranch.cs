@@ -23,5 +23,7 @@ namespace Server.Models
 
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
+
+        public virtual ICollection<OrderTable> OrderTables { get; set; }
     }
 }

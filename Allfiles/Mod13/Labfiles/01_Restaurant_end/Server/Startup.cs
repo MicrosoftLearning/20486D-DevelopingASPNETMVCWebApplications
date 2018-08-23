@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,13 @@ namespace Server
             services.AddDbContext<RestaurantContext>(options =>
                   options.UseSqlite("Data Source=restaurant.db"));
 
+
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                                     .AllowAnyMethod()
+                                                                      .AllowAnyHeader()));
+
             services.AddMvc();
+
         }
 
         public void Configure(IApplicationBuilder app, RestaurantContext restaurantContext)
@@ -30,7 +37,10 @@ namespace Server
             restaurantContext.Database.EnsureDeleted();
             restaurantContext.Database.EnsureCreated();
 
+            app.UseCors("AllowAll");
+
             app.UseMvc();
+
         }
     }
 }

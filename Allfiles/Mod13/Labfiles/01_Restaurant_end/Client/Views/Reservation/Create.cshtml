@@ -9,6 +9,15 @@
     <div class="col-5">
         <form method="post" enctype="multipart/form-data" asp-action="Create">
             <div class="form-group row">
+                <label asp-for="RestaurantBranch" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-6">
+                    <select asp-for="RestaurantBranchId" asp-items="ViewBag.RestaurantBranchId" type="text" class="form-control" placeholder="Restaurant Branch" required>
+                        <option selected="selected" value="">Select</option>
+                    </select>
+                    <span asp-validation-for="RestaurantBranchId"></span>
+                </div>
+            </div>
+            <div class="form-group row">
                 <label asp-for="FirstName" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
                     <input asp-for="FirstName" type="text" class="form-control" placeholder="First Name" required>

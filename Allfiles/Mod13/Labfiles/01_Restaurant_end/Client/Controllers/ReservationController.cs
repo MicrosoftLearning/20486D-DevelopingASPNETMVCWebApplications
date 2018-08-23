@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Server.Models;
 
 namespace Client.Controllers
@@ -11,6 +12,7 @@ namespace Client.Controllers
     public class ReservationController : Controller
     {
         private IHttpClientFactory _httpClient;
+        private IEnumerable<RestaurantBranch> _restaurantBranches;
 
         public ReservationController(IHttpClientFactory httpClient)
         {
@@ -18,9 +20,25 @@ namespace Client.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            await PopulateRestaurantBranchesDropDownListAsync();
             return View();
+        }
+
+        private async Task PopulateRestaurantBranchesDropDownListAsync(int? selectedBranch = null)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches");
+            request.Headers.Add("Accept", "application/json");
+
+            var client = _httpClient.CreateClient();
+            var response = await client.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                _restaurantBranches = await response.Content.ReadAsAsync<IEnumerable<RestaurantBranch>>();
+            }
+
+            ViewBag.RestaurantBranchId = new SelectList(_restaurantBranches, "Id", "City", selectedBranch);
         }
 
         [HttpPost, ActionName("Create")]
@@ -29,7 +47,12 @@ namespace Client.Controllers
             var client = _httpClient.CreateClient();
             var response = await client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable);
             response.EnsureSuccessStatusCode();
-            return View(orderTable);
+            return RedirectToAction(nameof(ThankYou));
+        }
+
+        public IActionResult ThankYou()
+        {
+            return View();
         }
     }
 }

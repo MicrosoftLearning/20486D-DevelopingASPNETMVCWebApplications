@@ -27,5 +27,11 @@ namespace Server.Models
         [Display(Name = "Dinner Guests")]
         [Range(1, 20)]
         public int DinnerGuests { get; set; }
+
+        [Required(ErrorMessage = "Please select restaurant branch.")]
+        public int RestaurantBranchId { get; set; }
+
+        [Display(Name = "Restaurant Branch")]
+        public virtual RestaurantBranch RestaurantBranch { get; set; }
     }
 }

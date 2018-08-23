@@ -29,7 +29,6 @@ namespace Server.Data
                    City = "Winnipeg",
                    Open = true,
                    PhoneNumber = "204-266-8812"
-
                },
                new RestaurantBranch
                {
@@ -62,34 +61,46 @@ namespace Server.Data
                new EmployeeRequirements
                {
                    Id = 1,
-                   Job = JobTitle.test,
-                   JobDescription = "",
+                   Job = JobTitle.Dishwasher,
+                   JobDescription = "Clean dishes, kitchen, and food preparation equipment.",
                    MinimumAge = 16.5,
                    PricePerHour = 15
                },
                new EmployeeRequirements
                {
                    Id = 2,
-                   Job = JobTitle.test,
-                   JobDescription = "",
-                   MinimumAge = 15,
+                   Job = JobTitle.Waiter,
+                   JobDescription = "Take orders and serve food to Guests in our restaurant.",
+                   MinimumAge = 18,
                    PricePerHour = 22
                },
                new EmployeeRequirements
                {
                    Id = 3,
-                   Job = JobTitle.test,
-                   JobDescription = "",
+                   Job = JobTitle.Manager,
+                   JobDescription = "Responsible for the efficient running and profitability of the restaurants.",
                    MinimumAge = 22,
                    PricePerHour = 50
                },
                new EmployeeRequirements
                {
                    Id = 4,
-                   Job = JobTitle.test,
-                   JobDescription = "",
+                   Job = JobTitle.Bartender,
+                   JobDescription = "Interacting with customers, taking orders and serving drinks",
                    MinimumAge = 18,
                    PricePerHour = 45
+               });
+
+            modelBuilder.Entity<OrderTable>().HasData(
+               new OrderTable
+               {
+                   Id = 1,
+                   FirstName = "Francis",
+                   LastName = "Fralick",
+                   PhoneNumber = "636-412-2913",
+                   ReservationTime = DateTime.Now,
+                   DinnerGuests = 4,
+                   RestaurantBranchId = 1
                });
         }
     }
