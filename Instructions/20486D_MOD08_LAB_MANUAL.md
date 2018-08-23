@@ -508,7 +508,7 @@ The main tasks for this exercise are as follows:
 
 17. In the **Startup** class, add **USING** statement for the following namespace:
 
-   - **ZooSite.Middleware**
+    - **ZooSite.Middleware**
 
 18. In **Startup** class, in the **Configure** method, after the call to the **UseStaticFiles** method, call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
 
