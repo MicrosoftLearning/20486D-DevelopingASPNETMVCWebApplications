@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    <p>
+        Welcome to the multiplication table site.
+    </p>
+    @await Html.PartialAsync("_NumberLinks")
+</body>
+</html>

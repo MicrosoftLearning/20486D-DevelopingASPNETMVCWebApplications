@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ProductsWebsite.Models.Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <h1>Product list:</h1>
+    <div>
+        @foreach (var product in Model)
+        {
+            <div>
+                <a asp-action="GetProduct" asp-route-id="@product.Id">@product.Name</a>
+            </div>
+        }
+    </div>
+</body>
+</html>

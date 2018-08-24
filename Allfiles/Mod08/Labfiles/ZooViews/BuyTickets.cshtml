@@ -1,4 +1,4 @@
-﻿@model Zoo.Models.Customer
+﻿@model ZooSite.Models.Customer
 
 @{
     ViewData["Title"] = "BuyTickets";
@@ -60,7 +60,6 @@
     <div class="info">
         <div class="step-title">Step 2 - Buy Tickets</div>
         <form method="post" enctype="multipart/form-data" asp-action="BuyTickets">
-            <div asp-validation-summary="All"></div>
             <div class="form-field">
                 <label asp-for="FirstName"></label>
                 <input asp-for="FirstName" />
@@ -95,8 +94,5 @@
 </div>
 
 
-@section Scripts{
-    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
-    <script src="~/js/form-functions.js"></script>
+@section Scripts {
 }
