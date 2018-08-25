@@ -42,7 +42,7 @@ The main tasks for this exercise are as follows:
 
 1. Create a new folder with the following information:
 
-   - Parent folder: **Server**
+   - Project: **Server**
    - Folder name: **Controllers**
    
 2. Create a new controller with the following information:
@@ -68,7 +68,7 @@ The main tasks for this exercise are as follows:
 
 7. Add a method for the **Get** action with the following information:
    - Scope: **public**
-   - Return type: **ActionResult<List<RestaurantBranch>>**
+   - Return type: **ActionResult	&lt;List&lt;RestaurantBranch&gt;&gt;**
    - Name: **Get**
 
 8. Annotate the **Get** action with the **HttpGet** attribute.
@@ -84,27 +84,89 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Run the application
 
-1. 
+1. Save all the changes.
+
+2. In Solution Explorer, right-click **Server**, and then click **Set as StartUp Project**.
+
+3. Start the application without debugging.
+    >**Note:**  The browser displays the first restaurant in **JSON** format.
+
+4. Close **Microsoft Edge**.
 
 #### Task 3: Add an action that gets a parameter to a Web API application
 
-1. 
+1.  Create a new controller with the following information:
+   - Controller name: **ReservationController**
+   - Template: **API Controller - Empty**
+   - Folder: **Controllers**
+   
+2. In the **ReservationController** class, add **using** statements for the following namespaces:
+   - **Server.Data**
+   - **Server.Models**
+   
+3. Create a new field with the following information:
+   - Scope: **private**
+   - Type: **RestaurantContext**
+   - Name: **_context**
 
-7. Add a method for the **GetById** action with the following information:
+4.  Add a constructor with the following parameter:
+    - Parameter: 
+        - Type: **ReservationController** 
+        - Name: **context**
+
+5. In the **ReservationController** constructor, initialize the **_context** field with the value of the **context** parameter.
+
+6. Add a method for the **GetById** action with the following information:
    - Scope: **public**
-   - Return type: **ActionResult<OrderTable>**
+   - Return type: **ActionResult&lt;OrderTable&gt;**
    - Name: **GetById**
    - Parameter: 
         - Type: **int** 
         - Name: **id**
 
+7. Annotate the **GetById** action with the **HttpGet** attribute.
+
+8. In the **GetById** method, create a variable named **order ** of type **var** and assign it the value of **_context.ReservationsTables.FirstOrDefault(p => p.Id == id)**.
+
+9. Create an **IF** statement that checks that the value of the **order** varible is **null**. 
+
+10. Inside the **IF** statement code block, return a **NotFoundResult** result using the **NotFound** method.
+
+11. After the **IF** statement code block, return the **ActionResult&lt;OrderTable&gt;** result usig the **order** variable.
+
 #### Task 4: Run the application
 
-1. 
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+3. In **Microsoft Edge**, navigate to **http://localhost:[port]/api/Reservation/1**.
+    >**Note:**  The browser displays the first restaurant in **JSON** format.
+
+4. Close **Microsoft Edge**.
+
 
 #### Task 5: Add a Post action to a Web API application
 
-1. 
+1. In the **ReservationController** constructor, add a method for the **GetById** action with the following information:
+   - Scope: **public**
+   - Return type: **ActionResult&lt;OrderTable&gt;**
+   - Name: **Post**
+   - Parameter: 
+        - Type: **OrderTable** 
+        - Name: **orderTable**
+        
+2. Annotate the **Post** action with the **HttpPost** attribute.
+
+3. Create an **IF** statement that checks that the value of the **ModelState.IsValid** varible is **false**. 
+
+4. Inside the **IF** statement code block, return a **BadRequestResult** result using the **BadRequest** method. Pass the **ModelState** property as a parameter to the **BadRequest** method.
+
+5. After the **IF** statement code block, call the **Add** method of the **_context** field. Pass the **orderTable** property as a parameter to the **Add** method.
+
+6. Call the **SaveChanges** method of the **_context** field. 
+
+7. Return the **ActionResult&lt;OrderTable&gt** result usig the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and orderTable asparameters to the **CreatedAtAction** method.
 
 >**Results** : After completing this exercise, you will be able to
 
