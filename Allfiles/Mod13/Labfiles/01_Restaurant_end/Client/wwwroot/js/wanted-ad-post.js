@@ -1,13 +1,14 @@
 ﻿$(function () {
-    $(".btn-post").click(function (e) {
+    $("#btn-post").click(function (e) {
+        console.log(JSON.stringify($('#submit-job').serializeArray()));
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "http://localhost:54517/api/RestaurantWantedAd",
-            data: $('#myForm').serialize(),
+            url: "http://localhost:54517/api/job",
+            data: JSON.stringify($('#submit-job').serializeArray()),
             contentType: "application/json;charset=utf-8",
             success: function (result) {
-                $(".result").text(result);
+                alert(result);
             },
             error: function (result) {
                 alert('An error has occurred');

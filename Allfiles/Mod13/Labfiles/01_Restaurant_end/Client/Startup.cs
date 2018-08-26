@@ -41,7 +41,10 @@ namespace Client
                     template: "{controller}/{action}/{id?}",
                     defaults: new { controller = "WantedAd", action = "Index" },
                     constraints: new { id = "[0-9]+" });
-
+                routes.MapRoute(
+                     name: "JobApplicationRoute",
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "JobApplication", action = "Create" });
             });
         }
     }

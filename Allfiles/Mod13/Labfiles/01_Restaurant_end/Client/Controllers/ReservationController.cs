@@ -26,6 +26,15 @@ namespace Client.Controllers
             return View();
         }
 
+        [HttpPost, ActionName("Create")]
+        public async Task<IActionResult> CreatePostAsync(OrderTable orderTable)
+        {
+            var client = _httpClient.CreateClient();
+            var response = await client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable);
+            response.EnsureSuccessStatusCode();
+            return RedirectToAction(nameof(ThankYou));
+        }
+
         private async Task PopulateRestaurantBranchesDropDownListAsync(int? selectedBranch = null)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches");
@@ -39,15 +48,6 @@ namespace Client.Controllers
             }
 
             ViewBag.RestaurantBranchId = new SelectList(_restaurantBranches, "Id", "City", selectedBranch);
-        }
-
-        [HttpPost, ActionName("Create")]
-        public async Task<IActionResult> CreatePostAsync(OrderTable orderTable)
-        {
-            var client = _httpClient.CreateClient();
-            var response = await client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable);
-            response.EnsureSuccessStatusCode();
-            return RedirectToAction(nameof(ThankYou));
         }
 
         public IActionResult ThankYou()

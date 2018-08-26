@@ -24,31 +24,10 @@ namespace Server.Controllers
         [HttpGet]
         public ActionResult<List<EmployeeRequirements>> Get()
         {
-            return _context.EmployeesRequirements.ToList();
-        }
-
-        [HttpGet("{id}")]
-        public ActionResult<EmployeeRequirements> GetById(int id)
-        {
-            var employee = _context.EmployeesRequirements.FirstOrDefault(p => p.Id == id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-
-            return employee;
-        }
-
-        [HttpPost]
-        public ActionResult<RestaurantBranch> Post(EmployeeRequirements employeeRequirements)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            _context.Add(employeeRequirements);
-            _context.SaveChanges();
-            return CreatedAtAction(nameof(GetById), new { id = employeeRequirements.Id }, employeeRequirements);
+            var requirements = from r in _context.EmployeesRequirements
+                           orderby r.JobTitle
+                           select r;
+            return requirements.ToList();
         }
     }
 }

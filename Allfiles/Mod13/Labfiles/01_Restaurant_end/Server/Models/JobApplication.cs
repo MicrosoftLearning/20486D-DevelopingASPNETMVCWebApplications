@@ -23,12 +23,11 @@ namespace Server.Models
         public string Email { get; set; }
 
         [Display(Name = "Phone Number"), DataType(DataType.PhoneNumber)]
+        [Required(ErrorMessage = "Please enter your phone number")]
         public int PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Please enter your adress")]
         public string Address { get; set; }
-
-        public JobTitle Job { get; set; }
 
         public int EmployeeRequirementsId { get; set; }
 
