@@ -20,12 +20,6 @@ namespace Server.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public string Get()
-        {
-            return "test";
-        }
-
         [HttpGet("{id}")]
         public ActionResult<JobApplication> GetById(int id)
         {

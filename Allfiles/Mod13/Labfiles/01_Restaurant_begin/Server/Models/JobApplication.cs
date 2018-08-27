@@ -29,8 +29,10 @@ namespace Server.Models
         [Required(ErrorMessage = "Please enter your adress")]
         public string Address { get; set; }
 
+        [Required(ErrorMessage = "Please select a job title.")]
         public int EmployeeRequirementsId { get; set; }
 
+        [Display(Name = "Job Title")]
         public virtual EmployeeRequirements EmployeeRequirements { get; set; }
     }
 }

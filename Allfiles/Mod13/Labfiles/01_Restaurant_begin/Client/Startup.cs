@@ -15,8 +15,6 @@ namespace Client
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-
-            services.AddHttpClient();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
