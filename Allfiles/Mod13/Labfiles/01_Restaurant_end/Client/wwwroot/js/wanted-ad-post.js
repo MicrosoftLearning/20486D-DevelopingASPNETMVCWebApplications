@@ -1,6 +1,5 @@
 ﻿$(function () {
     $("#btn-post").click(function (e) {
-        console.log(JSON.stringify($('#submit-job').serializeArray()));
         e.preventDefault();
         $.ajax({
             type: "POST",
