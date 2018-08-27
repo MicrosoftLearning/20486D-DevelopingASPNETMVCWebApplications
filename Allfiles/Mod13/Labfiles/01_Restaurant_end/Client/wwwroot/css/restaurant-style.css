@@ -18,7 +18,7 @@
     color: #e3dfdf;
 }
 
-.container-view {
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

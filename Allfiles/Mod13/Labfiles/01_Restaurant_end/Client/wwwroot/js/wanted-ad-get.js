@@ -19,7 +19,7 @@
                                         <h6>${item.jobDescription}</h6>
                                   </div>
                              </div>`;
-                $('.container-view').append(html);
+                $('.container').append(html);
             });
             $('.photo-display-img').attr('src', '/images/white-plate.jpg');
         },

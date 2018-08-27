@@ -41,7 +41,6 @@ namespace Client.Controllers
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantWantedAd");
             request.Headers.Add("Accept", "application/json");
-
             var client = _httpClient.CreateClient();
             var response = await client.SendAsync(request);
             if (response.IsSuccessStatusCode)
