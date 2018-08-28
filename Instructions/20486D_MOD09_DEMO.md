@@ -24,7 +24,7 @@
        cd  {copied folder path}
 ```
 
->**Note:** If the **{copied folder path}** is in disk drive D, then you should type **d:** before typing the **cd  {copied folder path}** command.
+>**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
@@ -251,7 +251,7 @@
        cd  {copied folder path}
 ```
 
->**Note:** If the **{copied folder path}** is in disk drive D, then you should type **d:** before typing the **cd  {copied folder path}** command.
+>**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
@@ -403,45 +403,66 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
+1. In the **File Explorer**, navigate to **Allfiles\Mod09\DemocodeDemocode\03_GridExample_begin\GridExample**, copy the address in the address bar.
 
-2. In the **GridExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **ChessController.cs**.
+2. Go to **Start**, and then type **cmd**.
 
-3. In the **ChessController.cs** code window, right-click the following code, and then click **Add View**.
+3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
+
+4. In the **User Account Control** dialog box, click **Yes**.
+
+5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+  ```cs
+       cd  {copied folder path}
+```
+
+>**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
+
+6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+  ```cs
+       npm install
+```
+7. Close the window.
+
+8. Navigate to **Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
+
+9. In the **GridExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **ChessController.cs**.
+
+10. In the **ChessController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-4. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.
+11. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.
 
-5. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
+12. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-6. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** and the **Use a layout page** check boxes are **unchecked**, and then click **Add**.
+13. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** and the **Use a layout page** check boxes are **unchecked**, and then click **Add**.
 
-7. In the **Index.cshtml** code window, locate the following code:
+14. In the **Index.cshtml** code window, locate the following code:
   ```cs
        @{
           Layout = null;
        }
 ```
 
-8. Place the cursor before the **@** (at) sign, press the Up Arrow key, type the following code, and then press Enter.
+15. Place the cursor before the **@** (at) sign, press the Up Arrow key, type the following code, and then press Enter.
   ```cs
        @model IEnumerable<GridExample.Models.Game>
 ```
 
-9. In the **Index.cshtml** code window, locate the following code:
+16. In the **Index.cshtml** code window, locate the following code:
   ```cs
        <title>Index</title>
 ```
 
-10. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
+17. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
   ```cs
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+       <link href="~/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
        <link href="~/css/style.css" rel="stylesheet" />
 ```
 
-11. In the **Index.cshtml** code window,  in the **BODY** element, type the following code:
+18. In the **Index.cshtml** code window,  in the **BODY** element, type the following code:
   ```cs
        <div class="title">
            <h1>Chess League</h1>
@@ -449,7 +470,7 @@
        </div>    
 ```
 
-12. Place the cursor immediately after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter twice, and then type the following code:
+19. Place the cursor immediately after the **>** (greater than) sign of the **&lt;/div&gt;** tag, press Enter twice, and then type the following code:
   ```cs
        <div class="container">
            <div class="row grid-header align-items-center">
@@ -473,7 +494,7 @@
        </div>    
 ```
 
-13. Place the cursor in the **FOREACH** code block, press Enter, and then type the following code:
+20. Place the cursor in the **FOREACH** code block, press Enter, and then type the following code:
   ```cs
        <div class="col-2">
            <div class="row justify-content-center">
@@ -493,29 +514,28 @@
        </div>
        <div class="col-3">
                 @Html.DisplayFor(model => item.GamesQuantity)
-           </div>
-           <div class="col-3">
+       </div>
+       <div class="col-3">
                 @Html.DisplayFor(model => item.FinalScore)
-           </div>  
+       </div>  
 ```
 
-14. Place the cursor before the **<** (less then) sign of the **&lt;/body&gt;** tag, press Enter twice, press the Up Arrow key, and then type the following code:
+21. Place the cursor before the **<** (less then) sign of the **&lt;/body&gt;** tag, press Enter twice, press the Up Arrow key, and then type the following code:
   ```cs
-       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-       <script src="~/js/alert-function.js"></script>
+       <script src="~/node_modules/jquery/dist/jquery.js"></script>
+       <script src="~/node_modules/popper.js/dist/umd/popper.js"></script>
+       <script src="~/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 ```
 
-15. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+22. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-16. In the **GridExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+23. In the **GridExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
       >**Note:** The browser displays the **Index.cshtml** view with **Bootstrap grid system**.
 
-17. In **Microsoft Edge**, click **Close**.
+24. In **Microsoft Edge**, click **Close**.
 
-18. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+25. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
