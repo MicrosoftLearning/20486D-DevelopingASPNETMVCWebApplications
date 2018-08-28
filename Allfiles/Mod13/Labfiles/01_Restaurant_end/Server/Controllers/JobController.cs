@@ -33,7 +33,9 @@ namespace Server.Controllers
         }
 
         [HttpPost]
-        public ActionResult<JobApplication> Post(JobApplication jobApplication)
+        [ProducesResponseType(201, Type = typeof(JobApplication))]
+        [ProducesResponseType(400)]
+        public ActionResult<JobApplication> Create(JobApplication jobApplication)
         {
             if (!ModelState.IsValid)
             {
