@@ -62,28 +62,38 @@
         <form method="post" enctype="multipart/form-data" asp-action="BuyTickets">
             <div class="form-field">
                 <label asp-for="FirstName"></label>
-                <input asp-for="FirstName" />
-                <span asp-validation-for="FirstName"></span>
+                <div>
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName"></span>
+                </div>
             </div>
             <div class="form-field">
                 <label asp-for="LastName"></label>
-                <input asp-for="LastName" />
-                <span asp-validation-for="LastName"></span>
+                <div>
+                    <input asp-for="LastName" />
+                    <span asp-validation-for="LastName"></span>
+                </div>
             </div>
             <div class="form-field">
                 <label asp-for="Address"></label>
-                <input asp-for="Address" />
-                <span asp-validation-for="Address"></span>
+                <div>
+                    <input asp-for="Address" />
+                    <span asp-validation-for="Address"></span>
+                </div>
             </div>
             <div class="form-field">
                 <label asp-for="Email"></label>
-                <input asp-for="Email" />
-                <span asp-validation-for="Email"></span>
+                <div>
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
             </div>
             <div class="form-field">
                 <label asp-for="PhoneNumber"></label>
-                <input asp-for="PhoneNumber" />
-                <span asp-validation-for="PhoneNumber"></span>
+                <div>
+                    <input asp-for="PhoneNumber" />
+                    <span asp-validation-for="PhoneNumber"></span>
+                </div>
             </div>
             <div class="form-field" id="formButtons">
                 <input class="submit-btn" type="submit" value="Buy" disabled />
@@ -92,7 +102,6 @@
         </form>
     </div>
 </div>
-
 
 @section Scripts {
 }

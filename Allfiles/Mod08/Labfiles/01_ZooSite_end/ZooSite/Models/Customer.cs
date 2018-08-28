@@ -19,11 +19,11 @@ namespace ZooSite.Models
         public string LastName { get; set; }
 
         [DataType(DataType.EmailAddress)]
-        [Required(ErrorMessage = "Please enter your email address")]
+        [Required(ErrorMessage = "Please enter your email")]
         public string Email { get; set; }
 
         [Display(Name = "Phone"), DataType(DataType.PhoneNumber)]
-        [Required(ErrorMessage = "Please enter your phone number")]
+        [Required(ErrorMessage = "Please enter your phone")]
         public int PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Please enter your adress")]
