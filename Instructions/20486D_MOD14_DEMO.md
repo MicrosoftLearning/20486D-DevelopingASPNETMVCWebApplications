@@ -6,9 +6,9 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**).
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Ensure that you have a valid **Microsoft Azure** account.
+2. Ensure that you have a **Microsoft Azure** account.
 
 #### Demonstration Steps 
 
@@ -16,7 +16,7 @@
 
 2. In the **Start Page - Microsoft Visual Studio** window, on the **FILE** menu, point to **New**, and then click **Project**.
 
-3. In the **New Project** dialog box, in the navigation pane, expand **Installed**, expland **Visual C#**, and then click **Cloud**.
+3. In the **New Project** dialog box, in the navigation pane, expand **Installed**, expand **Visual C#**, and then click **Cloud**.
 
 4. In the **New Project** dialog box, in the result pane, click **ASP.NET Core Web Application**.
 
@@ -27,53 +27,55 @@
 7. In the **New ASP.NET Core Web Application - AzureWebAppExample** dialog box, in the result pane, click **Web Application (Model-View-Controller)**, ensure that the check boxes are unchecked and then click **OK**.
  
 8. In the **AzureWebAppExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**. 
->**Note:** **Microsoft Edge** will open automatically and in the address bar the URL will be:  **http://localhost:[port]/**. The browser displays the default home page. 
+>**Note:** The browser displays the default home page. 
 
-9.  In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish.**
+9. In **Microsoft Edge** click **close**.
 
-10. In the **Pick a Publish Target** dialog box, in the navigation pane, click **App Service**.
+10.  In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish.**
 
-11. In the **Pick a Publish Target** dialog box, in the result pane, click **Create New**, and then click **Publish**.
+11. In the **Pick a publish target** dialog box, in the navigation pane, click **App Service**.
 
-12. In the **Create App Service** dialog box, click **Sign in**. 
+12. In the **Pick a publish target** dialog box, in the result pane, click **Create New**, and then click **Publish**.
+
+13. In the **Create App Service** dialog box, click **Sign in**. 
 >**Note:** In case you have already signed-in, you will not see this dialog box. In this case, go to step 15.
 
-13. In the **Sign in** dialog box type your Azure Account user email, and then click **Next**. 
+14. In the **Sign in to your account** dialog box type your Azure Account **Email /Phone / Skype**, and then click **Next**. 
 
-14. In the **Sign in** dialog box, type your password, and then click **Sign in**.
+15. In the **Sign in to your account** dialog box, type your **password**, and then click **Sign in**.
 
+16. In the **Create App Service** dialog box, in the **App Name** textbox **AzureWebAppExample{yourfirstnamelastname}**  
+>**Note:** Replace {yourfirstnamelastname} with your first name and last name. This is needed as App Names are globally unique.
 
-15. In the **Create App Service** dialog box, in the **App Name** textbox **AzureWebAppExample<yourfirstnameyourlastname>**  
->**Note:** Replace <yourfirstnameyourlastname> with your first name and last name. This is needed as App Names are globally unique names.
+17. In the **Create App Service** dialog box, below the **Resource Group** text box, click **New**. 
 
+18. In the **New resource group name** text box, type **AzureWebAppExample**, and then click **OK**.
 
-16. In the **Create App Service** dialog box, below the **Resource Group** text box, click **New**. 
+19. In the **Create App Service** dialog box, below the **Hosting Plan** text box, click **New**. 
 
-17. In the **New resource group name** text box, type **AzureWebAppExample**, and then click **OK**.
+20. In the **Configure Hosting Plan** dialog box, in the **App Service Plan** text box type **AzureWebAppExample{yourfirstnamelastname}**. 
 
-18. In the **Create App Service** dialog box, below the **Hosting Plan** text box, click **New**. 
+21. In the **Configure Hosting Plan** dialog box, in the **Location** list, click **Central US**.
 
-19. In the **Configure Hosting Plan** dialog box, in the **App Service Plan** text box type **AzureWebAppExample<yourfirstnameyourlastname>**. 
+22. In the **Configure Hosting Plan** dialog box, in the **Size** list, click **S1 (1 core, 1.75 GB RAM)**, and then click **OK**.
 
-20. In the **Configure Hosting Plan** dialog box, in the **Location** list, click **Central US**.
+23. In the **Create App Service** dialog box, click **Create**.
+>**Note:** The browser displays the default home page and the URL is **http://azurewebapp{yourfirstnamelastname}.azurewebsites.net/**
 
-21. In the **Configure Hosting Plan** dialog box, in the **Size** list, click **S1 (1 core, 1.75 GB RAM)**, and then click **OK**.
+24. In **Microsoft Edge** click **close**.
 
-22. In the **Create App Service** dialog box, click **Create**.
->**Note:** **Microsoft Edge** will open automatically and in the address bar the URL will be:  **http://azurewebapp<yourfirstnameyourlastname>.azurewebsites.net/**. The browser displays the default home page. 
+25. In **Microsoft Edge**, in the address bar, type **http://portal.azure.com**, and then press Enter.
+>**Note:** After signing in, the browser displays the dashboard that contains the **App Service** and the **App Service Plan**.
 
-23. In **Microsoft Edge**, in the address bar, type **http://portal.azure.com**, and then press Enter.
->**Note::** After signing in, the browser displays the dashboard that contains the App Service and the App Service Plan that was created in previous steps.
-
-24. In **Microsoft Edge**, in the azure portal dashboard, click **AzureWebApp<yourfirstnameyourlastname>**.  The browser display the **Overview** page in the result pane with details of the application deployed in App Service. 
+26. In **Microsoft Edge**, click **AzureWebApp{yourfirstnamelastname}**.
 >**Note:** Review the details in the overview window.
 
-25. In **AzureWebAppSample - Microsoft Visual Studio**, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+27. In **AzureWebAppSample - Microsoft Visual Studio**, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-26. In **Index.cshtml** window delete all the content.
+28. In **Index.cshtml** window delete all the content.
 
 
-27. In **Index.cshtml** window , type the following code.
+29. In **Index.cshtml** window , type the following code.
 ```cs
 @{
     ViewData["Title"] = "Home Page";
@@ -83,11 +85,14 @@
 
 ```
 
-28. In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample** and then click **Publish**.
+30. In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample** and then click **Publish**.
 
-29. In the **Publish** dialog box, ensure that the App Service Profile that was created is selected, and then click **Publish** button.
->**Note:** **Microsoft Edge** will open automatically and in the address bar the URL will be:  **http://azurewebapp<yourfirstnameyourlastname>.azurewebsites.net**. The browser displays  **This is a ASP .NET web application deployed on Azure App Service**. 
+31. In the **Publish** dialog box, ensure that the App Service Profile that was created is selected, and then click **Publish**.
+>**Note:** The browser displays  **This is a ASP .NET web application deployed on Azure App Service**. 
 
+32. In **Microsoft Edge** click **close**.
+
+33. In the **AzureWebAppExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Microsoft Azure Fundamentals
 
@@ -95,20 +100,20 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**).
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Ensure that you have a valid **Microsoft Azure** account.
+2. Ensure that you have a **Microsoft Azure** account.
 
 
 #### Demonstration Steps 
 
-1.	In **Microsoft Edge** and in the address bar type **http://portal.azure.com**, and then press Enter.
+1.	In **Microsoft Edge**, in the address bar type **http://portal.azure.com**, and then press Enter.
 
 2.	Sign-in, and then click **Storage Accounts**.
 
 3.	In the **Storage accounts** pane, in the menu bar, click **Add**.
 
-4.	In the **Create Storage Account** pane , in the **Name** textbox type **blobdemo<yourfirstnameyourlastname>**
+4.	In the **Create Storage Account** pane , in the **Name** textbox type **blobdemo{yourfirstnamelastname}**
 >**Note:** Replace <yourfirstnameyoulastname> with your first name followed by your last name.
 
 5.	In the **Create Storage Account** pane, under **Resource Group** type **blobdemo**.
@@ -117,7 +122,7 @@
 
 7.	In the **Storage accounts** pane, click  **Refresh**.
 
-8.	In the **Storage accounts** pane, click **blobdemo<yourfirstnameyourlastname>**.
+8.	In the **Storage accounts** pane, click **blobdemo{yourfirstnamelastname}**.
 
 9.	In the **Storage Account** pane, locate **Blob Service** and click **Blobs** under it.
 
@@ -149,7 +154,7 @@
 
 23.	In the **Azure Storage** window, sign in to your **Microsoft Azure Account**.
 
-24.	In the **Azure Storage** window, click  **blobdemo<yourfirstnameyourlastname>** , and then click **Add**.
+24.	In the **Azure Storage** window, click  **blobdemo{yourfirstnamelastname}** , and then click **Add**.
 
 25.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in **Solution Explorer**, expand **AzureStorageDemo** , expand **Controllers**, and then click **BlobController.cs**.
 
@@ -195,9 +200,9 @@ Replace **{your_storage_account_name}** with the name of the storage account you
 
 33.	Sign-in, and then click **Storage Accounts**.
 
-34.	In the **Storage Accounts** pane, click **blobdemo<yourfirstnameyourlastname>**.
+34.	In the **Storage Accounts** pane, click **blobdemo{yourfirstnamelastname}**.
 
-35.	In **blobdemo<yourfirstnameyourlastname>** page, below **Blob Service**, click **Blobs**.
+35.	In **blobdemo{yourfirstnamelastname}** page, below **Blob Service**, click **Blobs**.
 
 36.	In **blobs** page, click **myimagecontainer**.
 
@@ -205,3 +210,8 @@ Replace **{your_storage_account_name}** with the name of the storage account you
 
 38. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
+©2018 Microsoft Corporation. All rights reserved.
+
+The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not** included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+
+This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.
