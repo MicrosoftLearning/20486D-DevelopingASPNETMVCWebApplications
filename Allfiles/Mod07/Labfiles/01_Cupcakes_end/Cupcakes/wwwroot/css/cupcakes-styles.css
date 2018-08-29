@@ -9,7 +9,19 @@
     padding: 0px;
 }
 
-.main-titel {
+.main-title {
+    background-image: url("/images/cupcakes-cover.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
     color: #321919;
     font-size: 60px;
     font-weight: bolder;
