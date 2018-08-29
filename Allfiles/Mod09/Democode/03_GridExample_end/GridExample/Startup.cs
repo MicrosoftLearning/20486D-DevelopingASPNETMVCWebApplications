@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GridExample.Data;
+using GridExample.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -21,12 +22,14 @@ namespace GridExample
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app, ChessLeagueContext chessLeagueContext)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ChessLeagueContext chessLeagueContext)
         {
             chessLeagueContext.Database.EnsureDeleted();
             chessLeagueContext.Database.EnsureCreated();
 
             app.UseStaticFiles();
+
+            app.UseNodeModules(env.ContentRootPath);
 
             app.UseMvc(routes =>
             {
