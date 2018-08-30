@@ -595,13 +595,13 @@ The main tasks for this exercise are as follows:
     - Return Type: **IQueryable&lt;Bakery&gt;**
     - Name: **PopulateBakeriesDropDownList**
 
-37. In the **PopulateBakeriesDropDownList** method, create a variable named **BakeriesQuery** of type **var** and assign it the value of the following **LINQ** query:
+37. In the **PopulateBakeriesDropDownList** method, create a variable named **bakeriesQuery** of type **var** and assign it the value of the following **LINQ** query:
 
     - From: **b in _context.Bakeries**
     - Orderby: **BakeryName**
     - Select: **b**
 
-38.  Return the **IQueryable&lt;Bakery&gt;** using the **BakeriesQuery** variable.
+38.  Return the **IQueryable&lt;Bakery&gt;** using the **bakeriesQuery** variable.
 
 39. In the **Startup** class, add **USING** statement for the following namespace:
 
@@ -991,66 +991,67 @@ The main tasks for this exercise are as follows:
         - Name: **CupcakeId**
         - Value: **1**
 
-4. Add a new property with the following information:
+4. Add a new parameter with the following information:
 
         - Name: **CaloricValue**
         - Value: **355**
 
-5. In the **CupcakeContext** class, locate the capcake object with the following information:
+5. Locate the capcake instance with the following information:
 
-    - Parameter:
         - Name: **CupcakeId**
         - Value: **2**
 
-6. Add a new property with the following information:
+6. Add a new parameter with the following information:
 
-    - Parameter:
         - Name: **CaloricValue**
         - Value: **195**   
 
-7. In the **CupcakeContext** class, locate the capcake object with the following information:
+7. Locate the capcake instance with the following information:
 
-    - Parameter:
         - Name: **CupcakeId**
         - Value: **3**
 
-8. Add a new property with the following information:
+8. Add a new parameter with the following information:
 
-    - Parameter:
         - Name: **CaloricValue**
         - Value: **295**   
 
-9. In the **CupcakeContext** class, locate the capcake object with the following information:
+9. Locate the capcake instance with the following information:
 
-    - Parameter:
         - Name: **CupcakeId**
         - Value: **4**
 
-10. Add a new property with the following information:
+10. Add a new parameter with the following information:
 
-    - Parameter:
         - Name: **CaloricValue**
         - Value: **360**  
 
-11. In the **Details.cshtml** file, add a **DIV** element.
+11. In the **Details.cshtml** file, add a **DIV** element before the **DIV** element with the following information: 
+
+    - Content: **&lt;a asp-action="Index"&gt;Back to List&lt;/a&gt;**
 
 12. In the **DIV** element, add a **P** element with the following information:
 
-	- Class:**display-label**
-    - Content: ***@Html.DisplayNameFor(model => model.CaloricValue)**
+	- Class: **display-label**
+    - Content: **@Html.DisplayNameFor(model => model.CaloricValue)**
 
 13. After the **P** element, add a **P** element with the following information:
 
-	- Class:**display-field**
+	- Class: **display-field**
     - Content: ***@Html.DisplayFor(model => model.CaloricValue)**
 
-14. Open **Package Manager Console**. 
+14. Open the **Package Manager Console** window.
 
-15. In the **Package Manager Console** tab, type the following command: **Add-Migration AddCupcakeCaloricValue**.
+15. Create a **migration** using the following information:
+
+     - Command: **Add-Migration**
+     - Migration Name: **AddCupcakeCaloricValue**
+
+16. Create the **database** using the following information:
+
+     - Command: **Update-Database**
 
     >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, in **Solution Explorer**, under  **Migrations**, a new file created.
-
-16. Type the following command: **Update-Database**.
 
 #### Task 6: Run the application
 
@@ -1060,7 +1061,7 @@ The main tasks for this exercise are as follows:
 
 3. Select a cupcake of your choice, and click on **Details**.
 
-    >**Note:** The database schema updated successfully a new property added named **Caloric Value** with it`s value. 
+    >**Note:** Verify that the browser displays the caloric value of the cupcake. 
 
 4. Verify the cupcake details, and then click **Back to List**.
 
@@ -1068,9 +1069,9 @@ The main tasks for this exercise are as follows:
 
 6. Close **Microsoft Visual Studio**.
 
->**Results**: After completing this exercise, you should have created a cupcakes shop application in which users can submit, edit, delete and view cupcales details.
+>**Results**: After completing this exercise, you should have created a cupcakes shop application in which users can add a new cupcake, edit a cupcake, delete a cupcake and view a cupcake’s details.
 
-©2016 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 
