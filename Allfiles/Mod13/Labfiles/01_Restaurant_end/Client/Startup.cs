@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Client.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Client.Middleware;
 
 namespace Client
 {
@@ -41,7 +40,10 @@ namespace Client
                     template: "{controller}/{action}/{id?}",
                     defaults: new { controller = "WantedAd", action = "Index" },
                     constraints: new { id = "[0-9]+" });
-
+                routes.MapRoute(
+                     name: "JobApplicationRoute",
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "JobApplication", action = "Create" });
             });
         }
     }

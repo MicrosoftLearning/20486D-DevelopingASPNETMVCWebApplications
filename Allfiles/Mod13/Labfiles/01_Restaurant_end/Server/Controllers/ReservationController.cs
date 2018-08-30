@@ -33,7 +33,9 @@ namespace Server.Controllers
         }
 
         [HttpPost]
-        public ActionResult<OrderTable> Post(OrderTable orderTable)
+        [ProducesResponseType(201, Type = typeof(OrderTable))]
+        [ProducesResponseType(400)]
+        public ActionResult<OrderTable> Create(OrderTable orderTable)
         {
             if (!ModelState.IsValid)
             {

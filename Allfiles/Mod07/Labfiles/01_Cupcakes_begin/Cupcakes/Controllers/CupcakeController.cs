@@ -16,12 +16,12 @@ namespace Cupcakes.Controllers
 
         public IActionResult GetImage(int id)
         {
-            Cupcake requestedcupcake = _repository.GetCupcakeById(id);
-            if (requestedcupcake != null)
+            Cupcake requestedCupcake = _repository.GetCupcakeById(id);
+            if (requestedCupcake != null)
             {
                 string webRootpath = _environment.WebRootPath;
                 string folderPath = "\\images\\";
-                string fullPath = webRootpath + folderPath + requestedcupcake.ImageName;
+                string fullPath = webRootpath + folderPath + requestedCupcake.ImageName;
                 if (System.IO.File.Exists(fullPath))
                 {
                     FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
@@ -30,13 +30,13 @@ namespace Cupcakes.Controllers
                     {
                         fileBytes = br.ReadBytes((int)fileOnDisk.Length);
                     }
-                    return File(fileBytes, requestedcupcake.ImageMimeType);
+                    return File(fileBytes, requestedCupcake.ImageMimeType);
                 }
                 else
                 {
-                    if (requestedcupcake.PhotoFile.Length > 0)
+                    if (requestedCupcake.PhotoFile.Length > 0)
                     {
-                        return File(requestedcupcake.PhotoFile, requestedcupcake.ImageMimeType);
+                        return File(requestedCupcake.PhotoFile, requestedCupcake.ImageMimeType);
                     }
                     else
                     {
