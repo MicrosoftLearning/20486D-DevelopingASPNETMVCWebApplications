@@ -47,7 +47,7 @@
        <title>@ViewBag.Title</title>
 ```
 
-14. In the **_Layout.cshtml** code window, place the cursor after the **>** (greater than) sign of the **&lt;body&gt;** tag, press Enter, and then type the following code:
+14. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <link href="~/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
        <link href="~/css/style.css" rel="stylesheet" />
@@ -85,7 +85,7 @@
                Genres
            </a>
            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-               <a class="dropdown-item" href="@Url.Action("GetScienceFictionBooks", "Library")">Science fiction</a>
+               <a class="dropdown-item" href="@Url.Action("GetScienceFictionBooks", "Library")">Science Fiction</a>
                <a class="dropdown-item" href="@Url.Action("GetDramaBooks", "Library")">Drama</a>
            </div>
        </li>
@@ -217,9 +217,9 @@
 
       >**Note:** Press the **X** close button in order to close the alert.
 
-41. In the menu bar, click **Genres**, and then click **science fiction**. 
+41. In the menu bar, click **Genres**, and then click **Science Fiction**. 
 
-42. In the **science fiction Books** page, click **No**, and examine the **alert** that appears.
+42. In the **Science Fiction Books** page, click **No**, and examine the **alert** that appears.
 
       >**Note:** Press the **X** close button in order to close the alert.
 
@@ -466,7 +466,7 @@
   ```cs
        <div class="title">
            <h1>Chess League</h1>
-           <p>hey, these are the results</p>
+           <p>Hey, These are the Results</p>
        </div>    
 ```
 
