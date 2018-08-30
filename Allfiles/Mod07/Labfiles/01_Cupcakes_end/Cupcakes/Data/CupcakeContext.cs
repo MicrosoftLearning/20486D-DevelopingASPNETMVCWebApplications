@@ -46,7 +46,8 @@ namespace Cupcakes.Data
                     BakeryName = "Sugar",
                     Address = "1608 Charles Street",
                     Quantity = 30
-                });
+                }
+            );
 
             modelBuilder.Entity<Cupcake>().HasData(
                 new Cupcake
@@ -96,7 +97,8 @@ namespace Cupcakes.Data
                     ImageMimeType = "image/jpeg",
                     ImageName = "turquoise-cupcake.jpg",
                     CaloricValue = 360
-                });
+                }
+            );
         }
     }
 }
