@@ -377,7 +377,7 @@ The main tasks for this exercise are as follows:
 
    - Type: **Cupcake**
 
-3. Call the **HasData** method of the **EntityTypeBuilder&lt;Cupcake&gt;** object returned from the **Entity&lt;Cupcake&gt;** method. Pass the following instances as parameters to the **HasData** method:
+5. Call the **HasData** method of the **EntityTypeBuilder&lt;Cupcake&gt;** object returned from the **Entity&lt;Cupcake&gt;** method. Pass the following instances as parameters to the **HasData** method:
 
     - Parameters:
         - **New Cupcake**:
@@ -433,7 +433,7 @@ The main tasks for this exercise are as follows:
 
 3. Use Entity Framework Core to retrieve data.
 
-4. Manipulating data using Entity Framework.
+4. Manipulate data using Entity Framework Core.
 
 5. Run the application. 
 
