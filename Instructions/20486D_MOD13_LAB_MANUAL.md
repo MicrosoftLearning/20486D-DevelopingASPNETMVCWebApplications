@@ -259,25 +259,35 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Run the Application
 
-1. 
+1. View the contents of the **Index.cshtml** view.
+    >**Note:** Examine the file content.
+    
+2. Save all the changes.
+
+3. In Solution Explorer, right-click **Client**, and then click **Set as StartUp Project**.
+
+4. Start the application without debugging.
+
+5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+    >**Note:** The browser displays the **Index.cshtml** file content of the **RestaurantController**.
+    
+6. In the menu bar, click **Reservation**.
+    >**Note:** We have not yet built the content of the page.
 
 #### Task 3: Calling a Web API Service POST method
 
-1. 
+1. Create a new controller with the following information:
+   - Controller name: **ReservationController**
+   - Template: **MVC Controller - Empty**
+   - Folder: **Client/Controllers**
+   
+2. 
 
 #### Task 4: Run the Application
 
 1. 
+   
 
-#### Task 5: 
-1. 
-
-#### Task 6: 
-1. 
-
-#### Task 7: 
-
-1. 
 
 ### Exercise 3: 
 
