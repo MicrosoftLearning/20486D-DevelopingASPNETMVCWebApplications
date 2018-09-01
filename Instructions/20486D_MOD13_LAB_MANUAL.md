@@ -401,25 +401,130 @@ After..
 
 The main tasks for this exercise are as follows:
 
-1.	
+1.	Calling a Web API Service GET method
 
-2.
+2. Run the Application
 
-3.	
+3.	Calling a Web API Service POST method
 
-#### Task 1: 
+4. Run the Application
+
+#### Task 1: Calling a Web API Service GET method
+
+1. Create a new controller with the following information:
+   - Controller name: **WantedAdController**
+   - Template: **MVC Controller - Empty**
+   - Folder: **Client/Controllers**
+   
+2. Add a **JavaScript** File with the following information:
+
+   - Folder: **Client/wwwroot/js**
+   - Name: **wanted-ad-get.js**
+   
+3. In the **wanted-ad-get.js** file, call the **$** function and pass an **anonymous function** as a parameter.
+
+4. Inside the **anonymous function** code block, call the **$.ajax** function. Pass a **JSON** object as a parameter to the **$.ajax** function using the following information:
+
+    - Properties: 
+      - type: **"GET"**
+      - url: **"http://localhost:54517/api/RestaurantWantedAd"**
+      - contentType: **"application/json; charset=utf-8"**
+      - dataType: **"json"**
+      - success: **function(data) { }**      
+      - error: **function() {  alert('An error has occurred'); }**
+
+5. Inside the **anonymous function** code block assigned to the **success** property, call the **$.each** method. Pass **data** and **anonymous function** as parameters to the **$.each** method.
+
+6. Change the signature of the **anonymous function** passed to the **$.each** method to accept **index** and **item** parameters.
+
+7. Inside the **anonymous function** passed to the **$.each** method, add a variable of type **var** with the name of **html**. 
+
+8. Assign the **html** variable with the value of: 
+  ```cs
+   `<div class="photo-index-card-data">
+           <div class="image-wrapper">
+                 <img class="photo-display-img" src="~/images/white-plate.jpg" />
+           </div>
+           <div class="display-picture-data">
+                 <h6 class="display-title">Job Title:</h6>
+                 <h6>${item.jobTitle}</h6>
+                 <h6 class="display-title">Hourly payment:</h6>
+                 <h6>$${item.pricePerHour}</h6>
+                 <h6 class="display-title">Job Description:</h6>
+                 <h6>${item.jobDescription}</h6>
+           </div>
+     </div>`
+```
+
+9. Call the **$** function and pass **'.container'** as a parameter.
+
+10. Chain a **append** function call to the $ function call. Pass **html** as a parameter to the  **append** function.
+
+11. Call the **$** function and pass **'.photo-display-img'** as a parameter.
+
+12. Chain a **attr** function call to the $ function call. Pass **'src'** and '/images/white-plate.jpg' as parameters to the  **attr** function.
+
+13. Inside the **WantedAd/Index.cshtml** view, after the **DIV** element with the **"container"** class, add a **Scripts** section code block.
+
+14. In the **Scripts** section code block, add a **SCRIPT** element with the following information:
+
+    - Src: **~/js/wanted-ad-get.js**
+
+
+#### Task 2: Run the Application
+
+1. Save all the changes.
+
+2. In Solution Explorer, right-click **Client**, and then click **Set as StartUp Project**.
+
+3. Start the application without debugging.
+
+4. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+    
+5. In the menu bar, click **We are Hiring**.
+    >**Note:** The browser displays the **Index.cshtml** file content of the **WantedAdController**.
+
+6. On **We are Hiring**, click **Submit Job Application**.
+    >**Note:** We have not yet built the content of the page.
+
+
+#### Task 3: Calling a Web API Service POST method
 
 1. 
 
-#### Task 2: 
 
+    
 
-#### Task 3: 
+#### Task 4: Run the Application
 
+1. View the contents of the **Create.cshtml** view.
+    
+2. Save all the changes.
 
->**Results** : After completing this exercise, alongside testing, you have developed a functional MVC Application.
+3. In Solution Explorer, right-click **Client**, and then click **Set as StartUp Project**.
 
->**Results** :  At the end of this exercise, you will be able to add logging in different logging levels in different environments, displaying errors or information by writing into a log file or a console output in a desired format, and creating a mock substitute using a mocking framework.
+4. Start the application without debugging.
+
+5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+    
+6. In the menu bar, click **Submit Job Application**.
+
+7. On **Submit Job Application** page, submiot a form with the following credentials:
+   
+    - Job Title: Select **_&lt;a job title of your choice&gt;_**
+    - First Name: Type **_&lt;A first name of your choice&gt;_**
+    - Last Name: Type **_&lt;A last name of your choice&gt;_**
+    - Phone Number: Type **_&lt;A phone of your choice&gt;_** 
+    - Email: Type **_&lt;An email time of your choice&gt;_** 
+    - Address : Type **_&lt;An address of your choice&gt;_** 
+    
+8. Click **Apply For a Job**.
+
+9. Close **Microsoft Edge**.
+
+10. Close **Microsoft Visual Studio**.
+
+>**Results** : After completing this exercise, you should have created a cupcakes shop application in which users can add a new cupcake, edit a cupcake, delete a cupcake and view a cupcake’s details.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
