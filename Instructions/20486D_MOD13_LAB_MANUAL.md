@@ -203,7 +203,59 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Calling a Web API Service GET method
 
-1. 
+1. In the **Startup** class, at the end of the **ConfigureServices** method, call the **AddHttpClient** method of the **services** parameter.
+
+2. Create a new folder with the following information:
+
+   - Project: **Client**
+   - Folder name: **Controllers**
+   
+3. Create a new controller with the following information:
+   - Controller name: **RestaurantController**
+   - Template: **MVC Controller - Empty**
+   - Folder: **Controllers**
+   
+4. In the **RestaurantController** class, add **using** statements for the following namespaces:
+   - **System.Net.Http**
+   - **Server.Models**
+
+5. Remove the **Index** action with its content.
+
+6. Create a new field with the following information:
+   - Scope: **private**
+   - Type: **IHttpClientFactory**
+   - Name: **_httpClient**
+
+7. Create a new field with the following information:
+   - Scope: **private**
+   - Type: **IEnumerable&lt;RestaurantBranch&gt;**
+   - Name: **_restaurantBranches**
+
+8.  Add a constructor with the following parameter:
+    - Parameter: 
+        - Type: **IHttpClientFactory** 
+        - Name: **httpClient**
+
+9. In the **RestaurantController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
+
+10. Add an **async** method for the **Index** action with the following information:
+   - Scope: **public**
+   - Return type: **Task&lt;IActionResult&gt;**
+   - Name: **Index**
+
+11. In the **Index** method,  add a variable named **request** of type var. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
+
+12. Call the **Add** method of the **request.Header** property. Pass **"Accept"** and **"application/json"** as parameters to the **Add** method .
+
+13. Add a variable named **client** of type var. Initialize the **request** variable with the value of **_httpClient.CreateClient()**.
+
+14. Add a variable named **response** of type var. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
+
+15. Create an **IF** statement that checks that the value of the **response.IsSuccessStatusCode** is **TRUE**.
+
+16. Inside the **IF** statement code block, assign the **_restaurantBranches** field the value of **await response.Content.ReadAsAsync<IEnumerable<RestaurantBranch>>()**.
+   
+17. Return the **ViewResult** result using the **View** method. Pass **_restaurantBranches** as a parameter to the **View** method.
 
 #### Task 2: Run the Application
 
