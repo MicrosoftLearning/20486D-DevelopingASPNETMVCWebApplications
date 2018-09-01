@@ -42,7 +42,7 @@ The main tasks for this exercise are as follows:
 
 1. Open the **Command Prompt** window using **Run as administrator**.
 
-2. In the **Administrator: Command Prompt**, run the command **cd <The location of Allfiles\Mod13\Labfiles\01_Restaurant_begin\Client folder on your machine>**
+2. In the **Administrator: Command Prompt**, run the command **cd &lt;The location of Allfiles\Mod13\Labfiles\01_Restaurant_begin\Client folder on your machine&gt;**
 
 3. Run the command **npm install**.
 
@@ -136,7 +136,7 @@ The main tasks for this exercise are as follows:
 
 7. Annotate the **GetById** action with the **HttpGet** attribute.
 
-8. In the **GetById** method, create a variable named **order ** of type **var** and assign it the value of **_context.ReservationsTables.FirstOrDefault(p => p.Id == id)**.
+8. In the **GetById** method, create a variable named **order ** of type **var** and assign it with the value of **_context.ReservationsTables.FirstOrDefault(p => p.Id == id)**.
 
 9. Create an **IF** statement that checks that the value of the **order** varible is **null**. 
 
@@ -238,29 +238,29 @@ The main tasks for this exercise are as follows:
 
 9. In the **RestaurantController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
 
-10. Add an **async** method for the **Index** action with the following information:
+10. Add a method for the **Index** action with the following information:
    - Scope: **public**
+   - Modifier: **async**
    - Return type: **Task&lt;IActionResult&gt;**
    - Name: **Index**
 
-11. In the **Index** method,  add a variable named **request** of type var. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
+11. In the **Index** method,  add a variable named **request** of type **var**. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
 
 12. Call the **Add** method of the **request.Header** property. Pass **"Accept"** and **"application/json"** as parameters to the **Add** method .
 
-13. Add a variable named **client** of type var. Initialize the **request** variable with the value of **_httpClient.CreateClient()**.
+13. Add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
 
-14. Add a variable named **response** of type var. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
+14. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
 
 15. Create an **IF** statement that checks that the value of the **response.IsSuccessStatusCode** is **TRUE**.
 
-16. Inside the **IF** statement code block, assign the **_restaurantBranches** field the value of **await response.Content.ReadAsAsync<IEnumerable<RestaurantBranch>>()**.
+16. Inside the **IF** statement code block, assign the **_restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
    
 17. Return the **ViewResult** result using the **View** method. Pass **_restaurantBranches** as a parameter to the **View** method.
 
 #### Task 2: Run the Application
 
 1. View the contents of the **Index.cshtml** view.
-    >**Note:** Examine the file content.
     
 2. Save all the changes.
 
@@ -281,12 +281,116 @@ The main tasks for this exercise are as follows:
    - Template: **MVC Controller - Empty**
    - Folder: **Client/Controllers**
    
-2. 
+2. In the **ReservationController** class, add **using** statements for the following namespaces:
+   - **Microsoft.AspNetCore.Mvc.Rendering**
+   - **System.Net.Http**
+   - **Server.Models**
+
+3. Remove the **Index** action with its content.
+
+4. Create a new field with the following information:
+   - Scope: **private**
+   - Type: **IHttpClientFactory**
+   - Name: **_httpClient**
+
+5. Create a new field with the following information:
+   - Scope: **private**
+   - Type: **IEnumerable&lt;RestaurantBranch&gt;**
+   - Name: **_restaurantBranches**
+
+6.  Add a constructor with the following parameter:
+    - Parameter: 
+        - Type: **IHttpClientFactory** 
+        - Name: **httpClient**
+
+7. In the **ReservationController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
+
+8. Add a method for the **Create** action with the following information:
+   - Scope: **public**
+   - Modifier: **async**
+   - Return type: **Task&lt;IActionResult&gt;**
+   - Name: **Create**
+   
+9. Annotate the **Create** action with the **HttpGet** attribute.
+
+10. In the **Create** method, call the **PopulateRestaurantBranchesDropDownListAsync** method using the **await** keyword. 
+   
+11. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+
+12. Add a method for the **CreatePostAsync** action with the following information:
+   - Scope: **public**
+   - Modifier: **async**
+   - Return type: **Task&lt;IActionResult&gt;**
+   - Name: **CreatePostAsync**
+   
+13. Annotate the **CreatePostAsync** action with the **HttpPost** attribute.
+
+14. Annotate the **CreatePostAsync** action with the **ActionName** attribute. Pass **"Create"** as a parameter to the **ActionName** attribute.
+
+15. In the **CreatePostAsync** method, add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
+
+16. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **wait client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable)**.
+
+17. Call the **EnsureSuccessStatusCode** method of the **response** variable.
+   
+18. Return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **nameof(ThankYou)** as a parameter to the **RedirectToAction** method.
+
+19. Add a **PopulateRestaurantBranchesDropDownListAsync** method with the following information:
+   - Scope: **private**
+   - Modifier: **async**
+   - Return type: **Task**
+   - Name: **PopulateRestaurantBranchesDropDownListAsync**   
+    - Parameter: 
+        - Type: **int?** 
+        - Name: **selectedBranch**
+        - Defualt value: **null**   
+
+20. In the **PopulateRestaurantBranchesDropDownListAsync** method, add a variable named **request** of type **var**. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
+
+21. Call the **Add** method of the **request.Headers** property. Pass **"Accept"** and **"application/json"** as parameters to the **Add** method.
+
+22. Add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
+
+23. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
+
+24. Create an **IF** statement that checks that the value of the **response.IsSuccessStatusCode** varible is **true**. 
+
+25. Inside the **IF** statement code block, assign the **_restaurantBranches** property with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
+
+26. Assign the **RestaurantBranchId** property of the **ViewBag** field with the value of **new SelectList(_restaurantBranches, "Id", "City", selectedBranch)**.
+
+27. Add a method for the **ThankYou** action with the following information:
+   - Scope: **public**
+   - Return type: **IActionResult**
+   - Name: **ThankYou**
+   
+28. Return the **IActionResult** result using the **View** method. 
+
 
 #### Task 4: Run the Application
 
-1. 
+1. View the contents of the **Create.cshtml** view.
+    
+2. Save all the changes.
+
+3. In Solution Explorer, right-click **Client**, and then click **Set as StartUp Project**.
+
+4. Start the application without debugging.
+
+5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+    
+6. In the menu bar, click **Reservation**.
+
+7. On **Reservation** page, create a new reservation with the following credentials:
    
+    - Restaurant Branch: Select **_&lt;a restaurant branch of your choice&gt;_**
+    - First Name: Type **_&lt;A first name of your choice&gt;_**
+    - Last Name: Type **_&lt;A last name of your choice&gt;_**
+    - Phone Number: Type **_&lt;A phone of your choice&gt;_** 
+    - Reservation Time: Type **_&lt;An reservation time of your choice&gt;_** 
+    - Dinner Guests: Type **_&lt;A dinner guests of your choice&gt;_** 
+    
+8. Click **Make a Reservation**.
 
 
 ### Exercise 3: 
