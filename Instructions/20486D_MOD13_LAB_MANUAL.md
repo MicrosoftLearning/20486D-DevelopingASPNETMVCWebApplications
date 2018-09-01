@@ -70,24 +70,24 @@ The main tasks for this exercise are as follows:
    - Name: **_context**
 
 10.  Add a constructor with the following parameter:
-    - Parameter: 
-        - Type: **RestaurantContext** 
-        - Name: **context**
+     - Parameter: 
+         - Type: **RestaurantContext** 
+         - Name: **context**
 
 11. In the **RestaurantBranchesController** constructor, initialize the **_context** field with the value of the **context** parameter.
 
 12. Add a method for the **Get** action with the following information:
-   - Scope: **public**
-   - Return type: **ActionResult	&lt;List&lt;RestaurantBranch&gt;&gt;**
-   - Name: **Get**
+    - Scope: **public**
+    - Return type: **ActionResult	&lt;List&lt;RestaurantBranch&gt;&gt;**
+    - Name: **Get**
 
 13. Annotate the **Get** action with the **HttpGet** attribute.
 
 14. In the **Get** method, create a variable named **branches** of type **var** and assign it the value of the following LINQquery:
 
-   - From: **r in _context.RestaurantBranches**
-   - Orderby: **r.City**
-   - Select: **r**
+    - From: **r in _context.RestaurantBranches**
+    - Orderby: **r.City**
+    - Select: **r**
    
 15. Return the **List&lt;RestaurantBranch&gt;** result using the **branches.ToList** method. 
 
@@ -239,10 +239,10 @@ The main tasks for this exercise are as follows:
 9. In the **RestaurantController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
 
 10. Add a method for the **Index** action with the following information:
-   - Scope: **public**
-   - Modifier: **async**
-   - Return type: **Task&lt;IActionResult&gt;**
-   - Name: **Index**
+    - Scope: **public**
+    - Modifier: **async**
+    - Return type: **Task&lt;IActionResult&gt;**
+    - Name: **Index**
 
 11. In the **Index** method,  add a variable named **request** of type **var**. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
 
@@ -318,10 +318,10 @@ The main tasks for this exercise are as follows:
 11. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
 
 12. Add a method for the **CreatePostAsync** action with the following information:
-   - Scope: **public**
-   - Modifier: **async**
-   - Return type: **Task&lt;IActionResult&gt;**
-   - Name: **CreatePostAsync**
+    - Scope: **public**
+    - Modifier: **async**
+    - Return type: **Task&lt;IActionResult&gt;**
+    - Name: **CreatePostAsync**
    
 13. Annotate the **CreatePostAsync** action with the **HttpPost** attribute.
 
@@ -336,14 +336,14 @@ The main tasks for this exercise are as follows:
 18. Return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **nameof(ThankYou)** as a parameter to the **RedirectToAction** method.
 
 19. Add a **PopulateRestaurantBranchesDropDownListAsync** method with the following information:
-   - Scope: **private**
-   - Modifier: **async**
-   - Return type: **Task**
-   - Name: **PopulateRestaurantBranchesDropDownListAsync**   
-    - Parameter: 
-        - Type: **int?** 
-        - Name: **selectedBranch**
-        - Defualt value: **null**   
+     - Scope: **private**
+     - Modifier: **async**
+     - Return type: **Task**
+     - Name: **PopulateRestaurantBranchesDropDownListAsync**   
+     - Parameter: 
+         - Type: **int?** 
+         - Name: **selectedBranch**
+         - Defualt value: **null**   
 
 20. In the **PopulateRestaurantBranchesDropDownListAsync** method, add a variable named **request** of type **var**. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
 
