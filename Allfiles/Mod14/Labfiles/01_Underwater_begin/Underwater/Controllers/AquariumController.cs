@@ -69,26 +69,25 @@ namespace Underwater.Controllers
             return View(fish);
         }
 
-        //[HttpPost, ActionName("Edit")]
-        //public async Task<IActionResult> EditPost(int id)
-        //{
-        //    var fishToUpdate = _repository.GetFishById(id);
-        //    bool isUpdated = await TryUpdateModelAsync<Fish>(
-        //                        fishToUpdate,
-        //                        "",
-        //                        c => c.BakeryId,
-        //                        c => c.CupcakeType,
-        //                        c => c.Description,
-        //                        c => c.GlutenFree,
-        //                        c => c.Price);
-        //    if (isUpdated)
-        //    {
-        //        _repository.SaveChanges();
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    PopulateAquariumsDropDownList(fishToUpdate.AquariumId);
-        //    return View(fishToUpdate);
-        //}
+        [HttpPost, ActionName("Edit")]
+        public async Task<IActionResult> EditPost(int id)
+        {
+            var fishToUpdate = _repository.GetFishById(id);
+            bool isUpdated = await TryUpdateModelAsync<Fish>(
+                                fishToUpdate,
+                                "",
+                                f => f.AquariumId,
+                                f => f.Name,
+                                f => f.ScientificName
+                               );
+            if (isUpdated)
+            {
+                _repository.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            PopulateAquariumsDropDownList(fishToUpdate.AquariumId);
+            return View(fishToUpdate);
+        }
 
         [HttpGet]
         public IActionResult Delete(int id)

@@ -13,10 +13,14 @@ namespace Underwater.Models
         [Key]
         public int FishId { get; set; }
 
+        [Display(Name = "Fish Name:")]
         public string Name { get; set; }
 
+        [Display(Name = "Scientific Name:")]
+        public string ScientificName { get; set; }
+
         [NotMapped]
-        [Display(Name = "Fish Picture:")]
+        [Display(Name = "Picture:")]
         public IFormFile PhotoAvatar { get; set; }
 
         public string ImageName { get; set; }
@@ -26,7 +30,7 @@ namespace Underwater.Models
         public string ImageMimeType { get; set; }
 
         [Required(ErrorMessage = "Please select an aquarium")]
-        public int? AquariumId { get; set; }
+        public int AquariumId { get; set; }
 
         public virtual Aquarium Aquarium { get; set; }
     }

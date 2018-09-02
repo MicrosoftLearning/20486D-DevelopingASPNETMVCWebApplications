@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Underwater.Data;
+using Underwater.Middleware;
 using Underwater.Repositories;
 
 namespace Underwater
@@ -35,6 +36,8 @@ namespace Underwater
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseStaticFiles();
+
+            app.UseNodeModules(env.ContentRootPath);
 
             app.UseMvc(routes =>
             {

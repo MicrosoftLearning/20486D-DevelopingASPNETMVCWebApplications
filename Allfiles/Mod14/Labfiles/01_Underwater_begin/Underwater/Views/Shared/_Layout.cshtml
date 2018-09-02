@@ -4,10 +4,36 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link href="~/css/underwater-style.css" rel="stylesheet" />
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/node_modules/jquery/dist/jquery.js"></script>
+    <script src="~/node_modules/popper.js/dist/popper.js"></script>
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/menu-active.js"></script>
 </head>
 <body>
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom p-1">
+        <a class="navbar-brand" href="@Url.Action("Index", "Aquarium")">
+            <img src="~/images/underwater-brand.jpg" class="d-inline-block align-top" alt="">
+            Our Aquariums
+        </a>
+        <div class="collapse navbar-collapse" id="nav-content">
+            <ul class="navbar-nav" id="nav-content">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Aquarium")">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Create", "Aquarium")">Add Fish</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-title">
+        <h1>Welcome to Our Aquariums</h1>
+    </div>
     <div>
         @RenderBody()
     </div>
+    @RenderSection("Scripts", false)
 </body>
 </html>

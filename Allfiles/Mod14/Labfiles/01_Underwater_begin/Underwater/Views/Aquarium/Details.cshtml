@@ -1,0 +1,31 @@
+﻿@model Underwater.Models.Fish
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="photo-index-card-details">
+        <h3 class="display-picture-title">
+            @Html.DisplayFor(modelItem => modelItem.Name)
+        </h3>
+        @if (Model.ImageName != null)
+        {
+            <div class="photo-display">
+                <img class="photo-display-img" src="@Url.Action("GetImage", "Aquarium", new { Id = Model.FishId })" />
+            </div>
+        }
+        <div>
+            <p class="display-label">
+                @Html.DisplayNameFor(model => model.ScientificName)
+            </p>
+            <br />
+            <p class="display-field">
+                @Html.DisplayFor(model => model.ScientificName)
+            </p>
+        </div>
+        <div>
+            <button class="btn btn-secondary" type="button" onclick="location.href='@Url.Action("Index", "Aquarium")'">Back</button>
+        </div>
+    </div>
+</div>
