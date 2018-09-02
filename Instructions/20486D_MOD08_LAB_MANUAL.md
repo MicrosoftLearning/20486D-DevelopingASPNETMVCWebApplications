@@ -184,7 +184,7 @@ The main tasks for this exercise are as follows:
 1. Add existing **.cshtml** files to the **ZooSite** project, with the following information:
 
     - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
-	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\Zoo\Views**
+	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSite\Views**
 
 
 #### Task 5: Add a section to the layout
@@ -238,7 +238,7 @@ The main tasks for this exercise are as follows:
 2. Add **zoo-style.css** file to the **ZooSite** project, with the following information:
 
 	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
-	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\Zoo\wwwroot\css**
+	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSit\wwwroot\css**
 
 3. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
 
@@ -719,7 +719,7 @@ The main tasks for this exercise are as follows:
 	- Address: **_&lt;An address of your choice&gt;_**
 	- Email: **abcd**
 
-8. After you fill the **Email** box, press Tab.
+8. After you fill the **Email** text box, press Tab.
 
     >**Note:** Client side validation applies.
 

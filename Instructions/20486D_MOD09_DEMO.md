@@ -11,7 +11,7 @@
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, copy the address in the address bar.
+1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, and then copy the address in the address bar.
 
 2. Go to **Start**, and then type **cmd**.
 
@@ -21,7 +21,7 @@
 
 5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
-       cd  {copied folder path}
+       cd {copied folder path}
 ```
 
 >**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.

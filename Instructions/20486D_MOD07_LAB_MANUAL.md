@@ -1040,14 +1040,53 @@ The main tasks for this exercise are as follows:
 	- Class: **display-field**
     - Content: ***@Html.DisplayFor(model => model.CaloricValue)**
 
-14. Open the **Package Manager Console** window.
+14. In the **Edit.cshtml** file, add a **DIV** element before the **DIV** element with the following information: 
 
-15. Create a **migration** using the following information:
+   - asp-for: **Price**
+
+15. Add a **DIV** element with the following information:
+
+   - Class: **form-field**
+
+16. In the **DIV** element, add a **LABEL** element with the following information:
+
+   - asp-for: **CaloricValue**
+
+17. Add an **INPUT** element with the following information:
+
+   - asp-for: **CaloricValue**
+
+18. After the **INPUT** element with **asp-for="CaloricValue"** helper, add a **SPAN** element with the following information:
+   - asp-validation-for: **CaloricValue**
+
+19. In the **Create.cshtml** file, add a **DIV** element before the **DIV** element with the following information: 
+
+   - asp-for: **Price**
+
+20. Add a **DIV** element with the following information:
+
+   - Class: **form-field**
+
+21. In the **DIV** element, add a **LABEL** element with the following information:
+
+   - asp-for: **CaloricValue**
+
+22. Add an **INPUT** element with the following information:
+
+   - asp-for: **CaloricValue**
+
+23. After the **INPUT** element with **asp-for="CaloricValue"** helper, add a **SPAN** element with the following information:
+   - asp-validation-for: **CaloricValue**
+
+
+24. Open the **Package Manager Console** window.
+
+25. Create a **migration** using the following information:
 
      - Command: **Add-Migration**
      - Migration Name: **AddCupcakeCaloricValue**
 
-16. Create the **database** using the following information:
+26. Create the **database** using the following information:
 
      - Command: **Update-Database**
 
