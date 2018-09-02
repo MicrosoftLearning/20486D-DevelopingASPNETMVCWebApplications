@@ -144,7 +144,7 @@
        <div class="text-center">
            <h1>Welcome to Open Library </h1>
            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-               Launch modal example
+               Launch Modal Example
            </button>
        </div>
 ``` 
@@ -210,23 +210,27 @@
 
 37. In the **BootstrapExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-38. In the **Home** page, click **Launch modal example**, and then click **Close**.
+38. In the **Home** page, click **Launch Modal Example**, and then click **Close**.
 
 39. In the menu bar, click **Genres**, and then click **Drama**. 
 
-40. In the **Drama Books** page, click **Yes**, and examine the **alert** that appears.
+40. In the **Drama Books** page, click **Yes**.
 
-      >**Note:** Press the **X** close button in order to close the alert.
+      >**Note:** Examine the **alert** that appears.
+      
+41. Press the **X** close button in order to close the alert.
 
-41. In the menu bar, click **Genres**, and then click **Science Fiction**. 
+42. In the menu bar, click **Genres**, and then click **Science Fiction**. 
 
-42. In the **Science Fiction Books** page, click **No**, and examine the **alert** that appears.
+43. In the **Science Fiction Books** page, click **No**.
 
-      >**Note:** Press the **X** close button in order to close the alert.
+      >**Note:** Examine the **alert** that appears.
+      
+44. Press the **X** close button in order to close the alert.
 
-43. In **Microsoft Edge**, click **Close**.
+45. In **Microsoft Edge**, click **Close**.
 
-44. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+46. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Using Task Runners
 
