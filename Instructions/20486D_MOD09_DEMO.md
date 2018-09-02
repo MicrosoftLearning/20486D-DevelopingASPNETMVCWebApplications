@@ -30,6 +30,9 @@
   ```cs
        npm install
 ```
+
+>**Note:** If warning messages are shown in the **Command Prompt** you can ingore them.
+
 7. Close the window.
 
 8. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin**, and then double-click **BootstrapExample.sln**.
