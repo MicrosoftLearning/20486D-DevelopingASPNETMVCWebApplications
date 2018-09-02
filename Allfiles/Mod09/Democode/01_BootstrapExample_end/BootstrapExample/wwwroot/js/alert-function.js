@@ -1,4 +1,4 @@
-﻿$(function () {
+﻿$(function() {
     $(".alert").hide();
 
     $("button").click(function () {
