@@ -11,7 +11,7 @@
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, copy the address in the address bar.
+1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, copy the address in the address bar.
 
 2. Go to **Start**, and then type **cmd**.
 
