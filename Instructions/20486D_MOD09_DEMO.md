@@ -30,6 +30,7 @@
   ```cs
        npm install
 ```
+>**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
 
 7. Close the window.
 
@@ -262,6 +263,8 @@
   ```cs
        npm install
 ```
+>**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+
 7. Close the window.
 
 8. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin** and then double-click **GulpExample.sln**.
@@ -427,6 +430,8 @@
   ```cs
        npm install
 ```
+>**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+
 7. Close the window.
 
 8. Navigate to **Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
