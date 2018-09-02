@@ -31,7 +31,7 @@
        npm install
 ```
 
->**Note:** If warning messages are shown in the **Command Prompt** you can ingore them.
+>**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
 
 7. Close the window.
 
