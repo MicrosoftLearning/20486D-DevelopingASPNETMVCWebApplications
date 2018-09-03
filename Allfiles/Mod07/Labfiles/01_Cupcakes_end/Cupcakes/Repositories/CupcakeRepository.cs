@@ -61,10 +61,10 @@ namespace Cupcakes.Repositories
 
         public IQueryable<Bakery> PopulateBakeriesDropDownList()
         {
-            var BakeriesQuery = from b in _context.Bakeries
+            var bakeriesQuery = from b in _context.Bakeries
                                 orderby b.BakeryName
                                 select b;
-            return BakeriesQuery;
+            return bakeriesQuery;
         }
     }
 }

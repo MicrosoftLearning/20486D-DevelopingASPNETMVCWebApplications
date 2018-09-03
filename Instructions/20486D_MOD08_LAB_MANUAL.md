@@ -184,7 +184,7 @@ The main tasks for this exercise are as follows:
 1. Add existing **.cshtml** files to the **ZooSite** project, with the following information:
 
     - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
-	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\Zoo\Views**
+	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSite\Views**
 
 
 #### Task 5: Add a section to the layout
@@ -238,7 +238,7 @@ The main tasks for this exercise are as follows:
 2. Add **zoo-style.css** file to the **ZooSite** project, with the following information:
 
 	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
-	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\Zoo\wwwroot\css**
+	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSit\wwwroot\css**
 
 3. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
 
@@ -340,37 +340,37 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. On the **Zoo Attractions** page, in the header  click **right arrow**, and then click **left arrow**.
+3. In the **Zoo Attractions** page, in the **Welcome to Zoo Center** header, click the **right arrow**.
 
-    >**Note:** The browser displays the header with the slider, but functionality is not applied yet.
+    >**Note:** Currently clicking the button has no effect since no JavaScript code has been added to the web application yet.
 
 4. In the menu bar, click **Visitor Info**.
 
-5. In the menu bar, click **Tickets**.
+5. Click **Tickets**.
 
 6. On **Step 1 - Choose Tickets**, select the following:
 
 	- Adult: **_&lt;As many tickets as you like&gt;_**
 	- Child: **_&lt;As many tickets as you like&gt;_**
-	- Senior: **_&lt;As many tickets as you like&gt;_**
-
-    >**Note:** The browser displays the **Step 1 - Choose Tickets** section, but functionality is not applied yet.
+	- Senior: **_&lt;As many tickets as you like&gt;_**   
+   
+	>**Note:** Currently the total cost of the tickets is not shown in the page since no JavaScript code has been added to the web application yet.
 
 7.  On **Step 2 - Buy Tickets**, type the following:
 
 	- First Name: **_&lt;A first name of your choice&gt;_**
 	- Last Name: **_&lt;A last name of your choice&gt;_**
 	- Address: **_&lt;An address of your choice&gt;_**
-	- Email: **_&lt;abcd&gt;_**
-	- Phone Number **_&lt; A phone number of your choice&gt;_**
+	- Email: **abcd**
+	- Phone Number **_&lt;A phone number of your choice&gt;_**
 
 8. Click **Buy**.
 
-    >**Note:** The browser displays **Step 2 - Buy Tickets**, but you cant buy the tickets and there is no validation, the functionality is not applied yet.
+    >**Note:** Currently you can't buy the tickets and there is no validation since the functionality has not applied yet.
 
 9. Close **Microsoft Edge**.
 
->**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, add a link form a layout to the CSS file and add new CSS selectors. 
+>**Results**: After completing this exercise, you will be able to add an existing CSS file to a web application, and add a link from a layout to the CSS file. You will also be able to add new CSS selectors to a CSS file. 
 
 ### Exercise 3: Using JavaScript
 
@@ -424,7 +424,7 @@ The main tasks for this exercise are as follows:
 
 6. Assign the **innerHTML** property of **document.getElementById("sum")** to **"Total: $" + sum**.
 
->**Results**: After completing this exercise, you will be able to add a **JavaScript File** and write JavaScript code. 
+>**Results**: After completing this exercise, you will be able to add a JavaScript file and write JavaScript code. 
 
 ### Exercise 4: Using jQuery
 
@@ -455,7 +455,7 @@ The main tasks for this exercise are as follows:
 
 3. Save **package.json**.
 
->**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder named **npm** has been added which contains the **jquery** package.
+>**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package.
 
 4. In **Explorer Toolbar Options** click **Show All Files**.
 
@@ -508,7 +508,7 @@ The main tasks for this exercise are as follows:
 
 17. In the **Startup** class, add **USING** statement for the following namespace:
 
-   - **ZooSite.Middleware**
+    - **ZooSite.Middleware**
 
 18. In **Startup** class, in the **Configure** method, after the call to the **UseStaticFiles** method, call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
 
@@ -694,13 +694,13 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. On the **Zoo Attractions** page, in the header  click **right arrow**, and then click **left arrow**.
+3. In the **Zoo Attractions** page, in the header, click the **right arrow**, and then click the **left arrow**.
 
-    >**Note:** The browser displays the **header** with the slider, and the slider functionality is applied.
+    >**Note:** The browser displays the header with the slider, and the slider functionality is applied.
 
 4. In the menu bar, click **Visitor Info**.
 
-5. In the menu bar, click **Tickets**.
+5. Click **Tickets**.
 
     >**Note:** The **Buy** button is disabled, and there is a message **Please Choose Tickets** under the button.
 
@@ -710,26 +710,34 @@ The main tasks for this exercise are as follows:
 	- Child: **_&lt;As many tickets as you like&gt;_**
 	- Senior: **_&lt;As many tickets as you like&gt;_**
 
-    >**Note:** The **Buy** button is enabled, and the message under the button disappeared.
+    >**Note:** The **Buy** button is enabled, and the message under the button disappeared. In addition, an **Order Summary** section is added which shows the price of the tickets.
 
 7.  On **Step 2 - Buy Tickets**, type the following:
 
 	- First Name: **_&lt;A first name of your choice&gt;_**
 	- Last Name: **_&lt;A last name of your choice&gt;_**
 	- Address: **_&lt;An address of your choice&gt;_**
-	- Email: **_&lt;abcd&gt;_**
+	- Email: **abcd**
 
-    >**Note:** Client side validation applied.
+8. After you fill the **Email** text box, press Tab.
 
-8. On **Step 2 - Buy Tickets**, type the following:
+    >**Note:** Client side validation applies.
 
-	- Email: **_&lt;An email of your choice&gt;_**
-	- Phone Number **_&lt; A phone number of your choice&gt;_**
+9. On **Step 2 - Buy Tickets**, type the following:
 
-9. Click **Buy**.
+	- Email: **_&lt;A valid email of your choice&gt;_**
+	- Phone Number **_&lt;A phone number of your choice&gt;_**
 
-10. Close **Microsoft Edge**.
+10. Click **Buy**.
 
-11. Close **Microsoft Visual Studio**.
+11. Close **Microsoft Edge**.
+
+12. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you will be able to add jQuery to a web application using npm, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 
+
+©2018 Microsoft Corporation. All rights reserved.
+
+The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+
+This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.

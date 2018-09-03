@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="main-titel">Edit Cupcake</h1>
+        <h1 class="title">Edit a Cupcake</h1>
         <form method="post" enctype="multipart/form-data" asp-action="Edit">
             <div asp-validation-summary="ModelOnly"></div>
             <input type="hidden" asp-for="CupcakeId" />
@@ -47,6 +47,11 @@
                 <label asp-for="Price"></label>
                 <input asp-for="Price" />
                 <span asp-validation-for="Price"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="CaloricValue"></label>
+                <input asp-for="CaloricValue" />
+                <span asp-validation-for="CaloricValue"></span>
             </div>
             <div>
                 <input type="hidden" asp-for="ImageMimeType" />
