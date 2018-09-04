@@ -132,7 +132,7 @@ The main tasks for this exercise are as follows:
     - Name: **Bakery**
     - Type: **Bakery**
     - Access: **Read and write**
-    - Modifier: **virtual**
+    - Modifier: **override**
 
 15. Above the **CupcakeId** property, add a **Key** attribute.
 
@@ -226,7 +226,7 @@ The main tasks for this exercise are as follows:
      - Name: **Cupcakes**
      - Type: **ICollection&lt;Cupcake&gt;**
      - Access: **Read and write**
-     - Modifier: **virtual**
+     - Modifier: **override**
 
 35. Above the **BakeryId** property, add a **Key** attribute.
 
@@ -335,10 +335,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Use OnModelCreating to populate the database
 
-1. In the **CupcakeContext** class, add a **method** with the following information:
+1. In the **CupcakeContext** class, add a method with the following information:
 
    - Scope: **protected**
-   - Modifier: **virtual**
+   - Modifier: **override**
    - Return type: **void** 
    - Name: **OnModelCreating**
    - Parameter:
@@ -526,7 +526,7 @@ The main tasks for this exercise are as follows:
     - Return Type: **IEnumerable&lt;Cupcake&gt;**
     - Name: **GetCupcakes**
 
-17. In the **GetCupcakes** method, return the **IEnumerable&lt;Cupcake&gt;** using the **_context.Cupcakes.ToList()** method.
+17. In the **GetCupcakes** method, return **IEnumerable&lt;Cupcake&gt;** using the **_context.Cupcakes.ToList()** method.
 
 18. Add a method with the following information:
 
@@ -537,7 +537,7 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-19. In the **GetCupcakeById** method, return the **Cupcake**  using the **_context.Cupcakes.Include(b => b.Bakery).SingleOrDefault(c => c.CupcakeId == id)** method.
+19. In the **GetCupcakeById** method, return **Cupcake**  using the **_context.Cupcakes.Include(b => b.Bakery).SingleOrDefault(c => c.CupcakeId == id)** method.
 
 20. Add a method with the following information:
 
@@ -550,7 +550,7 @@ The main tasks for this exercise are as follows:
 
 21. In the **CreateCupcake** method, create an **IF** statement that checks that the value of **cupcake.PhotoAvatar** is not **NULL** and that **cupcake.PhotoAvatar.Length** is bigger than **0**.
 
-22. Inside the **IF** statement, assign to the **ImageMimeType** property of the **cupcake** parameter the value of **cupcake.PhotoAvatar.ContentType**.
+22. Assign to the **ImageMimeType** property of the **cupcake** parameter the value of **cupcake.PhotoAvatar.ContentType**.
 
 23. Assign to the **ImageName** property of the **cupcake** parameter the value of **Path.GetFileName(cupcake.PhotoAvatar.FileName)**.
 
@@ -756,7 +756,7 @@ The main tasks for this exercise are as follows:
 
 21. Above the **EditPost** method, add a **HttpPost** attribute.
 
-22. Above the **EditPost** method, add a ActionName attribute with the following information:
+22. Above the **EditPost** method, add a **ActionName** attribute with the following information:
 
     - Name: **Edit**
 
@@ -800,7 +800,7 @@ The main tasks for this exercise are as follows:
 
 35. After the **IF** statement, return the **ViewResult** result using the **View** method. Pass **cupcake** as a parameter to the **View** method.
 
-36. Add a method for the **Delete** action with the following information:
+36. Add a method with the following information:
 
     - Scope: **public**
     - Return type: **IActionResult**
@@ -811,7 +811,7 @@ The main tasks for this exercise are as follows:
 
 37. Above the **DeleteConfirmed** method, add a **HttpPost** attribute.
 
-38. Above the **DeleteConfirmed** method, add an ActionName attribute with the following information:
+38. Above the **DeleteConfirmed** method, add an **ActionName** attribute with the following information:
 
     - Name: **Delete**
 
@@ -834,7 +834,7 @@ The main tasks for this exercise are as follows:
     - Description: **_&lt;A cupcake description of your choice&gt;_**
     - Gluten Free: **_&lt;Choose if the cupcake is gluten-free&gt;_**
     - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
-    - Cupcake Picture: **import from Allfiles\Mod07\Labfiles\Image a strawberry-cupcake.jpg image**
+    - Cupcake Picture: **import from Allfiles\Mod07\Labfiles\Image a strawberry-cupcake.jpg**
 
 5. Click **Submit**.
 
@@ -846,7 +846,7 @@ The main tasks for this exercise are as follows:
 
 9. Select a cupcake of your choice, and then click **Edit**.
 
-10. On the **Edit a Cupcake** page, edit a cupcake with the following information
+10. On the **Edit a Cupcake** page, edit a cupcake with the following information:
 
     - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
 
@@ -886,7 +886,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Connect to a Microsoft SQL Server.
 
-1. In the **Startup** class, in the **ConfigureServices** method, add a variable named **connectionString** of type **string**. Initialize the **connectionString** variable with the value of **"Server=(localdb)\\MSSQLLocalDB;Database=BakeriesDb;Trusted_Connection=True;MultipleActiveResultSets=true"**.
+1. In the **Startup** class, in the **ConfigureServices** method, add a variable named **connectionString** of type **string**. Initialize the **connectionString** variable with the value **"Server=(localdb)\\MSSQLLocalDB;Database=BakeriesDb;Trusted_Connection=True;MultipleActiveResultSets=true"**.
 
 2. Replace the **lambda expression** which is send as a parameter to the **AddDbContext** method with the following information:
 
@@ -910,7 +910,7 @@ The main tasks for this exercise are as follows:
 
 4. Replace the **lambda expression** which is sent as a parameter to the **AddDbContext** method with the following information:
 
-     - Lambda Expression:: **options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**
+     - Lambda Expression: **options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))**
 
 #### Task 3: Use Migrations to create a database
 
@@ -937,7 +937,7 @@ The main tasks for this exercise are as follows:
 
 3. In **Microsoft Edge**, click **Add Cupcakes**.
 
-4. On the **Add Cupcake to The Shop** page, create a new cupcake with the following credentials:
+4. On the **Add a Cupcake to The Shop** page, create a new cupcake with the following credentials:
 
     - Bakery: **_&lt;A bakery of your choice&gt;_**
     - Cupcake Type: **_&lt;A cupcake type of your choice&gt;_**
@@ -988,43 +988,43 @@ The main tasks for this exercise are as follows:
 
 3. In the **CupcakeContext** class, locate the **cupcake** instance with the following information:
 
-        - Name: **CupcakeId**
-        - Value: **1**
+    - Name: **CupcakeId**
+    - Value: **1**
 
 4. Add a new parameter with the following information:
 
-        - Name: **CaloricValue**
-        - Value: **355**
+    - Name: **CaloricValue**
+    - Value: **355**
 
 5. Locate the capcake instance with the following information:
 
-        - Name: **CupcakeId**
-        - Value: **2**
+    - Name: **CupcakeId**
+    - Value: **2**
 
 6. Add a new parameter with the following information:
 
-        - Name: **CaloricValue**
-        - Value: **195**   
+    - Name: **CaloricValue**
+    - Value: **195**   
 
 7. Locate the capcake instance with the following information:
 
-        - Name: **CupcakeId**
-        - Value: **3**
+    - Name: **CupcakeId**
+    - Value: **3**
 
 8. Add a new parameter with the following information:
 
-        - Name: **CaloricValue**
-        - Value: **295**   
+    - Name: **CaloricValue**
+    - Value: **295**   
 
 9. Locate the capcake instance with the following information:
 
-        - Name: **CupcakeId**
-        - Value: **4**
+    - Name: **CupcakeId**
+    - Value: **4**
 
 10. Add a new parameter with the following information:
 
-        - Name: **CaloricValue**
-        - Value: **360**  
+    - Name: **CaloricValue**
+    - Value: **360**  
 
 11. In the **Details.cshtml** file, add a **DIV** element before the **DIV** element with the following information: 
 
@@ -1042,41 +1042,41 @@ The main tasks for this exercise are as follows:
 
 14. In the **Edit.cshtml** file, add a **DIV** element before the **DIV** element with the following information: 
 
-   - asp-for: **Price**
+     - asp-for: **Price**
 
 15. Add a **DIV** element with the following information:
 
-   - Class: **form-field**
+     - Class: **form-field**
 
 16. In the **DIV** element, add a **LABEL** element with the following information:
 
-   - asp-for: **CaloricValue**
+    - asp-for: **CaloricValue**
 
 17. Add an **INPUT** element with the following information:
 
-   - asp-for: **CaloricValue**
+     - asp-for: **CaloricValue**
 
 18. After the **INPUT** element with **asp-for="CaloricValue"** helper, add a **SPAN** element with the following information:
-   - asp-validation-for: **CaloricValue**
+    - asp-validation-for: **CaloricValue**
 
 19. In the **Create.cshtml** file, add a **DIV** element before the **DIV** element with the following information: 
 
-   - asp-for: **Price**
+     - asp-for: **Price**
 
 20. Add a **DIV** element with the following information:
 
-   - Class: **form-field**
+     - Class: **form-field**
 
 21. In the **DIV** element, add a **LABEL** element with the following information:
 
-   - asp-for: **CaloricValue**
+      - asp-for: **CaloricValue**
 
 22. Add an **INPUT** element with the following information:
 
-   - asp-for: **CaloricValue**
+      - asp-for: **CaloricValue**
 
 23. After the **INPUT** element with **asp-for="CaloricValue"** helper, add a **SPAN** element with the following information:
-   - asp-validation-for: **CaloricValue**
+      - asp-validation-for: **CaloricValue**
 
 
 24. Open the **Package Manager Console** window.
@@ -1100,7 +1100,7 @@ The main tasks for this exercise are as follows:
 
 3. Select a cupcake of your choice, and click on **Details**.
 
-    >**Note:** Verify that the browser displays the caloric value of the cupcake. 
+    >**Note:** The browser displays the caloric value of the cupcake. 
 
 4. Verify the cupcake details, and then click **Back to List**.
 
