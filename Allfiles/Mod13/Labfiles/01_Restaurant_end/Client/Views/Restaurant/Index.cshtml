@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Server.Models.RestaurantBranch>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="title">
+    <span class="span-col-f">Dive Into Our</span>
+    <span class="span-col-s">Restaurant Branches</span>
+</h2>
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="photo-index-card">
+            <div class="image-wrapper">
+                <img class="photo-display-img" src="~/images/table-setting.jpg" />
+            </div>
+            <div class="display-picture-title">
+                <h6>@Html.DisplayFor(modelItem => item.City)</h6>
+                <h6>@Html.DisplayFor(modelItem => item.Street)</h6>
+                <h6>@Html.DisplayFor(modelItem => item.PhoneNumber)</h6>                
+            </div>
+        </div>
+    }
+</div>
+

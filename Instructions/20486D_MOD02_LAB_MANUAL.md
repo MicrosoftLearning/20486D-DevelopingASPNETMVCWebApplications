@@ -143,7 +143,9 @@ The main tasks for this exercise are as follows:
 
 24. In the **CreatedDate** property, change the property return type to **DateTime**.
 
-25. Save the created diagram.
+25. In the **Owner** property, change the property return type to **string**.
+
+26. Save the created diagram.
 
 #### Task 3: Plan the comment model class.
 
@@ -371,18 +373,20 @@ The main tasks for this exercise are as follows:
 
 2. Open the **Properties** window.
 
-3. Open the **Document Outline** window.
+3. Under **Type**, arrange by **Category**.
 
-4. Modify the main window properties using the following information:
+4. Open the **Document Outline** window.
+
+5. Modify the main window properties using the following information:
     - Width: **500**
     - Height: **1100**
     - WindowStyle: **None**
 
-5. Drag a **Label** from the Toolbox to the top left corner of the screen using the following information:
+6. Drag a **Label** from the Toolbox to the top left corner of the screen using the following information:
     - Content: **Adventure Works Photo Sharing**
     - Text size: **20 px**
 
-6. Drag a **Canvas** below the label and set its properties using the following information:
+7. Drag a **Canvas** below the label and set its properties using the following information:
     - Background style: **Solid color brush**
     - Background R: **150**
     - Background G: **175**
@@ -390,7 +394,7 @@ The main tasks for this exercise are as follows:
     - Width: **400**
     - Height: **40**
 
-7. Select the canvas and drag a **Button** into the left side of it, set its properties using the following information:
+8. Select the canvas and drag a **Button** into the left side of it, set its properties using the following information:
     - Content: **Home**
     - Background style: **Solid color brush**
     - Background R: **31**
@@ -401,32 +405,32 @@ The main tasks for this exercise are as follows:
     - Foreground G: **255**
     - Foreground B: **255**
 
-8. Copy the **Button** and paste it to the right side of the previous button. Change its content to **Gallery**.
+9. Copy the **Button** and paste it to the right side of the previous button. Change its content to **Gallery**.
 
-9. Paste the **Button** again, and place it to the right side of the last pasted button. Change its content to **Photo**.
+10. Paste the **Button** again, and place it to the right side of the last pasted button. Change its content to **Photo**.
 
-10. Paste the **Button** again, and place it to the right side of the last pasted button. Change its content to **Slideshow**.
+11. Paste the **Button** again, and place it to the right side of the last pasted button. Change its content to **Slideshow**.
 
-11. Drag a **Label** below the left side of the canvas using the following information:
+12. Drag a **Label** below the left side of the canvas using the following information:
     - Content: **Title**
     - Text size: **20 px**
 
-12. Drag a **Label** below the last created label using the following information:
+13. Drag a **Label** below the last created label using the following information:
     - Content: **By: Owner**
 
-13. Add an existing item to the current project main directory using the following information:
+14. Add an existing item to the current project main directory using the following information:
     - File path: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
     - File name: **photo.jpg**
 
-14. Drag an **Image** below the last created label using the following information:
+15. Drag an **Image** below the last created label using the following information:
     - Source: **photo.jpg**
     - Width: **400**
     - Height: **240**
 
-15. Drag a **Label** below the left side of the image using the following information:
+16. Drag a **Label** below the left side of the image using the following information:
     - Content: **Description:**
 
-16. Drag a **Label** below the last created label using the following information:
+17. Drag a **Label** below the last created label using the following information:
     - Content: **Photo Description...**
     - Width: **300**
     - Height: **150**
@@ -436,10 +440,10 @@ The main tasks for this exercise are as follows:
     - BorderBrush B: **0**
     - Border Thickness: **2 (In each one of the 4 boxes)**
 
-17. Drag a **Label** below the left side of the canvas using the following information:
+18. Drag a **Label** below the left side of the canvas using the following information:
     - Content: **Comments:**
 
-18. Drag a **Canvas** below the label using the following information:
+19. Drag a **Canvas** below the label using the following information:
     - Width: **300**
     - Height: **130**
     - Background style: **Solid color brush**
@@ -447,24 +451,26 @@ The main tasks for this exercise are as follows:
     - Background G: **175**
     - Background B: **207**
 
-19. Select the canvas, and drag a **Label** into the top left corner of it. Set its properties using the following information:
+20. Select the canvas, and drag a **Label** into the top left corner of it. Set its properties using the following information:
     - Content: **From:**
 
-20. Select the canvas, and drag a **Label** into it. Place it below the last created label, and set it properties using the following information:
+21. Select the canvas, and drag a **Label** into it. Place it below the last created label, and set it properties using the following information:
     - Content: **Subject:**
 
-21. Select the canvas, and drag a **Label** into it. Place it below the last created label, and set it properties using the following information:
+22. Select the canvas, and drag a **Label** into it. Place it below the last created label, and set it properties using the following information:
     - Content: **Body:**
 
-22. Copy the Canvas, and paste it below the last copied canvas.
+23. Copy the Canvas, and paste it below the last copied canvas.
 
-23. Drag a **TextBlock** below the left side of the canvas using the following information:
+24. Drag a **TextBlock** below the left side of the canvas using the following information:
     - Content: **Add a Comment**
     - Foreground style: **Solid Color Brush**
     - Foreground R: **0**
     - Foreground G: **0**
     - Foreground B: **255**
     - Underline: **True**
+  
+25. Save all changes.
 
 #### Task 3: Design the gallery view.
 
@@ -513,6 +519,8 @@ The main tasks for this exercise are as follows:
 
 14. Paste another canvas to the left of the last pasted canvas.
 
+15. Save all changes.
+
 >**Results** : After completing this exercise, you will create proposals for views and their layouts.
 
 ### Exercise 4: Architecting an MVC Web Application
@@ -535,9 +543,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Choose a data store.
 
-2. Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements using the following information:
+1. Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements using the following information:
 
     - Description: **DetailedPlanningDocument(docx) - Microsoft Word** window, type **The author recommends using SQL Database, within Microsoft Azure, to host the Photo Sharing application underlying database. As for the web server, this recommendation ensures high-availability hosting for the database with good value for money. This makes particular sense if the web site is hosted in Microsoft Azure.**
+
+2. Close the **InitialInvestigation** document.
 
 
 >**Results**: After completing this exercise, you will be able to create proposals for hosting arrangements.

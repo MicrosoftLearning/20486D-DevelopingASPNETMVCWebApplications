@@ -11,7 +11,7 @@
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, copy the address in the address bar.
+1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, and then copy the address in the address bar.
 
 2. Go to **Start**, and then type **cmd**.
 
@@ -21,7 +21,7 @@
 
 5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
-       cd  {copied folder path}
+       cd {copied folder path}
 ```
 
 >**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
@@ -30,6 +30,8 @@
   ```cs
        npm install
 ```
+>**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+
 7. Close the window.
 
 8. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin**, and then double-click **BootstrapExample.sln**.
@@ -47,7 +49,7 @@
        <title>@ViewBag.Title</title>
 ```
 
-14. In the **_Layout.cshtml** code window, place the cursor after the **>** (greater than) sign of the **&lt;body&gt;** tag, press Enter, and then type the following code:
+14. Place the cursor after the **>** (greater than) sign of the **&lt;/title&gt;** tag, press Enter, and then type the following code: 
   ```cs
        <link href="~/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
        <link href="~/css/style.css" rel="stylesheet" />
@@ -85,7 +87,7 @@
                Genres
            </a>
            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-               <a class="dropdown-item" href="@Url.Action("GetScienceFictionBooks", "Library")">Science fiction</a>
+               <a class="dropdown-item" href="@Url.Action("GetScienceFictionBooks", "Library")">Science Fiction</a>
                <a class="dropdown-item" href="@Url.Action("GetDramaBooks", "Library")">Drama</a>
            </div>
        </li>
@@ -143,7 +145,7 @@
        <div class="text-center">
            <h1>Welcome to Open Library </h1>
            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-               Launch modal example
+               Launch Modal Example
            </button>
        </div>
 ``` 
@@ -209,23 +211,27 @@
 
 37. In the **BootstrapExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-38. In the **Home** page, click **Launch modal example**, and then click **Close**.
+38. In the **Home** page, click **Launch Modal Example**, and then click **Close**.
 
 39. In the menu bar, click **Genres**, and then click **Drama**. 
 
-40. In the **Drama Books** page, click **Yes**, and examine the **alert** that appears.
+40. In the **Drama Books** page, click **Yes**.
 
-      >**Note:** Press the **X** close button in order to close the alert.
+      >**Note:** Examine the **alert** that appears.
+      
+41. Press the **X** close button in order to close the alert.
 
-41. In the menu bar, click **Genres**, and then click **science fiction**. 
+42. In the menu bar, click **Genres**, and then click **Science Fiction**. 
 
-42. In the **science fiction Books** page, click **No**, and examine the **alert** that appears.
+43. In the **Science Fiction Books** page, click **No**.
 
-      >**Note:** Press the **X** close button in order to close the alert.
+      >**Note:** Examine the **alert** that appears.
+      
+44. Press the **X** close button in order to close the alert.
 
-43. In **Microsoft Edge**, click **Close**.
+45. In **Microsoft Edge**, click **Close**.
 
-44. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+46. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Using Task Runners
 
@@ -257,6 +263,8 @@
   ```cs
        npm install
 ```
+>**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+
 7. Close the window.
 
 8. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin** and then double-click **GulpExample.sln**.
@@ -422,6 +430,8 @@
   ```cs
        npm install
 ```
+>**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+
 7. Close the window.
 
 8. Navigate to **Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
@@ -466,7 +476,7 @@
   ```cs
        <div class="title">
            <h1>Chess League</h1>
-           <p>hey, these are the results</p>
+           <p>Hey, These are the Results</p>
        </div>    
 ```
 
