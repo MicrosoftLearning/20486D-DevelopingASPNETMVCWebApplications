@@ -33,7 +33,7 @@ namespace Server.Controllers
         }
 
         [HttpPost]
-        public ActionResult<JobApplication> Create([FromBody]JobApplication jobApplication)
+        public ActionResult<JobApplication> Create(JobApplication jobApplication)
         {
             if (!ModelState.IsValid)
             {
