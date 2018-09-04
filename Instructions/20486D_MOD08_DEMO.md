@@ -474,6 +474,8 @@
   ```cs
        npm install
 ```
+>**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+
 7. Close the window.
 
 8. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin** and then double-click **JQueryExample.sln**.

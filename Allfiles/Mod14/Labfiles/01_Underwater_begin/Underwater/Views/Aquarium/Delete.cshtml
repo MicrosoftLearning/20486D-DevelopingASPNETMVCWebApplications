@@ -1,0 +1,36 @@
+﻿@model Underwater.Models.Fish
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="view-container">
+    <h3 class="title">Are you sure you want to delete this?</h3>
+    <div class="photo-index-card-details">
+        <h3 class="display-picture-title">
+            @Html.DisplayFor(modelItem => modelItem.Name)
+        </h3>
+        @if (Model.ImageName != null)
+        {
+            <div>
+                <img class="photo-display-img" src="@Url.Action("GetImage", "Aquarium", new { Id = Model.FishId })" />
+            </div>
+        }
+        <div>
+            <p class="display-label">
+                @Html.DisplayNameFor(model => model.ScientificName)
+            </p>
+            <br />
+            <p class="display-field">
+                @Html.DisplayFor(model => model.ScientificName)
+            </p>
+        </div>
+    </div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="FishId" />
+        <button id="btn-post" type="submit" class="btn btn-outline-primary">Delete</button>
+        <button class="btn btn-secondary" type="button" onclick="location.href='@Url.Action("Index", "Aquarium")'">Back</button>
+    </form>
+</div>
+
+
