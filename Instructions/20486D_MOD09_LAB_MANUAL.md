@@ -423,7 +423,7 @@ The main tasks for this exercise are as follows:
 8. Run the application.
 
 
-#### Task 1: Update js task to include bootstrap.
+#### Task 1: Update js task to include bootstrap
 
 1. In the **gulpfile.js** file, after the **jqueryjs** property assignment, assign the **popperjs** propery of the **path** object the value of **paths.nodeModules + "popper.js/dist/umd/popper.js"**.
 

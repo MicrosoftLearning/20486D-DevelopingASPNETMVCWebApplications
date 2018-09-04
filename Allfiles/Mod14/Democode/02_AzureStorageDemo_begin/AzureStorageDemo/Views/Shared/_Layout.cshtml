@@ -38,9 +38,41 @@
         </div>
     </nav>
 
-    <partial name="_CookieConsentPartial" />
+    
+
+    
 
     <div class="container body-content">
+
+        <h2> This demo creates a container named myimagecontainer and uploads the image you choose</h2>
+        
+
+        <h3>Upload Image</h3>
+        <br />
+
+        @using (Html.BeginForm("Upload", "Blob", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <fieldset class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="Photo">Photo</label>
+                    <div class="col-md-2">
+                        <input type="file" name="photo" />
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-offset-2 col-md-2">
+                        <input type="submit" value="Submit" />
+                    </div>
+
+                </div>
+            </fieldset>
+
+        }
+
+
+       
+
         @RenderBody()
         <hr />
         <footer>

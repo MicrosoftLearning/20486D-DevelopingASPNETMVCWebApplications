@@ -27,9 +27,9 @@
 7. In the **New ASP.NET Core Web Application - AzureWebAppExample** dialog box, in the result pane, click **Web Application (Model-View-Controller)**, ensure that the check boxes are unchecked and then click **OK**.
  
 8. In the **AzureWebAppExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**. 
->**Note:** The browser displays the default home page. 
+    >**Note:** The browser displays the default home page. 
 
-9. In **Microsoft Edge** click **close**.
+9. In **Microsoft Edge** click **Close**.
 
 10.  In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish.**
 
@@ -40,12 +40,12 @@
 13. In the **Create App Service** dialog box, click **Sign in**. 
 >**Note:** In case you have already signed-in, you will not see this dialog box. In this case, go to step 15.
 
-14. In the **Sign in to your account** dialog box type your Azure Account **Email /Phone / Skype**, and then click **Next**. 
+14. In the **Sign in to your account** dialog box type Azure Account **Email/Phone/Skype**, and then click **Next**. 
 
-15. In the **Sign in to your account** dialog box, type your **password**, and then click **Sign in**.
+15. In the **Sign in to your account** dialog box, type **Password**, and then click **Sign in**.
 
-16. In the **Create App Service** dialog box, in the **App Name** textbox **AzureWebAppExample{yourfirstnamelastname}**  
->**Note:** Replace {yourfirstnamelastname} with your first name and last name. This is needed as App Names are globally unique. In case this name is not available please also add your birthdate to the name.
+16. In the **Create App Service** dialog box, in the **App Name** text box **AzureWebAppExample{uniquename}**  
+>**Note:** The name must be unique. You can add your first name, last name or birthdate to the current name.
 
 17. In the **Create App Service** dialog box, below the **Resource Group** text box, click **New**. 
 
@@ -53,29 +53,29 @@
 
 19. In the **Create App Service** dialog box, below the **Hosting Plan** text box, click **New**. 
 
-20. In the **Configure Hosting Plan** dialog box, in the **App Service Plan** text box type **AzureWebAppExample{yourfirstnamelastname}**. 
+20. In the **Configure Hosting Plan** dialog box, in the **App Service Plan** text box type **AzureWebAppExample{uniquename}**. 
 
-21. In the **Configure Hosting Plan** dialog box, in the **Location** list, click **Central US**.
+21. In the **Create App Service** dialog box, click **Create**.
+    >**Note:** The browser displays the default home page, and the URL is: **http://azurewebapp{uniquename}.azurewebsites.net/**
 
-22. In the **Configure Hosting Plan** dialog box, in the **Size** list, click **S1 (1 core, 1.75 GB RAM)**, and then click **OK**.
+22. In **Microsoft Edge**, in the address bar, type **http://portal.azure.com**, and then press Enter.
 
-23. In the **Create App Service** dialog box, click **Create**.
->**Note:** The browser displays the default home page and the URL is **http://azurewebapp{yourfirstnamelastname}.azurewebsites.net/**
+23. In the **Sign in** dialog box, type Azure Account **Email/Phone/Skype**, and then click **Next**. 
 
-24. In **Microsoft Edge** click **close**.
+24. In the **Sign in** dialog box, type **Password**, and then click **Sign in**. 
+    >**Note:** The browser displays the dashboard that contains the **App Service** and the **App Service Plan**.
 
-25. In **Microsoft Edge**, in the address bar, type **http://portal.azure.com**, and then press Enter.
->**Note:** After signing in, the browser displays the dashboard that contains the **App Service** and the **App Service Plan**.
+25. In **Microsoft Edge**, click **AzureWebApp{uniquename}**.
+    >**Note:** Review the details in the overview window.
 
-26. In **Microsoft Edge**, click **AzureWebApp{yourfirstnamelastname}**.
->**Note:** Review the details in the overview window.
+26. In **Microsoft Edge** click **Close**.
 
 27. In **AzureWebAppSample - Microsoft Visual Studio**, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-28. In **Index.cshtml** window delete all the content.
+28. In **Index.cshtml** window, delete all the content.
 
 
-29. In **Index.cshtml** window , type the following code.
+29. In **Index.cshtml** window, type the following code.
 ```cs
 @{
     ViewData["Title"] = "Home Page";
@@ -85,14 +85,17 @@
 
 ```
 
-30. In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample** and then click **Publish**.
+30. In the **AzureWebAppExample - Microsoft Visual Studio** window, on the FILE menu, click **Save All**.
 
-31. In the **Publish** dialog box, ensure that the App Service Profile that was created is selected, and then click **Publish**.
->**Note:** The browser displays  **This is a ASP .NET web application deployed on Azure App Service**. 
+31. In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish**.
 
-32. In **Microsoft Edge** click **close**.
 
-33. In the **AzureWebAppExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+32. In the **Publish** dialog box, ensure that the App Service Profile that was created is selected, and then click **Publish**.
+    >**Note:** The browser displays:  **This is a ASP .NET web application deployed on Azure App Service**. 
+
+33. In **Microsoft Edge** click **Close**.
+
+34. In the **AzureWebAppExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Microsoft Azure Fundamentals
 
@@ -107,71 +110,71 @@
 
 #### Demonstration Steps 
 
-1.	In **Microsoft Edge**, in the address bar type **http://portal.azure.com**, and then press Enter.
+1.	Open **Microsoft Edge**.
 
-2.	Sign-in, and then click **Storage Accounts**.
+2. In **Microsoft Edge**, in the address bar type **http://portal.azure.com**, and then press Enter.
 
-3.	In the **Storage accounts** pane, in the menu bar, click **Add**.
+3.	Sign-in, and then click **Storage accounts**.
 
-4.	In the **Create Storage Account** pane , in the **Name** textbox type **blobdemo{yourfirstnamelastname}**
->**Note:** Replace {yourfirstnamelastname} with your first name followed by your last name.This is needed as Storage Account Names are globally unique. In case this name is not available please also add your birthdate to the name.
+4.	In the **Storage accounts** window, in the menu bar, click **Add**.
 
-5.	In the **Create Storage Account** pane, under **Resource Group** type **blobdemo**.
+5.	In the **Create Storage Account** window , in the **Name** text box type **blobdemo{uniquename}**
+    >**Note:** The name must be unique. You can add your first name, last name or birthdate to the current name.
 
-6.	In the **Create Storage Account** pane, click **Create**.
+6.	In the **Create storage account** window, under **Resource Group** type **blobdemo**.
 
-7.	In the **Storage accounts** pane, click  **Refresh**.
+7.	In the **Create storage account** window, click **Create**.
 
-8.	In the **Storage accounts** pane, click **blobdemo{yourfirstnamelastname}**.
+8.	In the **Storage accounts** window, click  **Refresh**.
 
-9.	In the **Storage Account** pane, below **Blob Service**, click **Blobs**.
+9.	In the **Storage accounts** window, click **blobdemo{uniquename}**.
 
-10.	In the **Storage Account** pane, in the menu bar, click **Container**.
+10.	In the **Storage Account** window, below **Blob Service**, click **Blobs**.
 
-11.	In the **New container** window , in the **Name** text box type **myfirstcontainer**, and then click **OK**.
+11.	In the **Storage Account** window, in the menu bar, click **Container**.
 
-12.	In the **Storage Account** page, click **myfirstcontainer**.
+12.	In the **New container** window , in the **Name** text box type **myfirstcontainer**, and then click **OK**.
 
-13.	In the **myfirstcontainer** page, click **Upload**.
+13.	In the **Storage Account** window, click **myfirstcontainer**.
 
-14.	In the **Upload blob** page, click **Choose file**. 
+14.	In the **myfirstcontainer** window, click **Upload**.
 
-15.	In the **File Explorer**, go to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo\AzureStorageDemo\images**, click **Chrysanthemum.jpeg**, and then click **Open**.
+15.	In the **Upload blob** window, click **Select a file**. 
 
-16.	In the **Upload blob** page click **Upload**.
+16.	In the **File Explorer**, go to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo\images**, click **chrysanthemum.jpeg**, and then click **Open**.
 
-17.	In the **Upload blob** page , click **Close**.
+17.	In the **Upload blob** window click **Upload**.
 
-18.	Open Microsoft Visual Studio 2017.
+18.	In the **Upload blob** window , click **Close**.
 
-19.	In the **Start Page - Microsoft Visual Studio** window, on the **FILE** menu, point to **Open**, and then click **Project/Solution**.
+19.	Open **File Explorer**.
 
-20.	In the **Name** text box, type **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo\AzureStorageDemo.sln**, and then click **OK**. 
+20.	 In **File Explorer**, navigate to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo**, and then double-click  **AzureStorageDemo.sln**
 
-21. In the **AzureStorageDemo – Microsoft Visual Studio** window, in **Solution Explorer**, right click **AzureStorageWebDemo**,  click **Add**, and then click **Connected Service**.
+21. In the **AzureStorageDemo – Microsoft Visual Studio** window, in **Solution Explorer**, right click **AzureStorageDemo**,  point to **Add**, and then click **Connected Service**.
 
 22.	In the **Connected Service** window, click **Cloud Storage with Azure Storage**.
 
 23.	In the **Azure Storage** window, sign in to your **Microsoft Azure Account**.
 
-24.	In the **Azure Storage** window, click  **blobdemo{yourfirstnamelastname}** , and then click **Add**.
+24.	In the **Azure Storage** window, click  **blobdemo{uniquename}** , and then click **Add**.
 
-25.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in **Solution Explorer**, expand **AzureStorageDemo** , expand **Controllers**, and then click **BlobController.cs**.
+25.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in **Solution Explorer**,  expand **Controllers**, and then click **BlobController.cs**.
 
-26.	In the **BlobController.cs** locate the following code :
+26.	In the **BlobController.cs** window, locate the following code :
 ```cs
     _connectionString = _configuration.GetConnectionString("{your_storage_account_name}_AzureStorageConnectionString");
 ```
-Replace **{your_storage_account_name}** with the name of the storage account you created.
+27. Replace **{your_storage_account_name}** with the name of the storage account you created.
 
-27.	In the **BlobController.cs** navigate to the **Upload** method and locate the following code:
+28.	In the **BlobController.cs** window, navigate to the **Upload** method and locate the following code:
 ```cs
 public async Task<ActionResult> Upload(IFormFile photo)
-        {
+{
             
 ```
 
-28. Place the cursor at the end of the located code and then type the following code:
+29. Place the cursor at the end of the located code, and then type the following code:
 ```cs
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connectionString);
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
@@ -194,28 +197,31 @@ public async Task<ActionResult> Upload(IFormFile photo)
             TempData["ImageURL"] = blob.Uri.ToString();
             
 ```
-29. In the **AzureStorageDemo – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-30.	In the **Microsoft Edge** window, click **Choose File**.
+30. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the FILE menu, click **Save All**.
 
-31.	In **File Explorer** navigate to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo\AzureStorageDemo\images** and choose the **Desert.jpeg**.
+31. In the **AzureStorageDemo – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-32. In the **Microsoft Edge**, click **Submit**. 
->**Note** The browser displays the uploaded image.
+32.	In the **Microsoft Edge** window, click **Choose File**.
 
-33. In **Microsoft Edge**, open a new tab, type **http://portal.azure.com**, and then press **Enter**
+33.	In **File Explorer** navigate to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo\images** and choose the **Desert.jpeg**.
 
-34.	Sign-in, and then click **Storage Accounts**.
+34. In the **Microsoft Edge**, click **Submit**. 
+    >**Note** The browser displays the uploaded image.
 
-35.	In the **Storage Accounts** pane, click **blobdemo{yourfirstnamelastname}**.
+35. In **Microsoft Edge**, open a new tab, type **http://portal.azure.com**, and then press **Enter**.
 
-36.	In **blobdemo{yourfirstnamelastname}** page, below **Blob Service**, click **Blobs**.
+36.	Sign-in, and then click **Storage accounts**.
 
-37.	In **blobs** page, click **myimagecontainer**.
+37.	In the **Storage accounts** window, click **blobdemo{uniquename}**.
 
-38. In **Microsoft Edge**, click **Close**.
+38.	In the **blobdemo{uniquename}** window, below **Blob Services**, click **Blobs**.
 
-39. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+39.	In the **Blobs** window, click **myimagecontainer**.
+
+40. Close all **Microsoft Edge** windows.
+
+41. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
