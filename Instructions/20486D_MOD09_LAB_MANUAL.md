@@ -171,7 +171,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: After completing this exercise, you will be able to use **gulp** to copy, bundle and minify js files, furthermore add watcher tasks.
 
-### Exercise 2: Styling Using SASS
+### Exercise 2: Styling Using Sass
 
 #### Scenario
 
@@ -181,19 +181,19 @@ In this exercise, you will:
 
 The main tasks for this exercise are as follows:
 
-1. Add gulp SASS task to compile bundle and minify.
+1. Add gulp Sass task to compile bundle and minify.
 
-2. Add a new SASS file to the project.
+2. Add a new Sass file to the project.
 
-3. Add SASS variables mixin and functions.
+3. Add Sass variables mixin and functions.
 
-4. Add a SASS nesting styles.
+4. Add a Sass nesting styles.
 
 5. Run the task.
 
 
 
-#### Task 1: Add gulp SASS task to compile bundle and minify
+#### Task 1: Add gulp Sass task to compile bundle and minify
 
 1. In the **gulpfile.js**, after the **watch** variable assigment, add a variable named **sass** with the value of **require('gulp-sass')**.
 
@@ -218,7 +218,7 @@ The main tasks for this exercise are as follows:
 11. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the pipe function. 
 
 
-#### Task 2: Add a new SASS file to the project
+#### Task 2: Add a new Sass file to the project
 
 1. Create a new folder with the following information:
 
@@ -230,7 +230,7 @@ The main tasks for this exercise are as follows:
     - Name: **main.scss**
  
 
-#### Task 3: Add SASS variables mixin and functions
+#### Task 3: Add Sass variables mixin and functions
 
 1. Delete the contents of the **main.scss** file.
 
@@ -250,7 +250,7 @@ The main tasks for this exercise are as follows:
     - width: **100%**
     - height: **auto**
 
-#### Task 4: Add a SASS nesting styles
+#### Task 4: Add a Sass nesting styles
 
 1. After the **normalized-image** mixin definition, add a **DIV** selector.
 
@@ -401,7 +401,7 @@ The main tasks for this exercise are as follows:
 
     > **Note**: In **Solution Explorer**, under **wwwroot**, under **css**, a new css file has been added named **main.min.css**.
 
->**Results** : After completing this exercise, you will be able to use gulp SASS task to compile bundle and minify SASS file to css.
+>**Results** : After completing this exercise, you will be able to use gulp Sass task to compile bundle and minify Sass file to css.
 
 ### Exercise 3: Using Bootstrap
 
