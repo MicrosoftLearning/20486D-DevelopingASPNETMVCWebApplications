@@ -10,16 +10,16 @@ namespace JQueryExample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PizzashopController : ControllerBase
+    public class PizzaShopController : ControllerBase
     {
         private List<Pizza> _pizzas = new List<Pizza>();
 
-        public PizzashopController()
+        public PizzaShopController()
         {
-            _pizzas.Add(new Pizza() { Id = 1, Toppings = "Mushrooms", Price = 10 });
-            _pizzas.Add(new Pizza() { Id = 2, Toppings = "Extra cheese", Price = 8 });
-            _pizzas.Add(new Pizza() { Id = 3, Toppings = "Black olives", Price = 9 });
-            _pizzas.Add(new Pizza() { Id = 4, Toppings = "Pineapple", Price = 12 });
+            _pizzas.Add(new Pizza() { Id = 1, Toppings = "mushrooms", Price = 10 });
+            _pizzas.Add(new Pizza() { Id = 2, Toppings = "extra cheese", Price = 8 });
+            _pizzas.Add(new Pizza() { Id = 3, Toppings = "black olives", Price = 9 });
+            _pizzas.Add(new Pizza() { Id = 4, Toppings = "pineapple", Price = 12 });
         }
 
         [HttpGet("{id}")]
