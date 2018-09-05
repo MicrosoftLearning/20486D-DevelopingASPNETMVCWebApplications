@@ -1,0 +1,110 @@
+﻿@model ZooSite.Models.Customer
+
+@{
+    ViewData["Title"] = "BuyTickets";
+}
+
+<div class="container buy-tickets">
+    <div class="info">
+        <div class="step-title">Step 1 - Choose Tickets</div>
+        <table class="pricing">
+            <tr>
+                <td>Adult</td>
+                <td id="adultCost">$35</td>
+                <td>
+                    <select id="adultQuantity">
+                        <option selected="selected" value="0">0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Child</td>
+                <td id="childCost">$23</td>
+                <td>
+                    <select id="childQuantity">
+                        <option selected="selected" value="0">0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Senior</td>
+                <td id="seniorCost">$30</td>
+                <td>
+                    <select id="seniorQuantity">
+                        <option selected="selected">0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <div id="summery" class="hidden-div">
+            <p>Order Summary</p>
+            <table id="totalAmount"></table>
+            <label id="sum"></label>
+        </div>
+    </div>
+    <div class="info">
+        <div class="step-title">Step 2 - Buy Tickets</div>
+        <form method="post" enctype="multipart/form-data" asp-action="BuyTickets">
+            <div class="form-field">
+                <label asp-for="FirstName"></label>
+                <div>
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+            </div>
+            <div class="form-field">
+                <label asp-for="LastName"></label>
+                <div>
+                    <input asp-for="LastName" />
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+            <div class="form-field">
+                <label asp-for="Address"></label>
+                <div>
+                    <input asp-for="Address" />
+                    <span asp-validation-for="Address"></span>
+                </div>
+            </div>
+            <div class="form-field">
+                <label asp-for="Email"></label>
+                <div>
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+            </div>
+            <div class="form-field">
+                <label asp-for="PhoneNumber"></label>
+                <div>
+                    <input asp-for="PhoneNumber" />
+                    <span asp-validation-for="PhoneNumber"></span>
+                </div>
+            </div>
+            <div class="form-field" id="formButtons">
+                <input class="submit-btn" type="submit" value="Buy" disabled />
+                <div id="comment">Please Choose Tickets</div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/form-functions.js"></script>
+}

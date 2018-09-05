@@ -57,7 +57,7 @@
     padding: 0;
     margin: 10px 5px 15px 18px;
     padding: 25px;
-    width: 305px;
+    width: 330px;
     border: 1px solid #d6d4d4;
     border-radius: 10px;
     overflow: hidden;
@@ -149,10 +149,8 @@
     margin-top: 5px;
 }
 .field-validation-error{
-    text-align: right;
+    text-align: left;
     display: block;
-    margin-right: 12px;
-    margin-top: -5px;
     margin-bottom: 8px;
     font-weight: bold;
     color: #e00e0e;

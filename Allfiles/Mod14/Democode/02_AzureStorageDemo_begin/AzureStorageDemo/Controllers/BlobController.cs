@@ -5,61 +5,38 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 
 namespace AzureStorageDemo.Controllers
 {
     public class BlobController : Controller
     {
 
-        string connectionString = "CONNECTION_STRING";
+        private IConfiguration _configuration;
+        private string _connectionString;
+
+        public BlobController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            _connectionString = _configuration.GetConnectionString("{your_storage_account_name}_AzureStorageConnectionString");
+        }
+
         public IActionResult Index()
         {
             return View();
         }
 
-       
+
         [HttpPost]
         public async Task<ActionResult> Upload(IFormFile photo)
         {
-           
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer container = blobClient.GetContainerReference("myimagecontainer");
 
-            if (await container.CreateIfNotExistsAsync())
-            {
-                await container.SetPermissionsAsync(
-                    new BlobContainerPermissions
-                    {
-                        PublicAccess = BlobContainerPublicAccessType.Blob
-                    }
-                    );
-            }
-
-            ViewBag.BlobContainerName = container.Name;
-            CloudBlockBlob blob = container.GetBlockBlobReference(photo.FileName);
-            ViewBag.BlobName = blob.Name;
-            await blob.UploadFromStreamAsync(photo.OpenReadStream());
-            ViewBag.UploadSize = blob.Properties.Length;
-
-            TempData["LatestImage"] = blob.Uri.ToString();
-            return RedirectToAction("LatestImage");
+            return View("LatestImage");
         }
 
-
-        public ActionResult LatestImage()
-        {
-            var latestImage = string.Empty;
-            if (TempData["LatestImage"] != null)
-            {
-                ViewBag.LatestImage = Convert.ToString(TempData["LatestImage"]);
-            }
-
-            return View();
-        }
 
     }
 
-    
+
 
 }

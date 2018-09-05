@@ -4,11 +4,11 @@
 
 #### Scenario
 
-You have been asked to add a slideshow to the homepage of the web application that will show some of the animal photos in the database. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
+You have been asked to add a slideshow to the homepage of the zoo web application that will show some of the animals’ photos. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
 
 You want to use jQuery to create this slideshow because you want to cycle through the photos in the browser, without reloading the page each time. 
 
-Also, you have been asked to add a purchase page to enable customers to buy Adult, Child and Senior tickets to the zoo. 
+You have been also asked to add a purchase page to enable customers to buy adult, child and senior tickets to the zoo. To do calculations in the page you will use jQuery. You will also use client-side validation to validate the input typed by the users.
 
 #### Objectives
 
@@ -17,7 +17,7 @@ After completing this lab, you will be able to:
 - Apply a consistent look and feel to the web application.
 - Use layouts to ensure that common interface features, such as the headers, are consistent across the entire web application.
 - Render and execute JavaScript code in the browser.
-- Use the jQuery script library to update and animate page components.
+- Use the jQuery script library to update and animate page elements.
 
 ### Lab Setup
 
@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 1: Create a layout
-1. From **Allfiles\Mod08\Labfiles\01_Zoo_begin** open **Zoo.sln**.
+1. From **Allfiles\Mod08\Labfiles\01_ZooSite_begin** open **ZooSite.sln**.
 
 2. Create a new folder with the following information:
 
@@ -68,21 +68,21 @@ The main tasks for this exercise are as follows:
 
 6. In the **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("Index", "ZooSite")**
+	- Href: **@Url.Action("Index", "Zoo")**
 	- Content: **Attractions**
 
 7. After the **LI** element, add a second **LI** element.
 
 8. In the second **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("VisitorDetails", "ZooSite")**
+	- Href: **@Url.Action("VisitorDetails", "Zoo")**
 	- Content: **Visitor Info**
 
 9. After the second **LI** element, add a third **LI** element.
 
 10. In the third **LI** element, add an **A** element with the following information:
 
-	- Href: **@Url.Action("BuyTickets", "ZooSite")**
+	- Href: **@Url.Action("BuyTickets", "Zoo")**
 	- Content: **Tickets**
 
 11. After the **UL** element, add a **DIV** element with the following information:
@@ -113,7 +113,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Add a view and link it to a layout
 
-1. In the **ZooSiteController** class, right-click on the **Index** action name, and then click **Add View**. 
+1. In the **ZooController** class, right-click on the **Index** action name, and then click **Add View**. 
 
 2. Create a new view using the **Add MVC View** dialog box, with the following information:
 
@@ -125,7 +125,7 @@ The main tasks for this exercise are as follows:
 
 3. Add a **@model** directive with the following information:
 
-   - Type: **IEnumerable&lt;Zoo.Models.Photo&gt;**
+   - Type: **IEnumerable&lt;ZooSite.Models.Photo&gt;**
 
 
 4.  Replace **_&lt;h2&gt;_Index_&lt;/h2&gt;_** with **H1** element, using the following information:
@@ -156,7 +156,7 @@ The main tasks for this exercise are as follows:
 10. In the **DIV** element, add an **IMG** element with the following information:
 
 	- Class: **photo-display-img**
-    - Src: **@Url.Action("GetImage", "ZooSite", new { PhotoId = item.PhotoID })**
+    - Src: **@Url.Action("GetImage", "Zoo", new { PhotoId = item.PhotoID })**
 
 11. After the **IF** statement, add an **H3** element with the following information:
 
@@ -181,10 +181,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Add existing views to the web application
 
-1. Add existing **.cshtml** files to the **Zoo** project, with the following information:
+1. Add existing **.cshtml** files to the **ZooSite** project, with the following information:
 
     - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
-	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\Views**
+	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSite\Views**
 
 
 #### Task 5: Add a section to the layout
@@ -224,8 +224,9 @@ The main tasks for this exercise are as follows:
 
 4. Style the photos section in Index.cshtml.
 
-5. Style a form in BuyTickets.cshtml
+5. Style a form in BuyTickets.cshtml.
 
+6. Run the application.
 
 #### Task 1: Add existing CSS file to the project
 
@@ -234,10 +235,12 @@ The main tasks for this exercise are as follows:
 	- Folder name: **css**
 	- Parent folder: **wwwroot**
 
-2. Add **zoo-style.css** file to the **Zoo** project, with the following information:
+2. Add **zoo-style.css** file to the **ZooSite** project, with the following information:
 
 	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
-	- Target location: **Allfiles\Mod08\Labfiles\01_Zoo_begin\Zoo\wwwroot\css**
+	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSit\wwwroot\css**
+
+3. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
 
 #### Task 2: Link the layout to the CSS file
 
@@ -331,7 +334,43 @@ The main tasks for this exercise are as follows:
 	- background-color: **whitesmoke**
 	- box-shadow: **none**
 
->**Results**: After completing this exercise, you will be able to add an existing CSS file to a web appllication, add a link form a layout to the CSS file and add new CSS selectors. 
+#### Task 6: Run the application
+
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+3. In the **Zoo Attractions** page, in the **Welcome to Zoo Center** header, click the **right arrow**.
+
+    >**Note:** Currently clicking the button has no effect since no JavaScript code has been added to the web application yet.
+
+4. In the menu bar, click **Visitor Info**.
+
+5. Click **Tickets**.
+
+6. On **Step 1 - Choose Tickets**, select the following:
+
+	- Adult: **_&lt;As many tickets as you like&gt;_**
+	- Child: **_&lt;As many tickets as you like&gt;_**
+	- Senior: **_&lt;As many tickets as you like&gt;_**   
+   
+	>**Note:** Currently the total cost of the tickets is not shown in the page since no JavaScript code has been added to the web application yet.
+
+7.  On **Step 2 - Buy Tickets**, type the following:
+
+	- First Name: **_&lt;A first name of your choice&gt;_**
+	- Last Name: **_&lt;A last name of your choice&gt;_**
+	- Address: **_&lt;An address of your choice&gt;_**
+	- Email: **abcd**
+	- Phone Number **_&lt;A phone number of your choice&gt;_**
+
+8. Click **Buy**.
+
+    >**Note:** Currently you can't buy the tickets and there is no validation since the functionality has not applied yet.
+
+9. Close **Microsoft Edge**.
+
+>**Results**: After completing this exercise, you will be able to add an existing CSS file to a web application, and add a link from a layout to the CSS file. You will also be able to add new CSS selectors to a CSS file. 
 
 ### Exercise 3: Using JavaScript
 
@@ -381,39 +420,33 @@ The main tasks for this exercise are as follows:
 	- Condition: **i < rows.length**
 	- Increment Expression: **i++**
 
-5. In the **FOR** loop code block, assign the **sum** variable the value of **sum + parseFloat(parseFloat(rows[i].innerHTML).toFixed(2))**.
+5. In the **FOR** loop code block, assign the **sum** variable the value of **sum + parseFloat(parseFloat(rows[i].innerHTML.substring(1, rows[i].innerHTML.length)).toFixed(2))**.
 
 6. Assign the **innerHTML** property of **document.getElementById("sum")** to **"Total: $" + sum**.
 
->**Results**: After completing this exercise, you will be able to add a **JavaScript File** and write JavaScript code. 
+>**Results**: After completing this exercise, you will be able to add a JavaScript file and write JavaScript code. 
 
 ### Exercise 4: Using jQuery
 
 #### Scenario
 
-In this exercise, you will:
-
-- Use NPM to add jQuery package by editing the package.json file.
-- Add and edit javascript files to handle click events, modify elements and change the style of the application.
-- Add client-side validation using jQuery validation package.
+You have been asked to handle click events, modify elements and change the style of elements. You were also asked to apply client-side validation in the web application. In this exercise you will use npm to add several client-side packages to the web application, and you will use the packages to make various operations in the client-side.
 
 The main tasks for this exercise are as follows:
 
-1. Use NPM to add jQuery.
+1. Use npm to add jQuery.
 
 2. Use jQuery to add event handlers.
 
-3. Use jQuery to modify an element with a particular id.
+3. Use jQuery to modify elements.
 
-4. Use jQuery to change a style.
+4. Client-side validation using jQuery.
 
-5. Client-side validation using jQuery.
-
-6. Run the application.
+5. Run the application.
 
 #### Task 1: Use npm to add jQuery
 
-1. Add a new **npm Configuration File** to the **Zoo** project.
+1. Add a new **npm Configuration File** to the **ZooSite** project.
 
 2. In the  **package.json** file, add the following key and value in the **dependencies** object:
 
@@ -422,11 +455,11 @@ The main tasks for this exercise are as follows:
 
 3. Save **package.json**.
 
->**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder named **npm** has been added which contains the **jquery** package.
+>**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package.
 
 4. In **Explorer Toolbar Options** click **Show All Files**.
 
-      >**Note:** In the **Zoo - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
+      >**Note:** In the **ZooSite - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
 
 5. Create a new folder with the following information:
 
@@ -475,14 +508,11 @@ The main tasks for this exercise are as follows:
 
 17. In the **Startup** class, add **USING** statement for the following namespace:
 
-   - **Zoo.Middleware**
+    - **ZooSite.Middleware**
 
-18. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
+18. In **Startup** class, in the **Configure** method, after the call to the **UseStaticFiles** method, call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
 
-19. Call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
-
-
-20. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
+19. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
 
 	- Src:**~/node_modules/jquery/dist/jquery.min.js**
 
@@ -512,7 +542,7 @@ The main tasks for this exercise are as follows:
 12. Chain a **remove** function call to the **$** function call. 
 
 
-#### Task 3: Use jQuery to modify an element with a particular id
+#### Task 3: Use jQuery to modify elements
 1. At the end of the **$** function, add an **IF** statement that checks that value of **value** variable is not empty.
 
 2. Inside the **IF** statement, call the **$** function and pass **'#summery'** as a parameter. 
@@ -525,7 +555,7 @@ The main tasks for this exercise are as follows:
 
 6. Create a variable named **calc** and assign it the value of **parseInt(value * correctCost)**.
 
-7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" + calc +'&lt;/span&gt;'**.
+7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" +'$' + calc +'&lt;/span&gt;'**.
 
 8. Create a variable named **row** and assign it the value of **$("&lt;tr id='" + label.text() +"'&gt;")**.
 
@@ -557,124 +587,157 @@ The main tasks for this exercise are as follows:
 
 22. Inside the **ELSE** statement code block, call the **$** function and pass **'#formButtons input'** as a parameter. 
 
-23. Chain an **removeAttr** function call to the **$** function call. Pass **"disabled"** as a parameter to the **removeAttr** function.
+23. Chain a **removeAttr** function call to the **$** function call. Pass **"disabled"** as a parameter to the **removeAttr** function.
 
 24. Call the **$** function and pass **'#comment'** as a parameter. 
 
-25. Chain an **hide** function call to the **$** function call. 
+25. Chain a **hide** function call to the **$** function call. 
 
 26. After the **ELSE** ststement call block, call the **calculateSum** function.
 
-
-#### Task 4: Use jQuery to change a style
-
-1. Add a **JavaScript File** with the following information:
+27. Add a **JavaScript File** with the following information:
 
 	- Folder: **js**
 	- Name: **menubar-functions**	
 
-2. In the beginning of the **menubar-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
+28. In the beginning of the **menubar-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
 
-3. At the beginning of the anonymous function code block, add a new variable named **path** with the value of **window.location.pathname**.
+29. At the beginning of the anonymous function code block, add a new variable named **path** with the value of **window.location.pathname**.
 
-4. Call the **$** function and pass **'.nav li a'** as a parameter. 
+30. Call the **$** function and pass **'.nav li a'** as a parameter. 
 
-5. Chain a **each** function call to the **$** function call. Pass anonymous function as a parameter to the **each** function.
+31. Chain a **each** function call to the **$** function call. Pass anonymous function as a parameter to the **each** function.
 
-6. Change the signature of the anonymous function passed to the **each** method to accept **index** and **value** parameters.
+32. Change the signature of the anonymous function passed to the **each** method to accept **index** and **value** parameters.
 
-7. Inside the anonymous function passed to the **each** method, create a variable named **href** and assign it the value of **$(value).attr('href')**.
+33. Inside the anonymous function passed to the **each** method, create a variable named **href** and assign it the value of **$(value).attr('href')**.
 
-8. Create an **IF** statement that checks that the value of **path** is equal to **href**.
+34. Create an **IF** statement that checks that the value of **path** is equal to **href**.
 
-9. Inside the **IF** statement code block, call the **$** function and pass **this** as a parameter. 
+35. Inside the **IF** statement code block, call the **$** function and pass **this** as a parameter. 
 
-10. Chain a **closest** function call to the **$** function call. Pass **'li'** to the **closest** function.
+36. Chain a **closest** function call to the **$** function call. Pass **'li'** to the **closest** function.
 
-11. Chain a **addClass** function call to the **closest** function call. Pass **'active'** to the **addClass** function.
+37. Chain a **addClass** function call to the **closest** function call. Pass **'active'** to the **addClass** function.
 
-12. Add a **JavaScript File** with the following information:
+38. Add a **JavaScript File** with the following information:
 
 	- Folder: **js**
 	- Name: **slider-functions**	
 
-13. In the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
+39. In the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
 
-14. Add a new variable named **current** with the value of **0**.
+40. Add a new variable named **current** with the value of **0**.
 
-15. Add a new **function** with the following information:
+41. Add a new **function** with the following information:
     - Name: **nextImage**
 
-16. In the **nextImage** function code block, increment the **current** variable by 1.
+42. In the **nextImage** function code block, increment the **current** variable by 1.
 
-17. Create an **IF** statement that checks that the value of **current** is equal to **images.length**.
+43. Create an **IF** statement that checks that the value of **current** is equal to **images.length**.
 
-18. Inside the **IF** statement code block, assign the **current** variable the value of **0**.
+44. Inside the **IF** statement code block, assign the **current** variable the value of **0**.
 
-18. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
+45. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
 
-19. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
+46. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
 
-20. Add a new **function** with the following information:
+47. Add a new **function** with the following information:
     - Name: **prevImage**
 
-21. In the **prevImage** function code block, decrement the **current** variable by 1.
+48. In the **prevImage** function code block, decrement the **current** variable by 1.
 
-22. Create an **IF** statement that checks that the value of **current** is smaller than **0**.
+49. Create an **IF** statement that checks that the value of **current** is smaller than **0**.
 
-23. Inside the **IF** statement code block, assign the **current** variable the value of **images.length-1**.
+50. Inside the **IF** statement code block, assign the **current** variable the value of **images.length-1**.
 
-24. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
+51. After the **IF** statement code block, call the **$** function and pass **'.header-container'** as a parameter. 
 
-25. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
+52. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
 
-26. In the **_Layout.cshtml** file, in the bottom of the **HEAD** tag code block, add a **SCRIPT** element with the following information:
+53. In the **_Layout.cshtml** file, in the bottom of the **HEAD** tag code block, add a **SCRIPT** element with the following information:
 
 	- Src: **~/js/menubar-functions.js**
 
-27. Add a **SCRIPT** element with the following information:
+54. Add a **SCRIPT** element with the following information:
 
 	- Src: **~/js/slider-functions.js**
 
 
-#### Task 5: Client-side validation using jQuery
+#### Task 4: Client-side validation using jQuery
 
-1. In the **BuyTickets** view, in the beginning of the **Scripts** section code block, add a **SCRIPT** element with the following information:
+1. In the  **package.json** file, add the following key and value in the **dependencies** object:
+
+	- Key: **"jquery-validation"**
+	- Value: **"1.17.0"**
+
+2. In the  **package.json** file, add the following key and value in the **dependencies** object:
+
+	- Key: **"jquery-validation-unobtrusive"**
+	- Value: **"3.2.10"**
+
+3. Save **package.json**.
+
+    >**Note:** In **Solution Explorer**, under **Dependencies**, under **npm** new packages have been added named **jquery-validation**, and **jquery-validation-unobtrusive**.
+
+4. In the **BuyTickets** view, in the beginning of the **Scripts** section code block, add a **SCRIPT** element with the following information:
 
 	- Src: **~/node_modules/jquery-validation/dist/jquery.validate.min.js**
 
-2. Add a **SCRIPT** element with the following information:
+5. Add a **SCRIPT** element with the following information:
 
 	- Src: **~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js**
 
-#### Task 6: Run the application
+#### Task 5: Run the application
 
 1. Save all the changes.
 
 2. Start the application without debugging.
 
-3. In the menu bar, click **Visitor Info**.
+3. In the **Zoo Attractions** page, in the header, click the **right arrow**, and then click the **left arrow**.
 
-4. In the menu bar, click **Tickets**.
+    >**Note:** The browser displays the header with the slider, and the slider functionality is applied.
 
-5. On **Step 1 - Choose Tickets**, select the following:
+4. In the menu bar, click **Visitor Info**.
+
+5. Click **Tickets**.
+
+    >**Note:** The **Buy** button is disabled, and there is a message **Please Choose Tickets** under the button.
+
+6. On **Step 1 - Choose Tickets**, select the following:
 
 	- Adult: **_&lt;As many tickets as you like&gt;_**
 	- Child: **_&lt;As many tickets as you like&gt;_**
 	- Senior: **_&lt;As many tickets as you like&gt;_**
 
-6.  On **Step 2 - Buy Tickets**, type the following:
+    >**Note:** The **Buy** button is enabled, and the message under the button disappeared. In addition, an **Order Summary** section is added which shows the price of the tickets.
+
+7.  On **Step 2 - Buy Tickets**, type the following:
 
 	- First Name: **_&lt;A first name of your choice&gt;_**
 	- Last Name: **_&lt;A last name of your choice&gt;_**
 	- Address: **_&lt;An address of your choice&gt;_**
-	- Email: **_&lt;An email of your choice&gt;_**
-	- Phone Number **_&lt; A phone number of your choice&gt;_**
+	- Email: **abcd**
 
-7. Click **Buy**.
+8. After you fill the **Email** text box, press Tab.
 
-8. Close **Microsoft Edge**.
+    >**Note:** Client side validation applies.
 
-9. Close **Microsoft Visual Studio**.
+9. On **Step 2 - Buy Tickets**, type the following:
 
->**Results**: After completing this exercise, you will be able to add jQuery to web application using NPM, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 
+	- Email: **_&lt;A valid email of your choice&gt;_**
+	- Phone Number **_&lt;A phone number of your choice&gt;_**
+
+10. Click **Buy**.
+
+11. Close **Microsoft Edge**.
+
+12. Close **Microsoft Visual Studio**.
+
+>**Results**: After completing this exercise, you will be able to add jQuery to a web application using npm, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 
+
+©2018 Microsoft Corporation. All rights reserved.
+
+The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+
+This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.

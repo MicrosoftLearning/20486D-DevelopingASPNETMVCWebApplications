@@ -98,7 +98,7 @@ The main tasks for this exercise are as follows:
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
->**Results** : After completing this exercise, you will be able to create a Test project and test a model while fixing its code, as in a Test Driven Development environment.
+>**Results**: After completing this exercise, you will be able to create a Test project and test a model while fixing its code, as in a Test Driven Development environment.
 
 ### Exercise 2: Testing a Controller using a Fake Repository
 
@@ -316,7 +316,7 @@ The main tasks for this exercise are as follows:
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 2 passed tests: **IsIndexReturnsAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
->**Results** : After completing this exercise, you will be able to create a test class and test a controller while fixing its code.
+>**Results**: After completing this exercise, you will be able to create a test class and test a controller while fixing its code.
 
 ### Exercise 3: Implementing a Repository in MVC Project
 
@@ -441,7 +441,7 @@ The main tasks for this exercise are as follows:
 
 2. Close **Microsoft Edge**.
 
->**Results** : After completing this exercise, alongside testing, you have developed a functional MVC Application.
+>**Results**: After completing this exercise, alongside testing, you have developed a functional MVC Application.
 
 ### Exercise 4: Adding Exception Handling
 
@@ -506,7 +506,7 @@ The main tasks for this exercise are as follows:
 
 2. Save all the changes.
 
->**Results** : After completing this exercise, you will know how to add exception handling to an MVC application, by displaying a custom error page or the developers page in case there is an exception that is thrown.
+>**Results**: After completing this exercise, you will know how to add exception handling to an MVC application, by displaying a custom error page or the developers page in case there is an exception that is thrown.
 
 ### Exercise 5: Adding Logging
 
@@ -715,7 +715,7 @@ The main tasks for this exercise are as follows:
 
 6. Close **Microsoft Visual Studio**.
 
->**Results** :  At the end of this exercise, you will be able to add logging in different logging levels in different environments, displaying errors or information by writing into a log file or a console output in a desired format, and creating a mock substitute using a mocking framework.
+>**Results**:  At the end of this exercise, you will be able to add logging in different logging levels in different environments, displaying errors or information by writing into a log file or a console output in a desired format, and creating a mock substitute using a mocking framework.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

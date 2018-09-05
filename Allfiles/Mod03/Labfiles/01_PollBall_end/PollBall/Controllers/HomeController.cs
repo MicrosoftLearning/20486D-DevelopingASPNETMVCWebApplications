@@ -26,7 +26,7 @@ namespace PollBall.Controllers
 
                 foreach (var gameVotes in voteList)
                 {
-                    results.Append($"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}");
+                    results.Append($"Game name: {gameVotes.Key}. Votes: {gameVotes.Value}{Environment.NewLine}");
                 }
 
                 return Content(results.ToString());

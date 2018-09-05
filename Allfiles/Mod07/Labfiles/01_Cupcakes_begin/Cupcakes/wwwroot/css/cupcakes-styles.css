@@ -9,7 +9,19 @@
     padding: 0px;
 }
 
-.main-titel {
+.main-title {
+    background-image: url("/images/cupcakes-cover.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
     color: #321919;
     font-size: 60px;
     font-weight: bolder;
@@ -29,10 +41,11 @@
 }
 
 .into {
-    color: #321919;
+    color: #0f188c;
     font-size: 40px;
-    font-weight: bolder;
-    text-align: center;
+    font-weight: 600;
+    text-shadow: 10px;
+    text-shadow: 2px 2px #8a8a8a;
 }
 
 a:link {
@@ -195,7 +208,7 @@ ul {
 
 input[type=submit], button {
     width: 180px;
-    background: #0097A7;
+    background: #2e6ab7;
     color: white;
     margin-top: 20px;
     margin-bottom: 15px;

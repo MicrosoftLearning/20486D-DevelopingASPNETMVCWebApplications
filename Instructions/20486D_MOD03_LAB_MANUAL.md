@@ -152,7 +152,7 @@ The main tasks for this exercise are as follows:
 
 3. Access the following relative path:
     - Path: **/poll-questions.html**
-    > **Note**: The browser displays the **poll-questions.html** file content, but the HTML content is not designed by a css file yet.
+    > **Note**: The browser displays the **poll-questions.html** file content, but the HTML content is not designed by a CSS file yet.
 
 4. Close **Microsoft Edge**.
 
@@ -269,7 +269,7 @@ The main tasks for this exercise are as follows:
 
 13. Uncomment the **ELSE** statement that would run in case the "favorite" query string parameter does not exist.
 
->**Result**: At the end of this exercise, you will be able to create a custom middleware and receive HTML form calls to it.
+>**Result**: At the end of this exercise, you will be able to create a custom middleware and receive submitted form data to it.
 
 ### Exercise 3: Using Dependency Injection
 
@@ -404,7 +404,7 @@ The main tasks for this exercise are as follows:
     - Variable Name: **currentVote**
     - Collection: **gameVotes**
 
-10.  In the **FOREACH** statement block, call the **context.Response.WriteAsync** method using the **await** operator. Pass **"&lt;div&gt; Game name: {currentVote.Key}, Votes: {currentVote.Value} 	&lt;/div&gt;"** as a parameter to the **WriteAsync** method. 
+10.  In the **FOREACH** statement block, call the **context.Response.WriteAsync** method using the **await** operator. Pass **"&lt;div&gt; Game name: {currentVote.Key}. Votes: {currentVote.Value} 	&lt;/div&gt;"** as a parameter to the **WriteAsync** method. 
 
 
 ####	Task 4: Run the application
@@ -420,23 +420,23 @@ The main tasks for this exercise are as follows:
 
 4. Select **Basketball**, and then click **Submit Poll**.
     > **Note**: The browser displays the following text:<br>
-"Game name: Basketball, Votes: 1"
+"Game name: Basketball. Votes: 1"
 
 5. Access the following relative path:
     - Path: **/poll-questions.html**
 
 6. Select **Football**, and then click **Submit Poll**.
     > **Note**: The browser displays the following text:<br>
-"Game name: Basketball, Votes: 1<br>
-Game name: Football, Votes: 1"
+"Game name: Basketball. Votes: 1<br>
+Game name: Football. Votes: 1"
 
 7. Access the following relative path:
     - Path: **/poll-questions.html**
 
 8. Select **Basketball**, and then click **Submit Poll**.
     > **Note**: The browser displays the following text:<br>
-"Game name: Basketball, Votes: 2<br>
-Game name: Football, Votes: 1"
+"Game name: Basketball. Votes: 2<br>
+Game name: Football. Votes: 1"
 
 9. Close **Microsoft Edge**.
 
@@ -539,7 +539,7 @@ The main tasks for this exercise are as follows:
     - Variable Name: **gameVotes**
     - Collection: **voteList**
 
-14. In the **FOREACH** statement block, call the **Append** method of the **results** variable. Pass **$"Game name: {gameVotes.Key}, Votes: {gameVotes.Value}{Environment.NewLine}"** as a parameter to the **Append** method. 
+14. In the **FOREACH** statement block, call the **Append** method of the **results** variable. Pass **$"Game name: {gameVotes.Key}. Votes: {gameVotes.Value}{Environment.NewLine}"** as a parameter to the **Append** method. 
 
 15. After the **FOREACH** statement block, return the **ContentResult** result using the **Content** method. Pass **results.ToString()** string as a parameter to the **Content** method.
 
@@ -559,7 +559,7 @@ The main tasks for this exercise are as follows:
 
 4. Click **Here**.
     > **Note**: The browser displays the following text:<br>
-"Game name: Basketball, Votes: 1
+"Game name: Basketball. Votes: 1
 
 5. Open a new **Microsoft Edge** window.
 
@@ -572,8 +572,8 @@ The main tasks for this exercise are as follows:
 
 8. Click **Here**.
     > **Note**: The browser displays the following text:<br>
-"Game name: Basketball, Votes: 1 <br> 
-Game name: Football, Votes: 1"
+"Game name: Basketball. Votes: 1 <br> 
+Game name: Football. Votes: 1"
 
 9. Close all the **Microsoft Edge** windows.
 
