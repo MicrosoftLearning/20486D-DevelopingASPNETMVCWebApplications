@@ -207,9 +207,9 @@
 
 3. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
 
-4. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **PizzaShopController**, and then click **Add**.
+4. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **PizzaController**, and then click **Add**.
 
-5. In the **PizzaShopController.cs** code window, locate the following code:
+5. In the **PizzaController.cs** code window, locate the following code:
   ```cs
        using Microsoft.AspNetCore.Mvc;
 ```
@@ -218,11 +218,11 @@
        using JQueryExample.Models;
 ```
 
-7. In the **PizzaShopController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+7. In the **PizzaController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
        private List<Pizza> _pizzas = new List<Pizza>();
 
-       public PizzaShopController()
+       public PizzaController()
        {
             _pizzas.Add(new Pizza() { Id = 1, Toppings = "mushrooms", Price = 10 });
             _pizzas.Add(new Pizza() { Id = 2, Toppings = "extra cheese", Price = 8 });
@@ -230,7 +230,7 @@
             _pizzas.Add(new Pizza() { Id = 4, Toppings = "pineapple", Price = 12 });
        }
 ```
-8. Ensure that the cursor is at the end of the **PizzaShopController** constructor code block, press Enter twice, and then type the following code:
+8. Ensure that the cursor is at the end of the **PizzaController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet("{id}")]
        public ActionResult<Pizza> GetById(int id)
@@ -279,7 +279,7 @@
                 e.preventDefault();
                 $.ajax({
                     type: "GET",
-                    url: "http://localhost:59216/api/PizzaShop/1",
+                    url: "http://localhost:59216/api/Pizza/1",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (response) {
@@ -306,7 +306,7 @@
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:59216/api/PizzaShop",
+                    url: "http://localhost:59216/api/Pizza",
                     data: JSON.stringify({
                         id: 6,
                         toppings: "pineapple",
