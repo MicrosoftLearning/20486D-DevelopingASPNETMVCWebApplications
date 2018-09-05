@@ -4,8 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Builder;
 
-namespace Microsoft.AspNetCore.Builder
+namespace SignalRExample.Middleware
 {
     public static class ApplicationBuilderExtensions
     {

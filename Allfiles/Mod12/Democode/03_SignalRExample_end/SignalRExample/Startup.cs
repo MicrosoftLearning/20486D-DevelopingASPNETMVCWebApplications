@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using SignalRExample.Services;
 using SignalRExample.Hubs;
+using SignalRExample.Middleware;
 
 namespace SignalRExample
 {
