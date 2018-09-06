@@ -436,9 +436,9 @@
         .withUrl("squareshub")
         .build();
 
-    connection.on("SwapSquareColor"), (x, y) => {
+    connection.on("SwapSquareColor", (x, y) => {
         $('#' + x + y).toggleClass('blue red');
-    };
+    });
     
     connection.start();
 ```
