@@ -4,12 +4,18 @@
 
 #### Scenario
 
+You have been asked to create a web-based restaurant application for your organization's customers, you want 
+to create a page showing all the Restaurant branches, enable to order a reservation for the selected restaurant branch, and add wanted ad page, also submit to a selected job.
 
+You will create a server side Web API application and a client side MVC Core application calling Web API actions using HttpClient and jQuery.
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
+- Add actions to a Web API application.
+- Call Web API actions using HttpClient.
+- Call Web API actions using jQuery.
 
 #### Lab Setup
 
@@ -23,19 +29,19 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-You are required to...
+In this exercise, you will first add an action to a Web API application. You will then run the application and view the outcome. After that you will add an action gets a parameter and a post action to the Web API application.
 
 The main tasks for this exercise are as follows:
 
-1.	Add an action to a Web API application
+1.	Add an action to a Web API application.
 
-2.	Run the application
+2.	Run the application.
 
-3.	Add an action that gets a parameter to a Web API application
+3.	Add an action that gets a parameter to a Web API application.
 
-4.	Run the application
+4.	Run the application.
 
-5.	Add a Post action to a Web API application
+5.	Add a Post action to a Web API application.
 
 
 #### Task 1: Add an action to a Web API application
@@ -184,21 +190,21 @@ The main tasks for this exercise are as follows:
 
 >**Results** : After completing this exercise, you will be able to
 
-### Exercise 2: 
+### Exercise 2: Calling a Web API using Server-Side Code
 
 #### Scenario
 
-After...
+In this exercise, you will first configure HttpClient in the Startup.cs file. You will then create MVC controller and write httpClient get method. After that you will call Web API Service GET method. Finally, you will write httpClient post method and call Web API Service POST method and then run the application. 
 
 The main tasks for this exercise are as follows:
 
-1.	Calling a Web API Service GET method
+1. Calling a Web API Service GET method.
 
-2.	Run the Application
+2. Run the Application.
 
-3.	Calling a Web API Service POST method
+3. Calling a Web API Service POST method.
 
-4. Run the Application
+4. Run the Application.
 
 
 #### Task 1: Calling a Web API Service GET method
@@ -393,21 +399,21 @@ The main tasks for this exercise are as follows:
 8. Click **Make a Reservation**.
 
 
-### Exercise 3: 
+### Exercise 3: Calling a Web API using jQuery
 
 #### Scenario
 
-After..
+In this exercise, you will first create a javaScript file. You will then add to the new javaScript file a jQuery and ajax script. After that you will call Web API Service GET method. Finally, you will add another javaScript file with javaScript file a jQuery and ajax script and call Web API Service POST method and run the application.
 
 The main tasks for this exercise are as follows:
 
-1.	Calling a Web API Service GET method
+1. Calling a Web API Service GET method.
 
-2. Run the Application
+2. Run the Application.
 
-3.	Calling a Web API Service POST method
+3. Calling a Web API Service POST method.
 
-4. Run the Application
+4. Run the Application.
 
 #### Task 1: Calling a Web API Service GET method
 
