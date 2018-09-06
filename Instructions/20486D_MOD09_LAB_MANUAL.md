@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You have been asked to create a web-based **Ice Cream** application for your organization's customers, you want 
+You have been asked to create a web-based Ice Cream application for your organization's customers, you want 
 to create a page showing all kinds of ice cream in stock, and a purchase page to the web application 
 Which will allow customers to purchase ice cream.
 
@@ -14,9 +14,9 @@ You will style the application using Bootstrap and Sass files which will compile
 
 After completing this lab, you will be able to:
 
-- Install **gulp** using **Node**.
-- write tasks to **bundle** and **minify** files.
-- Style the application using **Saas** and **Bootstrap**.
+- Install gulp using Node.
+- write tasks to bundle and minify files.
+- Style the application using Saas and Bootstrap.
 
 #### Lab Setup
 
@@ -30,9 +30,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-In this exercise, you will:
-
-In this exercise, you will first install **gulp** using **Node**. You will then create a javascript file named **gulpfile**. After that you will write tasks in the **gulpfile**. Finally, you will write a **watcher** task to track for any changes occurring in Scripts folder files.
+In this exercise, you will first install gulp using Node. You will then create a javascript file named gulpfile. After that you will write tasks in the gulpfile. Finally, you will write a watcher task to track for any changes occurring in Scripts folder files.
 
 The main tasks for this exercise are as follows:
 
@@ -180,8 +178,6 @@ The main tasks for this exercise are as follows:
 ### Exercise 2: Styling Using Sass
 
 #### Scenario
-
-In this exercise, you will:
 
 In this exercise, you will first add **gulp** task to bundle and minify **Saas** files. You will then create a **Sass** file named **main.scss**. After that you will add **Sass** variables mixin and functions. Finally, you will add a **Sass** nesting styles in the **main.scss** file.
 
@@ -410,9 +406,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will:
-
-In this exercise, you will first update a task that bundle and minify js files then update the task to include **Bootstrap** js and then add a new task to handle css files also.You will then style and link the layout to **Bootstrap**. After that you will apply the **Bootstrap** grid system. Finally, you will style the web application form.
+In this exercise, you will first update a task that bundle and minify js files then update the task to include **Bootstrap** js and then add a new task to handle css files also. You  will then style and link the layout to **Bootstrap**. After that you will apply the **Bootstrap** grid system. Finally, you will style the web application form.
 
 The main tasks for this exercise are as follows:
 
