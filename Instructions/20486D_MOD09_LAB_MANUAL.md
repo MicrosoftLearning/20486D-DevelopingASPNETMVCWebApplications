@@ -531,7 +531,7 @@ The main tasks for this exercise are as follows:
 
     - Class: **nav-link**
     - Href: **@Url.Action("Buy", "IceCream")**
-    - Content: **Buy ice cream**
+    - Content: **Buy Ice Cream**
     
 12. After the **DIV** element with the **NAV** element inside, add **DIV** element with the following information:
 
@@ -539,13 +539,13 @@ The main tasks for this exercise are as follows:
     
 13. In the **DIV** element, add **H1** element with the following information:
 
-    - Content: **The best ice cream you will taste in your life**
+    - Content: **The Best Ice Cream You Will Taste in Your Life**
     
 14. After the **H1** element, add **BUTTON** element with the following information:
 
     - Type: **button**
     - Onclick: **location.href='@Url.Action("Buy", "IceCream")'**
-    - Content: **Buy ice cream**
+    - Content: **Buy Ice Cream**
 
     
 #### Task 6: Apply the Bootstrap grid system to make the site responsive
@@ -571,7 +571,7 @@ The main tasks for this exercise are as follows:
     
 6. In the **DIV** element, add **H1** element with the following information:
 
-    - Content: **Choose your flavor**
+    - Content: **Choose Your Flavor**
     
 7. After the **H1** element, add **DIV** element with the following information:
 
@@ -589,12 +589,12 @@ The main tasks for this exercise are as follows:
 10. After the new **DIV** element, add **DIV** element with the following information:
 
     - Class: **col-2**
-    - Content: **Buy bulk(lbs)**
+    - Content: **Buy Bulk(lbs)**
 
 11. After the new **DIV** element, add **DIV** element with the following information:
 
     - Class: **col-2**
-    - Content: **Total amount(lbs)**
+    - Content: **Total Amount**
     
 12. After the new **DIV** element, add **DIV** element.
 
@@ -816,11 +816,11 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging. 
 
-3. Click **Buy ice cream**.
+3. Click **Buy Ice Cream**.
 
 4. In the **Ice Cream Flavors** list, select _&lt;An ice cream flavor of your choice&gt;_.
     
-5. In the **Buy bulk(lbs)** list, select _&lt;A bulk of your choice&gt;_.
+5. In the **Buy Bulk(lbs)** list, select _&lt;A bulk of your choice&gt;_.
 
 6. In the **First Name** text box, select _&lt;A first name of your choice&gt;_.
 
@@ -830,13 +830,11 @@ The main tasks for this exercise are as follows:
     
 9. In the **Email** text box, select _&lt;A email of your choice&gt;_.
 
-10. In the **Phone Number** text box, select _&lt;A phone number of your choice&gt;_, and then click **Make a purchase**.
+10. In the **Phone Number** text box, select _&lt;A phone number of your choice&gt;_, and then click **Make a Purchase**.
     
 11. On the **Thank you** page, in the **menu bar** click **Home**, and examine the browser content.
 
 12. Close **Microsoft Edge**.
-
-13. Stop Debugging
 
 13. Close **Microsoft Visual Studio**.
 
