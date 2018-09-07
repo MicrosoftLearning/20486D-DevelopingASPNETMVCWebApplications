@@ -134,7 +134,7 @@
 
 9. In the **XmlFormatExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
-10. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
+10. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
       services.AddMvc().AddXmlSerializerFormatters();
 ```
@@ -203,13 +203,13 @@
 
 1. Navigate to **Allfiles\Mod13\Democode\03_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
 
-2. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
+2. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
 3. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
 
-4. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **PizzashopController**, and then click **Add**.
+4. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **PizzaController**, and then click **Add**.
 
-5. In the **PizzashopController.cs** code window, locate the following code:
+5. In the **PizzaController.cs** code window, locate the following code:
   ```cs
        using Microsoft.AspNetCore.Mvc;
 ```
@@ -218,19 +218,19 @@
        using JQueryExample.Models;
 ```
 
-7. In the **PizzashopController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+7. In the **PizzaController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
        private List<Pizza> _pizzas = new List<Pizza>();
 
-       public PizzashopController()
+       public PizzaController()
        {
-            _pizzas.Add(new Pizza() { Id = 1, Toppings = "Mushrooms", Price = 10 });
-            _pizzas.Add(new Pizza() { Id = 2, Toppings = "Extra cheese", Price = 8 });
-            _pizzas.Add(new Pizza() { Id = 3, Toppings = "Black olives", Price = 9 });
-            _pizzas.Add(new Pizza() { Id = 4, Toppings = "Pineapple", Price = 12 });
+            _pizzas.Add(new Pizza() { Id = 1, Toppings = "mushrooms", Price = 10 });
+            _pizzas.Add(new Pizza() { Id = 2, Toppings = "extra cheese", Price = 8 });
+            _pizzas.Add(new Pizza() { Id = 3, Toppings = "black olives", Price = 9 });
+            _pizzas.Add(new Pizza() { Id = 4, Toppings = "pineapple", Price = 12 });
        }
 ```
-8. Ensure that the cursor is at the end of the **PizzashopController** constructor code block, press Enter twice, and then type the following code:
+8. Ensure that the cursor is at the end of the **PizzaController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet("{id}")]
        public ActionResult<Pizza> GetById(int id)
@@ -279,11 +279,11 @@
                 e.preventDefault();
                 $.ajax({
                     type: "GET",
-                    url: "http://localhost:59216/api/Pizzashop/1",
+                    url: "http://localhost:59216/api/Pizza/1",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (response) {
-                        $(".result").text('Ajax Result: you ordered pizza with ' + response.toppings + ' for ' + response.price + '$');
+                        $(".result").text('Ajax result: you ordered pizza with ' + response.toppings + ' for ' + response.price + '$');
                     },
                     error: function (response) {
                         alert('An error has occurred');
@@ -306,15 +306,15 @@
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:59216/api/Pizzashop",
+                    url: "http://localhost:59216/api/Pizza",
                     data: JSON.stringify({
                         id: 6,
-                        toppings: "Pineapple",
+                        toppings: "pineapple",
                         price: 10.99
                     }),
                     contentType: "application/json;charset=utf-8",
                     success: function (result) {
-                        $(".result").text('Ajax Result: Pizza object added successfully with the following information id ' + result.id + ', toppings: ' + result.toppings + ', price ' + result.price + '$');
+                        $(".result").text('Ajax result: pizza object added successfully with the following information id ' + result.id + ', toppings: ' + result.toppings + ', price ' + result.price + '$');
                     },
                     error: function (result) {
                         alert('An error has occurred');
@@ -324,9 +324,9 @@
        });
 ```
 
-22. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **Views**, under **Home** click **Index.cshtml**.
+22. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
-23. In the **Index.cshtml** file, locate the following code:
+23. In the **Index.cshtml** code window, locate the following code:
   ```cs
        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 ```
@@ -335,9 +335,9 @@
        <script src="~/js/pizza-get.js"></script>
        <script src="~/js/pizza-post.js"></script>
 ```
-25. In the **Index.cshtml** file, in the **BODY** element, type the following code:
+25. In the **Index.cshtml** code window, in the **BODY** element, type the following code:
   ```cs
-       <h1>Welcome to Model 13 - Demo 3</h1>
+       <h1>Welcome to Module 13 - Demo 3</h1>
        <button type="button" class="btn-get btn-outline-info">Get Ajax Function</button>
        <button type="button" class="btn-post btn-outline-info">Post Ajax Function</button>
        <div class="result"></div>
@@ -372,7 +372,7 @@
   ```cs
       services.AddMvc();
 ```
-4. Place the cursor after the located code, press Enter, and then type the following code:
+4. Place the cursor at the end of the located code, press Enter, and then type the following code:
   ```cs
       services.AddHttpClient();
 ```
@@ -388,20 +388,20 @@
 
 10. In **Solution Explorer**, right-click **ClientSide**, point to **Add**, and then click **Reference**. 
 
-11. In the **Reference Manager - ClientSide** dialog box, click **Projects**, in the result pane, ensure that the **ServerSide** check box is **checked**, and then click **OK**.
+11. In the **Reference Manager - ClientSide** dialog box, click **Solution**, in the result pane, ensure that the **ServerSide** check box is checked, and then click **OK**.
 
 12. In the **HomeController.cs** code window, locate the following code:
   ```cs
       using Microsoft.AspNetCore.Mvc;
 ```
-13. Ensure that the cursor is at the end of the  **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
+13. Ensure that the cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
   ```cs
       using ServerSide.Models;
       using System.Net.Http;
       using System.Net.Http.Headers;
 ```
 
-14. In the **HomeController.cs** code window, select the following code, and then press Delete.
+14. In the **HomeController.cs** code window, delete the following code:
   ```cs
        public IActionResult Index()
        {
@@ -453,27 +453,27 @@
        response.EnsureSuccessStatusCode();
        return new ObjectResult(newGrocery);
 ```
-20. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ServerSide**, under **Controllers** click **StoreController.cs**.
+20. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **ServerSide**, under **Controllers** and then click **StoreController.cs**.
 
-21. Examine the **StoreController.cs** class content.
+    >**Note:**Examine the **StoreController.cs** class content.
 
-22. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+21. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-23. In **Solution Explorer**, right-click **ClientSide**, and then click **Set as StartUp Project**. 
+22. In **Solution Explorer**, right-click **ClientSide**, and then click **Set as StartUp Project**. 
 
-24. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+23. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-25. In **Solution Explorer**, right-click **ServerSide**, point to **Debug**, and then click **Start new instance**.
+24. In **Solution Explorer**, right-click **ServerSide**, point to **Debug**, and then click **Start new instance**.
 
     >**Note:** The browser displays a grocery store in **JSON** format.
 
-26. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
+25. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
 
     >**Note:** The browser displays the new added grocery store in **JSON** format.
 
-27. In **Microsoft Edge**, click **Close**.
+26. In **Microsoft Edge**, click **Close**.
 
-28. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+27. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 

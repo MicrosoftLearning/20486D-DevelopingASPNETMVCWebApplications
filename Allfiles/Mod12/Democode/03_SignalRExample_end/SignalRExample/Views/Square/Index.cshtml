@@ -1,0 +1,28 @@
+﻿@model string[,]
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+</head>
+<body>
+    <div class="square-wrapper">
+        @for (int i = 0; i < Model.GetLength(0); i++)
+        {
+            for (int j = 0; j < Model.GetLength(1); j++)
+            {
+                <Button id="@i@j" class="square @Model[i,j]" data-assigned-x="@i" data-assigned-y="@j" onclick="onButtonClick(this)"></Button>
+            }
+        }
+    </div>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_modules/@@aspnet/signalr/dist/browser/signalr.min.js"></script>
+    <script src="~/js/square-events.js"></script>
+</body>
+</html>

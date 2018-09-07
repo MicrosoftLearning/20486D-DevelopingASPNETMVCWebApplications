@@ -26,17 +26,6 @@ namespace Client.Controllers
             return View();
         }
 
-        [HttpPost, ActionName("Create")]
-        public IActionResult CreatePost(JobApplication jobApplication)
-        {
-            return RedirectToAction(nameof(ThankYou));
-        }
-
-        public IActionResult ThankYou()
-        {
-            return View();
-        }
-
         private async Task PopulateEmployeeRequirementsDropDownListAsync(int? selectedRequirements = null)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantWantedAd");
@@ -49,6 +38,11 @@ namespace Client.Controllers
             }
 
             ViewBag.EmployeeRequirementsId = new SelectList(_employeeRequirements, "Id", "JobTitle", selectedRequirements);
+        }
+
+        public IActionResult ThankYou()
+        {
+            return View();
         }
     }
 }
