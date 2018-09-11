@@ -53,7 +53,7 @@
 
 19. In the **Create App Service** dialog box, below the **Hosting Plan** text box, click **New**. 
 
-20. In the **Configure Hosting Plan** dialog box, in the **App Service Plan** text box, type **AzureWebAppExample{unique name}**. 
+20. In the **Configure Hosting Plan** dialog box, in the **App Service Plan** text box, type **AzureWebAppExample{unique name}**, and then click **OK**. 
 
 21. In the **Create App Service** dialog box, click **Create**.
     >**Note:** The browser displays the default home page, and the URL is: **http://azurewebapp{unique name}.azurewebsites.net/**
@@ -61,12 +61,12 @@
 22. In **Microsoft Edge**, in the address bar, type **http://portal.azure.com**, and then press Enter.
     >**Note:** In case you are already signed-in, you will not see sign-in dialog box.In this case go to step 25.
 
-23. In the **Sign in** dialog box, type Azure Account **Email/Phone/Skype**, and then click **Next**. 
+23. In the **Sign in** dialog box, type azure account **Email/Phone/Skype**, and then click **Next**. 
 
 24. In the **Sign in** dialog box, type **Password**, and then click **Sign in**. 
     >**Note:** The browser displays the dashboard that contains the **App Service** and the **App Service Plan**.
 
-25. In **Microsoft Edge**, click **AzureWebApp{unique name}**.
+25. In **Microsoft Edge**, click on the **App Service**, **AzureWebApp{unique name}**.
     >**Note:** View the details in the overview window.
 
 26. In **Microsoft Edge**, click **Close**.
@@ -160,6 +160,7 @@
     >**Note:** In case you are already signed-in, you will not see the sign-in dialog box. In that case proceed to the next step.
 
 24.	In the **Azure Storage** window, click  **blobdemo{unique name}** , and then click **Add**.
+    >**Note:** This causes **Microsoft Edge** window to open with URL pointing to https://docs.microsoft.com/en-us/azure/visual-studio/vs-storage-aspnet-getting-started-blobs. This can be ignored.
 
 25.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in **Solution Explorer**,  expand **Controllers**, and then click **BlobController.cs**.
 
@@ -200,13 +201,13 @@ public async Task<ActionResult> Upload(IFormFile photo)
             
 ```
 
-30. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE menu**, click **Save All**.
+30. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 31. In the **AzureStorageDemo – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
 32.	In **Microsoft Edge**, click **Browse**.
 
-33.	In **File Explorer** navigate to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo\images**, click **Desert.jpeg**, and then click **Open**.
+33.	In **File Explorer** navigate to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo\images**, click **desert.jpeg**, and then click **Open**.
 
 34. In **Microsoft Edge**, click **Submit**. 
     >**Note** The browser displays the uploaded image.
