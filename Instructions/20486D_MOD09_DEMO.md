@@ -380,7 +380,7 @@
 
 33. In the **Task Runner Explorer** pane, under **Tasks**, right-click **sass**, and then click **Run**.
 
-      >**Note:** In Solution Explorer, under **wwwroot**, a new folder has been added named **css** with compiled SASS File to CSS named **main.css**.
+      >**Note:** In Solution Explorer, under **wwwroot**, a new folder has been added named **css** which contains a CSS file named **main.css**.
 
 34. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **PhotoBook**, click **Index.cshtml**.
 
