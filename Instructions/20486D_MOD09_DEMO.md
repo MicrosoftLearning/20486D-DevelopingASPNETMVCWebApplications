@@ -267,7 +267,7 @@
 
 7. Close the window.
 
-8. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin** and then double-click **GulpExample.sln**.
+8. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin**, and then double-click **GulpExample.sln**.
 
 9. In the **GulpExample - Microsoft Visual Studio** window, on the **TOOLS** menu, click **Options**.
 
