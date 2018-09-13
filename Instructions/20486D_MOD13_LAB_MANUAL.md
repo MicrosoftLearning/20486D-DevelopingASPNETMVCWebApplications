@@ -5,9 +5,9 @@
 #### Scenario
 
 You have been asked to create a web-based restaurant application for your organization's customers, you want 
-to create a page showing all the Restaurant branches, enable to order a reservation for the selected restaurant branch, and add wanted ad page, also submit to a selected job.
+to create a page showing all the Restaurant branches, enable to order a reservation for a selected restaurant branch,  add a wanted ad page, and also submit to a selected job.
 
-You will create a server side Web API application and a client side MVC Core application calling Web API actions using HttpClient and jQuery.
+To achive this, you will create a server side Web API application and a client side MVC Core application calling Web API actions using HttpClient and jQuery.
 
 #### Objectives
 
@@ -64,7 +64,7 @@ The main tasks for this exercise are as follows:
 7. Create a new controller with the following information:
    - Controller name: **RestaurantBranchesController**
    - Template: **API Controller - Empty**
-   - Folder: **Controllers**
+   - Folder: **Server/Controllers**
    
 8. In the **RestaurantBranchesController** class, add **using** statements for the following namespaces:
    - **Server.Data**
@@ -114,7 +114,7 @@ The main tasks for this exercise are as follows:
 1.  Create a new controller with the following information:
    - Controller name: **ReservationController**
    - Template: **API Controller - Empty**
-   - Folder: **Controllers**
+   - Folder: **Server/Controllers**
    
 2. In the **ReservationController** class, add **using** statements for the following namespaces:
    - **Server.Data**
@@ -142,7 +142,7 @@ The main tasks for this exercise are as follows:
 
 7. Annotate the **GetById** action with the **HttpGet** attribute.
 
-8. In the **GetById** method, create a variable named **order ** of type **var** and assign it with the value of **_context.ReservationsTables.FirstOrDefault(p => p.Id == id)**.
+8. In the **GetById** method, create a variable named **order** of type **var** and assign it with the value of **_context.ReservationsTables.FirstOrDefault(p => p.Id == id)**.
 
 9. Create an **IF** statement that checks that the value of the **order** varible is **null**. 
 
@@ -219,7 +219,7 @@ The main tasks for this exercise are as follows:
 3. Create a new controller with the following information:
    - Controller name: **RestaurantController**
    - Template: **MVC Controller - Empty**
-   - Folder: **Controllers**
+   - Folder: **Client/Controllers**
    
 4. In the **RestaurantController** class, add **using** statements for the following namespaces:
    - **System.Net.Http**
@@ -496,10 +496,126 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Calling a Web API Service POST method
 
-1. 
+1. Create a new controller with the following information:
+   - Controller name: **JobApplicationController**
+   - Template: **MVC Controller - Empty**
+   - Folder: **Client/Controllers**
 
+2. In the **ReservationController** class, add **using** statements for the following namespaces:
+   - **Microsoft.AspNetCore.Mvc.Rendering**
+   - **System.Net.Http**
+   - **Server.Models**
 
-    
+3 Remove the **Index** action with its content.
+
+4. Create a new field with the following information:
+   - Scope: **private**
+   - Type: **IHttpClientFactory**
+   - Name: **_httpClient**
+
+5. Create a new field with the following information:
+   - Scope: **private**
+   - Type: **IEnumerable&lt;EmployeeRequirements&gt;**
+   - Name: **_employeeRequirements**
+
+6.  Add a constructor with the following parameter:
+    - Parameter: 
+        - Type: **IHttpClientFactory** 
+        - Name: **httpClient**
+
+7. In the **JobApplicationController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
+
+8. Add a method for the **Create** action with the following information:
+   - Scope: **public**
+   - Modifier: **async**
+   - Return type: **Task&lt;IActionResult&gt;**
+   - Name: **Create**
+   
+9. In the **Create** method, call the **PopulateEmployeeRequirementsDropDownListAsync** method using the **await** keyword. 
+   
+10. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+
+11. Add a **PopulateEmployeeRequirementsDropDownListAsync** method with the following information:
+     - Scope: **private**
+     - Modifier: **async**
+     - Return type: **Task**
+     - Name: **PopulateEmployeeRequirementsDropDownListAsync**   
+     - Parameter: 
+         - Type: **int?** 
+         - Name: **selectedRequirements**
+         - Defualt value: **null**   
+
+12. In the **PopulateRestaurantBranchesDropDownListAsync** method, add a variable named **request** of type **var**. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantWantedAd")**.
+
+13. Call the **Add** method of the **request.Headers** property. Pass **"Accept"** and **"application/json"** as parameters to the **Add** method.
+
+14. Add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
+
+15. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
+
+16. Create an **IF** statement that checks that the value of the **response.IsSuccessStatusCode** varible is **true**. 
+
+17. Inside the **IF** statement code block, assign the **_employeeRequirements ** property with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;EmployeeRequirements&gt;&gt;()**.
+
+18. Assign the **EmployeeRequirementsId ** property of the **ViewBag** field with the value of **new SelectList(_employeeRequirements, "Id", "JobTitle", selectedRequirements)**.
+
+19. Add a method for the **ThankYou** action with the following information:
+   - Scope: **public**
+   - Return type: **IActionResult**
+   - Name: **ThankYou**
+   
+20. Return the **IActionResult** result using the **View** method. 
+
+21. Add a **JavaScript** File with the following information:
+
+   - Folder: **Client/wwwroot/js**
+   - Name: **wanted-ad-post.js**
+   
+22. In the **wanted-ad-post.js** file, call the **$** function and pass an **anonymous function** as a parameter.
+
+23. Inside the **anonymous function** code block, call the **$** function and pass **'#btn-post'** as a parameter.
+
+24. Chain a **click** function call to the **$** function call. Pass an **anonymous function** as a parameter to the  **click** function.
+
+25. Modify the **anonymous function** passed to the **click** function to accept an **e** parameter.
+
+26. In the  **anonymous function** code block, add a variable named **formData** with the value of **{}**.
+
+27. Call the **$** function and pass **'#submit-form'** as a parameter.
+
+28. Chain a **serializeArray** function call to the **$** function call. 
+
+29. Chain a **map** function call to the **serializeArray** function call. Pass an **anonymous function** as a parameter to the  **click** function.
+
+30. Modify the **anonymous function** passed to the **map** function to accept an **item** parameter.
+
+31. In the **anonymous function** code block, aiign the **name** property of the **item** parameter the value of **item.name[0].toLowerCase() + item.name.slice(1)**.
+
+32. Add a **IF** statement that checks that the value of **formData[item.name]** is true. 
+
+33. Inside the **IF** statement, add a **IF** statement that checks that the value of **formData[item.name]** is equal to **"string"**. 
+
+34. Inside the **IF** statement, assign the **formData[item.name]** variable the value of **[formData[item.name]]**.
+
+35. After the inner **IF** statement, call the **push** function of the **formData[item.name]** variable. Pass **item.value** as a paramter to the **push** method. 
+
+36. After the outer **IF** statement, add an **ELSE** statement. 
+
+37. Inside the **ELSE** statement, assign the **formData[item.name]** variable the value of **item.value**.
+
+38. After the **map** method call, call the **preventDefault** method of the **e** parameter. 
+
+11. Call the **$.ajax** function. Pass a **JSON** object as a parameter to the **$.ajax** function using the following information:
+
+    - Properties: 
+      - type: **"POST"**
+      - url: **"http://localhost:54517/api/job"**
+      - contentType: **"application/json; charset=utf-8"**
+      - data: **JSON.stringify(formData)**
+      - dataType: **"json"**
+      - success: **function() { location.href = 'http://localhost:54508/JobApplication/ThankYou' }**      
+      - error: **function(result) { alert('An error has occurred') }**
+      
 
 #### Task 4: Run the Application
 
