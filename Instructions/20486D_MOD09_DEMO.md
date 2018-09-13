@@ -283,13 +283,15 @@
 
 14. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **package.json**.
 
-15. Examine the **package.json** code window.
+15. In the **package.json** code window, examine the code.
 
       >**Note:** In **Solution Explorer**, under **Dependencies**, there is a folder named **npm** which contains the **gulp** and **gulp-sass** packages.
 
 16. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **PhotoBook**, and then click **Index.cshtml**.
 
-17. In the **Index.cshtml** code window, examine the code, and ensure that there are no links to **css** files.
+17. In the **Index.cshtml** code window, examine the code. 
+
+      >**Note:** Currently there are no links to a **CSS** file.
 
 18. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Folder**.
 
