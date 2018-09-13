@@ -396,7 +396,7 @@
 
 38. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser displays the **Index.cshtml** view with **css** style.
+      >**Note:** The browser displays a page which is designed by a CSS.
 
 39. In **Microsoft Edge**, click **Close**.
 
