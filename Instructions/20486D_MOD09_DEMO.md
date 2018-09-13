@@ -376,7 +376,7 @@
 
 32. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **gulpfile.js**, and then click **Task Runner Explorer**.
 
-      >**Note:** In **Task Runner Explorer**, if the **Tasks** list is not updated click **Refresh**.
+      >**Note:** If the **sass** task doesn't appear in the **Tasks** list click **Refresh**.
 
 33. In the **Task Runner Explorer** pane, under **Tasks**, right-click **sass**, and then click **Run**.
 
