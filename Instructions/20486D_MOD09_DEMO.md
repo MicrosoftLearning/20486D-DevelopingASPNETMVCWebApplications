@@ -291,7 +291,7 @@
 
 17. In the **Index.cshtml** code window, examine the code. 
 
-      >**Note:** Currently there are no links to a **CSS** file.
+      >**Note:** Currently there are no links to **CSS** files.
 
 18. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Folder**.
 
