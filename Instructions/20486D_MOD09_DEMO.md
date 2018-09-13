@@ -285,7 +285,7 @@
 
 15. In the **package.json** code window, examine the code.
 
-      >**Note:** In **Solution Explorer**, under **Dependencies**, there is a folder named **npm** which contains the **gulp** and **gulp-sass** packages.
+      >**Note:** The **gulp** and **gulp-sass** packages appear in the **devDependencies** section.
 
 16. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **PhotoBook**, and then click **Index.cshtml**.
 
