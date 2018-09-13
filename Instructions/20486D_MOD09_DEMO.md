@@ -273,7 +273,7 @@
 
 10. In the **Options** dialog box, in the **Search Options** text box, type **Web Package Management**, and then press Enter.
 
-11. In the **Locations of external tools** box, in the **Options** dialog box, select **$(PATH)**, press the **Ap arrow** button until  **$(PATH)** is at the top of the list, and then click **OK**.
+11. In the **Locations of external tools** list box, select **$(PATH)**, press the **Ap arrow** button until **$(PATH)** is at the top of the list, and then click **OK**.
 
 12. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
