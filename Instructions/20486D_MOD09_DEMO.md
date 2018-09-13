@@ -235,7 +235,7 @@
 
 # Lesson 2: Using Task Runners
 
-### Demonstration: How to Use gulp to Compile SASS File to CSS
+### Demonstration: How to Use gulp to Compile Sass to CSS
 
 #### Preparation Steps 
 
