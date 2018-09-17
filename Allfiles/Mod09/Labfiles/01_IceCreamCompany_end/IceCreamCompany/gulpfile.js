@@ -25,21 +25,21 @@ paths.destinationCssFolder = paths.webroot + "css/";
 paths.bootstrapCss = paths.nodeModules + "bootstrap/dist/css/bootstrap.css";
 paths.vendorCssFileName = "vendor.min.css";
  
-gulp.task("min-vendor:js", function () {
+gulp.task("min-vendor:js", function() {
     return gulp.src(paths.vendorJsFiles)
         .pipe(concat(paths.vendorJsFileName))
         .pipe(uglify())
         .pipe(gulp.dest(paths.destinationJsFolder));
 });
 
-gulp.task("min:js", function () {
+gulp.task("min:js", function() {
     return gulp.src(paths.JsFiles)
         .pipe(concat(paths.JsFileName))
         .pipe(uglify())
         .pipe(gulp.dest(paths.destinationExistingJsFolder));
 });
 
-gulp.task("min:scss", function () {
+gulp.task("min:scss", function() {
     return gulp.src(paths.sassFiles)
         .pipe(sass().on('error', sass.logError))
         .pipe(concat(paths.compiledCssFileName))
@@ -47,18 +47,18 @@ gulp.task("min:scss", function () {
         .pipe(gulp.dest(paths.destinationCssFolder));
 });
 
-gulp.task("min-vendor:css", function () {
+gulp.task("min-vendor:css", function() {
     return gulp.src(paths.bootstrapCss)
         .pipe(concat(paths.vendorCssFileName))
         .pipe(cssmin())
         .pipe(gulp.dest(paths.destinationCssFolder));
 });
 
-gulp.task("js-watcher", function () {
+gulp.task("js-watcher", function() {
     gulp.watch('./Scripts/*.js', ["min:js"]);
 });
 
-gulp.task("sass-watcher", function () {
+gulp.task("sass-watcher", function() {
     gulp.watch('./Styles/*.scss', ["min:scss"]);
 });
 
