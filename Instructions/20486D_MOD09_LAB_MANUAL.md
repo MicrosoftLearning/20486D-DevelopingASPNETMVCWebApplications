@@ -34,7 +34,7 @@ In this exercise, you will first install gulp using Node. You will then create a
 
 The main tasks for this exercise are as follows:
 
-1. Use Node to install gulp.
+1. Use npm to install gulp.
 
 2. Write a task to copy a js file.
 
@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
 
 7. Run the task.
 
-#### Task 1: Use Node to install gulp
+#### Task 1: Use npm to install gulp
 
 1. In the **Command Prompt**, run the command **cd {The location of  Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin folder on your machine}** 
 
