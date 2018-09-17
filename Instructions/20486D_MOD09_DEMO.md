@@ -423,7 +423,7 @@
 
 5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
-       cd  {copied folder path}
+       cd {copied folder path}
 ```
 
 >**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
