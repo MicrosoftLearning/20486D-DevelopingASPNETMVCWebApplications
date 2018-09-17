@@ -168,11 +168,11 @@ The main tasks for this exercise are as follows:
 
 1. Save all changes.
 
-2. In the **Task Runner Explorer** window, right-click **min-vendor:js**, and then click **Run**.
+2. In the **Task Runner Explorer** window, run the **min-vendor:js** task.
 
-3. Right-click **min:js**, and then click **Run**.
+3. Run the **min:js** task.
 
-4. Right-click **js-watcher**, and then click **Run**.
+4. Run the **js-watcher** task.
 
 >**Results**: After completing this exercise, you will be able to use **gulp** to copy, bundle and minify js files, furthermore add watcher tasks.
 
