@@ -525,10 +525,10 @@
            </div>
        </div>
        <div class="col-3">
-                @Html.DisplayFor(model => item.GamesQuantity)
+            @Html.DisplayFor(model => item.GamesQuantity)
        </div>
        <div class="col-3">
-                @Html.DisplayFor(model => item.FinalScore)
+            @Html.DisplayFor(model => item.FinalScore)
        </div>  
 ```
 
