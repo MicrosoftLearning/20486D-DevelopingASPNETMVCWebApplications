@@ -62,7 +62,7 @@ The main tasks for this exercise are as follows:
 
 6. In the **Options** dialog box, search for **Web Package Management** and press **Enter**.
 
-7. In the **Locations of external tools** box, move the **$(PATH)** option to the top of the list, and then click **OK**.
+7. In the **Locations of external tools** list box, move the **$(PATH)** option to the top of the list, and then click **OK**.
 
 8. Open the **package.json** file and view its content.
 
