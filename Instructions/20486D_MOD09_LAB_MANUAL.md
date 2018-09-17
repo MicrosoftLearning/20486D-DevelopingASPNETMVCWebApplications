@@ -68,7 +68,7 @@ The main tasks for this exercise are as follows:
 
       >**Note:** There are dependencies to the **gulp**, **gulp-concat**, **gulp-uglify**, **gulp-watch-sass**, **gulp-sass**, **gulp-cssmin**, **jquery**, **bootstrap**, and **popper.js** packages.
 
-#### Task 2: Write a task to copy a js file
+#### Task 2: Write a task to copy a JavaScript file
 
 1. Add a **JavaScript** **File** with the following information:
 
@@ -109,7 +109,7 @@ The main tasks for this exercise are as follows:
 3. Run the **copy-js-file** task.
     >**Note:** In **Solution Explorer**, under **wwwroot**, a new folder has been added named **lib** with js file named **jquery.js**
 
-#### Task 4:  Update the task to bundle and minify js file
+#### Task 4:  Update the task to bundle and minify a JavaScript file
 
 1. In the **gulpfile.js**, after the **gulp** variable, add a variable named **concat** with the value of **require('gulp-concat')**.
 
@@ -132,7 +132,7 @@ The main tasks for this exercise are as follows:
 10. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationJsFolder)** as a parameter to the pipe function. 
 
 
-#### Task 5: Write a task to bundle and minify an existing file js file
+#### Task 5: Write a task to bundle and minify an existing JavaScript file
 
 1. Before the **gulp.task** method call, assign the **JsFiles** property of the **path** object the value of **"./Scripts/*.js"**.
 
