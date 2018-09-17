@@ -1,5 +1,5 @@
 ﻿$(function () {
-     UnableToPurchase();
+    UnableToPurchase();
 
     $('.form-control').click(function () {
         var hashtable = {};
