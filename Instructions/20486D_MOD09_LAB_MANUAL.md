@@ -104,7 +104,7 @@ The main tasks for this exercise are as follows:
 
 2. Open **Task Runner Explorer**.
 
-    >**Note:** If the Tasks list does not contain a task named **copy-js-file**, click **Refresh**.
+    >**Note:** If the **Tasks** list does not contain a task named **copy-js-file**, click **Refresh**.
 
 3. Right-click **copy-js-file**, and then click **Run**.
     >**Note:** In **Solution Explorer**, under **wwwroot**, a new folder has been added named **lib** with js file named **jquery.js**
