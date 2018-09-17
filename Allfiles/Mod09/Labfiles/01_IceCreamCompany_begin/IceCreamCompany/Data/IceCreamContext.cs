@@ -19,7 +19,7 @@ namespace IceCreamCompany.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<IceCreamFlavorsCustomers>()
-           .HasKey(c => new { c.IceCreamId, c.CustomerId });
+            .HasKey(c => new { c.IceCreamId, c.CustomerId });
 
             modelBuilder.Entity<IceCreamFlavorsCustomers>()
                 .HasOne(ic => ic.IceCream)
@@ -27,19 +27,19 @@ namespace IceCreamCompany.Data
                 .HasForeignKey(ic => ic.IceCreamId);
 
             modelBuilder.Entity<IceCreamFlavorsCustomers>()
-               .HasOne(ic => ic.Customer)
-               .WithMany(c => c.IceCreamFlavors)
-               .HasForeignKey(ic => ic.CustomerId);
+                .HasOne(ic => ic.Customer)
+                .WithMany(c => c.IceCreamFlavors)
+                .HasForeignKey(ic => ic.CustomerId);
 
             modelBuilder.Entity<IceCream>().HasData(
-               new IceCream
-               {
-                   IceCreamId = 1,
-                   Price = 8,
-                   Flavor = "Vanilla ice cream with caramel ripple and almonds",
-                   ImageMimeType = "image/jpeg",
-                   PhotoFileName = "icecream-1.jpg"
-               },
+                new IceCream
+                {
+                    IceCreamId = 1,
+                    Price = 8,
+                    Flavor = "Vanilla ice cream with caramel ripple and almonds",
+                    ImageMimeType = "image/jpeg",
+                    PhotoFileName = "icecream-1.jpg"
+                },
                 new IceCream
                 {
                     IceCreamId = 2,
