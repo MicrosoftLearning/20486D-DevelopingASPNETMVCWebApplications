@@ -30,7 +30,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-In this exercise, you will first install gulp using Node. You will then create a javascript file named gulpfile. After that you will write tasks in the gulpfile. Finally, you will write a watcher task to track for any changes occurring in Scripts folder files.
+In this exercise, you will first install gulp using npm. You will then create a JavaScript file named gulpfile.js. After that you will write tasks in the gulpfile.js file to bundle and minify JavaScript files. Finally, you will write a watcher task to track for any changes occurring in files which are located in the **Scripts** folder.
 
 The main tasks for this exercise are as follows:
 
