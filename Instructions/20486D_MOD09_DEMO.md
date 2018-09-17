@@ -543,7 +543,7 @@
 
 23. In the **GridExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser displays the **Index.cshtml** view with **Bootstrap grid system**.
+      >**Note:** The browser displays a page which is designed using the **Bootstrap grid system**.
 
 24. In **Microsoft Edge**, click **Close**.
 
