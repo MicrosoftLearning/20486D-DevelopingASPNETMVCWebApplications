@@ -117,19 +117,17 @@ The main tasks for this exercise are as follows:
 
 3. Before the **gulp.task** method call, assign the **vendorJsFileName** property of the **path** object the value of **"vendor.min.js"**.
 
-4. Remove the **gulp.task** method call.
+4. Call the **task** method of the **gulp** variable. 
 
-5. Call the **task** method of the **gulp** variable. 
+5. Pass **"min-vendor:js"** and an **anonymous function** as parameters to the **task** function.
 
-6. Pass **"min-vendor:js"** and an **anonymous function** as parameters to the **task** function.
+6. In the **anonymous function** code block, return the **gulp.src(paths.jqueryjs)** function call result. 
 
-7. In the **anonymous function** code block, return the **gulp.src(paths.jqueryjs)** function call result. 
+7. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorJsFileName)** as a parameter to the pipe function. 
 
-8. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorJsFileName)** as a parameter to the pipe function. 
+8. Chain a **pipe** function call to the **pipe** function call. Pass **uglify()** as a parameter to the pipe function. 
 
-9. Chain a **pipe** function call to the **pipe** function call. Pass **uglify()** as a parameter to the pipe function. 
-
-10. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationJsFolder)** as a parameter to the pipe function. 
+9. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationJsFolder)** as a parameter to the pipe function. 
 
 
 #### Task 5: Write a task to bundle and minify an existing JavaScript file
