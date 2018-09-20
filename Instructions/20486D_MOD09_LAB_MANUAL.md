@@ -365,7 +365,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Add gulp tasks to handle Sass files
 
-1. In the **gulpfile.js**, after the **watch** variable assigment, add a variable named **sass** with the value of **require('gulp-sass')**.
+1. In the **gulpfile.js**, after the **uglify** variable assigment, add a variable named **sass** with the value of **require('gulp-sass')**.
 
 2. Add a variable named **cssmin** with the value of **require('gulp-cssmin')**.
 
