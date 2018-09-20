@@ -391,7 +391,7 @@ The main tasks for this exercise are as follows:
 
 13. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Styles/*.scss"** and **["min:scss"]** as parameters to the **gulp.watch** function.
 
-#### Task 5: Run the task
+#### Task 3: Run a task
 
 1. Save all changes.
 
