@@ -46,7 +46,7 @@ The main tasks for this exercise are as follows:
 
 6. Add a watcher task.
 
-7. Run the task.
+7. Run the tasks.
 
 #### Task 1: Use npm to install gulp
 
@@ -156,7 +156,7 @@ The main tasks for this exercise are as follows:
 
 3. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Scripts/*.js"** and **["min:js"]** as parameters to the **gulp.watch** function.
 
-#### Task 7: Run the task
+#### Task 7: Run the tasks
 
 1. Save all changes.
 
