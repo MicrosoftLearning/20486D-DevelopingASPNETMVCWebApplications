@@ -409,7 +409,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will first update a task that bundle and minify js files then update the task to include **Bootstrap** js and then add a new task to handle css files also. You  will then style and link the layout to **Bootstrap**. After that you will apply the **Bootstrap** grid system. Finally, you will style the web application form.
+In this exercise, you will first update the **min-vendor:js** task that bundles and minifies JavaScript files to include the JavaScript files of Bootstrap. After that you will add a task to handle to CSS files of Bootstrap. You will then run the tasks to create the **vendor.min.css** file and to update the **vendor.min.js** file. After that you will style the layout using Bootstrap. Finally, you will create a view to buy an ice cream, and style it using Bootstrap.
 
 The main tasks for this exercise are as follows:
 
