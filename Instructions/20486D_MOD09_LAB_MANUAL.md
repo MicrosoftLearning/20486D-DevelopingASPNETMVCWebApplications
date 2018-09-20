@@ -190,7 +190,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will first add **gulp** task to bundle and minify **Saas** files. You will then create a **Sass** file named **main.scss**. After that you will add **Sass** variables mixin and functions. Finally, you will add a **Sass** nesting styles in the **main.scss** file.
+In this exercise, you will first create a Sass file named **main.scss** and fill its content. After that you will create a gulp task to compile the Sass file to a CSS file. Then you will create a gulp watcher task so compilation of Sass file to CSS file will be done automatically when the Sass file is changed.
 
 The main tasks for this exercise are as follows:
 
