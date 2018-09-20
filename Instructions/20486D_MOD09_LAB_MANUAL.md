@@ -456,8 +456,6 @@ The main tasks for this exercise are as follows:
 
 1. Save all changes.
 
-    > **Note**: In **Task Runner Explorer**, if the **Tasks** list is not updated click **Refresh**.
-
 2. In the **Task Runner Explorer** window, right-click **min-vendor:css**, and then click **Run**.
 
      > **Note**: In **Solution Explorer**, under **wwwroot**, under **css**, a new css file has been added named **vendor.min.css**.
