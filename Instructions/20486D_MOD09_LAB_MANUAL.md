@@ -196,13 +196,9 @@ The main tasks for this exercise are as follows:
 
 1. Add a new Sass file to the project.
 
-2. Add Sass variables mixin and functions.
+2. Add gulp tasks to handle Sass files.
 
-3. Add a Sass nesting styles.
-
-4. Add gulp Sass task to compile bundle and minify.
-
-5. Run the task.
+3. Run a task.
 
 #### Task 1: Add a new Sass file to the project
 
