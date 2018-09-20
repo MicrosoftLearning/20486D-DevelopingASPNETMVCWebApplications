@@ -172,7 +172,9 @@ The main tasks for this exercise are as follows:
 
       >**Note:** The **script.min.js** file is a minified version of the **payment-calc.js** file. It contains the string **form-control-mistake**.
 
-4. Run the **js-watcher** task.
+6. Run the **js-watcher** task.
+
+7. In the **payment-calc.js** file, replace **form-control-mistake** with **form-control**.
 
 >**Results**: After completing this exercise, you will be able to use **gulp** to copy, bundle and minify js files, furthermore add watcher tasks.
 
