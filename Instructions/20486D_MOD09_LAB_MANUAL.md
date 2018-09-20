@@ -477,7 +477,7 @@ The main tasks for this exercise are as follows:
     - Href: **~/css/main.min.css**
     - rel: **stylesheet**
 
-5. In the **_Layout.cshtml** file, before the **DIV** element with @RenderBody() content, add a **DIV**.
+5. In the **_Layout.cshtml** file, before the **DIV** element with **@RenderBody()** content, add a **DIV**.
 
 6. In the new **DIV** element, add a **NAV** element with the following information:
     - Class: **navbar navbar-expand-lg navbar-light bg-light mx-auto**
