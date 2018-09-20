@@ -166,7 +166,11 @@ The main tasks for this exercise are as follows:
 
       >**Note:** In the fourth line there is an error: **form-control-mistake**.
 
-3. Run the **min:js** task.
+4. Run the **min:js** task.
+
+5. Open the **form-control-mistake** file which is located under the **wwwroot/script** folder.
+
+      >**Note:** The **script.min.js** file is a minified version of the **payment-calc.js** file. It contains the string **form-control-mistake**.
 
 4. Run the **js-watcher** task.
 
