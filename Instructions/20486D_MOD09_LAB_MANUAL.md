@@ -178,6 +178,9 @@ The main tasks for this exercise are as follows:
 
 8. Save the **payment-calc.js** file.
 
+9. In the **Microsoft Visual Studio** dialog box, click **Yes to All**.
+
+
 >**Results**: After completing this exercise, you will be able to use **gulp** to copy, bundle and minify js files, furthermore add watcher tasks.
 
 ### Exercise 2: Styling Using Sass
