@@ -162,6 +162,10 @@ The main tasks for this exercise are as follows:
 
 2. In the **Task Runner Explorer** window, run the **min-vendor:js** task.
 
+3. Open the **payment-calc.js** file which is located under the **Scripts** folder.
+
+      >**Note:** In the fourth line there is an error: **form-control-mistake**.
+
 3. Run the **min:js** task.
 
 4. Run the **js-watcher** task.
