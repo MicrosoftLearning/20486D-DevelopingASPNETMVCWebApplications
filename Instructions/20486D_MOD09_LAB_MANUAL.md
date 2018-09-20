@@ -413,24 +413,22 @@ In this exercise, you will first update a task that bundle and minify js files t
 
 The main tasks for this exercise are as follows:
 
-1. Update js task to include bootstrap.
+1. Update gulpfile.js to handle Bootstrap.
 
-2. Add a new task to handle the bootstrap css.
+2. Run the tasks.
 
-3. Run the task.
+3. Link the layout to Bootstrap.
 
-4. Link the layout to Bootstrap.
+4. Style the layout using Bootstrap.
 
-5. Style the layout using Bootstrap.
+5. Apply the Bootstrap grid system to make the site responsive.
 
-6. Apply the Bootstrap grid system to make the site responsive.
+6. Style a form using Bootstrap.
 
-7. Style a form using Bootstrap.
-
-8. Run the application.
+7. Run the application.
 
 
-#### Task 1: Update js task to include bootstrap
+#### Task 1: Update gulpfile.js to handle Bootstrap
 
 1. In the **gulpfile.js** file, after the **jqueryjs** property assignment, assign the **popperjs** property of the **path** object the value of **paths.nodeModules + "popper.js/dist/umd/popper.js"**.
 
