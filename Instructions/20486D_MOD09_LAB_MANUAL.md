@@ -460,6 +460,12 @@ The main tasks for this exercise are as follows:
 
      > **Note**: In **Solution Explorer**, under **wwwroot**, under **css**, a new css file has been added named **vendor.min.css**.
 
+3. Run the **min-vendor:js** task.
+
+4. In the **Microsoft Visual Studio** dialog box, click **Yes**.
+
+     > **Note:** In **Solution Explorer**, under **wwwroot**, under **lib**, a file named **vendor.min.js** was updated.
+
 
 #### Task 4: Link the layout to Bootstrap
 
