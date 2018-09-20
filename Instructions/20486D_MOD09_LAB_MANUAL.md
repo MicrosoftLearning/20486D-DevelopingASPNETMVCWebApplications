@@ -387,6 +387,10 @@ The main tasks for this exercise are as follows:
 
 11. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the pipe function. 
 
+12. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"sass-watcher"** and an **anonymous function** as parameters to the **task** function.
+
+13. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Styles/*.scss"** and **["min:scss"]** as parameters to the **gulp.watch** function.
+
 #### Task 5: Run the task
 
 1. Save all changes.
@@ -402,21 +406,6 @@ The main tasks for this exercise are as follows:
     > **Note**: In **Solution Explorer**, under **wwwroot**, under **css**, a new css file has been added named **main.min.css**.
 
 >**Results** : After completing this exercise, you will be able to use gulp Sass task to compile bundle and minify Sass file to css.
-
-#### Task 6: Add a watcher task
-
-1. After the **uglify** variable assigment, add a variable named **watch**, with the value of **require('gulp-watch-sass')**.
-
-2. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. 
-
-3. Pass **"js-watcher"** and an **anonymous function** as parameters to the **task** function.
-
-4. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Scripts/*.js"** and **["min:js"]** as parameters to the **gulp.watch** function.
-
-5. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"sass-watcher"** and an **anonymous function** as parameters to the **task** function.
-
-6. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Styles/*.scss"** and **["min:scss"]** as parameters to the **gulp.watch** function.
-
 
 ### Exercise 3: Using Bootstrap
 
