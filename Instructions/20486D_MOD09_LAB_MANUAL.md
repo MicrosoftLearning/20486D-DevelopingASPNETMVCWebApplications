@@ -184,7 +184,7 @@ The main tasks for this exercise are as follows:
 
       >**Note:** In the **script.min.js** file, the string **form-control-mistake** was replaced with **form-control**.
 
->**Results**: After completing this exercise, you will be able to use **gulp** to copy, bundle and minify js files, furthermore add watcher tasks.
+>**Results**: After completing this exercise, you will be able to use **gulp** to copy, bundle and minify JavaScript files, and add watcher tasks.
 
 ### Exercise 2: Styling Using Sass
 
