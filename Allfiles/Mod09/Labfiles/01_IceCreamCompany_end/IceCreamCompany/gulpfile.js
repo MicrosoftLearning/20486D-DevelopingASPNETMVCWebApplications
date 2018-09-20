@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var watch = require('gulp-watch-sass');
 var sass = require('gulp-sass');
 var cssmin = require('gulp-cssmin');
 
