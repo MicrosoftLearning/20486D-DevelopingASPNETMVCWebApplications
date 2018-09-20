@@ -403,7 +403,7 @@ The main tasks for this exercise are as follows:
 
       >**Note:** From now whenever you change the **main.scss** file, the **main.min.css** file will automatically be changed.
 
->**Results** : After completing this exercise, you will be able to use gulp Sass task to compile bundle and minify Sass file to css.
+>**Results** : After completing this exercise, you will be able to create Sass files and add gulp tasks to compile, bundle and minify them.
 
 ### Exercise 3: Using Bootstrap
 
