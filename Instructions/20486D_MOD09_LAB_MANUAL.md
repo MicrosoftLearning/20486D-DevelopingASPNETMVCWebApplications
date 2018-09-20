@@ -211,35 +211,31 @@ The main tasks for this exercise are as follows:
     - Folder: **Styles**
     - Name: **main.scss**
  
-#### Task 2: Add Sass variables mixin and functions
+3. Delete the contents of the **main.scss** file.
 
-1. Delete the contents of the **main.scss** file.
+4. In the **main.scss** file, add a new variable named **$highlights** with the value of **#124eab**.
 
-2. In the **main.scss** file, add a new variable named **$highlights** with the value of **#124eab**.
+5. Add a new **mixin** with the name of **normalized-text**.
 
-3. Add a new **mixin** with the name of **normalized-text**.
-
-4. In the **normalized-text** mixin, add the following properties:
+6. In the **normalized-text** mixin, add the following properties:
 
     - font-family: **"Playfair Display", Arial, Tahoma, sans-serif**
     - text-align: **center**
 
-5. Add a new **mixin** with the name of **normalized-image**.
+7. Add a new **mixin** with the name of **normalized-image**.
 
-6. In the **normalized-image** mixin, add the following properties:
+8. In the **normalized-image** mixin, add the following properties:
 
     - width: **100%**
     - height: **auto**
 
-#### Task 3: Add a Sass nesting styles
+9. After the **normalized-image** mixin definition, add a **DIV** selector.
 
-1. After the **normalized-image** mixin definition, add a **DIV** selector.
+10. Inside the **DIV** selector, add a **H1** nested selector.
 
-2. Inside the **DIV** selector, add a **H1** nested selector.
+11. Inside the **H1** selector, add the **normalized-text** mixin using the **@include** directive. 
 
-3. Inside the **H1** selector, add the **normalized-text** mixin using the **@include** directive. 
-
-4. After the **@include** directive, add the following properties:
+12. After the **@include** directive, add the following properties:
 
     - font-size: **45px**
     - line-height: **50px**
@@ -248,7 +244,7 @@ The main tasks for this exercise are as follows:
     - color: **#736454**
     - margin: **60px**
     
-5. After the **DIV** selector, add a **.main-title** selector with the following properties:
+13. After the **DIV** selector, add a **.main-title** selector with the following properties:
 
     - background-image: **url("/images/banner-1.jpg")**
     - width: **100%**
@@ -260,11 +256,11 @@ The main tasks for this exercise are as follows:
     - justify-content: **center**
     - align-items: **center**
     
-6. Inside the **.main-title** selector, add a nested **H1** selector.
+14. Inside the **.main-title** selector, add a nested **H1** selector.
 
-7. Inside the **H1** selector, add the **normalized-text** mixin using the **@include** directive. 
+15. Inside the **H1** selector, add the **normalized-text** mixin using the **@include** directive. 
 
-8. After the **@include** directive, add the following properties:
+16. After the **@include** directive, add the following properties:
 
     - color: **$highlights**
     - font-size: **50px**
@@ -272,11 +268,11 @@ The main tasks for this exercise are as follows:
     - font-weight: **bolder**
     - text-align: **center**
     
-9.  After the **H1** selector, add a **button** selector.
+17.  After the **H1** selector, add a **button** selector.
 
-10. Inside the **button** selector, add the **normalized-text** mixin using the **@include** directive. 
+18. Inside the **button** selector, add the **normalized-text** mixin using the **@include** directive. 
 
-11. After the **@include** directive, add the following properties:
+19. After the **@include** directive, add the following properties:
 
     - transition: **none**
     - color: **lighten(#ffffff,90%)**
@@ -291,14 +287,14 @@ The main tasks for this exercise are as follows:
     - font-weight: **bold**
     - background-color: **#736454**    
 
-12. After the **.main-title** selector, add a **.img-container** selector with the following properties:
+20. After the **.main-title** selector, add a **.img-container** selector with the following properties:
 
     - display: **flex**
     - flex-wrap: **wrap**
     - justify-content: **space-around**
     - align-items: **flex-end**  
     
-13. Inside the **.img-container** selector, add a nested **.item** selector with the following properties:
+21. Inside the **.img-container** selector, add a nested **.item** selector with the following properties:
     - color: **white**
     - width: **200px**
     - display: **flex**
@@ -306,34 +302,34 @@ The main tasks for this exercise are as follows:
     - justify-content: **space-between**
    
     
-14. Inside the **.item** selector, add a nested **h3** selector.
+22. Inside the **.item** selector, add a nested **h3** selector.
 
-15. Inside the **h3** selector, add the **normalized-text** mixin using the **@include** directive. 
+23. Inside the **h3** selector, add the **normalized-text** mixin using the **@include** directive. 
 
-16. After the **@include** directive, add the following properties:
+24. After the **@include** directive, add the following properties:
     - color: **#736454**
     - font-size: **20px**
 
-17. After the **h3** selector, add a **DIV** selector.  
+25. After the **h3** selector, add a **DIV** selector.  
 
-18. Inside the **DIV** selector, add a nested **img** selector. 
+26. Inside the **DIV** selector, add a nested **img** selector. 
 
-19. Inside the **img** selector, add the **normalized-image** mixin using the **@include** directive. 
+27. Inside the **img** selector, add the **normalized-image** mixin using the **@include** directive. 
  
-20. After the **DIV** selector, add a **DIV** selector.  
+28. After the **DIV** selector, add a **DIV** selector.  
 
-21. Inside the **DIV** selector, add a nested **p** selector. 
+29. Inside the **DIV** selector, add a nested **p** selector. 
 
-22. Inside the **p** selector, add the **normalized-text** mixin using the **@include** directive.
+30. Inside the **p** selector, add the **normalized-text** mixin using the **@include** directive.
 
-23. After the **@include** directive, add the following properties:
+31. After the **@include** directive, add the following properties:
     - color: **#736454**
     - font-size: **20px**
     - margin: **70px**
     
-24. After the **.img-container** selector, add a **.container** selector.
+32. After the **.img-container** selector, add a **.container** selector.
 
-25. Inside the **.container** selector, add a nested **.checkout** selector with the following properties:
+33. Inside the **.container** selector, add a nested **.checkout** selector with the following properties:
     - border: **1px solid #ccc**
     - box-shadow: **0 0 5px #ccc**
     - padding: **20px**
@@ -342,30 +338,30 @@ The main tasks for this exercise are as follows:
     - border-radius: **4px**
     - background-color: **#f9f9f9**
    
-26. Inside the **.checkout** selector, add a nested **.row justify-content-center intro-row** selector with the following properties:
+34. Inside the **.checkout** selector, add a nested **.row justify-content-center intro-row** selector with the following properties:
     - font-weight: **bold**
     
-27. After the **.container** selector, add a **.justify-content-center** selector with the following properties:
+35. After the **.container** selector, add a **.justify-content-center** selector with the following properties:
     -  justify-content: **center !important**
     -  align-items: **center**
 
-28. After the **.justify-content-center** selector, add a **nav** selector with the following properties:
+36. After the **.justify-content-center** selector, add a **nav** selector with the following properties:
     -  width: **450px**
     
-28. After the **nav** selector, add a **img** selector with the following properties:
+37. After the **nav** selector, add a **img** selector with the following properties:
     -  height: **35px**
     -  width: **35px**
     
-29. After the **img** selector, add a **.navbar-nav &gt; li** selector with the following properties:
+38. After the **img** selector, add a **.navbar-nav &gt; li** selector with the following properties:
     -  float: **left**
     -  position: **relative**
 
-29. After the **.navbar-nav &gt; li** selector, add a **.row** selector with the following properties:
+39. After the **.navbar-nav &gt; li** selector, add a **.row** selector with the following properties:
     -  margin: **10px**
 
-30. After the **.row** selector, add a **.imageDisplay** selector.
+40. After the **.row** selector, add a **.imageDisplay** selector.
 
-31. Inside the **imageDisplay** selector, add the **normalized-image** mixin using the **@include** directive.
+41. Inside the **imageDisplay** selector, add the **normalized-image** mixin using the **@include** directive.
 
 #### Task 1: Add gulp Sass task to compile bundle and minify
 
