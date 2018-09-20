@@ -117,7 +117,7 @@ The main tasks for this exercise are as follows:
 
 3. Before the **gulp.task** method call, assign the **vendorJsFileName** property of the **path** object the value of **"vendor.min.js"**.
 
-4. Call the **task** method of the **gulp** variable. 
+4. After the **gulp.task** method call, call the **task** method of the **gulp** variable. 
 
 5. Pass **"min-vendor:js"** and an **anonymous function** as parameters to the **task** function.
 
