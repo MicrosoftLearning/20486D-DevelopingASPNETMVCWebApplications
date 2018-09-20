@@ -397,6 +397,8 @@ The main tasks for this exercise are as follows:
 
 2. In the **Task Runner Explorer** window, run the **min:scss** task.
 
+      >**Note:** In **Solution Explorer**, under **wwwroot**, under **css**, a new css file has been added named **main.min.css**.
+
 3. Right-click **sass-watcher**, and then click **Run**.
 
 4. Right-click **js-watcher**, and then click **Run**.
