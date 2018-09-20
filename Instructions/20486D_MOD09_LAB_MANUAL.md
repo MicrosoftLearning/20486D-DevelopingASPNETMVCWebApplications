@@ -467,7 +467,7 @@ The main tasks for this exercise are as follows:
      > **Note:** In **Solution Explorer**, under **wwwroot**, under **lib**, a file named **vendor.min.js** was updated.
 
 
-#### Task 4: Link the layout to Bootstrap
+#### Task 3: Link the layout to Bootstrap
 
 1. In the **_Layout.cshtml** file, after the **TITLE** element, add a **SCRIPT** with the following information:
     - Src: **~/lib/vendor.min.js**
