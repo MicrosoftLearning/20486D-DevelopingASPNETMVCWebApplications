@@ -438,24 +438,21 @@ The main tasks for this exercise are as follows:
 
 4. In the **gulp.task** method call with the **"min-vendor:js"** parameter, in the **return** statement, replace the parameter from **paths.jqueryjs** to **paths.vendorJsFiles**.
 
+5. After the **destinationCssFolder** property assignment, assign the **bootstrapCss** property of the **path** object the value of **paths.nodeModules + "bootstrap/dist/css/bootstrap.css"**.
 
-#### Task 2: Add a new task to handle the bootstrap css
+6. Assign the **vendorCssFileName** property of the **path** object the value of **"vendor.min.css"**.
 
-1. After the **destinationCssFolder** property assignment, assign the **bootstrapCss** property of the **path** object the value of **paths.nodeModules + "bootstrap/dist/css/bootstrap.css"**.
+7. After the **gulp.task** method call with the **"min:scss"** parameter, call the **task** method of the **gulp** variable. Pass **"min-vendor:css** and an **anonymous function** as parameters to the **task** function.
 
-2. Assign the **vendorCssFileName** property of the **path** object the value of **"vendor.min.css"**.
+8. In the **anonymous function** code block, return the **gulp.src** function call result. Pass **paths.bootstrapCss** as a parameter to the **gulp.src** function.
 
-3. After the **gulp.task** method call with the **"min:scss"** parameter, call the **task** method of the **gulp** variable. Pass **"min-vendor:css** and an **anonymous function** as parameters to the **task** function.
+9. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorCssFileName)** as a parameter to the **pipe** function. 
 
-4. In the **anonymous function** code block, return the **gulp.src** function call result. Pass **paths.bootstrapCss** as a parameter to the **gulp.src** function.
+10. Chain a **pipe** function call to the **pipe** function call. Pass **cssmin()** as a parameter to the **pipe** function. 
 
-5. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorCssFileName)** as a parameter to the **pipe** function. 
+11. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the **pipe** function. 
 
-6. Chain a **pipe** function call to the **pipe** function call. Pass **cssmin()** as a parameter to the **pipe** function. 
-
-7. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the **pipe** function. 
-
-#### Task 3:  Run the task
+#### Task 2: Run the tasks
 
 1. Save all changes.
 
