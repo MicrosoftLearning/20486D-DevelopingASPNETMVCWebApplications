@@ -66,7 +66,7 @@ The main tasks for this exercise are as follows:
 
 8. Open the **package.json** file and view its content.
 
-      >**Note:** There are dependencies to the **gulp**, **gulp-concat**, **gulp-uglify**, **gulp-watch-sass**, **gulp-sass**, **gulp-cssmin**, **jquery**, **bootstrap**, and **popper.js** packages.
+      >**Note:** There are dependencies to the **gulp**, **gulp-concat**, **gulp-uglify**, **gulp-sass**, **gulp-cssmin**, **jquery**, **bootstrap**, and **popper.js** packages.
 
 #### Task 2: Write a task to copy a JavaScript file
 
