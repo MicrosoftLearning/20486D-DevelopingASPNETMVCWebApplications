@@ -4,19 +4,15 @@
 
 #### Scenario
 
-You have been asked to create a web-based Ice Cream application for your organization's customers, you want 
-to create a page showing all kinds of ice cream in stock, and a purchase page to the web application 
-Which will allow customers to purchase ice cream.
-
-You will style the application using Bootstrap and Sass files which will compile by the task runner named gulp.
+You have been asked to create a web-based ice cream application for your organization's customers. The application should have a page showing all kinds of ice creams in stock, and a purchase page which will allow customers to purchase ice cream. To style the application, you decided to use Bootstrap and Sass. You have decided to use gulp to compile, minify and bundle files.
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
-- Install gulp using Node.
-- write tasks to bundle and minify files.
-- Style the application using Saas and Bootstrap.
+- Install gulp using npm.
+- Write tasks using gulp.
+- Style the application using Sass and Bootstrap.
 
 #### Lab Setup
 
