@@ -371,7 +371,7 @@ The main tasks for this exercise are as follows:
 
 3. Before the first **gulp.task** method call, assign the **sassFiles** property of the **path** object the value of **"./Styles/*.scss"**.
 
-4. Assign the **compiledCssFileName** property of the **path** object the value of **""main.min.css"**.
+4. Assign the **compiledCssFileName** property of the **path** object the value of **"main.min.css"**.
 
 5. Assign the **destinationCssFolder** property of the **path** object the value of **paths.webroot + "css/"**.
 
