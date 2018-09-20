@@ -182,7 +182,7 @@ The main tasks for this exercise are as follows:
 
 10. Open the **script.min.js** file which is located under the **wwwroot/script** folder.
 
-      >**Note:** In the **script.min.js** file, the string **form-control-mistake** was replaced with **script.min.js**.
+      >**Note:** In the **script.min.js** file, the string **form-control-mistake** was replaced with **form-control**.
 
 >**Results**: After completing this exercise, you will be able to use **gulp** to copy, bundle and minify js files, furthermore add watcher tasks.
 
