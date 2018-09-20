@@ -42,7 +42,7 @@ The main tasks for this exercise are as follows:
 
 4. Write a task to minify a JavaScript file.
 
-5. Write a task to bundle and minify an existing file js file.
+5. Write a task to bundle and minify all JavaScript files in a folder.
 
 6. Add a watcher task.
 
@@ -130,7 +130,7 @@ The main tasks for this exercise are as follows:
 9. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationJsFolder)** as a parameter to the pipe function. 
 
 
-#### Task 5: Write a task to bundle and minify an existing JavaScript file
+#### Task 5: Write a task to bundle and minify all JavaScript files in a folder
 
 1. Before the **gulp.task** method call, assign the **JsFiles** property of the **path** object the value of **"./Scripts/*.js"**.
 
