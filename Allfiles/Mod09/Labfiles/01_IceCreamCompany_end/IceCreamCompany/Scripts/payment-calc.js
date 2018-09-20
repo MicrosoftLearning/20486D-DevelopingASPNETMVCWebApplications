@@ -1,7 +1,7 @@
-﻿$(function () {
+﻿$(function() {
     UnableToPurchase();
 
-    $('.form-control').click(function () {
+    $('.form-control').click(function() {
         var hashtable = {};
         hashtable['Select'] = '0';
         hashtable['Vanilla Ice Cream with Caramel Ripple and Almonds'] = '5';
@@ -20,7 +20,7 @@
         var iceCreamImage = hashtableImages[iceCreamFlavor];
         var calc = (iceCreanQuantity * priceperweight);
 
-        if (calc && iceCreamImage != 0) {
+        if (calc && iceCreamImage !== 0) {
             $('#totalAmount').html(calc + '$');
             var src = '/images/' + iceCreamImage;
             $("#iceCreamImage").attr("src", src);
