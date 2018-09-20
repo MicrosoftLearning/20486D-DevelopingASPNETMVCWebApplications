@@ -375,7 +375,7 @@ The main tasks for this exercise are as follows:
 
 5. Assign the **destinationCssFolder** property of the **path** object the value of **paths.webroot + "css/"**.
 
-6. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:scss** and an **anonymous function** as parameters to the **task** function.
+6. After the declaration of the **min:js** task, call the **task** method of the **gulp** variable. Pass **"min:scss** and an **anonymous function** as parameters to the **task** function.
 
 7. In the **anonymous function** code block, return the **gulp.src** function call result. Pass **paths.sassFiles** as a parameter to the **gulp.src** function.
 
