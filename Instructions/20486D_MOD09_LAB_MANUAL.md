@@ -825,7 +825,7 @@ The main tasks for this exercise are as follows:
 
 13. Close **Microsoft Visual Studio**.
 
->**Results** : After completing this exercise, you should have created a ice cream company application in which users can view ice cream details, and buy some as well.
+>**Results**: After completing this exercise, you should have created a ice cream company application in which users can view ice cream details, and buy some as well.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
