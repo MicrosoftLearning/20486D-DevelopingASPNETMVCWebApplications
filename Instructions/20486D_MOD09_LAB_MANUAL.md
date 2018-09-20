@@ -391,13 +391,11 @@ The main tasks for this exercise are as follows:
 
 13. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Styles/*.scss"** and **["min:scss"]** as parameters to the **gulp.watch** function.
 
-#### Task 3: Run a task
+#### Task 3: Run the tasks
 
 1. Save all changes.
 
-    > **Note**: In **Task Runner Explorer**, if the **Tasks** list is not updated click **Refresh**.
-
-2. In the **Task Runner Explorer** window, right-click **min:scss**, and then click **Run**.
+2. In the **Task Runner Explorer** window, run the **min:scss** task.
 
 3. Right-click **sass-watcher**, and then click **Run**.
 
