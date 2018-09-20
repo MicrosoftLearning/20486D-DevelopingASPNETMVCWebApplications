@@ -470,11 +470,11 @@ The main tasks for this exercise are as follows:
     - Src: **~/script/script.min.js**
     
 3. After the **SCRIPT** element, add a **LINK** with the following information:
-    - Href: **~/css/main.min.css**
+    - Href: **~/css/vendor.min.css**
     - rel: **stylesheet**
     
 4. After the **LINK** element, add a **LINK** with the following information:
-    - Href: **~/css/vendor.min.css**
+    - Href: **~/css/main.min.css**
     - rel: **stylesheet**
 
 5. In the **_Layout.cshtml** file, before the **DIV** element with @RenderBody() content, add a **DIV**.
