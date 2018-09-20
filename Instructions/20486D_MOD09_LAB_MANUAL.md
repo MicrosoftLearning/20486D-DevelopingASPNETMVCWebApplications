@@ -194,42 +194,17 @@ In this exercise, you will first add **gulp** task to bundle and minify **Saas**
 
 The main tasks for this exercise are as follows:
 
-1. Add gulp Sass task to compile bundle and minify.
+1. Add a new Sass file to the project.
 
-2. Add a new Sass file to the project.
+2. Add Sass variables mixin and functions.
 
-3. Add Sass variables mixin and functions.
+3. Add a Sass nesting styles.
 
-4. Add a Sass nesting styles.
+4. Add gulp Sass task to compile bundle and minify.
 
 5. Run the task.
 
-#### Task 1: Add gulp Sass task to compile bundle and minify
-
-1. In the **gulpfile.js**, after the **watch** variable assigment, add a variable named **sass** with the value of **require('gulp-sass')**.
-
-2. Add a variable named **cssmin** with the value of **require('gulp-cssmin')**.
-
-3. Before the first **gulp.task** method call, assign the **sassFiles** property of the **path** object the value of **"./Styles/*.scss"**.
-
-4. Assign the **compiledCssFileName** property of the **path** object the value of **""main.min.css"**.
-
-5. Assign the **destinationCssFolder** property of the **path** object the value of **paths.webroot + "css/"**.
-
-6. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:scss** and an **anonymous function** as parameters to the **task** function.
-
-7. In the **anonymous function** code block, return the **gulp.src** function call result. Pass **paths.sassFiles** as a parameter to the **gulp.src** function.
-
-8. Chain a **pipe** function call to the **src** function call. Pass **sass().on('error', sass.logError)** as a parameter to the **pipe** function. 
-
-9. Chain a **pipe** function call to the **pipe** function call. Pass **concat(paths.compiledCssFileName)** as a parameter to the pipe function. 
-
-10. Chain a **pipe** function call to the **pipe** function call. Pass **cssmin()** as a parameter to the pipe function. 
-
-11. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the pipe function. 
-
-
-#### Task 2: Add a new Sass file to the project
+#### Task 1: Add a new Sass file to the project
 
 1. Create a new folder with the following information:
 
@@ -240,8 +215,7 @@ The main tasks for this exercise are as follows:
     - Folder: **Styles**
     - Name: **main.scss**
  
-
-#### Task 3: Add Sass variables mixin and functions
+#### Task 2: Add Sass variables mixin and functions
 
 1. Delete the contents of the **main.scss** file.
 
@@ -261,7 +235,7 @@ The main tasks for this exercise are as follows:
     - width: **100%**
     - height: **auto**
 
-#### Task 4: Add a Sass nesting styles
+#### Task 3: Add a Sass nesting styles
 
 1. After the **normalized-image** mixin definition, add a **DIV** selector.
 
@@ -396,6 +370,30 @@ The main tasks for this exercise are as follows:
 30. After the **.row** selector, add a **.imageDisplay** selector.
 
 31. Inside the **imageDisplay** selector, add the **normalized-image** mixin using the **@include** directive.
+
+#### Task 1: Add gulp Sass task to compile bundle and minify
+
+1. In the **gulpfile.js**, after the **watch** variable assigment, add a variable named **sass** with the value of **require('gulp-sass')**.
+
+2. Add a variable named **cssmin** with the value of **require('gulp-cssmin')**.
+
+3. Before the first **gulp.task** method call, assign the **sassFiles** property of the **path** object the value of **"./Styles/*.scss"**.
+
+4. Assign the **compiledCssFileName** property of the **path** object the value of **""main.min.css"**.
+
+5. Assign the **destinationCssFolder** property of the **path** object the value of **paths.webroot + "css/"**.
+
+6. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:scss** and an **anonymous function** as parameters to the **task** function.
+
+7. In the **anonymous function** code block, return the **gulp.src** function call result. Pass **paths.sassFiles** as a parameter to the **gulp.src** function.
+
+8. Chain a **pipe** function call to the **src** function call. Pass **sass().on('error', sass.logError)** as a parameter to the **pipe** function. 
+
+9. Chain a **pipe** function call to the **pipe** function call. Pass **concat(paths.compiledCssFileName)** as a parameter to the pipe function. 
+
+10. Chain a **pipe** function call to the **pipe** function call. Pass **cssmin()** as a parameter to the pipe function. 
+
+11. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the pipe function. 
 
 #### Task 5: Run the task
 
