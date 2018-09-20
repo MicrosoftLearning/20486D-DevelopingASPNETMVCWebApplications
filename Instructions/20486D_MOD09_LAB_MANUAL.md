@@ -40,7 +40,7 @@ The main tasks for this exercise are as follows:
 
 3. Run the task.
 
-4. Update the task to bundle and minify js file.
+4. Update the task to minify the JavaScript file.
 
 5. Write a task to bundle and minify an existing file js file.
 
@@ -109,7 +109,7 @@ The main tasks for this exercise are as follows:
 3. Run the **copy-js-file** task.
     >**Note:** In **Solution Explorer**, under **wwwroot**, a new folder has been added named **lib** with a JavaScript file named **jquery.js**
 
-#### Task 4:  Update the task to bundle and minify a JavaScript file
+#### Task 4:  Update the task to minify the JavaScript file
 
 1. In the **gulpfile.js**, after the **gulp** variable, add a variable named **concat** with the value of **require('gulp-concat')**.
 
