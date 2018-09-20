@@ -132,13 +132,13 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Write a task to bundle and minify all JavaScript files in a folder
 
-1. Before the **gulp.task** method call, assign the **JsFiles** property of the **path** object the value of **"./Scripts/*.js"**.
+1. Before the first **gulp.task** method call, assign the **JsFiles** property of the **path** object the value of **"./Scripts/*.js"**.
 
 2. Assign the **JsFileName** property of the **path** object, the value of **"script.min.js"**.
 
 3. Assign the **destinationExistingJsFolder** property of the **path** object the value of **paths.webroot + "script/"**.
 
-4. After the **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:js"** and an **anonymous function** as parameters to the **task** function.
+4. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:js"** and an **anonymous function** as parameters to the **task** function.
 
 5. In the **anonymous function** code block, return the **gulp.src(paths.JsFiles)** function call result. 
 
