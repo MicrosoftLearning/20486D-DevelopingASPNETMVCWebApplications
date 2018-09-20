@@ -399,11 +399,7 @@ The main tasks for this exercise are as follows:
 
       >**Note:** In **Solution Explorer**, under **wwwroot**, under **css**, a new css file has been added named **main.min.css**.
 
-3. Right-click **sass-watcher**, and then click **Run**.
-
-4. Right-click **js-watcher**, and then click **Run**.
-
-    > **Note**: In **Solution Explorer**, under **wwwroot**, under **css**, a new css file has been added named **main.min.css**.
+3. Run the **sass-watcher** task.
 
 >**Results** : After completing this exercise, you will be able to use gulp Sass task to compile bundle and minify Sass file to css.
 
