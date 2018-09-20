@@ -436,7 +436,7 @@ The main tasks for this exercise are as follows:
 
 3. Assign the **vendorJsFiles** property of the **path** object the value of **[paths.jqueryjs, paths.popperjs, paths.bootstrapjs]**.
 
-4. In the **gulp.task** method call with the **"min-vendor:js"** parameter, in the **return** statement, replace the **paths.jqueryjs** parameter with **paths.vendorJsFiles** parameter.
+4. In the **gulp.task** method call with the **"min-vendor:js"** parameter, in the **return** statement, replace the parameter from **paths.jqueryjs** to **paths.vendorJsFiles**.
 
 
 #### Task 2: Add a new task to handle the bootstrap css
