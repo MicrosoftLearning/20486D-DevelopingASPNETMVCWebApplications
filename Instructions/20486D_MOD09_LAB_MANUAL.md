@@ -363,7 +363,7 @@ The main tasks for this exercise are as follows:
 
 41. Inside the **imageDisplay** selector, add the **normalized-image** mixin using the **@include** directive.
 
-#### Task 1: Add gulp Sass task to compile bundle and minify
+#### Task 2: Add gulp tasks to handle Sass files
 
 1. In the **gulpfile.js**, after the **watch** variable assigment, add a variable named **sass** with the value of **require('gulp-sass')**.
 
