@@ -12,12 +12,11 @@ var paths = {
 paths.jqueryjs = paths.nodeModules + "jquery/dist/jquery.js";
 paths.popperjs = paths.nodeModules + "popper.js/dist/umd/popper.js";
 paths.bootstrapjs = paths.nodeModules + "bootstrap/dist/js/bootstrap.js";
-paths.vendorJsFiles = [paths.jqueryjs, paths.popperjs, paths.bootstrapjs];
-paths.destinationJsFolder = paths.webroot + "lib/";
-paths.vendorJsFileName = "vendor.min.js";
-paths.JsFiles = "./Scripts/*.js";
-paths.JsFileName = "script.min.js";
-paths.destinationExistingJsFolder = paths.webroot + "script/";
+paths.vendorjs = [paths.jqueryjs, paths.popperjs, paths.bootstrapjs];
+paths.destinationjsFolder = paths.webroot + "scripts/";
+paths.vendorjsFileName = "vendor.min.js";
+paths.jsFiles = "./Scripts/*.js";
+paths.jsFileName = "script.min.js";
 paths.sassFiles = "./Styles/*.scss";
 paths.compiledCssFileName = "main.min.css";
 paths.destinationCssFolder = paths.webroot + "css/";
@@ -26,21 +25,21 @@ paths.vendorCssFileName = "vendor.min.css";
  
 gulp.task("copy-js-file", function() {
     return gulp.src(paths.jqueryjs)
-        .pipe(gulp.dest(paths.destinationJsFolder));
+        .pipe(gulp.dest(paths.destinationjsFolder));
 });
 
 gulp.task("min-vendor:js", function() {
-    return gulp.src(paths.vendorJsFiles)
-        .pipe(concat(paths.vendorJsFileName))
+    return gulp.src(paths.vendorjs)
+        .pipe(concat(paths.vendorjsFileName))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.destinationJsFolder));
+        .pipe(gulp.dest(paths.destinationjsFolder));
 });
 
 gulp.task("min:js", function() {
-    return gulp.src(paths.JsFiles)
-        .pipe(concat(paths.JsFileName))
+    return gulp.src(paths.jsFiles)
+        .pipe(concat(paths.jsFileName))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.destinationExistingJsFolder));
+        .pipe(gulp.dest(paths.destinationjsFolder));
 });
 
 gulp.task("min:scss", function() {

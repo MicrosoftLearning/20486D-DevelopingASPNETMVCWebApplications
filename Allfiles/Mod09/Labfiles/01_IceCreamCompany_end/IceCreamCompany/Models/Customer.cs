@@ -22,12 +22,11 @@ namespace IceCreamCompany.Models
         [Required(ErrorMessage = "Please enter your email address")]
         public string Email { get; set; }
 
-        [Display(Name = "Phone Number"), DataType(DataType.PhoneNumber)]
+        [Display(Name = "Phone"), DataType(DataType.PhoneNumber)]
         public int PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Please enter your adress")]
         public string Address { get; set; }
-
 
         public virtual List<IceCreamFlavorsCustomers> IceCreamFlavors { get; set; }
     }

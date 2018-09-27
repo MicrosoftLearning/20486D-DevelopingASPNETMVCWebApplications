@@ -62,8 +62,8 @@ The main tasks for this exercise are as follows:
 
 8. Open the **package.json** file and view its content.
 
-      >**Note:** There are dependencies to the **gulp**, **gulp-concat**, **gulp-uglify**, **gulp-sass**, **gulp-cssmin**, **jquery**, **bootstrap**, and **popper.js** packages.
-
+      >**Note:** There are dependencies to the **gulp**, **gulp-concat**, **gulp-cssmin**, **gulp-sass**, **gulp-uglify**, **bootstrap**, **hoek**, **jquery**, **lodash**, and **popper.js** packages.
+      
 #### Task 2: Write a task to copy a JavaScript file
 
 1. Add a **JavaScript** **File** with the following information:
@@ -82,7 +82,7 @@ The main tasks for this exercise are as follows:
 
 5. Assign the **jqueryjs** property of the **paths** variable the value of **paths.nodeModules + "jquery/dist/jquery.js"**.
 
-6. Assign the **destinationJsFolder** property of the **paths** variable the value of **paths.webroot + "lib/"**.
+6. Assign the **destinationjsFolder** property of the **paths** variable the value of **paths.webroot + "scripts/"**.
 
 7. Call the **task** method of the **gulp** variable. 
 
@@ -92,7 +92,7 @@ The main tasks for this exercise are as follows:
 
 10. Chain a **pipe** function call to the **src** function call. 
 
-11. Pass **gulp.dest(paths.destinationJsFolder)** as a parameter to the pipe function. 
+11. Pass **gulp.dest(paths.destinationjsFolder)** as a parameter to the pipe function. 
 
 #### Task 3: Run the task
 
@@ -103,7 +103,7 @@ The main tasks for this exercise are as follows:
     >**Note:** If the **Tasks** list does not contain a task named **copy-js-file**, click **Refresh**.
 
 3. Run the **copy-js-file** task.
-    >**Note:** In **Solution Explorer**, under **wwwroot**, a new folder has been added named **lib** with a JavaScript file named **jquery.js**
+    >**Note:** In **Solution Explorer**, under **wwwroot**, a new folder has been added named **scripts** with a JavaScript file named **jquery.js**
 
 #### Task 4:  Write a task to minify a JavaScript file
 
@@ -111,7 +111,7 @@ The main tasks for this exercise are as follows:
 
 2. Add a variable named **uglify** with the value of **require('gulp-uglify')**.
 
-3. Before the **gulp.task** method call, assign the **vendorJsFileName** property of the **path** object the value of **"vendor.min.js"**.
+3. Before the **gulp.task** method call, assign the **vendorjsFileName** property of the **path** object the value of **"vendor.min.js"**.
 
 4. After the **gulp.task** method call, call the **task** method of the **gulp** variable. 
 
@@ -119,30 +119,28 @@ The main tasks for this exercise are as follows:
 
 6. In the **anonymous function** code block, return the **gulp.src(paths.jqueryjs)** function call result. 
 
-7. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorJsFileName)** as a parameter to the pipe function. 
+7. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorjsFileName)** as a parameter to the pipe function. 
 
 8. Chain a **pipe** function call to the **pipe** function call. Pass **uglify()** as a parameter to the pipe function. 
 
-9. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationJsFolder)** as a parameter to the pipe function. 
+9. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationjsFolder)** as a parameter to the pipe function. 
 
 
 #### Task 5: Write a task to bundle and minify all JavaScript files in a folder
 
-1. Before the first **gulp.task** method call, assign the **JsFiles** property of the **path** object the value of **"./Scripts/*.js"**.
+1. Before the first **gulp.task** method call, assign the **jsFiles** property of the **path** object the value of **"./Scripts/*.js"**.
 
-2. Assign the **JsFileName** property of the **path** object, the value of **"script.min.js"**.
+2. Assign the **jsFileName** property of the **path** object, the value of **"script.min.js"**.
 
-3. Assign the **destinationExistingJsFolder** property of the **path** object the value of **paths.webroot + "script/"**.
+3. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:js"** and an **anonymous function** as parameters to the **task** function.
 
-4. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:js"** and an **anonymous function** as parameters to the **task** function.
+4. In the **anonymous function** code block, return the **gulp.src(paths.jsFiles)** function call result. 
 
-5. In the **anonymous function** code block, return the **gulp.src(paths.JsFiles)** function call result. 
+5. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.jsFileName)** as a parameter to the pipe function. 
 
-6. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.JsFileName)** as a parameter to the pipe function. 
+6. Chain a **pipe** function call to the **pipe** function call. Pass **uglify()** as a parameter to the pipe function. 
 
-7. Chain a **pipe** function call to the **pipe** function call. Pass **uglify()** as a parameter to the pipe function. 
-
-8. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationExistingJsFolder)** as a parameter to the pipe function. 
+7. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationjsFolder)** as a parameter to the pipe function. 
 
 #### Task 6: Add a watcher task
 
@@ -424,9 +422,9 @@ The main tasks for this exercise are as follows:
 
 2. Assign the **bootstrapjs** property of the **path** object the value of **paths.nodeModules + "bootstrap/dist/js/bootstrap.js"**.
 
-3. Assign the **vendorJsFiles** property of the **path** object the value of **[paths.jqueryjs, paths.popperjs, paths.bootstrapjs]**.
+3. Assign the **vendorjs** property of the **path** object the value of **[paths.jqueryjs, paths.popperjs, paths.bootstrapjs]**.
 
-4. In the **gulp.task** method call with the **"min-vendor:js"** parameter, in the **return** statement, replace the parameter from **paths.jqueryjs** to **paths.vendorJsFiles**.
+4. In the **gulp.task** method call with the **"min-vendor:js"** parameter, in the **return** statement, replace the parameter from **paths.jqueryjs** to **paths.vendorjs**.
 
 5. After the **destinationCssFolder** property assignment, assign the **bootstrapCss** property of the **path** object the value of **paths.nodeModules + "bootstrap/dist/css/bootstrap.css"**.
 
@@ -454,13 +452,13 @@ The main tasks for this exercise are as follows:
 
 4. In the **Microsoft Visual Studio** dialog box, click **Yes**.
 
-     > **Note:** In **Solution Explorer**, under **wwwroot**, under **lib**, a file named **vendor.min.js** was updated.
+     > **Note:** In **Solution Explorer**, under **wwwroot**, under **scripts**, a file named **vendor.min.js** was updated.
 
 
 #### Task 3: Style the application using Bootstrap
 
 1. In the **_Layout.cshtml** file, after the **TITLE** element, add a **SCRIPT** with the following information:
-    - Src: **~/lib/vendor.min.js**
+    - Src: **~/scripts/vendor.min.js**
     
 2. After the **SCRIPT** element, add a **SCRIPT** with the following information:
     - Src: **~/script/script.min.js**
