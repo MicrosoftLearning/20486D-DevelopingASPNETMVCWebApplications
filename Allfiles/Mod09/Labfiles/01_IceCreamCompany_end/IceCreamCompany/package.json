@@ -6,7 +6,6 @@
     "gulp": "3.9.1",
     "gulp-concat": "2.6.1",
     "gulp-uglify": "3.0.1",
-    "gulp-watch-sass": "1.4.1",
     "gulp-sass": "4.0.1",
     "gulp-cssmin": "0.2.0"
   },

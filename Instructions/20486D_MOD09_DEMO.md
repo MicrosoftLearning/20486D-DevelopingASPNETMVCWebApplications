@@ -235,7 +235,7 @@
 
 # Lesson 2: Using Task Runners
 
-### Demonstration: How to Use gulp to Compile SASS File to CSS
+### Demonstration: How to Use gulp to Compile Sass to CSS
 
 #### Preparation Steps 
 
@@ -244,7 +244,7 @@
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin\GulpExample**, copy the address in the address bar.
+1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin\GulpExample**, and then copy the address in the address bar.
 
 2. Go to **Start**, and then type **cmd**.
 
@@ -254,7 +254,7 @@
 
 5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
-       cd  {copied folder path}
+       cd {copied folder path}
 ```
 
 >**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
@@ -267,29 +267,31 @@
 
 7. Close the window.
 
-8. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin** and then double-click **GulpExample.sln**.
+8. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin**, and then double-click **GulpExample.sln**.
 
 9. In the **GulpExample - Microsoft Visual Studio** window, on the **TOOLS** menu, click **Options**.
 
 10. In the **Options** dialog box, in the **Search Options** text box, type **Web Package Management**, and then press Enter.
 
-11. In the **Locations of external tools** box, in the **Options** dialog box, select **$(PATH)**, press the **Ap arrow** button until  **$(PATH)** is at the top of the list, and then click **OK**.
+11. In the **Locations of external tools** list box, select **$(PATH)**, press the **Ap arrow** button until **$(PATH)** is at the top of the list, and then click **OK**.
 
 12. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser displays the **Index.cshtml** view without css.
+      >**Note:** The browser displays a page which is not designed by a CSS.
 
 13. In **Microsoft Edge**, click **Close**.
 
 14. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **package.json**.
 
-15. Examine the **package.json** code window.
+15. In the **package.json** code window, examine the code.
 
-      >**Note:** In **Solution Explorer**, under **Depenndencies**, a new folder added named **npm** with **gulp** and **gulp-sass** packages.
+      >**Note:** The **gulp** and **gulp-sass** packages appear in the **devDependencies** section.
 
 16. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **PhotoBook**, and then click **Index.cshtml**.
 
-17. In the **Index.cshtml** code window, examine the code, and ensure that there are no links to **css** files.
+17. In the **Index.cshtml** code window, examine the code. 
+
+      >**Note:** Currently there are no links to **CSS** files.
 
 18. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Folder**.
 
@@ -364,7 +366,7 @@
        var sass = require('gulp-sass');
 
 
-       gulp.task("sass", function () {
+       gulp.task("sass", function() {
            return gulp.src('Styles/main.scss')
                .pipe(sass())
                .pipe(gulp.dest('wwwroot/css'));
@@ -374,11 +376,11 @@
 
 32. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **gulpfile.js**, and then click **Task Runner Explorer**.
 
-      >**Note:** In **Task Runner Explorer**, if the **Tasks** list is not updated click **Refresh**.
+      >**Note:** If the **sass** task doesn't appear in the **Tasks** list click **Refresh**.
 
 33. In the **Task Runner Explorer** pane, under **Tasks**, right-click **sass**, and then click **Run**.
 
-      >**Note:** In Solution Explorer, under **wwwroot**, a new folder has been added named **css** with compiled SASS File to CSS named **main.css**.
+      >**Note:** In Solution Explorer, under **wwwroot**, a new folder has been added named **css** which contains a CSS file named **main.css**.
 
 34. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **PhotoBook**, click **Index.cshtml**.
 
@@ -394,7 +396,7 @@
 
 38. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser displays the **Index.cshtml** view with **css** style.
+      >**Note:** The browser displays a page which is designed by a CSS.
 
 39. In **Microsoft Edge**, click **Close**.
 
@@ -411,7 +413,7 @@
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod09\DemocodeDemocode\03_GridExample_begin\GridExample**, copy the address in the address bar.
+1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\03_GridExample_begin\GridExample**, and then copy the address in the address bar.
 
 2. Go to **Start**, and then type **cmd**.
 
@@ -421,7 +423,7 @@
 
 5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
-       cd  {copied folder path}
+       cd {copied folder path}
 ```
 
 >**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
@@ -523,10 +525,10 @@
            </div>
        </div>
        <div class="col-3">
-                @Html.DisplayFor(model => item.GamesQuantity)
+           @Html.DisplayFor(model => item.GamesQuantity)
        </div>
        <div class="col-3">
-                @Html.DisplayFor(model => item.FinalScore)
+           @Html.DisplayFor(model => item.FinalScore)
        </div>  
 ```
 
@@ -541,7 +543,7 @@
 
 23. In the **GridExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser displays the **Index.cshtml** view with **Bootstrap grid system**.
+      >**Note:** The browser displays a page which is designed using the **Bootstrap grid system**.
 
 24. In **Microsoft Edge**, click **Close**.
 
