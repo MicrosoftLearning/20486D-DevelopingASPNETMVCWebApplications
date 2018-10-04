@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Underwater.Data;
 
 namespace Underwater.Migrations
 {
     [DbContext(typeof(UnderwaterContext))]
-    partial class UnderwaterContextModelSnapshot : ModelSnapshot
+    [Migration("20181004052649_AddFishImageURL")]
+    partial class AddFishImageURL
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

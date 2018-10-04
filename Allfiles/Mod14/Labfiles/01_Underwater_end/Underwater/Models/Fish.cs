@@ -32,6 +32,8 @@ namespace Underwater.Models
 
         public string ImageMimeType { get; set; }
 
+        public string ImageURL { get; set; }
+
         [Required(ErrorMessage = "Please select an aquarium")]
         public int AquariumId { get; set; }
 
