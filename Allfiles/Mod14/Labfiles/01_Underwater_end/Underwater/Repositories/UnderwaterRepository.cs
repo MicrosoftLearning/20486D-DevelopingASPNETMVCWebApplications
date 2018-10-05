@@ -82,17 +82,6 @@ namespace Underwater.Repositories
         private async Task<string> UploadImageAsync(IFormFile photo)
         {
 
-            if (await _container.CreateIfNotExistsAsync())
-            {
-                await _container.SetPermissionsAsync(
-                    new BlobContainerPermissions
-                    {
-                        PublicAccess = BlobContainerPublicAccessType.Blob
-                    }
-                    );
-            }
-
-
             CloudBlockBlob blob = _container.GetBlockBlobReference(photo.FileName);
 
             await blob.UploadFromStreamAsync(photo.OpenReadStream());

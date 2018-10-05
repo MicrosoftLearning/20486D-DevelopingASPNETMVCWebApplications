@@ -153,6 +153,129 @@ The main tasks for this exercise are as follows:
 12. Open **Solutions Explorer**, right click **Underwater** and click **Publish**.
 
 
+### Exercise 2: Upload the Image to Azure Blob Storage
+
+In this exercise, you will modify the web application you created, to start storing the images in Azure Blob Storage. The images will also be displayed from the storage using the URL generated for each image. The image URL will be stored in the database. For this you will run migrations. You will then create an Azure Storage Account in Microsoft Azure. You will then create a container in the storage account. You will then configure your application to use the Azure Storage Account. You will then change the code to . After that you will deploy your application to Microsoft Azure. 
+
+The main tasks for this exercise are as follows:
+
+1.  Create a blob storage account
+
+2.	Prepare the application for working with Azure Storage.
+
+3.	Write the code to upload an image.
+
+4.	Deploy and Run the application in Microsoft Azure
+
+
+#### Task 1:    Create a blob storage account
+
+1. Open **Microsft Edge**
+
+2. In **Microsoft Edge**, in the address bar type **http://portal.azure.com**, and then press Enter.
+
+3. Sign-in, and then navigate to **Storage Accounts**.
+
+4. Create a storage account in **Storage Account** by providing all the necessary details.
+
+5. After creation of the storage account, navigate to **Blobs** in the storage account page.
+
+6. Create a container by providing the necessary information.
+
+
+#### Task 2:    Prepare the application for working with Azure Storage.
+
+1. In **Underwater** application, in Microsoft Visual Studio 2017, add **Connected Services** to be project.
+
+2. While adding **Connected Services**, choose **Cloud Storage with Azure Storage**, and then choose the storage account created in the step above.
+    >**Note:** You might have to sign in to Microsoft Azure.
+
+3. In **Underwater** application, in **Solution Explorer**, go to **appsettings.json**
+
+4. To **appsettings.json**, add a new section **ContainerSetttings**, and to this section add **ContainerName** key with value being name of container created in previous section.
+
+
+#### Task 3:	Write the code to upload an image.
+
+1. In the **Underwater** application, in the **Fish** class, add a new property with the following information
+    - Scope: **public**
+    - Name: **ImageURL**
+    - Type: **string**
+    - Access: **Read and write**
+
+2. In the **Underwater** application, in the **UnderwaterRepository** class, modify the constructor to do the following:
+    - Accept Configuration as input
+    - Using the configuration, get connection string for AzureStorageConnection.
+    - Using the configuration, get container name.
+
+2. In the **Underwater** application, in the **UnderwaterRepository** class, add a member variable with following information
+    - Scope: **private**
+    - Name: **_container**
+    - Type: **CloudBlobContainer**
+
+3. In the **Underwater** application, in the **UnderwaterRepository** class, add the following functionality to the constructor
+    - Obtain an instance of **CloudStorageAccount** by invoking it's **parse** method.
+    - Using the **CloudStorageAccount** instance, create a **CloudBlobClient**
+    - Using the **CloudBlobClient**, get a reference to the **Container** that was created in the first task, and assign it to member variable **_container**.
+
+4.  In the **Underwater** application, in the **UnderwaterRepository** class, add a method **UploadImageAsync** with following details
+    - Input parameter type: **IFormFile**
+    - Scope: **private**
+    - Additional qualifier: **async**
+    - Returns: **Task<string>**
+
+5.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **UploadImageAsync** , using the **_container** member variable, invoke **GetBlockBlobReference** passing the **FileName** of input parameter **IFormFile**, and store the result in a variable of type **CloudBlockBlob**.
+
+6.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **UploadImageAsync** , using the **CloudBlockBlob** variable, invoke **UploadFromStreamAsync**. Pass the read stream of the input parameter **IFormFile** to this method.
+
+7. After completion of the upload stream, return the **Uri** property of the **CloudBlockBlob** variable.
+
+
+8.  In the **Underwater** application, in the **UnderwaterRepository** class, add a method **DeleteImageAsync** , with following details:
+    - Input parameter type: **string**
+    - Scope: **private**
+    - Additional qualifier: **async**
+    - Returns: **Task<bool>**
+
+9.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **DeleteImageAsync** , using the **_container** member variable, invoke **GetBlockBlobReference** passing the **photoFileName** input parameter , and store the result in a variable of type **CloudBlockBlob**.
+
+10.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **UploadImageAsync** , using the **CloudBlockBlob** variable, invoke **DeleteAsync**. 
+
+
+11.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **AddFish(Fish fish)**, in the **IF** block, call the **UploadImageAsync** method, wait for its completion and store the result, in ImageURL property of Fish object.
+
+
+12.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **RemoveFish(int it)**, after fetching **fish** instance using the **id**, add an **IF** block, to check if **ImageURL** of the fish instance is not null and if not null, invoke **DeleteImageAsync** method passing the **ImageName**. 
+
+
+13. In the **Underwater** application, in the **Edit.cshtml**, change image display in the following way:
+    - If ImageURL is not present, fetch image URL by calling GetImage action.
+    - If ImageURL is present, set the src of the image to ImageURL.
+
+14. In the **Underwater** application, in the **Eelete.cshtml**, change image display in the following way:
+    - If ImageURL is not present, fetch image URL by calling GetImage action.
+    - If ImageURL is present, set the src of the image to ImageURL.
+
+15. In the **Underwater** application, in the **Index.cshtml**, change image display in the following way:
+    - If ImageURL is not present, fetch image URL by calling GetImage action.
+    - If ImageURL is present, set the src of the image to ImageURL.
+
+16. In the **Underwater** application, in the **Details.cshtml**, change image display in the following way:
+    - If ImageURL is not present, fetch image URL by calling GetImage action.
+    - If ImageURL is present, set the src of the image to ImageURL.
+
+17. Save all the changes.
+
+18. Run **Add-Migration** for the ImageURL property.
+
+
+#### Task 4:	Deploy and Run the application in Microsoft Azure
+
+1. In Microsoft Visual Studio 2017, open **Solutions Explorer**, right click **Underwater** and click **Publish**
+
+2. In **Microsoft Edge**, explore the application by adding, editing and deleting a fish.
+
+
 
 
 ©2018 Microsoft Corporation. All rights reserved.
