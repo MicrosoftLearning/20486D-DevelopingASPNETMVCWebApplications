@@ -14,6 +14,7 @@ namespace ElectricStore.Data
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<MenuCategory> menuCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,15 +31,20 @@ namespace ElectricStore.Data
                 .WithMany(p => p.CustomerProducts)
                 .HasForeignKey(cp => cp.CustomerId);
 
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.MenuCategory)
+                .WithMany(c => c.Products);
+
             modelBuilder.Entity<Product>().HasData(
                 new Product
                 {
                     Id = 1,
                     ProductName = "TV",
-                    Description = "Smart TV 49",
+                    Description = "Smart TV 49 Inch",
                     Price = 850,
                     ImageMimeType = "image/jpeg",
-                    PhotoFileName = "tv.jpg"
+                    PhotoFileName = "tv.jpg",
+                    CategoryId = 1
                 },
                 new Product
                 {
@@ -47,7 +53,8 @@ namespace ElectricStore.Data
                     Description = "Coffee maker",
                     Price = 200,
                     ImageMimeType = "image/jpeg",
-                    PhotoFileName = "coffee-machine.jpg"
+                    PhotoFileName = "coffee-machine.jpg",
+                    CategoryId = 2
                 },
                 new Product
                 {
@@ -56,7 +63,8 @@ namespace ElectricStore.Data
                     Description = "Multifunction a printer and a fax machine",
                     Price = 390,
                     ImageMimeType = "image/jpeg",
-                    PhotoFileName = "fax-machine.jpg"
+                    PhotoFileName = "fax-machine.jpg",
+                    CategoryId = 2
                 },
                 new Product
                 {
@@ -65,7 +73,20 @@ namespace ElectricStore.Data
                     Description = "Automatic washing laundry machine",
                     Price = 1499,
                     ImageMimeType = "image/jpeg",
-                    PhotoFileName = "washer.jpg"
+                    PhotoFileName = "washer.jpg",
+                    CategoryId = 1
+                });
+
+            modelBuilder.Entity<MenuCategory>().HasData(
+                new MenuCategory
+                {
+                    Id = 1,
+                    Name = "Home electrical equipment"
+                },
+                new MenuCategory
+                {
+                    Id = 2,
+                    Name = "Office electrical equipment"
                 });
         }
     }

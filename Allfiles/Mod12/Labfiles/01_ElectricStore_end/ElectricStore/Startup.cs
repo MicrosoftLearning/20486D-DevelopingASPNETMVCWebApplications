@@ -19,17 +19,23 @@ namespace ElectricStore
             services.AddDbContext<StoreContext>(options =>
                  options.UseSqlite("Data Source=electricStore.db"));
 
-            services.AddMvc();
+            services.AddDistributedMemoryCache();
 
-            services.AddSession();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(60);
+            });
+
+
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, StoreContext storeContext, IHostingEnvironment environment)
         {
+            app.UseSession();
+
             storeContext.Database.EnsureDeleted();
             storeContext.Database.EnsureCreated();
-
-            app.UseSession();
 
             app.UseStaticFiles();
 
@@ -40,7 +46,7 @@ namespace ElectricStore
                 routes.MapRoute(
                     name: "ElectricStoreRoute",
                     template: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "StoreSale", action = "Index" },
+                    defaults: new { controller = "Products", action = "Index" },
                     constraints: new { id = "[0-9]+" });
             });
         }

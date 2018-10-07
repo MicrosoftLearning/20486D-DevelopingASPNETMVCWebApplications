@@ -19,7 +19,7 @@
             @if (item.PhotoFileName != null)
             {
                 <div>
-                    <img src="@Url.Action("GetImage", "StoreSale", new { productId = item.Id })" />
+                    <img src="@Url.Action("GetImage", "Products", new { productId = item.Id })" />
                 </div>
             }
                 <div>
