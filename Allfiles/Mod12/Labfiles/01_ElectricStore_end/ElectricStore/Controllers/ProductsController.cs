@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 using ElectricStore.Data;
 using ElectricStore.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
+using Newtonsoft.Json;
 
 namespace ElectricStore.Controllers
 {
@@ -45,6 +49,42 @@ namespace ElectricStore.Controllers
             var category = _context.menuCategories.FirstOrDefault(c => c.Id == Id);
             ViewBag.categoryTitle = category.Name;
             return View(products);
+        }
+
+        [HttpGet]
+        public IActionResult AddToShoppingList()
+        {
+            PopulateProductsList();
+            return View();
+        }
+
+        [HttpPost, ActionName("AddToShoppingList")]
+        public IActionResult AddToShoppingListPost(Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Customers.Add(customer);
+                _context.SaveChanges();
+
+                if (string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerName")) && string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts")))
+                {
+                    HttpContext.Session.SetString("CustomerName", customer.FirstName);
+                    var serialisedDate = JsonConvert.SerializeObject(customer.SelectedProductsList);
+                    HttpContext.Session.SetString("CustomerProducts", serialisedDate);
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            PopulateProductsList(customer.SelectedProductsList);
+            return View(customer);
+        }
+
+        private void PopulateProductsList(int[] selectedProducts = null)
+        {
+            var products = from p in _context.Products
+                           orderby p.ProductName
+                           select p;
+
+            ViewBag.ProductsList = new MultiSelectList(products.AsNoTracking(), "Id", "ProductName", selectedProducts);
         }
 
         public IActionResult GetImage(int productId)

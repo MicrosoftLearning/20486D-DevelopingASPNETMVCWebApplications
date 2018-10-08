@@ -14,22 +14,24 @@ namespace ElectricStore.Data
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<MenuCategory> menuCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CustomersProducts>()
-           .HasKey(c => new { c.ProductId, c.CustomerId });
 
             modelBuilder.Entity<CustomersProducts>()
-                .HasOne(p => p.Product)
-                .WithMany(c => c.CustomerProducts)
-                .HasForeignKey(pc => pc.ProductId);
+         .HasKey(c => new { c.ProductId, c.CustomerId });
 
             modelBuilder.Entity<CustomersProducts>()
                 .HasOne(c => c.Customer)
                 .WithMany(p => p.CustomerProducts)
                 .HasForeignKey(cp => cp.CustomerId);
+
+            modelBuilder.Entity<CustomersProducts>()
+                .HasOne(p => p.Product)
+                .WithMany(c => c.CustomerProducts)
+                .HasForeignKey(cp => cp.ProductId);
 
             modelBuilder.Entity<Product>()
                 .HasOne(p => p.MenuCategory)

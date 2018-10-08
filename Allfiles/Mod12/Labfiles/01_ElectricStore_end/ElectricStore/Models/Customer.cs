@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,5 +30,8 @@ namespace ElectricStore.Models
         public string Address { get; set; }
 
         public virtual List<CustomersProducts> CustomerProducts { get; set; }
+
+        [NotMapped]
+        public int[] SelectedProductsList { get; set; }
     }
 }

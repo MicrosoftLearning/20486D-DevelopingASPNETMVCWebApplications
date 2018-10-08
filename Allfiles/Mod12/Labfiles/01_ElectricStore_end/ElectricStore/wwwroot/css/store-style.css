@@ -55,6 +55,10 @@ img {
     width: 250px;
 }
 
+label {
+    font-weight: bold;
+}
+
 .photo-index-card {
     background-color: #ffffff;
     padding: 0;
@@ -129,11 +133,10 @@ img {
 
 form {
     margin: 20px;
-    background-color: #d4e2b6;
+    background-color: #d6d4d4;
     padding: 15px;
     width: 600px;
     box-shadow: 5px 10px #888888;
-    border-radius: 10%;
 }
 
 .field-validation-error {
