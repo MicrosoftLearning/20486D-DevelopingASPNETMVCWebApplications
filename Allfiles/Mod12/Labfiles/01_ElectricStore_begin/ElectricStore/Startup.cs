@@ -6,7 +6,6 @@ using ElectricStore.Data;
 using ElectricStore.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,6 +23,7 @@ namespace ElectricStore
 
         public void Configure(IApplicationBuilder app, StoreContext storeContext, IHostingEnvironment environment)
         {
+			
             storeContext.Database.EnsureDeleted();
             storeContext.Database.EnsureCreated();
 

@@ -32,6 +32,7 @@ namespace ElectricStore.Models
         public virtual List<CustomersProducts> CustomerProducts { get; set; }
 
         [NotMapped]
+		[Display(Name = "Products List")]
         public int[] SelectedProductsList { get; set; }
     }
 }

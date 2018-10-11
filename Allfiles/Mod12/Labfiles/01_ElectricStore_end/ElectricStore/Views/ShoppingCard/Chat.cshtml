@@ -12,13 +12,13 @@
     <div class="row justify-content-center">
         <div class="col-2 bcf">
             <div class="col-5">
-                Name: <input type="text" id="userName" />
+                Name: <input type="text" id="inputUserName" />
             </div>
             <div class="col-sm-5">
-                Message: <input type="text" id="message" />
+                Message: <input type="text" id="inputMessage" />
             </div>
             <div class="col-sm-3">
-                <input class="btn btn-info" type="button" id="sendMessageBtn" value="Send Message" />
+                <input class="btn btn-info" type="submit" id="sendMessageBtn" value="Send Message" />
             </div>
         </div>
         <div class="col-2 bcs">
@@ -27,7 +27,7 @@
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     <script src="~/node_modules/@@aspnet/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/chat-hub.js"></script>
 }

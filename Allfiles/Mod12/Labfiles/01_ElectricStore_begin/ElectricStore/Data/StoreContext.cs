@@ -83,12 +83,12 @@ namespace ElectricStore.Data
                 new MenuCategory
                 {
                     Id = 1,
-                    Name = "Home electrical equipment"
+                    Name = "Home Electrical Equipment"
                 },
                 new MenuCategory
                 {
                     Id = 2,
-                    Name = "Office electrical equipment"
+                    Name = "Office Electrical Equipment"
                 });
         }
     }
