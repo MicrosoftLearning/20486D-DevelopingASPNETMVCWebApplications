@@ -559,7 +559,7 @@ The main tasks for this exercise are as follows:
 
 4. Click **Here**.
     > **Note**: The browser displays the following text:<br>
-"Game name: Basketball. Votes: 1
+"Game name: Basketball. Votes: 1"
 
 5. Open a new **Microsoft Edge** window.
 
