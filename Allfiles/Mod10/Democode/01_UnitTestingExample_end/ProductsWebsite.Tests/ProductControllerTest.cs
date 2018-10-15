@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProductsWebsite.Controllers;
 using ProductsWebsite.Models;
 using ProductsWebsite.Repositories;
-using ProductsWebsite.Tests.Mock;
+using ProductsWebsite.Tests.FakeRepositories;
 
 namespace ProductsWebsite.Tests
 {
@@ -12,28 +12,28 @@ namespace ProductsWebsite.Tests
     public class ProductControllerTest
     {
         [TestMethod]
-        public void IsIndexReturnsAllProducts()
+        public void IndexModelShouldContainAllProducts()
         {
-            // arrange
+            // Arrange
             IProductRepository fakeProductRepository = new FakeProductRepository();
             ProductController productController = new ProductController(fakeProductRepository);
-            // act
+            // Act
             ViewResult viewResult = productController.Index() as ViewResult;
             List<Product> products = viewResult.Model as List<Product>;
-            // assert
+            // Assert
             Assert.AreEqual(products.Count, 3);
         }
 
         [TestMethod]
-        public void IsGetProductReturnsTheCorrectProduct()
+        public void GetProductModelShouldContainTheRightProduct()
         {
-            // arrange
+            // Arrange
             var fakeProductRepository = new FakeProductRepository();
             var productController = new ProductController(fakeProductRepository);
-            // act
+            // Act
             var viewResult = productController.GetProduct(2) as ViewResult;
             Product product = viewResult.Model as Product;
-            // assert
+            // Assert
             Assert.AreEqual(product.Id, 2);
         }
     }

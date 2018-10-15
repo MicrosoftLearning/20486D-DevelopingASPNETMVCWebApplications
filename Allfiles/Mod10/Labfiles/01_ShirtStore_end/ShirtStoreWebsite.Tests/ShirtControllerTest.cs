@@ -16,7 +16,7 @@ namespace ShirtStoreWebsite.Tests
     public class ShirtControllerTest
     {
         [TestMethod]
-        public void IsIndexReturnsAllShirts()
+        public void IndexModelShouldContainAllShirts()
         {
             IShirtRepository fakeShirtRepository = new FakeShirtRepository();
             Mock<ILogger<ShirtController>> mockLogger = new Mock<ILogger<ShirtController>>();

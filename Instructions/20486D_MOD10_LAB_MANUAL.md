@@ -239,7 +239,7 @@ The main tasks for this exercise are as follows:
 1. Open **Package Manager Console**. 
 
 2. In the **Package Manager Console** tab, type the following command: 
-    - **Install-Package Microsoft.AspNetCore.Mvc.ViewFeatures -ProjectName ShirtStoreWebsite.Tests**.
+    - **Install-Package Microsoft.AspNetCore.Mvc -ProjectName ShirtStoreWebsite.Tests**.
 
 3. Create a new class with the following information:
 

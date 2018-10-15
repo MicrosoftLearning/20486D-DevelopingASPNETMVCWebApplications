@@ -4,7 +4,7 @@ using System.Text;
 using ProductsWebsite.Models;
 using ProductsWebsite.Repositories;
 
-namespace ProductsWebsite.Tests.Mock
+namespace ProductsWebsite.Tests.FakeRepositories
 {
     internal class FakeProductRepository : IProductRepository
     {
