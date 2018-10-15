@@ -32,7 +32,7 @@ The main tasks for this exercise are as follows:
 
 1. Use npm to install gulp.
 
-2. Write a task to copy a js file.
+2. Write a task to copy a JavaScript file.
 
 3. Run the task.
 
@@ -62,7 +62,7 @@ The main tasks for this exercise are as follows:
 
 8. Open the **package.json** file and view its content.
 
-      >**Note:** There are dependencies to the **gulp**, **gulp-concat**, **gulp-cssmin**, **gulp-sass**, **gulp-uglify**, **bootstrap**, **hoek**, **jquery**, **lodash**, and **popper.js** packages.
+      >**Note:** There are dependencies to the **gulp**, **gulp-concat**, **gulp-cssmin**, **gulp-sass**, **gulp-uglify** packages appear in the **devDependencies** section, and **bootstrap**, **hoek**, **jquery**, **lodash**, **popper.js** packages appear in the **Dependencies** section.
       
 #### Task 2: Write a task to copy a JavaScript file
 
@@ -75,7 +75,7 @@ The main tasks for this exercise are as follows:
 
 3. Add a new variable named **paths** with the value of **{}**.
 
-4. In the **paths** object, add the following properties :
+4. In the **paths** object, add the following properties:
 
     - webroot: **"./wwwroot/"**
     - nodeModules: **"./node_modules/"**
@@ -103,6 +103,7 @@ The main tasks for this exercise are as follows:
     >**Note:** If the **Tasks** list does not contain a task named **copy-js-file**, click **Refresh**.
 
 3. Run the **copy-js-file** task.
+
     >**Note:** In **Solution Explorer**, under **wwwroot**, a new folder has been added named **scripts** with a JavaScript file named **jquery.js**
 
 #### Task 4:  Write a task to minify a JavaScript file
@@ -203,7 +204,7 @@ The main tasks for this exercise are as follows:
 2. Add a **SCSS Style Sheet (SASS)** file with the following information:
 
     - Folder: **Styles**
-    - Name: **main.scss**
+    - Name: **main**
  
 3. Delete the contents of the **main.scss** file.
 
@@ -397,7 +398,7 @@ The main tasks for this exercise are as follows:
 
       >**Note:** From now whenever you change the **main.scss** file, the **main.min.css** file will automatically be changed.
 
->**Results** : After completing this exercise, you will be able to create Sass files and add gulp tasks to compile, bundle and minify them.
+>**Results**: After completing this exercise, you will be able to create sass files and add gulp tasks to compile, bundle and minify them.
 
 ### Exercise 3: Using Bootstrap
 
@@ -653,7 +654,6 @@ The main tasks for this exercise are as follows:
 48. In the new **DIV** element, add **IMG** element with the following information:
 
      - Class: **imageDisplay**
-     - Src: **~/images/**
      - Id: **iceCreamImage**
      - Alt: **""**
 
