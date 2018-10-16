@@ -16,18 +16,20 @@
 
 3. In the **Product.cs** code window, locate the following code:
 ```cs
+    [Display(Name = "Price")]
     public string FormattedPrice
     {
         get
         {
-            return BasePrice.ToString($"C2");
+            return BasePrice.ToString($"C2", CultureInfo.GetCultureInfo("en-US"));
         }
     }
 ```
 
-4. Place the cursor at the end of the located code, press Enter, and then type the following code:
+4. Place the cursor at the end of the located code, press Enter twice, and then type the following code:
 ```cs
     [NotMapped]
+    [Display(Name = "Last retrieved on")]
     public DateTime LoadedFromDatabase { get; set; }
 ```
 
@@ -50,12 +52,26 @@
 
 9. In the **SelectedProduct.cshtml** code window, locate the following code:
 ```cs
-    <div>@Html.DisplayFor(modelItem => Model.Description)</div>
+    <div>
+        <span class="display-label">
+            @Html.DisplayNameFor(model => Model.Description)
+        </span>
+        <span class="display-field">
+            @Html.DisplayFor(model => Model.Description)
+        </span>
+    </div>
 ```
 
 10. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    <div>Last retrieved on : @Model.LoadedFromDatabase.ToString("G")</div>
+    <div>
+        <span class="display-label">
+            @Html.DisplayNameFor(model => Model.LoadedFromDatabase)
+        </span>
+        <span class="display-field">
+            @Model.LoadedFromDatabase.ToString("G")
+        </span>
+    </div>
 ```
 
 11.  In the **CachingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
@@ -64,7 +80,7 @@
     >**Note**: The browser displays a list of products on the left.
 
 13. In **Microsoft Edge**, click **Basketball**.
-    >**Note**: The browser displays the basketball details, which includes the last time the product was retrieved from the data base.
+    >**Note**: The browser displays the basketball details, and the last time that the product was retrieved from the data base.
 
 14. In **Microsoft Edge**, click **Basketball**.
     >**Note**: The browser displays the same page, but the **Last retrieved on** has changed since the item was retrieved from data base.
@@ -73,7 +89,7 @@
    
 16. In the **CachingExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Product**, and then click **Index.cshtml**.
 
-17. In the **index.cshtml** code window, locate the following code:
+17. In the **index.cshtml** code window, select the following code:
 ```cs
     <div>
         @await Component.InvokeAsync("Product", @ViewBag.SelectedProductId)
@@ -243,8 +259,8 @@
 
 23. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    <div>Number of times this controller was visited during this session: @Context.Session.GetInt32("Home")</div>
-    <div>Number of times this controller was visited during this session: @Context.Session.GetInt32("Another")</div>
+    <div>Number of times that this controller was visited during this session: @Context.Session.GetInt32("Home")</div>
+    <div>Number of times that this controller was visited during this session: @Context.Session.GetInt32("Another")</div>
     <div>Number of times visited overall during this session: @Context.Session.GetInt32("Overall")</div>
 ```
 
@@ -257,40 +273,28 @@
 
 26. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    <div>Number of times this controller was visited during this session: @Context.Session.GetInt32("Home")</div>
-    <div>Number of times this controller was visited during this session: @Context.Session.GetInt32("Another")</div>
+    <div>Number of times that this controller was visited during this session: @Context.Session.GetInt32("Home")</div>
+    <div>Number of times that this controller was visited during this session: @Context.Session.GetInt32("Another")</div>
     <div>Number of times visited overall during this session: @Context.Session.GetInt32("Overall")</div>
 ```
 
 27.  In the **StateExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 28. In the **StateExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
-    >**Note**: The browser displays two link: **Home** and **Another**, and the following information : <br>
-    >Number of times this controller was visited during this session: 1<br>
-    >Number of times this controller was visited during this session: <br>
-    >Number of times visited overall during this session: 1
+
+    >**Note:** Examine the browser content.
 
 29. In **Microsoft Edge**, click **Another**.
-    >**Note**: The browser displays the following information : <br>
-    >Number of times this controller was visited during this session: 1<br>
-    >Number of times this controller was visited during this session: 1<br>
-    >Number of times visited overall during this session: 2
 
 30. In **Microsoft Edge**, click **Home**.
-    >**Note**: The browser displays the following information : <br>
-    >Number of times this controller was visited during this session: 2<br>
-    >Number of times this controller was visited during this session: 1<br>
-    >Number of times visited overall during this session: 3
 
 31. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New InPrivate Window**.
-    >**Note**: The browser displays the following information : <br>
-    >Number of times this controller was visited during this session: 1<br>
-    >Number of times this controller was visited during this session: <br>
-    >Number of times visited overall during this session: 1
-    
-32.  Close all the **Microsoft Edge** windows.
 
-33. In the **StateExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+32. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]**, and then press Enter.
+
+33.  Close all the **Microsoft Edge** windows.
+
+34. In the **StateExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Two-Way Communication
 
