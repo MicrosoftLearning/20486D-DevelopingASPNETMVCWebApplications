@@ -418,23 +418,26 @@
 ```
 
 25. In the **SignalRExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+
+26. In the **Microsoft Visual Studio** dialog box, click **Yes to All**.
+
     >**Note**: In **Solution Explorer**, under **Depenndencies**, a new folder named **npm** has been added, which contains the **@aspnet/signalr** package.
 
-26. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Square**, and then click **index.cshtml**.
+27. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Square**, and then click **index.cshtml**.
 
-27. In the **index.cshtml** code window, locate the following code:
+28. In the **index.cshtml** code window, locate the following code:
 ```cs
     <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
 ```
 
-28. Place the cursor at the end of the located code, press Enter, and then type the following code:
+29. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     <script src="~/node_modules/@@aspnet/signalr/dist/browser/jquery.min.js"></script>
 ```
 
-29. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **wwwroot**, expand **js**, and then click **square-events.js**.
+30. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **wwwroot**, expand **js**, and then click **square-events.js**.
 
-30. In the **square-events.js** code window, place the cursor at the beginning of the document, and then type the following code:
+31. In the **square-events.js** code window, place the cursor at the beginning of the document, and then type the following code:
 ```cs
     var connection = new signalR.HubConnectionBuilder()
         .withUrl("squareshub")
@@ -447,36 +450,36 @@
     connection.start();
 ```
 
-31. In the **square-events.js** code window, locate the following code:
+32. In the **square-events.js** code window, locate the following code:
 ```cs
     $(btn).toggleClass('blue red');
 ```
 
-32. Place the cursor at the end of the located code, press Enter, and then type the following code:
+33. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     connection.invoke("SwapColor", x, y);
 ```
 
-33. In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+34. In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-34. In the **SignalRExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+35. In the **SignalRExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
     >**Note**: The browser displays 9 blue squares.
 
-35. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
+36. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-36. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]**, and then press Enter.
+37. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]**, and then press Enter.
 
-37. In **Microsoft Edge**, click on one of the squares.
+38. In **Microsoft Edge**, click on one of the squares.
     >**Note**: In both the **Microsoft Edge** windows, the square that was clicked is red.
 
-38. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
+39. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-39. In **Microsoft Edge**, in the Address bar, type **http://localhost:[port]**, and then press Enter.
+40. In **Microsoft Edge**, in the Address bar, type **http://localhost:[port]**, and then press Enter.
     >**Note**: The browser displays 8 blue squares and 1 red square.
 
-40.  Close all the **Microsoft Edge** windows.
+41.  Close all the **Microsoft Edge** windows.
 
-41.  In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+42.  In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
