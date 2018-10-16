@@ -58,11 +58,11 @@ gulp.task("min-vendor:css", function() {
 });
 
 gulp.task("js-watcher", function() {
-    gulp.watch('./Scripts/*.js', ["min:js"]);
+    gulp.watch('./Scripts/*.js', gulp.series("min:js"));
 });
 
 gulp.task("sass-watcher", function() {
-    gulp.watch('./Styles/*.scss', ["min:scss"]);
+    gulp.watch('./Styles/*.scss', gulp.series("min:scss"));
 });
 
 

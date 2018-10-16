@@ -149,7 +149,7 @@ The main tasks for this exercise are as follows:
 
 2. Pass **"js-watcher"** and an **anonymous function** as parameters to the **task** function.
 
-3. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Scripts/*.js"** and **["min:js"]** as parameters to the **gulp.watch** function.
+3. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Scripts/*.js"** and **gulp.series("min:js")** as parameters to the **gulp.watch** function.
 
 #### Task 7: Run the tasks
 
@@ -384,7 +384,7 @@ The main tasks for this exercise are as follows:
 
 12. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"sass-watcher"** and an **anonymous function** as parameters to the **task** function.
 
-13. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Styles/*.scss"** and **["min:scss"]** as parameters to the **gulp.watch** function.
+13. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Styles/*.scss"** and **gulp.series("min:scss")** as parameters to the **gulp.watch** function.
 
 #### Task 3: Run the tasks
 
