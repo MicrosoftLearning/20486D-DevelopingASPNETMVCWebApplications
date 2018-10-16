@@ -20,14 +20,7 @@ namespace CachingExample.ViewComponents
         public Task<IViewComponentResult> InvokeAsync(int id)
         {
             Product product = _repository.GetProduct(id);
-            if(product != null)
-            {
-                return Task.FromResult<IViewComponentResult>(View("SelectedProduct", product));
-            }
-            else
-            {
-                return Task.FromResult<IViewComponentResult>(Content("Choose a product to be displayed here"));
-            }
+            return Task.FromResult<IViewComponentResult>(View("SelectedProduct", product));
         }
     }
 }

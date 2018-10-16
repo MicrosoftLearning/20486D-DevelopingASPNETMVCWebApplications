@@ -1,11 +1,29 @@
 ﻿@model CachingExample.Models.Product
-<div class="product-wrapper">
-    <div>
-        <img class="product-img" src="@Url.Action("GetImage", new {name = Model.ImageName })" />
+
+@if (Model != null)
+{
+    <div class="product-wrapper">
+        <div>
+            <img class="product-img" src="@Url.Action("GetImage", new {name = Model.ImageName })" />
+        </div>
+        <div>
+            <h1>@Html.DisplayFor(modelItem => Model.Name)</h1>
+            <div>
+                <span class="display-label">
+                    @Html.DisplayNameFor(model => Model.FormattedPrice)
+                </span>
+                <span class="display-field">
+                    @Html.DisplayFor(model => Model.FormattedPrice)
+                </span>
+            </div>
+            <div>
+                <span class="display-label">
+                    @Html.DisplayNameFor(model => Model.Description)
+                </span>
+                <span class="display-field">
+                    @Html.DisplayFor(model => Model.Description)
+                </span>
+            </div>
+        </div>
     </div>
-    <div>
-        <h1>@Html.DisplayFor(modelItem => Model.Name)</h1>
-        <div>@Html.DisplayFor(modelItem => Model.FormattedPrice)</div>
-        <div>@Html.DisplayFor(modelItem => Model.Description)</div>
-    </div>
-</div>
+}
