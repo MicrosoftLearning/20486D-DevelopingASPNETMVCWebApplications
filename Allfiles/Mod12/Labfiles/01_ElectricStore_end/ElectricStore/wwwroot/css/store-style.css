@@ -99,6 +99,11 @@ label {
     line-height: 42px;
     text-align: center;
     margin: 15px;
+    color: #736454;
+}
+
+.Secondary-heading p{
+    font-size: 42px;
 }
 
 .span-col-f {

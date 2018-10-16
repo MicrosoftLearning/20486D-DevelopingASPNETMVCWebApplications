@@ -5,10 +5,7 @@
 
 @if (Model != null)
 {
-    <h2 class="title">
-        <span class="span-col-s">@Model.CustomerName's Shopping Card,</span>
-        <span>Your Selected Products:</span>
-    </h2>
+    <h2 class="title">@Model.CustomerName's Selected Products</h2>
 
     <div class="page-container">
         @foreach (var item in Model.SelectedProducts)
@@ -35,18 +32,17 @@
         }
     </div>
     <h5 class="title">
-        <span class="span-col-s">Thank you @Model.CustomerName</span>
-        <span>for your order. We will contact you shortly</span>
+        <span>Thank you @Model.CustomerName</span>
+        <span>for your order, We will contact you shortly.</span>
     </h5>
 }
 else
 {
-    <h2 class="title">
-        <span class="span-col-s">Sorry we don't have any information yet</span>
-        <span>Please go to</span>
-        <span class="span-col-s">Shopping List page</span>
-        <span>and select wanted products</span>
-    </h2>
+    <div class="title Secondary-heading">
+        <p>Sorry, we don't have any information yet</p>
+        <p>Please go to the <span class="span-col-s">Shopping List page</span></p>
+        <p>and select the wanted products.</p>
+    </div>
 }
 
 <button type="button" id="btnChat" class="btn btn-success" onclick="location.href='@Url.Action("Chat", "ShoppingCard")'">Chat with Online Visitors</button>
