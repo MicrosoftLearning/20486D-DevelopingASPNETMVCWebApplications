@@ -432,7 +432,7 @@
 
 29. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    <script src="~/node_modules/@@aspnet/signalr/dist/browser/jquery.min.js"></script>
+    <script src="~/node_modules/@@aspnet/signalr/dist/browser/signalr.min.js"></script>
 ```
 
 30. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **wwwroot**, expand **js**, and then click **square-events.js**.
