@@ -20,7 +20,6 @@ namespace ErrorHandlingExample.Controllers
             _counter = counter;
         }
 
-        [Route("")]
         public IActionResult Index()
         {
             ViewBag.NumberOfViews = _counter.UrlCounter[HttpContext.Request.GetDisplayUrl()];

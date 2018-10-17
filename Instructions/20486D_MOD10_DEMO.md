@@ -281,6 +281,7 @@
 # Lesson 3: Logging MVC Applications
 
 ### Demonstration: How to Log an MVC Application
+
 #### Preparation Steps
 
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
@@ -399,24 +400,26 @@
 
 20. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-21. In **Microsoft Edge**, click **16**.
+21. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/Home/Index**, and then press Enter.
+
+22. In **Microsoft Edge**, click **16**.
     >**Note:** The browser displays the numbers that **16** can be divided by.
 
-22. In **Microsoft Edge**, click **Close**.
+23. In **Microsoft Edge**, click **Close**.
 
-23. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+24. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
     >**Note**: Inspect the **KeyNotFoundException** stack trace.
 
-24. In **myLog-XXXXXXXX.txt** window, click **Close**.
+25. In **myLog-XXXXXXXX.txt** window, click **Close**.
 
-25. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
+26. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
 
-26. In the **Counter.cs** code window, select the following code:
+27. In the **Counter.cs** code window, select the following code:
 ```cs
     NumberCounter[number]++;
 ```
 
-27. Replace the selected code with the following code:
+28. Replace the selected code with the following code:
 ```cs
     if (NumberCounter.ContainsKey(number))
     {
@@ -429,26 +432,28 @@
         _logger.LogDebug($"The number {number} was added to the page display count dictionary.");
     }
 ```
-28. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+29. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-29. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
+30. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
 
-30. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+31. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-31. In the **LoggingExample - Microsoft Visual Studio** window, in the **Output** tab, click the **Output** pane.
+32. In the **LoggingExample - Microsoft Visual Studio** window, in the **Output** tab, click the **Output** pane.
 
-32. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, in the **Show output from** list, select **ASP.NET Core Web Server**, and then click the **Clear All** button.
+33. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/Home/Index**, and then press Enter.
 
-33. In **Microsoft Edge**, click **16**.
+34. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, in the **Show output from** list, select **ASP.NET Core Web Server**, and then click the **Clear All** button.
 
-34. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, locate the following text:
+35. In **Microsoft Edge**, click **16**.
+
+36. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, locate the following text:
 ```
     The number 16 was added to the page display count dictionary.
 ```
 
-35. In **Microsoft Edge**, click **Close**.
+37. In **Microsoft Edge**, click **Close**.
 
-36. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+38. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

@@ -11,18 +11,5 @@ namespace ErrorHandlingExample.Models
         public int DividedNumber { get; set; }
 
         public List<int> DividingNumbers { get; set; }
-
-        public override string ToString()
-        {
-            StringBuilder bld = new StringBuilder();
-
-            foreach (int currentNumber in DividingNumbers)
-            {
-                bld.Append($"{currentNumber} ,");
-            }
-            bld.Remove(bld.Length - 1, 1);
-
-            return bld.ToString();
-        }
     }
 }

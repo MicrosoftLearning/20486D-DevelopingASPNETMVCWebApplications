@@ -14,7 +14,11 @@
 <body>
     <h1>Number @Model.DividedNumber</h1>
     <p>
-        The number @Model.DividedNumber is divided by the following numbers: @Model.ToString()<br />
+        The number @Model.DividedNumber is divided by the following numbers:
+        @foreach (var item in @Model.DividingNumbers)
+        {
+            <span>@Html.DisplayFor(i => item)</span>
+        }
         This number was viewed @ViewBag.NumberOfViews
         @if (ViewBag.NumberOfViews > 1)
         {
