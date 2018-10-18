@@ -24,7 +24,7 @@ namespace Server.Models
         [Display(Name = "Reservation Time"), DataType(DataType.Date)]
         public DateTime ReservationTime { get; set; }
 
-        [Display(Name = "Dinner Guests")]
+        [Display(Name = "Number of Guests")]
         [Range(1, 20)]
         public int DinnerGuests { get; set; }
 
