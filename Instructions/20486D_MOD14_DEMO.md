@@ -119,16 +119,18 @@
 
 4.	In the **Storage accounts** window, in the menu bar, click **Add**.
 
-5.	In the **Create storage account** window , in the **Name** text box, type **blobdemo{unique name}**
+5.	In the **Create storage account** window , in the **Storage Account Name** text box, type **blobdemo{unique name}**
     >**Note:** The name must be unique. You can add your first name, last name or birthdate to the current name.
 
-6.	In the **Create storage account** window, under **Resource Group**, type **blobdemo**.
+6.	In the **Create storage account** window, under **Resource Group**, click **Create new**.
 
-7.	In the **Create storage account** window, click **Create**.
+7.  In the pop-up window, in the **Name** field, type **blobdemo**.
 
-8.	In the **Storage accounts** window, click  **Refresh**.
+8.	In the **Create storage account** window, click **Review + create**.
 
-9.	In the **Storage accounts** window, click **blobdemo{unique name}**.
+9.	In the **Create storage account** window, click **Create**.
+
+9.	In the **Storage account Overview** window, click **Go to resource**.
 
 10. In the **blobdemo{unique name}** window, below **Services**, click **Blobs**.
 
