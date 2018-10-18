@@ -11,7 +11,7 @@
             }),
             contentType: "application/json;charset=utf-8",
             success: function (result) {
-                $(".result").text('Ajax result: pizza object added successfully with the following information id ' + result.id + ', toppings: ' + result.toppings + ', price ' + result.price + '$');
+                $(".result").text('Ajax result: pizza object was added successfully with id number ' + result.id + ', and ' + result.toppings + ' topping for the price of ' + result.price + '$');
             },
             error: function (result) {
                 alert('An error has occurred');

@@ -168,7 +168,7 @@
             _animals.Add(new Animal() { Id = 3, Name = "Shark", Family = "Fish", Facts = "Sharks live in the ocean, and average shark has 40-45 teeth" });
        }
 ```
-19. Ensure that the cursor is at the end of the **AnimalsController** constructor code block, press Enter twice, and then type the following code:
+19. Ensure that the cursor is at the end of the **AnimalsController** constructor code block, press Enter twice, type the following code, and then press Enter.
   ```cs
        [HttpGet]
        [Produces("application/xml")]
@@ -314,7 +314,7 @@
                     }),
                     contentType: "application/json;charset=utf-8",
                     success: function (result) {
-                        $(".result").text('Ajax result: pizza object added successfully with the following information id ' + result.id + ', toppings: ' + result.toppings + ', price ' + result.price + '$');
+                        $(".result").text('Ajax result: pizza object was added successfully with id number ' + result.id + ', and ' + result.toppings + ' topping for the price of ' + result.price + '$');
                     },
                     error: function (result) {
                         alert('An error has occurred');
@@ -380,7 +380,7 @@
 
 6. In the **NewFolder** text box, type **Controllers**, and then press Enter.
 
-7. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide** right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
+7. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide** right-click **Controllers**, point to **Add**, and then click **Controller**.
 
 8. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
@@ -453,9 +453,9 @@
        response.EnsureSuccessStatusCode();
        return new ObjectResult(newGrocery);
 ```
-20. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **ServerSide**, under **Controllers** and then click **StoreController.cs**.
+20. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **ServerSide**, expand **Controllers**, and then click **StoreController.cs**.
 
-    >**Note:**Examine the **StoreController.cs** class content.
+    >**Note:** Examine the **StoreController.cs** class content.
 
 21. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
@@ -473,7 +473,7 @@
 
 26. In **Microsoft Edge**, click **Close**.
 
-27. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+27. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
