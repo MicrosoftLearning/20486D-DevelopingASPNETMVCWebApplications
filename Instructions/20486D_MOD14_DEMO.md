@@ -66,7 +66,7 @@
 24. In the **Sign in** dialog box, type **Password**, and then click **Sign in**. 
     >**Note:** The browser displays the dashboard that contains the **App Service** and the **App Service Plan**.
 
-25. In **Microsoft Edge**, click on the **App Service**, **AzureWebApp{unique name}**.
+25. In **Microsoft Edge**, click on the **AzureWebApp{unique name}** app service.
     >**Note:** View the details in the overview window.
 
 26. In **Microsoft Edge**, click **Close**.
@@ -91,7 +91,7 @@
 31. In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish**.
 
 
-32. In the **Publish** dialog box, ensure that the app service Profile that was created is selected, and then click **Publish**.
+32. In the **Publish** dialog box, ensure that the app service profile that was created is selected, and then click **Publish**.
     >**Note:** The browser displays:  **This is a ASP .NET web application deployed on Azure App Service**. 
 
 33. In **Microsoft Edge**, click **Close**.
@@ -119,7 +119,7 @@
 
 4.	In the **Storage accounts** window, in the menu bar, click **Add**.
 
-5.	In the **Create storage account** window , in the **Storage Account Name** text box, type **blobdemo{unique name}**
+5.	In the **Create storage account** window , in the **Storage Account Name** text box, type **blobdemo{unique name}**.
     >**Note:** The name must be unique. You can add your first name, last name or birthdate to the current name.
 
 6.	In the **Create storage account** window, under **Resource Group**, click **Create new**.
