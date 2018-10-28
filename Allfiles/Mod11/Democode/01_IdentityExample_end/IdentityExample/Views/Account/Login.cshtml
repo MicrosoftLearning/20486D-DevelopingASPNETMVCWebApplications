@@ -1,0 +1,47 @@
+﻿@model IdentityExample.Models.Login
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row justify-content-center">
+    <div class="col-5">
+        <form method="post" enctype="multipart/form-data" asp-action="Login">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group row">
+                <label asp-for="UserName" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-6">
+                    <input asp-for="UserName" type="text" class="form-control" placeholder="User Name" required>
+                    <span asp-validation-for="UserName" class="text-warning"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Password" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-6">
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" required>
+                    <span asp-validation-for="Password" class="text-warning"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="form-check">
+                    <input asp-for="RememberMe" type="checkbox" class="form-check-input" placeholder="Remember Me">
+                    <label asp-for="RememberMe" class="form-check-label"></label>
+                </div>
+                <span asp-validation-for="RememberMe" class="text-warning"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-success">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
