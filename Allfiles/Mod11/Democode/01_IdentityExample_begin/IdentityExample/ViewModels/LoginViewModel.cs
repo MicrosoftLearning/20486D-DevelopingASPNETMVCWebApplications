@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IdentityExample.Models
+namespace IdentityExample.ViewModels
 {
     public class LoginViewModel
     {

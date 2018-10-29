@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IdentityExample.Models;
+using IdentityExample.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +12,12 @@ namespace IdentityExample.Controllers
     public class AccountController : Controller
     {
         private SignInManager<Student> _signInManager;
+        private UserManager<Student> _userManager;
 
-        public AccountController(SignInManager<Student> signInManager)
+        public AccountController(SignInManager<Student> signInManager, UserManager<Student> userManager)
         {
             _signInManager = signInManager;
+            _userManager = userManager;
         }
 
         public IActionResult Login()
@@ -35,10 +38,10 @@ namespace IdentityExample.Controllers
 
                 if (result.Succeeded)
                 {
-                    RedirectToAction("Index", "Student");
+                   return RedirectToAction("Index", "Student");
                 }
             }
-            ModelState.AddModelError("", "Faild to login");
+            ModelState.AddModelError("", "Faild to Login");
             return View();
         }
 
@@ -54,25 +57,30 @@ namespace IdentityExample.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterModel model)
+        public async Task<IActionResult> Register(RegisterViewModel registerModel)
         {
             if (ModelState.IsValid)
             {
-                WebsiteUser user = new WebsiteUser
+                Student student = new Student
                 {
-                    UserHandle = model.UserHandle,
-                    UserName = model.Username,
+                    FirstName = registerModel.FirstName,
+                    LastName = registerModel.LastName,
+                    UserName = registerModel.UserName,
+                    PhoneNumber = registerModel.PhoneNumber,
+                    Email = registerModel.Email
                 };
 
-                var result = await _userManager.CreateAsync(user, model.Password);
+                var result = await _userManager.CreateAsync(student, registerModel.Password);
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Login", "Account");
                 }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
             }
-
             return View();
         }
-
     }
 }
