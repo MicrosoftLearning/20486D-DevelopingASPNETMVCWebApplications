@@ -1,0 +1,17 @@
+﻿@model IEnumerable<IdentityExample.Models.Course>
+
+@{
+    ViewData["Title"] = "CourseDetails";
+}
+
+<h2 class="second-title">Our Courses</h2>
+
+
+<div class="page-container">
+    @foreach (var item in Model)
+    {
+        <div class="details">
+            @Html.DisplayFor(model => item.Name)
+        </div>
+    }
+</div>

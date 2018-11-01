@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Identity;
 
 namespace IdentityExample
 {
@@ -16,7 +17,7 @@ namespace IdentityExample
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDefaultIdentity<Student>(options =>
+            services.AddIdentity<Student, IdentityRole>(options =>
            {
                options.Password.RequireDigit = true;
                options.Password.RequiredLength = 7;
