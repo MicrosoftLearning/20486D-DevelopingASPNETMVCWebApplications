@@ -36,27 +36,25 @@
 
 8. In **File Explorer**, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin**, and then double-click **IdentityExample.sln**.
 
-10. In the **IdentityExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+9. In the **IdentityExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
       >**Note:** Examine the page.
 
-11.  In **Microsoft Edge**, click **Close**.
+10.  In **Microsoft Edge**, click **Close**.
 
-12. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+11. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
-13. In the **Startup.cs** code window, locate the following code:
+12. In the **Startup.cs** code window, locate the following code:
   ```cs
       using Microsoft.Extensions.DependencyInjection;
 ```
 
-14. Ensure that the cursor is at the end of the  **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
+13. Ensure that the cursor is at the end of the  **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
   ```cs
-      using IdentityExample.Data;
-      using IdentityExample.Middleware;
       using IdentityExample.Models;
 ```
 
-15. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
+14. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
   ```cs
        services.AddDefaultIdentity<Student>(options =>
        {
@@ -68,18 +66,18 @@
        })
         .AddEntityFrameworkStores<StudentContext>();
 ```
-16. In the **Startup.cs** code window, locate the following code:
+15. In the **Startup.cs** code window, locate the following code:
   ```cs
        app.UseStaticFiles();
 ```
 
-17. Place the cursor at the end of the located code, press Enter twice, and then type the following code:
+16. Place the cursor at the end of the located code, press Enter twice, and then type the following code:
   ```cs
        app.UseAuthentication();
 ```
-18. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **StudentController.cs**.
+17. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **StudentController.cs**.
 
-19. In the **StudentController.cs** code window, select the following code:
+18. In the **StudentController.cs** code window, select the following code:
   ```cs
        public IActionResult Index()
        {
@@ -87,7 +85,7 @@
        }
 ```
 
-20. Replace the selected code with the following code:
+19. Replace the selected code with the following code:
   ```cs
        public IActionResult Index()
        {
@@ -99,23 +97,23 @@
        }
 ```
 
-21. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
+20. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
-22. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
+21. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
-23. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **AccountController**, and then click **Add**.
+22. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **AccountController**, and then click **Add**.
 
-24. In the **AccountController.cs** code window, locate the following code:
+23. In the **AccountController.cs** code window, locate the following code:
   ```cs
        using Microsoft.AspNetCore.Mvc;
 ```
-25. Ensure that the cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
+24. Ensure that the cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
   ```cs
        using IdentityExample.Models;
        using IdentityExample.ViewModels;
        using Microsoft.AspNetCore.Identity;
 ```
-26. In the **AccountController.cs** code window, select the following code:
+25. In the **AccountController.cs** code window, select the following code:
   ```cs
        public IActionResult Index()
        {
@@ -123,7 +121,7 @@
        }
 ```
 
-27. Replace the selected code with the following code:
+26. Replace the selected code with the following code:
   ```cs
        private SignInManager<Student> _signInManager;
        private UserManager<Student> _userManager;
@@ -135,7 +133,7 @@
        }
 ```
 
-28. Ensure that the cursor is at the end of the **AccountController** constructor code block, press Enter twice, and then type the following code:
+27. Ensure that the cursor is at the end of the **AccountController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        public IActionResult Login()
        {
@@ -147,7 +145,7 @@
        }
 ```
 
-29. In the **AccountController.cs** code window, ensure that the cursor is at the end of the **Login** action code block, press Enter twice, and then type the following code:
+28. In the **AccountController.cs** code window, ensure that the cursor is at the end of the **Login** action code block, press Enter twice, and then type the following code:
   ```cs
        [HttpPost]
        public async Task<IActionResult> Login(LoginViewModel loginModel)
@@ -165,7 +163,7 @@
        }
 ```
 
-30. In the **AccountController.cs** code window, ensure that the cursor is at the end of the **Login** action code block, press Enter twice, and then type the following code:
+29. In the **AccountController.cs** code window, ensure that the cursor is at the end of the **Login** action code block, press Enter twice, and then type the following code:
   ```cs
        public async Task<IActionResult> Logout()
        {
@@ -174,7 +172,7 @@
        }
 ```
 
-31. In the **AccountController.cs** code window, ensure that the cursor is at the end of the **Logout** action code block, press Enter twice, and then type the following code:
+30. In the **AccountController.cs** code window, ensure that the cursor is at the end of the **Logout** action code block, press Enter twice, and then type the following code:
   ```cs
        public IActionResult Register()
        {
@@ -182,7 +180,7 @@
        }
 ```
 
-32. In the **AccountController.cs** code window, ensure that the cursor is at the end of the **Register** action code block, press Enter twice, and then type the following code:
+31. In the **AccountController.cs** code window, ensure that the cursor is at the end of the **Register** action code block, press Enter twice, and then type the following code:
   ```cs
        [HttpPost]
        public async Task<IActionResult> Register(RegisterViewModel registerModel)
@@ -212,37 +210,37 @@
        }
 ```
 
-33. In the **IdentityExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+32. In the **IdentityExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-34. In the **IdentityExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+33. In the **IdentityExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-35. In the menu bar, click **Student Portal**.
+34. In the menu bar, click **Student Portal**.
 
       >**Note:** **Student Porta**l page is only for authorized users therefore you redirected to the login page.
 
-36. On the **Login** page, click **Register**.
+35. On the **Login** page, click **Register**.
 
-37. On the **Register** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+36. On the **Register** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
 
-38. On the **Register** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+37. On the **Register** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
 
-39. On the **Register** page, in the **Phone Number** text box, type _&lt;A phone number of your choice&gt;._
+38. On the **Register** page, in the **Phone Number** text box, type _&lt;A phone number of your choice&gt;._
 
-40. On the **Register** page, in the **Email** text box, type _&lt;An email time of your choice&gt;._
+39. On the **Register** page, in the **Email** text box, type _&lt;An email time of your choice&gt;._
 
-41. On the **Register** page, in the **User Name** text box, type _&lt;A user name of your choice&gt;._
+40. On the **Register** page, in the **User Name** text box, type _&lt;A user name of your choice&gt;._
 
-42. On the **Register** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
+41. On the **Register** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
 
-43. On the **Login** page, in the **User Name** text box, type _&lt;The registered user name&gt;._
+42. On the **Login** page, in the **User Name** text box, type _&lt;The registered user name&gt;._
 
-44. On the **Login** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
+43. On the **Login** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
 
       >**Note:** Examine the page, you have been authorized to enter the **Student Portal** page.
 
-45.  In **Microsoft Edge**, click **Close**.
+44.  In **Microsoft Edge**, click **Close**.
 
-46. In the **IdentityExample  - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+45. In the **IdentityExample  - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Authorization in ASP.NET Core
 
