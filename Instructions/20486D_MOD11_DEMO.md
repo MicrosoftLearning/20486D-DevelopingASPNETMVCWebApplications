@@ -11,7 +11,7 @@
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin\IdentityExample**, and then copy the address in the address bar.
+1. In **File Explorer**, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin\IdentityExample**, and then copy the address in the address bar.
 
 2. Go to **Start**, and then type **cmd**.
 
@@ -34,9 +34,7 @@
 
 7. Close the window.
 
-8. In the **File Explorer**, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin**, and then double-click **IdentityExample.sln**.
-
-9. In the **IdentityExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+8. In **File Explorer**, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin**, and then double-click **IdentityExample.sln**.
 
 10. In the **IdentityExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
@@ -58,7 +56,7 @@
       using IdentityExample.Models;
 ```
 
-15. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter again.
+15. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, type the following code, and then press Enter.
   ```cs
        services.AddDefaultIdentity<Student>(options =>
        {
@@ -70,7 +68,7 @@
        })
         .AddEntityFrameworkStores<StudentContext>();
 ```
-16. In the **Startup.cs** code window, in the **Configure** method, locate the following code:
+16. In the **Startup.cs** code window, locate the following code:
   ```cs
        app.UseStaticFiles();
 ```
@@ -220,27 +218,27 @@
 
 35. In the menu bar, click **Student Portal**.
 
-      >**Note:** Student Portal page is only for authorized users therefore you redirected to the login page.
+      >**Note:** **Student Porta**l page is only for authorized users therefore you redirected to the login page.
 
-36. On **Login**, click **Register**.
+36. On the **Login** page, click **Register**.
 
-37. On **Register**, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+37. On the **Register** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
 
-38. On **Register**, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+38. On the **Register** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
 
-39. On **Register**, in the **Phone Number** text box, type _&lt;A phone number of your choice&gt;._
+39. On the **Register** page, in the **Phone Number** text box, type _&lt;A phone number of your choice&gt;._
 
-40. On **Register**, in the **Email** text box, type _&lt;An email time of your choice&gt;._
+40. On the **Register** page, in the **Email** text box, type _&lt;An email time of your choice&gt;._
 
-41. On **Register**, in the **User Name** text box, type _&lt;A user name of your choice&gt;._
+41. On the **Register** page, in the **User Name** text box, type _&lt;A user name of your choice&gt;._
 
-42. On **Register**, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
+42. On the **Register** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
 
-43. On **Login**, in the **User Name** text box, type _&lt;The registered user name&gt;._
+43. On the **Login** page, in the **User Name** text box, type _&lt;The registered user name&gt;._
 
-44. On **Login**, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
+44. On the **Login** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
 
-      >**Note:** Examine the page, you have been authorized to enter the Student Portal page.
+      >**Note:** Examine the page, you have been authorized to enter the **Student Portal** page.
 
 45.  In **Microsoft Edge**, click **Close**.
 
@@ -257,7 +255,7 @@
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin\IdentityExample**, and then copy the address in the address bar.
+1. In **File Explorer**, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin\IdentityExample**, and then copy the address in the address bar.
 
 2. Go to **Start**, and then type **cmd**.
 
@@ -280,7 +278,7 @@
 
 7. Close the window.
 
-8. In the **File Explorer**, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin**, and then double-click **IdentityExample.sln**.
+8. In **File Explorer**, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin**, and then double-click **IdentityExample.sln**.
 
 9. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
@@ -359,33 +357,33 @@
 
 22. In the menu bar, click **Student Portal**.
 
-      >**Note:** Student Portal page is only for authorized users therefore you redirected to the login page.
+      >**Note:** **Student Portal** page is only for authorized users therefore you redirected to the login page.
 
 23. In the menu bar, click **Our Courses**.
 
-      >**Note:** Our Courses page is authorized for all site visitors therefore you can enter the page without registration.
+      >**Note:** **Our Courses** page is authorized for all site visitors therefore you can enter the page without registration.
       
 23. In the menu bar, click **Login**.
 
-24. On **Login**, click **Register**.
+24. On the **Login** page, click **Register**.
 
-25. On **Register**, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+25. On the **Register** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
 
-26. On **Register**, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+26. On the **Register** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
 
-27. On **Register**, in the **Phone Number** text box, type _&lt;A phone number of your choice&gt;._
+27. On the **Register** page, in the **Phone Number** text box, type _&lt;A phone number of your choice&gt;._
 
-28. On **Register**, in the **Email** text box, type _&lt;An email time of your choice&gt;._
+28. On the **Register** page, in the **Email** text box, type _&lt;An email time of your choice&gt;._
 
-29. On **Register**, in the **User Name** text box, type _&lt;A user name of your choice&gt;._
+29. On the **Register** page, in the **User Name** text box, type _&lt;A user name of your choice&gt;._
 
-30. On **Register**, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
+30. On the **Register** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
 
-31. On **Login**, in the **User Name** text box, type _&lt;The registered user name&gt;._
+31. On the **Login** page, in the **User Name** text box, type _&lt;The registered user name&gt;._
 
-32. On **Login**, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
+32. On the **Login** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
 
-      >**Note:** Examine the page, you have been authorized to enter the Student Portal page.
+      >**Note:** Examine the page, you have been authorized to enter the **Student Portal** page.
 
 33.  In **Microsoft Edge**, click **Close**.
 
