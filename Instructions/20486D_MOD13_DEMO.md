@@ -262,11 +262,11 @@
        _pizzas.Add(pizza);
        return CreatedAtAction(nameof(GetById), new { id = pizza.Id }, pizza);
 ```
-12. In the **JQueryExample - Microsoft Visual Studio** window, in the **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+12. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
 
 13. In the **NewFolder** text box, type **js**, and then press Enter.
 
-14. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+14. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
 
 15. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
 
@@ -293,7 +293,7 @@
        });
 ```
 
-18. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+18. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
 
 19. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
 
@@ -324,7 +324,7 @@
        });
 ```
 
-22. In the **JQueryExample – Microsoft Visual Studio** window, in the **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+22. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
 23. In the **Index.cshtml** code window, locate the following code:
   ```cs
@@ -380,7 +380,7 @@
 
 6. In the **NewFolder** text box, type **Controllers**, and then press Enter.
 
-7. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide** right-click **Controllers**, point to **Add**, and then click **Controller**.
+7. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide**, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
 8. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
@@ -465,7 +465,7 @@
 
 24. In **Solution Explorer**, right-click **ServerSide**, point to **Debug**, and then click **Start new instance**.
 
-    >**Note:** The browser displays a grocery store in **JSON** format.
+    >**Note:** In case the first window displays 500 internal server error, you should refresh the page, and then the browser will display a grocery store information in **JSON** format.
 
 25. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
 
