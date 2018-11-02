@@ -45,7 +45,18 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add a cache tag helper to a view.
 
-1. 
+1. Open the **Command Prompt** window using **Run as administrator**.
+
+2. In Administrator: Command Prompt, run the following command: **cd <The location of Allfiles\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore folder on your machine>**.
+
+3. Run the following command: **npm install**.
+
+4. Close the **Command Prompt** window.
+
+5. Open the **ElectricStore.sln** solution from the following location: **Allfiles\Mod12\Labfiles\01_ElectricStore_begin**.
+
+6. 
+
 
 #### Task 2: Insert data to be cached by the cache tag helper.
 
