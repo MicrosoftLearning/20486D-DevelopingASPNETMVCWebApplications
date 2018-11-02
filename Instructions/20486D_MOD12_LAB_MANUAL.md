@@ -146,7 +146,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 5:  Run the application
 
->**Results**: After completing this exercise, you should have created restaurant application, in which users can view the restaurant branches, order a table and also apply for a job. 
+>**Results**: TODO: Add Results
 
 ©2018 Microsoft Corporation. All rights reserved.
 
