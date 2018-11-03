@@ -55,8 +55,22 @@ The main tasks for this exercise are as follows:
 
 5. Open the **ElectricStore.sln** solution from the following location: **Allfiles\Mod12\Labfiles\01_ElectricStore_begin**.
 
-6. 
+6. In the **ElectricStore - Microsoft Visual Studio** window, click **TOOLS** and then click **Options**.
 
+7. In the **Options** dialog box, click **Web Package Management**.
+
+8. In the **Locations of external** tools list box, select **$(PATH)**. Press the **Up** arrow button until **$(PATH)** is at the top of the list, and then click **OK**.
+
+9. Open the **package.json** file and examine its content.
+
+    >**Note:** There are dependencies to the 
+    **jquery, jquery-validation, jquery-validation-unobtrusive, bootstrap** and **popper.js** packages.
+
+10. In the **_Layout.cshtml** file, in the **UL** element with the **navbar-nav** class, add a **CACHE** element with the following information:
+
+    - vary-by-user: **true**
+
+11. In the **CACHE** element, call the **Component.InvokeAsync** method using the **@await** operator. Pass **"NavbarMenu"** as a parameter to the **InvokeAsync** method.
 
 #### Task 2: Insert data to be cached by the cache tag helper.
 
