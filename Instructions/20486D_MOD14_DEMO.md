@@ -182,65 +182,77 @@
 
 30.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in **Solution Explorer**,  expand **Controllers**, and then click **BlobController.cs**.
 
-31.	In the **BlobController.cs** window, locate the following code:
-```cs
-    _connectionString = _configuration.GetConnectionString("{your_connection_string_name}");
+31. In the **BlobController.cs** code window, locate the following code:
+  ```cs
+       using Microsoft.Extensions.Configuration;
 ```
-32. Replace **{your_connection_string_name}** with the connection string name copied in step 28.
+32. Ensure that the cursor is at the end of the **Microsoft.Extensions.Configuration** namespace, press Enter, and then type the following code:
+  ```cs
+       using Microsoft.WindowsAzure.Storage;
+       using Microsoft.WindowsAzure.Storage.Blob;
+```
 
 33.	In the **BlobController.cs** window, locate the following code:
 ```cs
-public async Task<ActionResult> Upload(IFormFile photo)
-{
-            
+       _connectionString = _configuration.GetConnectionString("{your_connection_string_name}");
 ```
+34. Replace **{your_connection_string_name}** with the connection string name copied in step 28.
 
-34. Place the cursor at the end of the located code, press Enter, and then type the following code:
+35.	In the **BlobController.cs** window, select the following code:
 ```cs
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connectionString);
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer container = blobClient.GetContainerReference("myimagecontainer");
-
-            if (await container.CreateIfNotExistsAsync())
-            {
-                await container.SetPermissionsAsync(
-                    new BlobContainerPermissions
-                    {
-                        PublicAccess = BlobContainerPublicAccessType.Blob
-                    }
-                    );
-            }
-
-            CloudBlockBlob blob = container.GetBlockBlobReference(photo.FileName);
-           
-            await blob.UploadFromStreamAsync(photo.OpenReadStream());
-      
-            TempData["ImageURL"] = blob.Uri.ToString();
-            
+       [HttpPost]
+       public ActionResult Upload(IFormFile photo)
+       {
+           return View("LatestImage");
+       }       
 ```
 
-35. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+36. Replace the selected code with the following code:
+```cs
+       [HttpPost]
+       public async Task<ActionResult> Upload(IFormFile photo)
+       {
+           CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connectionString);
+           CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+           CloudBlobContainer container = blobClient.GetContainerReference("myimagecontainer");
+           
+           if (await container.CreateIfNotExistsAsync())
+           {
+               await container.SetPermissionsAsync(
+               new BlobContainerPermissions
+               {
+                   PublicAccess = BlobContainerPublicAccessType.Blob
+               });      
+           }
+           CloudBlockBlob blob = container.GetBlockBlobReference(photo.FileName);
+           await blob.UploadFromStreamAsync(photo.OpenReadStream());
+           TempData["ImageURL"] = blob.Uri.ToString();
+           return View("LatestImage");
+       }
+```
 
-36. In the **AzureStorageDemo – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+37. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-37.	In **Microsoft Edge**, click **Browse**.
+38. In the **AzureStorageDemo – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-38.	In **File Explorer** navigate to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo\images**, click **Desert.jpeg**, and then click **Open**.
+39.	In **Microsoft Edge**, click **Browse**.
 
-39. In **Microsoft Edge**, click **Submit**. 
+40.	In **File Explorer** navigate to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo\images**, click **Desert.jpeg**, and then click **Open**.
+
+41. In **Microsoft Edge**, click **Submit**. 
     >**Note:** The browser displays the uploaded image.
 
-40. In **Microsoft Edge**, open a new tab, type **http://portal.azure.com**, and then press Enter.
+42. In **Microsoft Edge**, open a new tab, type **http://portal.azure.com**, and then press Enter.
 
-41.	In the **Storage accounts** window, click **blobdemo{unique name}**.
+43.	In the **Storage accounts** window, click **blobdemo{unique name}**.
 
-42.	In the **blobdemo{unique name}** window, below **Services**, click **Blobs**.
+44.	In the **blobdemo{unique name}** window, below **Services**, click **Blobs**.
 
-43.	In the **Blobs** window, click **myimagecontainer**, and verify the the presence of uploaded image.
+45.	In the **Blobs** window, click **myimagecontainer**, and verify the the presence of uploaded image.
 
-44. Close all **Microsoft Edge** windows.
+46. Close all **Microsoft Edge** windows.
 
-45. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+47. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

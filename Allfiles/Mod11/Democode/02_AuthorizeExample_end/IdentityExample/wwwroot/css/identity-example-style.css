@@ -1,0 +1,58 @@
+﻿body {
+    font-family: "Playfair Display", Arial, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.register {
+    color: #6d7dd6;
+    margin: 5px;
+    font-weight: 400;
+}
+
+.main-title {
+    text-align: center;
+    padding: 25px;
+    color: #f17777;
+}
+
+.second-title {
+    text-align: center;
+    padding: 20px;
+    color: #1ed184;
+}
+
+.validation-summary-errors {
+    color: #ffc107;
+}
+
+.navbar-custom {
+    background-color: #10b46d;
+}
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        padding: 5px;
+    }
+
+    .navbar-custom .navbar-nav .nav-link {
+        padding: 5px;
+    }
+
+    .navbar-custom .nav-item.active .nav-link,
+    .navbar-custom .nav-item:hover .nav-link {
+        background-color: #b9836d;
+    }
+
+.page-container {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #d6d4d4;
+    padding: 15px;
+    width: 600px;
+    box-shadow: 5px 10px #888888;
+}
+
+.details {
+    font-size: 20px;
+    font-weight: 400;
+}

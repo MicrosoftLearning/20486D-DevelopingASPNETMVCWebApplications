@@ -85,7 +85,7 @@ The main tasks for this exercise are as follows:
 
 12. Above the **Get** method, add a **HttpGet** attribute.
 
-13. In the **Get** method, create a variable named **branches** of type **var**ת and assign it the value of the following LINQ query:
+13. In the **Get** method, create a variable named **branches** of type **var**, and assign it the value of the following LINQ query:
 
     - From: **r in _context.RestaurantBranches**
     - Orderby: **r.City**
@@ -143,7 +143,7 @@ The main tasks for this exercise are as follows:
 
 10. Inside the **IF** statement code block, return a **NotFoundResult** result using the **NotFound** method.
 
-11. After the **IF** statement code block, return the **ActionResult&lt;OrderTable&gt;** result usig the **order** variable.
+11. After the **IF** statement code block, return the **ActionResult&lt;OrderTable&gt;** result using the **order** variable.
 
 #### Task 4: Run the application
 
@@ -151,7 +151,7 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In **Microsoft Edge**, navigate to **http://localhost:[port]/api/Reservation/1**.
+3. In **Microsoft Edge**, navigate to **http://localhost:[port]/api/Reservation/1/details**.
     >**Note:**  The browser displays the first restaurant in **JSON** format.
 
 4. Close **Microsoft Edge**.
@@ -176,9 +176,9 @@ The main tasks for this exercise are as follows:
 
 6. Call the **SaveChanges** method of the **_context** field. 
 
-7. Return the **ActionResult&lt;OrderTable&gt** result usig the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and **orderTable** as parameters to the **CreatedAtAction** method.
+7. Return the **ActionResult&lt;OrderTable&gt** result using the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and **orderTable** as parameters to the **CreatedAtAction** method.
 
->**Results**: After completing this exercise, you will be able to add actions to a Web Api application, and call them using Microsoft Edge.
+>**Results**: After completing this exercise, you will be able to add actions to a Web API application, and call them using **Microsoft Edge**.
 
 ### Exercise 2: Calling a Web API using Server-Side Code
 
@@ -369,7 +369,6 @@ The main tasks for this exercise are as follows:
    
 28. Return the **IActionResult** result using the **View** method. 
 
-
 #### Task 4: Run the Application
 
 1. View the content of the **Create.cshtml** view.
@@ -390,14 +389,14 @@ The main tasks for this exercise are as follows:
     - First Name: **_&lt;A first name of your choice&gt;_**
     - Last Name: **_&lt;A last name of your choice&gt;_**
     - Phone Number: **_&lt;A phone of your choice&gt;_** 
-    - Reservation Time: **_&lt;An reservation time of your choice&gt;_** 
+    - Reservation Time: **_&lt;A reservation time of your choice&gt;_** 
     - Dinner Guests: **_&lt;A dinner guests of your choice&gt;_** 
     
 8. Click **Make a Reservation**.
 
 9. Close all **Microsoft Edge** windows.
 
->**Results**: After completing this exercise, you will be able to call Web Api Service Get, and Post methods using HTTPClient.
+>**Results**: After completing this exercise, you will be able to call Web API Service Get, and Post methods using HTTPClient.
 
 ### Exercise 3: Calling a Web API using jQuery
 
@@ -475,7 +474,6 @@ The main tasks for this exercise are as follows:
 14. In the **Scripts** section code block, add a **SCRIPT** element with the following information:
 
     - Src: **~/js/wanted-ad-get.js**
-
 
 #### Task 2: Run the Application
 
@@ -556,9 +554,9 @@ The main tasks for this exercise are as follows:
 
 16. Create an **IF** statement that checks that the value of the **response.IsSuccessStatusCode** varible is **true**. 
 
-17. Inside the **IF** statement code block, assign the **_employeeRequirements ** property with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;EmployeeRequirements&gt;&gt;()**.
+17. Inside the **IF** statement code block, assign the **_employeeRequirements** property with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;EmployeeRequirements&gt;&gt;()**.
 
-18. Assign the **EmployeeRequirementsId ** property of the **ViewBag** field with the value of **new SelectList(_employeeRequirements, "Id", "JobTitle", selectedRequirements)**.
+18. Assign the **EmployeeRequirementsId** property of the **ViewBag** field with the value of **new SelectList(_employeeRequirements, "Id", "JobTitle", selectedRequirements)**.
 
 19. Add a method with the following information:
    - Scope: **public**
@@ -567,10 +565,10 @@ The main tasks for this exercise are as follows:
    
 20. Return the **IActionResult** result using the **View** method. 
 
-21. Add a **JavaScript** File with the following information:
+21. Add a **JavaScript** **File** with the following information:
 
    - Folder: **Client/wwwroot/js**
-   - Name: **wanted-ad-post.js**
+   - Name: **wanted-ad-post**
    
 22. In the **wanted-ad-post.js** file, call the **$** function and pass an **anonymous function** as a parameter.
 
@@ -580,7 +578,7 @@ The main tasks for this exercise are as follows:
 
 25. Modify the **anonymous function** passed to the **click** function to accept an **e** parameter.
 
-26. In the  **anonymous function** code block, add a variable named **formData** with the value of **{}**.
+26. In the  **anonymous function** code block, add a variable named **formData** of type **var** with the value of **{}**.
 
 27. Call the **$** function and pass **'#submit-form'** as a parameter.
 
@@ -590,9 +588,9 @@ The main tasks for this exercise are as follows:
 
 30. Modify the **anonymous function** passed to the **map** function to accept an **item** parameter.
 
-31. In the **anonymous function** code block, aiign the **name** property of the **item** parameter the value of **item.name[0].toLowerCase() + item.name.slice(1)**.
+31. In the **anonymous function** code block, asign the **name** property of the **item** parameter the value of **item.name[0].toLowerCase() + item.name.slice(1)**.
 
-32. Add a **IF** statement that checks that the value of **formData[item.name]** is true. 
+32. Add a **IF** statement that checks that the value of **formData[item.name]** is **TRUE**. 
 
 33. Inside the **IF** statement, add a **IF** statement that checks that the value of **formData[item.name]** is equal to **"string"**. 
 
@@ -647,7 +645,7 @@ The main tasks for this exercise are as follows:
 
 10. Close **Microsoft Visual Studio**.
 
->**Results**: After completing this exercise, you should have created an Restaurant application, in which users can view the restaurant branches, order a table and also apply for a job. 
+>**Results**: After completing this exercise, you should have created restaurant application, in which users can view the restaurant branches, order a table and also apply for a job. 
 
 ©2018 Microsoft Corporation. All rights reserved.
 
