@@ -15,7 +15,7 @@ namespace AzureStorageDemo.Controllers
         public BlobController(IConfiguration configuration)
         {
             _configuration = configuration;
-            _connectionString = _configuration.GetConnectionString("{your_storage_account_name}_AzureStorageConnectionString");
+            _connectionString = _configuration.GetConnectionString("{your_connection_string_name}");
         }
 
         public IActionResult Index()
