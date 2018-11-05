@@ -634,7 +634,7 @@ The main tasks for this exercise are as follows:
 
 7. On **Submit Job Application**, submit a form with the following credentials:
    
-    - Job Title: **_&lt;a job title of your choice&gt;_**
+    - Job Title: **_&lt;A job title of your choice&gt;_**
     - First Name: **_&lt;A first name of your choice&gt;_**
     - Last Name: **_&lt;A last name of your choice&gt;_**
     - Phone Number: **_&lt;A phone of your choice&gt;_** 
