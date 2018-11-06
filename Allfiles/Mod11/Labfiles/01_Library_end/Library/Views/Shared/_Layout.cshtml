@@ -31,6 +31,12 @@
                         <a class="nav-link" href="@Url.Action("Login", "Account")">Login</a>
                     </li>
                 }
+                @if (User.IsInRole("Administrator"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Librarian")">Logout</a>
+                    </li>
+                }
             </ul>
         </div>
     </nav>
