@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Library.Models.Book>
+
+@{
+    ViewData["Title"] = "GetBooksByGener";
+}
+
+<h2>GetBooksByGener</h2>
+
+
+<h2 class="title">
+    <img src="~/images/sale-banner.jpg" />
+    <span class="span-col-s">Our Books</span>
+</h2>
+
+
+<div class="page-container">
+    @foreach (var item in Model)
+    {
+        <div class="item">
+            <h3>
+                @Html.DisplayFor(modelItem => item.Name)
+            </h3>
+            @if (item.ImageName != null)
+            {
+                <div>
+                    <img src="@Url.Action("GetImage", "Library", new { id = item.Id })" />
+                </div>
+            }
+            <div>
+                <p>
+                    @Html.DisplayFor(model => item.Author)
+                </p>
+                <p>
+                    @Html.DisplayFor(model => item.Available)
+                </p>
+                <p>
+                    @Html.DisplayFor(model => item.Genre)
+                </p>
+                <p>
+                    @Html.DisplayFor(model => item.DatePublished)
+                </p>
+            </div>
+        </div>
+    }
+</div>

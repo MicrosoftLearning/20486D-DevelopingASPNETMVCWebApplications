@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Library.Data;
@@ -14,6 +15,7 @@ namespace Library.Controllers
 {
     public class LibraryController : Controller
     {
+
         private LibraryContext _context;
         private IHostingEnvironment _environment;
 
@@ -26,13 +28,8 @@ namespace Library.Controllers
         [AllowAnonymous]
         public IActionResult Index()
         {
-            return View();
-        }
-
-        [Authorize]
-        public IActionResult GetBooks()
-        {
             var booksQuery = from b in _context.Books
+                             where b.Recommended == true
                              orderby b.Author
                              select b;
 
@@ -62,6 +59,7 @@ namespace Library.Controllers
         }
 
         [Authorize]
+        [ValidateAntiForgeryToken]
         [HttpPost, ActionName("LendingBooks")]
         public async Task<IActionResult> LendingBookPost(int id)
         {
@@ -85,7 +83,44 @@ namespace Library.Controllers
                         orderby b.Author
                         select b;
 
-            ViewBag.BookID = new SelectList(books.AsNoTracking(), "Id", "Name", selectedBook);
+            ViewBag.BookList = new SelectList(books.AsNoTracking(), "Id", "Name", selectedBook);
+        }
+
+
+        public IActionResult GetImage(int id)
+        {
+            Book requestedBook = _context.Books.FirstOrDefault(b => b.Id == id);
+            if (requestedBook != null)
+            {
+                string webRootpath = _environment.WebRootPath;
+                string folderPath = "\\images\\";
+                string fullPath = webRootpath + folderPath + requestedBook.ImageName;
+                if (System.IO.File.Exists(fullPath))
+                {
+                    FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
+                    byte[] fileBytes;
+                    using (BinaryReader br = new BinaryReader(fileOnDisk))
+                    {
+                        fileBytes = br.ReadBytes((int)fileOnDisk.Length);
+                    }
+                    return File(fileBytes, requestedBook.ImageMimeType);
+                }
+                else
+                {
+                    if (requestedBook.PhotoFile.Length > 0)
+                    {
+                        return File(requestedBook.PhotoFile, requestedBook.ImageMimeType);
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+                }
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }

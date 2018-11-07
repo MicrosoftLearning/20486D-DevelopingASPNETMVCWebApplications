@@ -18,6 +18,7 @@ namespace Library.Models
         public byte[] PhotoFile { get; set; }
         public string ImageMimeType { get; set; }
         public IFormFile PhotoAvatar { get; set; }
+        public bool Recommended { get; set; }
 
         [InverseProperty("Books")]
         public virtual Genre Genre { get; set; }

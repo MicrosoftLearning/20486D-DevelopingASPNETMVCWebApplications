@@ -1,0 +1,67 @@
+﻿@model Library.Models.Book
+
+@{
+    ViewData["Title"] = "AddBook";
+}
+
+<h1 class="title">Add Books to Library</h1>
+<div class="row justify-content-center">
+    <div class="col-4">
+        <form method="post" enctype="multipart/form-data" asp-action="AddToShoppingList">
+            <div class="form-group row">
+                <label asp-for="Genre" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-6">
+                    <select multiple asp-for="Genre" asp-items="ViewBag.GenerList" type="text" class="form-control" placeholder="Geners" required></select>
+                    <span asp-validation-for="Genre"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Name" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-6">
+                    <input asp-for="Name" type="text" class="form-control" placeholder="Name" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Author" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-6">
+                    <input asp-for="Author" type="text" class="form-control" placeholder="Author" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="DatePublished" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-6">
+                    <input asp-for="DatePublished" type="time" class="form-control" placeholder="Published Date" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Recommended" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-6">
+                    <input asp-for="Recommended" type="text" class="form-control" placeholder="Recommended" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="PhotoAvatar" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-6">
+                    <input asp-for="PhotoAvatar" type="image" class="form-control" placeholder="Photo" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button id="formButton" type="submit" class="btn btn-outline-primary">
+                        Add a Book
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+
+

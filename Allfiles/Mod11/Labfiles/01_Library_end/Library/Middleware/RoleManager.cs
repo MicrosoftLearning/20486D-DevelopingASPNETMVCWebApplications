@@ -11,7 +11,7 @@ namespace Library.Middleware
 {
     public class RoleManager
     {
-        public async Task CreateRoles(IServiceProvider serviceProvider, IConfiguration configuration)
+        public static async Task CreateRoles(IServiceProvider serviceProvider, IConfiguration configuration)
         {
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var UserManager = serviceProvider.GetRequiredService<UserManager<User>>();

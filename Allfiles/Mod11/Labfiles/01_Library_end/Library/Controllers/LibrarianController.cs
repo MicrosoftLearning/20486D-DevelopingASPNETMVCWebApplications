@@ -18,14 +18,12 @@ namespace Library.Controllers
     public class LibrarianController : Controller
     {
         private LibraryContext _context;
-        private IHostingEnvironment _environment;
         private UserManager<User> _userManage;
         private RoleManager<IdentityRole> _roleManager;
 
-        public LibrarianController(LibraryContext libraryContext, IHostingEnvironment environment, UserManager<User> userManage, RoleManager<IdentityRole> roleManager)
+        public LibrarianController(LibraryContext libraryContext, UserManager<User> userManage, RoleManager<IdentityRole> roleManager)
         {
             _context = libraryContext;
-            _environment = environment;
             _userManage = userManage;
             _roleManager = roleManager;
         }
@@ -41,6 +39,7 @@ namespace Library.Controllers
         }
 
         [HttpPost, ActionName("AddBook")]
+        [ValidateAntiForgeryToken]
         public IActionResult AddBookPost(Book book)
         {
             if (ModelState.IsValid)
@@ -64,50 +63,13 @@ namespace Library.Controllers
             return View();
         }
 
-        private void PopulateBooksDropDownList(int? selectedBook = null)
+        private void PopulateBooksDropDownList(int? selectedGener = null)
         {
-            var books = from b in _context.Books
-                        orderby b.Author
+            var genres = from b in _context.Genres
+                        orderby b.Name
                         select b;
 
-            ViewBag.BookID = new SelectList(books.AsNoTracking(), "Id", "Name", selectedBook);
+            ViewBag.GenerList = new SelectList(genres.AsNoTracking(), "Id", "Name", selectedGener);
         }
-
-        public IActionResult GetImage(int id)
-        {
-            Book requestedBook = _context.Books.FirstOrDefault(b => b.Id == id);
-            if (requestedBook != null)
-            {
-                string webRootpath = _environment.WebRootPath;
-                string folderPath = "\\images\\";
-                string fullPath = webRootpath + folderPath + requestedBook.ImageName;
-                if (System.IO.File.Exists(fullPath))
-                {
-                    FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
-                    byte[] fileBytes;
-                    using (BinaryReader br = new BinaryReader(fileOnDisk))
-                    {
-                        fileBytes = br.ReadBytes((int)fileOnDisk.Length);
-                    }
-                    return File(fileBytes, requestedBook.ImageMimeType);
-                }
-                else
-                {
-                    if (requestedBook.PhotoFile.Length > 0)
-                    {
-                        return File(requestedBook.PhotoFile, requestedBook.ImageMimeType);
-                    }
-                    else
-                    {
-                        return NotFound();
-                    }
-                }
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
-
     }
 }

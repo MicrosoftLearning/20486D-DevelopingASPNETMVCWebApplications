@@ -26,7 +26,6 @@ namespace Library
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddIdentity<User, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = true;
@@ -48,7 +47,7 @@ namespace Library
             });
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, LibraryContext libraryContext, IServiceProvider serviceProvider, RoleManager roleManager)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, LibraryContext libraryContext, IServiceProvider serviceProvider)
         {
             libraryContext.Database.EnsureDeleted();
             libraryContext.Database.EnsureCreated();
@@ -59,8 +58,6 @@ namespace Library
 
             app.UseNodeModules(env.ContentRootPath);
 
-            roleManager.CreateRoles(serviceProvider, _configuration).Wait();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -69,6 +66,8 @@ namespace Library
                     defaults: new { controller = "Library", action = "Index" },
                     constraints: new { id = "[0-9]+" });
             });
+
+            //(serviceProvider, _configuration).Wait();
         }
     }
 }
