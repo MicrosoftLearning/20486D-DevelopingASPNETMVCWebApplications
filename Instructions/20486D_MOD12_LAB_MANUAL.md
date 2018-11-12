@@ -163,7 +163,6 @@ The main tasks for this exercise are as follows:
         - aria-expanded: **false**
     
 
-
 19. After the **A** element, add a **DIV** element with the following information:
 
      - class: **dropdown-menu**
@@ -210,19 +209,122 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Run the application
 
-1. 
+1. Save all the changes.
+
+2. Start the application without debugging.
+    >**Note:** Examine the browser content, the browser displays the **Index.cshtml** file content, rendered in the **_Layout.cshtml**, and the chached content is the meanu bar of the application.
+
+3. In the menu bar, click **Electronics**, and then click **Home Electrical Equipment**.
+    >**Note:** Examine the browser content.
+
+4. In the menu bar, click **Electronics**, and then click **Office Electrical Equipment**.
+
+    >**Note:** Examine the browser content.
+
+5. Close the **Microsoft Edge** window.
+
 
 #### Task 4: Insert items to a memory cache.
 
-1. 
+1. In the **ProductsController** class, add **USING** statements for the following namespace:
+
+   - **Microsoft.Extensions.Caching.Memory**
+
+
+2. Create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **IMemoryCache**
+   - Name: **_memoryCache**
+
+3. Create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **string**
+   - Name: **PRODUCT_KEY**
+   - Modifier: **const**
+   - Value: **"Products"**
+
+4. Change the signature of the **ProductsController** constructor to accept the following parameters:
+
+   - Parameter: 
+     - Type: **StoreContext**
+     - Name: **context**
+   - Parameter: 
+     - Type: **IHostingEnvironment**
+     - Name: **environment**
+   - Parameter: 
+     - Type: **IMemoryCache**
+     - Name: **memoryCache**
+
+5. In the constructor, initialize the  **_memoryCache** field with the value of the **memoryCache** parameter.
+
+6. In the beginning of the  **Index** method,  create a variable named **products** of type **List&#60;Product&#62;**.
+
+7. Add an **IF** statement that checks that value of **_memoryCache.TryGetValue(PRODUCT_KEY, out products)** is false.
+
+8. In the **IF** statement, assign the **products** variable, with the value of **_context.Products.ToList()**.
+
+9. Create a variable named **MemoryCacheEntryOptions** of type **cacheOptions**. Initialize the  **cacheOptions** variable using the  **MemoryCacheEntryOptions** constructor.
+
+10. Call the **SetPriority** method of the  **cacheOptions** variable. Pass **CacheItemPriority.High** as a parameter to the  **SetPriority** method.
+
+11. Call the **SetSlidingExpiration** method of the  **cacheOptions** variable. Pass **TimeSpan.FromSeconds(60)** as a parameter to the  **SetSlidingExpiration** method.
+
+12. Call the **Set** method of the  **_memoryCache** variable. Pass **PRODUCT_KEY**,  **products** and  **cacheOptions** as a parameters to the  **Set** method.
+
 
 #### Task 5: Retrieve items from a memory cache
 
-1. 
+1. In the **Products/Index.cshtml** view, after the **H2** element, add a **DIV** element with the following information:
+
+     - Class: **page-container**
+
+
+2. In the **DIV** element, create a **FOREACH** statement, with the following information:
+
+	- Variable Type: **var**
+	- Variable Name: **item**
+	- Collection: **Model**
+
+3. In the **FOREACH** statement block, add a **DIV** element with the following information:
+
+    - class: **item**
+
+4. In the new **DIV** element, add a **H3** element with the following information:
+
+    - Content: **@Html.DisplayFor(modelItem => item.ProductName)**
+
+
+5. After the **H3** element, add a **IF** statement that checks that **item.PhotoFileName** is not **NULL**.
+
+6. In the **IF** statement code block, add a **DIV** element.
+
+7. In the new **DIV** element,  add a **IMG** element with the following information:
+
+     - src: **@Url.Action("GetImage", "Products", new { productId = item.Id })**
+
+8. After the **IF** statement code block, add a **DIV** element,
+
+9. In the new **DIV** element, add a **P** element with the following information:
+
+     - Content: **@Html.DisplayFor(model => item.Description)**
+
+10. After the new **P** element, add a **P** element with the following information:
+
+     - Content: **@Html.DisplayFor(model => item.Price)**
+
+
 
 #### Task 6: Run the application
-1. 
 
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+    >**Note:** Examine the browser content, the browser displays the **Index.cshtml** file content, rendered in the **_Layout.cshtml**, and the chached  content is the products that are shown in the **"Sale of The Day"** page content.
+
+3. Close the **Microsoft Edge** window.
 
 
 >**Results**: TODO: Add Results
