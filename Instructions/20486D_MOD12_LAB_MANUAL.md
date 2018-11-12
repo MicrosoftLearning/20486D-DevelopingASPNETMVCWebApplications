@@ -549,13 +549,116 @@ The main tasks for this exercise are as follows:
 	- Value: **"^1.0.0"**
 
 
-#### Task 3: Add a chat view.
+#### Task 3: Add a chat view
 
-1. 
+1. In the **ShoppingCardController**, declare a method with following information:
+
+   - Name: **Chat**
+   - Return type: **IActionResult **
+   - Scope: **public**
+
+2. In the **Configure** method, return the **ViewResult** result using the **View** method.
+
+3. Create a new view using the **Add MVC View** dialog box, with the following information:
+
+    - View Name: **Chat**
+    - Template: **Empty (without model)**
+    - Create as Partial View: **False**
+    - Use a layout page: **True**
+    - Layout Page: **_Layout.cshtml**
+
+4. In the **Chat.chtml** view, remove the **H2** element. 
+
+5. Add a **H2** element with the following information:
+
+     - Class: **title**
+
+6. In the **H2** element, add a **SPAN** element with the following information:
+
+	 - Content: **Chat with**
+
+7. Add a **SPAN** element with the following information:
+
+	 - Content: **Online Site Visitors**
+     - Class: **chat-title**
+
+8. After the  **H2** element, add a **DIV** element with the following information:
+
+     - Class: **chat**
+
+9. In the new **DIV** element, add a **DIV** element with the following information:
+
+	 - Class: **row justify-content-center**
+
+10. In the new **DIV** element, add a **DIV** element with the following information:
+
+	 - Class: **col-2 bcf**
+
+11. In the new **DIV** element, add a **DIV** element with the following information:
+
+    - Content: **Name: &lt;input type="text" id="inputUserName" /&gt;**
+	- Class: **col-5**
+
+
+12. After the **DIV** element with the **col-5** class, add a **DIV** element with the following information:
+
+    - Content: **Message: &lt;input type="text" id="inputMessage" /&gt;**
+	- Class: **col-sm-5**
+
+
+13. After the **DIV** element with the **col-sm-5** class, add a **DIV** element with the following information:
+
+	- Class: **col-sm-3**
+
+
+14. In the new **DIV** element, add a **INPUT** element with the following information:
+
+    - Type: **type**
+	- Class: **btn btn-info**
+    - Id: **sendMessageBtn**
+    - Value: **Send Message**
+
+
+15. After the **DIV** element with the **col-2 bcf** class, add a **DIV** element with the following information:
+
+	- Class: **col-2 bcs**
+
+
+16. In the new **DIV** element, add a **UL** element with the following information:
+
+    - Id: **messagesList**
+
+17. After the **DIV** element with the **chat** class, create a **@section**  with the following information: 
+    - Name: **Scripts**
+
+18. In the **Scripts** section, add a **SCRIPT** element with the following information:
+
+    - Src: **~/node_modules/@@aspnet/signalr/dist/browser/signalr.js**
+
+19. In the **Index.cshtml** view under **Views/ShoppingCard**, after the **ELSE** statement code block, add a **BUTTON** element with the following information:
+
+    - Type: **button**
+	- Class: **btn btn-success**
+    - Id: **btnChat**
+    - Onclick: **location.href='@Url.Action("Chat", "ShoppingCard")'**
+    - Content: **Chat with Online Visitors**
+
 
 #### Task 4: Write the JavaScript code to connect to the server
 
-1. 
+1.  Create a new folder with the following information:
+
+	- Folder name: **js**
+	- Parent folder: **wwwroot**
+
+2. Add **chat-hub.js** file to the **ElectricStore** project, with the following information:
+
+	- Source location: **Allfiles\Mod08\Labfiles\ElectricStoreJS**
+	- Target location: **Allfiles\Mod08\Labfiles\01_ElectricStore_begin\ElectricStore\wwwroot\js**
+
+3. In the **Chat.chtml** view, in the **Scripts** section, add a **SCRIPT** element with the following information:
+
+    - Src: **~/js/chat-hub.js**
 
 
 #### Task 5:  Run the application
