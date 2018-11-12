@@ -21,7 +21,7 @@
                     <a class="nav-link" href="@Url.Action("GetBooksByGener", "Library")">Our Books</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("LendingBook", "Library")">Lind a Book</a>
+                    <a class="nav-link" href="@Url.Action("LendingBook", "Library")">Lend a Book</a>
                 </li>
                 @if (User.Identity.IsAuthenticated)
                 {
@@ -38,7 +38,7 @@
                 @if (User.IsInRole("Administrator"))
                 {
                     <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Index", "Librarian")">Logout</a>
+                        <a class="nav-link" href="@Url.Action("Index", "Librarian")">Workrs Portal</a>
                     </li>
                 }
             </ul>

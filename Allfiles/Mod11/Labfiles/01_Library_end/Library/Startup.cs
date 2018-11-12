@@ -37,7 +37,7 @@ namespace Library
             .AddEntityFrameworkStores<LibraryContext>();
 
             services.AddDbContext<LibraryContext>(options =>
-                  options.UseSqlite("Data Source=student.db"));
+                  options.UseSqlite("Data Source=library.db"));
 
             services.AddMvc();
 
@@ -47,7 +47,7 @@ namespace Library
             });
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, LibraryContext libraryContext, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, LibraryContext libraryContext)
         {
             libraryContext.Database.EnsureDeleted();
             libraryContext.Database.EnsureCreated();
@@ -61,13 +61,11 @@ namespace Library
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "StudentRoute",
+                    name: "LibraryRoute",
                     template: "{controller}/{action}/{id?}",
                     defaults: new { controller = "Library", action = "Index" },
                     constraints: new { id = "[0-9]+" });
             });
-
-            //(serviceProvider, _configuration).Wait();
         }
     }
 }

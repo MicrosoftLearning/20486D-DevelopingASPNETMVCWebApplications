@@ -6,33 +6,51 @@
 
 
 
-<h2 class="title">
-    <img src="~/images/sale-banner.jpg" />
+<h1 class="title">
     <span class="span-col-s">The Most Recommended Books</span>
-</h2>
+</h1>
 
 
 <div class="page-container">
     @foreach (var item in Model)
     {
-        <div class="item">
-            <h3>
-                @Html.DisplayFor(modelItem => item.Name)
-            </h3>
-            @if (item.ImageName != null)
-            {
-                <div>
-                    <img src="@Url.Action("GetImage", "Library", new { id = item.Id })" />
-                </div>
-            }
+    <div class="item">
+        <h3>
+            @Html.DisplayFor(modelItem => item.Name)
+        </h3>
+        @if (item.ImageName != null)
+        {
             <div>
-                <p>
-                    @Html.DisplayFor(model => item.Author)
-                </p>
-                <p>
-                    @Html.DisplayFor(model => item.Available)
-                </p>
+                <img src="@Url.Action("GetImage", "Library", new { id = item.Id })" />
             </div>
+        }
+
+        <div>
+            <span class="display-label">
+                @Html.DisplayNameFor(modelItem => item.Author):
+            </span>
+            <br />
+            <span class="display-field">
+                @Html.DisplayFor(modelItem => item.Author)
+            </span>
         </div>
+
+        <div>
+            <span class="display-label">
+                @Html.DisplayNameFor(modelItem => item.DatePublished)
+            </span>
+            <span class="display-field">
+                @Html.DisplayFor(model => item.DatePublished)
+            </span>
+        </div>
+        <div>
+            <span class="display-label">
+                @Html.DisplayNameFor(modelItem => item.Available)
+            </span>
+            <span class="display-field">
+                @Html.DisplayFor(model => item.Available)
+            </span>
+        </div>
+    </div>
     }
 </div>

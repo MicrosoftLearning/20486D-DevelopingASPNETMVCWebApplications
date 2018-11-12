@@ -16,6 +16,10 @@ namespace Library.ViewModels
         [Required(ErrorMessage = "Please enter your last name")]
         public string LastName { get; set; }
 
+        [Display(Name = "Role Name")]
+        [Required(ErrorMessage = "Please select a role")]
+        public string RoleName { get; set; }
+
         [Display(Name = "Phone Number")]
         [Required(ErrorMessage = "Please enter your phone number")]
         [DataType(DataType.PhoneNumber)]
