@@ -59,7 +59,7 @@ The main tasks for this exercise are as follows:
 
 7. In the **Options** dialog box, click **Web Package Management**.
 
-8. In the **Locations of external** tools list box, select **$(PATH)**. Press the **Up** arrow button until **$(PATH)** is at the top of the list, and then click **OK**.
+8. In the **Locations of external tools** list box, select **$(PATH)**. Press the **Up** arrow button until **$(PATH)** is at the top of the list, and then click **OK**.
 
 9. Open the **package.json** file and examine its content.
 
@@ -74,7 +74,139 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Insert data to be cached by the cache tag helper.
 
-1. 
+1. Create a new folder with the following information:
+
+    - Folder name: **ViewComponents**
+
+2. Create a new class with the following information:
+
+    - Name: **NavbarMenuViewComponent**
+    - Folder: **ViewComponents**   
+
+3. In the **NavbarMenuViewComponent** class, add **USING** statements for the following namespaces:
+
+   - **ElectricStore.Data**
+   - **Microsoft.AspNetCore.Mvc**
+
+4. Change the **NavbarMenuViewComponent** class to inherit from the **ViewComponent** class.
+
+5. Create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **StoreContext**
+   - Name: **_context**
+
+6. Add a constructor with the following parameter:
+
+   - Type: **StoreContext**
+   - Name: **context**
+
+7. In the constructor, initialize the  **_context** field with the value of the **context** parameter.
+
+8. Declare a method with following information:
+
+   - Name: **Invoke**
+   - Return type: **IViewComponentResult**
+   - Scope: **public**
+
+9.   In the **Invoke** method, create a variable named **categories** of type **var** with the value of **_context.menuCategories.OrderBy(c => c.Name).ToList()**.
+
+10. Return the **IViewComponentResult** result using the **View** method. Pass the **"MenuCategories"** and **categories** as a parameters to the **View** method.
+
+11. Create a new folder with the following information:
+
+     - Folder Name: **Components**
+     - Location: **Views/Shared**
+
+12. Create a new folder with the following information:
+
+     - Folder Name: **NavbarMenu**
+     - Location: **Views/Shared/Components**
+
+13. Create a new **Razor View** with the following information:
+
+     - Name: **MenuCategories**
+     - Folder: **MenuCategories**
+
+
+14. In the **MenuCategories.cshtml** view, remove all the content.
+
+15. Add a **@model** directive with the following information:
+     - Type: **IEnumerable&lt;ElectricStore.Models.MenuCategory&#62;**
+
+16. Add a **LI** element with the following information:
+
+     - Class: **nav-item**
+
+17. In the  **LI** element, add a **A** element with the following information:
+
+     - Content: **Home&#60;span class="sr-only"&#62;(current)&#60;/span&#62;**
+     - Attributes:
+        - class: **nav-link**
+        - href: **@Url.Action("Index", "Products")**
+
+
+18. After the **LI** element, add a **LI** element with the following information:
+
+     - Class: **nav-item dropdown**
+
+
+18. In the new **LI** element, add a **A** element with the following information:
+
+     - Content: **Electronics**
+     - Attributes:
+        - class: **nav-link dropdown-toggle**
+        - href: **#**
+        - id: **navbarDropdownMenuLink**
+        - data-toggle: **dropdown**
+        - aria-haspopup: **true**
+        - aria-expanded: **false**
+    
+
+
+19. After the **A** element, add a **DIV** element with the following information:
+
+     - class: **dropdown-menu**
+     - aria-labelledby: **navbarDropdownMenuLink**
+
+20. In the **DIV** element, create a **FOREACH** statement, with the following information:
+
+	- Variable Type: **var**
+	- Variable Name: **item**
+	- Collection: **Model**
+
+21. In the **FOREACH** statement block, Add a **A** element with the following information:
+
+	- Content: **@Html.DisplayFor(modelItem => item.Name)**
+    - Attributes:
+        - class: **dropdown-item**
+        - asp-action: **GetByCategory**
+        - asp-controller: **Products**
+        - asp-route-id: **@item.Id**
+
+22. After the last **LI** element, add a **LI** element with the following information:
+
+     - Class: **nav-item**
+
+23. In the new **LI** element, add a **A** element with the following information:
+
+     - Content: **Add to Shopping List**
+     - Attributes:
+        - class: **nav-link**
+        - href: **@Url.Action("AddToShoppingList", "Products")**
+
+
+24. After the last **LI** element, add a **LI** element with the following information:
+
+     - Class: **nav-item**
+
+25. In the new **LI** element, add a **A** element with the following information:
+
+     - Content: **My Shopping Card**
+     - Attributes:
+        - class: **nav-link**
+        - href: **@Url.Action("Index", "ShoppingCard")**
+
 
 #### Task 3: Run the application
 
