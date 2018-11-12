@@ -315,7 +315,6 @@ The main tasks for this exercise are as follows:
      - Content: **@Html.DisplayFor(model => item.Price)**
 
 
-
 #### Task 6: Run the application
 
 1. Save all the changes.
@@ -327,7 +326,7 @@ The main tasks for this exercise are as follows:
 3. Close the **Microsoft Edge** window.
 
 
->**Results**: TODO: Add Results
+>**Results**: After completing this exercise, you will be able to implement caching strategy by adding cache tag helper to a view, and insert items to a memory cache.
 
 
 ### Exercise 2: Managing State
@@ -350,21 +349,130 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Enable working with sessions.
 
-1. 
+1. In the **Startup** class, in the **ConfigureServices** method, after the **services.AddDbContext** method call, call the **AddDistributedMemoryCache** method of the **services** parameter.
+
+2. Call the **AddSession** method of the **services** parameter. Pass the following **options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(60);
+            })** lamda expression as a parameter to the **AddSession** method. 
+
+3.  In the **Configure** method, call the **UseSession** method of the **app** parameter.
+
 
 #### Task 2: Write an action in the first controller.
 
-1. 
+1. In the **ProductsController** class, add **USING** statements for the following namespaces:
+
+   - **Microsoft.AspNetCore.Http**
+   - **Newtonsoft.Json**
+
+2. In the **AddToShoppingListPost** action, after the **SaveChanges** method call and before the **RedirectToAction** method call, add an **IF** statement that check that **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerName"))** is true and **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts"))** is true. 
+
+3. In the **IF** statement code block, call the **HttpContext.Session.SetString** method and pass **"CustomerName"** and **customer.FirstName** as parameters.
+
+4. Create a variable named **serialisedDate** of type **var** and assign it with the value of **JsonConvert.SerializeObject(customer.SelectedProductsList)**.
+
+5. Call the **HttpContext.Session.SetString** method and pass **"CustomerProducts"** and **serialisedDate** as parameters.
+
 
 #### Task 3: Write the content of the second controller.
 
-1. 
+1.  Create a new controller with the following information:
+    - Controller name: **ShoppingCardController**
+    - Template: **MVC controller - Empty**
+    - Folder: **Controllers**
+
+
+2. In the **ShoppingCardController** class, add **USING** statements for the following namespaces:
+
+   - **ElectricStore.Data**
+   - **ElectricStore.Models**
+   - **Microsoft.AspNetCore.Http**
+   - **Newtonsoft.Json**
+
+3. Create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **StoreContext**
+   - Name: **_context**
+
+4. Create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **List&lt;Product&gt;**
+   - Name: **products**
+
+5. Create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **SessionStateViewModel**
+   - Name: **sessionModel** 
+
+6. Add a constructor with the following parameter:
+
+   - Type: **StoreContext**
+   - Name: **context**
+
+7. In the constructor, initialize the  **_context** field with the value of the **context** parameter.
+
+8. Remove the contents of the **Index** method.
+
+9. In the **Index** method,  add an **IF** statement that check that **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerName"))** is false and **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts"))** is false. 
+
+10. In the **IF** statement code block, create a variable named **ProductsListId** of type **int[]** and assign it with the value of **JsonConvert.DeserializeObject&lt;int[]&gt;(HttpContext.Session.GetString("CustomerProducts"))**. 
+
+11. Assign the **products** field with the value of **new List<Product>()**.
+
+12. Create a **FOREACH** statement, with the following information:
+
+    - Variable Type: **var**
+    - Variable Name: **item**
+    - Collection: **ProductsListId**
+
+13. In the **FOREACH** statement code block, create a **product** variable of type **var** and assign it with the value of **_context.Products.SingleOrDefault(p => p.Id == item)**.
+
+14. Call the **Add** method of the **products** variable. Pass **product** as a parameter to the **Add** method. 
+
+15. After the **FOREACH** code block, assign the **sessionModel** field with the value of **new SessionStateViewModel** object. 
+
+16. Inititialize the **CustomerName** property of the **sessionModel** field with the value of **HttpContext.Session.GetString("CustomerName")**. 
+
+17. Inititialize the **SelectedProducts** property of the  **sessionModel** field with the value of **products**. 
+
+
+18. Return the **ViewResult** result using the **View** method. Pass **sessionModel** as a parameter to the **View** method. 
 
 #### Task 4: Run the application and navigate from view to view.
 
-1. 
+1. Save all the changes.
 
->**Results**: TODO: Add Results
+2. Start the application without debugging.
+    >**Note:** Examine the browser content, the browser displays the **Index.cshtml** file content, rendered in the **_Layout.cshtml**, and the chached content is the meanu bar of the application.
+
+3. In the menu bar, click **My Shopping Card**.
+
+    >**Note:** Examine the browser content.
+
+4. In the menu bar, click **Add to Shopping List**.
+
+    >**Note:** Examine the browser content.
+
+5. On the **Add Products to Shopping List** page, select the following:
+
+	-  Products List: **_&lt;Products of your choice&gt;_**
+    -  First Name: **_&lt;A first name of your choice&gt;_**
+    -  Last  Name: **_&lt;A last  name of your choice&gt;_**
+    -  Address:  **_&lt;An address of your choice&gt;_**
+    -  Email:  **_&lt;An email of your choice&gt;_**
+    -  Phone:  **_&lt;A phone number of your choice&gt;_**
+
+6. In the menu bar, click **My Shopping Card**.
+    >**Note:**  Examine the browser content, the browser displays the **ShoppingCard.cshtml** file content, rendered in the **_Layout.cshtml**, and the chached content is the products that where selectd by you in the **"Add Products to Shopping List"** page.
+
+7. Close the **Microsoft Edge** window.
+
+
+>**Results**: After completing this exercise, you will be able to manage state, by working with sessions.
 
 
 ### Exercise 3: Calling a Web API using jQuery
