@@ -354,7 +354,7 @@ The main tasks for this exercise are as follows:
 2. Call the **AddSession** method of the **services** parameter. Pass the following **options =>
             {
                 options.IdleTimeout = TimeSpan.FromSeconds(60);
-            })** lamda expression as a parameter to the **AddSession** method. 
+            })** lambda expression as a parameter to the **AddSession** method. 
 
 3.  In the **Configure** method, call the **UseSession** method of the **app** parameter.
 
@@ -494,26 +494,102 @@ The main tasks for this exercise are as follows:
 
 5. Run the application
 
+
 #### Task 1: Add a SignalR Hub class named ChatHub.
 
-1. 
+
+1. Create a new folder with the following information:
+
+    - Folder name: **Hubs**
+
+2. Create a new class with the following information:
+
+    - Name: **ChatHub**
+    - Folder: **Hubs**   
+
+3. In the **ChatHub** class, add **USING** statement for the following namespace:
+
+   - **Microsoft.AspNetCore.SignalR**
+
+4. Change the **ChatHub** class to inherit from the **Hub** class.
+
+5. In the **ChatHub** class, declare a method with following information:
+
+   - Name: **SendMessageAll**
+   - Return type: **Task**
+   - Scope: **public**
+   - Modifier: **async**
+   - Parameters:
+        - Parameter: 
+            - Type: **string**
+            - Name: **user**
+        - Parameter: 
+            - Type: **string**
+            - Name: **message**
+
+6. Call the **Clients.All.SendAsync** method using the **await** operator. Pass **"NewMessage"**, **user** and **message** as a parameters to the **SendAsync** method.
 
 
 #### Task 2: Register the ChatHub in the Startup class.
 
-1. 
+1. In the **Startup** class, add a **USING** statement for the following namespace:
+
+   - **ElectricStore.Hubs**
+
+2. In the **ConfigureServices** method, after the **services.AddSession** method call, call the **AddSignalR** method of the **services** parameter.
+
+3. In the **Configure** method, after the call to the **UseStaticFiles** method, call the **UseSignalR** method of the **app** parameter. Pass the following **routes =>
+       {
+           routes.MapHub&lt;ChatHub&gt;("/chatHub");
+       }** lambda expression as a parameter to the **UseSignalR** method. 
+
+4. In the  **package.json** file, add the following key and value in the **dependencies** object:
+
+	- Key: **"@aspnet/signalr"**
+	- Value: **"^1.0.0"**
+
 
 #### Task 3: Add a chat view.
 
 1. 
 
-#### Task 4: Write the JavaScript code to connect to the server.
+#### Task 4: Write the JavaScript code to connect to the server
 
 1. 
 
+
 #### Task 5:  Run the application
 
->**Results**: TODO: Add Results
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+3. In the menu bar, click **My Shopping Card**.
+
+4. On the **My Shopping Card** page, click **Chat with Online Visitors**.
+
+5. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
+
+6. In the second **Microsoft Edge**, open **http://localhost:[port]/ShoppingCard/Chat**.
+
+7. In the second **Microsoft Edge**, fill the following:
+
+	-  Name: **_&lt;A name of your choice&gt;_**
+    -  Message: **_&lt;A message of your choice&gt;_**
+
+    >**Note:**  In both **Microsoft Edge** windows, the message appear.
+
+8. In the first **Microsoft Edge**, fill the following:
+	-  Name: **_&lt;A name of your choice&gt;_**
+    -  Message: **_&lt;A message of your choice&gt;_**
+
+    >**Note:**  In both **Microsoft Edge** windows, the message appear.
+
+9. Close all **Microsoft Edge** windows.
+
+10. Close **Microsoft Visual Studio**.
+
+>**Results**: After completing this exercise, you should have created an electric store in which users can view products details, order some as well, and chat with online site visitors.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
