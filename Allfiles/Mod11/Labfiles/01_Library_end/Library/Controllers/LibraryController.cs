@@ -54,38 +54,26 @@ namespace Library.Controllers
             {
                 return NotFound();
             }
-            PopulateBooksDropDownList(book.Genre.Id);
             return View(book);
         }
 
         [Authorize]
         [ValidateAntiForgeryToken]
-        [HttpPost, ActionName("LendingBooks")]
+        [HttpPost, ActionName("LendingBook")]
         public async Task<IActionResult> LendingBookPost(int id)
         {
             var bookToUpdate = _context.Books.FirstOrDefault(b => b.Id == id);
-            bool isUpdated = await TryUpdateModelAsync<Book>(
-                                bookToUpdate,
-                                "",
-                                c => c.Available == false);
-            if (isUpdated)
+            bookToUpdate.Available = false;
+            if (await TryUpdateModelAsync<Book>(
+                bookToUpdate,
+                "",
+                b => b.Available))
             {
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
-            PopulateBooksDropDownList(bookToUpdate.Genre.Id);
             return View(bookToUpdate);
         }
-
-        private void PopulateBooksDropDownList(int? selectedBook = null)
-        {
-            var books = from b in _context.Books
-                        orderby b.Author
-                        select b;
-
-            ViewBag.BookList = new SelectList(books.AsNoTracking(), "Id", "Name", selectedBook);
-        }
-
 
         public IActionResult GetImage(int id)
         {

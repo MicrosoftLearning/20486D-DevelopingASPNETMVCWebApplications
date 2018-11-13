@@ -39,8 +39,8 @@
 }
 
 .item h3 {
-    color: #736454;
-    font-size: 20px;
+    color: #b56e6e;
+    font-size: 25px;
 }
 
 div p {
@@ -123,7 +123,7 @@ label {
     color: #C62828;
 }
 
-form {
+.submit-form {
     margin: 20px;
     background-color: #d6d4d4;
     padding: 15px;
@@ -159,4 +159,34 @@ form {
     margin-right: auto;
     font-size: medium;
     color: #736454;
+}
+
+.row {
+    padding: 2px;
+    font-weight:500;
+}
+
+.img-frame {
+    width: 150px;
+    height: 150px;
+}
+
+.grid-header {
+    margin:35px;
+    font-weight: bold;
+    background-color: #a59d9d;
+    color:white;
+}
+
+.row > div {
+    padding: 5px;
+}
+
+form{
+   text-align:center;
+   margin:10px;
+}
+
+.text-center{
+    padding:15px;
 }

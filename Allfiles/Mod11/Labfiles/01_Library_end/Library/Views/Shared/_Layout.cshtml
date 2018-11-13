@@ -15,14 +15,17 @@
         <div class="collapse navbar-collapse" id="nav-content">
             <ul class="navbar-nav" id="nav-content">
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Index", "Librarian")">Library<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="@Url.Action("Index", "Library")">Library<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("GetBooksByGener", "Library")">Our Books</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("LendingBook", "Library")">Lend a Book</a>
-                </li>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Librarian")">Workrs Portal</a>
+                    </li>
+                }
                 @if (User.Identity.IsAuthenticated)
                 {
                     <li class="nav-item">
@@ -33,12 +36,6 @@
                 {
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Login", "Account")">Login</a>
-                    </li>
-                }
-                @if (User.IsInRole("Administrator"))
-                {
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Index", "Librarian")">Workrs Portal</a>
                     </li>
                 }
             </ul>

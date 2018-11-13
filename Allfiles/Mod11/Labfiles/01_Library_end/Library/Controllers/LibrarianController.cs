@@ -35,6 +35,7 @@ namespace Library.Controllers
 
         public IActionResult AddBook()
         {
+            PopulateGenerDropDownList();
             return View();
         }
 
@@ -53,17 +54,22 @@ namespace Library.Controllers
                         book.PhotoAvatar.CopyTo(memoryStream);
                         book.PhotoFile = memoryStream.ToArray();
                     }
-                    book.Available = false;
+                    book.Available = true;
                     _context.Add(book);
                     _context.SaveChanges();
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(ThankYou));
             }
-            PopulateBooksDropDownList(book.Genre.Id);
+            PopulateGenerDropDownList(book.Genre.Id);
             return View();
         }
 
-        private void PopulateBooksDropDownList(int? selectedGener = null)
+        public IActionResult ThankYou()
+        {
+            return View();
+        }
+
+        private void PopulateGenerDropDownList(int? selectedGener = null)
         {
             var genres = from b in _context.Genres
                         orderby b.Name
