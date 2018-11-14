@@ -10,10 +10,9 @@ To improve the quality of a shirt store web application, your development team h
 
 After completing this lab, you will be able to:
 
-- Add a Testing project to an ASP.NET Core MVC application.
-- Create a fake dependency for the test subject.
-- Add Exception Handling for the different environments. 
-- Add Logging to an ASP.NET Core MVC application.
+- Test an ASP.NET Core MVC application.
+- Add exception handling for the different environments. 
+- Add logging to an ASP.NET Core MVC application.
 
 #### Lab Setup
 
