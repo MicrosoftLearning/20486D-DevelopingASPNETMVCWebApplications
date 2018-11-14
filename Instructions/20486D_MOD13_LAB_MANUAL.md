@@ -267,12 +267,12 @@ The main tasks for this exercise are as follows:
 4. Start the application without debugging.
 
 5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
-    >**Note:** The browser displays the **Index.cshtml** file content of the **RestaurantController**.
-    
-6. In the menu bar, click **Reservation**.
-    >**Note:** We have not yet built the content of the page.
 
-7. Close all **Microsoft Edge** windows.
+    >**Note:** In case the first window displays 500 internal server error, you should refresh the page, and then the browser displays the **Index.cshtml** file content of the **RestaurantController**. 
+    
+6. Close all **Microsoft Edge** windows.
+
+7. Stop Debugging.
 
 #### Task 3: Calling a Web API Service POST method
 
@@ -381,11 +381,11 @@ The main tasks for this exercise are as follows:
 
 5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
     
-6. In the menu bar, click **Reservation**.
+6. In the first **Microsoft Edge** window, in the menu bar, click **Reservation**.
 
 7. On **Reservation**, create a new reservation with the following credentials:
    
-    - Restaurant Branch: **_&lt;a restaurant branch of your choice&gt;_**
+    - Restaurant Branch: **_&lt;A restaurant branch of your choice&gt;_**
     - First Name: **_&lt;A first name of your choice&gt;_**
     - Last Name: **_&lt;A last name of your choice&gt;_**
     - Phone Number: **_&lt;A phone of your choice&gt;_** 
@@ -395,6 +395,8 @@ The main tasks for this exercise are as follows:
 8. Click **Make a Reservation**.
 
 9. Close all **Microsoft Edge** windows.
+
+10. Stop Debugging.
 
 >**Results**: After completing this exercise, you will be able to call Web API Service Get, and Post methods using HTTPClient.
 
@@ -485,13 +487,13 @@ The main tasks for this exercise are as follows:
 
 4. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
     
-5. In the menu bar, click **We are Hiring**.
+5. In the first **Microsoft Edge** window, in the menu bar, click **We are Hiring**.
+
     >**Note:** The browser displays the **Index.cshtml** file content of the **WantedAdController**.
 
-6. On **We are Hiring**, click **Submit Job Application**.
-    >**Note:** We have not yet built the content of the page.
+6. Close all **Microsoft Edge** windows.
 
-7. Close all **Microsoft Edge** windows.
+7. Stop Debugging.
 
 #### Task 3: Calling a Web API Service POST method
 
@@ -628,7 +630,7 @@ The main tasks for this exercise are as follows:
 
 5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
     
-6. In the menu bar, click **Submit Job Application**.
+6. In the first **Microsoft Edge** window, in the menu bar, click **Submit Job Application**.
 
 7. On **Submit Job Application**, submit a form with the following credentials:
    
@@ -643,7 +645,9 @@ The main tasks for this exercise are as follows:
 
 9. Close all **Microsoft Edge** windows.
 
-10. Close **Microsoft Visual Studio**.
+10. Stop Debugging.
+
+11. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you should have created restaurant application, in which users can view the restaurant branches, order a table and also apply for a job. 
 
