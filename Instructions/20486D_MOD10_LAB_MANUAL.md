@@ -435,7 +435,7 @@ The main tasks for this exercise are as follows:
 
 2. Close **Microsoft Edge**.
 
->**Results**: After completing this exercise, alongside testing, you have developed a functional MVC Application.
+>**Results**: After completing this exercise, you have developed a repository to have functional MVC Application.
 
 ### Exercise 4: Adding Exception Handling
 
