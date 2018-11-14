@@ -4,12 +4,7 @@
 
 #### Scenario
 
-You have been asked to develop a website in a Test Driven Development.
-The development process should consist of creating a model or an interface, creating a fake dependency for the test subject, adding a test, and then adding or fixing code while testing.
-
-You have also been asked that when an error occurs the browser would display a detailed exception page on development environment, and a custom error page on production environment.
-
-In addition, You are required to provide Logging in each time an action is called.
+To improve the quality of a shirt store web application, your development team has decided to add testing and troubleshooting to the web application. You have been asked to add unit tests to test a model and a controller. You have also been asked that when an error occurs the browser would display a detailed exception page on development environment, and a custom error page on production environment. In addition you are required to add logging to the web application.
 
 #### Objectives
 
