@@ -441,10 +441,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In case an error occurs while running the application, two use cases must be implemented:
-In the case that the application is running in a development environment, and an error occur, the user would see a detailed error page, with information on where to find the error.
-In the case that the application is running in a production environment, a custom none informative page would be displayed, claiming there was an error.
-You are required to add an Exception Handling to each of the use cases.
+You have been asked to add exception handling to the web application. In case an error occurs while running the application, two use cases must be implemented: In the case that the application is running in a development environment, and an error occur, the user would see a detailed error page, with information on where to find the error. In the case that the application is running in a production environment, a custom none informative page would be displayed, claiming there was an error. You are required to add an exception handling to each of the use cases.
 
 The main tasks for this exercise are as follows:
 
