@@ -500,7 +500,7 @@ The main tasks for this exercise are as follows:
 
 2. Save all the changes.
 
->**Results**: After completing this exercise, you will know how to add exception handling to an MVC application, by displaying a custom error page or the developers page in case there is an exception that is thrown.
+>**Results**: After completing this exercise, you have been added  exception handling to an MVC application, by displaying a custom error page or the developer exception page in case there is an exception that is thrown.
 
 ### Exercise 5: Adding Logging
 
