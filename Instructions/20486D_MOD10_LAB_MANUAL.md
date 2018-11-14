@@ -310,7 +310,7 @@ The main tasks for this exercise are as follows:
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 2 passed tests: **IsIndexReturnsAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
->**Results**: After completing this exercise, you will be able to create a test class and test a controller while fixing its code.
+>**Results**: After completing this exercise, you will be able to test a controller using a fake repository.
 
 ### Exercise 3: Implementing a Repository in MVC Project
 
