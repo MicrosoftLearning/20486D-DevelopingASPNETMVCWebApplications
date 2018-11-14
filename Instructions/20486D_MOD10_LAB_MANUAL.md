@@ -316,7 +316,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-After the model and the controller has been tested it is time to add the finishing touches for the application to be running, using **Entity Framework Core** you will implement the **ShirtRepository** against the **ShirtDbContext**, register it as a service using **Dependency Injection**, and then run the application.
+After the model and the controller has been tested, you have been asked to add a repository class so the application will be able to run. In this exercise you will implement a **ShirtRepository** repository which will get data from a database and update a database. The **ShirtRepository** repository will be registered in the **ConfigureService** method.
 
 The main tasks for this exercise are as follows:
 
