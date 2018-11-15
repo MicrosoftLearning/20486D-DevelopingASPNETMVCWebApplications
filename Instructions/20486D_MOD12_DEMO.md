@@ -80,7 +80,7 @@
     >**Note**: The browser displays a list of products.
 
 13. In **Microsoft Edge**, click **Basketball**.
-    >**Note**: The browser displays the basketball details, and the last time that the product was retrieved from the data base.
+    >**Note**: The browser displays the basketball details, and the last time that the product was retrieved from the database.
 
 14. In **Microsoft Edge**, click **Basketball**.
     >**Note**: The browser displays the same page, but the **Last retrieved on** has changed since the item was retrieved from data base.
