@@ -42,7 +42,7 @@
 
 7. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    if(product != null)
+    if (product != null)
     {
         product.LoadedFromDatabase = DateTime.Now;
     }
