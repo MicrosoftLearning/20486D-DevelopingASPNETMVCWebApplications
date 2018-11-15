@@ -2,7 +2,7 @@
 
 # Lesson 1: Implementing a Caching Strategy
 
-### Demonstration: How to Use Configure Cashing
+### Demonstration: How to Use Configure Caching
 
 #### Preparation Steps 
 
