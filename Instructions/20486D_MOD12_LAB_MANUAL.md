@@ -474,7 +474,7 @@ The main tasks for this exercise are as follows:
 >**Results**: After completing this exercise, you will be able to manage state, by working with sessions.
 
 
-### Exercise 3: Calling a Web API using jQuery
+### Exercise 3: Two-Way Communication
 
 #### Scenario
 
