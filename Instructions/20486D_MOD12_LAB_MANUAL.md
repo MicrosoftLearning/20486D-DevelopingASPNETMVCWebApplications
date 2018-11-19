@@ -3,8 +3,8 @@
 # Lab: Performance and Communication
 
 #### Scenario
-TODO: Add scenario
 
+You have been asked to create a web-based electric store application for your organization's customers. The application should have a page showing sale of the day, products sorted by category, ability to add products to your shopping list, and a chat page that lets users talk online. The application contains a cache tag helper to cache content in a view, also memory cache in a controller, and a session state configuration. Finally, the students will write a chat room using SignalR.
 
 #### Objectives
 
@@ -26,7 +26,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-TODO: Add scenario
+In this exercise, you will first add a cache tag helper to a view. You will then insert data to be cached by the cache tag helper. After that you will insert items to a memory cache. Finally, you will retrieve items from a memory cache.
 
 The main tasks for this exercise are as follows:
 
@@ -333,8 +333,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-TODO: Add Scenario
-
+In this exercise, you will first enable working with sessions. You will then Write an action in the first controller. After that you will write the content of the second controller. Finally, you will run the application and navigate from view to view.
 
 The main tasks for this exercise are as follows:
 
@@ -479,8 +478,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-TODO: Add Scenario
-
+In this exercise, you will first add a SignalR Hub class named ChatHub. You will then add a SignalR Hub class named ChatHub, and register the ChatHub in the Startup class. After that you will add a chat view. Finally, you will write the JavaScript code to connect to the server, and run the application and navigate from view to view.
 
 The main tasks for this exercise are as follows:
 
@@ -610,7 +608,6 @@ The main tasks for this exercise are as follows:
 
 	- Class: **col-sm-3**
 
-
 14. In the new **DIV** element, add a **INPUT** element with the following information:
 
     - Type: **type**
@@ -618,11 +615,9 @@ The main tasks for this exercise are as follows:
     - Id: **sendMessageBtn**
     - Value: **Send Message**
 
-
 15. After the **DIV** element with the **col-2 bcf** class, add a **DIV** element with the following information:
 
 	- Class: **col-2 bcs**
-
 
 16. In the new **DIV** element, add a **UL** element with the following information:
 
@@ -659,7 +654,6 @@ The main tasks for this exercise are as follows:
 3. In the **Chat.chtml** view, in the **Scripts** section, add a **SCRIPT** element with the following information:
 
     - Src: **~/js/chat-hub.js**
-
 
 #### Task 5:  Run the application
 

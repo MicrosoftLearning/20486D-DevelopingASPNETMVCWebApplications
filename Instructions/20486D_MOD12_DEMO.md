@@ -2,7 +2,7 @@
 
 # Lesson 1: Implementing a Caching Strategy
 
-### Demonstration: How to Use Configure Cashing
+### Demonstration: How to Configure Caching
 
 #### Preparation Steps 
 
@@ -42,7 +42,7 @@
 
 7. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    if(product != null)
+    if (product != null)
     {
         product.LoadedFromDatabase = DateTime.Now;
     }
@@ -77,13 +77,13 @@
 11.  In the **CachingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
         
 12. In the **CachingExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
-    >**Note**: The browser displays a list of products on the left.
+    >**Note**: The browser displays a list of products.
 
 13. In **Microsoft Edge**, click **Basketball**.
-    >**Note**: The browser displays the basketball details, and the last time that the product was retrieved from the data base.
+    >**Note**: The browser displays the basketball details, and the last time that the product was retrieved from the database.
 
 14. In **Microsoft Edge**, click **Basketball**.
-    >**Note**: The browser displays the same page, but the **Last retrieved on** has changed since the item was retrieved from data base.
+    >**Note**: The browser displays the same page, but the **Last retrieved on** has changed since the item was retrieved from database.
 
 15.  In **Microsoft Edge**, click **Close**.
    

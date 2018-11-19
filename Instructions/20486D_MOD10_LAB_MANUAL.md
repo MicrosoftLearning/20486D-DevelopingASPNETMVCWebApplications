@@ -4,21 +4,15 @@
 
 #### Scenario
 
-You have been asked to develop a website in a Test Driven Development.
-The development process should consist of creating a model or an interface, creating a fake dependency for the test subject, adding a test, and then adding or fixing code while testing.
-
-You have also been asked that when an error occurs the browser would display a detailed exception page on development environment, and a custom error page on production environment.
-
-In addition, You are required to provide Logging in each time an action is called.
+To improve the quality of a shirt store web application, your development team has decided to add testing and troubleshooting to the web application. You have been asked to add unit tests to test a model and a controller. You have also been asked that when an error occurs the browser would display a detailed exception page on development environment, and a custom error page on production environment. In addition you are required to add logging to the web application.
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
-- Add a Testing project to an ASP.NET Core MVC application.
-- Create a fake dependency for the test subject.
-- Add Exception Handling for the different environments. 
-- Add Logging to an ASP.NET Core MVC application.
+- Test an ASP.NET Core MVC application.
+- Add exception handling for the different environments. 
+- Add logging to an ASP.NET Core MVC application.
 
 #### Lab Setup
 
@@ -316,13 +310,13 @@ The main tasks for this exercise are as follows:
 1. Run all tests.
     >**Note:** The **Test Explorer** displays 2 passed tests: **IsIndexReturnsAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
->**Results**: After completing this exercise, you will be able to create a test class and test a controller while fixing its code.
+>**Results**: After completing this exercise, you will be able to test a controller using a fake repository.
 
 ### Exercise 3: Implementing a Repository in MVC Project
 
 #### Scenario
 
-After the model and the controller has been tested it is time to add the finishing touches for the application to be running, using **Entity Framework Core** you will implement the **ShirtRepository** against the **ShirtDbContext**, register it as a service using **Dependency Injection**, and then run the application.
+After the model and the controller has been tested, you have been asked to add a repository class so the application will be able to run. In this exercise you will implement a **ShirtRepository** repository which will get data from a database and update a database. The **ShirtRepository** repository will be registered in the **ConfigureService** method.
 
 The main tasks for this exercise are as follows:
 
@@ -441,16 +435,13 @@ The main tasks for this exercise are as follows:
 
 2. Close **Microsoft Edge**.
 
->**Results**: After completing this exercise, alongside testing, you have developed a functional MVC Application.
+>**Results**: After completing this exercise, you have developed a repository to have functional MVC Application.
 
 ### Exercise 4: Adding Exception Handling
 
 #### Scenario
 
-In case an error occurs while running the application, two use cases must be implemented:
-In the case that the application is running in a development environment, and an error occur, the user would see a detailed error page, with information on where to find the error.
-In the case that the application is running in a production environment, a custom none informative page would be displayed, claiming there was an error.
-You are required to add an Exception Handling to each of the use cases.
+You have been asked to add exception handling to the web application. In case an error occurs while running the application, two use cases must be implemented: In the case that the application is running in a development environment, and an error occur, the user would see a detailed error page, with information on where to find the error. In the case that the application is running in a production environment, a custom none informative page would be displayed, claiming there was an error. You are required to add an exception handling to each of the use cases.
 
 The main tasks for this exercise are as follows:
 
@@ -506,7 +497,7 @@ The main tasks for this exercise are as follows:
 
 2. Save all the changes.
 
->**Results**: After completing this exercise, you will know how to add exception handling to an MVC application, by displaying a custom error page or the developers page in case there is an exception that is thrown.
+>**Results**: After completing this exercise, you have been added  exception handling to an MVC application, by displaying a custom error page or the developer exception page in case there is an exception that is thrown.
 
 ### Exercise 5: Adding Logging
 

@@ -24,7 +24,7 @@ namespace CachingExample.Repositories
         public Product GetProduct(int id)
         {
             Product product = _context.Products.Where(p => p.Id == id).FirstOrDefault();
-            if(product != null)
+            if (product != null)
             {
                 product.LoadedFromDatabase = DateTime.Now;
             }
