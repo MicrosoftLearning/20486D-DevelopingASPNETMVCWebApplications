@@ -216,7 +216,7 @@
 
 34. In the menu bar, click **Student Portal**.
 
-      >**Note:** **Student Porta**l page is only for authorized users therefore you redirected to the login page.
+      >**Note:** **Student Portal** page is only for authorized users therefore you redirected to the login page.
 
 35. On the **Login** page, click **Register**.
 

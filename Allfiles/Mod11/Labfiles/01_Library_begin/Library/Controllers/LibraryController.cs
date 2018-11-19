@@ -35,11 +35,15 @@ namespace Library.Controllers
 
         public IActionResult GetBooksByGener()
         {
-            var booksGenerQuery = from b in _context.Books
-                                  orderby b.Genre.Name
-                                  select b;
+            if (this.User.Identity.IsAuthenticated)
+            {
+                var booksGenerQuery = from b in _context.Books
+                                      orderby b.Genre.Name
+                                      select b;
 
-            return View(booksGenerQuery);
+                return View(booksGenerQuery);
+            }
+            return RedirectToAction("Login", "Account");
         }
 
         public IActionResult LendingBook(int id)
