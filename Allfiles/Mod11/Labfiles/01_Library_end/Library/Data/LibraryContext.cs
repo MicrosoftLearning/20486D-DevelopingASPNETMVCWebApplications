@@ -45,7 +45,7 @@ namespace Library.Data
                new Book
                {
                    Id = 1,
-                   Name = "Mysterious adventures",
+                   Name = "Mysterious Adventures",
                    Author = "Ada J. Hawkins",
                    GenreId = 1,
                    Available = true,
@@ -57,7 +57,7 @@ namespace Library.Data
                new Book
                {
                    Id = 2,
-                   Name = "My family history",
+                   Name = "My Family History",
                    Author = "Janice O. Kaufman",
                    GenreId = 2,
                    Available = true,
@@ -69,7 +69,7 @@ namespace Library.Data
                }, new Book
                {
                    Id = 3,
-                   Name = "A wonderful story ",
+                   Name = "A Wonderful Story ",
                    Author = "Kristin A. McCoy",
                    GenreId = 3,
                    Available = true,
