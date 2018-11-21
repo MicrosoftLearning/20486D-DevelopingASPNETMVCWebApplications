@@ -23,12 +23,12 @@ namespace LoggingExample.Services
             if (NumberCounter.ContainsKey(number))
             {
                 NumberCounter[number]++;
-                _logger.LogDebug($"The number of time the page was displayed for the number {number} was increased to {NumberCounter[number]}.");
+                _logger.LogDebug($"The number of times the page was displayed for the number {number} was increased to {NumberCounter[number]}.");
             }
             else
             {
                 NumberCounter.Add(number, 1);
-                _logger.LogDebug($"The number {number} was added to the page display count dictionary");
+                _logger.LogDebug($"The number {number} was added to the page display count dictionary.");
             }
         }
     }

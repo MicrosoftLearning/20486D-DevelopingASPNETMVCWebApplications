@@ -20,7 +20,6 @@ namespace LoggingExample.Controllers
             _numberCalculator = numberCalculator;
         }
 
-        [Route("")]
         public IActionResult Index()
         {
             return View();
@@ -29,11 +28,6 @@ namespace LoggingExample.Controllers
         public IActionResult GetDividedNumber(int id)
         {
             ViewBag.CounterSucceeded = false;
-
-            _counter.IncrementNumberCount(id);
-            ViewBag.NumberOfViews = _counter.NumberCounter[id];
-            ViewBag.CounterSucceeded = true;
-
             DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
             return View(divisionResult);
         }

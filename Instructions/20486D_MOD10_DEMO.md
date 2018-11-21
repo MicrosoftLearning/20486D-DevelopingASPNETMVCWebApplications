@@ -373,20 +373,19 @@
     _logger = logger;
 ```
 
-16. In the **HomeController.cs** code window, select the following code:
+16. In the **HomeController.cs** code window, locate the following code:
 ```cs
-    _counter.IncrementNumberCount(id);
-    ViewBag.NumberOfViews = _counter.NumberCounter[id];
-    ViewBag.CounterSucceeded = true;
+    ViewBag.CounterSucceeded = false;
 ```
 
-17. Replace the selected code with the following code:
+17. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     try
     {
         _counter.IncrementNumberCount(id);
         ViewBag.NumberOfViews = _counter.NumberCounter[id];
         ViewBag.CounterSucceeded = true;
+        _logger.LogError("GetDividedNumber - Success");
     }
     catch (Exception ex)
     {
@@ -400,31 +399,31 @@
 
 20. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-21. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/Home/Index**, and then press Enter.
+21. In **Microsoft Edge**, click **16**.
 
-22. In **Microsoft Edge**, click **16**.
     >**Note:** The browser displays the numbers that **16** can be divided by.
 
-23. In **Microsoft Edge**, click **Close**.
+22. In **Microsoft Edge**, click **Close**.
 
-24. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+23. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+
     >**Note**: Inspect the **KeyNotFoundException** stack trace.
 
-25. In **myLog-XXXXXXXX.txt** window, click **Close**.
+24. In **myLog-XXXXXXXX.txt** window, click **Close**.
 
-26. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
+25. In **Solution Explorer**, expand **Services**, and then click **Counter.cs**. 
 
-27. In the **Counter.cs** code window, select the following code:
+26. In the **Counter.cs** code window, select the following code:
 ```cs
     NumberCounter[number]++;
 ```
 
-28. Replace the selected code with the following code:
+27. Replace the selected code with the following code:
 ```cs
     if (NumberCounter.ContainsKey(number))
     {
         NumberCounter[number]++;
-        _logger.LogDebug($"The number of time the page was displayed for the number {number} was increased to {NumberCounter[number]}.");
+        _logger.LogDebug($"The number of times the page was displayed for the number {number} was increased to {NumberCounter[number]}.");
     }
     else
     {
@@ -432,28 +431,38 @@
         _logger.LogDebug($"The number {number} was added to the page display count dictionary.");
     }
 ```
-29. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+28. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-30. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
+29. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
 
-31. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+30. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-32. In the **LoggingExample - Microsoft Visual Studio** window, in the **Output** tab, click the **Output** pane.
+31. In **Microsoft Edge**, click **16**.
 
-33. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/Home/Index**, and then press Enter.
-
-34. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, in the **Show output from** list, select **ASP.NET Core Web Server**, and then click the **Clear All** button.
-
-35. In **Microsoft Edge**, click **16**.
-
-36. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, locate the following text:
+32. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, press **ctrl + F**, and then locate the following text:
 ```
     The number 16 was added to the page display count dictionary.
 ```
 
+33. In **Microsoft Edge**, click **Close**.
+
+34. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
+
+35. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+36. In **Microsoft Edge**, click **16**.
+
+    >**Note:** The browser displays the numbers that **16** can be divided by.
+
 37. In **Microsoft Edge**, click **Close**.
 
-38. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+38. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+
+    >**Note**: Look for the sentence **GetDividedNumber - Success**.
+
+39. In **myLog-XXXXXXXX.txt** window, click **Close**.
+
+40. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

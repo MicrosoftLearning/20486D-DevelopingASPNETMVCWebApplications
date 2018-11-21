@@ -1,0 +1,6 @@
+2018-11-21T14:32:05.0383158+02:00 0HLIFLLBB019M:00000003 [ERR] An error occured while trying to increase or retrieve the page display count. Number parameter is: 16 (d01e3e98)
+System.Collections.Generic.KeyNotFoundException: The given key '16' was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at LoggingExample.Services.Counter.IncrementNumberCount(Int32 number) in D:\MvcCore\20486d\githubRepo\Allfiles\Mod10\Democode\03_LoggingExample_end\LoggingExample\Services\Counter.cs:line 23
+   at LoggingExample.Controllers.HomeController.GetDividedNumber(Int32 id) in D:\MvcCore\20486d\githubRepo\Allfiles\Mod10\Democode\03_LoggingExample_end\LoggingExample\Controllers\HomeController.cs:line 35
+2018-11-21T14:32:31.0562401+02:00 0HLIFLLJ34I3P:00000003 [ERR] GetDividedNumber - Success  (d72034d5)
