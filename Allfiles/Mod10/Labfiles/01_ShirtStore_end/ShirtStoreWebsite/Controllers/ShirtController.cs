@@ -29,7 +29,7 @@ namespace ShirtStoreWebsite.Controllers
         public IActionResult AddShirt(Shirt shirt)
         {
             _repository.AddShirt(shirt);
-            _logger.LogDebug($"A {shirt.Color.ToString()} shirt of size {shirt.Size.ToString()} with a price of {shirt.GetFormattedTaxedPrice(1.2F)} was added successfully.");
+            _logger.LogDebug($"A {shirt.Color.ToString()} shirt of size {shirt.Size.ToString()} with a price of {shirt.GetFormattedTaxedPrice()} was added successfully.");
             return RedirectToAction("Index");
         }
 

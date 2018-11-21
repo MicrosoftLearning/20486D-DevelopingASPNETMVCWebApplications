@@ -32,26 +32,32 @@
                             <th>
                                 @Html.DisplayNameFor(model => model.Price)
                             </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Tax)
+                            </th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Size)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Color)
-                                </td>
-                                <td>
-                                    @item.GetFormattedTaxedPrice(1.2F)
-                                </td>
-                                <td>
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Size)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Color)
+                            </td>
+                            <td>
+                                @item.GetFormattedTaxedPrice()
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tax)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            </td>
+                        </tr>
                         }
                     </tbody>
                 </table>

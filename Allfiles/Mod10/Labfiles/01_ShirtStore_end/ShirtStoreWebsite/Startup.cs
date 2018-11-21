@@ -34,9 +34,6 @@ namespace ShirtStoreWebsite
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ShirtContext shirtContext)
         {
-            shirtContext.Database.EnsureDeleted();
-            shirtContext.Database.EnsureCreated();
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -45,6 +42,10 @@ namespace ShirtStoreWebsite
             {
                 app.UseExceptionHandler("/error.html");
             }
+
+            shirtContext.Database.EnsureDeleted();
+            shirtContext.Database.EnsureCreated();
+
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {

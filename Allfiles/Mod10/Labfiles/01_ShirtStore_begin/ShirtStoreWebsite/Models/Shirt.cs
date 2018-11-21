@@ -17,9 +17,11 @@ namespace ShirtStoreWebsite.Models
         [Required]
         public float Price { get; set; }
 
-        public string GetFormattedTaxedPrice(float tax)
+        public float Tax { get; set; }
+
+        public string GetFormattedTaxedPrice()
         {
-            return Price.ToString($"C2", CultureInfo.GetCultureInfo("en-US"));
+            return (Price * Tax).ToString($"C2", CultureInfo.GetCultureInfo("en-US"));
         }
     }
 }

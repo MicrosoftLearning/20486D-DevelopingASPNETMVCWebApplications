@@ -458,7 +458,7 @@
 
 38. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
 
-    >**Note**: Look for the sentence **GetDividedNumber - Success**.
+    >**Note**: Press **ctrl + F**, and then locate the followingthe sentence **GetDividedNumber - Success**.
 
 39. In **myLog-XXXXXXXX.txt** window, click **Close**.
 
