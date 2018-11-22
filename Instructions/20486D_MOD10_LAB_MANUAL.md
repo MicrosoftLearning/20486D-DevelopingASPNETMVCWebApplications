@@ -54,26 +54,33 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Write a test for a model
 
-1. In the **ShirtStoreWebsite.Tests** project, rename the **UnitTest1** class to **ShirtTest**.
+1. Create a new folder with the following information:
 
-2. In the **ShirtTest** class, add **USING** statement for the following namespace:
+    - Folder name: **Models**
+    - Project: **ShirtStoreWebsite**
+
+2. In the **ShirtStoreWebsite.Tests** project, rename the **UnitTest1** class to **ShirtTest**.
+
+3. Cut the **ShirtTest.cs** and paste the file in the **Models** folder.
+
+4. In the **ShirtTest** class, add **USING** statement for the following namespace:
    - **ShirtStoreWebsite.Models**
 
-3. In the **ShirtTest** class code block, rename **TestMethod1** to **IsGetFormattedTaxedPriceReturnsCorrectly**.
+5. In the **ShirtTest** class code block, rename **TestMethod1** to **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
-4. In the **IsGetFormattedTaxedPriceReturnsCorrectly** method, add a new variable with the following information:
+6. In the **IsGetFormattedTaxedPriceReturnsCorrectly** method, add a new variable with the following information:
     - Type: **Shirt**
     - Name: **shirt**
-    - Value: **new Shirt { Price = 10F }**
+    - Value: **new Shirt { Price = 10F, Tax = 1.2F }**
 
-5. Add a new variable with the following information:
+7. Add a new variable with the following information:
     - Type: **string**
     - Name: **taxedPrice**
-    - Value: **shirt.GetFormattedTaxedPrice(1.2F)**
+    - Value: **shirt.GetFormattedTaxedPrice()**
 
-6. Call the static **AreEqual** method of the **Assert** class, pass **"$12.00"** and the **taxedPrice** as parameters to the **AreEqual** method.
+8. Call the static **AreEqual** method of the **Assert** class, pass **"$12.00"** and the **taxedPrice** as parameters to the **AreEqual** method.
 
-7.  Save all the changes.
+9.  Save all the changes.
 
 #### Task 3: Run the unit test – it should fail
 
@@ -83,7 +90,7 @@ The main tasks for this exercise are as follows:
 #### Task 4: Implement the model class so the test will pass
 
 1. In the **Shirt** class, replace **GetFormattedTaxedPrice** return value, using the following information:
-    - Value: **(Price * tax).ToString($"C2", CultureInfo.GetCultureInfo("en-US"))** 
+    - Value: **(Price * Tax).ToString($"C2", CultureInfo.GetCultureInfo("en-US"))** 
 
 2. Save all the changes.
 
@@ -233,7 +240,7 @@ The main tasks for this exercise are as follows:
 1. Open **Package Manager Console**. 
 
 2. In the **Package Manager Console** tab, type the following command: 
-    - **Install-Package Microsoft.AspNetCore.Mvc -ProjectName ShirtStoreWebsite.Tests**.
+    - **Install-Package Microsoft.AspNetCore.Mvc 2.1.1 -ProjectName ShirtStoreWebsite.Tests**.
 
 3. Create a new class with the following information:
 
@@ -457,7 +464,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add exception handling in Startup.cs
 
-1. In the **Startup** class, in the **Configure** method, after the **shirtContext.Database.EnsureCreated** method, create an **IF** statement that checks that the return value of the **env.IsDevelopment** method.
+1. In the **Startup** class, in the beginning of the **Configure** method code block, create an **IF** statement that checks that the return value of the **env.IsDevelopment** method.
 
 2. Inside the **IF** statement code block, call the **UseDeveloperExceptionPage** method of the **app** parameter.
 
@@ -610,7 +617,7 @@ The main tasks for this exercise are as follows:
 
 26. In the **AddShirt** method, after calling the **AddShirt** method of the **_repository** variable, call the **LogDebug** method of the **_logger** variable. 
 
-27. Pass **$"A {shirt.Color.ToString()} shirt of size {shirt.Size.ToString()} with a price of {shirt.GetFormattedTaxedPrice(1.2F)} was added successfully."** as parameter to the **LogDebug** method.
+27. Pass **$"A {shirt.Color.ToString()} shirt of size {shirt.Size.ToString()} with a price of {shirt.GetFormattedTaxedPrice()} was added successfully."** as parameter to the **LogDebug** method.
 
 28. Delete the contents of the **Delete** method.
 
@@ -688,7 +695,12 @@ The main tasks for this exercise are as follows:
 7. In the **Output** tab, locate the following text:
     - **A shirt with id 1 was removed successfully.**
 
-8. Close **Microsoft Edge**.
+8. In **Microsoft Edge**, access the following relative path:
+    - Path: **http://localhost:[port]/Shirt/Delete/-1**
+
+    >**Note**: The browser displays **DeveloperException** page.
+
+9.  Close **Microsoft Edge**.
 
 #### Task 5: Run the application in production environment
 
@@ -704,7 +716,20 @@ The main tasks for this exercise are as follows:
 
 5. Close **shirt_store_logs-XXXXXXXX.txt**.
 
-6. Close **Microsoft Visual Studio**.
+6. Select the **production** environment, and then start the application without debugging.
+
+7. In **Microsoft Edge**, add a new **Shirt** to stock using the following information:
+ 
+    - Size: **M**
+    - Color: **Yellow**
+    - Price: **10**
+
+8. In **File Explorer**, navigate to **Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and open the **shirt_store_logs-XXXXXXXX.txt** file.
+    >**Note**: The log file does not contain another message because the action was successful and there are no errors.
+
+9. Close **shirt_store_logs-XXXXXXXX.txt**.
+
+10. Close **Microsoft Visual Studio**.
 
 >**Results**:  At the end of this exercise, you will be able to add logging in different logging levels in different environments, displaying errors or information by writing into a log file or a console output in a desired format, and creating a mock substitute using a mocking framework.
 
