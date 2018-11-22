@@ -13,6 +13,7 @@ namespace StateExample.Controllers
         {
             int? overallVisitsNumber = HttpContext.Session.GetInt32("Overall");
             int? controllerVisitsNumber = HttpContext.Session.GetInt32("Home");
+            int? AnotherControllerVisitsNumber = HttpContext.Session.GetInt32("Another");
             if (overallVisitsNumber == null)
             {
                 overallVisitsNumber = 1;
@@ -29,8 +30,13 @@ namespace StateExample.Controllers
             {
                 controllerVisitsNumber++;
             }
+            if (AnotherControllerVisitsNumber == null)
+            {
+                AnotherControllerVisitsNumber = 0;
+            }
             HttpContext.Session.SetInt32("Overall", overallVisitsNumber.Value);
             HttpContext.Session.SetInt32("Home", controllerVisitsNumber.Value);
+            HttpContext.Session.SetInt32("Another", AnotherControllerVisitsNumber.Value);
             return View();
         }
     }

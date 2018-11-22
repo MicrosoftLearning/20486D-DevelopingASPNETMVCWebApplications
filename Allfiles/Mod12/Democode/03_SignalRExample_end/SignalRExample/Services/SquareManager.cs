@@ -26,7 +26,7 @@ namespace SignalRExample.Services
 
         public void SwapColor(int x, int y)
         {
-            if(_squares[x,y] == "blue")
+            if(_squares[x, y] == "blue")
             {
                 _squares[x, y] = "red";
             }

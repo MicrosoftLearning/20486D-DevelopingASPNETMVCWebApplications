@@ -105,7 +105,7 @@
     </cache>
 ```
 
-19.   In the **CachingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+19. In the **CachingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
     
 20. In the **CachingExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
@@ -114,9 +114,17 @@
 22. In **Microsoft Edge**, click **Basketball**.
     >**Note**: The browser displays the same page, but the **Last retrieved on** hasn't changed since the item was cached.
 
-23.  In **Microsoft Edge**, click **Close**.
+23. In **Microsoft Edge**, click **Football**.
 
-24. In the **CachingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+24. In **Microsoft Edge**, click **Football**.
+    >**Note**: The browser displays the same page, but the **Last retrieved on** hasn't changed since the item was cached.
+
+25. In **Microsoft Edge**, click **Basketball**.
+    >**Note**: The browser displays the same page, but the **Last retrieved on** hasn't changed since the item was cached.
+
+26.  In **Microsoft Edge**, click **Close**.
+
+27. In the **CachingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 2: Managing State
 
@@ -192,8 +200,13 @@
     {
         controllerVisitsNumber++;
     }
+    if (AnotherControllerVisitsNumber == null)
+    {
+        AnotherControllerVisitsNumber = 0;
+    }
     HttpContext.Session.SetInt32("Overall", overallVisitsNumber.Value);
     HttpContext.Session.SetInt32("Home", controllerVisitsNumber.Value);
+    HttpContext.Session.SetInt32("Another", AnotherControllerVisitsNumber.Value);
 ```
 
 13. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, click **AnotherController.cs**.
@@ -245,6 +258,8 @@
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
+20. In the **StateExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+    
 20. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     @using Microsoft.AspNetCore.Http
@@ -259,8 +274,8 @@
 
 23. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    <div>Number of times that this controller was visited during this session: @Context.Session.GetInt32("Home")</div>
-    <div>Number of times that this controller was visited during this session: @Context.Session.GetInt32("Another")</div>
+    <div>Number of times that the Home controller was visited during this session: @Context.Session.GetInt32("Home")</div>
+    <div>Number of times that the Another controller was visited during this session: @Context.Session.GetInt32("Another")</div>
     <div>Number of times visited overall during this session: @Context.Session.GetInt32("Overall")</div>
 ```
 
@@ -282,8 +297,6 @@
 
 28. In the **StateExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-    >**Note:** Examine the browser content.
-
 29. In **Microsoft Edge**, click **Another**.
 
 30. In **Microsoft Edge**, click **Home**.
@@ -292,9 +305,13 @@
 
 32. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]**, and then press Enter.
 
-33.  Close all the **Microsoft Edge** windows.
+>**Note:** We opened a new browser therefore a new session created for the new browser.
 
-34. In the **StateExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+33. In the first **Microsoft Edge**, click **Home**.
+
+34.  Close all the **Microsoft Edge** windows.
+
+35. In the **StateExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Two-Way Communication
 
@@ -306,67 +323,90 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod12\Democode\03_SignalRExample_begin**, and then double-click **SignalRExample.sln**.
+1. In the **File Explorer**, navigate to **Allfiles\Mod12\Democode\03_SignalRExample_begin\SignalRExample**, and then copy the address in the address bar.
 
-2. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+2. Go to **Start**, and then type **cmd**.
 
-3. In the **Startup.cs** code window, locate the following code:
+3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
+
+4. In the **User Account Control** dialog box, click **Yes**.
+
+5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+  ```cs
+       cd {copied folder path}
+```
+
+>**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
+
+6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+  ```cs
+       npm install
+```
+>**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+
+7. Close the window.
+
+8. In the **File Explorer**, navigate to **Allfiles\Mod12\Democode\03_SignalRExample_begin**, and then double-click **SignalRExample.sln**.
+
+9. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+
+10. In the **Startup.cs** code window, locate the following code:
 ```cs
     services.AddSingleton<ISquareManager, SquareManager>();
 ```
 
-4. Place the cursor at the end of the located code, press Enter, and then type the following code:
+11. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     services.AddSignalR();
 ```
 
-5. In the **Startup.cs** code window, locate the following code:
+12. In the **Startup.cs** code window, locate the following code:
 ```cs
     app.UseNodeModules(env.ContentRootPath);
 ```
 
-6. Place the cursor at the end of the located code, press Enter twice, and then type the following code:
+13. Place the cursor at the end of the located code, press Enter twice, and then type the following code:
 ```cs
     app.UseSignalR(routes =>
     {
     });
 ```
 
-7. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **SignalRExample**, point to **Add**, and then click **New Folder**.
+14. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **SignalRExample**, point to **Add**, and then click **New Folder**.
 
-8. In the **NewFolder** text box, type **Hubs**, and then press Enter.
+15. In the **NewFolder** text box, type **Hubs**, and then press Enter.
 
-9. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Hubs**, point to **Add**, and then click **Class**.
+16. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Hubs**, point to **Add**, and then click **Class**.
 
-10.	In the **Add New Item - SignalRExample** dialog box, in the **Name** text box, type **SquaresHub**, and then click **Add**.
+17.	In the **Add New Item - SignalRExample** dialog box, in the **Name** text box, type **SquaresHub**, and then click **Add**.
 
-11. In the **SquaresHub.cs** code window, locate the following code:
+18. In the **SquaresHub.cs** code window, locate the following code:
 ```cs
     using System.Threading.Tasks;
 ```
 
-12. Place the cursor at the end of the located code, press Enter, and then type the following code:
+19. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     using Microsoft.AspNetCore.SignalR;
     using SignalRExample.Services;
 ```
-13. In the **SquaresHub.cs** code window, select the following code:
+20. In the **SquaresHub.cs** code window, select the following code:
 ```cs
     public class SquaresHub
 ```
 
-14. Replace the selected code with the following code:
+21. Replace the selected code with the following code:
 ```cs
     public class SquaresHub : Hub
 ```
 
-15. In the **SquaresHub.cs** code window, locate the following code:
+22. In the **SquaresHub.cs** code window, locate the following code:
 ```cs
     public class SquaresHub : Hub
     {
 ```
 
-16. Place the cursor at the end of the located code, press Enter, and then type the following code:
+23. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     private ISquareManager _manager;
 
@@ -382,62 +422,62 @@
     }
 ```
 
-17. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+24. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
     
-18. In the **Startup.cs** code window, locate the following code:
+25. In the **Startup.cs** code window, locate the following code:
 ```cs
     using SignalRExample.Services;
 ```
 
-19. Place the cursor at the end of the located code, press Enter, and then type the following code:
+26. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     using SignalRExample.Hubs;
 ```
 
-20. In the **Startup.cs** code window, locate the following code:
+27. In the **Startup.cs** code window, locate the following code:
 ```cs
     app.UseSignalR(routes =>
     {
 ```
 
-21. Place the cursor at the end of the located code, press Enter, and then type the following code:
+28. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     routes.MapHub<SquaresHub>("/squareshub");
 ```
 
-22. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **package.json**.
+29. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **package.json**.
 
-23. In the **Startup.cs** code window, locate the following code:
+30. In the **Startup.cs** code window, locate the following code:
 ```cs
     "dependencies": {
 ```
 
-24. Place the cursor at the end of the located code, press Enter, and then type the following code:
+31. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
-    "@aspnet/signalr": "^1.0.0",
+    "@aspnet/signalr": "1.0.0",
 ```
 
-25. In the **SignalRExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+32. In the **SignalRExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-26. In the **Microsoft Visual Studio** dialog box, click **Yes to All**.
+33. In the **Microsoft Visual Studio** dialog box, click **Yes to All**.
 
-    >**Note**: In **Solution Explorer**, under **Depenndencies**, a new folder named **npm** has been added, which contains the **@aspnet/signalr** package.
+    >**Note**: In **Solution Explorer**, under **Dependencies**, under **npm**  a new folder has been added named **@aspnet/signalr** package.
 
-27. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Square**, and then click **index.cshtml**.
+34. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Square**, and then click **index.cshtml**.
 
-28. In the **index.cshtml** code window, locate the following code:
+35. In the **index.cshtml** code window, locate the following code:
 ```cs
     <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
 ```
 
-29. Place the cursor at the end of the located code, press Enter, and then type the following code:
+36. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     <script src="~/node_modules/@@aspnet/signalr/dist/browser/signalr.min.js"></script>
 ```
 
-30. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **wwwroot**, expand **js**, and then click **square-events.js**.
+37. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **wwwroot**, expand **js**, and then click **square-events.js**.
 
-31. In the **square-events.js** code window, place the cursor at the beginning of the document, and then type the following code:
+38. In the **square-events.js** code window, place the cursor at the beginning of the document, and then type the following code:
 ```cs
     var connection = new signalR.HubConnectionBuilder()
         .withUrl("squareshub")
@@ -450,36 +490,36 @@
     connection.start();
 ```
 
-32. In the **square-events.js** code window, locate the following code:
+39. In the **square-events.js** code window, locate the following code:
 ```cs
     $(btn).toggleClass('blue red');
 ```
 
-33. Place the cursor at the end of the located code, press Enter, and then type the following code:
+40. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     connection.invoke("SwapColor", x, y);
 ```
 
-34. In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+41. In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-35. In the **SignalRExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+42. In the **SignalRExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
     >**Note**: The browser displays 9 blue squares.
 
-36. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
+43. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-37. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]**, and then press Enter.
+44. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]**, and then press Enter.
 
-38. In **Microsoft Edge**, click on one of the squares.
+45. In **Microsoft Edge**, click on one of the squares.
     >**Note**: In both the **Microsoft Edge** windows, the square that was clicked is red.
 
-39. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
+46. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-40. In **Microsoft Edge**, in the Address bar, type **http://localhost:[port]**, and then press Enter.
+47. In **Microsoft Edge**, in the Address bar, type **http://localhost:[port]**, and then press Enter.
     >**Note**: The browser displays 8 blue squares and 1 red square.
 
-41.  Close all the **Microsoft Edge** windows.
+48.  Close all the **Microsoft Edge** windows.
 
-42.  In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+49.  In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
