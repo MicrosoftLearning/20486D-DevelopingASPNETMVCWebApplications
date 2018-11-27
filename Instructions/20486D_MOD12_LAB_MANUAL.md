@@ -528,7 +528,7 @@ The main tasks for this exercise are as follows:
 6. Call the **Clients.All.SendAsync** method using the **await** operator. Pass **"NewMessage"**, **user** and **message** as a parameters to the **SendAsync** method.
 
 
-#### Task 2: Register the ChatHub in the Startup class.
+#### Task 2: Configure SignalR in the Startup class.
 
 1. In the **Startup** class, add a **USING** statement for the following namespace:
 
