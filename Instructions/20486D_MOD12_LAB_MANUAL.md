@@ -333,7 +333,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will first enable working with sessions. You will then Write an action in the first controller. After that you will write the content of the second controller. Finally, you will run the application and navigate from view to view.
+To retain information across requests, state should be used in the web application. In this exercise you will use session state to manage state in the web application.
 
 The main tasks for this exercise are as follows:
 
@@ -441,7 +441,7 @@ The main tasks for this exercise are as follows:
 
 18. Return the **ViewResult** result using the **View** method. Pass **sessionModel** as a parameter to the **View** method. 
 
-#### Task 4: Run the application and navigate from view to view.
+#### Task 4: Run the application.
 
 1. Save all the changes.
 
