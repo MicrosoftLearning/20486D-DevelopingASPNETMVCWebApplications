@@ -26,7 +26,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-In this exercise, you will first add a cache tag helper to a view. You will then insert data to be cached by the cache tag helper. After that you will insert items to a memory cache. Finally, you will retrieve items from a memory cache.
+To improve the performance of a web application, caching should be used in the web application. In this exercise, you will first add a cache tag helper to a view. After that you will use the memory cache to store and retrieve items.
 
 The main tasks for this exercise are as follows:
 
