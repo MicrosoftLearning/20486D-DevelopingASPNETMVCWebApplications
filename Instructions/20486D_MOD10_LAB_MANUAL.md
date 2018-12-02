@@ -684,6 +684,7 @@ The main tasks for this exercise are as follows:
     - Size: **M**
     - Color: **Yellow**
     - Price: **10**
+    - Tax: **1.2**
 
 4. In the **Output** tab, locate the following text:
     - **A Yellow shirt of size M with a price of $12.00 was added successfully.**
@@ -723,6 +724,7 @@ The main tasks for this exercise are as follows:
     - Size: **M**
     - Color: **Yellow**
     - Price: **10**
+    - Tax: **1.2**
 
 8. In **File Explorer**, navigate to **Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and open the **shirt_store_logs-XXXXXXXX.txt** file.
     >**Note**: The log file does not contain another message because the action was successful and there are no errors.
