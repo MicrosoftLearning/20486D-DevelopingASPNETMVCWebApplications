@@ -32,8 +32,8 @@ namespace Library.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel loginModel)
+        [HttpPost, ActionName("Login")]
+        public async Task<IActionResult> LoginPost(LoginViewModel loginModel)
         {
             if (ModelState.IsValid)
             {
@@ -58,9 +58,9 @@ namespace Library.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost, ActionName("Register")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterViewModel registerModel)
+        public async Task<IActionResult> RegisterPost(RegisterViewModel registerModel)
         {
             if (ModelState.IsValid)
             {
