@@ -26,7 +26,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-In this exercise, you will first add a cache tag helper to a view. You will then insert data to be cached by the cache tag helper. After that you will insert items to a memory cache. Finally, you will retrieve items from a memory cache.
+To improve the performance of a web application, caching should be used in the web application. In this exercise, you will first add a cache tag helper to a view. After that you will use the memory cache to store and retrieve items.
 
 The main tasks for this exercise are as follows:
 
@@ -333,7 +333,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will first enable working with sessions. You will then Write an action in the first controller. After that you will write the content of the second controller. Finally, you will run the application and navigate from view to view.
+To retain information across requests, state should be used in the web application. In this exercise you will use session state to manage state in the web application.
 
 The main tasks for this exercise are as follows:
 
@@ -441,7 +441,7 @@ The main tasks for this exercise are as follows:
 
 18. Return the **ViewResult** result using the **View** method. Pass **sessionModel** as a parameter to the **View** method. 
 
-#### Task 4: Run the application and navigate from view to view.
+#### Task 4: Run the application.
 
 1. Save all the changes.
 
@@ -528,7 +528,7 @@ The main tasks for this exercise are as follows:
 6. Call the **Clients.All.SendAsync** method using the **await** operator. Pass **"NewMessage"**, **user** and **message** as a parameters to the **SendAsync** method.
 
 
-#### Task 2: Register the ChatHub in the Startup class.
+#### Task 2: Configure SignalR in the Startup class.
 
 1. In the **Startup** class, add a **USING** statement for the following namespace:
 

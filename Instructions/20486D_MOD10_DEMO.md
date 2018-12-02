@@ -439,30 +439,32 @@
 
 31. In **Microsoft Edge**, click **16**.
 
-32. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, press **ctrl + F**, and then locate the following text:
+32. On the **Output** tab, in the **Show output from** text box, select **ASP.NET Core Web Server**.
+
+33. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, press **ctrl + F**, and then locate the following text:
 ```
     The number 16 was added to the page display count dictionary.
 ```
 
-33. In **Microsoft Edge**, click **Close**.
+34. In **Microsoft Edge**, click **Close**.
 
-34. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
+35. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
-35. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+36. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-36. In **Microsoft Edge**, click **16**.
+37. In **Microsoft Edge**, click **16**.
 
     >**Note:** The browser displays the numbers that **16** can be divided by.
 
-37. In **Microsoft Edge**, click **Close**.
+38. In **Microsoft Edge**, click **Close**.
 
-38. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+39. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
 
     >**Note**: Press **ctrl + F**, and then locate the followingthe sentence **GetDividedNumber - Success**.
 
-39. In **myLog-XXXXXXXX.txt** window, click **Close**.
+40. In **myLog-XXXXXXXX.txt** window, click **Close**.
 
-40. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+41. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
