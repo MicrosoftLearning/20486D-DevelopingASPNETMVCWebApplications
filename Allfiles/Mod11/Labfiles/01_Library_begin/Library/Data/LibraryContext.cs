@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Library.Data
 {
-    public class LibraryContext : IdentityDbContext<User>
+    public class LibraryContext : DbContext
     {
         public LibraryContext(DbContextOptions<LibraryContext> options)
            : base(options)

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Library.Models;
 using Library.ViewModels;
 using Microsoft.AspNetCore.Identity;
-
+using System.Security.Claims;
 
 namespace Library.Controllers
 {
@@ -87,7 +87,13 @@ namespace Library.Controllers
                         await _userManager.AddToRoleAsync(user, registerModel.RoleName);
                     }
 
-                    var resultSignIn = await _signInManager.PasswordSignInAsync(registerModel.UserName, registerModel.Password,registerModel.RememberMe,false);
+                    if (!string.IsNullOrWhiteSpace(user.Email))
+                    {
+                        Claim claim = new Claim(ClaimTypes.Email, user.Email);
+                        await _userManager.AddClaimAsync(user, claim);
+                    }
+
+                    var resultSignIn = await _signInManager.PasswordSignInAsync(registerModel.UserName, registerModel.Password, registerModel.RememberMe, false);
                     if (resultSignIn.Succeeded)
                     {
                         return RedirectToAction("Index", "Library");
@@ -98,6 +104,11 @@ namespace Library.Controllers
                     ModelState.AddModelError("", error.Description);
                 }
             }
+            return View();
+        }
+
+        public IActionResult AccessDenied()
+        {
             return View();
         }
     }
