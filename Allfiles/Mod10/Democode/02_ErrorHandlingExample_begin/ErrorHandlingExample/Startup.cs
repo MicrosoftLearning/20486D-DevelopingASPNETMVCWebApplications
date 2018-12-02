@@ -39,12 +39,7 @@ namespace ErrorHandlingExample
                 await next.Invoke();
             });
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "ErrorHandlingRoute",
-                    template: "{controller}/{action}/{id?}");
-            });
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

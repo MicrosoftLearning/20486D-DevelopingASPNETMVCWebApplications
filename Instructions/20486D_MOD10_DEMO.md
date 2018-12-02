@@ -318,7 +318,7 @@
     })
 ```
 
-5. In **Solution Explorer**, expand **appsettings.json**, and then click **appsettings.development.json**.
+5. In **Solution Explorer**, click **appsettings.development.json**.
 
 6. Place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
 ```cs
@@ -329,7 +329,7 @@
     }
 ```
 
-7. In **Solution Explorer**, under **appsettings.json**, click **appsettings.production.json**.
+7. In **Solution Explorer**, click **appsettings.production.json**.
 
 8. Place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
 ```cs
@@ -401,7 +401,7 @@
 
 21. In **Microsoft Edge**, click **16**.
 
-    >**Note:** The browser displays the numbers that **16** can be divided by.
+    >**Note:** The browser does not displays the numbers that **16** can be divided by.
 
 22. In **Microsoft Edge**, click **Close**.
 
@@ -439,32 +439,34 @@
 
 31. In **Microsoft Edge**, click **16**.
 
-32. On the **Output** tab, in the **Show output from** text box, select **ASP.NET Core Web Server**.
+32. In the **LoggingExample - Microsoft Visual Studio** window, on the **View** menu, click **Output**.
 
-33. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, press **ctrl + F**, and then locate the following text:
+33. On the **Output** tab, in the **Show output from** text box, select **ASP.NET Core Web Server**.
+
+34. In the **LoggingExample - Microsoft Visual Studio** window, on the **Output** tab, press **Ctrl + F**, and then locate the following text:
 ```
     The number 16 was added to the page display count dictionary.
 ```
 
-34. In **Microsoft Edge**, click **Close**.
+35. In **Microsoft Edge**, click **Close**.
 
-35. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
+36. In the **LoggingExample - Microsoft Visual Studio** window, on toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
-36. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+37. In the **LoggingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-37. In **Microsoft Edge**, click **16**.
+38. In **Microsoft Edge**, click **16**.
 
     >**Note:** The browser displays the numbers that **16** can be divided by.
 
-38. In **Microsoft Edge**, click **Close**.
+39. In **Microsoft Edge**, click **Close**.
 
-39. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+40. In **File Explorer**, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
 
-    >**Note**: Press **ctrl + F**, and then locate the followingthe sentence **GetDividedNumber - Success**.
+    >**Note**: Press **Ctrl + F**, and then locate the followingthe sentence **GetDividedNumber - Success**.
 
-40. In **myLog-XXXXXXXX.txt** window, click **Close**.
+41. In **myLog-XXXXXXXX.txt** window, click **Close**.
 
-41. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+42. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
