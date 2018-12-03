@@ -35,7 +35,7 @@ namespace ElectricStore
             {
                 routes.MapRoute(
                     name: "ElectricStoreRoute",
-                    template: "{controller}/{action}/{id?}",
+                    template: "{controller}/{action}/{id?}/{RefreshCache?}",
                     defaults: new { controller = "Products", action = "Index" },
                     constraints: new { id = "[0-9]+" });
             });

@@ -35,6 +35,7 @@ namespace ElectricStore.Controllers
             if (!_memoryCache.TryGetValue(PRODUCT_KEY, out products))
             {
                 products = _context.Products.ToList();
+                products.Select(c => { c.LoadedFromDatabase = DateTime.Now; return c; }).ToList();
                 MemoryCacheEntryOptions cacheOptions = new MemoryCacheEntryOptions();
                 cacheOptions.SetPriority(CacheItemPriority.High);
                 cacheOptions.SetSlidingExpiration(TimeSpan.FromSeconds(60));

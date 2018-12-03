@@ -85,6 +85,13 @@ label {
     padding: 5px;
 }
 
+.display-chached-time {
+    font-size: 15px;
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+}
+
 .navbar-custom .navbar-nav .nav-link {
     padding: 5px;
 }
