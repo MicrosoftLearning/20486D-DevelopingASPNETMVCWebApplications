@@ -1,6 +1,6 @@
 # Module 13: Implementing Web APIs
 
-# Lesson 1: Introducing Web APIs
+# Lesson 2: Developing a Web API
 
 ### Demonstration: How to Explore a Web API with Microsoft Edge
 
