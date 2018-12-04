@@ -57,7 +57,7 @@ namespace ElectricStore.Controllers
             return View(customer);
         }
 
-        private void PopulateProductsList(int[] selectedProducts = null)
+        private void PopulateProductsList(List<int> selectedProducts = null)
         {
             var products = from p in _context.Products
                            orderby p.ProductName

@@ -33,6 +33,6 @@ namespace ElectricStore.Models
 
         [NotMapped]
 		[Display(Name = "Products List")]
-        public int[] SelectedProductsList { get; set; }
+        public List<int> SelectedProductsList { get; set; }
     }
 }

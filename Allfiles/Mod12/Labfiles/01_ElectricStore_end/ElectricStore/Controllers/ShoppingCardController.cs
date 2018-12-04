@@ -23,18 +23,18 @@ namespace ElectricStore.Controllers
 
         public IActionResult Index()
         {
-            if (!string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerName")) && !string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts")))
+            if (!string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerFirstName")) && !string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts")))
             {
-                int[] ProductsListId = JsonConvert.DeserializeObject<int[]>(HttpContext.Session.GetString("CustomerProducts"));
+                List<int> productsListId = JsonConvert.DeserializeObject<List<int>>(HttpContext.Session.GetString("CustomerProducts"));
                 products = new List<Product>();
-                foreach (var item in ProductsListId)
+                foreach (var item in productsListId)
                 {
                     var product = _context.Products.SingleOrDefault(p => p.Id == item);
                     products.Add(product);
                 }
                 sessionModel = new SessionStateViewModel
                 {
-                    CustomerName = HttpContext.Session.GetString("CustomerName"),
+                    CustomerName = HttpContext.Session.GetString("CustomerFirstName"),
                     SelectedProducts = products
                 };
                 return View(sessionModel);

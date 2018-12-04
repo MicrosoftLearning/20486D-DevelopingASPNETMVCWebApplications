@@ -38,7 +38,6 @@ namespace ElectricStore.Controllers
                 products.Select(c => { c.LoadedFromDatabase = DateTime.Now; return c; }).ToList();
                 MemoryCacheEntryOptions cacheOptions = new MemoryCacheEntryOptions();
                 cacheOptions.SetPriority(CacheItemPriority.High);
-                cacheOptions.SetSlidingExpiration(TimeSpan.FromSeconds(60));
                 _memoryCache.Set(PRODUCT_KEY, products, cacheOptions);
             }
             return View(products);
@@ -55,6 +54,19 @@ namespace ElectricStore.Controllers
         [HttpGet]
         public IActionResult AddToShoppingList()
         {
+            if (HttpContext.Session.GetString("CustomerFirstName") != null)
+            {
+                Customer sessionCustomer = new Customer()
+                {
+                    FirstName = HttpContext.Session.GetString("CustomerFirstName"),
+                    LastName = HttpContext.Session.GetString("CustomerLastName"),
+                    Email = HttpContext.Session.GetString("CustomerEmail"),
+                    Address = HttpContext.Session.GetString("CustomerAddress"),
+                    PhoneNumber = HttpContext.Session.GetInt32("CustomerPhoneNumber").Value,
+                };
+                PopulateProductsList();
+                return View(sessionCustomer);
+            }
             PopulateProductsList();
             return View();
         }
@@ -64,22 +76,25 @@ namespace ElectricStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Customers.Add(customer);
-                _context.SaveChanges();
-
-                if (string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerName")) && string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts")))
+                HttpContext.Session.SetString("CustomerFirstName", customer.FirstName);
+                HttpContext.Session.SetString("CustomerLastName", customer.LastName);
+                HttpContext.Session.SetString("CustomerEmail", customer.Email);
+                HttpContext.Session.SetString("CustomerAddress", customer.Address);
+                HttpContext.Session.SetInt32("CustomerPhoneNumber", customer.PhoneNumber);
+                if (HttpContext.Session.GetString("CustomerProducts") != null)
                 {
-                    HttpContext.Session.SetString("CustomerName", customer.FirstName);
-                    var serialisedDate = JsonConvert.SerializeObject(customer.SelectedProductsList);
-                    HttpContext.Session.SetString("CustomerProducts", serialisedDate);
+                    List<int> productsListId = JsonConvert.DeserializeObject<List<int>>(HttpContext.Session.GetString("CustomerProducts"));
+                    customer.SelectedProductsList.AddRange(productsListId);
                 }
+                var serialisedDate = JsonConvert.SerializeObject(customer.SelectedProductsList);
+                HttpContext.Session.SetString("CustomerProducts", serialisedDate);
                 return RedirectToAction(nameof(Index));
             }
             PopulateProductsList(customer.SelectedProductsList);
             return View(customer);
         }
 
-        private void PopulateProductsList(int[] selectedProducts = null)
+        private void PopulateProductsList(List<int> selectedProducts = null)
         {
             var products = from p in _context.Products
                            orderby p.ProductName

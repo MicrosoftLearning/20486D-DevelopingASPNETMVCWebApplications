@@ -11,8 +11,7 @@
             <div class="form-group row">
                 <label asp-for="SelectedProductsList" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
-                    <select multiple asp-for="SelectedProductsList" asp-items="ViewBag.ProductsList" type="text" class="form-control" placeholder="Products" required>
-                    </select>
+                    <select multiple asp-for="SelectedProductsList" asp-items="ViewBag.ProductsList" type="text" class="form-control" placeholder="Products" required></select>
                     <span asp-validation-for="SelectedProductsList"></span>
                 </div>
             </div>

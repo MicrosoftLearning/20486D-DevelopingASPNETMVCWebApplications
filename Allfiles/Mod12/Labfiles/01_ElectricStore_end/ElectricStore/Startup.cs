@@ -19,8 +19,6 @@ namespace ElectricStore
             services.AddDbContext<StoreContext>(options =>
                  options.UseSqlite("Data Source=electricStore.db"));
 
-            services.AddDistributedMemoryCache();
-
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromSeconds(60);

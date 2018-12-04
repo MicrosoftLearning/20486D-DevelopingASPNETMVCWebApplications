@@ -28,6 +28,7 @@ namespace ElectricStore.Models
         public string ImageMimeType { get; set; }
 
         [Display(Name = "Last retrieved on")]
+        [NotMapped]
         public DateTime LoadedFromDatabase { get; set; }
 
         [InverseProperty("Product")]

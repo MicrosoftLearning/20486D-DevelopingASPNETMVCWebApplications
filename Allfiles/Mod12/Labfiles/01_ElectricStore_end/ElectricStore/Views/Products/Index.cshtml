@@ -9,6 +9,7 @@
     <span class="span-col-s">Sale of the Day</span>
 </h2>
 
+
 <div class="page-container">
     @foreach (var item in Model)
     {
@@ -32,7 +33,7 @@
             </div>
             <div>
                 <p>
-                    @Html.DisplayFor(model => item.LoadedFromDatabase)
+                    @Html.DisplayNameFor(model => item.LoadedFromDatabase)
                 </p>
                 <p>
                     @Html.DisplayFor(model => item.LoadedFromDatabase)
@@ -41,3 +42,6 @@
         </div>
     }
 </div>
+
+
+
