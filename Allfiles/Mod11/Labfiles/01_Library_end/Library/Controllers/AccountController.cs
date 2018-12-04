@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Library.Models;
 using Library.ViewModels;
 using Microsoft.AspNetCore.Identity;
-
+using System.Security.Claims;
 
 namespace Library.Controllers
 {
@@ -32,8 +32,8 @@ namespace Library.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel loginModel)
+        [HttpPost, ActionName("Login")]
+        public async Task<IActionResult> LoginPost(LoginViewModel loginModel)
         {
             if (ModelState.IsValid)
             {
@@ -58,9 +58,9 @@ namespace Library.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost, ActionName("Register")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterViewModel registerModel)
+        public async Task<IActionResult> RegisterPost(RegisterViewModel registerModel)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,13 @@ namespace Library.Controllers
                         await _userManager.AddToRoleAsync(user, registerModel.RoleName);
                     }
 
-                    var resultSignIn = await _signInManager.PasswordSignInAsync(registerModel.UserName, registerModel.Password,registerModel.RememberMe,false);
+                    if (!string.IsNullOrWhiteSpace(user.Email))
+                    {
+                        Claim claim = new Claim(ClaimTypes.Email, user.Email);
+                        await _userManager.AddClaimAsync(user, claim);
+                    }
+
+                    var resultSignIn = await _signInManager.PasswordSignInAsync(registerModel.UserName, registerModel.Password, registerModel.RememberMe, false);
                     if (resultSignIn.Succeeded)
                     {
                         return RedirectToAction("Index", "Library");
@@ -98,6 +104,11 @@ namespace Library.Controllers
                     ModelState.AddModelError("", error.Description);
                 }
             }
+            return View();
+        }
+
+        public IActionResult AccessDenied()
+        {
             return View();
         }
     }

@@ -33,25 +33,25 @@ namespace ElectricStore
 
         public void Configure(IApplicationBuilder app, StoreContext storeContext, IHostingEnvironment environment)
         {
-            app.UseSession();
-
             storeContext.Database.EnsureDeleted();
             storeContext.Database.EnsureCreated();
 
             app.UseStaticFiles();
+
+            app.UseNodeModules(environment.ContentRootPath);
+
+            app.UseSession();
 
             app.UseSignalR(routes =>
             {
                 routes.MapHub<ChatHub>("/chatHub");
             });
 
-            app.UseNodeModules(environment.ContentRootPath);
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "ElectricStoreRoute",
-                    template: "{controller}/{action}/{id?}",
+                    template: "{controller}/{action}/{id?}/{RefreshCache?}",
                     defaults: new { controller = "Products", action = "Index" },
                     constraints: new { id = "[0-9]+" });
             });

@@ -22,6 +22,11 @@
         <span asp-validation-for="Price" class="text-danger"></span>
     </div>
     <div class="form-group">
+        <label asp-for="Tax" class="control-label"></label>
+        <input asp-for="Tax" class="form-control" />
+        <span asp-validation-for="Tax" class="text-danger"></span>
+    </div>
+    <div class="form-group">
         <input type="submit" value="Add Shirt to Stock" class="btn btn-default" />
     </div>
 </form>

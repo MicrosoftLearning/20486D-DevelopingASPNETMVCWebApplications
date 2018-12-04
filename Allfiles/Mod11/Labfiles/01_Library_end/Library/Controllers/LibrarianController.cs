@@ -13,7 +13,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Library.Controllers
 {
-    [Authorize(Policy = "RequireAdministratorRole")]
+    [Authorize(Policy = "RequireEmail")]
+    [Authorize(Roles = "Administrator")]
     public class LibrarianController : Controller
     {
         private LibraryContext _context;

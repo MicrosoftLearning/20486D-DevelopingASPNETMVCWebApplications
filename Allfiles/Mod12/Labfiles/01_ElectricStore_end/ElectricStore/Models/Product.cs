@@ -27,6 +27,9 @@ namespace ElectricStore.Models
         [HiddenInput(DisplayValue = false)]
         public string ImageMimeType { get; set; }
 
+        [Display(Name = "Last retrieved on")]
+        public DateTime LoadedFromDatabase { get; set; }
+
         [InverseProperty("Product")]
         public virtual List<CustomersProducts> CustomerProducts { get; set; }
 

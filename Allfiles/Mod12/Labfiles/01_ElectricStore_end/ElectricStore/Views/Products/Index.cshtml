@@ -6,7 +6,7 @@
 
 <h2 class="title">
     <img src="~/images/sale-banner.jpg" />
-    <span class="span-col-s">Sale of The Day</span>
+    <span class="span-col-s">Sale of the Day</span>
 </h2>
 
 <div class="page-container">
@@ -22,14 +22,22 @@
                     <img src="@Url.Action("GetImage", "Products", new { productId = item.Id })" />
                 </div>
             }
-                <div>
-                    <p>
-                        @Html.DisplayFor(model => item.Description)
-                    </p>
-                    <p>
-                        @Html.DisplayFor(model => item.Price)
-                    </p>
-                </div>
+            <div>
+                <p>
+                    @Html.DisplayFor(model => item.Description)
+                </p>
+                <p>
+                    @Html.DisplayFor(model => item.Price)
+                </p>
+            </div>
+            <div>
+                <p>
+                    @Html.DisplayFor(model => item.LoadedFromDatabase)
+                </p>
+                <p>
+                    @Html.DisplayFor(model => item.LoadedFromDatabase)
+                </p>
+            </div>
         </div>
     }
 </div>

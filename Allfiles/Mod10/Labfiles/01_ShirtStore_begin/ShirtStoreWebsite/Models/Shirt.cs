@@ -16,7 +16,7 @@ namespace ShirtStoreWebsite.Models
         public ShirtColor Color { get; set; }
         [Required]
         public float Price { get; set; }
-
+        [Required]
         public float Tax { get; set; }
 
         public string GetFormattedTaxedPrice()
