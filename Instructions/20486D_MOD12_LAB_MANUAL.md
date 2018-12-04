@@ -38,9 +38,7 @@ The main tasks for this exercise are as follows:
 
 4.	Insert items to a memory cache.
 
-5.	Retrieve items from a memory cache.
-
-6.	Run the application.
+5.	Run the application.
 
 
 #### Task 1: Add a cache tag helper to a view.
@@ -339,9 +337,9 @@ The main tasks for this exercise are as follows:
 
 1. Enable working with sessions.
 
-2. Write an action in the first controller.
+2. Use session to store values.
 
-3. Write the content of the second controller.
+3. Retrieve values from a session.
 
 4. Run the application and navigate from view to view.
 
@@ -358,7 +356,7 @@ The main tasks for this exercise are as follows:
 3.  In the **Configure** method, call the **UseSession** method of the **app** parameter.
 
 
-#### Task 2: Write an action in the first controller.
+#### Task 2: Use session to store values.
 
 1. In the **ProductsController** class, add **USING** statements for the following namespaces:
 
@@ -374,7 +372,7 @@ The main tasks for this exercise are as follows:
 5. Call the **HttpContext.Session.SetString** method and pass **"CustomerProducts"** and **serialisedDate** as parameters.
 
 
-#### Task 3: Write the content of the second controller.
+#### Task 3: Retrieve values from a session.
 
 1.  Create a new controller with the following information:
     - Controller name: **ShoppingCardController**
