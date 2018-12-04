@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You have been asked to create a web-based electric store application for your organization's customers. The application should have a page showing sale of the day, products sorted by category, ability to add products to your shopping list, and a chat page that lets users talk online. The application contains a cache tag helper to cache content in a view, also memory cache in a controller, and a session state configuration. Finally, the students will write a chat room using SignalR.
+You have been asked to create a web-based electric store application for your organization's customers. The application should have a page showing sale of the day, products sorted by category, ability to add products to your shopping list, and a chat page that lets users talk online. The application should contain a cache tag helper to cache content in a view, a memory cache in a controller, and a session state configuration. Finally, you will write a chat room using SignalR.
 
 #### Objectives
 
