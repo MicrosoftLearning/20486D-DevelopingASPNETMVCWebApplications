@@ -12,24 +12,21 @@
 
 1. Navigate to **Allfiles\Mod13\Democode\01_WebApiExample_begin**, and then double-click **WebApiExample.sln**.
 
-2. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+2. In **Microsoft Edge**, click **Close**.
 
-    >**Note:** The browser displays **HTTP 404** error. 
+3. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Properties** click **launchSettings.json**.
 
-3. In **Microsoft Edge**, click **Close**.
-
-4. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Properties** click **lanchSettings.json**.
-
-5. In the **lanchSettings.json** code window, select the following code:
+4. In the **launchSettings.json** code window, select the following code:
   ```cs
-       "launchUrl": "api/values",
+       "launchUrl": "",
 ```
->**Note:** This snippet of code appears twice in the file.  
-
-6. Replace the selected code with the following code:
+5. Replace the selected code with the following code:
   ```cs
        "launchUrl": "api/person",
 ```
+6. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+    >**Note:** The browser displays **HTTP 404** error. 
 
 7. In **Solution Explorer**, right-click **WebApiExample**, point to **Add**, and then click **New Folder**.
 
@@ -65,7 +62,7 @@
 15. Ensure that the cursor is at the end of the **PersonController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet]
-       public ActionResult<List<Person>> GetAll()
+       public List<Person> GetAll()
        {
        }
 ```
@@ -76,11 +73,11 @@
 17. Ensure that the cursor is at the end of the **GetAll** action code block, press Enter twice, and then type the following code:
   ```cs
        [HttpGet("{id}")]
-       public ActionResult<Person> GetLastNameById(int id)
+       public ActionResult<Person> GetPersonById(int id)
        {
        }
 ```
-18. In the **GetLastNameById** action code block, type the following code:
+18. In the **GetPersonById** action code block, type the following code:
   ```cs
        var person = _people.FirstOrDefault(p => p.Id == id);
 
@@ -100,96 +97,54 @@
 
 21. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/api/person/1**, and then press Enter.
 
-    >**Note:** The browser displays the first person's last name in **JSON** format.
+    >**Note:** The browser displays the person in **JSON** format.
 
 22. In **Microsoft Edge**, click **Close**.
 
-23. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+23. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **WebApiExample**, and then click **Manage NuGet Packages**.
 
-# Lesson 2: Developing a Web API
+24. In the **NuGet Package Manager: WebApiExample** window, click **Browse**.
 
-### Demonstration: How to Return Data in XML Format
+25. In the **Search** text box, type **Microsoft.AspNetCore.Mvc.Formatters.Xml**, and then press Enter.
 
-#### Preparation Steps 
+26. Click **Microsoft.AspNetCore.Mvc.Formatters.Xml**, select version **2.1.1**, and then click **Install.**
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+27. If a **Preview Changes** dialog box appears, click **OK**.
 
-#### Demonstration Steps
+28. If a **License Acceptance** dialog box appears, click **I Accept**.
 
-1. Navigate to **Allfiles\Mod13\Democode\02_XmlFormatExample_begin**, and then double-click **XmlFormatExample.sln**.
+29. Close the **NuGet Package Manager: WebApiExample** window.
 
-2. In the **XmlFormatExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **XmlFormatExample**, and then click **Manage NuGet Packages**.
+30. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
-3. In the **NuGet Package Manager: XmlFormatExample** window, click **Browse**.
-
-4. In the **Search** text box, type **Microsoft.AspNetCore.Mvc.Formatters.Xml**, and then press Enter.
-
-5. Click **Microsoft.AspNetCore.Mvc.Formatters.Xml**, select version **2.1.0**, and then click **Install.**
-
-6. If a **Preview Changes** dialog box appears, click **OK**.
-
-7. If a **License Acceptance** dialog box appears, click **I Accept**.
-
-8. Close the **NuGet Package Manager: XmlFormatExample** window.
-
-9. In the **XmlFormatExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
-
-10. In the **Startup.cs** code window, in the **ConfigureServices** method, place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
+31. In the **Startup.cs** code window, select the following code:
+  ```cs
+      services.AddMvc();
+```
+32. Replace the selected code with the following code:
   ```cs
       services.AddMvc().AddXmlSerializerFormatters();
 ```
-11. In **Solution Explorer**, right-click **XmlFormatExample**, point to **Add**, and then click **New Folder**.
+33. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, click **PersonController.cs**.
 
-12. In the **NewFolder** text box, type **Controllers**, and then press Enter.
-
-13. In the **XmlFormatExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
-
-14. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
-
-15. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **AnimalsController**, and then click **Add**.
-
-16. In the **AnimalsController.cs** code window, locate the following code:
+34. In the **GetAll** action code block, locate the following code:
   ```cs
-       using Microsoft.AspNetCore.Mvc;
+       public List<Person> GetAll()
 ```
-17. Ensure that the cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
+35. Place the cursor before the located code, press the Up Arrow key, and then type the following code:
   ```cs
-       using XmlFormatExample.Models;
-```
-
-18. In the **AnimalsController.cs** code window, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
-  ```cs
-       private List<Animal> _animals = new List<Animal>();
-
-       public AnimalsController()
-       {
-            _animals.Add(new Animal() { Id = 1, Name = "Lion", Family = "Mammal", Facts = "Lions are found especially in parts of Africa, and they are most active at night." });
-            _animals.Add(new Animal() { Id = 2, Name = "Elephant", Family = "Mammal", Facts = "Elephants are intelligent animals and have a very good memories, they also display emotions signs." });
-            _animals.Add(new Animal() { Id = 3, Name = "Shark", Family = "Fish", Facts = "Sharks live in the ocean, and average shark has 40-45 teeth" });
-       }
-```
-19. Ensure that the cursor is at the end of the **AnimalsController** constructor code block, press Enter twice, type the following code, and then press Enter.
-  ```cs
-       [HttpGet]
        [Produces("application/xml")]
-       public ActionResult<List<Animal>> GetAll()
-       {
-       }
-```
-20. In the **GetAll** action code block, type the following code:
-  ```cs
-       return _animals;
-```
-21. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+``` 
 
-22. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+36. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-    >**Note:** The browser displays a list of animals in **XML** format.
+37. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-23. In **Microsoft Edge**, click **Close**.
+    >**Note:** The browser displays a list of people in **XML** format.
 
-24. In the **XmlFormatExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+38. In **Microsoft Edge**, click **Close**.
 
+39. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Calling a Web API 
 
@@ -337,7 +292,7 @@
 ```
 25. In the **Index.cshtml** code window, in the **BODY** element, type the following code:
   ```cs
-       <h1>Welcome to Module 13 - Demo 3</h1>
+       <h1>Welcome to Module 13 - Demo 2</h1>
        <button type="button" class="btn-get btn-outline-info">Get Ajax Function</button>
        <button type="button" class="btn-post btn-outline-info">Post Ajax Function</button>
        <div class="result"></div>

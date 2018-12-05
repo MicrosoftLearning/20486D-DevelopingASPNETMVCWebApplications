@@ -23,13 +23,14 @@ namespace WebApiExample.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Person>> GetAll()
+        [Produces("application/xml")]
+        public List<Person> GetAll()
         {
             return _people;
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Person> GetLastNameById(int id)
+        public ActionResult<Person> GetPersonById(int id)
         {
             var person = _people.FirstOrDefault(p => p.Id == id);
 
