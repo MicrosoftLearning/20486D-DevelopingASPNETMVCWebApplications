@@ -22,6 +22,27 @@ Estimated Time: **60 minutes**
 
 1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
+2. Open the **Command Prompt** window using **Run as administrator**.
+
+3. In Administrator: Command Prompt, run the following command: **cd <The location of Allfiles\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore folder on your machine>**.
+
+4. Run the following command: **npm install**.
+
+5. Close the **Command Prompt** window.
+
+6. Open the **ElectricStore.sln** solution from the following location: **Allfiles\Mod12\Labfiles\01_ElectricStore_begin**.
+
+7. In the **ElectricStore - Microsoft Visual Studio** window, click **TOOLS** and then click **Options**.
+
+8. In the **Options** dialog box, click **Web Package Management**.
+
+9. In the **Locations of external tools** list box, select **$(PATH)**. Press the **Up** arrow button until **$(PATH)** is at the top of the list, and then click **OK**.
+
+10. Open the **package.json** file and examine its content.
+
+    >**Note:** There are dependencies to the 
+    **jquery, jquery-validation, jquery-validation-unobtrusive, bootstrap** and **popper.js** packages.
+
 ### Exercise 1: Implementing a Caching Strategy
 
 #### Scenario
@@ -43,32 +64,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add a cache tag helper to a view.
 
-1. Open the **Command Prompt** window using **Run as administrator**.
+1. In the **_Layout.cshtml** file, in the **UL** element with the **navbar-nav** class, add a **CACHE** element with the following information:
 
-2. In Administrator: Command Prompt, run the following command: **cd <The location of Allfiles\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore folder on your machine>**.
+    - vary-by-route: **RefreshCache**
 
-3. Run the following command: **npm install**.
-
-4. Close the **Command Prompt** window.
-
-5. Open the **ElectricStore.sln** solution from the following location: **Allfiles\Mod12\Labfiles\01_ElectricStore_begin**.
-
-6. In the **ElectricStore - Microsoft Visual Studio** window, click **TOOLS** and then click **Options**.
-
-7. In the **Options** dialog box, click **Web Package Management**.
-
-8. In the **Locations of external tools** list box, select **$(PATH)**. Press the **Up** arrow button until **$(PATH)** is at the top of the list, and then click **OK**.
-
-9. Open the **package.json** file and examine its content.
-
-    >**Note:** There are dependencies to the 
-    **jquery, jquery-validation, jquery-validation-unobtrusive, bootstrap** and **popper.js** packages.
-
-10. In the **_Layout.cshtml** file, in the **UL** element with the **navbar-nav** class, add a **CACHE** element with the following information:
-
-    - vary-by-user: **true**
-
-11. In the **CACHE** element, call the **Component.InvokeAsync** method using the **@await** operator. Pass **"NavbarMenu"** as a parameter to the **InvokeAsync** method.
+2. In the **CACHE** element, call the **Component.InvokeAsync** method using the **@await** operator. Pass **"NavbarMenu"** as a parameter to the **InvokeAsync** method.
 
 #### Task 2: Insert data to be cached by the cache tag helper.
 
@@ -125,7 +125,6 @@ The main tasks for this exercise are as follows:
 
      - Name: **MenuCategories**
      - Folder: **MenuCategories**
-
 
 14. In the **MenuCategories.cshtml** view, remove all the content.
 
@@ -204,30 +203,41 @@ The main tasks for this exercise are as follows:
         - class: **nav-link**
         - href: **@Url.Action("Index", "ShoppingCard")**
 
+26. After the last **LI** element, add a **LI** element with the following information:
+
+     - Class: **nav-item**
+
+27. In the new **LI** element, add a **DIV** element with the following information:
+
+     - Content: **The content cached Since: @DateTime.Now**
+     - Attributes:
+        - class: **display-cached-time**
 
 #### Task 3: Run the application
 
 1. Save all the changes.
 
 2. Start the application without debugging.
-    >**Note:** Examine the browser content, the browser displays the **Index.cshtml** file content, rendered in the **_Layout.cshtml**, and the chached content is the meanu bar of the application.
 
-3. In the menu bar, click **Electronics**, and then click **Home Electrical Equipment**.
-    >**Note:** Examine the browser content.
+3. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-4. In the menu bar, click **Electronics**, and then click **Office Electrical Equipment**.
+4. In the second **Microsoft Edge**, navigate to **http://localhost:[port]**.
 
-    >**Note:** Examine the browser content.
+    >**Note:** The menu bar of the application is cached since the time displayed in the menu bar, the time is the same in both **Microsoft Edge** pages.
 
-5. Close the **Microsoft Edge** window.
+5. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
+6. In the second **Microsoft Edge**, navigate to **http://localhost:[port]/products/index/1/RefreshCache**.
+
+    >**Note:** The menu bar of the application is cached since the time displayed in the menu bar, the time is not the same as the other two **Microsoft Edge** pages because the **RefreshCache** in the route triggers a reload of the view component.
+
+7. Close all the **Microsoft Edge** window.
 
 #### Task 4: Insert items to a memory cache.
 
 1. In the **ProductsController** class, add **USING** statements for the following namespace:
 
    - **Microsoft.Extensions.Caching.Memory**
-
 
 2. Create a new field with the following information:
 
@@ -257,27 +267,32 @@ The main tasks for this exercise are as follows:
 
 5. In the constructor, initialize the  **_memoryCache** field with the value of the **memoryCache** parameter.
 
-6. In the beginning of the  **Index** method,  create a variable named **products** of type **List&#60;Product&#62;**.
+6. In the beginning of the  **Index** method, create a variable named **products** of type **List&#60;Product&#62;**.
 
 7. Add an **IF** statement that checks that value of **_memoryCache.TryGetValue(PRODUCT_KEY, out products)** is false.
 
 8. In the **IF** statement, assign the **products** variable, with the value of **_context.Products.ToList()**.
 
-9. Create a variable named **MemoryCacheEntryOptions** of type **cacheOptions**. Initialize the  **cacheOptions** variable using the  **MemoryCacheEntryOptions** constructor.
+9. call the **Select** method of the **products** variable, with the following information:
 
-10. Call the **SetPriority** method of the  **cacheOptions** variable. Pass **CacheItemPriority.High** as a parameter to the  **SetPriority** method.
+10. Pass a **lambda expression** as a parameter to the **Select** method with the following information:
+   - Lambda Expression: **c => { c.LoadedFromDatabase = DateTime.Now; return c; }**
 
-11. Call the **SetSlidingExpiration** method of the  **cacheOptions** variable. Pass **TimeSpan.FromSeconds(60)** as a parameter to the  **SetSlidingExpiration** method.
+11. Chain a **ToList** method call to the **Select** function call.
 
-12. Call the **Set** method of the  **_memoryCache** variable. Pass **PRODUCT_KEY**,  **products** and  **cacheOptions** as a parameters to the  **Set** method.
+12. Create a variable named **MemoryCacheEntryOptions** of type **cacheOptions**. Initialize the  **cacheOptions** variable using the  **MemoryCacheEntryOptions** constructor.
 
+13. Call the **SetPriority** method of the  **cacheOptions** variable. Pass **CacheItemPriority.High** as a parameter to the  **SetPriority** method.
+
+14. Call the **SetSlidingExpiration** method of the  **cacheOptions** variable. Pass **TimeSpan.FromSeconds(60)** as a parameter to the  **SetSlidingExpiration** method.
+
+15. Call the **Set** method of the  **_memoryCache** variable. Pass **PRODUCT_KEY**,  **products** and  **cacheOptions** as a parameters to the  **Set** method.
 
 #### Task 5: Retrieve items from a memory cache
 
 1. In the **Products/Index.cshtml** view, after the **H2** element, add a **DIV** element with the following information:
 
      - Class: **page-container**
-
 
 2. In the **DIV** element, create a **FOREACH** statement, with the following information:
 
@@ -292,7 +307,6 @@ The main tasks for this exercise are as follows:
 4. In the new **DIV** element, add a **H3** element with the following information:
 
     - Content: **@Html.DisplayFor(modelItem => item.ProductName)**
-
 
 5. After the **H3** element, add a **IF** statement that checks that **item.PhotoFileName** is not **NULL**.
 
@@ -312,6 +326,15 @@ The main tasks for this exercise are as follows:
 
      - Content: **@Html.DisplayFor(model => item.Price)**
 
+11. After the new **DIV** element, add another **DIV** element.
+
+12. In the new **DIV** element, add a **P** element with the following information:
+
+     - Content: **@Html.DisplayNameFor(model => item.LoadedFromDatabase)**
+
+13. After the new **P** element, add a **P** element with the following information:
+
+     - Content: **@Html.DisplayFor(model => item.LoadedFromDatabase)**
 
 #### Task 6: Run the application
 
@@ -319,13 +342,17 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-    >**Note:** Examine the browser content, the browser displays the **Index.cshtml** file content, rendered in the **_Layout.cshtml**, and the chached  content is the products that are shown in the **"Sale of The Day"** page content.
+    >**Note:** Examine the products **Last retrieved on** data.
 
-3. Close the **Microsoft Edge** window.
+3. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
+4. In the second **Microsoft Edge**, navigate to **http://localhost:[port]**.
+
+    >**Note:** Examine the browser content, you can see that products in the **"Sale of The Day"** page content are cached, since the time displayed in the products **Last retrieved on** data is identical in both **Microsoft Edge** pages.
+
+5. Close all the **Microsoft Edge** window.
 
 >**Results**: After completing this exercise, you will be able to implement caching strategy by adding cache tag helper to a view, and insert items to a memory cache.
-
 
 ### Exercise 2: Managing State
 
@@ -343,18 +370,16 @@ The main tasks for this exercise are as follows:
 
 4. Run the application and navigate from view to view.
 
-
 #### Task 1: Enable working with sessions.
 
-1. In the **Startup** class, in the **ConfigureServices** method, after the **services.AddDbContext** method call, call the **AddDistributedMemoryCache** method of the **services** parameter.
+1. In the **Startup** class, in the **ConfigureServices** method, after the **services.AddDbContext** method call, Call the **AddSession** method of the **services** parameter.
 
-2. Call the **AddSession** method of the **services** parameter. Pass the following **options =>
+2. Pass the following **options =>
             {
                 options.IdleTimeout = TimeSpan.FromSeconds(60);
             })** lambda expression as a parameter to the **AddSession** method. 
 
 3.  In the **Configure** method, call the **UseSession** method of the **app** parameter.
-
 
 #### Task 2: Use session to store values.
 
@@ -363,60 +388,87 @@ The main tasks for this exercise are as follows:
    - **Microsoft.AspNetCore.Http**
    - **Newtonsoft.Json**
 
-2. In the **AddToShoppingListPost** action, after the **SaveChanges** method call and before the **RedirectToAction** method call, add an **IF** statement that check that **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerName"))** is true and **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts"))** is true. 
+2. In the **AddToShoppingListPost** action, replace the content in the **IF** statement, call the **HttpContext.Session.SetString** method and pass **"CustomerFirstName"** and **customer.FirstName** as parameters.
 
-3. In the **IF** statement code block, call the **HttpContext.Session.SetString** method and pass **"CustomerName"** and **customer.FirstName** as parameters.
+3. In the **IF** statement code block, call the **HttpContext.Session.SetString** method and pass **"CustomerLastName"** and **customer.LastName** as parameters.
 
-4. Create a variable named **serialisedDate** of type **var** and assign it with the value of **JsonConvert.SerializeObject(customer.SelectedProductsList)**.
+4. In the **IF** statement code block, call the **HttpContext.Session.SetString** method and pass **"CustomerEmail"** and **customer.Email** as parameters.
 
-5. Call the **HttpContext.Session.SetString** method and pass **"CustomerProducts"** and **serialisedDate** as parameters.
+5. In the **IF** statement code block, call the **HttpContext.Session.SetString** method and pass **"CustomerAddress"** and **customer.Address** as parameters.
 
+6. In the **IF** statement code block, call the **HttpContext.Session.SetInt32** method and pass **"CustomerPhoneNumber"** and **customer.PhoneNumber** as parameters.
+
+7. In the **IF** statement code block, add another **IF** statement, that checks that value of **HttpContext.Session.GetString("CustomerProducts")** variable is not null.
+
+8. In the **IF** statement code block, create a variable named **productsListId** of type **List<int>** and assign it with the value of **JsonConvert.DeserializeObject&lt;List<int>&gt;(HttpContext.Session.GetString("CustomerProducts"))**. 
+
+9. Assign the **products** field with the value of **new List<Product>()**.
+
+10. Call the **AddRange** method of the **customer.SelectedProductsList** variable, and pass **productsListId**.
+
+11. After the **IF** statement code block, create a variable named **serialisedDate** of type **var** and assign it with the value of **JsonConvert.SerializeObject(customer.SelectedProductsList)**.
+
+12. Call the **HttpContext.Session.SetString** method and pass **"CustomerProducts"** and **serialisedDate** as parameters.
+
+13. Return the **RedirectToActionResult** result using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
 
 #### Task 3: Retrieve values from a session.
 
-1.  Create a new controller with the following information:
-    - Controller name: **ShoppingCardController**
-    - Template: **MVC controller - Empty**
-    - Folder: **Controllers**
+1. In the **AddToShoppingList** action, before the call to **PopulateProductsList** method, add **IF** statement, that checks that value of **HttpContext.Session.GetString("CustomerProducts")** variable is not null.
 
+2. In the **IF** statement code block, create a variable named **sessionCustomer** of type **Customer**.
 
-2. In the **ShoppingCardController** class, add **USING** statements for the following namespaces:
+3. Assign to the **FirstName** property of the **sessionCustomer** parameter the value of **HttpContext.Session.GetString("CustomerFirstName")**.
+
+4. Assign to the **LastName** property of the **sessionCustomer** parameter the value of **HttpContext.Session.GetString("CustomerLastName")**.
+
+5. Assign to the **Email** property of the **sessionCustomer** parameter the value of **HttpContext.Session.GetString("CustomerEmail")**.
+
+6. Assign to the **Address** property of the **sessionCustomer** parameter the value of **HttpContext.Session.GetString("CustomerAddress")**.
+
+7. Assign to the **PhoneNumber** property of the **sessionCustomer** parameter the value of **HttpContext.Session.GetInt32("CustomerPhoneNumber").Value**.
+
+8. After the **sessionCustomer** variable assignment, call the **PopulateProductsList** method.
+
+9. Return the **sessionCustomer** parameter to the view.
+
+10. In the **ShoppingCardController** class, add **USING** statements for the following namespaces:
 
    - **ElectricStore.Data**
    - **ElectricStore.Models**
    - **Microsoft.AspNetCore.Http**
    - **Newtonsoft.Json**
 
-3. Create a new field with the following information:
+11. Create a new field with the following information:
 
    - Scope: **private**
    - Type: **StoreContext**
    - Name: **_context**
 
-4. Create a new field with the following information:
+12. Create a new field with the following information:
 
    - Scope: **private**
    - Type: **List&lt;Product&gt;**
    - Name: **products**
 
-5. Create a new field with the following information:
+13. Create a new field with the following information:
 
    - Scope: **private**
    - Type: **SessionStateViewModel**
    - Name: **sessionModel** 
 
-6. Add a constructor with the following parameter:
+14. Add a constructor with the following parameter:
 
    - Type: **StoreContext**
    - Name: **context**
 
-7. In the constructor, initialize the  **_context** field with the value of the **context** parameter.
+15. In the constructor, initialize the  **_context** field with the value of the **context** parameter.
 
 8. Remove the contents of the **Index** method.
 
-9. In the **Index** method,  add an **IF** statement that check that **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerName"))** is false and **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts"))** is false. 
+9. In the **Index** method,  add an **IF** statement that check that **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerFirstName"))** is false and **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts"))** is false. 
 
-10. In the **IF** statement code block, create a variable named **ProductsListId** of type **int[]** and assign it with the value of **JsonConvert.DeserializeObject&lt;int[]&gt;(HttpContext.Session.GetString("CustomerProducts"))**. 
+10. In the **IF** statement code block, create a variable named **productsListId** of type **List<int>** and assign it with the value of **JsonConvert.DeserializeObject&lt;int[]&gt;(HttpContext.Session.GetString("CustomerProducts"))**. 
 
 11. Assign the **products** field with the value of **new List<Product>()**.
 
@@ -424,7 +476,7 @@ The main tasks for this exercise are as follows:
 
     - Variable Type: **var**
     - Variable Name: **item**
-    - Collection: **ProductsListId**
+    - Collection: **productsListId**
 
 13. In the **FOREACH** statement code block, create a **product** variable of type **var** and assign it with the value of **_context.Products.SingleOrDefault(p => p.Id == item)**.
 
@@ -432,7 +484,7 @@ The main tasks for this exercise are as follows:
 
 15. After the **FOREACH** code block, assign the **sessionModel** field with the value of **new SessionStateViewModel** object. 
 
-16. Inititialize the **CustomerName** property of the **sessionModel** field with the value of **HttpContext.Session.GetString("CustomerName")**. 
+16. Inititialize the **CustomerName** property of the **sessionModel** field with the value of **HttpContext.Session.GetString("CustomerFirstName")**. 
 
 17. Inititialize the **SelectedProducts** property of the  **sessionModel** field with the value of **products**. 
 
@@ -444,15 +496,12 @@ The main tasks for this exercise are as follows:
 1. Save all the changes.
 
 2. Start the application without debugging.
-    >**Note:** Examine the browser content, the browser displays the **Index.cshtml** file content, rendered in the **_Layout.cshtml**, and the chached content is the meanu bar of the application.
 
 3. In the menu bar, click **My Shopping Card**.
 
     >**Note:** Examine the browser content.
 
 4. In the menu bar, click **Add to Shopping List**.
-
-    >**Note:** Examine the browser content.
 
 5. On the **Add Products to Shopping List** page, select the following:
 
@@ -464,13 +513,30 @@ The main tasks for this exercise are as follows:
     -  Phone:  **_&lt;A phone number of your choice&gt;_**
 
 6. In the menu bar, click **My Shopping Card**.
-    >**Note:**  Examine the browser content, the browser displays the **ShoppingCard.cshtml** file content, rendered in the **_Layout.cshtml**, and the chached content is the products that where selectd by you in the **"Add Products to Shopping List"** page.
 
-7. Close the **Microsoft Edge** window.
+    >**Note:** Examine the browser content, the browser displays the **ShoppingCard.cshtml** file content, rendered in the **_Layout.cshtml**, and the cached content is the products that where selectd by you in the **"Add Products to Shopping List"** page.
 
+7. In the menu bar, click **Add to Shopping List**.
+
+    >**Note:** Examine the browser content, the browser displays your personal information cached.
+
+8. On the **Add Products to Shopping List** page, in the **Products List** list, select again _&lt;Products of your choice&gt;._
+
+9. In the menu bar, click **My Shopping Card**.
+
+    >**Note:** Examine the browser content, the product you selected in the second selection is also displayed in the cached list of products you have selected in the past.
+
+10. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
+
+11. In the second **Microsoft Edge**, navigate to **http://localhost:[port]**.
+
+12. In the menu bar, click **My Shopping Card**.
+
+    >**Note:** Examine the browser content, the list of products is not displayed because it is empty. The session is saved only in the original browser.
+
+13. Close all **Microsoft Edge** window.
 
 >**Results**: After completing this exercise, you will be able to manage state, by working with sessions.
-
 
 ### Exercise 3: Calling a Web API using jQuery
 
