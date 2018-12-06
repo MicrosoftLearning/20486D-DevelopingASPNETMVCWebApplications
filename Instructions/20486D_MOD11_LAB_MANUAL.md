@@ -95,7 +95,78 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Add sign in logic
 
-1. 
+1. Create a new **controller** with the following information:
+   - Controller name: **AccountController**
+   - Template: **API Controller - Empty**
+   - Folder: **Controllers**
+
+2. In the **AccountController** class, add **USING** statements for the following namespaces:
+
+   - **Library.Models**
+   - **Library.ViewModels**
+   - **Microsoft.AspNetCore.Identity**
+
+3. Remove the **Index** action with its content.
+
+4. Create a new field with the following information:
+   - Scope: **private**
+   - Type: **SignInManager&lt;User&gt;**
+   - Name: **_signInManager**
+
+5. Create a new field with the following information:
+   - Scope: **private**
+   - Type: **UserManager&lt;User&gt;**
+   - Name: **_userManager**
+
+6.  Add a constructor with the following parameters:
+     - Parameter: 
+         - Type: **SignInManager&lt;User&gt;**
+         - Name: **signInManager**
+
+7.  Add a constructor with the following parameters:
+     - Parameter: 
+         - Type: **UserManager&lt;User&gt;**
+         - Name: **userManager**
+
+8. In the **AccountController** constructor, initialize the **_signInManager** field with the value of the **signInManager** parameter.
+
+9. Initialize the **_userManager** field with the value of the **userManager** parameter.
+
+10. Add a method with the following information:
+    - Scope: **public**
+    - Modifier: **async**
+    - Return type: **Task&lt;IActionResult&gt;**
+    - Name: **LoginPost**
+    - Parameter: 
+         - Type: **LoginViewModel**
+         - Name: **loginModel**
+
+11. Above the **LoginPost** method, add a **HttpPost** attribute.
+
+12. Add a **ActionName** attribute. Pass **"Login"** as a parameter to the **ActionName** attribute.
+
+13. Create an **IF** statement that checks that the value of the **ModelState.IsValid** field is **true**. 
+
+14. In the **IF** statement code block, a variable named **result** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, loginModel.RememberMe, false)**
+
+15. Create an **IF** statement that checks that the value of the **result.Succeeded** field is **true**.
+
+16. In the nested **IF** statement code block, return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
+
+17. After the first **IF** statement code block, call the **AddModelError** method of the **ModelState** propery.  Pass **""** and **"Faild to Login"** as parameters to the **AddModelError** method.
+
+18.  Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+
+19. Add a method with the following information:
+    - Scope: **public**
+    - Modifier: **async**
+    - Return type: **Task&lt;IActionResult&gt;**
+    - Name: **Logout**
+
+20. In the **Logout** method, call the **_signInManager.SignOutAsync** method using the **await** keyword. 
+
+21. Return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
+
 
 #### Task 4: Add Register a user logic
 
