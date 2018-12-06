@@ -20,16 +20,6 @@ Estimated Time: **60 minutes**
 
 1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Open the **Command Prompt** window using **Run as administrator**.
-
-3. In Administrator: Command Prompt, run the following command: **cd <The location of Allfiles\Mod11\Labfiles\01_Library_begin\Library folder on your machine>**.
-
-4. Run the following command: **npm install**.
-
-5. Close the **Command Prompt** window.
-
-6. Open the **Library.sln** solution from the following location: **Allfiles\Mod11\Labfiles\01_Library_begin**.
-
 
 ### Exercise 1: Use Identity
 
@@ -54,7 +44,27 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add the Entity Framework database context
 
-1. 
+1. Open the **Command Prompt** window using **Run as administrator**.
+
+2. In Administrator: Command Prompt, run the following command: **cd <The location of Allfiles\Mod11\Labfiles\01_Library_begin\Library folder on your machine>**.
+
+3. Run the following command: **npm install**.
+
+4. Close the **Command Prompt** window.
+
+5. Open the **Library.sln** solution from the following location: **Allfiles\Mod11\Labfiles\01_Library_begin**.
+
+6. In the **User** class, add a **USING** statement for the following namespace:
+
+   - **Microsoft.AspNetCore.Identity**
+
+7. Change the **User** class to inherit from the **IdentityUser** class.
+
+8. In the **LibraryContext** class, add a **USING** statement for the following namespace:
+
+   - **Microsoft.AspNetCore.Identity.EntityFrameworkCore**
+
+9. Change the  **LibraryContext** class to inherit from the **IdentityDbContext&lt;User&gt;** class.
 
 #### Task 2: Enable using Identity
 
