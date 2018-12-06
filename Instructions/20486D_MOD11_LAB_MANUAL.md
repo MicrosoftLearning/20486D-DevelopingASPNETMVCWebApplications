@@ -201,7 +201,7 @@ The main tasks for this exercise are as follows:
     - PhoneNumber: **registerModel.PhoneNumber**
     - Email: **registerModel.Email**
 
-8. Create a variable named **result** of type **var** and assign it with the value of **await _userManager.CreateAsync(user, registerModel.Password)**
+8. Create a new variable named **result** of type **var** and assign it with the value of **await _userManager.CreateAsync(user, registerModel.Password)**
 
 9. Create an **IF** statement that checks that the value of the **result.Succeeded** field is **true**.
 
@@ -326,7 +326,26 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add the AuthorizeAttribute to an action
 
-1. 
+1. In the **LibraryController** class, add a **USING** statement for the following namespace:
+
+   - **Microsoft.AspNetCore.Authorization**
+
+2. Above the **Index** method, add a **AllowAnonymous** attribute.
+
+3. Above the **GetBooksByGener** method, add a **Authorize** attribute.
+
+4. Remove the content of the **GetBooksByGener**.
+
+5. Create a new variable named **booksGenerQuery** of type **var** and assign it the value of the following **LINQ** query:
+
+    - From: **b in _context.Books**
+    - Orderby: **b.Genre.Name**
+    - Select: **b**
+
+6.  Return the **IActionResult** result using the **View** method. Pass **booksGenerQuery** as a parameter to the **View** method.
+
+7. Above the **LendingBookPost** method, add a **Authorize** attribute.
+
 
 #### Task 2: Add Role-based Policy Authentication
 
