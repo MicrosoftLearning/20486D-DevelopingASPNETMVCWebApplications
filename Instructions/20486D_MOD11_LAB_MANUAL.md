@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
 
 1. Open the **Command Prompt** window using **Run as administrator**.
 
-2. In Administrator: Command Prompt, run the following command: **cd <The location of Allfiles\Mod11\Labfiles\01_Library_begin\Library folder on your machine>**.
+2. In Administrator: Command Prompt, run the following command: **cd &lt;The location of Allfiles\Mod11\Labfiles\01_Library_begin\Library folder on your machine&gt;**.
 
 3. Run the following command: **npm install**.
 
@@ -147,7 +147,7 @@ The main tasks for this exercise are as follows:
 
 13. Create an **IF** statement that checks that the value of the **ModelState.IsValid** field is **true**. 
 
-14. In the **IF** statement code block, a variable named **result** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, loginModel.RememberMe, false)**
+14. In the **IF** statement code block, create a variable named **result** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, loginModel.RememberMe, false)**
 
 15. Create an **IF** statement that checks that the value of the **result.Succeeded** field is **true**.
 
@@ -170,7 +170,64 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Add Register a user logic
 
-1. 
+1. In the **AccountController** class, add a method with the following information:
+    - Scope: **public**
+    - Return type: **IActionResult**
+    - Name: **Register**
+
+
+2. In the **Register** method, return the **IActionResult** result using the **View** method. 
+
+3. Add a method with the following information:
+    - Scope: **public**
+    - Modifier: **async**
+    - Return type: **Task&lt;IActionResult&gt;**
+    - Name: **RegisterPost**
+    - Parameter: 
+         - Type: **RegisterViewModel**
+         - Name: **registerModel**
+
+
+4. Above the **RegisterPost** method, add a **HttpPost** attribute.
+
+5. Add a **ActionName** attribute. Pass **"Register"** as a parameter to the **ActionName** attribute.
+
+6. Create an **IF** statement that checks that the value of the **ModelState.IsValid** field is **true**.
+
+7.  In the **IF** statement code block, create a variable named **user** of type **User** and initialize with the following information:
+    - FirstName: **registerModel.FirstName**
+    - LastName: **registerModel.LastName**
+    - UserName: **registerModel.UserName**
+    - PhoneNumber: **registerModel.PhoneNumber**
+    - Email: **registerModel.Email**
+
+8. Create a variable named **result** of type **var** and assign it with the value of **await _userManager.CreateAsync(user, registerModel.Password)**
+
+9. Create an **IF** statement that checks that the value of the **result.Succeeded** field is **true**.
+
+10. In the new **IF** statement code block, create a variable named **resultSignIn** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(registerModel.UserName, registerModel.Password,registerModel.RememberMe,false)**
+
+11. Create an **IF** statement that checks that the value of the **resultSignIn.Succeeded** field is **true**.
+
+12. In the new **IF** statement code block, result using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
+
+13. After the **IF** statement that checks that the value of the **result.Succeeded** field is **true**, create a **FOREACH** statement, with the following information:
+
+	- Variable Type: **var**
+	- Variable Name: **error**
+	- Collection: **result.Errors**
+
+14.  In the **FOREACH** statement block, call the **AddModelError** method of the **ModelState** propery.  Pass **""** and **error.Description** as parameters to the **AddModelError** method.
+
+15. After the **IF** statement that checks that the value of the **ModelState.IsValid** field is **true**, return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+
+16. Add a method with the following information:
+    - Scope: **public**
+    - Return type: **IActionResult**
+    - Name: **AccessDenied**
+
+17. In the **AccessDenied** method code block, return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+
 
 #### Task 5: Retrieve data from the Identity property
 
@@ -287,8 +344,6 @@ The main tasks for this exercise are as follows:
 
 
 ### Exercise 3: Avoid the Cross-Site Request Forgery Attack
-
-
 
 #### Scenario
 
