@@ -4,13 +4,15 @@
 
 #### Scenario
 
-TODO: Add scenario
+You have been asked to create a web-based library application for your organization's customers. The application should have a page showing the most recommended books, login and register pages, and ability to add books to the library for only authorized users. The application should contain Identity configuration, variety of different settings for authorization, and demonstration of cross-site request forgery attack.
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
-- TODO: Add Objectives
+- Use Identity.
+- Add Authorization.
+- Avoid the Cross-Site Request Forgery Attack.
 
 #### Lab Setup
 
@@ -25,7 +27,7 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-TODO: Add scenario
+In this exercise, you will first add entity framework database context to the **LibraryContext** class. You will then enable using identity in the **startup** class. After that you will add sign in, and register user logic. Finally, you will retrieve data from the identity property in the **LendingBook.cshtml** view.
 
 The main tasks for this exercise are as follows:
 
@@ -107,7 +109,7 @@ The main tasks for this exercise are as follows:
 
 1. 
 
->**Results**:  TODO: Add results.
+>**Results**: After completing this exercise, you will be able to configure identity in the application, add logic to the sign in and register pages, and retrieve data from identity.
 
 
 
@@ -115,7 +117,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-TODO: Add scenario
+In this exercise, you will first add **AuthorizeAttribute** to the **LibraryController** class. You will then configure role-based and claim based policy authentication. And, you will add the relevant attribute in the **AccountController** class and in the **LibrarianController** class.
 
 The main tasks for this exercise are as follows:
 
@@ -143,7 +145,7 @@ The main tasks for this exercise are as follows:
 
 1. 
 
->**Results**:  TODO: Add results.
+>**Results**: After completing this exercise, you will be able to add authorization in the application, add configuration and the relevant attribute for role-based and claim based policy authentication.
 
 
 ### Exercise 3: Avoid the Cross-Site Request Forgery Attack
@@ -151,7 +153,8 @@ The main tasks for this exercise are as follows:
 
 
 #### Scenario
-TODO: Add scenario
+
+In this exercise, you will first write the cross-site request forgery attack in a separate project. You will then run the application and see the possible attack. Finaly, you will  avoid the cross-site request forgery attack by adding the **ValidateAntiForgeryToken** attribute in the **AccountController** class, run the application and see the attack is not possible.
 
 The main tasks for this exercise are as follows:
 
@@ -180,7 +183,8 @@ The main tasks for this exercise are as follows:
 
 1. 
 
->**Results**:  TODO: Add results.
+>**Results**: After completing this exercise, you will be able to avoid cross-site request forgery attack.
+
 
 
 ©2018 Microsoft Corporation. All rights reserved.
