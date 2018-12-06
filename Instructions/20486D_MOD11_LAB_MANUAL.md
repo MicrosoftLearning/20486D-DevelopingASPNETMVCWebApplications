@@ -282,13 +282,14 @@ The main tasks for this exercise are as follows:
 3. In the menu bar, click **Our Books**.
 
 4. On the **Login** page, click **Register**.
+    >**Note:** **Our Books** page is only for authorized users therefore you redirected to the login page.
 
 5. On **Register** page, register with the following credentials:
    
     - First Name: **_&lt;A first name of your choice&gt;_**
     - Last Name: **_&lt;A last name of your choice&gt;_**
     - Phone Number: **_&lt;A phone of your choice&gt;_** 
-    - Email: **_&lt;An email time of your choice&gt;_** 
+    - Email: **_&lt;An email of your choice&gt;_** 
     - User Name: **_&lt;A user name of your choice&gt;_**  
     - Password: **_&lt;123qwe!@#QWE&gt;_** 
 
@@ -357,7 +358,61 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Run the application
 
-1. 
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+3. In the menu bar, click **Login**.
+
+4. On the **Login** page, click **Register**.
+
+5. On **Register** page, register with the following credentials:
+   
+    - First Name: **_&lt;A first name of your choice&gt;_**
+    - Last Name: **_&lt;A last name of your choice&gt;_**
+    - Phone Number: **_&lt;A phone of your choice&gt;_** 
+    - Email: **_&lt;An email of your choice&gt;_** 
+    - User Name: **_&lt;A user name of your choice&gt;_**  
+    - Password: **_&lt;123qwe!@#QWE&gt;_** 
+    - Role Name: **Administrator** 
+
+6. Click **Register**.
+
+7. In the menu bar, click **Workers Portal**.
+    >**Note:** Examine the page, you have been authorized to enter the Workers Portal page, because you are an administrator.
+
+8. On **Add Book to the Library** page, register with the following credentials:
+   
+    - Genre: **_&lt;A genre of your choice&gt;_**
+    - Name: **_&lt;A name of your choice&gt;_**
+    - Author: **_&lt;A author of your choice&gt;_** 
+    - Date Published: **_&lt;A date time of your choice&gt;_** 
+
+9. On the **Add Book to Library** page, in the **Photo box**, import an image from **Allfiles\Mod11\Labfiles\Image\book.jpg**, and then click **Add a Book**.
+
+10. Click **Back to Our Books**.
+    >**Note:** The book you added is in the library books list.
+
+11. In the menu bar, click **Logout**.   
+
+12. In the menu bar, click **Login**. 
+
+12. On the **Login** page, click **Logout**.   
+
+13. On **Register** page, register with the following credentials:
+   
+    - First Name: **_&lt;A first name of your choice&gt;_**
+    - Last Name: **_&lt;A last name of your choice&gt;_**
+    - Phone Number: **_&lt;A phone of your choice&gt;_** 
+    - Email: **_&lt;An email of your choice&gt;_** 
+    - User Name: **_&lt;A user name of your choice&gt;_**  
+    - Password: **_&lt;123qwe!@#QWE&gt;_** 
+    - Role Name: **Member** 
+
+14. In **Microsoft Edge**, navigate to **http://localhost:[port]/Librarian/Index**.
+    >**Note:** You redirected to **access denied** page, only administrators allowed to view the page also note, the menu bar dont have a navigation tab for **Workers Portal**.
+
+15. Close all **Microsoft Edge** windows.
 
 >**Results**: After completing this exercise, you will be able to add authorization in the application, add configuration and the relevant attribute for role-based and claim based policy authentication.
 
@@ -385,7 +440,29 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Run the application – now the attack is possible
 
-1.
+1. Save all the changes.
+
+2.  In **Solution Explorer**, right-click **CrossSiteRequestForgeryAttack**, and then click **Set as StartUp Project**.
+
+3. Start the application without debugging.
+
+4. On **Cross-Site Request Forgery Attack** page, click **Attack**.
+
+5. On **Register** page, register with the following credentials:
+   
+    - First Name: **_&lt;A first name of your choice&gt;_**
+    - Last Name: **_&lt;A last name of your choice&gt;_**
+    - Phone Number: **_&lt;A phone of your choice&gt;_** 
+    - Email: **_&lt;An email of your choice&gt;_** 
+    - User Name: **_&lt;A user name of your choice&gt;_**  
+    - Password: **_&lt;123qwe!@#QWE&gt;_** 
+    - Role Name: **Member** 
+
+6. Click **Register**.
+    >**Note:** Examine the page, in the menu bar there is no **Workers Portal** navbar, because you have been authorized to enter as Member.
+
+7. Close **Microsoft Edge** window.
+
 
 #### Task 3: Avoid the Cross-Site Request Forgery attack
 
@@ -393,7 +470,18 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Run the application – now the attack is not possible
 
-1. 
+1. Save all the changes.
+
+2. In **Solution Explorer**, right-click **CrossSiteRequestForgeryAttack**, and then click **Set as StartUp Project**.
+
+3. Start the application without debugging.
+
+4. On the **Cross-Site Request Forgery Attack** page, click **Attack**.
+    >**Note:** Note: Examine the page, error message was thrown.
+
+5. Close all **Microsoft Edge** windows.
+
+6. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you will be able to avoid cross-site request forgery attack.
 
