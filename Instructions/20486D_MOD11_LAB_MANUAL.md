@@ -170,15 +170,82 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Add Register a user logic
 
-1.
+1. 
 
 #### Task 5: Retrieve data from the Identity property
 
-1. 
+1. At the **LendingBook.cshtml** view, before the **DIV** element with the **"page-container"** class, add a **H1** element with the following information:
+
+    - Class: **title**
+    - Content: **Hello @User.Identity.Name - Lending Book Information**
+
+2. In the **_Layout.cshtml** file, after the last **LI** element, create an **IF** statement that checks that the value of **User.IsInRole("Administrator")** is **true**. 
+
+3. Inside the **IF** statement, add a **LI** element with the following information:
+
+    - Class: **nav-item**
+
+4. In the new **LI** element, add a **A** element with the following information:
+
+    - Class: **nav-link**
+    - Href: **@Url.Action("Index", "Librarian")**
+    - Content:  **Workers Portal**
+
+5. After the **IF** statement, create an **IF** statement that checks that the value of **User.Identity.IsAuthenticated** is **true**. 
+
+6.  Inside the new **IF** statement, add a **LI** element with the following information:
+
+    - Class: **nav-item**
+
+7. In the new **LI** element, add a **A** element with the following information:
+
+    - Class: **nav-link**
+    - Href: **@Url.Action("Logout", "Account")**
+    - Content:  **Logout**
+
+8. After the new **IF** statement, create an **ELSE** statement. 
+
+9.  Inside the **ELSE** statement, add a **LI** element with the following information:
+
+    - Class: **nav-item**
+
+10. In the new **LI** element, add a **A** element with the following information:
+
+    - Class: **nav-link**
+    - Href: **@Url.Action("Login", "Account")**
+    - Content:  **Login**
+
 
 #### Task 6: Run the application
 
-1. 
+1. Save all the changes.
+
+2. Start the application without debugging.
+
+3. In the menu bar, click **Our Books**.
+
+4. On the **Login** page, click **Register**.
+
+5. On **Register** page, register with the following credentials:
+   
+    - First Name: **_&lt;A first name of your choice&gt;_**
+    - Last Name: **_&lt;A last name of your choice&gt;_**
+    - Phone Number: **_&lt;A phone of your choice&gt;_** 
+    - Email: **_&lt;An email time of your choice&gt;_** 
+    - User Name: **_&lt;A user name of your choice&gt;_**  
+    - Password: **_&lt;123qwe!@#QWE&gt;_** 
+
+6. Click **Register**.
+
+7. In the menu bar, click **Our Books**.
+    >**Note:** Examine the page, you have been authorized to enter the **Our Books** page, and your user name data retrieved from the Identity prope
+
+8. Select a book of your choice, and then click **Lend a Book**.
+
+    >**Note:** The book you lended is not available anymore.
+
+9. Close all **Microsoft Edge** windows.
+
 
 >**Results**: After completing this exercise, you will be able to configure identity in the application, add logic to the sign in and register pages, and retrieve data from identity.
 
