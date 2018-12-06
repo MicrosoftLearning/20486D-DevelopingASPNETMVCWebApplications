@@ -68,8 +68,28 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Enable using Identity
 
-1. 
+1. In the **Startup** class, add **USING** statements for the following namespaces:
 
+   - **Library.Models**
+   - **Microsoft.AspNetCore.Identity**
+
+2. In the beginning of the **ConfigureServices** method, call the **AddIdentity&lt;User, IdentityRole&gt;** method of **services** parameter.
+
+3. Pass a **lambda expression** as a parameter to the **AddIdentity** method with the following information:
+
+   - Lambda Expression: options => { }
+
+4. In the  **lambda expression** code block, assign to the **options.Password.RequireDigit** property the value of **true**.
+
+5. Assign to the **options.Password.RequiredLength** property the value of **7**.
+
+6. Assign to the **options.Password.RequireUppercase** property the value of **true**.
+
+7. Assign to the **options.User.RequireUniqueEmail** property the value of **true**.
+
+8. Chain a **AddEntityFrameworkStores&lt;LibraryContext&gt;** method call to the **AddIdentity** method call.
+
+9.  In the **Configure** method, after the call to the **UseStaticFiles** method, call the **UseAuthentication** method of the **app** parameter.
 
 #### Task 3: Add sign in logic
 
