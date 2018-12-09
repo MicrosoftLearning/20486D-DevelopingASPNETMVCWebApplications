@@ -442,27 +442,19 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2.  In **Solution Explorer**, right-click **CrossSiteRequestForgeryAttack**, and then click **Set as StartUp Project**.
+2. In **Solution Explorer**, right-click **Library**, and then click **Set as StartUp Project**.
 
 3. Start the application without debugging.
 
-4. On **Cross-Site Request Forgery Attack** page, click **Attack**.
+      >**Note:** The menu bar has a navigation tab for **Login** meaning you are not logged in.
 
-5. On **Register** page, register with the following credentials:
-   
-    - First Name: **_&lt;A first name of your choice&gt;_**
-    - Last Name: **_&lt;A last name of your choice&gt;_**
-    - Phone Number: **_&lt;A phone of your choice&gt;_** 
-    - Email: **_&lt;An email of your choice&gt;_** 
-    - User Name: **_&lt;A user name of your choice&gt;_**  
-    - Password: **_&lt;123qwe!@#QWE&gt;_** 
-    - Role Name: **Member** 
+4. In **Solution Explorer**, right-click **CrossSiteRequestForgeryAttack**, point to **Debug**, and then click **Start new instance**.
 
-6. Click **Register**.
-    >**Note:** Examine the page, in the menu bar there is no **Workers Portal** navbar, because you have been authorized to enter as Member.
+5. On the **Cross-Site Request Forgery Attack** page, click **Attack**.
 
-7. Close **Microsoft Edge** window.
+      >**Note:** The menu bar has a navigation tab for **Logout** meaning you are logged in.
 
+6. Close all **Microsoft Edge** windows.
 
 #### Task 3: Avoid the Cross-Site Request Forgery attack
 
@@ -472,20 +464,23 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. In **Solution Explorer**, right-click **CrossSiteRequestForgeryAttack**, and then click **Set as StartUp Project**.
+2. In **Solution Explorer**, right-click **Library**, and then click **Set as StartUp Project**.
 
 3. Start the application without debugging.
 
-4. On the **Cross-Site Request Forgery Attack** page, click **Attack**.
-    >**Note:** Note: Examine the page, error message was thrown.
+      >**Note:** The menu bar has a navigation tab for **Login** meaning you are not logged in.
 
-5. Close all **Microsoft Edge** windows.
+4. In **Solution Explorer**, right-click **CrossSiteRequestForgeryAttack**, point to **Debug**, and then click **Start new instance**.
 
-6. Close **Microsoft Visual Studio**.
+5. On the **Cross-Site Request Forgery Attack** page, click **Attack**.
+
+      >**Note:** HTTP 400 error was thrown.
+
+6. Close all **Microsoft Edge** windows.
+
+7. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you will be able to avoid cross-site request forgery attack.
-
-
 
 ©2018 Microsoft Corporation. All rights reserved.
 
