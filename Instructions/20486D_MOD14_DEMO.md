@@ -12,28 +12,16 @@
 
 #### Demonstration Steps 
 
-1. Start Microsoft Visual Studio 2017.
+1. Navigate to **Allfiles\Mod14\Democode\01_AzureWebAppExample_begin**, and then double-click **AzureWebAppExample.sln**.
 
-2. In the **Start Page - Microsoft Visual Studio** window, on the **FILE** menu, point to **New**, and then click **Project**.
-
-3. In the **New Project** dialog box, in the navigation pane, expand **Installed**, expand **Visual C#**, and then click **Cloud**.
-
-4. In the **New Project** dialog box, in the result pane, click **ASP.NET Core Web Application**.
-
-5. In the **Name** text box, type **AzureWebAppExample**.
-
-6. In the **Location** text box, type **Allfiles\Mod14\Democode\01_AzureWebAppExample_begin\AzureWebExample\AzureWebExample.sln**, and then click **OK**. 
-
-7. In the **New ASP.NET Core Web Application - AzureWebAppExample** dialog box, in the result pane, click **Web Application (Model-View-Controller)**, ensure that the check boxes are unchecked and then click **OK**.
- 
-8. In the **AzureWebAppExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**. 
+2. In the **AzureWebAppExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**. 
     >**Note:** The browser displays the default home page. 
 
-9. In **Microsoft Edge**, click **Close**.
+3. In **Microsoft Edge**, click **Close**.
 
-10.  In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish.**
+4. In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish.**
 
-11. In the **Pick a publish target** dialog box, in the navigation pane, click **App Service**.
+5. In the **Pick a publish target** dialog box, in the navigation pane, click **App Service**.
 
 12. In the **Pick a publish target** dialog box, in the result pane, click **Create New**, and then click **Create Profile**.
 

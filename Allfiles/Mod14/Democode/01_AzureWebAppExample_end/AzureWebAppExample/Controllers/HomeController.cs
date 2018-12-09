@@ -1,43 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using AzureWebAppExample.Data;
 using AzureWebAppExample.Models;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AzureWebAppExample.Controllers
 {
     public class HomeController : Controller
     {
+        private PhotoAlbumContext _dbContext;
+        private IHostingEnvironment _environment;
+
+        public HomeController(PhotoAlbumContext dbContext, IHostingEnvironment environment)
+        {
+            _dbContext = dbContext;
+            _environment = environment;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            return View(_dbContext.Photos.ToList());
         }
 
-        public IActionResult About()
+        public IActionResult GetImage(int PhotoId)
         {
-            ViewData["Message"] = "Your application description page.";
+            Photo requestedPhoto = _dbContext.Photos.FirstOrDefault(p => p.PhotoID == PhotoId);
+            if (requestedPhoto != null)
+            {
+                string webRootpath = _environment.WebRootPath;
+                string folderPath = "\\images\\";
+                string fullPath = webRootpath + folderPath + requestedPhoto.PhotoFileName;
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+                FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
+                byte[] fileBytes;
+                using (BinaryReader br = new BinaryReader(fileOnDisk))
+                {
+                    fileBytes = br.ReadBytes((int)fileOnDisk.Length);
+                }
+                return File(fileBytes, requestedPhoto.ImageMimeType);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }
