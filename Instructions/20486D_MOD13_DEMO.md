@@ -296,7 +296,7 @@
 
 28. On the **Home** page, click **Get Ajax Function**.
 
-    >**Note:** The browser displays the first pizza toppings, and price.
+    >**Note:** The browser displays the toppings and price of pizza with id=1.
 
 29. On the **Home** page, click **Post Ajax Function**.
 
