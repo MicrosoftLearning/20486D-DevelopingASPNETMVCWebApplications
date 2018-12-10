@@ -210,10 +210,8 @@
 ```
 11. In the **Post** action code block, type the following code:
   ```cs
-       if (!ModelState.IsValid)
-       {
-            return BadRequest(ModelState);
-       }
+       int pizzaMaxId = _pizzas.Max(i => i.Id);
+       pizza.Id = ++pizzaMaxId;
        _pizzas.Add(pizza);
        return CreatedAtAction(nameof(GetById), new { id = pizza.Id }, pizza);
 ```
@@ -229,20 +227,18 @@
 
 17. In the **pizza-get.js** code window, type the following code:
   ```cs
-       $(document).ready(function () {
+       $(function() {
             $(".btn-get").click(function (e) {
                 e.preventDefault();
                 $.ajax({
                     type: "GET",
                     url: "http://localhost:59216/api/Pizza/1",
                     contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (response) {
-                        $(".result").text('Ajax result: you ordered pizza with ' + response.toppings + ' for ' + response.price + '$');
-                    },
-                    error: function (response) {
+                    dataType: "json"
+                    }).done(function (response) {
+                        $(".result").text('Information for pizza with id 1: ' + 'has the following toppings ' + response.toppings + ' for the price of ' + response.price + '$');
+                    }).fail(function () {
                         alert('An error has occurred');
-                    }
                 });
             });
        });
@@ -256,24 +252,21 @@
 
 21. In the **pizza-post.js** code window, type the following code:
   ```cs
-       $(document).ready(function () {
+       $(function () {
             $(".btn-post").click(function (e) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
                     url: "http://localhost:59216/api/Pizza",
                     data: JSON.stringify({
-                        id: 6,
                         toppings: "pineapple",
                         price: 10.99
                     }),
-                    contentType: "application/json;charset=utf-8",
-                    success: function (result) {
+                    contentType: "application/json;charset=utf-8"
+                    }).done(function (result) {
                         $(".result").text('Ajax result: pizza object was added successfully with id number ' + result.id + ', and ' + result.toppings + ' topping for the price of ' + result.price + '$');
-                    },
-                    error: function (result) {
+                    }).fail(function () {
                         alert('An error has occurred');
-                    }
                 });
             });
        });
@@ -301,9 +294,13 @@
 
 27. In the **JQueryExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-28. On the **Home** page, click **Get Ajax Function**, and examine the outcome.
+28. On the **Home** page, click **Get Ajax Function**.
 
-29. On the **Home** page, click **Post Ajax Function**, and examine the outcome.
+    >**Note:** The browser displays the first pizza toppings, and price.
+
+29. On the **Home** page, click **Post Ajax Function**.
+
+    >**Note:** The browser displays the new pizza information.
 
 30. In **Microsoft Edge**, click **Close**.
 

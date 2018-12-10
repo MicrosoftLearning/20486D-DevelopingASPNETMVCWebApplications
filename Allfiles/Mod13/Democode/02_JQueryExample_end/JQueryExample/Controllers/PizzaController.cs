@@ -36,10 +36,8 @@ namespace JQueryExample.Controllers
         [HttpPost]
         public ActionResult<Pizza> Post(Pizza pizza)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            int pizzaMaxId = _pizzas.Max(i => i.Id);
+            pizza.Id = ++pizzaMaxId;
             _pizzas.Add(pizza);
             return CreatedAtAction(nameof(GetById), new { id = pizza.Id }, pizza);
         }
