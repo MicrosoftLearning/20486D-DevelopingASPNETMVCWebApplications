@@ -12,20 +12,35 @@
 
 #### Demonstration Steps 
 
-1. Navigate to **Allfiles\Mod14\Democode\01_AzureWebAppExample_begin**, and then double-click **AzureWebAppExample.sln**.
 
-2. In the **AzureWebAppExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**. 
-    >**Note:** The browser displays the default home page. 
+1. Start Microsoft Visual Studio 2017.
 
-3. In **Microsoft Edge**, click **Close**.
+2. In the **Start Page - Microsoft Visual Studio** window, on the **FILE** menu, point to **New**, and then click **Project**.
 
-4. In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish.**
+3. In the **New Project** dialog box, in the navigation pane, expand **Installed**, expand **Visual C#**, and then click **Cloud**.
 
-5. In the **Pick a publish target** dialog box, in the navigation pane, click **App Service**.
+4. In the **New Project** dialog box, in the result pane, click **ASP.NET Core Web Application**.
+
+5. In the **Name** text box, type **AzureWebAppExample**.
+
+6. In the **Location** text box, type **Allfiles\Mod14\Democode\01_AzureWebAppExample_Begin\**, and then click **OK**.
+
+7. In the **New ASP.NET Core Web Application - AzureWebAppExample** dialog box, in the result pane, click **Web Application (Model-View-Controller)**, ensure that the check boxes are unchecked and then click **OK**.
+
+8. In the **AzureWebAppExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**. 
+
+    >**Note:** The browser displays the default home page.
+
+9. In **Microsoft Edge**, click **Close**.
+
+10. In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish.**
+
+11. In the **Pick a publish target** dialog box, in the navigation pane, click **App Service**.
 
 12. In the **Pick a publish target** dialog box, in the result pane, click **Create New**, and then click **Create Profile**.
 
-13. In the **Create App Service** dialog box, click **Sign in**. 
+13. In the **Create App Service** dialog box, click **Sign in**.
+
     >**Note:** In case you have already signed-in, you will not see this dialog box. In this case, go to step 16.
 
 14. In the **Sign in to your account** dialog box, type azure account **Email/Phone/Skype**, and then click **Next**. 
@@ -33,6 +48,7 @@
 15. In the **Sign in to your account** dialog box, type **Password**, and then click **Sign in**.
 
 16. In the **Create App Service** dialog box, in the **App Name** text box, type  **AzureWebAppExample{unique name}**.  
+
     >**Note:** The name must be unique. You can add your first name, last name or birthdate to the current name.
 
 17. In the **Create App Service** dialog box, below the **Resource Group** text box, click **New**. 
@@ -46,18 +62,22 @@
 21. In the **Create App Service** dialog box, click **Create**.
 
 22. In the **Publish** window, click **Publish**.
-    >**Note:** The browser displays the default home page, and the URL is:
+
+    >**Note:** The browser displays home page, and the URL is:
+
          **http://azurewebapp{unique name}.azurewebsites.net/**
 
 23. In **Microsoft Edge**, in the address bar, type **http://portal.azure.com**, and then press Enter.
-    >**Note:** In case you are already signed-in, you will not see sign-in dialog box. In this case go to step 25.
+    >**Note:** In case you are already signed-in, you will not see sign-in dialog box. In this case go to step 26.
 
 24. In the **Sign in** dialog box, type azure account **Email/Phone/Skype**, and then click **Next**. 
 
 25. In the **Sign in** dialog box, type **Password**, and then click **Sign in**. 
+
     >**Note:** The browser displays the dashboard that contains the **App Service** and the **App Service Plan**.
 
 26. In **Microsoft Edge**, click on the **AzureWebApp{unique name}** app service.
+
     >**Note:** View the details in the overview window.
 
 27. In **Microsoft Edge**, click **Close**.
@@ -66,7 +86,6 @@
 
 29. In **Index.cshtml** window, delete all the content.
 
-
 30. In **Index.cshtml** window, type the following code:
 ```cs
 @{
@@ -74,15 +93,14 @@
 }
 
 <h2> This is a ASP .NET web application deployed on Azure App Service </h2>
-
 ```
 
 31. In the **AzureWebAppExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 32. In the **AzureWebAppExample – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **AzureWebAppExample**, and then click **Publish**.
 
-
 33. In the **Publish** window, click **Publish**.
+
     >**Note:** The browser displays:  **This is a ASP .NET web application deployed on Azure App Service**. 
 
 34. In **Microsoft Edge**, click **Close**.
