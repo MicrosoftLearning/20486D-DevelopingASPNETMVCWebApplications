@@ -12,21 +12,21 @@
 
 1. Navigate to **Allfiles\Mod13\Democode\01_WebApiExample_begin**, and then double-click **WebApiExample.sln**.
 
-2. In **Microsoft Edge**, click **Close**.
+2. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Properties** click **launchSettings.json**.
 
-3. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Properties** click **launchSettings.json**.
-
-4. In the **launchSettings.json** code window, select the following code:
+3. In the **launchSettings.json** code window, select the following code:
   ```cs
        "launchUrl": "",
 ```
-5. Replace the selected code with the following code:
+4. Replace the selected code with the following code:
   ```cs
        "launchUrl": "api/person",
 ```
-6. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+5. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
     >**Note:** The browser displays **HTTP 404** error. 
+
+6. In **Microsoft Edge**, click **Close**.
 
 7. In **Solution Explorer**, right-click **WebApiExample**, point to **Add**, and then click **New Folder**.
 
@@ -129,9 +129,9 @@
 
 34. In the **GetAll** action code block, locate the following code:
   ```cs
-       public List<Person> GetAll()
+       [HttpGet]
 ```
-35. Place the cursor before the located code, press the Up Arrow key, and then type the following code:
+35. Place the cursor after the located code, press Enter, and then type the following code:
   ```cs
        [Produces("application/xml")]
 ``` 
