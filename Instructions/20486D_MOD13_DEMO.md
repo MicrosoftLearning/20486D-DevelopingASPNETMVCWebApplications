@@ -156,7 +156,7 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod13\Democode\03_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
+1. Navigate to **Allfiles\Mod13\Democode\02_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
 
 2. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
