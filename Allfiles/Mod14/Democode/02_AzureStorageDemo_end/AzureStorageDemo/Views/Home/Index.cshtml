@@ -1,5 +1,44 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<AzureStorageDemo.Models.Photo>
+
+@{
+    ViewData["Title"] = "Index";
 }
 
+<h1 class="into">My Photo Album</h1>
+<h2 class="into">Latest Memories</h2>
+<button type="button" class="btn btn-info" onclick="location.href='@Url.Action("CreateImage", "Blob")'">Upload New Image</button>
+<br />
+@foreach (var item in Model)
+{
+    <div class="photo-index-card">
+        <h3 class="display-picture-title">
+            @Html.DisplayFor(modelItem => item.Title)
+        </h3>
+        @if (item.ImageName != null)
+        {
+            <div class="photo-display">
+                <img class="photo-display-img" src="@Url.Action("GetImage", "Home", new { Id = item.Id })" />
+            </div>
+        }
+
+        <div>
+            <span class="display-label">
+                @Html.DisplayNameFor(model => model.Description):
+            </span>
+            <br />
+            <span class="display-field">
+                @Html.DisplayFor(model => item.Description)
+            </span>
+        </div>
+
+        <div>
+            <span class="display-label">
+                @Html.DisplayNameFor(model => model.CreatedDate):
+            </span>
+            <span class="display-field">
+                @Html.DisplayFor(model => item.CreatedDate)
+            </span>
+        </div>
+    </div>
+}
 

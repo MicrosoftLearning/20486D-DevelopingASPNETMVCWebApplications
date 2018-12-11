@@ -63,9 +63,7 @@
 
 22. In the **Publish** window, click **Publish**.
 
-    >**Note:** The browser displays home page, and the URL is:
-
-         **http://azurewebapp{unique name}.azurewebsites.net/**
+    >**Note:** The browser displays home page, and the URL is: **http://azurewebapp{unique name}.azurewebsites.net/**
 
 23. In **Microsoft Edge**, in the address bar, type **http://portal.azure.com**, and then press Enter.
     >**Note:** In case you are already signed-in, you will not see sign-in dialog box. In this case go to step 26.

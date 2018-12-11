@@ -3,9 +3,12 @@ using System.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
+using Microsoft.Extensions.Configuration;
+using System.IO;
+using AzureStorageDemo.Models;
+using AzureStorageDemo.Data;
 
 namespace AzureStorageDemo.Controllers
 {
@@ -13,20 +16,47 @@ namespace AzureStorageDemo.Controllers
     {
         private IConfiguration _configuration;
         private string _connectionString;
+        private PhotoContext _dbContext;
 
-        public BlobController(IConfiguration configuration)
+        public BlobController(IConfiguration configuration, PhotoContext dbContext)
         {
+            _dbContext = dbContext;
             _configuration = configuration;
-            _connectionString = _configuration.GetConnectionString("{your_connection_string_name}");
+            _connectionString = _configuration.GetConnectionString("AzureStorageConnectionString-1");
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult CreateImage()
         {
             return View();
         }
 
 
-        [HttpPost]
+        [HttpPost, ActionName("CreateImage")]
+        public async Task<IActionResult> CreateImageAsync(Photo photo)
+        {
+            if (ModelState.IsValid)
+            {
+                photo.CreatedDate = DateTime.Today;
+                if (photo.PhotoAvatar != null && photo.PhotoAvatar.Length > 0)
+                {
+                    photo.ImageMimeType = photo.PhotoAvatar.ContentType;
+                    photo.ImageName = Path.GetFileName(photo.PhotoAvatar.FileName);
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        photo.PhotoAvatar.CopyTo(memoryStream);
+                        photo.PhotoFile = memoryStream.ToArray();
+                    }
+                    await Upload(photo.PhotoAvatar);
+                    _dbContext.Add(photo);
+                    _dbContext.SaveChanges();
+                    return RedirectToAction("Index", "Home");
+                }
+                return View(photo);
+            }
+            return View(photo);
+        }
+
         public async Task<ActionResult> Upload(IFormFile photo)
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connectionString);
@@ -36,12 +66,12 @@ namespace AzureStorageDemo.Controllers
             if (await container.CreateIfNotExistsAsync())
             {
                 await container.SetPermissionsAsync(
-                    new BlobContainerPermissions
-                    {
-                        PublicAccess = BlobContainerPublicAccessType.Blob
-                    });
+                new BlobContainerPermissions
+                {
+                    PublicAccess = BlobContainerPublicAccessType.Blob
+                });
             }
-            CloudBlockBlob blob = container.GetBlockBlobReference(photo.FileName);
+            CloudBlockBlob blob = container.GetBlockBlobReference(Path.GetFileName(photo.FileName));
             await blob.UploadFromStreamAsync(photo.OpenReadStream());
             TempData["ImageURL"] = blob.Uri.ToString();
             return View("LatestImage");

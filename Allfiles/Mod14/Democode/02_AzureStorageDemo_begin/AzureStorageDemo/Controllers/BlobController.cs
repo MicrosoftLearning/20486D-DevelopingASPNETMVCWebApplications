@@ -3,7 +3,12 @@ using System.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
+using System.IO;
+using AzureStorageDemo.Models;
+using AzureStorageDemo.Data;
 
 namespace AzureStorageDemo.Controllers
 {
@@ -11,23 +16,45 @@ namespace AzureStorageDemo.Controllers
     {
         private IConfiguration _configuration;
         private string _connectionString;
+        private PhotoContext _dbContext;
 
-        public BlobController(IConfiguration configuration)
+        public BlobController(IConfiguration configuration, PhotoContext dbContext)
         {
+            _dbContext = dbContext;
             _configuration = configuration;
             _connectionString = _configuration.GetConnectionString("{your_connection_string_name}");
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult CreateImage()
         {
             return View();
         }
 
 
-        [HttpPost]
-        public ActionResult Upload(IFormFile photo)
+        [HttpPost, ActionName("CreateImage")]
+        public async Task<IActionResult> CreateImageAsync(Photo photo)
         {
-            return View("LatestImage");
+            if (ModelState.IsValid)
+            {
+                photo.CreatedDate = DateTime.Today;
+                if (photo.PhotoAvatar != null && photo.PhotoAvatar.Length > 0)
+                {
+                    photo.ImageMimeType = photo.PhotoAvatar.ContentType;
+                    photo.ImageName = Path.GetFileName(photo.PhotoAvatar.FileName);
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        photo.PhotoAvatar.CopyTo(memoryStream);
+                        photo.PhotoFile = memoryStream.ToArray();
+                    }
+
+                    _dbContext.Add(photo);
+                    _dbContext.SaveChanges();
+                    return RedirectToAction("Index", "Home");
+                }
+                return View(photo);
+            }
+            return View(photo);
         }
     }
 }
