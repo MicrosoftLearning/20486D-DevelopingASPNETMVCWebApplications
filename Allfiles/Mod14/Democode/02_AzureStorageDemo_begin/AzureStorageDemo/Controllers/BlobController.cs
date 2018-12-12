@@ -3,8 +3,6 @@ using System.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using AzureStorageDemo.Models;
@@ -47,7 +45,6 @@ namespace AzureStorageDemo.Controllers
                         photo.PhotoAvatar.CopyTo(memoryStream);
                         photo.PhotoFile = memoryStream.ToArray();
                     }
-
                     _dbContext.Add(photo);
                     _dbContext.SaveChanges();
                     return RedirectToAction("Index", "Home");

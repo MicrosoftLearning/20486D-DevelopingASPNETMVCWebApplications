@@ -26,7 +26,7 @@ namespace AzureStorageDemo.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        [Display(Name = "Picture to Upload")]
+        [Display(Name = "Upload")]
         [Required(ErrorMessage = "Please select a picture")]
         [NotMapped]
         public IFormFile PhotoAvatar { get; set; }

@@ -3,12 +3,12 @@ using System.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using AzureStorageDemo.Models;
 using AzureStorageDemo.Data;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace AzureStorageDemo.Controllers
 {
@@ -47,7 +47,7 @@ namespace AzureStorageDemo.Controllers
                         photo.PhotoAvatar.CopyTo(memoryStream);
                         photo.PhotoFile = memoryStream.ToArray();
                     }
-                    await Upload(photo.PhotoAvatar);
+                    await UploadAsync(photo.PhotoAvatar);
                     _dbContext.Add(photo);
                     _dbContext.SaveChanges();
                     return RedirectToAction("Index", "Home");
@@ -57,7 +57,7 @@ namespace AzureStorageDemo.Controllers
             return View(photo);
         }
 
-        public async Task<ActionResult> Upload(IFormFile photo)
+        public async Task UploadAsync(IFormFile photo)
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connectionString);
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
@@ -73,8 +73,6 @@ namespace AzureStorageDemo.Controllers
             }
             CloudBlockBlob blob = container.GetBlockBlobReference(Path.GetFileName(photo.FileName));
             await blob.UploadFromStreamAsync(photo.OpenReadStream());
-            TempData["ImageURL"] = blob.Uri.ToString();
-            return View("LatestImage");
         }
     }
 }
