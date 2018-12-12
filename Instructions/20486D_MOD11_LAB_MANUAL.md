@@ -99,6 +99,7 @@ The main tasks for this exercise are as follows:
    - Controller name: **AccountController**
    - Template: **API Controller - Empty**
    - Folder: **Controllers**
+   - Project: **Library**
 
 2. In the **AccountController** class, add **USING** statements for the following namespaces:
 
@@ -533,7 +534,44 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Write the Cross-Site Request Forgery attack
 
-1. 
+1. Create a new folder with the following information:
+
+    - Folder name: **Controllers**
+    - Project: **CrossSiteRequestForgeryAttack**
+
+2. Create a new controller with the following information:
+   - Controller name: **HomeController**
+   - Template: **MVC controller - Empty**
+   - Folder: **CrossSiteRequestForgeryAttack/Controllers**
+
+3. In the **HomeController**, right-click on the **Index** action name, and then click **Add View**.
+
+4. Create a new **View** using the **Add MVC View** dialog box, with the following information:
+
+    - View Name: **Index**
+    - Template: **Empty (without model)**
+    - Create as Partial View: **False**
+    - Use a layout page: **False**
+
+5. In the **Index.cshtml** view, after the **TITLE** element, add a **LINK** element, with the following information: 
+
+    - Href: **~/css/style.css**
+    - Rel: **stylesheet**
+
+6. In the **BODY** element, add a **H1** element, with the following information: 
+
+    - Content: **Cross-Site Request Forgery Attack**
+
+7. Add a **H3** element, with the following information: 
+
+    - Content: **Click - Submit to Perform the Attack**
+
+8. Add a **FORM** element, with the following information: 
+
+    - action: **http://localhost:55606/Account/Register?FirstName=Forgery_Attacker&LastName=Cross_Site&PhoneNumber=123&Email=attack@@.com&UserName=Forgery_Attacker&Password=123qwe!!!QWE123&RoleName=Member**
+    - method: **post**
+
+
 
 #### Task 2: Run the application – now the attack is possible
 
