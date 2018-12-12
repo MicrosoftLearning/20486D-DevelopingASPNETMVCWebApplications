@@ -345,12 +345,87 @@ The main tasks for this exercise are as follows:
 
 6.  Return the **IActionResult** result using the **View** method. Pass **booksGenerQuery** as a parameter to the **View** method.
 
-7. Above the **LendingBookPost** method, add a **Authorize** attribute.
+7. Above the **LendingBookPost** method, add an **Authorize** attribute.
 
 
 #### Task 2: Add Role-based Policy Authentication
 
-1. 
+1. In the **RegisterViewModel** class, add a property with the following information:
+    - Scope: **public**
+    - Property name: **RoleName**
+    - Data type: **String**
+
+2. Above the **RoleName** property, add a **Display** attribute with using the following information:
+    - Name: **"Role Name"**
+
+3. Add a **Required** attribute with using the following information:
+    - ErrorMessage: **"Please select a role"**
+
+4. In the **AccountController** class, create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **RoleManager&lt;IdentityRole&gt;**
+   - Name: **_roleManager**
+
+5.  Change the **AccountController** constructor signature to accept the following parameter:
+    - Type:  **RoleManager&lt;IdentityRole&gt;**
+    - Name: **roleManager**
+
+6. In the **AccountController** constructor, initialize the **_roleManager** field with the value of the **roleManager** parameter.
+
+7.  In the **RegisterPost** method, remove the contents of the **IF** statement code block, that checks if the value of **result.Succeeded** is true. 
+
+8. In the **IF** statement code block, create a variable named **roleExists** of type **bool** and assign it with the value of **await _roleManager.RoleExistsAsync(registerModel.RoleName)**
+
+9. Create a nested **IF** statement that checks that the value of the **roleExists** field is **false**. 
+
+10. In the nested **IF** statement code block, call the **_roleManager.CreateAsync** method using the **await** keyword. Pass **new IdentityRole(registerModel.RoleName)**
+as a parameter to the **CreateAsync** method. 
+
+11. After the nested **IF** statement code block, create an **IF** statement that checks that the value of the **await _userManager.IsInRoleAsync(user, registerModel.RoleName)** field is **false**. 
+
+12. In the new **IF** statement code block, call the **_userManager.AddToRoleAsync** method using the **await** keyword. Pass **user** and **registerModel.RoleName**
+as parameters to the **_userManager.AddToRoleAsync** method. 
+
+13. After the new **IF** statement code block, create a variable named **resultSignIn** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(registerModel.UserName, registerModel.Password,registerModel.RememberMe,false)**
+
+14. Create an **IF** statement that checks that the value of the **resultSignIn.Succeeded** is **true**. 
+
+15. In the new **IF** statement code block,  return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** 
+
+16. At the **Register.cshtml** view, after the last **DIV** element with the **"form-group"** class, add a **DIV** element with the following information:
+
+    - Class: **form-group row**
+
+17. In the new **DIV** element, add a **LABEL** element with the following information:
+
+    - asp-for: **RoleName**
+    - class: **col-sm-4 col-form-label**
+
+18. Add a **DIV** element with the following information:
+
+    - class: **col-sm-6**
+
+19. In the new **DIV** element, add a **SELECT** element with the following information:
+
+    - asp-for: **RoleName**
+    - class: **form-control**
+
+20. In the **SELECT** element, add a **OPTION** element with the following information:
+
+    - selected: **selected**
+    - Content: **Member**    
+
+21. Add a **OPTION** element with the following information:
+
+    - Content: **Administrator**    
+
+22. In the **LibrarianController** class, add a **USING** statement for the following namespace:
+
+   - **Microsoft.AspNetCore.Authorization**
+
+23. Above the **LibrarianController** class declaration, add a **Authorize** attribute. Pass **Roles="Administrator"** as a parameter to the **Authorize** attribute.
+
 
 #### Task 3: Add Claim-based Policy Authentication
 
