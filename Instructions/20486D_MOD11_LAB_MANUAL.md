@@ -99,6 +99,7 @@ The main tasks for this exercise are as follows:
    - Controller name: **AccountController**
    - Template: **API Controller - Empty**
    - Folder: **Controllers**
+   - Project: **Library**
 
 2. In the **AccountController** class, add **USING** statements for the following namespaces:
 
@@ -145,11 +146,11 @@ The main tasks for this exercise are as follows:
 
 12. Add a **ActionName** attribute. Pass **"Login"** as a parameter to the **ActionName** attribute.
 
-13. Create an **IF** statement that checks that the value of the **ModelState.IsValid** field is **true**. 
+13. Create an **IF** statement that checks that the value of **ModelState.IsValid** is **true**. 
 
 14. In the **IF** statement code block, create a variable named **result** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, loginModel.RememberMe, false)**
 
-15. Create an **IF** statement that checks that the value of the **result.Succeeded** field is **true**.
+15. Create an **IF** statement that checks that the value of **result.Succeeded** is **true**.
 
 16. In the nested **IF** statement code block, return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
 
@@ -192,7 +193,7 @@ The main tasks for this exercise are as follows:
 
 5. Add a **ActionName** attribute. Pass **"Register"** as a parameter to the **ActionName** attribute.
 
-6. Create an **IF** statement that checks that the value of the **ModelState.IsValid** field is **true**.
+6. Create an **IF** statement that checks that the value of **ModelState.IsValid** is **true**.
 
 7.  In the **IF** statement code block, create a variable named **user** of type **User** and initialize with the following information:
     - FirstName: **registerModel.FirstName**
@@ -203,15 +204,15 @@ The main tasks for this exercise are as follows:
 
 8. Create a new variable named **result** of type **var** and assign it with the value of **await _userManager.CreateAsync(user, registerModel.Password)**
 
-9. Create an **IF** statement that checks that the value of the **result.Succeeded** field is **true**.
+9. Create an **IF** statement that checks that the value of **result.Succeeded** is **true**.
 
 10. In the new **IF** statement code block, create a variable named **resultSignIn** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(registerModel.UserName, registerModel.Password,registerModel.RememberMe,false)**
 
-11. Create an **IF** statement that checks that the value of the **resultSignIn.Succeeded** field is **true**.
+11. Create an **IF** statement that checks that the value of **resultSignIn.Succeeded** is **true**.
 
 12. In the new **IF** statement code block, result using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
 
-13. After the **IF** statement that checks that the value of the **result.Succeeded** field is **true**, create a **FOREACH** statement, with the following information:
+13. After the **IF** statement that checks that the value of **result.Succeeded** is **true**, create a **FOREACH** statement, with the following information:
 
 	- Variable Type: **var**
 	- Variable Name: **error**
@@ -219,7 +220,7 @@ The main tasks for this exercise are as follows:
 
 14.  In the **FOREACH** statement block, call the **AddModelError** method of the **ModelState** propery.  Pass **""** and **error.Description** as parameters to the **AddModelError** method.
 
-15. After the **IF** statement that checks that the value of the **ModelState.IsValid** field is **true**, return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+15. After the **IF** statement that checks that the value of **ModelState.IsValid** is **true**, return the **Task&lt;IActionResult&gt;** result using the **View** method. 
 
 16. Add a method with the following information:
     - Scope: **public**
@@ -345,16 +346,113 @@ The main tasks for this exercise are as follows:
 
 6.  Return the **IActionResult** result using the **View** method. Pass **booksGenerQuery** as a parameter to the **View** method.
 
-7. Above the **LendingBookPost** method, add a **Authorize** attribute.
+7. Above the **LendingBookPost** method, add an **Authorize** attribute.
 
 
 #### Task 2: Add Role-based Policy Authentication
 
-1. 
+1. In the **RegisterViewModel** class, add a property with the following information:
+    - Scope: **public**
+    - Property name: **RoleName**
+    - Data type: **String**
+
+2. Above the **RoleName** property, add a **Display** attribute with using the following information:
+    - Name: **"Role Name"**
+
+3. Add a **Required** attribute with using the following information:
+    - ErrorMessage: **"Please select a role"**
+
+4. In the **AccountController** class, create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **RoleManager&lt;IdentityRole&gt;**
+   - Name: **_roleManager**
+
+5.  Change the **AccountController** constructor signature to accept the following parameter:
+    - Type:  **RoleManager&lt;IdentityRole&gt;**
+    - Name: **roleManager**
+
+6. In the **AccountController** constructor, initialize the **_roleManager** field with the value of the **roleManager** parameter.
+
+7.  In the **RegisterPost** method, remove the contents of the **IF** statement code block, that checks if the value of **result.Succeeded** is true. 
+
+8. In the **IF** statement code block, create a variable named **roleExists** of type **bool** and assign it with the value of **await _roleManager.RoleExistsAsync(registerModel.RoleName)**
+
+9. Create a nested **IF** statement that checks that the value of **roleExists** is **false**. 
+
+10. In the nested **IF** statement code block, call the **_roleManager.CreateAsync** method using the **await** keyword. Pass **new IdentityRole(registerModel.RoleName)**
+as a parameter to the **CreateAsync** method. 
+
+11. After the nested **IF** statement code block, create an **IF** statement that checks that the value of the **await _userManager.IsInRoleAsync(user, registerModel.RoleName)** is **false**. 
+
+12. In the new **IF** statement code block, call the **_userManager.AddToRoleAsync** method using the **await** keyword. Pass **user** and **registerModel.RoleName**
+as parameters to the **_userManager.AddToRoleAsync** method. 
+
+13. After the new **IF** statement code block, create a variable named **resultSignIn** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(registerModel.UserName, registerModel.Password,registerModel.RememberMe,false)**
+
+14. Create an **IF** statement that checks that the value of the **resultSignIn.Succeeded** is **true**. 
+
+15. In the new **IF** statement code block,  return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** 
+
+16. At the **Register.cshtml** view, after the last **DIV** element with the **"form-group"** class, add a **DIV** element with the following information:
+
+    - Class: **form-group row**
+
+17. In the new **DIV** element, add a **LABEL** element with the following information:
+
+    - asp-for: **RoleName**
+    - class: **col-sm-4 col-form-label**
+
+18. Add a **DIV** element with the following information:
+
+    - class: **col-sm-6**
+
+19. In the new **DIV** element, add a **SELECT** element with the following information:
+
+    - asp-for: **RoleName**
+    - class: **form-control**
+
+20. In the **SELECT** element, add a **OPTION** element with the following information:
+
+    - selected: **selected**
+    - Content: **Member**    
+
+21. Add a **OPTION** element with the following information:
+
+    - Content: **Administrator**    
+
+22. In the **LibrarianController** class, add a **USING** statement for the following namespace:
+
+   - **Microsoft.AspNetCore.Authorization**
+
+23. Above the **LibrarianController** class declaration, add a **Authorize** attribute. Pass **Roles="Administrator"** as a parameter to the **Authorize** attribute.
+
 
 #### Task 3: Add Claim-based Policy Authentication
 
-1. 
+1. In the **Startup.cs** class, add a **USING** statement for the following namespace:
+
+   - **System.Security.Claims**
+
+2. In the end of the **ConfigureServices** method, call the **AddAuthorization** method of **services** parameter.
+
+3. Pass a **lambda expression** as a parameter to the **AddAuthorization** method with the following information:
+
+   - Lambda Expression: options => { }
+
+4. In the  **lambda expression** code block, call the **options.AddPolicy** method. Pass **"RequireEmail"** and **policy => policy.RequireClaim(ClaimTypes.Email)** as parameters to the **options.AddPolicy** method.
+
+5. In the **AccountController** class, add a **USING** statement for the following namespace:
+
+   - **System.Security.Claims**
+
+6.  In the **RegisterPost** method, before the **resultSignIn** variable creation,  create an **IF** statement that checks that the value of the **string.IsNullOrWhiteSpace(user.Email)** is **false**. 
+
+7.  In the **IF** statement code block, create a variable named **claim** of type **Claim**. Initialize the **claim** varaible using the **Claim** constructor and pass it the following parameters: **ClaimTypes.Email** and **user.Email**. 
+
+8. Call the **_userManager.AddClaimAsync** method using the **await** keyword. Pass **user** and **claim** as parameters to the **_userManager.AddClaimAsync** method.
+
+9. Above the **LibrarianController** class declaration,  above the **Authorize** attribute, add another **Authorize** attribute. Pass **Policy="RequireEmail"** as a parameter to the **Authorize** attribute.
 
 #### Task 4: Run the application
 
@@ -436,7 +534,44 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Write the Cross-Site Request Forgery attack
 
-1. 
+1. Create a new folder with the following information:
+
+    - Folder name: **Controllers**
+    - Project: **CrossSiteRequestForgeryAttack**
+
+2. Create a new controller with the following information:
+   - Controller name: **HomeController**
+   - Template: **MVC controller - Empty**
+   - Folder: **CrossSiteRequestForgeryAttack/Controllers**
+
+3. In the **HomeController**, right-click on the **Index** action name, and then click **Add View**.
+
+4. Create a new **View** using the **Add MVC View** dialog box, with the following information:
+
+    - View Name: **Index**
+    - Template: **Empty (without model)**
+    - Create as Partial View: **False**
+    - Use a layout page: **False**
+
+5. In the **Index.cshtml** view, after the **TITLE** element, add a **LINK** element, with the following information: 
+
+    - Href: **~/css/style.css**
+    - Rel: **stylesheet**
+
+6. In the **BODY** element, add a **H1** element, with the following information: 
+
+    - Content: **Cross-Site Request Forgery Attack**
+
+7. Add a **H3** element, with the following information: 
+
+    - Content: **Click - Submit to Perform the Attack**
+
+8. Add a **FORM** element, with the following information: 
+
+    - action: **http://localhost:55606/Account/Register?FirstName=Forgery_Attacker&LastName=Cross_Site&PhoneNumber=123&Email=attack@@.com&UserName=Forgery_Attacker&Password=123qwe!!!QWE123&RoleName=Member**
+    - method: **post**
+
+
 
 #### Task 2: Run the application – now the attack is possible
 
@@ -458,7 +593,12 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Avoid the Cross-Site Request Forgery attack
 
-1. 
+1. In the **AccountController** class, above the **Register** method, add a **ValidateAntiForgeryToken** attribute.
+
+2. In the **LibrarianController** class, above the **AddBookPost** method, add a **ValidateAntiForgeryToken** attribute.
+
+3. In the **LibraryController** class, above the **LendingBookPost** method, add a **ValidateAntiForgeryToken** attribute.
+
 
 #### Task 4: Run the application – now the attack is not possible
 
