@@ -593,7 +593,12 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Avoid the Cross-Site Request Forgery attack
 
-1. 
+1. In the **AccountController** class, above the **Register** method, add a **ValidateAntiForgeryToken** attribute.
+
+2. In the **LibrarianController** class, above the **AddBookPost** method, add a **ValidateAntiForgeryToken** attribute.
+
+3. In the **LibraryController** class, above the **LendingBookPost** method, add a **ValidateAntiForgeryToken** attribute.
+
 
 #### Task 4: Run the application – now the attack is not possible
 
