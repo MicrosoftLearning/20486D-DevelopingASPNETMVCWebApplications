@@ -12,7 +12,6 @@ namespace ServerSide.Controllers
     [ApiController]
     public class StoreController : ControllerBase
     {
-
         private List<GroceryStore> _groceryStores = new List<GroceryStore>();
 
         public StoreController()
@@ -29,20 +28,17 @@ namespace ServerSide.Controllers
             {
                 return NotFound();
             }
-            return new ObjectResult(grocery);
+            return Ok(grocery);
         }
 
         [HttpPost]
         public ActionResult<GroceryStore> Create(GroceryStore groceryStore)
+
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            int groceryMaxId = _groceryStores.Max(g => g.Id);
+            groceryStore.Id = ++groceryMaxId;
             _groceryStores.Add(groceryStore);
             return CreatedAtAction(nameof(GetById), new { id = groceryStore.Id }, groceryStore);
         }
-
-
     }
 }
