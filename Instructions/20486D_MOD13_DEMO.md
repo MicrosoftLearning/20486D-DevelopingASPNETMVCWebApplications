@@ -450,17 +450,13 @@
 
     >**Note:** The browser displays the first grocery store object in **JSON** format.
 
-26. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+26. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
 
     >**Note:** The browser displays the new added grocery store in **JSON** format.
 
-27. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
+27. In **Microsoft Edge**, click **Close**.
 
-    >**Note:** The browser displays the new added grocery store in **JSON** format.
-
-28. In **Microsoft Edge**, click **Close**.
-
-29. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+28. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
