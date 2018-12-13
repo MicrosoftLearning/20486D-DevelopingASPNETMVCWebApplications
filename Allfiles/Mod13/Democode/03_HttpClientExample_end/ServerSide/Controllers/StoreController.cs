@@ -28,12 +28,11 @@ namespace ServerSide.Controllers
             {
                 return NotFound();
             }
-            return Ok(grocery);
+            return grocery;
         }
 
         [HttpPost]
         public ActionResult<GroceryStore> Create(GroceryStore groceryStore)
-
         {
             int groceryMaxId = _groceryStores.Max(g => g.Id);
             groceryStore.Id = ++groceryMaxId;
