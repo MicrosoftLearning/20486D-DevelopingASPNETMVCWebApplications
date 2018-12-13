@@ -338,25 +338,25 @@
 
 9. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **HomeController**, and then click **Add**.
 
-12. In the **HomeController.cs** code window, locate the following code:
+10. In the **HomeController.cs** code window, locate the following code:
   ```cs
       using Microsoft.AspNetCore.Mvc;
 ```
-13. Ensure that the cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
+11. Ensure that the cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
   ```cs
       using ClientSide.Models;
       using System.Net.Http;
       using System.Net.Http.Headers;
 ```
 
-14. In the **HomeController.cs** code window, delete the following code:
+12. In the **HomeController.cs** code window, delete the following code:
   ```cs
        public IActionResult Index()
        {
            return View();
        }
 ```
-15. In the **HomeController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
+13. In the **HomeController.cs** code block, place the cursor after the second **{** (opening braces) sign, press Enter, and then type the following code:
   ```cs
        private IHttpClientFactory _httpClientFactory;
 
@@ -366,13 +366,13 @@
        } 
 ``` 
 
-16. Ensure that the cursor is at the end of the **HomeController** constructor code block, press Enter twice, and then type the following code:
+14. Ensure that the cursor is at the end of the **HomeController** constructor code block, press Enter twice, and then type the following code:
   ```cs
        public async Task<IActionResult> GetByIdAsync()
        {
        }
 ```
-17. In the **GetByIdAsync** action code block, type the following code:
+15. In the **GetByIdAsync** action code block, type the following code:
   ```cs
        HttpClient httpClient = _httpClientFactory.CreateClient();
        httpClient.BaseAddress = new Uri("http://localhost:61086");
@@ -388,13 +388,13 @@
        }
 ```
 
-18. Ensure that the cursor is at the end of the **GetByIdAsync** action code block, press Enter twice, and then type the following code:
+16. Ensure that the cursor is at the end of the **GetByIdAsync** action code block, press Enter twice, and then type the following code:
   ```cs
        public async Task<IActionResult> PostAsync()
        {
        }
 ```
-19. In the **PostAsync** action code block, type the following code:
+17. In the **PostAsync** action code block, type the following code:
   ```cs
        HttpClient httpClient = _httpClientFactory.CreateClient();
        httpClient.BaseAddress = new Uri("http://localhost:61086");
@@ -410,13 +410,13 @@
            return Content("An error has occurred");
        }
 ```
-20. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **ServerSide**, expand **Controllers**, and then click **StoreController.cs**.
+18. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **ServerSide**, expand **Controllers**, and then click **StoreController.cs**.
 
     >**Note:** Examine the **StoreController** class content.
 
-21. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ServerSide**, under **Properties**, click **launchSettings.json**.
+19. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ServerSide**, under **Properties**, click **launchSettings.json**.
 
-22. In the **launchSettings.json** code window, select the following code:
+20. In the **launchSettings.json** code window, select the following code:
   ```cs
        "profiles": {
           "IIS Express": {
@@ -428,7 +428,7 @@
        },
 ```
 
-23. Replace the selected code with the following code:
+21. Replace the selected code with the following code:
   ```cs
        "profiles": {
           "IIS Express": {
@@ -440,27 +440,27 @@
        },
 ```
 
-24. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+22. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-25. In **Solution Explorer**, right-click **ServerSide**, and then click **Set as StartUp Project**. 
+23. In **Solution Explorer**, right-click **ServerSide**, and then click **Set as StartUp Project**. 
 
-26. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+24. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-27. In **Solution Explorer**, right-click **ClientSide**, point to **Debug**, and then click **Start new instance**.
+25. In **Solution Explorer**, right-click **ClientSide**, point to **Debug**, and then click **Start new instance**.
 
     >**Note:** The browser displays the first grocery store object in **JSON** format.
 
-28. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+26. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
     >**Note:** The browser displays the new added grocery store in **JSON** format.
 
-29. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
+27. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
 
     >**Note:** The browser displays the new added grocery store in **JSON** format.
 
-30. In **Microsoft Edge**, click **Close**.
+28. In **Microsoft Edge**, click **Close**.
 
-31. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+29. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 
