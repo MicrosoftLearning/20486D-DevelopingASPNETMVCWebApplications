@@ -448,7 +448,7 @@
 
 25. In **Solution Explorer**, right-click **ClientSide**, point to **Debug**, and then click **Start new instance**.
 
-    >**Note:** The browser displays the first grocery store object in **JSON** format.
+    >**Note:** The browser displays the grocery store object with id=1 in **JSON** format.
 
 26. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
 
