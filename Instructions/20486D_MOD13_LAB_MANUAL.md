@@ -204,11 +204,11 @@ The main tasks for this exercise are as follows:
    - Folder name: **Controllers**
    
 3. Create a new controller with the following information:
-   - Controller name: **RestaurantController**
+   - Controller name: **RestaurantBranchesController**
    - Template: **MVC Controller - Empty**
    - Folder: **Client/Controllers**
    
-4. In the **RestaurantController** class, add **USING** statements for the following namespaces:
+4. In the **RestaurantBranchesController** class, add **USING** statements for the following namespaces:
    - **System.Net.Http**
    - **Client.Models**
 
@@ -229,7 +229,7 @@ The main tasks for this exercise are as follows:
         - Type: **IHttpClientFactory** 
         - Name: **httpClient**
 
-9. In the **RestaurantController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
+9. In the **RestaurantBranchesController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
 
 10. Add a method with the following information:
     - Scope: **public**

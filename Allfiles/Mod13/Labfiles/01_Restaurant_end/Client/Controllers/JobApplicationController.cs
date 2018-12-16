@@ -36,7 +36,6 @@ namespace Client.Controllers
             {
                 _employeeRequirements = await response.Content.ReadAsAsync<IEnumerable<EmployeeRequirements>>();
             }
-
             ViewBag.EmployeeRequirementsId = new SelectList(_employeeRequirements, "Id", "JobTitle", selectedRequirements);
         }
 

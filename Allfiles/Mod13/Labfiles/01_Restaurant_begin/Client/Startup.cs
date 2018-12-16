@@ -30,19 +30,6 @@ namespace Client
                     template: "{controller}/{action}/{id?}",
                     defaults: new { controller = "Restaurant", action = "Index" },
                     constraints: new { id = "[0-9]+" });
-                routes.MapRoute(
-                    name: "ReservationRoute",
-                    template: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "Reservation", action = "Create" });
-                routes.MapRoute(
-                     name: "WantedAdRoute",
-                    template: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "WantedAd", action = "Index" },
-                    constraints: new { id = "[0-9]+" });
-                routes.MapRoute(
-                     name: "JobApplicationRoute",
-                    template: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "JobApplication", action = "Create" });
             });
         }
     }

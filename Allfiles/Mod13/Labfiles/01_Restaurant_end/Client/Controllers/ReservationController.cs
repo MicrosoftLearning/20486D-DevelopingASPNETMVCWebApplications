@@ -11,12 +11,12 @@ namespace Client.Controllers
 {
     public class ReservationController : Controller
     {
-        private IHttpClientFactory _httpClient;
+        private IHttpClientFactory _httpClientFactory;
         private IEnumerable<RestaurantBranch> _restaurantBranches;
 
-        public ReservationController(IHttpClientFactory httpClient)
+        public ReservationController(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClient;
+            _httpClientFactory = httpClientFactory;
         }
 
         [HttpGet]
@@ -29,28 +29,46 @@ namespace Client.Controllers
         [HttpPost, ActionName("Create")]
         public async Task<IActionResult> CreatePostAsync(OrderTable orderTable)
         {
-            var client = _httpClient.CreateClient();
-            var response = await client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable);
-            response.EnsureSuccessStatusCode();
-            return RedirectToAction(nameof(ThankYou));
+            HttpClient httpclient = _httpClientFactory.CreateClient();
+            HttpResponseMessage response = await httpclient.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable);
+            if (response.IsSuccessStatusCode)
+            {
+                OrderTable order = await response.Content.ReadAsAsync<OrderTable>();
+                return RedirectToAction("ThankYou", new { id = order.Id, order });
+            }
+            else
+            {
+                return View("Error");
+            }
         }
 
-        private async Task PopulateRestaurantBranchesDropDownListAsync(int? selectedBranch = null)
+        private async Task PopulateRestaurantBranchesDropDownListAsync()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches");
-            request.Headers.Add("Accept", "application/json");
-            var client = _httpClient.CreateClient();
-            var response = await client.SendAsync(request);
+            int? selectedBranch = null;
+            HttpClient httpClient = _httpClientFactory.CreateClient();
+            httpClient.BaseAddress = new Uri("http://localhost:54517");
+            HttpResponseMessage response = httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result;
             if (response.IsSuccessStatusCode)
             {
                 _restaurantBranches = await response.Content.ReadAsAsync<IEnumerable<RestaurantBranch>>();
             }
-            ViewBag.RestaurantBranchId = new SelectList(_restaurantBranches, "Id", "City", selectedBranch);
+            ViewBag.RestaurantBranches = new SelectList(_restaurantBranches, "Id", "City", selectedBranch);
         }
 
-        public IActionResult ThankYou()
+        public async Task<IActionResult> ThankYouAsync(OrderTable order)
         {
-            return View();
+            HttpClient httpClient = _httpClientFactory.CreateClient();
+            httpClient.BaseAddress = new Uri("http://localhost:54517");
+            HttpResponseMessage response = httpClient.GetAsync("http://localhost:54517/api/Reservation" + order.Id).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                OrderTable orderResult = await response.Content.ReadAsAsync<OrderTable>();
+                return View(orderResult);
+            }
+            else
+            {
+                return View("Error");
+            }
         }
     }
 }

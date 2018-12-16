@@ -11,7 +11,7 @@
             <div class="form-group row">
                 <label asp-for="RestaurantBranch" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
-                    <select asp-for="RestaurantBranchId" asp-items="ViewBag.RestaurantBranchId" type="text" class="form-control" placeholder="Restaurant Branch" required>
+                    <select asp-for="RestaurantBranchId" asp-items="ViewBag.RestaurantBranches" type="text" class="form-control" placeholder="Restaurant Branch" required>
                         <option selected="selected" value="">Select</option>
                     </select>
                     <span asp-validation-for="RestaurantBranchId"></span>
