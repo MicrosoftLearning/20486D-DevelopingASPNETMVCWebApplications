@@ -38,24 +38,22 @@ namespace Server.Data
                    Open = true,
                    PhoneNumber = "(07)-0116-7991"
                },
-                new RestaurantBranch
-                {
-                    Id = 3,
-                    Street = "Ruschestrasse 99 Road",
-                    City = "Schönebeck",
-                    Open = false,
-                    PhoneNumber = "(03)-4584-9768"
-
-                },
-                 new RestaurantBranch
-                 {
-                     Id = 4,
-                     Street = "20 Fitzroy Street",
-                     City = "Greendale",
-                     Open = true,
-                     PhoneNumber = "(03)-8622-6758"
-
-                 });
+               new RestaurantBranch
+               {
+                   Id = 3,
+                   Street = "Ruschestrasse 99 Road",
+                   City = "Schönebeck",
+                   Open = false,
+                   PhoneNumber = "(03)-4584-9768"
+               },
+               new RestaurantBranch
+               {
+                   Id = 4,
+                   Street = "20 Fitzroy Street",
+                   City = "Greendale",
+                   Open = true,
+                   PhoneNumber = "(03)-8622-6758"
+               });
 
             modelBuilder.Entity<EmployeeRequirements>().HasData(
                new EmployeeRequirements

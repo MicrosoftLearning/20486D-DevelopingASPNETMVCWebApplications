@@ -213,7 +213,7 @@ The main tasks for this exercise are as follows:
    
 4. In the **RestaurantController** class, add **USING** statements for the following namespaces:
    - **System.Net.Http**
-   - **Server.Models**
+   - **Client.Models**
 
 5. Remove the **Index** action with its content.
 
@@ -284,7 +284,7 @@ The main tasks for this exercise are as follows:
 2. In the **ReservationController** class, add **USING** statements for the following namespaces:
    - **Microsoft.AspNetCore.Mvc.Rendering**
    - **System.Net.Http**
-   - **Server.Models**
+   - **Client.Models**
 
 3. Remove the **Index** action with its content.
 
@@ -505,7 +505,7 @@ The main tasks for this exercise are as follows:
 2. In the **ReservationController** class, add **USING** statements for the following namespaces:
    - **Microsoft.AspNetCore.Mvc.Rendering**
    - **System.Net.Http**
-   - **Server.Models**
+   - **Client.Models**
 
 3. Remove the **Index** action with its content.
 

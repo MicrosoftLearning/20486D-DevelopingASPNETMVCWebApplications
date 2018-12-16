@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Net.Http;
-using Server.Models;
+using Client.Models;
 
 namespace Client.Controllers
 {

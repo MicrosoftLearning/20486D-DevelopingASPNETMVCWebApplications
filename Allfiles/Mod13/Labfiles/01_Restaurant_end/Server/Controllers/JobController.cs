@@ -35,10 +35,6 @@ namespace Server.Controllers
         [HttpPost]
         public ActionResult<JobApplication> Create(JobApplication jobApplication)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
             _context.Add(jobApplication);
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetById), new { id = jobApplication.Id }, jobApplication);
