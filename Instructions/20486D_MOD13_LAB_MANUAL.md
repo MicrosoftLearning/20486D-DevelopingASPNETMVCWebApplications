@@ -194,7 +194,7 @@ The main tasks for this exercise are as follows:
 4. Run the Application.
 
 
-#### Task 1: Calling a Web API Service GET method
+#### Task 1: Calling a Web API GET method
 
 1. In the **Startup** class, at the end of the **ConfigureServices** method, call the **AddHttpClient** method of the **services** parameter.
 
