@@ -8,8 +8,4 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Server\Server.csproj" />
-  </ItemGroup>
-
 </Project>
