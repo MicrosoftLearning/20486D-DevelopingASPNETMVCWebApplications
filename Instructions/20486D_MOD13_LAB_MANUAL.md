@@ -178,7 +178,7 @@ The main tasks for this exercise are as follows:
 
 7. Return the **ActionResult&lt;OrderTable&gt** result using the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and **orderTable** as parameters to the **CreatedAtAction** method.
 
->**Results**: After completing this exercise, you will be able to add actions to a Web API application, and call them using **Microsoft Edge**.
+>**Results**: After completing this exercise, you will be able to add controllers and actions to a Web Api application, and call them using Microsoft Edge.
 
 ### Exercise 2: Calling a Web API using Server-Side Code
 
