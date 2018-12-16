@@ -4,10 +4,10 @@
 
 #### Scenario
 
-You have been asked to create a web-based restaurant application for your organization's customers, you want 
-to create a page showing all the Restaurant branches, enable to order a reservation for a selected restaurant branch,  add a wanted ad page, and also submit to a selected job.
+You have been asked to create a web-based restaurant application for your organization's customers, you want to create a page showing all the Restaurant branches, enable to order a reservation for the selected restaurant branch, and add wanted ad page, also submit to a selected job.
 
-To achive this, you will create a server side Web API application and a client side MVC Core application calling Web API actions using HttpClient and jQuery.
+You will create a server-side Web API application and a client-side MVC Core application calling Web API actions using HttpClient and jQuery. 
+
 
 #### Objectives
 
@@ -25,73 +25,72 @@ Estimated Time: **60 minutes**
 
 1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
+2. Open the **Command Prompt** window using **Run as administrator**.
+
+3. In **Administrator: Command Prompt**, run the following command:
+ **cd &lt;The location of Allfiles\Mod13\Labfiles\01_Restaurant_begin\Client folder on your machine&gt;.**
+
+4. Run the following command: **npm install**.
+
+5. Close the **Command Prompt** window.
+
 ### Exercise 1: Adding Actions and Call them using Microsoft Edge
 
 #### Scenario
 
-In this exercise, you will first add an action to a Web API application. You will then run the application and view the outcome. After that you will add an action gets a parameter and a post action to the Web API application.
+In this exercise, you will first add a controller and an action to a Web API application. You will then run the application and view the outcome using Microsoft Edge. After that you will add a controller and an action that gets a parameter. You will then run the application and view the outcome using Microsoft Edge. Finally, you will add a post action to the Web API application.
 
 The main tasks for this exercise are as follows:
 
-1.	Add an action to a Web API application.
+1.	Add a controller and an action to a Web API application.
 
 2.	Run the application.
 
-3.	Add an action that gets a parameter to a Web API application.
+3.	Add a controller and an action that gets a parameter.
 
 4.	Run the application.
 
 5.	Add a Post action to a Web API application.
 
-
 #### Task 1: Add a controller and an action to a Web API application
 
-1. Open the **Command Prompt** window using **Run as administrator**.
+1. Open the **Restaurant.sln** file from the following location: **Allfiles\Mod13\Labfiles\01_Restaurant_begin**.
 
-2. In **Administrator: Command Prompt**, run the following command:
- **cd &lt;The location of Allfiles\Mod13\Labfiles\01_Restaurant_begin\Client folder on your machine&gt;.**
-
-3. Run the following command: **npm install**.
-
-4. Close the **Command Prompt** window.
-
-5. Open the **Restaurant.sln** file from the following location: **Allfiles\Mod13\Labfiles\01_Restaurant_begin**.
-
-6. Create a new controller with the following information:
+2. Create a new controller with the following information:
    - Controller name: **RestaurantBranchesController**
    - Template: **API Controller - Empty**
    - Folder: **Server/Controllers**
    
-7. In the **RestaurantBranchesController** class, add **USING** statements for the following namespaces:
+3. In the **RestaurantBranchesController** class, add **USING** statements for the following namespaces:
    - **Server.Data**
    - **Server.Models**
 
-8. Create a new field with the following information:
+4. Create a new field with the following information:
    - Scope: **private**
    - Type: **RestaurantContext**
    - Name: **_context**
 
-9.  Add a constructor with the following parameter:
+5.  Add a constructor with the following parameter:
      - Parameter: 
          - Type: **RestaurantContext** 
          - Name: **context**
 
-10. In the **RestaurantBranchesController** constructor, initialize the **_context** field with the value of the **context** parameter.
+6. In the **RestaurantBranchesController** constructor, initialize the **_context** field with the value of the **context** parameter.
 
-11. Add a method with the following information:
+7. Add a method with the following information:
     - Scope: **public**
     - Return type: **ActionResult	&lt;List&lt;RestaurantBranch&gt;&gt;**
     - Name: **Get**
 
-12. Above the **Get** method, add a **HttpGet** attribute.
+8. Above the **Get** method, add a **HttpGet** attribute.
 
-13. In the **Get** method, create a variable named **branches** of type **var**, and assign it the value of the following LINQ query:
+9. In the **Get** method, create a variable named **branches** of type **var**, and assign it the value of the following LINQ query:
 
     - From: **r in _context.RestaurantBranches**
     - Orderby: **r.City**
     - Select: **r**
    
-14. Return the **List&lt;RestaurantBranch&gt;** result using the **branches.ToList** method. 
+10. Return the **List&lt;RestaurantBranch&gt;** result using the **branches.ToList** method. 
 
 #### Task 2: Run the application
 
