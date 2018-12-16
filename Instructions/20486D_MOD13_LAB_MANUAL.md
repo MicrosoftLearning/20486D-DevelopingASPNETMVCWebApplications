@@ -99,7 +99,8 @@ The main tasks for this exercise are as follows:
 2. In **Solution Explorer**, right-click **Server**, and then click **Set as StartUp Project**.
 
 3. Start the application without debugging.
-    >**Note:** The browser displays a list of restaurants in **JSON** format.
+
+    >**Note:** The browser displays a list of branches in **JSON** format.
 
 4. Close **Microsoft Edge**.
 
@@ -150,8 +151,9 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In **Microsoft Edge**, navigate to **http://localhost:[port]/api/Reservation/1/details**.
-    >**Note:**  The browser displays the first restaurant in **JSON** format.
+3. In **Microsoft Edge**, navigate to **http://localhost:[port]/api/Reservation/1**.
+
+    >**Note:** The browser displays a restaurant with id=1 in **JSON** format.
 
 4. Close **Microsoft Edge**.
 
@@ -167,11 +169,7 @@ The main tasks for this exercise are as follows:
         
 2. Above the **Create** method, add a **HttpPost** attribute.
 
-3. Create an **IF** statement that checks that the value of the **ModelState.IsValid** varible is **false**. 
-
-4. Inside the **IF** statement code block, return a **BadRequestResult** result using the **BadRequest** method. Pass the **ModelState** property as parameter to the **BadRequest** method.
-
-5. After the **IF** statement code block, call the **Add** method of the **_context** field. Pass the **orderTable** property as parameter to the **Add** method.
+5. In the **Create** method, call the **Add** method of the **_context** field. Pass the **orderTable** property as parameter to the **Add** method.
 
 6. Call the **SaveChanges** method of the **_context** field. 
 
