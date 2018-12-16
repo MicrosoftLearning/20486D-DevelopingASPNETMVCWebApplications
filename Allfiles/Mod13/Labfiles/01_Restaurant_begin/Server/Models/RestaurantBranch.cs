@@ -24,6 +24,7 @@ namespace Server.Models
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<OrderTable> OrderTables { get; set; }
     }
 }

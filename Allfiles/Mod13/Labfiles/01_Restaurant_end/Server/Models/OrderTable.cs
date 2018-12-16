@@ -32,6 +32,7 @@ namespace Server.Models
         public int RestaurantBranchId { get; set; }
 
         [Display(Name = "Restaurant Branch")]
+        [Newtonsoft.Json.JsonIgnore]
         public virtual RestaurantBranch RestaurantBranch { get; set; }
     }
 }

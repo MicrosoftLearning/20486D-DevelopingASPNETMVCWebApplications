@@ -35,10 +35,6 @@ namespace Server.Controllers
         [HttpPost]
         public ActionResult<OrderTable> Create(OrderTable orderTable)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
             _context.Add(orderTable);
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetById), new { id = orderTable.Id }, orderTable);
