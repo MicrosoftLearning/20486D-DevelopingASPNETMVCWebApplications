@@ -44,7 +44,7 @@ The main tasks for this exercise are as follows:
 5.	Add a Post action to a Web API application.
 
 
-#### Task 1: Add an action to a Web API application
+#### Task 1: Add a controller and an action to a Web API application
 
 1. Open the **Command Prompt** window using **Run as administrator**.
 
@@ -104,7 +104,7 @@ The main tasks for this exercise are as follows:
 
 4. Close **Microsoft Edge**.
 
-#### Task 3: Add an action that gets a parameter to a Web API application
+#### Task 3: Add a controller and an action that gets a parameter
 
 1.  Create a new controller with the following information:
    - Controller name: **ReservationController**
