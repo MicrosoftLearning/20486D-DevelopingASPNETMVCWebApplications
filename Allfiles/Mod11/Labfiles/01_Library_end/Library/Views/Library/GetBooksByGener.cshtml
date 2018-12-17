@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Library.Models.Book>
+
+@{
+    ViewData["Title"] = "GetBooksByGener";
+}
+
+<h1 class="title">Our Books in the Library</h1>
+
+<div class="container">
+    <div class="row grid-header align-items-center">
+        <div class="col-4">
+        </div>
+        <div class="col-2">
+            Book Name
+        </div>
+        <div class="col-2">
+            Author
+        </div>
+        <div class="col-2">
+            Published
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+    <div class="row align-items-center">
+        @foreach (var item in Model)
+        {
+            <div class="col-4">
+                <div class="row">
+                    @if (item.ImageName != null)
+                    {
+                        <div>
+                            <img class="img-frame" src="@Url.Action("GetImage", "Library", new { id = item.Id })" />
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row">
+                    @Html.DisplayFor(model => item.Name)
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row">
+                    @Html.DisplayFor(model => item.Author)
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row">
+                    @Html.DisplayFor(model => item.DatePublished)
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row">
+                    <a asp-action="LendingBook" asp-route-id="@item.Id">Lend a Book</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

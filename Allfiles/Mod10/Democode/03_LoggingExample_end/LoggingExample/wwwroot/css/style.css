@@ -1,0 +1,28 @@
+﻿body {
+    background: linear-gradient(to bottom right, DarkBlue 0%, DodgerBlue 100%);
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+html {
+    height: 100%;
+}
+
+a {
+    color: white;
+    border-style: inset;
+    border-color: gray;
+    border-width: 5px;
+    background-color: gray;
+    width: 20px;
+    opacity: 0.8;
+    display: inline-block;
+}
+
+div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+}

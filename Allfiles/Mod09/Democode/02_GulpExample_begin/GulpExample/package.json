@@ -3,7 +3,9 @@
   "name": "asp.net",
   "private": true,
   "devDependencies": {
-    "gulp": "3.9.1",
-    "gulp-sass": "4.0.1"
+    "gulp": "4.0.0",
+    "gulp-sass": "4.0.1",
+    "lodash": "4.17.5",
+    "hoek": "4.2.1"
   }
 }

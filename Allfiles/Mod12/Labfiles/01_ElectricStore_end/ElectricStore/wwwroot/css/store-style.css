@@ -1,0 +1,148 @@
+﻿body {
+    font-family: "Playfair Display", Arial, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.main-title {
+    background-image: url("/images/banner.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    min-height: 465px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.main-title h1 {
+    font-size: 50px;
+    text-shadow: 15px 10px 15px #1b1e21;
+    font-weight: bolder;
+    text-align: left;
+    color: #ece2e2;
+}
+
+.page-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.item {
+    color: white;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item h3 {
+    color: #736454;
+    font-size: 20px;
+}
+
+div p {
+    color: #736454;
+    font-size: 20px;
+    margin: 20px;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.chat {
+    margin-top: 20px;
+}
+
+#sendMessageBtn {
+    margin-top: 20px;
+}
+
+.chat-title {
+    color: #32b27a;
+}
+
+#btnChat {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.navbar-custom {
+    background-color: #928888;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    padding: 5px;
+}
+
+.display-cached-time {
+    font-size: 15px;
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    padding: 5px;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    background-color: #b9836d;
+}
+
+.title {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin: 15px;
+    color: #736454;
+}
+
+.Secondary-heading p{
+    font-size: 42px;
+}
+
+.span-col-f {
+    color: #616161;
+}
+
+.span-col-s {
+    color: #C62828;
+}
+
+form {
+    margin: 20px;
+    background-color: #d6d4d4;
+    padding: 15px;
+    width: 600px;
+    box-shadow: 5px 10px #888888;
+}
+
+.bcf {
+    background-color: #ecdfcb;
+    box-shadow: 5px 10px #888888;
+    padding: 15px;
+    margin: 5px;
+}
+
+.bcs {
+    background-color: #ecdfcb;
+    box-shadow: 5px 10px #888888;
+    padding: 15px;
+    margin: 5px;
+}
+
+.field-validation-error {
+    color: red;
+}

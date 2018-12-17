@@ -4,10 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/css/main.min.css" rel="stylesheet" />
+    <script src="~/scripts/vendor.min.js"></script>
+    <script src="~/scripts/script.min.js"></script>
     <link href="~/css/vendor.min.css" rel="stylesheet" />
-    <script src="~/lib/vendor.min.js"></script>
-    <script src="~/script/script.min.js"></script>
+    <link href="~/css/main.min.css" rel="stylesheet" />
 </head>
 <body>
     <div>
@@ -22,15 +22,15 @@
                         <a class="nav-link" href="@Url.Action("Index", "IceCream")">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Buy", "IceCream")">Buy ice cream</a>
+                        <a class="nav-link" href="@Url.Action("Buy", "IceCream")">Buy Ice Cream</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
     <div class="main-title">
-        <h1>The best ice cream you will taste in your life</h1>
-        <button type="button" onclick="location.href='@Url.Action("Buy", "IceCream")'">Buy ice cream</button>
+        <h1>The Best Ice Cream You Will Taste in Your Life</h1>
+        <button type="button" onclick="location.href='@Url.Action("Buy", "IceCream")'">Buy Ice Cream</button>
     </div>
     <div>
         @RenderBody()

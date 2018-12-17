@@ -1,0 +1,36 @@
+﻿h1 {
+    color: #004674;
+    text-align:center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #29b7ff;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #004674;
+}
+
+.info-panel {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: darkblue;
+    text-align:center;
+}

@@ -1,0 +1,43 @@
+﻿body {
+    display: flex;
+    flex-direction: column;
+    background-color: #c3d9fa;
+    color: #015072;
+}
+
+div {
+    padding: 5px;
+    font-size: 20px;
+}
+
+.display-label {
+    display: inline-block;
+    margin: 25px 1px 2px 1px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.display-field {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+}
+
+.product-wrapper {
+    flex-direction: row;
+    display: flex;
+}
+
+.product-display > div {
+    flex-direction: column;
+    max-width: 300px;
+    max-width: 300px;
+}
+
+.product-img {
+    border: solid 1px #015072;
+}
+
+.product-list {
+    width: 250px;
+}

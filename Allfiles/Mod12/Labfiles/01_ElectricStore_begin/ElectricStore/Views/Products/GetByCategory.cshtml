@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ElectricStore.Models.Product>
+
+@{
+    ViewData["Title"] = "GetByCategory";
+}
+
+<h2 class="title">
+    <span class="span-col-s">@ViewBag.categoryTitle</span>
+</h2>
+
+<div class="page-container">
+    @foreach (var item in Model)
+    {
+    <div class="item">
+        <h3>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </h3>
+        @if (item.PhotoFileName != null)
+            {
+        <div>
+            <img src="@Url.Action("GetImage", "Products", new { productId = item.Id })" />
+        </div>
+            }
+        <div>
+            <p>
+                @Html.DisplayFor(model => item.Description)
+            </p>
+            <p>
+                @Html.DisplayFor(model => item.Price)
+            </p>
+        </div>
+    </div>
+    }
+</div>

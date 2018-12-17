@@ -1,0 +1,11 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Another";
+}
+
+<div class="info-panel">
+    <div>Number of times that this controller was visited during this session: @Context.Session.GetInt32("Home")</div>
+    <div>Number of times that this controller was visited during this session: @Context.Session.GetInt32("Another")</div>
+    <div>Number of times visited overall during this session: @Context.Session.GetInt32("Overall")</div>
+</div>

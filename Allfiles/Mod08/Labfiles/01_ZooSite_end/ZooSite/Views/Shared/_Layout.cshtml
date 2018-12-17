@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link type="text/css" rel="stylesheet" href="~/css/zoo-style.css"/>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/menubar-functions.js"></script>
+    <script src="~/js/slider-functions.js"></script>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="@Url.Action("Index", "Zoo")">Attractions</a></li>
+        <li><a href="@Url.Action("VisitorDetails", "Zoo")">Visitor Info</a></li>
+        <li><a href="@Url.Action("BuyTickets", "Zoo")">Tickets</a></li>
+    </ul>
+    <div class="header-container">
+        <h1 class="content">Welcome to Zoo Center</h1>
+        <div class="slider-buttons">
+            <img src="~/images/prevArrow.png" class="prev" onclick="prevImage()"/>
+            <img src="~/images/nextArrow.png" class="next" onclick="nextImage()" />
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    @RenderSection("Scripts", false)
+</body>
+</html>

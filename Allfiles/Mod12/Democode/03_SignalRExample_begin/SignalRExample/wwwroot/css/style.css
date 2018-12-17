@@ -1,0 +1,25 @@
+﻿body {
+    background-color: lightgreen;
+}
+
+.square-wrapper {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+    border-radius: 20px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Library.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="title">The Most Recommended Books</h1>
+
+<div class="page-container">
+    @foreach (var item in Model)
+    {
+        <div class="item">
+            <h3>
+                @Html.DisplayFor(modelItem => item.Name)
+            </h3>
+            @if (item.ImageName != null)
+            {
+                <div>
+                    <img src="@Url.Action("GetImage", "Library", new { id = item.Id })" />
+                </div>
+            }
+
+            <div>
+                <span class="display-label">
+                    @Html.DisplayNameFor(modelItem => item.Author):
+                </span>
+                <br />
+                <span class="display-field">
+                    @Html.DisplayFor(modelItem => item.Author)
+                </span>
+            </div>
+
+            <div>
+                <span class="display-label">
+                    @Html.DisplayNameFor(modelItem => item.DatePublished)
+                </span>
+                <span class="display-field">
+                    @Html.DisplayFor(model => item.DatePublished)
+                </span>
+            </div>
+            <div>
+                <span class="display-label">
+                    @Html.DisplayNameFor(modelItem => item.Available)
+                </span>
+                <span class="display-field">
+                    @Html.DisplayFor(model => item.Available)
+                </span>
+            </div>
+        </div>
+    }
+</div>

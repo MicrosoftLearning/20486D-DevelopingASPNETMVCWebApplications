@@ -1,0 +1,21 @@
+﻿body {
+    font-family: "Playfair Display", Arial, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    color: #832121;
+}
+
+
+input[type=submit] {
+    margin : auto 0;
+}
+
+h3 {
+    color: #b56e6e;
+    font-size: 25px;
+}

@@ -1,0 +1,57 @@
+﻿@model Library.Models.Book
+
+@{
+    ViewData["Title"] = "LendingBook";
+}
+
+<h1 class="title">Hello @User.Identity.Name - Lending Book Information</h1>
+
+<div class="page-container">
+    <div class="item">
+        <h3>
+            @Html.DisplayFor(modelItem => Model.Name)
+        </h3>
+        @if (Model.ImageName != null)
+        {
+            <div>
+                <img src="@Url.Action("GetImage", "Library", new { id = Model.Id })" />
+            </div>
+        }
+
+        <div>
+            <span class="display-label">
+                @Html.DisplayNameFor(modelItem => Model.Author):
+            </span>
+            <br />
+            <span class="display-field">
+                @Html.DisplayFor(modelItem => Model.Author)
+            </span>
+        </div>
+
+        <div>
+            <span class="display-label">
+                @Html.DisplayNameFor(modelItem => Model.DatePublished)
+            </span>
+            <span class="display-field">
+                @Html.DisplayFor(model => Model.DatePublished)
+            </span>
+        </div>
+        <div>
+            <span class="display-label">
+                @Html.DisplayNameFor(modelItem => Model.Available)
+            </span>
+            <span class="display-field">
+                @Html.DisplayFor(model => Model.Available)
+            </span>
+        </div>
+    </div>
+</div>
+
+<form method="post" enctype="multipart/form-data" asp-action="LendingBook">
+        <button type="submit" class="btn btn-outline-primary">
+            Lend a Book
+        </button>
+</form>
+
+
+

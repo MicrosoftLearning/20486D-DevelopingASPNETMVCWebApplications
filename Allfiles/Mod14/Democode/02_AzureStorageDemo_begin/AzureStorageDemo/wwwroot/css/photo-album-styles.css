@@ -1,0 +1,138 @@
+﻿body {
+    background: #ffffff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    color: rgb(85, 85, 85);
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.into {
+    color: #800000;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+a:link {
+    color: rgb(85, 85, 85);
+}
+
+a:visited {
+    color: rgb(85, 85, 85);
+}
+
+a:hover {
+    color: rgb(85, 85, 85);
+}
+
+
+.login-controls {
+    float: right;
+    width: 300px;
+    background-color: #cccccc;
+    height: 25px;
+    line-height: 2em;
+    margin: 5px;
+    padding: 10px;
+    border-width: 4px;
+    border-color: #447faa;
+    border-style: solid;
+}
+
+.clear-floats {
+    clear: both;
+}
+
+#topmenu {
+    background-color: #51a0db;
+    height: 39px;
+    margin-bottom: 50px;
+}
+
+.topmenulink {
+    float: left;
+    background-color: #cccccc;
+    width: 181px;
+    height: 35px;
+    text-align: center;
+    line-height: 2em;
+    border-width: 3px;
+    border-color: #447faa;
+    border-style: solid;
+    margin: 5px;
+}
+
+.display-label {
+    display: inline-block;
+    width: 150px;
+    margin: 15px 1px 5px 1px;
+    font-size: large;
+}
+
+.display-picture-title {
+    display: inline-block;
+    margin: 5px 1px 5px 1px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.display-field {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+}
+
+.editor-label {
+    display: inline-block;
+    width: 250px;
+    margin: 2px;
+    vertical-align: top;
+}
+
+.editor-field {
+    display: inline-block;
+    width: 600px;
+    margin: 2px;
+}
+
+.pic-upload-input {
+    width: 300px;
+}
+
+.photo-index-card {
+    background-color: #f5f5f5;
+    border-color: #447faa;
+    border-width: 2px;
+    border-style: solid;
+    padding: 15px;
+    margin: 10px 5px 5px 18px;
+    height: 450px;
+    width: 350px;
+    float: left;
+}
+
+.photo-metadata {
+    width: 800px;
+    border: 1px, solid, black;
+    padding: 15px;
+}
+
+.photo-display-img {
+    width: 285px;
+    max-height: 250px;
+}
+
+.btn {
+    margin: 0 auto;
+    display: block;
+}
+
+.add-image {
+    max-width: 1240px;
+    max-height: 1240px;
+    margin: 10px auto;
+    background-color: white;
+    box-shadow: 0 0 20px #1e004f;
+}

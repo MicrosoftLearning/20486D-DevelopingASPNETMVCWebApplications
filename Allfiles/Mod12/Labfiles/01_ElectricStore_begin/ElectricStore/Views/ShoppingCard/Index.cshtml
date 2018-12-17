@@ -1,0 +1,50 @@
+﻿@model ElectricStore.Models.SessionStateViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (Model != null)
+{
+    <h2 class="title">@Model.CustomerName's Selected Products</h2>
+
+    <div class="page-container">
+        @foreach (var item in Model.SelectedProducts)
+        {
+            <div class="item">
+                <h3>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </h3>
+                @if (item.PhotoFileName != null)
+                {
+                    <div>
+                        <img src="@Url.Action("GetImage", "Products", new { productId = item.Id })" />
+                    </div>
+                }
+                <div>
+                    <p>
+                        @Html.DisplayFor(model => item.Description)
+                    </p>
+                    <p>
+                        @Html.DisplayFor(model => item.Price)
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+    <h5 class="title">
+        <span>Thank you @Model.CustomerName</span>
+        <span>for your order, we will contact you shortly.</span>
+    </h5>
+}
+else
+{
+    <div class="title Secondary-heading">
+        <p>Sorry, we don't have any information yet</p>
+        <p>Please go to the <span class="span-col-s">Shopping List page</span></p>
+        <p>and select the wanted products.</p>
+    </div>
+}
+
+
+
+

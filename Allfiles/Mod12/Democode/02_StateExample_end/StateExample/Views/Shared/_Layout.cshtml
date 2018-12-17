@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link type="text/css" rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="navigation-bar">
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Another" asp-action="Index">Another</a></li>
+        </ul>
+    </div>
+    <h1>State Example</h1>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

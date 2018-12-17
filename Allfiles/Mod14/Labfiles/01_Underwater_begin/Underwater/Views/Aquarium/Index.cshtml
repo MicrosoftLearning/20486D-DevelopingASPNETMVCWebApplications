@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Underwater.Models.Fish>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h2 class="title">
+    Dive Into Our Fish Species
+</h2>
+
+<div class="img-container">
+    @foreach (var item in Model)
+    {
+        <div class="photo-index-card">
+            <h3 class="display-picture-title">
+                @Html.DisplayFor(modelItem => item.Name)
+            </h3>
+            @if (item.ImageName != null)
+            {
+                <div>
+                    <img class="photo-display-img" src="@Url.Action("GetImage", "Aquarium", new { Id = item.FishId })" />
+                </div>
+            }
+            <div>
+                <p class="display-label">
+                    @Html.DisplayNameFor(model => item.ScientificName)
+                </p>
+                <br />
+                <p class="display-field">
+                    @Html.DisplayFor(model => item.ScientificName)
+                </p>
+            </div>
+            <div>
+                <a asp-action="Edit" asp-route-id="@item.FishId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FishId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FishId">Delete</a>
+            </div>
+        </div>
+    }
+</div>
+

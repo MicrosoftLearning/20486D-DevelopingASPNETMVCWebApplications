@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ShirtStoreWebsite.Models.Shirt>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Shirt Store</title>
+    <link type="text/css" rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="text-center">Shirt Store</h1>
+        </header>
+        <div class="row">
+            <div class="col-sm">
+                <h3 class="text-center">Shirts in stock</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Size)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Color)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Price)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Tax)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Size)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Color)
+                            </td>
+                            <td>
+                                @item.GetFormattedTaxedPrice()
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tax)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm border-left-solid">
+                <h3 class="text-center">Add a new Shirt</h3>
+                <partial name="_NewShirtForm" model="new ShirtStoreWebsite.Models.Shirt()" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

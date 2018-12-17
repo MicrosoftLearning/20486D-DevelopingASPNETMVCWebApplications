@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ElectricStore.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="title">
+    <img src="~/images/sale-banner.jpg" />
+    <span class="span-col-s">Sale of the Day</span>
+</h2>
+
+
+<div class="page-container">
+    @foreach (var item in Model)
+    {
+        <div class="item">
+            <h3>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </h3>
+            @if (item.PhotoFileName != null)
+            {
+                <div>
+                    <img src="@Url.Action("GetImage", "Products", new { productId = item.Id })" />
+                </div>
+            }
+            <div>
+                <p>
+                    @Html.DisplayFor(model => item.Description)
+                </p>
+                <p>
+                    @Html.DisplayFor(model => item.Price)
+                </p>
+            </div>
+            <div>
+                <p>
+                    @Html.DisplayNameFor(model => item.LoadedFromDatabase)
+                </p>
+                <p>
+                    @Html.DisplayFor(model => item.LoadedFromDatabase)
+                </p>
+            </div>
+        </div>
+    }
+</div>
+
+
+

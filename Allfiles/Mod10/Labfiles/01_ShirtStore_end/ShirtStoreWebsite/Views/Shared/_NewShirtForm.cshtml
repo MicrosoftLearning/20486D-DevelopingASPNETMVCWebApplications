@@ -1,0 +1,32 @@
+﻿@model ShirtStoreWebsite.Models.Shirt
+
+<form asp-action="AddShirt">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Size" class="control-label"></label>
+        <select asp-for="Size" asp-items="Html.GetEnumSelectList<ShirtStoreWebsite.Models.ShirtSize>()" class="form-control">
+            <option selected="selected" value=""></option>
+        </select>
+        <span asp-validation-for="Size" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Color" class="control-label"></label>
+        <select asp-for="Color" asp-items="Html.GetEnumSelectList<ShirtStoreWebsite.Models.ShirtColor>()" class="form-control">
+            <option selected="selected" value=""></option>
+        </select>
+        <span asp-validation-for="Color" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Tax" class="control-label"></label>
+        <input asp-for="Tax" class="form-control" />
+        <span asp-validation-for="Tax" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add Shirt to Stock" class="btn btn-default" />
+    </div>
+</form>

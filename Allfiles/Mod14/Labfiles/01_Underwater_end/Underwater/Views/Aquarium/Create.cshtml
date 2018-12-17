@@ -1,0 +1,67 @@
+﻿@model Underwater.Models.Fish
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="view-container">
+    <h2 class="title">Add a Fish to Aquarium</h2>
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <form method="post" enctype="multipart/form-data" asp-action="Create">
+                <div class="form-group row">
+                    <label asp-for="Aquarium" class="col-sm-6 col-form-label"></label>
+                    <div class="col-sm-6">
+                        <select asp-for="AquariumId" asp-items="ViewBag.AquariumID" class="form-control" placeholder="Aquarium Name" required>
+                            <option selected="selected" value="">Select</option>
+                        </select>
+                        <span asp-validation-for="AquariumId"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Name" class="col-sm-6 col-form-label"></label>
+                    <div class="col-sm-6">
+                        <input asp-for="Name" type="text" class="form-control" placeholder="Fish Name" required>
+                        <span asp-validation-for="Name"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="ScientificName" class="col-sm-6 col-form-label"></label>
+                    <div class="col-sm-6">
+                        <input asp-for="ScientificName" type="text" class="form-control" placeholder="Scientific Name" required>
+                        <span asp-validation-for="ScientificName"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="CommonName" class="col-sm-6 col-form-label"></label>
+                    <div class="col-sm-6">
+                        <input asp-for="CommonName" type="text" class="form-control" placeholder="Common Name" required>
+                        <span asp-validation-for="CommonName"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="PhotoAvatar" class="col-sm-6 col-form-label"></label>
+                    <div class="col-sm-6">
+                        <input asp-for="PhotoAvatar" type="file" required>
+                        <span asp-validation-for="PhotoAvatar"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-outline-primary">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/wanted-ad-post.js"></script>
+}
+
+

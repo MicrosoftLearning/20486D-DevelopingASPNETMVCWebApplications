@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ElectricStore.Models.MenuCategory>
+
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("Index", "Products")">Home<span class="sr-only">(current)</span></a>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Electronics
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        @foreach (var item in Model)
+        {
+            <a class="dropdown-item" asp-action="GetByCategory" asp-controller="Products" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Name)</a>
+        }
+    </div>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("AddToShoppingList", "Products")">Add to Shopping List</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("Index", "ShoppingCard")">My Shopping Card</a>
+</li>
+<li class="nav-item">
+    <div class="display-cached-time">The content cached Since: @DateTime.Now</div>
+</li>
+

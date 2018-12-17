@@ -1,0 +1,142 @@
+﻿.main-title {
+    background-image: url("/images/healthy.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    min-height: 495px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.main-title h1 {
+    font-size: 50px;
+    text-shadow: 0px 2px 5px #aba8a8;
+    font-weight: bolder;
+    text-align: left;
+    color: #e3dfdf;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 770px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.photo-index-card {
+    background-color: #ffffff;
+    padding: 0;
+    margin: 10px 5px 15px 18px;
+    padding-bottom: 25px;
+    width: 355px;
+    border: 1px solid #d6d4d4;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 230px;
+}
+
+.image-wrapper {
+    height: 178px;
+}
+
+.photo-display-img {
+    width: 100%;
+}
+
+.display-picture-title {
+    width: 290px;
+    padding: 10px 0;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -43px;
+    background-color: #d4e2b6;
+    height: 100px;
+    font-weight: 100;
+    font-weight: bolder;
+}
+
+.btn-transparent {
+    color: aliceblue;
+    background-color: Transparent;
+    border: 3px solid #e3dfdf;
+    margin-bottom: 100px;
+}
+
+.navbar-custom {
+    background-color: #388E3C;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    padding: 5px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    padding: 5px;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    background-color: #b9836d;
+}
+
+.title {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin:15px;
+}
+
+.span-col-f {
+    color: #616161;
+}
+
+.span-col-s {
+    color: #50b467;
+}
+
+form {
+    margin: 20px;
+    background-color: #d4e2b6;
+    padding: 15px;
+    width: 600px;
+    box-shadow: 5px 10px #888888;
+    border-radius: 10%;
+}
+
+.field-validation-error{
+    color:red;
+}
+
+.photo-index-card-data {
+    background-color: #ffffff;
+    padding: 0;
+    margin: 10px 5px 15px 18px;
+    padding-bottom: 25px;
+    width: 400px;
+    border: 1px solid #d6d4d4;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 280px;
+}
+
+.display-picture-data {
+    width: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -79px;
+    background-color: #d4e2b6;
+    height: 100px;
+    font-weight: bold;
+    font-weight: bolder;
+    height: 195px;
+}
+
+.display-title {
+    color: #D84315;
+    font-weight: bold;
+}
