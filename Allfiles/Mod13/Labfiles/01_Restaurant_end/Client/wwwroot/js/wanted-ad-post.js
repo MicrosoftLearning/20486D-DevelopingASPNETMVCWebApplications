@@ -1,4 +1,4 @@
-﻿$(function() {
+﻿$(function () {
     $("#btn-post").click(function (e) {
         var formData = {};
         $('#submit-form').serializeArray().map(function (item) {
@@ -17,13 +17,12 @@
             type: "POST",
             url: "http://localhost:54517/api/job",
             data: JSON.stringify(formData),
-            contentType: "application/json;charset=utf-8",
-            success: function() {
-                location.href = 'http://localhost:54508/JobApplication/ThankYou';
-            },
-            error: function (result) {
-                alert('An error has occurred');
-            }
+            contentType: "application/json;charset=utf-8"
+        }).done(function () {
+            location.href = 'http://localhost:54508/JobApplication/ThankYou';
+        }).fail(function () {
+            alert('An error has occurred');
         });
     });
 });
+

@@ -28,7 +28,7 @@ namespace Client
                 routes.MapRoute(
                      name: "RestaurantRoute",
                     template: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "Restaurant", action = "Index" },
+                    defaults: new { controller = "RestaurantBranches", action = "Index" },
                     constraints: new { id = "[0-9]+" });
             });
         }

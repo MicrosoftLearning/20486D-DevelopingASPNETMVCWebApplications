@@ -27,6 +27,29 @@
     text-align: center;
 }
 
+.display-label {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1a9736;
+}
+
+.display-field {
+    font-weight: bold;
+    font-size: 18px;
+    color: #616161;
+}
+
+.container-info {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 10px auto;
+    flex-direction: column;
+    text-align: center;
+    background-color: #d4e2b6;
+    box-shadow: 5px 10px #888888;
+}
+
 .photo-index-card {
     background-color: #ffffff;
     padding: 0;
@@ -93,6 +116,11 @@
 
 .span-col-f {
     color: #616161;
+}
+
+.second-title {
+    color: #616161;
+    margin:5px;
 }
 
 .span-col-s {
