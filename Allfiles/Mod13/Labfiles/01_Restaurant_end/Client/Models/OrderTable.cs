@@ -10,28 +10,28 @@ namespace Client.Models
     {
         public int Id { get; set; }
 
-        [Display(Name = "First Name")]
-        [StringLength(60, MinimumLength = 3)]
+        [Display(Name = "First name")]
+        [StringLength(60, MinimumLength = 2)]
         public string FirstName { get; set; }
 
-        [Display(Name = "Last Name")]
-        [StringLength(60, MinimumLength = 3)]
+        [Display(Name = "Last name")]
+        [StringLength(60, MinimumLength = 2)]
         public string LastName { get; set; }
 
-        [Display(Name = "Phone Number"), DataType(DataType.PhoneNumber)]
+        [Display(Name = "Phone number"), DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
-        [Display(Name = "Reservation Time"), DataType(DataType.Date)]
+        [Display(Name = "Reservation time"), DataType(DataType.DateTime)]
         public DateTime ReservationTime { get; set; }
 
-        [Display(Name = "Number of Guests")]
+        [Display(Name = "Number of guests")]
         [Range(1, 20)]
         public int DinnerGuests { get; set; }
 
-        [Required(ErrorMessage = "Please select restaurant branch.")]
+        [Required(ErrorMessage = "Please select restaurant branch")]
         public int RestaurantBranchId { get; set; }
 
-        [Display(Name = "Restaurant Branch")]
+        [Display(Name = "Restaurant branch")]
         public virtual RestaurantBranch RestaurantBranch { get; set; }
     }
 }

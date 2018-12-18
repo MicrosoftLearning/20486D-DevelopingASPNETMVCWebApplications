@@ -195,7 +195,6 @@ The main tasks for this exercise are as follows:
 
 5. Run the Application.
 
-
 #### Task 1: Calling a Web API Get method
 
 1. In the **Startup** class, at the end of the **ConfigureServices** method, call the **AddHttpClient** method of the **services** parameter.
@@ -238,7 +237,7 @@ The main tasks for this exercise are as follows:
 
 11. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-12. Add the **BaseAddress** property of the **httpClient** property. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
+12. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
 13. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result**.
 
@@ -293,31 +292,28 @@ The main tasks for this exercise are as follows:
 4. Create a new field with the following information:
    - Scope: **private**
    - Type: **IHttpClientFactory**
-   - Name: **_httpClient**
+   - Name: **_httpClientFactory**
 
-5. Create a new field with the following information:
-   - Scope: **private**
-   - Type: **IEnumerable&lt;RestaurantBranch&gt;**
-   - Name: **_restaurantBranches**
-
-6.  Add a constructor with the following parameter:
+5.  Add a constructor with the following parameter:
     - Parameter: 
         - Type: **IHttpClientFactory** 
-        - Name: **httpClient**
+        - Name: **httpClientFactory**
 
-7. In the **ReservationController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
+6. In the **ReservationController** constructor, initialize the **_httpClientFactory** field with the value of the **httpClientFactory** parameter.
 
-8. Add a method with the following information:
+7. Add a method with the following information:
    - Scope: **public**
    - Modifier: **async**
    - Return type: **Task&lt;IActionResult&gt;**
    - Name: **Create**
    
-9. Above the **Create** method, add a **HttpGet** attribute.
+8. Above the **Create** method, add a **HttpGet** attribute.
 
-10. In the **Create** method, call the **PopulateRestaurantBranchesDropDownListAsync** method using the **await** keyword. 
+9. In the **Create** method, call the **PopulateRestaurantBranchesDropDownListAsync** method using the **await** keyword. 
    
-11. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+10. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+
+11. View the content of the **Create.cshtml** view, under the **Reservation** folder.
 
 12. Add a method with the following information:
     - Scope: **public**
@@ -332,23 +328,43 @@ The main tasks for this exercise are as follows:
 
 14. Above the **CreatePostAsync** action with the **ActionName** attribute. Pass **"Create"** as parameter to the **ActionName** attribute.
 
-15. In the **CreatePostAsync** method, add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
+15. In the **CreatePostAsync** method, add a variable named **httpclient** of type **HttpClient**. Initialize the **_httpClientFactory** variable with the value of **_httpClientFactory.CreateClient()**.
 
-16. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable)**.
+16. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable)**.
 
-17. Call the **EnsureSuccessStatusCode** method of the **response** variable.
+17. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
+
+18. Inside the **IF** statement code block, add a variable named **order** of type **OrderTable**, and assign the **order** field with the value of **await response.Content.ReadAsAsync&lt;OrderTable&gt;()**.
    
-18. Return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **nameof(ThankYou)** as parameter to the **RedirectToAction** method.
+19. Return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **"ThankYouAsync", new { orderId = order.Id}** as parameters to the **RedirectToAction** method.
+
+20. After the new **IF** statement, create an **ELSE** statement. 
+
+21. Inside the **ELSE** statement code block, return the **ViewResult** result using the **View** method. Pass **"Error"** as parameter to the **View** method.
 
 19. Add a **PopulateRestaurantBranchesDropDownListAsync** method with the following information:
      - Scope: **private**
      - Modifier: **async**
      - Return type: **Task**
      - Name: **PopulateRestaurantBranchesDropDownListAsync**   
-     - Parameter: 
-         - Type: **int?** 
-         - Name: **selectedBranch**
-         - Defualt value: **null**   
+
+
+
+10. In the **PopulateRestaurantBranchesDropDownListAsync** method,  add a variable named **httpClient** of type **HttpClient**.
+
+11. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
+
+12. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
+
+13. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result**.
+
+14. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
+
+15. Inside the **IF** statement code block, add a variable named **restaurantBranches** of type **IEnumerable<RestaurantBranch>**, and assign the **restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
+   
+16. Return the **ViewResult** result using the **View** method. Pass **restaurantBranches** as parameter to the **View** method.
+
+
 
 20. In the **PopulateRestaurantBranchesDropDownListAsync** method, add a variable named **request** of type **var**. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
 
@@ -400,7 +416,7 @@ The main tasks for this exercise are as follows:
 
 10. Stop Debugging.
 
->**Results**: After completing this exercise, you will be able to call a Web Api using the HttpClient class.
+>**Results**: After completing this exercise, you will be able to call a Web API using the HttpClient class.
 
 ### Exercise 3: Calling a Web API using jQuery
 
