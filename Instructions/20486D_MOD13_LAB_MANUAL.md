@@ -199,59 +199,54 @@ The main tasks for this exercise are as follows:
 
 1. In the **Startup** class, at the end of the **ConfigureServices** method, call the **AddHttpClient** method of the **services** parameter.
 
-2. Create a new folder with the following information:
-
-   - Project: **Client**
-   - Folder name: **Controllers**
-   
-3. Create a new controller with the following information:
+2. Create a new controller with the following information:
    - Controller name: **RestaurantBranchesController**
    - Template: **MVC Controller - Empty**
    - Folder: **Client/Controllers**
    
-4. In the **RestaurantBranchesController** class, add **USING** statements for the following namespaces:
+3. In the **RestaurantBranchesController** class, add **USING** statements for the following namespaces:
    - **System.Net.Http**
    - **Client.Models**
 
-5. Remove the **Index** action with its content.
+4. Remove the **Index** action with its content.
 
-6. Create a new field with the following information:
+5. Create a new field with the following information:
    - Scope: **private**
    - Type: **IHttpClientFactory**
    - Name: **_httpClientFactory**
 
-7.  Add a constructor with the following parameter:
+6.  Add a constructor with the following parameter:
     - Parameter: 
         - Type: **IHttpClientFactory** 
         - Name: **httpClientFactory**
 
-8. In the **RestaurantBranchesController** constructor, initialize the **_httpClientFactory** field with the value of the **httpClientFactory** parameter.
+7. In the **RestaurantBranchesController** constructor, initialize the **_httpClientFactory** field with the value of the **httpClientFactory** parameter.
 
-9. Add a method with the following information:
+8. Add a method with the following information:
     - Scope: **public**
     - Modifier: **async**
     - Return type: **Task&lt;IActionResult&gt;**
     - Name: **Index**
 
-10. In the **Index** method,  add a variable named **httpClient** of type **HttpClient**.
+9. In the **Index** method,  add a variable named **httpClient** of type **HttpClient**.
 
-11. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
+10. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-12. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
+11. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-13. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result**.
+12. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result**.
 
-14. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
+13. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
-15. Inside the **IF** statement code block, add a variable named **restaurantBranches** of type **IEnumerable<RestaurantBranch>**, and assign the **restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
+14. Inside the **IF** statement code block, add a variable named **restaurantBranches** of type **IEnumerable<RestaurantBranch>**, and assign the **restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
    
-16. Return the **ViewResult** result using the **View** method. Pass **restaurantBranches** as parameter to the **View** method.
+15. Return the **ViewResult** result using the **View** method. Pass **restaurantBranches** as parameter to the **View** method.
 
-17. After the new **IF** statement, create an **ELSE** statement. 
+16. After the new **IF** statement, create an **ELSE** statement. 
 
-18. Inside the **ELSE** statement code block, return the **ViewResult** result using the **View** method. Pass **"Error"** as parameter to the **View** method.
+17. Inside the **ELSE** statement code block, return the **ViewResult** result using the **View** method. Pass **"Error"** as parameter to the **View** method.
 
-19. View the content of the **Index.cshtml** view, under the **Restaurant** folder.
+18. View the content of the **Index.cshtml** view, under the **Restaurant** folder.
 
 #### Task 2: Run the Application
 
@@ -435,13 +430,8 @@ The main tasks for this exercise are as follows:
 5. Run the Application.
 
 #### Task 1: Calling a Web API Service GET method
-
-1. Create a new controller with the following information:
-   - Controller name: **WantedAdController**
-   - Template: **MVC Controller - Empty**
-   - Folder: **Client/Controllers**
-   
-2. Add a **JavaScript** **File** with the following information:
+ 
+1. Add a **JavaScript** **File** with the following information:
 
    - Folder: **Client/wwwroot/js**
    - Name: **wanted-ad-get**
@@ -455,10 +445,10 @@ The main tasks for this exercise are as follows:
       - url: **"http://localhost:54517/api/RestaurantWantedAd"**
       - contentType: **"application/json; charset=utf-8"**
       - dataType: **"json"**
-      - success: **function(data) { }**      
-      - error: **function() {  alert('An error has occurred'); }**
+      - done: **function(data) { }**      
+      - fail: **function() {  alert('An error has occurred'); }**
 
-5. Inside the **anonymous function** code block assigned to the **success** property, call the **$.each** method. Pass **data** and **anonymous function** parameters to the **$.each** method.
+5. Inside the **anonymous function** code block assigned to the **done** property, call the **$.each** method. Pass **data** and **anonymous function** parameters to the **$.each** method.
 
 6. Change the signature of the **anonymous function** passed to the **$.each** method to accept **index** and **item** parameters.
 
