@@ -234,7 +234,7 @@ The main tasks for this exercise are as follows:
 
 11. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-12. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result**.
+12. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await httpClient.GetAsync("api/RestaurantBranches")**.
 
 13. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
@@ -348,7 +348,7 @@ The main tasks for this exercise are as follows:
 
 25. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-26. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result**.
+26. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await httpClient.GetAsync("api/RestaurantBranches")**.
 
 27. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
@@ -370,7 +370,7 @@ The main tasks for this exercise are as follows:
 
 3. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-4. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/Reservation/" + orderId).Result**.
+4. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await httpClient.GetAsync("api/Reservation/" + orderId)**.
 
 5. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
@@ -553,7 +553,7 @@ The main tasks for this exercise are as follows:
 
 14. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-15. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantWantedAd").Result**.
+15. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await httpClient.GetAsync("api/RestaurantWantedAd")**.
 
 16. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 

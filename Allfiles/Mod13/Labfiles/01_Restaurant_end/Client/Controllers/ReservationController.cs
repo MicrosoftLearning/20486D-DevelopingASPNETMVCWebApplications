@@ -45,7 +45,7 @@ namespace Client.Controllers
         {
             HttpClient httpClient = _httpClientFactory.CreateClient();
             httpClient.BaseAddress = new Uri("http://localhost:54517");
-            HttpResponseMessage response = httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result;
+            HttpResponseMessage response = await httpClient.GetAsync("api/RestaurantBranches");
             if (response.IsSuccessStatusCode)
             {
                 IEnumerable<RestaurantBranch> restaurantBranches = await response.Content.ReadAsAsync<IEnumerable<RestaurantBranch>>();
@@ -57,7 +57,7 @@ namespace Client.Controllers
         {
             HttpClient httpClient = _httpClientFactory.CreateClient();
             httpClient.BaseAddress = new Uri("http://localhost:54517");
-            HttpResponseMessage response = httpClient.GetAsync("http://localhost:54517/api/Reservation/" + orderId).Result;
+            HttpResponseMessage response = await httpClient.GetAsync("api/Reservation/" + orderId);
             if (response.IsSuccessStatusCode)
             {
                 OrderTable orderResult = await response.Content.ReadAsAsync<OrderTable>();

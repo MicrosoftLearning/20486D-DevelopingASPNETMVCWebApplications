@@ -29,7 +29,7 @@ namespace Client.Controllers
         {
             HttpClient httpClient = _httpClientFactory.CreateClient();
             httpClient.BaseAddress = new Uri("http://localhost:54517");
-            HttpResponseMessage response = httpClient.GetAsync("http://localhost:54517/api/RestaurantWantedAd").Result;
+            HttpResponseMessage response = await httpClient.GetAsync("api/RestaurantWantedAd");
             if (response.IsSuccessStatusCode)
             {
                 IEnumerable<EmployeeRequirements> employeeRequirements = await response.Content.ReadAsAsync<IEnumerable<EmployeeRequirements>>();
