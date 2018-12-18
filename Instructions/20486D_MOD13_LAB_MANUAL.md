@@ -152,7 +152,7 @@ The main tasks for this exercise are as follows:
 
 3. In **Microsoft Edge**, navigate to **http://localhost:[port]/api/Reservation/1**.
 
-    >**Note:** The browser displays a restaurant with id=1 in **JSON** format.
+    >**Note:** The browser displays an order with id=1 in **JSON** format.
 
 4. Close **Microsoft Edge**.
 
@@ -191,7 +191,7 @@ The main tasks for this exercise are as follows:
 
 3. Calling a Web API POST method.
 
-4.
+4. Calling a Web API GET method that gets a parameter.
 
 5. Run the Application.
 
@@ -219,61 +219,64 @@ The main tasks for this exercise are as follows:
 6. Create a new field with the following information:
    - Scope: **private**
    - Type: **IHttpClientFactory**
-   - Name: **_httpClient**
+   - Name: **_httpClientFactory**
 
-7. Create a new field with the following information:
-   - Scope: **private**
-   - Type: **IEnumerable&lt;RestaurantBranch&gt;**
-   - Name: **_restaurantBranches**
-
-8.  Add a constructor with the following parameter:
+7.  Add a constructor with the following parameter:
     - Parameter: 
         - Type: **IHttpClientFactory** 
-        - Name: **httpClient**
+        - Name: **httpClientFactory**
 
-9. In the **RestaurantBranchesController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
+8. In the **RestaurantBranchesController** constructor, initialize the **_httpClientFactory** field with the value of the **httpClientFactory** parameter.
 
-10. Add a method with the following information:
+9. Add a method with the following information:
     - Scope: **public**
     - Modifier: **async**
     - Return type: **Task&lt;IActionResult&gt;**
     - Name: **Index**
 
-11. In the **Index** method,  add a variable named **request** of type **var**. 
+10. In the **Index** method,  add a variable named **httpClient** of type **HttpClient**.
 
-12. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
+11. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-13. Call the **Add** method of the **request.Header** property. Pass **"Accept"** and **"application/json"** parameters to the **Add** method .
+12. Add the **BaseAddress** property of the **httpClient** property. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-14. Add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
+13. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result**.
 
-15. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
+14. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
-16. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
-
-17. Inside the **IF** statement code block, assign the **_restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
+15. Inside the **IF** statement code block, add a variable named **restaurantBranches** of type **IEnumerable<RestaurantBranch>**, and assign the **restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
    
-18. Return the **ViewResult** result using the **View** method. Pass **_restaurantBranches** as parameter to the **View** method.
+16. Return the **ViewResult** result using the **View** method. Pass **restaurantBranches** as parameter to the **View** method.
+
+17. After the new **IF** statement, create an **ELSE** statement. 
+
+18. Inside the **ELSE** statement code block, return the **ViewResult** result using the **View** method. Pass **"Error"** as parameter to the **View** method.
+
+19. View the content of the **Index.cshtml** view, under the **Restaurant** folder.
 
 #### Task 2: Run the Application
 
-1. View the content of the **Index.cshtml** view.
-    
+1. In the **launchSettings.json** file of the client project, in the **IISExpress** profile change the value of the following property: 
+    - Name: **launchBrowser**
+    - Value: **False**
+
 2. Save all the changes.
 
-3. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+3. In **Solution Explorer**, right-click **Server**, and then click **Set as StartUp Project**.
 
 4. Start the application without debugging.
 
-5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+5. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
 
-    >**Note:** In case the first window displays 500 internal server error, you should refresh the page, and then the browser displays the **Index.cshtml** file content of the **RestaurantController**. 
+6. Start the application without debugging.
+
+    >**Note:** The browser displays the restaurant branches. 
     
-6. Close all **Microsoft Edge** windows.
+7. Close **Microsoft Edge**.
 
-7. Stop Debugging.
+8. Stop Debugging.
 
-#### Task 3: Calling a Web API Service POST method
+#### Task 3: Calling a Web API POST method
 
 1. Create a new controller with the following information:
    - Controller name: **ReservationController**
@@ -397,23 +400,25 @@ The main tasks for this exercise are as follows:
 
 10. Stop Debugging.
 
->**Results**: After completing this exercise, you will be able to call Web API Service Get, and Post methods using HTTPClient.
+>**Results**: After completing this exercise, you will be able to call a Web Api using the HttpClient class.
 
 ### Exercise 3: Calling a Web API using jQuery
 
 #### Scenario
 
-In this exercise, you will first create a javaScript file. You will then add to the new javaScript file a jQuery and ajax script. After that you will call Web API Service GET method. Finally, you will add another javaScript file with javaScript file a jQuery and ajax script and call Web API Service POST method and run the application.
+In this exercise, you will call a Web API using jQuery. You will first create MVC controller and use jQuery to call a **Get** action in the Web API. After that you will create another MVC controller and use jQuery to call a **Post** action in the Web API. 
 
 The main tasks for this exercise are as follows:
 
-1. Calling a Web API Service GET method.
+1. Calling a Web API GET method using jQuery.
 
 2. Run the Application.
 
-3. Calling a Web API Service POST method.
+3. Calling a Web API GET method using HttpClient.
 
-4. Run the Application.
+4. Calling a Web API POST method using jQuery.
+
+5. Run the Application.
 
 #### Task 1: Calling a Web API Service GET method
 
@@ -648,7 +653,7 @@ The main tasks for this exercise are as follows:
 
 11. Close **Microsoft Visual Studio**.
 
->**Results**: After completing this exercise, you should have created restaurant application, in which users can view the restaurant branches, order a table and also apply for a job. 
+>**Results**: After completing this exercise, you have enabled users to see the wanted ads to find a new job, and enabled them to apply for a job. 
 
 ©2018 Microsoft Corporation. All rights reserved.
 
