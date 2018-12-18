@@ -185,18 +185,18 @@ To do this, you will first register the IHttpClientFactory service in the Startu
 
 The main tasks for this exercise are as follows:
 
-1. Calling a Web API GET method.
+1. Calling a Web API Get method.
 
 2. Run the Application.
 
-3. Calling a Web API POST method.
+3. Calling a Web API Post method.
 
-4. Calling a Web API GET method that gets a parameter.
+4. Calling a Web API Get method that gets a parameter.
 
 5. Run the Application.
 
 
-#### Task 1: Calling a Web API GET method
+#### Task 1: Calling a Web API Get method
 
 1. In the **Startup** class, at the end of the **ConfigureServices** method, call the **AddHttpClient** method of the **services** parameter.
 
@@ -276,7 +276,7 @@ The main tasks for this exercise are as follows:
 
 8. Stop Debugging.
 
-#### Task 3: Calling a Web API POST method
+#### Task 3: Calling a Web API Post method
 
 1. Create a new controller with the following information:
    - Controller name: **ReservationController**
