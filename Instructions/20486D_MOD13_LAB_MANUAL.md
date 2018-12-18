@@ -273,8 +273,6 @@ The main tasks for this exercise are as follows:
     
 7. Close **Microsoft Edge**.
 
-8. Stop Debugging.
-
 #### Task 3: Calling a Web API Post method
 
 1. Create a new controller with the following information:
@@ -328,7 +326,7 @@ The main tasks for this exercise are as follows:
 
 14. Above the **CreatePostAsync** action with the **ActionName** attribute. Pass **"Create"** as parameter to the **ActionName** attribute.
 
-15. In the **CreatePostAsync** method, add a variable named **httpclient** of type **HttpClient**. Initialize the **_httpClientFactory** variable with the value of **_httpClientFactory.CreateClient()**.
+15. In the **CreatePostAsync** method, add a variable named **httpclient** of type **HttpClient**. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
 16. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable)**.
 
@@ -342,62 +340,64 @@ The main tasks for this exercise are as follows:
 
 21. Inside the **ELSE** statement code block, return the **ViewResult** result using the **View** method. Pass **"Error"** as parameter to the **View** method.
 
-19. Add a **PopulateRestaurantBranchesDropDownListAsync** method with the following information:
+22. Add a **PopulateRestaurantBranchesDropDownListAsync** method with the following information:
      - Scope: **private**
      - Modifier: **async**
      - Return type: **Task**
      - Name: **PopulateRestaurantBranchesDropDownListAsync**   
 
 
+23. In the **PopulateRestaurantBranchesDropDownListAsync** method,  add a variable named **httpClient** of type **HttpClient**.
 
-10. In the **PopulateRestaurantBranchesDropDownListAsync** method,  add a variable named **httpClient** of type **HttpClient**.
+24. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-11. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
+25. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-12. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
+26. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result**.
 
-13. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result**.
+27. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
-14. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
-
-15. Inside the **IF** statement code block, add a variable named **restaurantBranches** of type **IEnumerable<RestaurantBranch>**, and assign the **restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
+28. Inside the **IF** statement code block, add a variable named **restaurantBranches** of type **IEnumerable<RestaurantBranch>**, and assign the **restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
    
-16. Return the **ViewResult** result using the **View** method. Pass **restaurantBranches** as parameter to the **View** method.
+29. Assign the **RestaurantBranches** property of the **ViewBag** field with the value of **new SelectList(_restaurantBranches, "Id", "City")**.
 
+#### Task 4: Calling a Web Api Get method with parameter
 
-
-20. In the **PopulateRestaurantBranchesDropDownListAsync** method, add a variable named **request** of type **var**. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
-
-21. Call the **Add** method of the **request.Headers** property. Pass **"Accept"** and **"application/json"** parameters to the **Add** method.
-
-22. Add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
-
-23. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
-
-24. Create an **IF** statement that checks that the value of the **response.IsSuccessStatusCode** varible is **true**. 
-
-25. Inside the **IF** statement code block, assign the **_restaurantBranches** property with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
-
-26. Assign the **RestaurantBranchId** property of the **ViewBag** field with the value of **new SelectList(_restaurantBranches, "Id", "City", selectedBranch)**.
-
-27. Add a method with the following information:
+1. Add a method with the following information:
    - Scope: **public**
    - Return type: **IActionResult**
-   - Name: **ThankYou**
+   - Name: **ThankYouAsync**
+   - Parameter: 
+         - Type: **int** 
+         - Name: **orderId**
    
-28. Return the **IActionResult** result using the **View** method. 
+2. In the **ThankYouAsync** method, add a variable named **httpclient** of type **HttpClient**. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-#### Task 4: Run the Application
+3. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-1. View the content of the **Create.cshtml** view.
-    
-2. Save all the changes.
+4. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/Reservation/" + orderId).Result**.
 
-3. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+5. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
-4. Start the application without debugging.
+6. Inside the **IF** statement code block, add a variable named **orderResult** of type **OrderTable**, and assign the **orderResult** field with the value of **await response.Content.ReadAsAsync&lt;OrderTable&gt;()**.
 
-5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+7. Return the **ViewResult** result using the **View** method. Pass **orderResult** as parameter to the **View** method.
+   
+8. Inside the **ELSE** statement code block, return the **ViewResult** result using the **View** method. Pass **"Error"** as parameter to the **View** method.
+
+9. View the content of the **Create.cshtml** view, under the **Reservation** folder.
+
+#### Task 5: Run the Application
+
+1. Save all the changes.
+
+2. In **Solution Explorer**, right-click **Server**, and then click **Set as StartUp Project**.
+
+3. Start the application without debugging.
+
+4. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+
+5. Start the application without debugging.
     
 6. In the first **Microsoft Edge** window, in the menu bar, click **Reservation**.
 
@@ -412,9 +412,7 @@ The main tasks for this exercise are as follows:
     
 8. Click **Make a Reservation**.
 
-9. Close all **Microsoft Edge** windows.
-
-10. Stop Debugging.
+9. Close **Microsoft Edge**.
 
 >**Results**: After completing this exercise, you will be able to call a Web API using the HttpClient class.
 
@@ -513,7 +511,6 @@ The main tasks for this exercise are as follows:
 
 6. Close all **Microsoft Edge** windows.
 
-7. Stop Debugging.
 
 #### Task 3: Calling a Web API Service POST method
 
@@ -664,8 +661,6 @@ The main tasks for this exercise are as follows:
 8. Click **Apply For a Job**.
 
 9. Close all **Microsoft Edge** windows.
-
-10. Stop Debugging.
 
 11. Close **Microsoft Visual Studio**.
 
