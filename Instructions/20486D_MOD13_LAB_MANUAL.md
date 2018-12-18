@@ -168,11 +168,11 @@ The main tasks for this exercise are as follows:
         
 2. Above the **Create** method, add a **HttpPost** attribute.
 
-5. In the **Create** method, call the **Add** method of the **_context** field. Pass the **orderTable** property as parameter to the **Add** method.
+3. In the **Create** method, call the **Add** method of the **_context** field. Pass the **orderTable** property as parameter to the **Add** method.
 
-6. Call the **SaveChanges** method of the **_context** field. 
+4. Call the **SaveChanges** method of the **_context** field. 
 
-7. Return the **ActionResult&lt;OrderTable&gt** result using the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and **orderTable** as parameters to the **CreatedAtAction** method.
+5. Return the **ActionResult&lt;OrderTable&gt** result using the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and **orderTable** as parameters to the **CreatedAtAction** method.
 
 >**Results**: After completing this exercise, you will be able to add controllers and actions to a Web API application, and call them using Microsoft Edge.
 
@@ -461,11 +461,11 @@ The main tasks for this exercise are as follows:
                  <img class="photo-display-img" src="~/images/white-plate.jpg" />
            </div>
            <div class="display-picture-data">
-                 <h6 class="display-title">Job Title:</h6>
+                 <h6 class="display-title">Job title:</h6>
                  <h6>${item.jobTitle}</h6>
                  <h6 class="display-title">Hourly payment:</h6>
                  <h6>$${item.pricePerHour}</h6>
-                 <h6 class="display-title">Job Description:</h6>
+                 <h6 class="display-title">Job description:</h6>
                  <h6>${item.jobDescription}</h6>
            </div>
      </div>`
@@ -539,35 +539,36 @@ The main tasks for this exercise are as follows:
    
 9. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
 
-10. Add a **PopulateEmployeeRequirementsDropDownListAsync** method with the following information:
+10. View the content of the **ThankYou.cshtml** view, under the **JobApplication** folder.
+
+11. Add a **PopulateEmployeeRequirementsDropDownListAsync** method with the following information:
      - Scope: **private**
      - Modifier: **async**
      - Return type: **Task**
      - Name: **PopulateEmployeeRequirementsDropDownListAsync**   
 
+12. In the **PopulateEmployeeRequirementsDropDownListAsync** method,  add a variable named **httpClient** of type **HttpClient**.
 
-11. In the **PopulateEmployeeRequirementsDropDownListAsync** method,  add a variable named **httpClient** of type **HttpClient**.
+13. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-12. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
+14. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-13. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
+15. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantWantedAd").Result**.
 
-14. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **httpClient.GetAsync("http://localhost:54517/api/RestaurantWantedAd").Result**.
+16. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
-15. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
-
-16. Inside the **IF** statement code block, add a variable named **employeeRequirements** of type **IEnumerable<EmployeeRequirements>**, and assign the **employeeRequirements** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;EmployeeRequirements&gt;&gt;()**.
+17. Inside the **IF** statement code block, add a variable named **employeeRequirements** of type **IEnumerable<EmployeeRequirements>**, and assign the **employeeRequirements** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;EmployeeRequirements&gt;&gt;()**.
    
-17. Assign the **EmployeeRequirements** property of the **ViewBag** field with the value of **new SelectList(employeeRequirements, "Id", "JobTitle")**.
+18. Assign the **EmployeeRequirements** property of the **ViewBag** field with the value of **new SelectList(employeeRequirements, "Id", "JobTitle")**.
 
-18. Add a method with the following information:
+19. Add a method with the following information:
    - Scope: **public**
    - Return type: **IActionResult**
    - Name: **ThankYou**
    
-19. Return the **IActionResult** result using the **View** method. 
+20. Return the **IActionResult** result using the **View** method. 
 
-20. View the content of the **Create.cshtml** view, under the **JobApplication** folder.
+21. View the content of the **ThankYou.cshtml** view, under the **JobApplication** folder.
 
 #### Task 4: Calling a Web API Post method using jQuery
 
@@ -620,37 +621,45 @@ The main tasks for this exercise are as follows:
       - contentType: **"application/json; charset=utf-8"**
       - data: **JSON.stringify(formData)**
       - dataType: **"json"**
-      - success: **function() { location.href = 'http://localhost:54508/JobApplication/ThankYou' }**      
-      - error: **function(result) { alert('An error has occurred') }**
-      
-#### Task 4: Run the Application
+      - done: **function() { location.href = 'http://localhost:54508/JobApplication/ThankYou' }**      
+      - fail: **function(result) { alert('An error has occurred') }**
 
-1. View the content of the **Create.cshtml** view.
-    
-2. Save all the changes.
+21. Inside the **JobApplication/Create.cshtml** view, after the last **DIV** element with the **"row justify-content-center"** class, add a **Scripts** section code block.
 
-3. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+22. In the **Scripts** section code block, add a **SCRIPT** element with the following information:
 
-4. Start the application without debugging.
+    - Src: **~/node_modules/jquery-validation/dist/jquery.validate.min.js**
+    - Src: **~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js**
+    - Src: **~/js/wanted-ad-get.js**
 
-5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+#### Task 5: Run the Application
+
+1. Save all the changes.
+
+2. In **Solution Explorer**, right-click **Server**, and then click **Set as StartUp Project**.
+
+3. Start the application without debugging.
+
+4. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+
+5. Start the application without debugging.
     
 6. In the first **Microsoft Edge** window, in the menu bar, click **Submit Job Application**.
 
 7. On **Submit Job Application**, submit a form with the following credentials:
    
-    - Job Title: **_&lt;A job title of your choice&gt;_**
-    - First Name: **_&lt;A first name of your choice&gt;_**
-    - Last Name: **_&lt;A last name of your choice&gt;_**
-    - Phone Number: **_&lt;A phone of your choice&gt;_** 
+    - Job title: **_&lt;A job title of your choice&gt;_**
+    - First name: **_&lt;A first name of your choice&gt;_**
+    - Last name: **_&lt;A last name of your choice&gt;_**
+    - Phone number: **_&lt;A phone of your choice&gt;_** 
     - Email: **_&lt;An email time of your choice&gt;_** 
     - Address: **_&lt;An address of your choice&gt;_** 
     
 8. Click **Apply For a Job**.
 
-9. Close all **Microsoft Edge** windows.
+9. Close **Microsoft Edge** windows.
 
-11. Close **Microsoft Visual Studio**.
+10. Close **Microsoft Visual Studio**.
 
 >**Results**: After completing this exercise, you have enabled users to see the wanted ads to find a new job, and enabled them to apply for a job. 
 

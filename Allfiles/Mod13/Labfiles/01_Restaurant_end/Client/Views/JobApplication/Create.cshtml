@@ -12,7 +12,6 @@
                 <label asp-for="EmployeeRequirements" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
                     <select asp-for="EmployeeRequirementsId" asp-items="ViewBag.EmployeeRequirements" class="form-control" placeholder="Job title" required>
-                        <option selected="selected" value="">Select</option>
                     </select>
                     <span asp-validation-for="EmployeeRequirementsId"></span>
                 </div>
