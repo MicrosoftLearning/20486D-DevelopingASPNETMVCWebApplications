@@ -419,17 +419,17 @@ In this exercise, you will call a Web API using jQuery. You will first create MV
 
 The main tasks for this exercise are as follows:
 
-1. Calling a Web API GET method using jQuery.
+1. Calling a Web API Get method using jQuery.
 
 2. Run the Application.
 
-3. Calling a Web API GET method using HttpClient.
+3. Calling a Web API Get method using HttpClient.
 
-4. Calling a Web API POST method using jQuery.
+4. Calling a Web API Post method using jQuery.
 
 5. Run the Application.
 
-#### Task 1: Calling a Web API Service GET method
+#### Task 1: Calling a Web API Get method using jQuery
  
 1. Add a **JavaScript** **File** with the following information:
 
@@ -502,7 +502,7 @@ The main tasks for this exercise are as follows:
 6. Close all **Microsoft Edge** windows.
 
 
-#### Task 3: Calling a Web API Service POST method
+#### Task 3: Calling a Web API Get method using HttpClient
 
 1. Create a new controller with the following information:
    - Controller name: **JobApplicationController**
