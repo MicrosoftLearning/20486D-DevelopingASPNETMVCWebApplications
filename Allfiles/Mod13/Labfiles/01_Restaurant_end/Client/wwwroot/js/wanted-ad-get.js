@@ -4,7 +4,7 @@
         url: "http://localhost:54517/api/RestaurantWantedAd",
         contentType: "application/json; charset=utf-8",
         dataType: "json"
-    }).done(function () {
+    }).done(function (data) {
         $.each(data, function (index, item) {
             var html = `<div class="photo-index-card-data">
                                   <div class="image-wrapper">
