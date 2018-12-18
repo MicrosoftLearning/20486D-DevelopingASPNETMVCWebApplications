@@ -4,10 +4,9 @@
 
 #### Scenario
 
-You have been asked to create a web-based restaurant application for your organization's customers, you want to create a page showing all the Restaurant branches, enable to order a reservation for the selected restaurant branch, and add wanted ad page, also submit to a selected job.
+You have been asked to create a web-based restaurant application for your organization's customers. To do this you need to create a page showing all the restaurant branches, enable to order a reservation for a selected restaurant branch, add wanted ad page, and allow submitting to a selected job.
 
-You will create a server-side Web API application and a client-side MVC Core application calling Web API actions using HttpClient and jQuery. 
-
+You will create a server-side Web API application and a client-side ASP.NET Core MVC application. In the client-side application you will call the Web API actions using HttpClient and jQuery.
 
 #### Objectives
 
@@ -181,17 +180,20 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will first configure HttpClient in the Startup.cs file. You will then create MVC controller and write httpClient get method. After that you will call Web API Service GET method. Finally, you will write httpClient post method and call Web API Service POST method and then run the application. 
+In this exercise, you will call the Web API you developed in the previous exercise using the HttpClient class. 
+To do this, you will first register the IHttpClientFactory service in the Startup.cs file. You will then create MVC controller and use the HttpClient class to call a Get action in the Web API. After that you will create another MVC controller and use the HttpClient class to call a Post action in the Web API. Finally, you will add an action the MVC controller, in which you will use the HttpClient class to call a Get action in the Web API that gets a parameter.
 
 The main tasks for this exercise are as follows:
 
-1. Calling a Web API Service GET method.
+1. Calling a Web API GET method.
 
 2. Run the Application.
 
-3. Calling a Web API Service POST method.
+3. Calling a Web API POST method.
 
-4. Run the Application.
+4.
+
+5. Run the Application.
 
 
 #### Task 1: Calling a Web API GET method
