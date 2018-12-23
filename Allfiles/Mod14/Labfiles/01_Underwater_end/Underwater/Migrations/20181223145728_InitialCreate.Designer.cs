@@ -10,14 +10,14 @@ using Underwater.Data;
 namespace Underwater.Migrations
 {
     [DbContext(typeof(UnderwaterContext))]
-    [Migration("20180902130845_InitialCreate")]
+    [Migration("20181223145728_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -52,12 +52,15 @@ namespace Underwater.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AquariumId")
-                        .IsRequired();
+                    b.Property<int>("AquariumId");
+
+                    b.Property<string>("CommonName");
 
                     b.Property<string>("ImageMimeType");
 
                     b.Property<string>("ImageName");
+
+                    b.Property<string>("ImageURL");
 
                     b.Property<string>("Name");
 
