@@ -11,8 +11,7 @@
             <div class="form-group row">
                 <label asp-for="EmployeeRequirements" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
-                    <select asp-for="EmployeeRequirementsId" asp-items="ViewBag.EmployeeRequirementsId" class="form-control" placeholder="Job title" required>
-                        <option selected="selected" value="">Select</option>
+                    <select asp-for="EmployeeRequirementsId" asp-items="ViewBag.EmployeeRequirements" class="form-control" placeholder="Job title" required>
                     </select>
                     <span asp-validation-for="EmployeeRequirementsId"></span>
                 </div>
@@ -48,7 +47,7 @@
             <div class="form-group row">
                 <label asp-for="Address" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-6">
-                    <input asp-for="Address" type="text" class="form-control" placeholder="Address">
+                    <input asp-for="Address" type="text" class="form-control" placeholder="Address" required>
                     <span asp-validation-for="Address"></span>
                 </div>
             </div>

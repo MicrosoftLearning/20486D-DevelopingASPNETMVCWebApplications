@@ -10,11 +10,11 @@ namespace Server.Models
     {
         public int Id { get; set; }
 
-        [Display(Name = "First Name")]
+        [Display(Name = "First name")]
         [Required(ErrorMessage = "Please enter your first name")]
         public string FirstName { get; set; }
 
-        [Display(Name = "Last Name")]
+        [Display(Name = "Last name")]
         [Required(ErrorMessage = "Please enter your last name")]
         public string LastName { get; set; }
 
@@ -22,7 +22,7 @@ namespace Server.Models
         [Required(ErrorMessage = "Please enter your email address")]
         public string Email { get; set; }
 
-        [Display(Name = "Phone Number"), DataType(DataType.PhoneNumber)]
+        [Display(Name = "Phone number"), DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Please enter your phone number")]
         public int PhoneNumber { get; set; }
 
@@ -32,7 +32,7 @@ namespace Server.Models
         [Required(ErrorMessage = "Please select a job title.")]
         public int EmployeeRequirementsId { get; set; }
 
-        [Display(Name = "Job Title")]
+        [Display(Name = "Job title")]
         public virtual EmployeeRequirements EmployeeRequirements { get; set; }
     }
 }

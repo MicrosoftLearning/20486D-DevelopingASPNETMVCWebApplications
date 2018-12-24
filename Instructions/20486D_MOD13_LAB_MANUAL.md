@@ -4,10 +4,9 @@
 
 #### Scenario
 
-You have been asked to create a web-based restaurant application for your organization's customers, you want to create a page showing all the Restaurant branches, enable to order a reservation for the selected restaurant branch, and add wanted ad page, also submit to a selected job.
+You have been asked to create a web-based restaurant application for your organization's customers. To do this you need to create a page showing all the restaurant branches, enable to order a reservation for a selected restaurant branch, add wanted ad page, and allow submitting to a selected job.
 
-You will create a server-side Web API application and a client-side MVC Core application calling Web API actions using HttpClient and jQuery. 
-
+You will create a server-side Web API application and a client-side ASP.NET Core MVC application. In the client-side application you will call the Web API actions using HttpClient and jQuery.
 
 #### Objectives
 
@@ -153,7 +152,7 @@ The main tasks for this exercise are as follows:
 
 3. In **Microsoft Edge**, navigate to **http://localhost:[port]/api/Reservation/1**.
 
-    >**Note:** The browser displays a restaurant with id=1 in **JSON** format.
+    >**Note:** The browser displays an order with id=1 in **JSON** format.
 
 4. Close **Microsoft Edge**.
 
@@ -169,109 +168,107 @@ The main tasks for this exercise are as follows:
         
 2. Above the **Create** method, add a **HttpPost** attribute.
 
-5. In the **Create** method, call the **Add** method of the **_context** field. Pass the **orderTable** property as parameter to the **Add** method.
+3. In the **Create** method, call the **Add** method of the **_context** field. Pass the **orderTable** property as parameter to the **Add** method.
 
-6. Call the **SaveChanges** method of the **_context** field. 
+4. Call the **SaveChanges** method of the **_context** field. 
 
-7. Return the **ActionResult&lt;OrderTable&gt** result using the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and **orderTable** as parameters to the **CreatedAtAction** method.
+5. Return the **ActionResult&lt;OrderTable&gt** result using the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and **orderTable** as parameters to the **CreatedAtAction** method.
 
->**Results**: After completing this exercise, you will be able to add controllers and actions to a Web Api application, and call them using Microsoft Edge.
+>**Results**: After completing this exercise, you will be able to add controllers and actions to a Web API application, and call them using Microsoft Edge.
 
 ### Exercise 2: Calling a Web API using Server-Side Code
 
 #### Scenario
 
-In this exercise, you will first configure HttpClient in the Startup.cs file. You will then create MVC controller and write httpClient get method. After that you will call Web API Service GET method. Finally, you will write httpClient post method and call Web API Service POST method and then run the application. 
+In this exercise, you will call the Web API you developed in the previous exercise using the HttpClient class. 
+To do this, you will first register the IHttpClientFactory service in the Startup.cs file. You will then create MVC controller and use the HttpClient class to call a Get action in the Web API. After that you will create another MVC controller and use the HttpClient class to call a Post action in the Web API. Finally, you will add an action the MVC controller, in which you will use the HttpClient class to call a Get action in the Web API that gets a parameter.
 
 The main tasks for this exercise are as follows:
 
-1. Calling a Web API Service GET method.
+1. Calling a Web API Get method.
 
 2. Run the Application.
 
-3. Calling a Web API Service POST method.
+3. Calling a Web API Post method.
 
-4. Run the Application.
+4. Calling a Web API Get method that gets a parameter.
 
+5. Run the Application.
 
-#### Task 1: Calling a Web API GET method
+#### Task 1: Calling a Web API Get method
 
 1. In the **Startup** class, at the end of the **ConfigureServices** method, call the **AddHttpClient** method of the **services** parameter.
 
-2. Create a new folder with the following information:
-
-   - Project: **Client**
-   - Folder name: **Controllers**
-   
-3. Create a new controller with the following information:
+2. Create a new controller with the following information:
    - Controller name: **RestaurantBranchesController**
    - Template: **MVC Controller - Empty**
    - Folder: **Client/Controllers**
    
-4. In the **RestaurantBranchesController** class, add **USING** statements for the following namespaces:
+3. In the **RestaurantBranchesController** class, add **USING** statements for the following namespaces:
    - **System.Net.Http**
    - **Client.Models**
 
-5. Remove the **Index** action with its content.
+4. Remove the **Index** action with its content.
 
-6. Create a new field with the following information:
+5. Create a new field with the following information:
    - Scope: **private**
    - Type: **IHttpClientFactory**
-   - Name: **_httpClient**
+   - Name: **_httpClientFactory**
 
-7. Create a new field with the following information:
-   - Scope: **private**
-   - Type: **IEnumerable&lt;RestaurantBranch&gt;**
-   - Name: **_restaurantBranches**
-
-8.  Add a constructor with the following parameter:
+6.  Add a constructor with the following parameter:
     - Parameter: 
         - Type: **IHttpClientFactory** 
-        - Name: **httpClient**
+        - Name: **httpClientFactory**
 
-9. In the **RestaurantBranchesController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
+7. In the **RestaurantBranchesController** constructor, initialize the **_httpClientFactory** field with the value of the **httpClientFactory** parameter.
 
-10. Add a method with the following information:
+8. Add a method with the following information:
     - Scope: **public**
     - Modifier: **async**
     - Return type: **Task&lt;IActionResult&gt;**
     - Name: **Index**
 
-11. In the **Index** method,  add a variable named **request** of type **var**. 
+9. In the **Index** method,  add a variable named **httpClient** of type **HttpClient**.
 
-12. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
+10. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-13. Call the **Add** method of the **request.Header** property. Pass **"Accept"** and **"application/json"** parameters to the **Add** method .
+11. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-14. Add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
+12. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await httpClient.GetAsync("api/RestaurantBranches")**.
 
-15. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
+13. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
-16. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
-
-17. Inside the **IF** statement code block, assign the **_restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
+14. Inside the **IF** statement code block, add a variable named **restaurantBranches** of type **IEnumerable<RestaurantBranch>**, and assign the **restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
    
-18. Return the **ViewResult** result using the **View** method. Pass **_restaurantBranches** as parameter to the **View** method.
+15. Return the **ViewResult** result using the **View** method. Pass **restaurantBranches** as parameter to the **View** method.
+
+16. After the new **IF** statement, create an **ELSE** statement. 
+
+17. Inside the **ELSE** statement code block, return the **ViewResult** result using the **View** method. Pass **"Error"** as parameter to the **View** method.
+
+18. View the content of the **Index.cshtml** view, under the **Restaurant** folder.
 
 #### Task 2: Run the Application
 
-1. View the content of the **Index.cshtml** view.
-    
+1. In the **launchSettings.json** file of the client project, in the **IISExpress** profile change the value of the following property: 
+    - Name: **launchBrowser**
+    - Value: **False**
+
 2. Save all the changes.
 
-3. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+3. In **Solution Explorer**, right-click **Server**, and then click **Set as StartUp Project**.
 
 4. Start the application without debugging.
 
-5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+5. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
 
-    >**Note:** In case the first window displays 500 internal server error, you should refresh the page, and then the browser displays the **Index.cshtml** file content of the **RestaurantController**. 
+6. Start the application without debugging.
+
+    >**Note:** The browser displays the restaurant branches. 
     
-6. Close all **Microsoft Edge** windows.
+7. Close **Microsoft Edge**.
 
-7. Stop Debugging.
-
-#### Task 3: Calling a Web API Service POST method
+#### Task 3: Calling a Web API Post method
 
 1. Create a new controller with the following information:
    - Controller name: **ReservationController**
@@ -288,31 +285,28 @@ The main tasks for this exercise are as follows:
 4. Create a new field with the following information:
    - Scope: **private**
    - Type: **IHttpClientFactory**
-   - Name: **_httpClient**
+   - Name: **_httpClientFactory**
 
-5. Create a new field with the following information:
-   - Scope: **private**
-   - Type: **IEnumerable&lt;RestaurantBranch&gt;**
-   - Name: **_restaurantBranches**
-
-6.  Add a constructor with the following parameter:
+5.  Add a constructor with the following parameter:
     - Parameter: 
         - Type: **IHttpClientFactory** 
-        - Name: **httpClient**
+        - Name: **httpClientFactory**
 
-7. In the **ReservationController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
+6. In the **ReservationController** constructor, initialize the **_httpClientFactory** field with the value of the **httpClientFactory** parameter.
 
-8. Add a method with the following information:
+7. Add a method with the following information:
    - Scope: **public**
    - Modifier: **async**
    - Return type: **Task&lt;IActionResult&gt;**
    - Name: **Create**
    
-9. Above the **Create** method, add a **HttpGet** attribute.
+8. Above the **Create** method, add a **HttpGet** attribute.
 
-10. In the **Create** method, call the **PopulateRestaurantBranchesDropDownListAsync** method using the **await** keyword. 
+9. In the **Create** method, call the **PopulateRestaurantBranchesDropDownListAsync** method using the **await** keyword. 
    
-11. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+10. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+
+11. View the content of the **Create.cshtml** view, under the **Reservation** folder.
 
 12. Add a method with the following information:
     - Scope: **public**
@@ -327,56 +321,78 @@ The main tasks for this exercise are as follows:
 
 14. Above the **CreatePostAsync** action with the **ActionName** attribute. Pass **"Create"** as parameter to the **ActionName** attribute.
 
-15. In the **CreatePostAsync** method, add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
+15. In the **CreatePostAsync** method, add a variable named **httpclient** of type **HttpClient**. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-16. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable)**.
+16. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await client.PostAsJsonAsync("http://localhost:54517/api/Reservation", orderTable)**.
 
-17. Call the **EnsureSuccessStatusCode** method of the **response** variable.
+17. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
+
+18. Inside the **IF** statement code block, add a variable named **order** of type **OrderTable**, and assign the **order** field with the value of **await response.Content.ReadAsAsync&lt;OrderTable&gt;()**.
    
-18. Return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **nameof(ThankYou)** as parameter to the **RedirectToAction** method.
+19. Return the **Task&lt;IActionResult&gt;** result using the **RedirectToAction** method. Pass **"ThankYouAsync", new { orderId = order.Id}** as parameters to the **RedirectToAction** method.
 
-19. Add a **PopulateRestaurantBranchesDropDownListAsync** method with the following information:
+20. After the new **IF** statement, create an **ELSE** statement. 
+
+21. Inside the **ELSE** statement code block, return the **ViewResult** result using the **View** method. Pass **"Error"** as parameter to the **View** method.
+
+22. Add a **PopulateRestaurantBranchesDropDownListAsync** method with the following information:
      - Scope: **private**
      - Modifier: **async**
      - Return type: **Task**
      - Name: **PopulateRestaurantBranchesDropDownListAsync**   
-     - Parameter: 
-         - Type: **int?** 
-         - Name: **selectedBranch**
-         - Defualt value: **null**   
 
-20. In the **PopulateRestaurantBranchesDropDownListAsync** method, add a variable named **request** of type **var**. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantBranches")**.
 
-21. Call the **Add** method of the **request.Headers** property. Pass **"Accept"** and **"application/json"** parameters to the **Add** method.
+23. In the **PopulateRestaurantBranchesDropDownListAsync** method,  add a variable named **httpClient** of type **HttpClient**.
 
-22. Add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
+24. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-23. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
+25. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-24. Create an **IF** statement that checks that the value of the **response.IsSuccessStatusCode** varible is **true**. 
+26. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await httpClient.GetAsync("api/RestaurantBranches")**.
 
-25. Inside the **IF** statement code block, assign the **_restaurantBranches** property with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
+27. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
-26. Assign the **RestaurantBranchId** property of the **ViewBag** field with the value of **new SelectList(_restaurantBranches, "Id", "City", selectedBranch)**.
+28. Inside the **IF** statement code block, add a variable named **restaurantBranches** of type **IEnumerable<RestaurantBranch>**, and assign the **restaurantBranches** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
+   
+29. Assign the **RestaurantBranches** property of the **ViewBag** field with the value of **new SelectList(_restaurantBranches, "Id", "City")**.
 
-27. Add a method with the following information:
+#### Task 4: Calling a Web Api Get method with parameter
+
+1. Add a method with the following information:
    - Scope: **public**
    - Return type: **IActionResult**
-   - Name: **ThankYou**
+   - Name: **ThankYouAsync**
+   - Parameter: 
+         - Type: **int** 
+         - Name: **orderId**
    
-28. Return the **IActionResult** result using the **View** method. 
+2. In the **ThankYouAsync** method, add a variable named **httpclient** of type **HttpClient**. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-#### Task 4: Run the Application
+3. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-1. View the content of the **Create.cshtml** view.
-    
-2. Save all the changes.
+4. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await httpClient.GetAsync("api/Reservation/" + orderId)**.
 
-3. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+5. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
-4. Start the application without debugging.
+6. Inside the **IF** statement code block, add a variable named **orderResult** of type **OrderTable**, and assign the **orderResult** field with the value of **await response.Content.ReadAsAsync&lt;OrderTable&gt;()**.
 
-5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+7. Return the **ViewResult** result using the **View** method. Pass **orderResult** as parameter to the **View** method.
+   
+8. Inside the **ELSE** statement code block, return the **ViewResult** result using the **View** method. Pass **"Error"** as parameter to the **View** method.
+
+9. View the content of the **Create.cshtml** view, under the **Reservation** folder.
+
+#### Task 5: Run the Application
+
+1. Save all the changes.
+
+2. In **Solution Explorer**, right-click **Server**, and then click **Set as StartUp Project**.
+
+3. Start the application without debugging.
+
+4. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+
+5. Start the application without debugging.
     
 6. In the first **Microsoft Edge** window, in the menu bar, click **Reservation**.
 
@@ -391,36 +407,31 @@ The main tasks for this exercise are as follows:
     
 8. Click **Make a Reservation**.
 
-9. Close all **Microsoft Edge** windows.
+9. Close **Microsoft Edge**.
 
-10. Stop Debugging.
-
->**Results**: After completing this exercise, you will be able to call Web API Service Get, and Post methods using HTTPClient.
+>**Results**: After completing this exercise, you will be able to call a Web API using the HttpClient class.
 
 ### Exercise 3: Calling a Web API using jQuery
 
 #### Scenario
 
-In this exercise, you will first create a javaScript file. You will then add to the new javaScript file a jQuery and ajax script. After that you will call Web API Service GET method. Finally, you will add another javaScript file with javaScript file a jQuery and ajax script and call Web API Service POST method and run the application.
+In this exercise, you will call a Web API using jQuery. You will first create MVC controller and use jQuery to call a **Get** action in the Web API. After that you will create another MVC controller and use jQuery to call a **Post** action in the Web API. 
 
 The main tasks for this exercise are as follows:
 
-1. Calling a Web API Service GET method.
+1. Calling a Web API Get method using jQuery.
 
 2. Run the Application.
 
-3. Calling a Web API Service POST method.
+3. Calling a Web API Get method using HttpClient.
 
-4. Run the Application.
+4. Calling a Web API Post method using jQuery.
 
-#### Task 1: Calling a Web API Service GET method
+5. Run the Application.
 
-1. Create a new controller with the following information:
-   - Controller name: **WantedAdController**
-   - Template: **MVC Controller - Empty**
-   - Folder: **Client/Controllers**
-   
-2. Add a **JavaScript** **File** with the following information:
+#### Task 1: Calling a Web API Get method using jQuery
+ 
+1. Add a **JavaScript** **File** with the following information:
 
    - Folder: **Client/wwwroot/js**
    - Name: **wanted-ad-get**
@@ -434,10 +445,10 @@ The main tasks for this exercise are as follows:
       - url: **"http://localhost:54517/api/RestaurantWantedAd"**
       - contentType: **"application/json; charset=utf-8"**
       - dataType: **"json"**
-      - success: **function(data) { }**      
-      - error: **function() {  alert('An error has occurred'); }**
+      - done: **function(data) { }**      
+      - fail: **function() {  alert('An error has occurred'); }**
 
-5. Inside the **anonymous function** code block assigned to the **success** property, call the **$.each** method. Pass **data** and **anonymous function** parameters to the **$.each** method.
+5. Inside the **anonymous function** code block assigned to the **done** property, call the **$.each** method. Pass **data** and **anonymous function** parameters to the **$.each** method.
 
 6. Change the signature of the **anonymous function** passed to the **$.each** method to accept **index** and **item** parameters.
 
@@ -450,11 +461,11 @@ The main tasks for this exercise are as follows:
                  <img class="photo-display-img" src="~/images/white-plate.jpg" />
            </div>
            <div class="display-picture-data">
-                 <h6 class="display-title">Job Title:</h6>
+                 <h6 class="display-title">Job title:</h6>
                  <h6>${item.jobTitle}</h6>
                  <h6 class="display-title">Hourly payment:</h6>
                  <h6>$${item.pricePerHour}</h6>
-                 <h6 class="display-title">Job Description:</h6>
+                 <h6 class="display-title">Job description:</h6>
                  <h6>${item.jobDescription}</h6>
            </div>
      </div>`
@@ -478,21 +489,21 @@ The main tasks for this exercise are as follows:
 
 1. Save all the changes.
 
-2. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+2. In **Solution Explorer**, right-click **Server**, and then click **Set as StartUp Project**.
 
 3. Start the application without debugging.
 
-4. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+4. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+
+5. Start the application without debugging.
     
-5. In the first **Microsoft Edge** window, in the menu bar, click **We are Hiring**.
+6. In the first **Microsoft Edge** window, in the menu bar, click **We Are Hiring**.
 
-    >**Note:** The browser displays the **Index.cshtml** file content of the **WantedAdController**.
+    >**Note:** The browser displays the jobs that required in a restaurant.
 
-6. Close all **Microsoft Edge** windows.
+7. Close **Microsoft Edge** windows.
 
-7. Stop Debugging.
-
-#### Task 3: Calling a Web API Service POST method
+#### Task 3: Calling a Web API Get method using HttpClient
 
 1. Create a new controller with the following information:
    - Controller name: **JobApplicationController**
@@ -509,53 +520,46 @@ The main tasks for this exercise are as follows:
 4. Create a new field with the following information:
    - Scope: **private**
    - Type: **IHttpClientFactory**
-   - Name: **_httpClient**
+   - Name: **_httpClientFactory**
 
-5. Create a new field with the following information:
-   - Scope: **private**
-   - Type: **IEnumerable&lt;EmployeeRequirements&gt;**
-   - Name: **_employeeRequirements**
-
-6.  Add a constructor with the following parameter:
+5.  Add a constructor with the following parameter:
     - Parameter: 
         - Type: **IHttpClientFactory** 
-        - Name: **httpClient**
+        - Name: **httpClientFactory**
 
-7. In the **JobApplicationController** constructor, initialize the **_httpClient** field with the value of the **httpClient** parameter.
+6. In the **JobApplicationController** constructor, initialize the **_httpClientFactory** field with the value of the **httpClientFactory** parameter.
 
-8. Add a method with the following information:
+7. Add a method with the following information:
    - Scope: **public**
    - Modifier: **async**
    - Return type: **Task&lt;IActionResult&gt;**
    - Name: **Create**
    
-9. In the **Create** method, call the **PopulateEmployeeRequirementsDropDownListAsync** method using the **await** keyword. 
+8. In the **Create** method, call the **PopulateEmployeeRequirementsDropDownListAsync** method using the **await** keyword. 
    
-10. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+9. Return the **Task&lt;IActionResult&gt;** result using the **View** method. 
+
+10. View the content of the **ThankYou.cshtml** view, under the **JobApplication** folder.
 
 11. Add a **PopulateEmployeeRequirementsDropDownListAsync** method with the following information:
      - Scope: **private**
      - Modifier: **async**
      - Return type: **Task**
      - Name: **PopulateEmployeeRequirementsDropDownListAsync**   
-     - Parameter: 
-         - Type: **int?** 
-         - Name: **selectedRequirements**
-         - Defualt value: **null**   
 
-12. In the **PopulateRestaurantBranchesDropDownListAsync** method, add a variable named **request** of type **var**. Initialize the **request** variable with the value of **new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantWantedAd")**.
+12. In the **PopulateEmployeeRequirementsDropDownListAsync** method,  add a variable named **httpClient** of type **HttpClient**.
 
-13. Call the **Add** method of the **request.Headers** property. Pass **"Accept"** and **"application/json"** as parameters to the **Add** method.
+13. Initialize the **httpClient** variable with the value of **_httpClientFactory.CreateClient()**.
 
-14. Add a variable named **client** of type **var**. Initialize the **client** variable with the value of **_httpClient.CreateClient()**.
+14. Add the **BaseAddress** property of the **httpClient** variable. Initialize the **httpClient.BaseAddress** variable with the value of **new Uri("http://localhost:54517")**.
 
-15. Add a variable named **response** of type **var**. Initialize the **response** variable with the value of **await client.SendAsync(request)**.
+15. Add a variable named **response** of type **HttpResponseMessage**. Initialize the **response** variable with the value of **await httpClient.GetAsync("api/RestaurantWantedAd")**.
 
-16. Create an **IF** statement that checks that the value of the **response.IsSuccessStatusCode** varible is **true**. 
+16. Create an **IF** statement that checks if **response.IsSuccessStatusCode** is **TRUE**.
 
-17. Inside the **IF** statement code block, assign the **_employeeRequirements** property with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;EmployeeRequirements&gt;&gt;()**.
-
-18. Assign the **EmployeeRequirementsId** property of the **ViewBag** field with the value of **new SelectList(_employeeRequirements, "Id", "JobTitle", selectedRequirements)**.
+17. Inside the **IF** statement code block, add a variable named **employeeRequirements** of type **IEnumerable<EmployeeRequirements>**, and assign the **employeeRequirements** field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;EmployeeRequirements&gt;&gt;()**.
+   
+18. Assign the **EmployeeRequirements** property of the **ViewBag** field with the value of **new SelectList(employeeRequirements, "Id", "JobTitle")**.
 
 19. Add a method with the following information:
    - Scope: **public**
@@ -564,46 +568,52 @@ The main tasks for this exercise are as follows:
    
 20. Return the **IActionResult** result using the **View** method. 
 
-21. Add a **JavaScript** **File** with the following information:
+21. View the content of the **ThankYou.cshtml** view, under the **JobApplication** folder.
+
+#### Task 4: Calling a Web API Post method using jQuery
+
+1. Add a **JavaScript** **File** with the following information:
 
    - Folder: **Client/wwwroot/js**
    - Name: **wanted-ad-post**
    
-22. In the **wanted-ad-post.js** file, call the **$** function and pass an **anonymous function** as a parameter.
+2. In the **wanted-ad-post.js** file, call the **$** function and pass an **anonymous function** as a parameter.
 
-23. Inside the **anonymous function** code block, call the **$** function and pass **'#btn-post'** as a parameter.
+3. Inside the **anonymous function** code block, call the **$** function and pass **'#btn-post'** as a parameter.
 
-24. Chain a **click** function call to the **$** function call. Pass an **anonymous function** as parameter to the  **click** function.
+4. Chain a **click** function call to the **$** function call. Pass an **anonymous function** as parameter to the  **click** function.
 
-25. Modify the **anonymous function** passed to the **click** function to accept an **e** parameter.
+5. Modify the **anonymous function** passed to the **click** function to accept an **e** parameter.
 
-26. In the  **anonymous function** code block, add a variable named **formData** of type **var** with the value of **{}**.
+6. Add an **IF** statement that checks that the value of **$('#submit-form')** is **valid()**.
 
-27. Call the **$** function and pass **'#submit-form'** as a parameter.
+7. Inside the **IF** statement, add a variable named **formData** of type **var** with the value of **{}**.
 
-28. Chain a **serializeArray** function call to the **$** function call. 
+8. Call the **$** function and pass **'#submit-form'** as a parameter.
 
-29. Chain a **map** function call to the **serializeArray** function call. Pass an **anonymous function** as parameter to the  **click** function.
+9. Chain a **serializeArray** function call to the **$** function call. 
 
-30. Modify the **anonymous function** passed to the **map** function to accept an **item** parameter.
+10. Chain a **map** function call to the **serializeArray** function call. Pass an **anonymous function** as parameter to the  **click** function.
 
-31. In the **anonymous function** code block, asign the **name** property of the **item** parameter the value of **item.name[0].toLowerCase() + item.name.slice(1)**.
+11. Modify the **anonymous function** passed to the **map** function to accept an **item** parameter.
 
-32. Add a **IF** statement that checks that the value of **formData[item.name]** is **TRUE**. 
+12. In the **anonymous function** code block, asign the **name** property of the **item** parameter the value of **item.name[0].toLowerCase() + item.name.slice(1)**.
 
-33. Inside the **IF** statement, add a **IF** statement that checks that the value of **formData[item.name]** is equal to **"string"**. 
+13. Add an **IF** statement that checks that the value of **formData[item.name]** is **TRUE**. 
 
-34. Inside the **IF** statement, assign the **formData[item.name]** variable the value of **[formData[item.name]]**.
+14. Inside the **IF** statement, add a **IF** statement that checks that the value of **formData[item.name]** is equal to **"string"**. 
 
-35. After the inner **IF** statement, call the **push** function of the **formData[item.name]** variable. Pass **item.value** as a paramter to the **push** method. 
+15. Inside the **IF** statement, assign the **formData[item.name]** variable the value of **[formData[item.name]]**.
 
-36. After the outer **IF** statement, add an **ELSE** statement. 
+16. After the inner **IF** statement, call the **push** function of the **formData[item.name]** variable. Pass **item.value** as a paramter to the **push** method. 
 
-37. Inside the **ELSE** statement, assign the **formData[item.name]** variable the value of **item.value**.
+17. After the outer **IF** statement, add an **ELSE** statement. 
 
-38. After the **map** method call, call the **preventDefault** method of the **e** parameter. 
+18. Inside the **ELSE** statement, assign the **formData[item.name]** variable the value of **item.value**.
 
-11. Call the **$.ajax** function. Pass a **JSON** object as parameter to the **$.ajax** function using the following information:
+19. After the **map** method call, call the **preventDefault** method of the **e** parameter. 
+
+20. Call the **$.ajax** function. Pass a **JSON** object as parameter to the **$.ajax** function using the following information:
 
     - Properties: 
       - type: **"POST"**
@@ -611,42 +621,47 @@ The main tasks for this exercise are as follows:
       - contentType: **"application/json; charset=utf-8"**
       - data: **JSON.stringify(formData)**
       - dataType: **"json"**
-      - success: **function() { location.href = 'http://localhost:54508/JobApplication/ThankYou' }**      
-      - error: **function(result) { alert('An error has occurred') }**
-      
+      - done: **function() { location.href = 'http://localhost:54508/JobApplication/ThankYou' }**      
+      - fail: **function(result) { alert('An error has occurred') }**
 
-#### Task 4: Run the Application
+21. Inside the **JobApplication/Create.cshtml** view, after the last **DIV** element with the **"row justify-content-center"** class, add a **Scripts** section code block.
 
-1. View the content of the **Create.cshtml** view.
-    
-2. Save all the changes.
+22. In the **Scripts** section code block, add a **SCRIPT** element with the following information:
 
-3. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+    - Src: **~/node_modules/jquery-validation/dist/jquery.validate.min.js**
+    - Src: **~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js**
+    - Src: **~/js/wanted-ad-get.js**
 
-4. Start the application without debugging.
+#### Task 5: Run the Application
 
-5. In **Solution Explorer**, right-click **Server**, point to **Debug**, and then click **Start new instance**.
+1. Save all the changes.
+
+2. In **Solution Explorer**, right-click **Server**, and then click **Set as StartUp Project**.
+
+3. Start the application without debugging.
+
+4. In **Solution Explorer**, right-click **Client**, and then click **Set as StartUp Project**.
+
+5. Start the application without debugging.
     
 6. In the first **Microsoft Edge** window, in the menu bar, click **Submit Job Application**.
 
 7. On **Submit Job Application**, submit a form with the following credentials:
    
-    - Job Title: **_&lt;A job title of your choice&gt;_**
-    - First Name: **_&lt;A first name of your choice&gt;_**
-    - Last Name: **_&lt;A last name of your choice&gt;_**
-    - Phone Number: **_&lt;A phone of your choice&gt;_** 
+    - Job title: **_&lt;A job title of your choice&gt;_**
+    - First name: **_&lt;A first name of your choice&gt;_**
+    - Last name: **_&lt;A last name of your choice&gt;_**
+    - Phone number: **_&lt;A phone of your choice&gt;_** 
     - Email: **_&lt;An email time of your choice&gt;_** 
     - Address: **_&lt;An address of your choice&gt;_** 
     
 8. Click **Apply For a Job**.
 
-9. Close all **Microsoft Edge** windows.
+9. Close **Microsoft Edge** windows.
 
-10. Stop Debugging.
+10. Close **Microsoft Visual Studio**.
 
-11. Close **Microsoft Visual Studio**.
-
->**Results**: After completing this exercise, you should have created restaurant application, in which users can view the restaurant branches, order a table and also apply for a job. 
+>**Results**: After completing this exercise, you have enabled users to see the wanted ads to find a new job, and enabled them to apply for a job. 
 
 ©2018 Microsoft Corporation. All rights reserved.
 

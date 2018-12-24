@@ -1,0 +1,41 @@
+﻿@model Client.Models.OrderTable
+
+@{
+    ViewData["Title"] = "ThankYou";
+}
+
+<h2 class="title">
+    <span class="span-col-f">Thank you for choosing to dine at our restaurant,</span>
+    <span class="span-col-s">hoping that you will enjoy</span>
+</h2>
+
+<h2 class="title second-title">Reservation Information:</h2>
+<div class="container-info">
+    <div>
+        <span class="display-label">
+            Name:
+        </span>
+        <br />
+        <span class="display-field">
+            @Html.DisplayFor(model => model.FirstName)  @Html.DisplayFor(model => model.LastName)
+        </span>
+    </div>
+
+    <div>
+        <span class="display-label">
+            Phone number to contact:
+        </span>
+        <span class="display-field">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </span>
+    </div>
+
+    <div>
+        <span class="display-label">
+            @Html.DisplayNameFor(model => model.ReservationTime):
+        </span>
+        <span class="display-field">
+            @Html.DisplayFor(model => model.ReservationTime)
+        </span>
+    </div>
+</div>

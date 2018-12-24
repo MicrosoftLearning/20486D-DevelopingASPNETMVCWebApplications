@@ -12,7 +12,6 @@ namespace Client.Controllers
     public class ReservationController : Controller
     {
         private IHttpClientFactory _httpClientFactory;
-        private IEnumerable<RestaurantBranch> _restaurantBranches;
 
         public ReservationController(IHttpClientFactory httpClientFactory)
         {
@@ -34,7 +33,7 @@ namespace Client.Controllers
             if (response.IsSuccessStatusCode)
             {
                 OrderTable order = await response.Content.ReadAsAsync<OrderTable>();
-                return RedirectToAction("ThankYou", new { id = order.Id, order });
+                return RedirectToAction("ThankYouAsync", new { orderId = order.Id});
             }
             else
             {
@@ -44,22 +43,21 @@ namespace Client.Controllers
 
         private async Task PopulateRestaurantBranchesDropDownListAsync()
         {
-            int? selectedBranch = null;
             HttpClient httpClient = _httpClientFactory.CreateClient();
             httpClient.BaseAddress = new Uri("http://localhost:54517");
-            HttpResponseMessage response = httpClient.GetAsync("http://localhost:54517/api/RestaurantBranches").Result;
+            HttpResponseMessage response = await httpClient.GetAsync("api/RestaurantBranches");
             if (response.IsSuccessStatusCode)
             {
-                _restaurantBranches = await response.Content.ReadAsAsync<IEnumerable<RestaurantBranch>>();
+                IEnumerable<RestaurantBranch> restaurantBranches = await response.Content.ReadAsAsync<IEnumerable<RestaurantBranch>>();
+                ViewBag.RestaurantBranches = new SelectList(restaurantBranches, "Id", "City");
             }
-            ViewBag.RestaurantBranches = new SelectList(_restaurantBranches, "Id", "City", selectedBranch);
         }
 
-        public async Task<IActionResult> ThankYouAsync(OrderTable order)
+        public async Task<IActionResult> ThankYouAsync(int orderId)
         {
             HttpClient httpClient = _httpClientFactory.CreateClient();
             httpClient.BaseAddress = new Uri("http://localhost:54517");
-            HttpResponseMessage response = httpClient.GetAsync("http://localhost:54517/api/Reservation" + order.Id).Result;
+            HttpResponseMessage response = await httpClient.GetAsync("api/Reservation/" + orderId);
             if (response.IsSuccessStatusCode)
             {
                 OrderTable orderResult = await response.Content.ReadAsAsync<OrderTable>();

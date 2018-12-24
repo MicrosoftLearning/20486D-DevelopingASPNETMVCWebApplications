@@ -11,12 +11,11 @@ namespace Client.Controllers
 {
     public class JobApplicationController : Controller
     {
-        private IHttpClientFactory _httpClient;
-        private IEnumerable<EmployeeRequirements> _employeeRequirements;
+        private IHttpClientFactory _httpClientFactory;
 
-        public JobApplicationController(IHttpClientFactory httpClient)
+        public JobApplicationController(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClient;
+            _httpClientFactory = httpClientFactory;
         }
 
         [HttpGet]
@@ -26,17 +25,16 @@ namespace Client.Controllers
             return View();
         }
 
-        private async Task PopulateEmployeeRequirementsDropDownListAsync(int? selectedRequirements = null)
+        private async Task PopulateEmployeeRequirementsDropDownListAsync()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:54517/api/RestaurantWantedAd");
-            request.Headers.Add("Accept", "application/json");
-            var client = _httpClient.CreateClient();
-            var response = await client.SendAsync(request);
+            HttpClient httpClient = _httpClientFactory.CreateClient();
+            httpClient.BaseAddress = new Uri("http://localhost:54517");
+            HttpResponseMessage response = await httpClient.GetAsync("api/RestaurantWantedAd");
             if (response.IsSuccessStatusCode)
             {
-                _employeeRequirements = await response.Content.ReadAsAsync<IEnumerable<EmployeeRequirements>>();
+                IEnumerable<EmployeeRequirements> employeeRequirements = await response.Content.ReadAsAsync<IEnumerable<EmployeeRequirements>>();
+                ViewBag.EmployeeRequirements = new SelectList(employeeRequirements, "Id", "JobTitle");
             }
-            ViewBag.EmployeeRequirementsId = new SelectList(_employeeRequirements, "Id", "JobTitle", selectedRequirements);
         }
 
         public IActionResult ThankYou()

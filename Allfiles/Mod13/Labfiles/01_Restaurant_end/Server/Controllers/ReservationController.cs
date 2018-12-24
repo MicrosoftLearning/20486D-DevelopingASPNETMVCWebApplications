@@ -20,7 +20,7 @@ namespace Server.Controllers
             _context = context;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public ActionResult<OrderTable> GetById(int id)
         {
             var order = _context.ReservationsTables.FirstOrDefault(p => p.Id == id);
