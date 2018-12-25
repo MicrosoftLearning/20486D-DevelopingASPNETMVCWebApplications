@@ -28,7 +28,6 @@ namespace Underwater.Repositories
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             _container = blobClient.GetContainerReference(containerName);
-
         }
 
         public IEnumerable<Fish> Getfishes()
@@ -52,7 +51,6 @@ namespace Underwater.Repositories
                 fish.ImageName = Path.GetFileName(fish.PhotoAvatar.FileName);
                 _context.Add(fish);
                 _context.SaveChanges();
-
             }
         }
 
@@ -86,7 +84,6 @@ namespace Underwater.Repositories
             await blob.UploadFromStreamAsync(photo.OpenReadStream());
             return blob.Uri.ToString();
         }
-
 
         private async Task<bool> DeleteImageAsync(string PhotoFileName)
         {

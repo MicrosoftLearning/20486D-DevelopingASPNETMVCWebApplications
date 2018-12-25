@@ -10,8 +10,8 @@ using Underwater.Data;
 namespace Underwater.Migrations
 {
     [DbContext(typeof(UnderwaterContext))]
-    [Migration("20181223145728_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20181225125343_AddFishImageURL")]
+    partial class AddFishImageURL
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

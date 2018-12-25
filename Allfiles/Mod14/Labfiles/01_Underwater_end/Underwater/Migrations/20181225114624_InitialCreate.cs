@@ -32,11 +32,9 @@ namespace Underwater.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     ScientificName = table.Column<string>(nullable: true),
-                    CommonName = table.Column<string>(nullable: true),
                     ImageName = table.Column<string>(nullable: true),
                     PhotoFile = table.Column<byte[]>(nullable: true),
                     ImageMimeType = table.Column<string>(nullable: true),
-                    ImageURL = table.Column<string>(nullable: true),
                     AquariumId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -67,18 +65,18 @@ namespace Underwater.Migrations
 
             migrationBuilder.InsertData(
                 table: "fishes",
-                columns: new[] { "FishId", "AquariumId", "CommonName", "ImageMimeType", "ImageName", "ImageURL", "Name", "PhotoFile", "ScientificName" },
-                values: new object[] { 1, 1, null, "image/jpeg", "goldfish.jpg", null, "Goldfish", null, "Carassius auratus" });
+                columns: new[] { "FishId", "AquariumId", "ImageMimeType", "ImageName", "Name", "PhotoFile", "ScientificName" },
+                values: new object[] { 1, 1, "image/jpeg", "goldfish.jpg", "Goldfish", null, "Carassius auratus" });
 
             migrationBuilder.InsertData(
                 table: "fishes",
-                columns: new[] { "FishId", "AquariumId", "CommonName", "ImageMimeType", "ImageName", "ImageURL", "Name", "PhotoFile", "ScientificName" },
-                values: new object[] { 2, 1, null, "image/jpeg", "starfish.jpg", null, "Starfish", null, "Asteroidea" });
+                columns: new[] { "FishId", "AquariumId", "ImageMimeType", "ImageName", "Name", "PhotoFile", "ScientificName" },
+                values: new object[] { 2, 1, "image/jpeg", "starfish.jpg", "Starfish", null, "Asteroidea" });
 
             migrationBuilder.InsertData(
                 table: "fishes",
-                columns: new[] { "FishId", "AquariumId", "CommonName", "ImageMimeType", "ImageName", "ImageURL", "Name", "PhotoFile", "ScientificName" },
-                values: new object[] { 3, 1, null, "image/jpeg", "clownfish.jpg", null, "Clownfish", null, "Amphiprion ocellaris" });
+                columns: new[] { "FishId", "AquariumId", "ImageMimeType", "ImageName", "Name", "PhotoFile", "ScientificName" },
+                values: new object[] { 3, 1, "image/jpeg", "clownfish.jpg", "Clownfish", null, "Amphiprion ocellaris" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_fishes_AquariumId",
