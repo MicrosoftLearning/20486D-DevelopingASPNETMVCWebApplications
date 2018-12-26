@@ -380,7 +380,7 @@ The main tasks for this exercise are as follows:
 4.	Deploy and Run the application in Microsoft Azure
 
 
-#### Task 1:    Create a blob storage account
+#### Task 1: Create a blob storage account
 
 1. Open **Microsft Edge**
 
@@ -388,11 +388,27 @@ The main tasks for this exercise are as follows:
 
 3. Sign-in, and then navigate to **Storage Accounts**.
 
-4. Create a storage account in **Storage Account** by providing all the necessary details.
+4. In the **Storage accounts** window, in the menu bar, click **Add**.
 
-5. After creation of the storage account, navigate to **Blobs** in the storage account page.
+5. In the **Create storage account** window , in the **Storage account name** text box, type **underwater{unique name}**
 
-6. Create a container by providing the necessary information.
+    >**Note:** The name must be unique. You can add your first name, last name or birthdate to the current name.
+
+6.  Under **Resource group**, select **Underwater{unique name}**.
+
+7. Click **Review + create**.
+
+8. Click **Create**.
+
+9. In the **Microsoft.StorageAccount-{unique number} - Overview**, below **RESOURCE** click **underwater{unique name}**.
+
+10. In the **Underwater{unique name}** window, below **Blob Service**, click **Blobs**.
+
+11. In the **Underwater{unique name} - Blobs** window, in the menu bar, click **Container**.
+
+12. In the **New container** window, in the **Name** text box, type **aquarium**.
+
+13. In the **New Container** window, in the **Public Access Level** dropdown, select **Blob(anonymous read access for blobs only)**, and then click **OK**.
 
 
 #### Task 2:    Prepare the application for working with Azure Storage.
