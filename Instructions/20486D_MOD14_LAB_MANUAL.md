@@ -435,7 +435,7 @@ The main tasks for this exercise are as follows:
         - Type: **aquarium**
     
 
-#### Task 3:	Write the code to upload an image.
+#### Task 3: Write the code to upload an image.
 
 1. In the **Underwater** application, in the **Fish** class, add a new property with the following information
     - Scope: **public**
@@ -511,11 +511,47 @@ The main tasks for this exercise are as follows:
 
 #### Task 4:	Deploy and Run the application in Microsoft Azure
 
-1. In Microsoft Visual Studio 2017, open **Solutions Explorer**, right click **Underwater** and click **Publish**
+1. In **Solution Explorer**, right-click **Underwater**, and then click **Publish**.
 
-2. In **Microsoft Edge**, explore the application by adding, editing and deleting a fish.
+2. In the **Pick a publish target** dialog box, verify that **Underwater {unique name}** is selected in the drop down, and then click **Publish**.
 
+3. In **Microsoft Edge**, in the menu bar, click **Add Fish**.
 
+4. On the **Add a Fish to Aquarium** page, select the following:
+
+	-  Aquarium: **_&lt;A aquarium of your choice&gt;_**
+    -  Fish Name: **_&lt;A fish name of your choice&gt;_**
+    -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
+    -  Common Name: **_&lt;A common name of your choice&gt;_** 
+    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click clown-trigger.jpg&gt;_**
+
+5. Click **Add**
+
+6. On the **Dive into Our Fish Species** page, verify the newly submitted details.
+
+7. Close **Microsoft Edge**
+
+8. Close **Microsoft Visual Studio**.
+
+9. In **Microsoft Edge**, navigate to **http://portal.azure.com**.
+
+10. In the menu, click **Storage Accounts**
+
+11. In the **Storage accounts** window, click **Underwater{unique name}**.
+
+12. In the **Underwater{unique name}** window, below **Blob services**, click **Blobs**.
+
+13. In the **Blobs** window, click **aquarium**.
+    >**Note:** Verify the presence of uploaded image.
+
+14. Click **clownfish.jpg**.
+
+15. Click **Edit blob**.
+    >**Note:** The uploaded image is displayed.
+
+16. Close **Microsoft Edge** window.
+
+>**Results:** After completing this exercise, you will be able to develop applications that use Azure Storage Blobs.
 
 
 ©2018 Microsoft Corporation. All rights reserved.
