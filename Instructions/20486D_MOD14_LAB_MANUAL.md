@@ -178,25 +178,52 @@ The main tasks for this exercise are as follows:
 
 	 -  Default Connection String: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
 
+17. Expand **Entity Framework Migration**, and then click **Apply this migration on publish**.
 
+18.  Expand **Entity Framework Migration**,  and fill the **Default Connection String** textbox, with the following information:
+
+	 -  Default Connection String: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
+
+19. Click **Save**.
 
 #### Task 4: Deploy and explore the application.
 
-1. In Microsoft Visual Studio 2017, open **Solutions Explorer**, right click **Underwater** and click **Publish**
+1. In Microsoft Visual Studio, open **Solutions Explorer**, right click **Underwater** and click **Publish**
 
-2. Sign in and select the Web App you created.
+2. In **Microsoft Edge**, in the menu bar, click **Add Fish**.
 
-3. Click **Configure**
+3. On the **Add a Fish to Aquarium** page, select the following:
 
-4. In the **Publish** window, click **Settings**
+	-  Aquarium: **_&lt;A aquarium of your choice&gt;_**
+    -  Fish Name: **_&lt;A fish name of your choice&gt;_**
+    -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
+    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
 
-5. In the **Publish** window, expand **Databases** and edit  **Default Connection String** to point to SQL Database created in Azure.
+4. Click **Add**
 
-6. In the **Publish** window, expand **Entity Framework Migration** and edit **Apply this migration on publish** to point to SQL Database in Azure.
+5. On the **Dive into Our Fish Species** page, verify the newly submitted details.
 
-7. In the **Publish** window, Click **Save**.
+6. Select a fish of your choice, and then click **Details**.
 
-8. In Microsoft Visual Studio 2017, **publish** window, click **Publish**.
+    >**Note:** The browser displays the scientific name of the fish. 
+
+7. Verify the fish details, and then click **Back**.
+
+8.  On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Edit**.
+
+9. On the **Edit Fish** page, in the **Scientic Name** text box, type **_&lt;A scientific name of your choice>&gt;_**, and then click **Save**.
+
+10. On the **Dive into Our Fish Species** page, select the fish you edited, and then click **Details**.
+
+11. Verify the newly edited details, and then click **Back**.
+
+12. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
+
+13. On the **Delete** page, click **Delete**.
+
+14. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
+
+15. Close **Microsoft Edge**
 
 
 #### Task 5: Update the application and deploy in Microsoft Azure.
