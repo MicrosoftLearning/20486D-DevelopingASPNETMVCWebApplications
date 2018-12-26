@@ -427,7 +427,7 @@ The main tasks for this exercise are as follows:
 
 5. Close **Microsoft Edge**.
 
-6. In **appsettings.json** file, add new values using the following information:
+6. In **appsettings.json** file, add new value using the following information:
     - Property: **"ContainerSettings"**
     - Type: **object**
     - Value: 
@@ -443,66 +443,137 @@ The main tasks for this exercise are as follows:
     - Type: **string**
     - Access: **Read and write**
 
-2. In the **Underwater** application, in the **UnderwaterRepository** class, modify the constructor to do the following:
-    - Accept Configuration as input
-    - Using the configuration, get connection string for AzureStorageConnection.
-    - Using the configuration, get container name.
+2. In the **Details.cshtml** view, remove the contents of the **IF** statement.   
 
-2. In the **Underwater** application, in the **UnderwaterRepository** class, add a member variable with following information
-    - Scope: **private**
-    - Name: **_container**
-    - Type: **CloudBlobContainer**
+3. In the **IF** statement code block, add an **IF** statement that checks that the value of **Model.ImageURL** is **NOT NULL**.
 
-3. In the **Underwater** application, in the **UnderwaterRepository** class, add the following functionality to the constructor
-    - Obtain an instance of **CloudStorageAccount** by invoking it's **parse** method.
-    - Using the **CloudStorageAccount** instance, create a **CloudBlobClient**
-    - Using the **CloudBlobClient**, get a reference to the **Container** that was created in the first task, and assign it to member variable **_container**.
+4. In the **IF** statement code block, add a **DIV** element with the following information:
+    - Class: **photo-display**
 
-4.  In the **Underwater** application, in the **UnderwaterRepository** class, add a method **UploadImageAsync** with following details
-    - Input parameter type: **IFormFile**
-    - Scope: **private**
-    - Additional qualifier: **async**
-    - Returns: **Task<string>**
+ 
+5. In the new **DIV** element, add a **IMG** element with the following information:
+    - Class: **photo-display-img**
+    - Src: **@Model.ImageURL**
 
-5.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **UploadImageAsync** , using the **_container** member variable, invoke **GetBlockBlobReference** passing the **FileName** of input parameter **IFormFile**, and store the result in a variable of type **CloudBlockBlob**.
+6. After the **IF** statement, and an **ELSE** statement. 
 
-6.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **UploadImageAsync** , using the **CloudBlockBlob** variable, invoke **UploadFromStreamAsync**. Pass the read stream of the input parameter **IFormFile** to this method.
+7. In the  **ELSE** statement code block,  add a **DIV** element with the following information:
+    - Class: **photo-display**
 
-7. After completion of the upload stream, return the **Uri** property of the **CloudBlockBlob** variable.
+8.  In the new **DIV** element, add a **IMG** element with the following information:
+    - Class: **photo-display-img**
+    - Src: **@Url.Action("GetImage", "Aquarium", new { Id = Model.FishId })**
 
+9. In the **Edit.cshtml** view, remove the **IMG** element and add an **IF** statement that checks that the value of **Model.ImageURL** is **NOT NULL**.
+       
+10. In the **IF** statement code block, add a **IMG** element with the following information:
+    - Class: **photo-display-img**
+    - Src: **@Model.ImageURL**
 
-8.  In the **Underwater** application, in the **UnderwaterRepository** class, add a method **DeleteImageAsync** , with following details:
-    - Input parameter type: **string**
-    - Scope: **private**
-    - Additional qualifier: **async**
-    - Returns: **Task<bool>**
+11. After the **IF** statement, and an **ELSE** statement. 
 
-9.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **DeleteImageAsync** , using the **_container** member variable, invoke **GetBlockBlobReference** passing the **photoFileName** input parameter , and store the result in a variable of type **CloudBlockBlob**.
+12. In the  **ELSE** statement code block, add a **IMG** element with the following information:
+    - Class: **photo-display-img**
+    - Src: **@Url.Action("GetImage", "Aquarium", new { Id = Model.FishId })**   
 
-10.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **UploadImageAsync** , using the **CloudBlockBlob** variable, invoke **DeleteAsync**. 
+13. In the **Index.cshtml** view, remove the contents of the **IF** statement. 
 
+14. In the **IF** statement code block, add an **IF** statement that checks that the value of **Model.ImageURL** is **NOT NULL**.
+ 
+15. In the **IF** statement code block, add a **DIV** element with the following information:
+    - Class: **photo-display**
+ 
+16. In the new **DIV** element, add a **IMG** element with the following information:
+    - Class: **photo-display-img**
+    - Src: **@Model.ImageURL**
 
-11.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **AddFish(Fish fish)**, in the **IF** block, call the **UploadImageAsync** method, wait for its completion and store the result, in ImageURL property of Fish object.
+17. After the **IF** statement, and an **ELSE** statement. 
 
+18. In the  **ELSE** statement code block,  add a **DIV** element with the following information:
+    - Class: **photo-display**
 
-12.  In the **Underwater** application, in the **UnderwaterRepository** class, in the method **RemoveFish(int it)**, after fetching **fish** instance using the **id**, add an **IF** block, to check if **ImageURL** of the fish instance is not null and if not null, invoke **DeleteImageAsync** method passing the **ImageName**. 
+19.  In the new **DIV** element, add a **IMG** element with the following information:
+     - Class: **photo-display-img**
+     - Src: **@Url.Action("GetImage", "Aquarium", new { Id = Model.FishId })**      
 
+20. In the **Delete.cshtml** view, remove the contents of the **IF** statement. 
 
-13. In the **Underwater** application, in the **Edit.cshtml**, change image display in the following way:
-    - If ImageURL is not present, fetch image URL by calling GetImage action.
-    - If ImageURL is present, set the src of the image to ImageURL.
+21. In the **IF** statement code block, add an **IF** statement that checks that the value of **Model.ImageURL** is **NOT NULL**.
+ 
+22. In the **IF** statement code block, add a **DIV** element with the following information:
+    - Class: **photo-display**
+ 
+23. In the new **DIV** element, add a **IMG** element with the following information:
+    - Class: **photo-display-img**
+    - Src: **@Model.ImageURL**
 
-14. In the **Underwater** application, in the **Eelete.cshtml**, change image display in the following way:
-    - If ImageURL is not present, fetch image URL by calling GetImage action.
-    - If ImageURL is present, set the src of the image to ImageURL.
+24. After the **IF** statement, and an **ELSE** statement. 
 
-15. In the **Underwater** application, in the **Index.cshtml**, change image display in the following way:
-    - If ImageURL is not present, fetch image URL by calling GetImage action.
-    - If ImageURL is present, set the src of the image to ImageURL.
+25. In the  **ELSE** statement code block,  add a **DIV** element with the following information:
+    - Class: **photo-display**
 
-16. In the **Underwater** application, in the **Details.cshtml**, change image display in the following way:
-    - If ImageURL is not present, fetch image URL by calling GetImage action.
-    - If ImageURL is present, set the src of the image to ImageURL.
+26.  In the new **DIV** element, add a **IMG** element with the following information:
+     - Class: **photo-display-img**
+     - Src: **@Url.Action("GetImage", "Aquarium", new { Id = Model.FishId })**      
+
+27. Add a **NuGet Package*8 with the following information:
+
+    - Package: **WindowsAzure.Storage*** 
+    - Version: **9.3.3**
+
+28. In the **UnderwaterRepository** class, add **USING** statements for the following namespaces:
+
+    - **Microsoft.WindowsAzure.Storage**
+    - **Microsoft.WindowsAzure.Storage.Blob**
+    - **Microsoft.Extensions.Configuration**
+    - **Microsoft.AspNetCore.Http**
+
+29. Create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **IConfiguration**
+   - Name: **_configuration**
+
+30. Create a new field with the following information:
+
+   - Scope: **private**
+   - Type: **CloudBlobContainer**
+   - Name: **_container**
+
+31. Change the **UnderwaterRepository** constructor signature to accept the following parameter:
+    - Type: **IConfiguration**
+    - Name: **configuration**
+
+32. In the **UnderwaterRepository** constructor, initialize the **_configuration** field with the value of the **configuration** parameter.
+
+32. Create a variable named **connectionString** of type **string** and assign it with the value of **_configuration.GetConnectionString("AzureStorageConnectionString-1")**
+
+33. Create a variable named **containerName** of type **string** and assign it with the value of **_configuration.GetValue&lt;string&gt;("ContainerSettings:ContainerName")**
+
+34. Create a variable named **storageAccount** of type **CloudStorageAccount** and assign it with the value of **CloudStorageAccount.Parse(connectionString)**
+
+35. Create a variable named **blobClient** of type **CloudBlobClient** and assign it with the value of **storageAccount.CreateCloudBlobClient()**
+
+36. Assign the **_container** field, with the value of **blobClient.GetContainerReference(containerName)**.
+
+    >**Note:** Make sure the parameter **AzureStorageConnectionString-1** is the same as the name specified in **appsettings.json**.
+
+37. Add a method with the following information:
+    - Scope: **photo**
+    - Modifier: **async**
+    - Return type: **Task&lt;string&gt;**
+    - Name: **UploadImageAsync**
+    - Parameter: 
+         - Type: **IFormFile**
+         - Name: **photo**
+
+38. In the **UploadImageAsync** method, create a variable named **blob** of type **CloudBlockBlob** and assign it with the value of **_container.GetBlockBlobReference(Path.GetFileName(photo.FileName))**
+
+39.  Call the **blob.UploadFromStreamAsync** method using the **await** keyword. Pass **photo.OpenReadStream()**
+as a parameter to the **blob.UploadFromStreamAsync** method. 
+
+40. Return the **Task&lt;string&gt;** result using the **blob.Uri.ToString** method.
+
 
 17. Save all the changes.
 
