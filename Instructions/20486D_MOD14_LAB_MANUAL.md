@@ -411,17 +411,29 @@ The main tasks for this exercise are as follows:
 13. In the **New Container** window, in the **Public Access Level** dropdown, select **Blob(anonymous read access for blobs only)**, and then click **OK**.
 
 
-#### Task 2:    Prepare the application for working with Azure Storage.
+#### Task 2:  Prepare the application for working with Azure Storage.
+ 
+1. In the **Underwater – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Underwater**, point to Add, and then click **Connected Service**.
 
-1. In **Underwater** application, in Microsoft Visual Studio 2017, add **Connected Services** to be project.
+2. In the **Connected Service** window, click **Cloud Storage with Azure Storage**.
 
-2. While adding **Connected Services**, choose **Cloud Storage with Azure Storage**, and then choose the storage account created in the step above.
-    >**Note:** You might have to sign in to Microsoft Azure.
+3. In the **Azure Storage** window, sign in to your **Microsoft Azure Account**.
 
-3. In **Underwater** application, in **Solution Explorer**, go to **appsettings.json**
+    >**Note:** In case you are already signed-in, you will not see the sign-in dialog box. In that case proceed to the next step.
 
-4. To **appsettings.json**, add a new section **ContainerSetttings**, and to this section add **ContainerName** key with value being name of container created in previous section.
+4. In the **Azure Storage** window, click **Underwater{unique name}** , and then click **Add**.
 
+    >**Note:** **Microsoft Edge** displays the following URL: **https://docs.microsoft.com/en-us/azure/visual-studio/vs-storage-aspnet-getting-started-blobs**.
+
+5. Close **Microsoft Edge**.
+
+6. In **appsettings.json** file, add new values using the following information:
+    - Property: **"ContainerSettings"**
+    - Type: **object**
+    - Value: 
+        - Property: **"ContainerName"**
+        - Type: **aquarium**
+    
 
 #### Task 3:	Write the code to upload an image.
 
