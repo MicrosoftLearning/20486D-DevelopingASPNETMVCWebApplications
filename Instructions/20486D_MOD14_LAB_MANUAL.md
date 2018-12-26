@@ -23,6 +23,14 @@ Estimated Time: **60 minutes**
 
 1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
+2. Open the **Command Prompt** window using **Run as administrator**.
+
+3. In Administrator: Command Prompt, run the following command: **cd &lt;The location of  Allfiles\Mod14\Labfiles\01_Underwater_begin\Underwater folder on your machine&gt;**.
+
+4. Run the following command: **npm install**.
+
+5. Close the **Command Prompt** window. 
+
 ### Exercise 1: Deploying a Web Application to Microsoft Azure
 
 #### Scenario
@@ -44,33 +52,89 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Explore and run the application locally
 
-1. Open the **UnderWater.sln** file from the following location: **Allfiles\Mod14\Labfiles\01_Underwater_begin**.
+1. Open the **UnderWater.sln** solution from the following location: **Allfiles\Mod14\Labfiles\01_Underwater_begin**. 
 
-2. Run migrations to create the database locally.
+2. Open the **Package Manager Console** window.
 
-4. Start the application without debugging
+3. In the **Package Manager Console**, run the following command: **Add-Migration InitialCreate**.
 
-5. Select a fish of your choice, and click on **Details**.
+4. Run the following command: **Update-Database**.
+
+5. Start the application without debugging
+
+6. In the menu bar, click **Add Fish**.
+
+7. On the **Add a Fish to Aquarium** page, select the following:
+
+	-  Aquarium: **_&lt;A aquarium of your choice&gt;_**
+    -  Fish Name: **_&lt;A fish name of your choice&gt;_**
+    -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
+    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click koi.jpg&gt;_**
+
+
+8. Click **Add**
+
+9. On the **Dive into Our Fish Species** page, verify the newly submitted details.
+
+10. Select a fish of your choice, and then click **Details**.
 
     >**Note:** The browser displays the scientific name of the fish. 
 
-4. Verify the fish details, and then click **Back to List**.
+11. Verify the fish details, and then click **Back**.
 
-5. Close **Microsoft Edge.**. 
+12.  On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Edit**.
 
-#### Task 2: Create a new Web App in Microsoft Azure.
+13. On the **Edit Fish** page, in the **Scientic Name** text box, type **_&lt;A scientific name of your choice>&gt;_**, and then click **Save**.
+
+14. On the **Dive into Our Fish Species** page, select the fish you edited, and then click **Details**.
+
+15. Verify the newly edited details, and then click **Back**.
+
+16. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
+
+17. On the **Delete** page, click **Delete**.
+
+18. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
+
+19. Close **Microsoft Edge.**. 
+
+
+#### Task 2: Create a new Web App in Microsoft Azure
 
 1. Open **Microsft Edge**
 
-2. In **Microsoft Edge**, in the address bar type **http://portal.azure.com**, and then press Enter.
+2. In **Microsoft Edge**, navigate to **http://portal.azure.com**.
 
-3. Sign-in, and then navigate to **App Services**.
+3. Sign-in, and then click **App Services**.
 
-4. Create a Web App in **App Services** by providing all the necessary details.
+4. In the **App Services** window, click **Add**.
 
-5. Navigate to **SQL Databases**.
+5. In the **Web** window, click **Web App + SQL**, and then click **Create**.
 
-6. Create a new **SQl Server** and **SQL Database** by providing all the necessary details.
+6. In the **Web App + SQL** window, in the **App Name** text box, type **Underwater{unique name}**.
+
+    >**Note:** The name must be unique. You can add your first name, last name or birthdate to the current name.
+
+7. Under **SQL Database**, click **Configure required settings**.
+
+8. In the **Database** window, click **Create a new database**.
+
+9. In the **SQL Database** page, in **Name** text box, type **UnderwaterDB**.
+
+10. Under **Target server**, click **Configure required settings**.
+
+11. In the **New server** window, select the following:
+
+	-  Server name: **Underwater{unique name}**
+    -  Server admin login: **Underwateradmin**
+    -  Password: **p@@sw0rd**
+    -  Confirm password: **p@@sw0rd**
+
+12. In the **New server** window, click **Select**
+
+13. In the **SQL Database** window, click **Select**
+
+14. In the **Web App + SQL** window, click **Create**.
 
 
 #### Task 3: Prepare the application for deployment.
