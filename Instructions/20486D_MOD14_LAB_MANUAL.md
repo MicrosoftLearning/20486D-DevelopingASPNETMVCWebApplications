@@ -139,16 +139,47 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Prepare the application for deployment.
 
-1. In Microsoft Visual Studio 2017, open **Solutions Explorer**, right click **Underwater** and click **Edit Underwater.csproj**
+1. In **Underwater - Microsoft Visual Studio** window, in the **Underwater.csproj** file, after the **PropertyGroup** element, add a **ItemGroup** element. 
 
-2. In **Underwate.csproj**, add the following code under <PropertyGroup>
-```cs 
+2. In the new  **PropertyGroup** element, add a **Content** element, with the following information:
 
-  <ItemGroup>
-         <Content Include="node_modules\**" CopyToPublishDirectory="PreserveNewest" />
-  </ItemGroup>
+	-  Include: **node_modules\****
+    -  CopyToPublishDirectory: **PreserveNewest**
 
-```
+3. Save all changes. 
+
+4.  In **Solution Explorer**, right-click **Underwater**, and then click **Publish**.
+
+5. In the **Pick a publish target** dialog box, in the navigation pane, click **App Service**.
+
+6. In the result pane, click **Select Existing**.
+
+7. Click the arrow next to **Publish**, and then click **Create Profile**.
+
+8. In the **App Service** dialog box, click **Sign in**.
+
+    >**Note:** In case you have already signed-in, you will not see this dialog box. In this case, go to step 13.
+
+9. In the **Sign in to your account** dialog box, type azure account **Email/Phone/Skype**, and then click **Next**.
+
+10. Type **Password**, and then click **Sign in**.
+
+11. In the **App Service** dialog box, expand **Underwater{unique name}**, click **Underwater{unique name}**, and then click OK.
+
+12. In the **Publish** window, click **Configure**.
+
+13. Click **Settings**.
+
+14. Expand **Databases**.
+
+15. Under the **Default Connection String**, select the checkbox **Use this connection string at runtime**.
+
+16.  Fill the **Default Connection String** textbox, with the following information:
+
+	 -  Default Connection String: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
+
+
+
 #### Task 4: Deploy and explore the application.
 
 1. In Microsoft Visual Studio 2017, open **Solutions Explorer**, right click **Underwater** and click **Publish**
