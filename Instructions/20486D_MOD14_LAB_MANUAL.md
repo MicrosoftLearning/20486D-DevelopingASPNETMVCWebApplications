@@ -92,7 +92,7 @@ The main tasks for this exercise are as follows:
 
 16. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
 
-17. On the **Delete** page, click **Delete**.
+17. On the **Fish Delete** page, click **Delete**.
 
 18. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
 
@@ -219,7 +219,7 @@ The main tasks for this exercise are as follows:
 
 12. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
 
-13. On the **Delete** page, click **Delete**.
+13. On the **Fish Delete** page, click **Delete**.
 
 14. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
 
@@ -228,51 +228,141 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Update the application and deploy in Microsoft Azure.
 
-1. In the **Underwater** application, in the **Fish** class, add a new property with the following information
+1. In the **Underwater** application, in the **Fish** class, add a new property with the following information:
     - Scope: **public**
     - Name: **FishType**
     - Type: **string**
     - Access: **Read and write**
 
-2. In the **Underwater** application, in the **Create.cshtml**, after the **INPUT** element of **Scientific Name**, Add an **INPUT** element with the following information:
+2. Above the **FishType** property, add a **Display** attribute with the following information:
+    - Name: **"Scientific Name:"**
 
-     - asp-for: **FishType**
+3. Add a new property with the following information:
+    - Scope: **public**
+    - Name: **CommonName**
+    - Type: **string**
+    - Access: **Read and write**
 
-3. In the **Underwater** application, in the **Edit.cshtml**, after the **div** element of **Scientific Name**, add a **DIV** with the following information: 
 
-     - asp-for: **Price**
+4. Above the **CommonName** property, add a **Display** attribute with the following information:
+    - Name: **"Common Name:"**
 
 
-4. Add a **DIV** element with the following information:
+5. In the **Details.cshtml** view, after the **DIV** element with **Scientific Name** fields, add a **DIV** element. 
 
-     - Class: **form-field**
+6. In the new **DIV** element, add a **P** element, with the following information:
+    - Class: **display-label**
+    - Content: **@Html.DisplayNameFor(model => model.CommonName)**
 
-5. In the **DIV** element, add a **LABEL** element with the following information:
+7. After the new **P** element, add a **P** element, with the following information:
+    - Class: **display-field**
+    - Content: **@Html.DisplayFor(model => model.CommonName)**
+  
 
-    - asp-for: **FishType**
+8. In the **Edit.cshtml** view, after the **DIV** element with **Scientific Name** label and **form-group** class, add a **DIV** element, with the following information:
 
-6. Add an **INPUT** element with the following information:
+     - Class: **form-field row**
 
-     - asp-for: **FishType**
+9. In the new **DIV** element, add a **LABEL** element, with the following information:
+    - asp-for: **CommonName**
+    - class: **col-sm-6 col-form-label**
 
-7. After the **INPUT** element with **asp-for="FishType"** helper, add a **SPAN** element with the following information:
-    - asp-validation-for: **FishType**
 
-8. In the **Details.cshtml** file, add a **DIV** element after the **DIV** element for **Scientific Name**, with the following information: 
+10. Add a **DIV** element, with the following information:
+    - class: **col-sm-6**
 
- 	- Class: **display-label**
-    - Content: **@Html.DisplayNameFor(model => model.FishType)**
+11. In the new **DIV** element, add a **INPUT** element, with the following information:
+    - asp-for: **CommonName**
+    - type: **text**
+    - class: **form-control**
+    - placeholder: **Scientific Name**
+    - required: **required**
 
-9. After the **P** element, add a **P** element with the following information:
+12. Add a **SPAN** element, with the following information:
+    - asp-validation-for: **CommonName**
 
-	- Class: **display-field**
-    - Content: ***@Html.DisplayFor(model => model.FishType)**
+13. In the **Create.cshtml** view, after the **DIV** element with **ScientificName** label and **form-group** class, add a **DIV** element, with the following information:
 
-10. Save all the changes.
+     - Class: **form-field row**
 
-11. Run **Add-Migration** for the FishType property.
+14. In the new **DIV** element, add a **LABEL** element, with the following information:
+    - asp-for: **CommonName**
+    - class: **col-sm-6 col-form-label**
 
-12. Open **Solutions Explorer**, right click **Underwater** and click **Publish**.
+15. Add a **DIV** element, with the following information:
+    - class: **col-sm-6**
+
+16. In the new **DIV** element, add a **INPUT** element, with the following information:
+    - asp-for: **CommonName**
+    - type: **text**
+    - class: **form-control**
+    - placeholder: **Scientific Name**
+    - required: **required**
+
+17. Add a **SPAN** element, with the following information:
+    - asp-validation-for: **CommonName**
+
+18. In the **Delete.cshtml** view, after the **DIV** element with **Scientific Name** fields, add a **DIV** element. 
+
+19. In the new **DIV** element, add a **P** element, with the following information:
+    - Class: **display-label**
+    - Content: **@Html.DisplayNameFor(model => model.CommonName)**
+
+20. After the new **P** element, add a **P** element, with the following information:
+    - Class: **display-field**
+    - Content: **@Html.DisplayFor(model => model.CommonName)**
+
+21. In the **AquariumController** class, in the **EditPost** method, in the **TryUpdateModelAsync** method call, pass **f => f.CommonName** as additional parameter. 
+
+22. Open the **Package Manager Console** window.
+
+23. In the **Package Manager Console**, run the following command: **Add-Migration AddFishCommonName**.
+
+24. Run the following command: **Update-Database**.
+
+    >**Note:** In the **Underwater - Microsoft Visual Studio** window, in **Solution Explorer**, under **Migrations**, a new file is created.
+
+25. In **Solution Explorer**, right-click **Underwater**, and then click **Publish**.
+
+26. In the **Pick a publish target** dialog box, verify that **Underwater {unique name}** is selected in the drop down, and then click **Publish**.
+
+
+27. In **Microsoft Edge**, in the menu bar, click **Add Fish**.
+
+28. On the **Add a Fish to Aquarium** page, select the following:
+
+	-  Aquarium: **_&lt;A aquarium of your choice&gt;_**
+    -  Fish Name: **_&lt;A fish name of your choice&gt;_**
+    -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
+    -  Common Name: **_&lt;A common name of your choice&gt;_** 
+    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
+
+29. Click **Add**
+
+30. On the **Dive into Our Fish Species** page, verify the newly submitted details.
+
+31. Select a fish of your choice, and then click **Details**.
+
+    >**Note:** The browser displays the scientific name of the fish. 
+
+32. Verify the fish details, and then click **Back**.
+
+33.  On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Edit**.
+
+34. On the **Edit Fish** page, in the **Scientic Name** text box, type **_&lt;A scientific name of your choice>&gt;_**, and then click **Save**.
+
+35. On the **Dive into Our Fish Species** page, select the fish you edited, and then click **Details**.
+
+36. Verify the newly edited details, and then click **Back**.
+
+37. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
+
+38. On the **Fish Delete** page, click **Delete**.
+
+39. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
+
+40. Close **Microsoft Edge**
+
 
 
 ### Exercise 2: Upload the Image to Azure Blob Storage
