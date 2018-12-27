@@ -2,7 +2,7 @@
 
 # Lesson 2: Deployment to Microsoft Azure
 
-### Demonstration: How to deploy a web application to Microsoft Azure
+### Demonstration: How to Deploy a Web Application to Microsoft Azure
 
 #### Preparation Steps 
 

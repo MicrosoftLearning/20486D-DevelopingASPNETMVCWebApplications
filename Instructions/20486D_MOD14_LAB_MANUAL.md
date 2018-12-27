@@ -4,16 +4,17 @@
 
 #### Scenario
 
-You have been asked to create a web-based aquarium management application for your organization's customers, and deploy this application to Microsoft Azure using AppService. The application should consits of a page showing all the different variety of fish in the aquarium, and should allow the user to edit the details of a fish, and delete a fish.
+In this lab, the students will first deploy a web application to Microsoft Azure. The application will manage an aquarium. Will store and display details of various fish and an image for each fish. The user can add/edit/delete a fish. In the second part of the lab, students will create an Azure storage container. They will then modify the application to store the image of the fish in azure storage container instead of locally. 
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
-- Create App Service in Microsoft Azure
-- Deploy your application to Microsoft Azure
+- Create App Service in Azure.
+- Deploy an application to Azure.
 - Work with Azure SQL database.
-
+- Create a storage container on Azure.
+- Upload images to storage container from an application.
 
 #### Lab Setup
 
@@ -35,20 +36,19 @@ Estimated Time: **60 minutes**
 
 #### Scenario
 
-In this exercise, you will first build and run a simple web application locally. For this you will run migrations for your local db. You will then create an AppService and SQL database in Microsoft Azure. You will configure your application to use the Azure SQL database. You will populate the database using Migrations. After that you will deploy your application to Microsoft Azure. 
+In this exercise, you will first build and run a simple web application locally. For this you will run migrations for your local db. You will then create an AppService and SQL database in Microsoft Azure and configure your application to use the Azure SQL database. Populate the database using Migrations. Finally you will deploy your application to Microsoft Azure.
 
 The main tasks for this exercise are as follows:
 
-1.	Explore and run the application locally.
+1. Explore and run the application locally.
 
-2.	Create a new Web App in Microsoft Azure.
+2. Create a new Web App in Microsoft Azure.
 
-3.	Prepare the application for deployment.
+3. Prepare the application for deployment.
 
-4.	Deploy the application.
+4. Deploy the application.
 
-5.	Run the application in Microsoft Azure.
-
+5. Update the application and deploy in Microsoft Azure.
 
 #### Task 1: Explore and run the application locally
 
@@ -70,7 +70,6 @@ The main tasks for this exercise are as follows:
     -  Fish Name: **_&lt;A fish name of your choice&gt;_**
     -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
     -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click koi.jpg&gt;_**
-
 
 8. Click **Add**
 
@@ -97,7 +96,6 @@ The main tasks for this exercise are as follows:
 18. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
 
 19. Close **Microsoft Edge.**. 
-
 
 #### Task 2: Create a new Web App in Microsoft Azure
 
@@ -136,8 +134,7 @@ The main tasks for this exercise are as follows:
 
 14. In the **Web App + SQL** window, click **Create**.
 
-
-#### Task 3: Prepare the application for deployment.
+#### Task 3: Prepare the application for deployment
 
 1. In **Underwater - Microsoft Visual Studio** window, in the **Underwater.csproj** file, after the **PropertyGroup** element, add a **ItemGroup** element. 
 
@@ -186,7 +183,7 @@ The main tasks for this exercise are as follows:
 
 19. Click **Save**.
 
-#### Task 4: Deploy and explore the application.
+#### Task 4: Deploy the application
 
 1. In Microsoft Visual Studio, open **Solutions Explorer**, right click **Underwater** and click **Publish**
 
@@ -225,8 +222,7 @@ The main tasks for this exercise are as follows:
 
 15. Close **Microsoft Edge**
 
-
-#### Task 5: Update the application and deploy in Microsoft Azure.
+#### Task 5: Update the application and deploy in Microsoft Azure
 
 1. In the **Underwater** application, in the **Fish** class, add a new property with the following information:
     - Scope: **public**
@@ -243,10 +239,8 @@ The main tasks for this exercise are as follows:
     - Type: **string**
     - Access: **Read and write**
 
-
 4. Above the **CommonName** property, add a **Display** attribute with the following information:
     - Name: **"Common Name:"**
-
 
 5. In the **Details.cshtml** view, after the **DIV** element with **Scientific Name** fields, add a **DIV** element. 
 
@@ -258,7 +252,6 @@ The main tasks for this exercise are as follows:
     - Class: **display-field**
     - Content: **@Html.DisplayFor(model => model.CommonName)**
   
-
 8. In the **Edit.cshtml** view, after the **DIV** element with **Scientific Name** label and **form-group** class, add a **DIV** element, with the following information:
 
      - Class: **form-field row**
@@ -266,7 +259,6 @@ The main tasks for this exercise are as follows:
 9. In the new **DIV** element, add a **LABEL** element, with the following information:
     - asp-for: **CommonName**
     - class: **col-sm-6 col-form-label**
-
 
 10. Add a **DIV** element, with the following information:
     - class: **col-sm-6**
@@ -326,7 +318,6 @@ The main tasks for this exercise are as follows:
 
 26. In the **Pick a publish target** dialog box, verify that **Underwater {unique name}** is selected in the drop down, and then click **Publish**.
 
-
 27. In **Microsoft Edge**, in the menu bar, click **Add Fish**.
 
 28. On the **Add a Fish to Aquarium** page, select the following:
@@ -363,11 +354,11 @@ The main tasks for this exercise are as follows:
 
 40. Close **Microsoft Edge**
 
+>**Results**: After completing this exercise, you will be able to deploy your application to Microsoft Azure.
 
+### Exercise 2: Upload an Image to Azure Blob Storage
 
-### Exercise 2: Upload the Image to Azure Blob Storage
-
-In this exercise, you will modify the web application you created, to start storing the images in Azure Blob Storage. The images will also be displayed from the storage using the URL generated for each image. The image URL will be stored in the database. For this you will run migrations. You will then create an Azure Storage Account in Microsoft Azure. You will then create a container in the storage account. You will then configure your application to use the Azure Storage Account. You will then change the code to . After that you will deploy your application to Microsoft Azure. 
+In this exercise, you will create an Azure Storage Account in Microsoft Azure and a container in the storage account, and then modify the web application you created, to start storing the images in Azure Blob Storage. The images will also be displayed from the storage using the URL generated for each image. Also, you will change the code to upload images to the container. Finally, you will deploy your application to Microsoft Azure.
 
 The main tasks for this exercise are as follows:
 
@@ -378,7 +369,6 @@ The main tasks for this exercise are as follows:
 3.	Write the code to upload an image.
 
 4.	Deploy and Run the application in Microsoft Azure
-
 
 #### Task 1: Create a blob storage account
 
@@ -410,8 +400,7 @@ The main tasks for this exercise are as follows:
 
 13. In the **New Container** window, in the **Public Access Level** dropdown, select **Blob(anonymous read access for blobs only)**, and then click **OK**.
 
-
-#### Task 2:  Prepare the application for working with Azure Storage.
+#### Task 2:  Prepare the application for working with Azure Storage
  
 1. In the **Underwater – Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Underwater**, point to Add, and then click **Connected Service**.
 
@@ -434,8 +423,7 @@ The main tasks for this exercise are as follows:
         - Property: **"ContainerName"**
         - Type: **aquarium**
     
-
-#### Task 3: Write the code to upload an image.
+#### Task 3: Write the code to upload an image
 
 1. In the **Underwater** application, in the **Fish** class, add a new property with the following information
     - Scope: **public**
@@ -450,7 +438,6 @@ The main tasks for this exercise are as follows:
 4. In the **IF** statement code block, add a **DIV** element with the following information:
     - Class: **photo-display**
 
- 
 5. In the new **DIV** element, add a **IMG** element with the following information:
     - Class: **photo-display-img**
     - Src: **@Model.ImageURL**
@@ -569,8 +556,8 @@ The main tasks for this exercise are as follows:
 
 39. In the **UploadImageAsync** method, create a variable named **blob** of type **CloudBlockBlob** and assign it with the value of **_container.GetBlockBlobReference(Path.GetFileName(photo.FileName))**
 
-40.  Call the **blob.UploadFromStreamAsync** method using the **await** keyword. Pass **photo.OpenReadStream()**
-as a parameter to the **blob.UploadFromStreamAsync** method. 
+40. Call the **blob.UploadFromStreamAsync** method using the **await** keyword. Pass **photo.OpenReadStream()**
+    as a parameter to the **blob.UploadFromStreamAsync** method. 
 
 41. Return the **Task&lt;string&gt;** result using the **blob.Uri.ToString** method.
 
@@ -627,7 +614,6 @@ as a parameter to the **blob.UploadFromStreamAsync** method.
 
     >**Note:** In the **Underwater - Microsoft Visual Studio** window, in **Solution Explorer**, under **Migrations**, a new file gets created.
 
-
 #### Task 4: Deploy and Run the application in Microsoft Azure
 
 1. In **Solution Explorer**, right-click **Underwater**, and then click **Publish**.
@@ -671,7 +657,6 @@ as a parameter to the **blob.UploadFromStreamAsync** method.
 16. Close **Microsoft Edge** window.
 
 >**Results:** After completing this exercise, you will be able to develop applications that use Azure Storage Blobs.
-
 
 ©2018 Microsoft Corporation. All rights reserved.
 
