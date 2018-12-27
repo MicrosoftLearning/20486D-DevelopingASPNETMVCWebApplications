@@ -546,20 +546,20 @@ The main tasks for this exercise are as follows:
 
 32. In the **UnderwaterRepository** constructor, initialize the **_configuration** field with the value of the **configuration** parameter.
 
-32. Create a variable named **connectionString** of type **string** and assign it with the value of **_configuration.GetConnectionString("AzureStorageConnectionString-1")**
+33. Create a variable named **connectionString** of type **string** and assign it with the value of **_configuration.GetConnectionString("AzureStorageConnectionString-1")**
 
-33. Create a variable named **containerName** of type **string** and assign it with the value of **_configuration.GetValue&lt;string&gt;("ContainerSettings:ContainerName")**
+34. Create a variable named **containerName** of type **string** and assign it with the value of **_configuration.GetValue&lt;string&gt;("ContainerSettings:ContainerName")**
 
-34. Create a variable named **storageAccount** of type **CloudStorageAccount** and assign it with the value of **CloudStorageAccount.Parse(connectionString)**
+35. Create a variable named **storageAccount** of type **CloudStorageAccount** and assign it with the value of **CloudStorageAccount.Parse(connectionString)**
 
-35. Create a variable named **blobClient** of type **CloudBlobClient** and assign it with the value of **storageAccount.CreateCloudBlobClient()**
+36. Create a variable named **blobClient** of type **CloudBlobClient** and assign it with the value of **storageAccount.CreateCloudBlobClient()**
 
-36. Assign the **_container** field, with the value of **blobClient.GetContainerReference(containerName)**.
+37. Assign the **_container** field, with the value of **blobClient.GetContainerReference(containerName)**.
 
     >**Note:** Make sure the parameter **AzureStorageConnectionString-1** is the same as the name specified in **appsettings.json**.
 
-37. Add a method with the following information:
-    - Scope: **photo**
+38. Add a method with the following information:
+    - Scope: **private**
     - Modifier: **async**
     - Return type: **Task&lt;string&gt;**
     - Name: **UploadImageAsync**
@@ -567,20 +567,68 @@ The main tasks for this exercise are as follows:
          - Type: **IFormFile**
          - Name: **photo**
 
-38. In the **UploadImageAsync** method, create a variable named **blob** of type **CloudBlockBlob** and assign it with the value of **_container.GetBlockBlobReference(Path.GetFileName(photo.FileName))**
+39. In the **UploadImageAsync** method, create a variable named **blob** of type **CloudBlockBlob** and assign it with the value of **_container.GetBlockBlobReference(Path.GetFileName(photo.FileName))**
 
-39.  Call the **blob.UploadFromStreamAsync** method using the **await** keyword. Pass **photo.OpenReadStream()**
+40.  Call the **blob.UploadFromStreamAsync** method using the **await** keyword. Pass **photo.OpenReadStream()**
 as a parameter to the **blob.UploadFromStreamAsync** method. 
 
-40. Return the **Task&lt;string&gt;** result using the **blob.Uri.ToString** method.
+41. Return the **Task&lt;string&gt;** result using the **blob.Uri.ToString** method.
+
+42. Add a method with the following information:
+    - Scope: **private**
+    - Modifier: **async**
+    - Return type: **Task&lt;bool&gt;**
+    - Name: **DeleteImageAsync**
+    - Parameter: 
+         - Type: **string**
+         - Name: **PhotoFileName**
+
+43. In the **DeleteImageAsync** method, create a variable named **blob** of type **CloudBlockBlob** and assign it with the value of **_container.GetBlockBlobReference(PhotoFileName)**
+
+44. Call the **blob.DeleteAsync** method using the **await** keyword.
+
+45. Return the **true** as **Task&lt;bool&gt;** result.
+
+46. In the **AddFish** method, remove te contents of the **IF** statement.
+
+47. In the **IF** statement, create a variable named **imageURL** of type **string** and assign it with the value of **UploadImageAsync(fish.PhotoAvatar).GetAwaiter().GetResult()**.
+
+48. Assign to the **ImageURL** property of the **fish** parameter the value of **imageURL**.
+
+49. Assign to the **ImageMimeType** property of the **fish** parameter the value of **fish.PhotoAvatar.ContentType**.
+
+50. Assign to the **ImageName** property of the **fish** parameter the value of **Path.GetFileName(fish.PhotoAvatar.FileName)**.
+
+51. Call the **Add** method of the **_context** property. Pass **fish** as a parameter to the **Add** method. 
+
+52. Call the **SaveChanges** method of the **_context** property.
+
+53. Remove the contents of the **RemoveFish** method.
+
+54. In the **RemoveFish** method, create a variable named **fish** of type **var** and assign it with the value of **_context.fishes.SingleOrDefault(f => f.FishId == id)**
+
+55. Create an **IF** statement that checks that the value of **Model.ImageURL** is **NOT NULL**.
+
+56.  In the **IF** statement code block, call the **DeleteImageAsync** method. Pass **fish.ImageName** as a parameter to the **DeleteImageAsync** method. 
+
+57. Chain a **GetAwaiter** method call to the **DeleteImageAsync** function call.
+
+58. Chain a **GetResult** method call to the **GetAwaiter** function call.
+
+59.  Call the **Remove** method of the **_context.fishes** property. Pass **fish** as a parameter to the **Remove** method. 
+
+60. Call the **SaveChanges** method of the **_context** property.
+
+61. Save all the changes.
+
+62. In the **Package Manager Console**, run the following command: **Add-Migration AddFishImageURL**.
+
+63. Run the following command: **Update-Database**.
+
+    >**Note:** In the **Underwater - Microsoft Visual Studio** window, in **Solution Explorer**, under **Migrations**, a new file gets created.
 
 
-17. Save all the changes.
-
-18. Run **Add-Migration** for the ImageURL property.
-
-
-#### Task 4:	Deploy and Run the application in Microsoft Azure
+#### Task 4: Deploy and Run the application in Microsoft Azure
 
 1. In **Solution Explorer**, right-click **Underwater**, and then click **Publish**.
 
