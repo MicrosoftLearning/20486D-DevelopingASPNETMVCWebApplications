@@ -76,7 +76,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
     > __Product price including tax: 5 * 1.2__<br>
     > <br>
     > **Product name: Rice**<br>
-    > __Product price including tax: 3 * 1.__"
+    > __Product price including tax: 3 * 1.2__"
     
 15. In Microsoft Edge, click **Close**.
 
