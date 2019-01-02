@@ -10,7 +10,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod05\Democode\01_RazorSyntaxExample_begin**, and then double-click **RazorSyntaxExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod05\Democode\01_RazorSyntaxExample_begin**, and then double-click **RazorSyntaxExample.sln**.
 
 2. In the **RazorSyntaxExample - Microsoft Visual Studio** window, in Solution Explorer, under **RazorSyntaxExample**, expand **Controllers**, and then click **ProductController.cs**.
 
@@ -114,7 +114,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin**, and then double-click **HTMLHelpersExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin**, and then double-click **HTMLHelpersExample.sln**.
 
 2. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
@@ -234,7 +234,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod05\Democode\03_TagHelpersExample_begin**, and then double-click **TagHelpersExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod05\Democode\03_TagHelpersExample_begin**, and then double-click **TagHelpersExample.sln**.
 
 2. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
