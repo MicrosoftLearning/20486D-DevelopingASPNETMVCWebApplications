@@ -45,7 +45,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 1: Add a view to show all the cities
 
-1. From **Allfiles\Mod05\Labfiles\01_CitiesWebsite_begin**, open the **CitiesWebsite.sln**. 
+1. From **[Repository Root]\Allfiles\Mod05\Labfiles\01_CitiesWebsite_begin**, open the **CitiesWebsite.sln**. 
 
 2. In the **CityProvider** constructor, initialize the **_cities** field by using the **CityInitializer** method.
 
