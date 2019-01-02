@@ -10,7 +10,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **[Repository Root]Allfiles\Mod05\Democode\01_RazorSyntaxExample_begin**, and then double-click **RazorSyntaxExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod05\Democode\01_RazorSyntaxExample_begin**, and then double-click **RazorSyntaxExample.sln**.
 
 2. In the **RazorSyntaxExample - Microsoft Visual Studio** window, in Solution Explorer, under **RazorSyntaxExample**, expand **Controllers**, and then click **ProductController.cs**.
 
