@@ -6,23 +6,23 @@
 
 #### Preparation Steps 
 
-1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 #### Demonstration Steps
 
 1. Navigate to **Allfiles\Mod08\Democode\01_LayoutExample_begin**, and then double-click **LayoutExample.sln**.
 
-2. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
+2. In the **LayoutExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Views**, point to **Add**, and then click **New Item**.
 
-3. In **Add New Item – LayoutExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
+3. In the **Add New Item – LayoutExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
 
-4. In **Add New Item – LayoutExample** dialog box, in the result pane, click **Razor View Start**, and then click **Add**.
+4. In the **Add New Item – LayoutExample** dialog box, in the result pane, click **Razor View Start**, and then click **Add**.
 
-5. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
+5. In the **LayoutExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Views**, point to **Add**, and then click **New Folder**.
 
-6. In the **NewFolder** text box, type **Shared**, and then press Enter.
+6. In the **NewFolder** box, type **Shared**, and then press Enter.
 
-7. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
+7. In the **LayoutExample - Microsoft Visual Studio** window, in Solution Explorer, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
 
 8. In **Add New Item – LayoutExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
 
@@ -45,7 +45,7 @@
        </div>
 ```
 
-13. Place the cursor before the **<** (less then) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
+13. Place the cursor before the **<** (less than) sign of the **&lt;div&gt;** tag, press Enter, press the Up Arrow key, and then type the following code:
   ```cs
        <h1>Welcome to the University</h1>
 ```
@@ -62,18 +62,18 @@
        @RenderSection("footer", false)
 ```
 
-16. In **Solution Explorer**, expand **Controllers**, and then click **StudentController.cs**.
+16. In Solution Explorer, expand **Controllers**, and then click **StudentController.cs**.
 
 17. In the **StudentController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-18. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
+18. In the **Add MVC View** dialog box, ensure that the value in the **View name** box is **Index**.  
 
 19. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-20. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+20. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is cleared and the **Use a layout page** check box is selected, and then click **Add**.
 
 21. In the **Index.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
   ```cs
@@ -119,18 +119,18 @@
            </table>
        </div>
 ```
-24. In **Solution Explorer**, under **Controllers**, click **StudentController.cs**.
+24. In Solution Explorer, under **Controllers**, click **StudentController.cs**.
 
 25. In the **StudentController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Details(int? id)
 ```
 
-26. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Details**.  
+26. In the **Add MVC View** dialog box, ensure that the value in the **View name** box is **Details**.  
 
 27. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-28. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+28. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is cleared and the **Use a layout page** check box is selected, and then click **Add**.
 
 29. In the **Details.cshtml** code window, place the cursor at the beginning of the document, type the following code, and then press Enter.
   ```cs
@@ -216,13 +216,13 @@
 
 35. In the **LayoutExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser displays the **Index.cshtml** file combined with the **_Layout.cshtml** file.
+      >**Note**: The browser displays the **Index.cshtml** file combined with the **_Layout.cshtml** file.
 
 36. On the **Welcome to the University** page, select a student of your choice, and then click **Details**.
 
 37. On the **Student details** page, examine the student details, and then click **Back to List**.
       
-38. In **Microsoft Edge**, click **Close**.
+38. In Microsoft Edge, click **Close**.
 
 39. In the **LayoutExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -232,13 +232,13 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 #### Demonstration Steps
 
 1. Navigate to **Allfiles\Mod08\Democode\02_NpmExample_begin**, and then double-click **NpmExample.sln**.
 
-2. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **NpmExample**, point to **Add**, and then click **New Item**.
+2. In the **NpmExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **NpmExample**, point to **Add**, and then click **New Item**.
 
 3. In the **Add New Item - NpmExample** dialog box, in the search box, type **npm**, and then press Enter.
 
@@ -259,21 +259,21 @@
 
 7. In the **NpmExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save package.json**.
 
-8. Wait for the **Microsoft Visual Studio** dialog box to appears, and then click **Yes to All**.
+8. Wait for the **Microsoft Visual Studio** dialog box to appear, and then click **Yes to All**.
 
-    >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package.
+    >**Note**: In Solution Explorer, under **Dependencies**, a new folder named **npm** has been added, which contains the **jquery** package.
 
-9. In **Solution Explorer** menu bar, click **Show All Files**.
+9. In the Solution Explorer menu bar, click **Show All Files**.
 
-      >**Note:** In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added, which contains the **jquery** package.
+      >**Note**: In the **NpmExample - Microsoft Visual Studio** window, in Solution Explorer, a new folder named **node_modules** has been added, which contains the **jquery** package.
       
-10. In **Solution Explorer**, right-click **NpmExample**, point to **Add**, and then click **New Folder**.
+10. In Solution Explorer, right-click **NpmExample**, point to **Add**, and then click **New Folder**.
 
-11. In the **NewFolder** text box, type **Middleware**, and then press Enter.
+11. In the **NewFolder** box, type **Middleware**, and then press Enter.
 
-12. In **Solution Explorer**, right-click **Middleware**, point to **Add**, and then click **Class**.
+12. In Solution Explorer, right-click **Middleware**, point to **Add**, and then click **Class**.
 
-13. In the **Add New Item – NpmExample** dialog box, in the **Name** text box, type **ApplicationBuilderExtensions**, and then click **Add**.
+13. In the **Add New Item – NpmExample** dialog box, in the **Name** box, type **ApplicationBuilderExtensions**, and then click **Add**.
 
 14. In the **ApplicationBuilderExtensions.cs** code window, locate the following code:
   ```cs
@@ -311,7 +311,7 @@
           return applicationBuilder;
        }
 ```
-19. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+19. In the **NpmExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
 20. In the **Startup.cs** code window, locate the following code:
   ```cs
@@ -335,7 +335,7 @@
        app.UseNodeModules(env.ContentRootPath);
 ```
 
-24. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
+24. In the **NpmExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
 
 25. In the **_Layout.cshtml** file, locate the following code:
   ```cs
@@ -348,18 +348,18 @@
        <script src="~/js/jquery-function.js"></script>
 ```
 
-27. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
+27. In the **NpmExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Controllers**, and then click **HomeController.cs**.
 
 28. In the **HomeController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-29. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
+29. In the **Add MVC View** dialog box, ensure that the value in the **View name** box is **Index**.  
 
 30. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-31. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+31. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is cleared and the **Use a layout page** check box is selected, and then click **Add**.
 
 32. In the **Index.cshtml** code window, select the following code:
   ```cs
@@ -375,15 +375,15 @@
        </div>
 ```
 
-34. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+34. In the **NpmExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
 
-35. In the **NewFolder** text box, type **css**, and then press Enter.
+35. In the **NewFolder** box, type **css**, and then press Enter.
 
-36. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **css**, point to **Add**, and then click **New Item**.
+36. In the **NpmExample - Microsoft Visual Studio** window, in Solution Explorer, under **wwwroot**, right-click **css**, point to **Add**, and then click **New Item**.
 
 37. In the **Add New Item – NpmExample** dialog box, click **Web**, and then, in the result pane, click **Style Sheet**.
 
-38. In the **Add New Item – NpmExample** dialog box, in the **Name** text box, type **style-example**, and then click **Add**.
+38. In the **Add New Item – NpmExample** dialog box, in the **Name** box, type **style-example**, and then click **Add**.
 
 39. In the **style-example.css** code window, select the following code: 
   ```cs
@@ -423,7 +423,7 @@
        }
 ```
 
-41. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **Shared**, click **_Layout.cshtml**.
+41. In the **NpmExample - Microsoft Visual Studio** window, in Solution Explorer, under **Views**, under **Shared**, click **_Layout.cshtml**.
 
 42. In the **_Layout.cshtml** file, locate the following code:
   ```cs
@@ -439,25 +439,25 @@
 
 45. In the **NpmExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-46. In **Microsoft Edge**, click **Run jQuery Function**.
+46. In Microsoft Edge, click **Run jQuery Function**.
       
-47. In **Microsoft Edge**, click **Close**.
+47. In Microsoft Edge, click **Close**.
 
 48. In the **NpmExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Using jQuery
 
-### Demonstration: How to Modify HTML Elements using jQuery
+### Demonstration: How to Modify HTML Elements by using jQuery
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin\JQueryExample**, copy the address in the address bar.
+1. In **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin\JQueryExample**, and then copy the address in the address bar.
 
-2. Go to **Start**, and then type **cmd**.
+2. Click **Start**, and then type **cmd**.
 
 3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
@@ -465,32 +465,32 @@
 
 5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
-       cd  {copied folder path}
+       cd *{copied folder path}*
 ```
 
->**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
+>**Note**: If the *{copied folder path}* is different from the disk drive where the command prompt is located, then you should type *{disk drive}:* before typing the **cd**  *{copied folder path}* command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
        npm install
 ```
->**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+>**Note**: If warning messages are shown at the command prompt you can ignore them.
 
 7. Close the window.
 
-8. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin** and then double-click **JQueryExample.sln**.
+8. In the **File Explorer** window, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
 
-    >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package as a result of executing the command **npm install**.
+    >**Note**: In Solution Explorer, under **Dependencies**, a new folder named **npm** has been added, which contains the **jquery** package as a result of executing the **npm install** command.
 
-9. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+9. In the **JQueryExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
 
-10. In the **NewFolder** text box, type **js**, and then press Enter.
+10. In the **NewFolder** box, type **js**, and then press Enter.
 
-11. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+11. In the **JQueryExample – Microsoft Visual Studio** window, in Solution Explorer, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
 
 12. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
 
-13. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **jquery-functions**, and then click **Add**.
+13. In the **Add New Item – JQueryExample** dialog box, in the **Name** box, type **jquery-functions**, and then click **Add**.
 
 14. In the **jquery-functions.js** code window, type the following code: 
   ```cs
@@ -525,7 +525,7 @@
        });
 ```
 
-15. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
+15. In the **JQueryExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Shared**, and then click **_Layout.cshtml**.
 
 16. In the **_Layout.cshtml** file, locate the following code:
   ```cs
@@ -537,18 +537,18 @@
        <script src="~/js/jquery-functions.js"></script>
 ```
 
-18. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **GradeBookController.cs**.
+18. In the **JQueryExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Controllers**, and then click **GradeBookController.cs**.
 
 19. In the **GradeBookController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-20. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.  
+20. In the **Add MVC View** dialog box, ensure that the value in the **View name** box is **Index**.  
 
 21. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-22. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+22. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** box is cleared and the **Use a layout page** check box is selected, and then click **Add**.
 
 23. In the **Index.cshtml** code window, select the following code:
   ```cs
@@ -615,9 +615,9 @@
 
 28. In the **JQueryExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-29. In **Microsoft Edge**, click **Apply JQuery**.
+29. In Microsoft Edge, click **Apply JQuery**.
       
-30. In **Microsoft Edge**, click **Close**.
+30. In Microsoft Edge, click **Close**.
 
 31. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
