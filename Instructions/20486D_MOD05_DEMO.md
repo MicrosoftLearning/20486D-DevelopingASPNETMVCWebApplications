@@ -236,7 +236,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 1. Navigate to **Allfiles\Mod05\Democode\03_TagHelpersExample_begin**, and then double-click **TagHelpersExample.sln**.
 
-2. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+2. In the **TagHelpersExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Home**, and then click **Index.cshtml**.
 
 3. In the **Index.cshtml** code window, locate the following code:
 ```cs
