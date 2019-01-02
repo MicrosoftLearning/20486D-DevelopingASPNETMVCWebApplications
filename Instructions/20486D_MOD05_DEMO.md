@@ -491,6 +491,8 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 1. Navigate to **Allfiles\Mod05\Democode\05_ViewComponentsExample_begin**, and then double-click **ViewComponentsExample.sln**.
 
+    >**Note**: If a **Security Warning for RazorSyntaxExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
 2. In the **ViewComponentsExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **ViewComponentsExample**, point to **Add**, and then click **New Folder**.
 
 3. In the **NewFolder** box, type **ViewComponents**, and then press Enter.
