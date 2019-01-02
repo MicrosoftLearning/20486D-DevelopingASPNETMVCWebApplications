@@ -47,6 +47,8 @@ The main tasks for this exercise are as follows:
 
 1. From **[Repository Root]\Allfiles\Mod05\Labfiles\01_CitiesWebsite_begin**, open the **CitiesWebsite.sln**. 
 
+    >**Note**: If Security Warning for CitiesWebsite dialog box appears clear Ask me for every project in this solution and then click OK.
+
 2. In the **CityProvider** constructor, initialize the **_cities** field by using the **CityInitializer** method.
 
 3. In the **City** constructor, initialize the **Country** property with the value of the **country** parameter.
