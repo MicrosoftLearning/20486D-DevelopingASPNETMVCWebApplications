@@ -116,6 +116,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 #### Demonstration Steps
 
 1. Navigate to **[Repository Root]\Allfiles\Mod05\Democode\02_HTMLHelpersExample_begin**, and then double-click **HTMLHelpersExample.sln**.
+    >**Note**: If a **Security Warning for HTMLHelpersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 2. In the **HTMLHelpersExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
