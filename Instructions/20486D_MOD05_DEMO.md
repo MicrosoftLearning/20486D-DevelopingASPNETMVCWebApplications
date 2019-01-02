@@ -489,7 +489,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod05\Democode\05_ViewComponentsExample_begin**, and then double-click **ViewComponentsExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod05\Democode\05_ViewComponentsExample_begin**, and then double-click **ViewComponentsExample.sln**.
 
 2. In the **ViewComponentsExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **ViewComponentsExample**, point to **Add**, and then click **New Folder**.
 
