@@ -382,7 +382,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod05\Democode\04_PartialViewsExample_begin**, and then double-click **PartialViewsExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod05\Democode\04_PartialViewsExample_begin**, and then double-click **PartialViewsExample.sln**.
 
 2. In the **PartialViewsExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Services**, and then click **Person.cs**.
 
