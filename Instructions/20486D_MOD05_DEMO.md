@@ -564,7 +564,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 23. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 24. In the **ViewComponentsExample – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
-    >**Note**: The browser displays a table with cards. Each card contains information about a person, including: First Name, Last Name, Address, and a Phone.
+    >**Note**: The browser displays a table with cards. Each card contains information about a person, including: First Name, Last Name, Residance, and a Phone.
      
 25. In Microsoft Edge, click **Close**.
 
