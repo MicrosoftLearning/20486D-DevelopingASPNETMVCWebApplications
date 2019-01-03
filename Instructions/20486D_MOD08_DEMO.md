@@ -482,7 +482,7 @@
 
 7. Close the window.
 
-8. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin** and then double-click **JQueryExample.sln**.
+8. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod08\Democode\03_JQueryExample_begin** and then double-click **JQueryExample.sln**.
 
     >**Note**: If a **Security Warning for JQueryExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
