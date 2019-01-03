@@ -288,7 +288,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Style the photos section in Index.cshtml
 
-Add a **.photo-index-card** selector with the following properties:
+1. Add a **.photo-index-card** selector with the following properties:
 
 	- background-color: **#ffffff**
 	- padding: **0**
