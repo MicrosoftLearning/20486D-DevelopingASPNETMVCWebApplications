@@ -204,6 +204,8 @@ The main tasks for this exercise are as follows:
 
 3. In the menu bar, click **Visitor Info**.
 
+    >**Note**: Examine the browser content.
+	
 4. In the menu bar, click **Tickets**.
 
 5. Close Microsoft Edge.
