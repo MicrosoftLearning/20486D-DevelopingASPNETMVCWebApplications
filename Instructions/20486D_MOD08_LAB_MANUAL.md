@@ -317,6 +317,7 @@ Add a **.photo-index-card** selector with the following properties:
 	- line-height: **20px**
 	- border: **1px solid #ccc6c6**
 	- background-color: **#f9f6f6**
+	- width: **100%**
 
 4. Add a **input.submit-btn** selector with the following properties:
 
