@@ -457,7 +457,7 @@
 
 1. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin\JQueryExample**, copy the address in the address bar.
 
-2. Go to **Start**, and then type **cmd**.
+2. Go to **Start** type **cmd**, and then press Enter.
 
 3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
