@@ -200,6 +200,8 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
+    >**Note**: The browser displays the **Index.cshtml** file content, but the HTML content is not designed by a CSS file yet.
+
 3. In the menu bar, click **Visitor Info**.
 
 4. In the menu bar, click **Tickets**.
