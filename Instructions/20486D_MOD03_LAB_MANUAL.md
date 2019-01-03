@@ -484,7 +484,7 @@ The main tasks for this exercise are the following:
 
 4. In the **Startup** class, cut the **app.Run** middleware.
 
-5. Paste the **app.Run** middleware, at the beginning of the **Configure* method code block.
+5. Paste the **app.Run** middleware, at the beginning of the *Configure* method code block.
 
 6. Save all the changes.
 
