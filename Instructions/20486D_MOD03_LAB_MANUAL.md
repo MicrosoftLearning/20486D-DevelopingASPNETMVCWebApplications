@@ -51,7 +51,7 @@ The main tasks for this exercise are the following:
 1. Open Microsoft Visual Studio 2017 and create a new ASP.NET Core web application with following information:
 
     - Name: **PollBall**
-    - Location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+    - Location: **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin**
     - Create directory for solution: **True**
     - Project template: **Empty**
     - Enable Docker Support: **False**
