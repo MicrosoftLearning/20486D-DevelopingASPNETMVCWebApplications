@@ -181,10 +181,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Add existing views to the web application
 
-Add the existing **.cshtml** files to the **ZooSite** project, with the following information:
+1. Add the existing **.cshtml** files to the **ZooSite** project, with the following information:
 
-    - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
-	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSite\Views**
+    - Source location: **[Repository Root]\Allfiles\Mod08\Labfiles\ZooViews**
+	- Target location: **[Repository Root]\Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSite\Views**
 
 
 #### Task 5: Add a section to the layout
