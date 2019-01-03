@@ -140,7 +140,7 @@ The main tasks for this exercise are the following:
 
 ####	Task 5: Enable working with static files
 
-In the **Startup** class, in the **Configure** method code block, call the **UseStaticFiles** method of the *app* parameter.
+1. In the **Startup** class, in the **Configure** method code block, call the **UseStaticFiles** method of the *app* parameter.
 
 
 ####	Task 6: Run the application – content of the HTML file is displayed
@@ -173,7 +173,7 @@ In the **Startup** class, in the **Configure** method code block, call the **Use
 
 ####	Task 7: Add an HTML file outside of the wwwroot folder
 
-Copy the **test.html** file to the **PollBall** project with the following information:
+1. Copy the **test.html** file to the **PollBall** project with the following information:
     - Source location: **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin**
     - Target location:  **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall**
 

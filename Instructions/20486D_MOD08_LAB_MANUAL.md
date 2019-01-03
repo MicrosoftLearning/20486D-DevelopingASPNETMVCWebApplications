@@ -48,7 +48,9 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 1: Create a layout
-1. From **Allfiles\Mod08\Labfiles\01_ZooSite_begin**, open **ZooSite.sln**.
+1. From **[Repository Root]\Allfiles\Mod08\Labfiles\01_ZooSite_begin**, open **ZooSite.sln**.
+
+    >**Note**: If a **Security Warning for ZooSite** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. Create a new folder with the following information:
 
