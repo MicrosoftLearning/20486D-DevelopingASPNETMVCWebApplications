@@ -244,7 +244,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Link the layout to the CSS file
 
-In the **_Layout.cshtml** file, in the **HEAD** element, add a **LINK** element with the following information:
+1. In the **_Layout.cshtml** file, in the **HEAD** element, add a **LINK** element with the following information:
 
 	- Type: **text/css**
 	- Rel: **stylesheet**
