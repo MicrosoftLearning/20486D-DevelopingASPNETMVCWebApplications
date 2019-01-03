@@ -12,6 +12,8 @@
 
 1. Navigate to **Allfiles\Mod08\Democode\01_LayoutExample_begin**, and then double-click **LayoutExample.sln**.
 
+    >**Note**: If a **Security Warning for LayoutExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
 2. In the **LayoutExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Item**.
 
 3. In **Add New Item – LayoutExample** dialog box, in the navigation pane, under **Installed**, expand **ASP.NET Core**, and then click **Web**.
