@@ -10,7 +10,7 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod08\Democode\01_LayoutExample_begin**, and then double-click **LayoutExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod08\Democode\01_LayoutExample_begin**, and then double-click **LayoutExample.sln**.
 
     >**Note**: If a **Security Warning for LayoutExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
