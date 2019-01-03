@@ -193,7 +193,6 @@ The main tasks for this exercise are as follows:
 
 2. Pass **"Scripts"** and **false** as parameters to the **RenderSection** method.
 
-
 #### Task 6: Run the application
 
 1. Save all the changes.
@@ -209,7 +208,7 @@ The main tasks for this exercise are as follows:
 4. In the menu bar, click **Tickets**.
 
     >**Note**: Examine the browser content.
-	
+
 5. Close Microsoft Edge.
 
 >**Results**: After completing this exercise, you will be able to add a layout and link views to it. You will also be able to use the **_ViewStart** file in the web application.  
@@ -311,13 +310,19 @@ The main tasks for this exercise are as follows:
 
 	- text-align: **left**
 
-2. Add a **.info label** selector with the following properties:
+2. Add a **.info .form-field div** selector with the following properties:
+
+	- width: **172px**
+	- text-align: **right**
+	- float: **right**
+
+3. Add a **.info label** selector with the following properties:
 
 	- width: **118px**
 	- display: **inline-block**
 	- margin-bottom: **10px**
 
-3. Add a **.info input** selector with the following properties:
+4. Add a **.info input** selector with the following properties:
 
 	- border-radius: **2px**
 	- line-height: **20px**
@@ -325,7 +330,7 @@ The main tasks for this exercise are as follows:
 	- background-color: **#f9f6f6**
 	- width: **100%**
 
-4. Add a **input.submit-btn** selector with the following properties:
+5. Add a **input.submit-btn** selector with the following properties:
 
 	- width: **100px**
 	- margin-top: **12px**
@@ -335,7 +340,7 @@ The main tasks for this exercise are as follows:
 	- box-shadow: **inset 0px 0px 4px #b77006**
 	- border: **1px solid #a59797**
 
-5. Add a **input.submit-btn[disabled]** selector with the following properties:
+6. Add a **input.submit-btn[disabled]** selector with the following properties:
 
 	- opacity: **0.8**
 	- background-color: **whitesmoke**
