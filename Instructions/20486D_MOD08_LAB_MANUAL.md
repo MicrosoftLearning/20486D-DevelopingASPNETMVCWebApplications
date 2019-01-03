@@ -205,9 +205,11 @@ The main tasks for this exercise are as follows:
 3. In the menu bar, click **Visitor Info**.
 
     >**Note**: Examine the browser content.
-	
+
 4. In the menu bar, click **Tickets**.
 
+    >**Note**: Examine the browser content.
+	
 5. Close Microsoft Edge.
 
 >**Results**: After completing this exercise, you will be able to add a layout and link views to it. You will also be able to use the **_ViewStart** file in the web application.  
