@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 1: Create a layout
-1. From **Allfiles\Mod08\Labfiles\01_ZooSite_begin**, open **ZooSite.sln**.
+1. From **[Repository Root]\Allfiles\Mod08\Labfiles\01_ZooSite_begin**, open **ZooSite.sln**.
 
 2. Create a new folder with the following information:
 
