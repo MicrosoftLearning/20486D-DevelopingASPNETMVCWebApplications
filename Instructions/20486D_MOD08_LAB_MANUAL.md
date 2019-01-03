@@ -406,7 +406,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Link a view to the JavaScript file
 
-In the **BuyTickets** view, in the **Scripts** section code block, add a **SCRIPT** element with the following information:
+1. In the **BuyTickets** view, in the **Scripts** section code block, add a **SCRIPT** element with the following information:
 
 	- Src: **~/js/form-functions.js**
 
