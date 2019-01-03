@@ -240,6 +240,8 @@
 
 1. Navigate to **Allfiles\Mod08\Democode\02_NpmExample_begin**, and then double-click **NpmExample.sln**.
 
+    >**Note**: If a **Security Warning for NpmExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
 2. In the **NpmExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **NpmExample**, point to **Add**, and then click **New Item**.
 
 3. In the **Add New Item - NpmExample** dialog box, in the search box, type **npm**, and then press Enter.
