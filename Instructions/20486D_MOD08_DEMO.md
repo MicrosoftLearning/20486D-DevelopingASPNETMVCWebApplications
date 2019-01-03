@@ -459,7 +459,7 @@
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin\JQueryExample**, copy the address in the address bar.
+1. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod08\Democode\03_JQueryExample_begin\JQueryExample**, copy the address in the address bar.
 
 2. Go to **Start** type **cmd**, and then press Enter.
 
