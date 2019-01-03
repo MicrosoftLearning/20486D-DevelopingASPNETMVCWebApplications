@@ -340,6 +340,8 @@ Add a **.photo-index-card** selector with the following properties:
 
 2. Start the application without debugging.
 
+    >**Note**: The browser displays the content of the **Index.cshtml** file, with HTML content that is designed by a CSS file.
+
 3. In the **Zoo Attractions** page, in the **Welcome to Zoo Center** header, click the **right arrow**.
 
     >**Note:** Currently, clicking the button has no effect since no JavaScript code has been added to the web application yet.
