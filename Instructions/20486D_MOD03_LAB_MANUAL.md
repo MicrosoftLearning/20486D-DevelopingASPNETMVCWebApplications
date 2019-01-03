@@ -140,7 +140,7 @@ The main tasks for this exercise are the following:
 
 ####	Task 5: Enable working with static files
 
-In the **Startup** class, in the **Configure** method code block, call the **UseStaticFiles** method of the *app* parameter.
+1. In the **Startup** class, in the **Configure** method code block, call the **UseStaticFiles** method of the *app* parameter.
 
 
 ####	Task 6: Run the application – content of the HTML file is displayed
