@@ -26,7 +26,7 @@ Estimated Time: **60 minutes**
 ### Preparation Steps
 Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for the labs and demos in this course. (https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)
 
-### Exercise 1: Applying a Layout and Linking Views to it 
+### Exercise 1: Applying a Layout and Link Views to it
 
 #### Scenario
 
