@@ -237,8 +237,8 @@ The main tasks for this exercise are as follows:
 
 2. To the **ZooSite** project, add the **zoo-style.css** file, with the following information:
 
-	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
-	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSit\wwwroot\css**
+	- Source location: **[Repository Root]\Allfiles\Mod08\Labfiles\ZooCSS**
+	- Target location: **[Repository Root]\Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSit\wwwroot\css**
 
 3. In the **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
 
