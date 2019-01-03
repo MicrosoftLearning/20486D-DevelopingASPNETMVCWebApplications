@@ -90,12 +90,12 @@ The main tasks for this exercise are the following:
     - Parent folder: **wwwroot**
 
 2. To the **PollBall** project, copy the **style.css** file with the following information:
-    - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
-    - Target location:  **Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall\wwwroot\css**
+    - Source location: **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin**
+    - Target location:  **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall\wwwroot\css**
 
 3. To the **PollBall** project, copy the **images** folder with the following information:
-    - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
-    - Target location: **Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall\wwwroot** 
+    - Source location: **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin**
+    - Target location: **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall\wwwroot** 
 
 4. Create a new HTML page with the following information:
     - Folder: **wwwroot**
