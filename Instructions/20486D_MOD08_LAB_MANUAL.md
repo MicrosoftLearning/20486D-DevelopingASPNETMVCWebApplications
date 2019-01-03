@@ -346,6 +346,8 @@ Add a **.photo-index-card** selector with the following properties:
 
 4. In the menu bar, click **Visitor Info**.
 
+    >**Note**: Examine the browser content.
+
 5. Click **Tickets**.
 
 6. On **Step 1 - Choose Tickets**, select the following:
