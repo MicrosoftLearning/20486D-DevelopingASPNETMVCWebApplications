@@ -480,9 +480,11 @@
 
 8. In the **File Explorer**, navigate to **Allfiles\Mod08\Democode\03_JQueryExample_begin** and then double-click **JQueryExample.sln**.
 
-    >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package as a result of executing the command **npm install**.
+    >**Note**: If a **Security Warning for JQueryExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 9. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+
+    >**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package as a result of executing the command **npm install**.
 
 10. In the **NewFolder** text box, type **js**, and then press Enter.
 
