@@ -700,6 +700,8 @@ The main tasks for this exercise are as follows:
 
 4. In the menu bar, click **Visitor Info**.
 
+    >**Note**: Examine the browser content.
+
 5. Click **Tickets**.
 
     >**Note:** The **Buy** button is disabled, and there is a message **Please Choose Tickets** under the button.
