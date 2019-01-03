@@ -174,8 +174,8 @@ In the **Startup** class, in the **Configure** method code block, call the **Use
 ####	Task 7: Add an HTML file outside of the wwwroot folder
 
 Copy the **test.html** file to the **PollBall** project with the following information:
-    - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
-    - Target location:  **Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall**
+    - Source location: **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin**
+    - Target location:  **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin\PollBall\PollBall**
 
 ####	Task 8: Run the application – content of HTML outside the wwwroot folder not displayed
 
