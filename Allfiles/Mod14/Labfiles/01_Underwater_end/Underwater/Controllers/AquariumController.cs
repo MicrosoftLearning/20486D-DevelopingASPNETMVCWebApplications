@@ -17,7 +17,6 @@ namespace Underwater.Controllers
         private IUnderwaterRepository _repository;
         private IHostingEnvironment _environment;
 
-
         public AquariumController(IUnderwaterRepository repository, IHostingEnvironment environment)
         {
             _repository = repository;
@@ -31,12 +30,12 @@ namespace Underwater.Controllers
 
         public IActionResult Details(int id)
         {
-            var cupcake = _repository.GetFishById(id);
-            if (cupcake == null)
+            var fish = _repository.GetFishById(id);
+            if (fish == null)
             {
                 return NotFound();
             }
-            return View(cupcake);
+            return View(fish);
         }
 
         [HttpGet]
@@ -51,7 +50,6 @@ namespace Underwater.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 _repository.AddFish(fish);
                 return RedirectToAction(nameof(Index));
             }
@@ -80,8 +78,9 @@ namespace Underwater.Controllers
                                 "",
                                 f => f.AquariumId,
                                 f => f.Name,
-                                f => f.ScientificName
-                               );
+                                f => f.ScientificName,
+                                f => f.CommonName
+                                );
             if (isUpdated)
             {
                 _repository.SaveChanges();

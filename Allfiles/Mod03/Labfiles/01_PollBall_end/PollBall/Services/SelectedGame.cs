@@ -10,7 +10,7 @@ namespace PollBall.Services
         Basketball,
         Football,
         Soccer,
-        Vollyball,
+        Volleyball,
         Billiard,
         Hockey,
         Golf,

@@ -2,12 +2,12 @@
 
 namespace Underwater.Migrations
 {
-    public partial class AddFishFishType : Migration
+    public partial class AddFishCommonName : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "FishType",
+                name: "CommonName",
                 table: "fishes",
                 nullable: true);
         }
@@ -15,7 +15,7 @@ namespace Underwater.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "FishType",
+                name: "CommonName",
                 table: "fishes");
         }
     }

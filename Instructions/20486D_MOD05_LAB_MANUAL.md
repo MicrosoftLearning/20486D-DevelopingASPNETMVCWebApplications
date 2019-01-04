@@ -1,17 +1,17 @@
-﻿# Module 5: Developing Views
+# Module 5: Developing Views
 
 # Lab: Developing Views 
 
 #### Scenario
-To construct the user interface of a cities web application, your development team decided to add views. You have been asked to create the views to render a response to a browser.
+To construct the user interface of a city's web application, your development team decided to add views. You have been asked to create the views to render a response to a browser.
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
-- Add a MVC view to a web application.
-- Use Razor to differentiate server-side code from HTML.
-- Write HTML and tag helpers in a view.
+- Add an MVC view to a web application.
+- Use Razor to differentiate server-side code from HTML code.
+- Write HTML code and tag helpers in a view.
 - Add partial views and view components.
 
 #### Lab Setup
@@ -21,33 +21,35 @@ Estimated Time: **60 minutes**
 
 ### Preparation Steps
 
-1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 ## Exercise 1: Adding Views to an MVC Application
 
 #### Scenario
 
-To construct the user interface of a web application, views should be added to the web application. In this exercise you will add to views to the web application: **Index** and **Details**. The **Index** view will show a list of cities, and the **Details** view will show the details of a city.
+To construct the user interface of a web application, views should be added to the web application. In this exercise you will add two views to the web application: **Index** and **Details**. The **Index** view will show a list of cities, and the **Details** view will show the details of a city.
 
 The main tasks for this exercise are as follows:
 
-1.	Add a view to show all the cities.
+1.	Add a view to show all the cities
 
-2.	Run the application.
+2.	Run the application
 
-3.	Add a view to show data for a city.
+3.	Add a view to show data for a city
 
-4.	Add a Back link to a view.
+4.	Add a Back link to a view
 
-5.	Add a city name as a link to each city.
+5.	Add a city name as a link to each city
 
-6.	Run the application.
+6.	Run the application
 
 ####	Task 1: Add a view to show all the cities
 
-1. From **Allfiles\Mod05\Labfiles\01_CitiesWebsite_begin** open the **CitiesWebsite.sln**. 
+1. From **[Repository Root]\Allfiles\Mod05\Labfiles\01_CitiesWebsite_begin**, open the **CitiesWebsite.sln**. 
 
-2. In the **CityProvider** constructor, initialize the **_cities** field using the **CityInitializer** method.
+    >**Note**: If a **Security Warning for RazorSyntaxExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+    
+2. In the **CityProvider** constructor, initialize the **_cities** field by using the **CityInitializer** method.
 
 3. In the **City** constructor, initialize the **Country** property with the value of the **country** parameter.
 
@@ -65,7 +67,7 @@ The main tasks for this exercise are as follows:
 
 10. Initialize the **Metro** property with the value of the **metro** parameter.
 
-11. In the **CityController** class, add **using** statement for the following namespace:
+11. In the **CityController** class, add a **using** statement for the following namespace:
     - **CitiesWebsite.Services**
 
 12. Create a new field with the following information:
@@ -83,9 +85,9 @@ The main tasks for this exercise are as follows:
     - Key: **Cities**
     - Value: **_cities**
 
-16. Right-click on the **ShowCities** action name, and then click **Add View**.
+16. Right-click the **ShowCities** action name, and then click **Add View**.
 
-17. Create a new **View** using the **Add MVC View** dialog box, with the following information:
+17. Create a new **View** by using the **Add MVC View** dialog box, with the following information:
 
     - View Name: **ShowCities**
     - Template: **Empty (without model)**
@@ -117,7 +119,7 @@ The main tasks for this exercise are as follows:
 2. Start the application without debugging.
 
 3. View the page you have added.
-    >**Note**: The browser displays a "Select City" title and a list of cities below it: Madrid, London and Paris.
+    >**Note**: The browser displays a **Select City** title and a list of cities below it: **Madrid**, **London**, and **Paris**.
 
 4. Close **Microsoft Edge**.
 
@@ -131,9 +133,9 @@ The main tasks for this exercise are as follows:
     - Key: **City**
     - Value: **_cities[cityName]**
 
-3. Right-click on the **ShowDataForCity** action name, and then click **Add View**.
+3. Right-click the **ShowDataForCity** action name, and then click **Add View**.
 
-4. Create a new view using the **Add MVC View** dialog box, with the following information:
+4. Create a new view by using the **Add MVC View** dialog box, with the following information:
 
    - View Name: **ShowDataForCity**
    - Template: **Empty (without model)**
@@ -158,12 +160,12 @@ The main tasks for this exercise are as follows:
 
 10. Add a **SPAN** element.
 
-11. In the **SPAN** element, add a **IMG** element with the following information:
+11. In the **SPAN** element, add an **IMG** element with the following information:
     - src:  **@Url.Action("GetImage", new { cityName = ViewBag.City.Name })** 
 
-12. In the **CityController** class, edit the code in the **GetImage** action by removing the code which returns the **ContentResult** result using the **Content** method.
+12. In the **CityController** class, edit the code in the **GetImage** action by removing the code that returns the **ContentResult** result by using the **Content** method.
 
-13. Return the **FileResult** result using the **File** method. Pass **"$@"images&bsol;{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
+13. Return the **FileResult** result by using the **File** method. Pass **"$@"images&bsol;{cityName}.jpg"** and **"image/jpeg"** as parameters to the **File** method.
 
 ####	Task 4: Add links to the views using tag helpers
 
@@ -177,7 +179,7 @@ The main tasks for this exercise are as follows:
     - Tag Helpers: <strong>*</strong>
     - Assembly:  **Microsoft.AspNetCore.Mvc.TagHelpers**
 
-3. In the **ShowDataForCity** view, after the **SPAN** element add an **A** element with the following information:
+3. In the **ShowDataForCity** view, after the **SPAN** element, add an **A** element with the following information:
     - asp-action: **ShowCities**
     - Content: **Back**
 
@@ -198,29 +200,29 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In **Microsoft Edge** window, click **London**.
+3. In Microsoft Edge window, click **London**.
 
-    > **Note**: The browser displays the city's name, details, mini map and a **Back** link.
+    > **Note**: The browser displays the city's name, details, mini map, and a **Back** link.
 
-4. In **Microsoft Edge**, click **Back**.
+4. In Microsoft Edge, click **Back**.
 
-5. Close **Microsoft Edge**.
+5. Close Microsoft Edge.
 
->**Result**: At the end of this exercise, you will be able to add views to an **MVC** application, pass data from a controller to a view using **ViewBag**, and navigate between pages using helpers.
+>**Result**: At the end of this exercise, you will be able to add views to an MVC application, pass data from a controller to a view by using **ViewBag**, and navigate between pages by using helpers.
 
 ##	Exercise 2: Adding a Partial View
 
 #### Scenario
 
-You have been asked to show the population of each city. In order to do this, you have been asked to add a partial view. In this exercise you will create a partial view and embed it in the **ShowDataForCity** view.
+You have been asked to display the population of each city. To do this, you have been asked to add a partial view. In this exercise, you will create a partial view and embed it in the **ShowDataForCity** view.
 
 The main tasks for this exercise are as follows:
 
-1.	Add a partial view.
+1.	Add a partial view
 
-2.	Use the partial view in the **ShowDataForCity** view.
+2.	Use the partial view in the **ShowDataForCity** view
 
-3.	Run the application.
+3.	Run the application
 
 ####	Task 1: Add a partial view
 
@@ -229,7 +231,7 @@ The main tasks for this exercise are as follows:
     - Folder name: **Shared**
     - Parent folder: **Views**
 
-2. Create a new **partial view** using the **Add MVC View** dialog box, with the following information:
+2. Create a new **partial view** by using the **Add MVC View** dialog box, with the following information:
 
    - Folder: **Shared**
    - View Name: **_CityPopulation**
@@ -262,7 +264,7 @@ The main tasks for this exercise are as follows:
 
 ####	Task 2: Use the partial view in the ShowDataForCity view
 
-1. In the **ShowDataForCity** view, after the **SPAN** element, render a **partial view** with the following information:  
+In the **ShowDataForCity** view, after the **SPAN** element, render a partial view with the following information:  
     - Helper: **Html.PartialAsync**
     - Partial View Name: **_CityPopulation**
 
@@ -272,29 +274,29 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In **Microsoft Edge**, click **Madrid**.
+3. In Microsoft Edge, click **Madrid**.
 
-    > **Note**: The browser displays the city's name, details, mini map and a **Back** link.
+    > **Note**: The browser displays the city's name, details, mini map, and a **Back** link.
 
-4. Close **Microsoft Edge**.
+4. Close Microsoft Edge.
 
->**Result**: At the end of this exercise, you will be able to write and use partial views, and use services inside a view using the **@Inject** directive.
+>**Result**: At the end of this exercise, you will be able to write and use partial views, and use services inside a view by using the **@Inject** directive.
 
 ##	Exercise 3: Adding a View Component
 
 #### Scenario
 
-Currently in the **ShowCities** view you show for each city a link with the name of the city. You have been asked to show for each city in the **ShowCities** view also the country to which the city belongs and a mini map of the city. To implement this you have been asked to use a view component. In this exercise you will create a view component and embed it in the **ShowCities** view.
+Currently, in the **ShowCities** view, for each city, you show a link with the name of the city. You have been asked to show for each city in the **ShowCities** view, the country to which the city belongs and a mini map of the city. To implement this you have been asked to use a view component. In this exercise, you will create a view component and embed it in the **ShowCities** view.
  
 The main tasks for this exercise are as follows:
 
-1.	Add a view component class.
+1.	Add a view component class
 
-2.	Add a view component view.
+2.	Add a view component view
 
-3.	Use the view component.
+3.	Use the view component
 
-4.	Run the application.
+4.	Run the application
 
 ####	Task 1: Add a view component class
 
@@ -305,7 +307,7 @@ The main tasks for this exercise are as follows:
     - Name: **CityViewComponent**
     - Folder: **ViewComponents**
 
-3. In the **CityViewComponent** class, add **USING** statement for the following namespaces:
+3. In the **CityViewComponent** class, add a **USING** statement for the following namespaces:
 
     - **Microsoft.AspNetCore.Mvc**
     - **CitiesWebsite.Services**
@@ -319,7 +321,7 @@ The main tasks for this exercise are as follows:
     - Type: **ICityProvider**
     - Name: **_cities**
 
-6. Add a constructor with the following parameter: 
+6. Add a constructor with the following parameters: 
 
     - Type: **ICityProvider**
     - Name: **cities**
@@ -345,14 +347,14 @@ The main tasks for this exercise are as follows:
         - Type: **string**
         - Name: **cityName**
 
-10. In the **GetCity** method code block, return **Task&lt;City&gt;** using the  **Task.FromResult&lt;City&gt;** method. Pass **_cities[cityName]** as a parameter to the **Task.FromResult&lt;City&gt;** method.
+10. In the **GetCity** method code block, return **Task&lt;City&gt;** by using the  **Task.FromResult&lt;City&gt;** method. Pass **_cities[cityName]** as a parameter to the **Task.FromResult&lt;City&gt;** method.
  
 11. In the **InvokeAsync** method code block, save the following key and value in the **ViewBag** property:
 
     - Key: **CurrentCity**
     - Value: **await GetCity(cityName)**
  
-12. Return the **ViewViewComponentResult** result using the **View** method. Pass **"SelectCity"** as a parameter to the **View** method.
+12. Return the **ViewViewComponentResult** result by using the **View** method. Pass **"SelectCity"** as a parameter to the **View** method.
 
 ####	Task 2: Add a view component view
 
@@ -366,7 +368,7 @@ The main tasks for this exercise are as follows:
     - Folder name: **City**
     - Parent folder: **Components**
 
-3. Create a new **partial view** using the **Add MVC View** dialog box, with the following information:
+3. Create a new **partial view** by using the **Add MVC View** dialog box, with the following information:
 
    - Folder: **City**
    - View Name: **SelectCity**
@@ -378,9 +380,9 @@ The main tasks for this exercise are as follows:
 
 5. Add a **DIV** element.
 
-6. In the **DIV** element, add a **H2** element.
+6. In the **DIV** element, add an **H2** element.
 
-7. In the **H2** element, add a **A** element with the following information:
+7. In the **H2** element, add an **A** element with the following information:
     - Content: **@ViewBag.CurrentCity.Name (Capital of @ViewBag.CurrentCity.Country)**
     - asp-action: **ShowDataForCity**
     - asp-route-cityname: **@ViewBag.CurrentCity.Name**
@@ -399,13 +401,13 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-    > **Note**: The browser displays a list of cities, each has a header link and mini map image of the region.
+    > **Note**: The browser displays a list of cities, each with a header link and a mini map image of the region.
 
 3.  In the **Microsoft Edge** window, click the **Madrid (Capital of Spain)** link.
 
-4. Close **Microsoft Edge**.
+4. Close Microsoft Edge.
 
-5. Close **Visual Studio**.
+5. Close Visual Studio.
 
 >**Result**: At the end of this exercise, you will be able to create view components, and embed them in a view.
 

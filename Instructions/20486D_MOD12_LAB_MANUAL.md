@@ -24,7 +24,7 @@ Estimated Time: **60 minutes**
 
 2. Open the **Command Prompt** window using **Run as administrator**.
 
-3. In Administrator: Command Prompt, run the following command: **cd <The location of Allfiles\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore folder on your machine>**.
+3. In Administrator: Command Prompt, run the following command: **cd &lt;The location of Allfiles\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore folder on your machine&gt;**.
 
 4. Run the following command: **npm install**.
 

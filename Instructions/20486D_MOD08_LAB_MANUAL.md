@@ -4,11 +4,11 @@
 
 #### Scenario
 
-You have been asked to add a slideshow to the homepage of the zoo web application that will show some of the animals’ photos. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
+You have been asked to add a slideshow to the homepage of a zoo web application that will show some of the animals’ photos. The slideshow will display each photo in a large size. However, the slideshow will display only one photo at a time, and cycle through all the photos in order.
 
 You want to use jQuery to create this slideshow because you want to cycle through the photos in the browser, without reloading the page each time. 
 
-You have been also asked to add a purchase page to enable customers to buy adult, child and senior tickets to the zoo. To do calculations in the page you will use jQuery. You will also use client-side validation to validate the input typed by the users.
+You have been also asked to add a purchase page, to enable customers to buy adult, child, and senior tickets to the zoo. You will use jQuery to do calculations on the page. You will also use client-side validation to validate the input typed by the users.
 
 #### Objectives
 
@@ -24,31 +24,33 @@ After completing this lab, you will be able to:
 Estimated Time: **60 minutes**
 
 ### Preparation Steps
-1. Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for this course's labs and demos. (https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)
+Ensure that you have cloned the 20486D directory from GitHub. It contains the code segments for the labs and demos in this course. (https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)
 
-### Exercise 1: Applying a Layout and Link Views to it 
+### Exercise 1: Applying a Layout and Link Views to it
 
 #### Scenario
 
-To construct a consistent look and feel of a web application, a layout should be added to the web application. In this exercise you will create a layout and link views to it.
+To construct a web application with a consistent look and feel, a layout should be added to the web application. In this exercise, you will create a layout and link views to it.
 
 The main tasks for this exercise are as follows:
 
-1. Create a layout.
+1. Create a layout
 
-2. Add a view and link it to a layout.
+2. Add a view and link it to the layout
 
-3. Add _ViewStart.cshtml.
+3. Add _ViewStart.cshtml
 
-4. Add existing views to the web application.
+4. Add existing views to the web application
 
-5. Add a section to the layout.
+5. Add a section to the layout
 
-6. Run the application.
+6. Run the application
 
 
 #### Task 1: Create a layout
-1. From **Allfiles\Mod08\Labfiles\01_ZooSite_begin** open **ZooSite.sln**.
+1. From **[Repository Root]\Allfiles\Mod08\Labfiles\01_ZooSite_begin**, open **ZooSite.sln**.
+
+    >**Note**: If a **Security Warning for ZooSite** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. Create a new folder with the following information:
 
@@ -113,9 +115,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Add a view and link it to a layout
 
-1. In the **ZooController** class, right-click on the **Index** action name, and then click **Add View**. 
+1. In the **ZooController** class, right-click the **Index** action name, and then click **Add View**. 
 
-2. Create a new view using the **Add MVC View** dialog box, with the following information:
+2. Create a new view by using the **Add MVC View** dialog box, with the following information:
 
     - View Name: **Index**
     - Template: **Empty (without model)**
@@ -128,7 +130,7 @@ The main tasks for this exercise are as follows:
    - Type: **IEnumerable&lt;ZooSite.Models.Photo&gt;**
 
 
-4.  Replace **_&lt;h2&gt;_Index_&lt;/h2&gt;_** with **H1** element, using the following information:
+4.  Replace **_&lt;h2&gt;_Index_&lt;/h2&gt;_** with an **H1** element by using the following information:
 
 	- Class: **main-title**
     - Content: **Zoo Attractions**
@@ -143,7 +145,7 @@ The main tasks for this exercise are as follows:
 	- Variable Name: **item**
 	- Collection: **Model**
 
-7. In the **FOREACH** statement block, Add a **DIV** element with the following information:
+7. In the **FOREACH** statement block, add a **DIV** element with the following information:
 
 	- Class: **photo-index-card**
 
@@ -181,10 +183,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Add existing views to the web application
 
-1. Add existing **.cshtml** files to the **ZooSite** project, with the following information:
+1. Add the existing **.cshtml** files to the **ZooSite** project, with the following information:
 
-    - Source location: **Allfiles\Mod08\Labfiles\ZooViews**
-	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSite\Views**
+    - Source location: **[Repository Root]\Allfiles\Mod08\Labfiles\ZooViews**
+	- Target location: **[Repository Root]\Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSite\Views**
 
 
 #### Task 5: Add a section to the layout
@@ -193,18 +195,23 @@ The main tasks for this exercise are as follows:
 
 2. Pass **"Scripts"** and **false** as parameters to the **RenderSection** method.
 
-
 #### Task 6: Run the application
 
 1. Save all the changes.
 
 2. Start the application without debugging.
 
+    >**Note**: The browser displays the **Index.cshtml** file content, but the HTML content is not designed by a CSS file yet.
+
 3. In the menu bar, click **Visitor Info**.
+
+    >**Note**: Examine the browser content.
 
 4. In the menu bar, click **Tickets**.
 
-5. Close the **Microsoft Edge** window.
+    >**Note**: Examine the browser content.
+
+5. Close Microsoft Edge.
 
 >**Results**: After completing this exercise, you will be able to add a layout and link views to it. You will also be able to use the **_ViewStart** file in the web application.  
 
@@ -212,35 +219,35 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-To improve the appearance of the web application, a CSS should be used. In this exercise you will add a CSS file to the web application, and add a link from the layout to the CSS file.
+To improve the appearance of the web application, a CSS should be used. In this exercise, you will add a CSS file to the web application, and add a link from the layout to the CSS file.
 
 The main tasks for this exercise are as follows:
 
-1. Add existing CSS file to the project.
+1. Add an existing CSS file to the project
 
-2. Link the layout to the CSS file.
+2. Link the layout to the CSS file
 
-3. Style the menu.
+3. Style the menu
 
-4. Style the photos section in Index.cshtml.
+4. Style the photos section in Index.cshtml
 
-5. Style a form in BuyTickets.cshtml.
+5. Style a form in BuyTickets.cshtml
 
-6. Run the application.
+6. Run the application
 
-#### Task 1: Add existing CSS file to the project
+#### Task 1: Add an existing CSS file to the project
 
 1. Create a new folder with the following information:
 
 	- Folder name: **css**
 	- Parent folder: **wwwroot**
 
-2. Add **zoo-style.css** file to the **ZooSite** project, with the following information:
+2. To the **ZooSite** project, add the **zoo-style.css** file, with the following information:
 
-	- Source location: **Allfiles\Mod08\Labfiles\ZooCSS**
-	- Target location: **Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSit\wwwroot\css**
+	- Source location: **[Repository Root]\Allfiles\Mod08\Labfiles\ZooCSS**
+	- Target location: **[Repository Root]\Allfiles\Mod08\Labfiles\01_ZooSite_begin\ZooSit\wwwroot\css**
 
-3. In **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
+3. In the **Startup** class, in the **Configure** method, after the call to the **zooContext.Database.EnsureCreated** method, call the **UseStaticFiles** method of the **app** parameter.
 
 #### Task 2: Link the layout to the CSS file
 
@@ -252,7 +259,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Style the menu
 
-1. In the bottom of the **zoo-style.css** file, add a **.nav** selector with the following properties:
+1. At the bottom of the **zoo-style.css** file, add a **.nav** selector with the following properties:
 
 	- list-style-type: **none**
 	- margin: **0**
@@ -305,20 +312,27 @@ The main tasks for this exercise are as follows:
 
 	- text-align: **left**
 
-2. Add a **.info label** selector with the following properties:
+2. Add a **.info .form-field div** selector with the following properties:
+
+	- width: **172px**
+	- text-align: **right**
+	- float: **right**
+
+3. Add a **.info label** selector with the following properties:
 
 	- width: **118px**
 	- display: **inline-block**
 	- margin-bottom: **10px**
 
-3. Add a **.info input** selector with the following properties:
+4. Add a **.info input** selector with the following properties:
 
 	- border-radius: **2px**
 	- line-height: **20px**
 	- border: **1px solid #ccc6c6**
 	- background-color: **#f9f6f6**
+	- width: **100%**
 
-4. Add a **input.submit-btn** selector with the following properties:
+5. Add a **input.submit-btn** selector with the following properties:
 
 	- width: **100px**
 	- margin-top: **12px**
@@ -328,7 +342,7 @@ The main tasks for this exercise are as follows:
 	- box-shadow: **inset 0px 0px 4px #b77006**
 	- border: **1px solid #a59797**
 
-5. Add a **input.submit-btn[disabled]** selector with the following properties:
+6. Add a **input.submit-btn[disabled]** selector with the following properties:
 
 	- opacity: **0.8**
 	- background-color: **whitesmoke**
@@ -340,35 +354,39 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
+    >**Note**: The browser displays the content of the **Index.cshtml** file, with HTML content that is designed by a CSS file.
+
 3. In the **Zoo Attractions** page, in the **Welcome to Zoo Center** header, click the **right arrow**.
 
-    >**Note:** Currently clicking the button has no effect since no JavaScript code has been added to the web application yet.
+    >**Note:** Currently, clicking the button has no effect since no JavaScript code has been added to the web application yet.
 
 4. In the menu bar, click **Visitor Info**.
+
+    >**Note**: Examine the browser content.
 
 5. Click **Tickets**.
 
 6. On **Step 1 - Choose Tickets**, select the following:
 
-	- Adult: **_&lt;As many tickets as you like&gt;_**
-	- Child: **_&lt;As many tickets as you like&gt;_**
-	- Senior: **_&lt;As many tickets as you like&gt;_**   
+	- Adult: _&lt;As many tickets as you like&gt;_
+	- Child: _&lt;As many tickets as you like&gt;_
+	- Senior: _&lt;As many tickets as you like&gt;_
    
-	>**Note:** Currently the total cost of the tickets is not shown in the page since no JavaScript code has been added to the web application yet.
+	>**Note:** Currently the total cost of the tickets is not shown on the page since no JavaScript code has been added to the web application yet.
 
 7.  On **Step 2 - Buy Tickets**, type the following:
 
-	- First Name: **_&lt;A first name of your choice&gt;_**
-	- Last Name: **_&lt;A last name of your choice&gt;_**
-	- Address: **_&lt;An address of your choice&gt;_**
+	- First Name: _&lt;A first name of your choice&gt;_
+	- Last Name: _&lt;A last name of your choice&gt;_
+	- Address: _&lt;An address of your choice&gt;_
 	- Email: **abcd**
-	- Phone Number **_&lt;A phone number of your choice&gt;_**
+	- Phone Number _&lt;A phone number of your choice&gt;_
 
 8. Click **Buy**.
 
-    >**Note:** Currently you can't buy the tickets and there is no validation since the functionality has not applied yet.
+    >**Note:** Currently you can't buy the tickets and there is no validation since the functionality has not been applied yet.
 
-9. Close **Microsoft Edge**.
+9. Close Microsoft Edge.
 
 >**Results**: After completing this exercise, you will be able to add an existing CSS file to a web application, and add a link from a layout to the CSS file. You will also be able to add new CSS selectors to a CSS file. 
 
@@ -376,15 +394,15 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-To calculate the total cost of the tickets, you have been asked to add a function in JavaScript. In this exercise you will add a JavaScript file and add a link to the JavaScript file from a view.
+To calculate the total cost of the tickets, you have been asked to add a function in JavaScript. In this exercise, you will add a JavaScript file and add a link to the JavaScript file from a view.
 
 The main tasks for this exercise are as follows:
 
-1. Add a JavaScript file.
+1. Add a JavaScript file
 
-2. Link a view to the JavaScript file.
+2. Link a view to the JavaScript file
 
-3. Write the code of the JavaScript file.
+3. Write the code of the JavaScript file
 
 
 #### Task 1: Add a JavaScript file
@@ -394,7 +412,7 @@ The main tasks for this exercise are as follows:
 	- Folder name: **js**
 	- Parent folder: **wwwroot**
 
-2. Add a **JavaScript** **File** with the following information:
+2. Add a JavaScript file with the following information:
 
 	- Folder: **js**
 	- Name: **form-functions**	
@@ -410,9 +428,9 @@ The main tasks for this exercise are as follows:
 
 	- Name: **calculateSum**
 
-2. In the **calculateSum** function code block, add a new variable named **rows** with the value of **document.querySelectorAll("#totalAmount tr .sum")**.
+2. In the **calculateSum** function code block, add a new variable named **rows** with the value **document.querySelectorAll("#totalAmount tr .sum")**.
 
-3. Add a new variable named **sum** with the value of **0**.
+3. Add a new variable named **sum** with the value **0**.
 
 4. Create a **FOR** loop, with the following information:
 
@@ -430,36 +448,36 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-You have been asked to handle click events, modify elements and change the style of elements. You were also asked to apply client-side validation in the web application. In this exercise you will use npm to add several client-side packages to the web application, and you will use the packages to make various operations in the client-side.
+You have been asked to handle click events, modify elements, and change the style of elements. You are also asked to apply client-side validation in the web application. In this exercise, you will use npm to add several client-side packages to the web application and you will use the packages to make various operations in the client-side.
 
 The main tasks for this exercise are as follows:
 
-1. Use npm to add jQuery.
+1. Use npm to add jQuery
 
-2. Use jQuery to add event handlers.
+2. Use jQuery to add event handlers
 
-3. Use jQuery to modify elements.
+3. Use jQuery to modify elements
 
-4. Client-side validation using jQuery.
+4. Use jQuery for Client-side validation
 
-5. Run the application.
+5. Run the application
 
 #### Task 1: Use npm to add jQuery
 
-1. Add a new **npm Configuration File** to the **ZooSite** project.
+1. To the **ZooSite** project, add a new npm Configuration file.
 
-2. In the  **package.json** file, add the following key and value in the **dependencies** object:
+2. In the  **package.json** file, in the **dependencies** object, add the following key and value:
 
 	- Key: **"jquery"**
 	- Value: **"3.3.1"**
 
 3. Save **package.json**.
 
->**Note:** In **Solution Explorer**, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package.
+>**Note:** In Solution Explorer, under **Dependencies**, a new folder named **npm** has been added which contains the **jquery** package.
 
-4. In **Explorer Toolbar Options** click **Show All Files**.
+4. In **Explorer Toolbar Options**, click **Show All Files**.
 
-      >**Note:** In the **ZooSite - Microsoft Visual Studio** window, in **Solution Explorer**, a new folder named **node_modules** has been added which contains the **jquery** package.
+      >**Note:** In the **ZooSite - Microsoft Visual Studio** window, in Solution Explorer, a new folder named **node_modules** has been added, which contains the **jquery** package.
 
 5. Create a new folder with the following information:
 
@@ -470,13 +488,13 @@ The main tasks for this exercise are as follows:
 	- Folder: **Middleware**
 	- Name: **ApplicationBuilderExtensions**
 
-7. In the **ApplicationBuilderExtensions** class, add **USING** statements for the following namespaces:
+7. In the **ApplicationBuilderExtensions** class, add the **USING** statements for the following namespaces:
 
    - **System.IO**
    - **Microsoft.AspNetCore.Builder**
    - **Microsoft.Extensions.FileProviders**
 
-8. Add a **static** keyword to the **ApplicationBuilderExtensions** class declaration.
+8. To the **ApplicationBuilderExtensions** class declaration, add a **static** keyword.
 
 9. Add a method with the following information:
 
@@ -492,27 +510,27 @@ The main tasks for this exercise are as follows:
 			- Type: **string**
 			- Name: **root**
 
-10. In the **UseNodeModules** method, add a variable named **path** of type **var** with the value of **Path.Combine(root, "node_modules")**.
+10. In the **UseNodeModules** method, add a variable named **path** of type **var** with the value **Path.Combine(root, "node_modules")**.
 
-11. Add a variable named **fileProvider** of type **var** with the value of **new PhysicalFileProvider(path)**.
+11. Add a variable named **fileProvider** of type **var** with the value **new PhysicalFileProvider(path)**.
 
-12. Add a variable named **options** of type **var** with the value of **new StaticFileOptions()**.
+12. Add a variable named **options** of type **var** with the value **new StaticFileOptions()**.
 
-13. Assign the **RequestPath** property of the **options** variable the value of **/node_modules**.
+13. Assign the **RequestPath** property of the **options** variable the value **/node_modules**.
 
-14. Assign the **FileProvider** property of the **options** variable the value of **fileProvider** variable.
+14. Assign the **FileProvider** property of the **options** variable the value of the **fileProvider** variable.
 
-15. Call the **UseStaticFiles** method of the **applicationBuilder** parameter. Pass **options** variable as a parameter to the **UseStaticFiles** method.
+15. Call the **UseStaticFiles** method of the **applicationBuilder** parameter. Pass the **options** variable as a parameter to the **UseStaticFiles** method.
 
 16. Return the value of the **applicationBuilder** variable.
 
-17. In the **Startup** class, add **USING** statement for the following namespace:
+17. In the **Startup** class, add a **USING** statement for the following namespace:
 
     - **ZooSite.Middleware**
 
-18. In **Startup** class, in the **Configure** method, after the call to the **UseStaticFiles** method, call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
+18. In the **Startup** class, in the **Configure** method, after the call to the **UseStaticFiles** method, call the **UseNodeModules** method of the **app** parameter and pass **env.ContentRootPath** as a parameter.
 
-19. In the **_Layout.cshtml** file, in the end of the **HEAD** element, add a **SCRIPT** element with the following information:
+19. In the **_Layout.cshtml** file, at the end of the **HEAD** element, add a **SCRIPT** element with the following information:
 
 	- Src:**~/node_modules/jquery/dist/jquery.min.js**
 
@@ -523,11 +541,11 @@ The main tasks for this exercise are as follows:
 
 3. At the beginning of the anonymous function code block, call the **$** function and pass **'.pricing select'** as a parameter. 
 
-4. Chain a **change** function call to the **$** function call. Pass anonymous function as a parameter to the **change** function.
+4. Chain a **change** function call to the **$** function call. Pass an anonymous function as a parameter to the **change** function.
 
 5. Change the signature of the anonymous function passed to the **change** method to accept an **event** parameter.
 
-6. Inside the anonymous function passed to the **change** method, create a variable named **target** and assign it the value of **$(event.target)**.
+6. Inside the anonymous function passed to the **change** method, create a variable named **target**, and assign it the value of **$(event.target)**.
 
 7. Create a variable named **value** and assign it the value of **parseInt(target.val())**
 
@@ -543,17 +561,17 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 3: Use jQuery to modify elements
-1. At the end of the **$** function, add an **IF** statement that checks that value of **value** variable is not empty.
+1. At the end of the **$** function, add an **IF** statement that checks that the **value** variable is not empty.
 
 2. Inside the **IF** statement, call the **$** function and pass **'#summery'** as a parameter. 
 
-3. Chain a **addClass** function call to the **$** function call. Pass **"display-div"** as a parameter to the **addClass** function.
+3. Chain an **addClass** function call to the **$** function call. Pass **"display-div"** as a parameter to the **addClass** function.
 
 4. Chain a **removeClass** function call to the **addClass** function call. Pass **"hidden-div"** as a parameter to the **addClass** function.
 
 5. Create a variable named **correctCost** and assign it the value of **(price.text().substring(1, price.text().length))**.
 
-6. Create a variable named **calc** and assign it the value of **parseInt(value * correctCost)**.
+6. Create a variable named **calc** and assign it the value of __parseInt(value * correctCost)__.
 
 7. Create a variable named **msg** and assign it the value of **label.text() + " ticket - " + value.toString() + "x" + price.text() + " = &lt;span class='sum'&gt;" +'$' + calc +'&lt;/span&gt;'**.
 
@@ -573,15 +591,15 @@ The main tasks for this exercise are as follows:
 
 15. Chain an **addClass** function call to the **$** function call. Pass **"hidden-div"** as a parameter to the **addClass** function.
 
-16. Chain an **removeClass** function call to the **addClass** function call. Pass **"display-div"** as a parameter to the **removeClass** function.
+16. Chain a **removeClass** function call to the **addClass** function call. Pass **"display-div"** as a parameter to the **removeClass** function.
 
 17. Call the **$** function and pass **'#formButtons input'** as a parameter. 
 
-18. Chain an **attr** function call to the **$** function call. Pass **"disabled"** and **"disabled"** as a parameters to the **attr** function. 
+18. Chain an **attr** function call to the **$** function call. Pass **"disabled"** and **"disabled"** as parameters to the **attr** function. 
 
 19. Call the **$** function and pass **'#comment'** as a parameter. 
 
-20. Chain an **show** function call to the **$** function call. 
+20. Chain a **show** function call to the **$** function call. 
 
 21. After the **IF** statement code block, add an **ELSE** statement. 
 
@@ -593,26 +611,26 @@ The main tasks for this exercise are as follows:
 
 25. Chain a **hide** function call to the **$** function call. 
 
-26. After the **ELSE** ststement call block, call the **calculateSum** function.
+26. After the **ELSE** statement call block, call the **calculateSum** function.
 
 27. Add a **JavaScript File** with the following information:
 
 	- Folder: **js**
 	- Name: **menubar-functions**	
 
-28. In the beginning of the **menubar-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
+28. At the beginning of the **menubar-functions.js** file, call the **$** function. Pass an anonymous function as a parameter to the **$** function.
 
 29. At the beginning of the anonymous function code block, add a new variable named **path** with the value of **window.location.pathname**.
 
 30. Call the **$** function and pass **'.nav li a'** as a parameter. 
 
-31. Chain a **each** function call to the **$** function call. Pass anonymous function as a parameter to the **each** function.
+31. Chain a **each** function call to the **$** function call. Pass an anonymous function as a parameter to the **each** function.
 
 32. Change the signature of the anonymous function passed to the **each** method to accept **index** and **value** parameters.
 
 33. Inside the anonymous function passed to the **each** method, create a variable named **href** and assign it the value of **$(value).attr('href')**.
 
-34. Create an **IF** statement that checks that the value of **path** is equal to **href**.
+34. Create an **IF** statement that checks if the value of **path** is equal to **href**.
 
 35. Inside the **IF** statement code block, call the **$** function and pass **this** as a parameter. 
 
@@ -625,7 +643,7 @@ The main tasks for this exercise are as follows:
 	- Folder: **js**
 	- Name: **slider-functions**	
 
-39. In the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
+39. At the beginning of the **slider-functions.js** file,  add a new variable named **images** with the value of **['/images/header.jpg', '/images/waters.jpg']**.
 
 40. Add a new variable named **current** with the value of **0**.
 
@@ -634,7 +652,7 @@ The main tasks for this exercise are as follows:
 
 42. In the **nextImage** function code block, increment the **current** variable by 1.
 
-43. Create an **IF** statement that checks that the value of **current** is equal to **images.length**.
+43. Create an **IF** statement that checks if the value of **current** is equal to **images.length**.
 
 44. Inside the **IF** statement code block, assign the **current** variable the value of **0**.
 
@@ -647,7 +665,7 @@ The main tasks for this exercise are as follows:
 
 48. In the **prevImage** function code block, decrement the **current** variable by 1.
 
-49. Create an **IF** statement that checks that the value of **current** is smaller than **0**.
+49. Create an **IF** statement that checks if the value of **current** is smaller than **0**.
 
 50. Inside the **IF** statement code block, assign the **current** variable the value of **images.length-1**.
 
@@ -655,7 +673,7 @@ The main tasks for this exercise are as follows:
 
 52. Chain a **css** function call to the **$** function call. Pass **'background-image'** and **'url(' + images[current] + ')'** as a parameters to the **css** function. 
 
-53. In the **_Layout.cshtml** file, in the bottom of the **HEAD** tag code block, add a **SCRIPT** element with the following information:
+53. In the **_Layout.cshtml** file, at the bottom of the **HEAD** tag code block, add a **SCRIPT** element with the following information:
 
 	- Src: **~/js/menubar-functions.js**
 
@@ -678,9 +696,9 @@ The main tasks for this exercise are as follows:
 
 3. Save **package.json**.
 
-    >**Note:** In **Solution Explorer**, under **Dependencies**, under **npm** new packages have been added named **jquery-validation**, and **jquery-validation-unobtrusive**.
+    >**Note:** In Solution Explorer, under **Dependencies**, under **npm**, new packages named **jquery-validation** and **jquery-validation-unobtrusive** have been added.
 
-4. In the **BuyTickets** view, in the beginning of the **Scripts** section code block, add a **SCRIPT** element with the following information:
+4. In the **BuyTickets** view, at the beginning of the **Scripts** section code block, add a **SCRIPT** element with the following information:
 
 	- Src: **~/node_modules/jquery-validation/dist/jquery.validate.min.js**
 
@@ -700,41 +718,43 @@ The main tasks for this exercise are as follows:
 
 4. In the menu bar, click **Visitor Info**.
 
+    >**Note**: Examine the browser content.
+
 5. Click **Tickets**.
 
     >**Note:** The **Buy** button is disabled, and there is a message **Please Choose Tickets** under the button.
 
 6. On **Step 1 - Choose Tickets**, select the following:
 
-	- Adult: **_&lt;As many tickets as you like&gt;_**
-	- Child: **_&lt;As many tickets as you like&gt;_**
-	- Senior: **_&lt;As many tickets as you like&gt;_**
+	- Adult: _&lt;As many tickets as you like&gt;_
+	- Child: _&lt;As many tickets as you like&gt;_
+	- Senior: _&lt;As many tickets as you like&gt;_
 
-    >**Note:** The **Buy** button is enabled, and the message under the button disappeared. In addition, an **Order Summary** section is added which shows the price of the tickets.
+    >**Note:** The **Buy** button is enabled, and the message under the button has disappeared. In addition, an **Order Summary** section is added which shows the price of the tickets.
 
 7.  On **Step 2 - Buy Tickets**, type the following:
 
-	- First Name: **_&lt;A first name of your choice&gt;_**
-	- Last Name: **_&lt;A last name of your choice&gt;_**
-	- Address: **_&lt;An address of your choice&gt;_**
+	- First Name: _&lt;A first name of your choice&gt;_
+	- Last Name: _&lt;A last name of your choice&gt;_
+	- Address: _&lt;An address of your choice&gt;_
 	- Email: **abcd**
 
-8. After you fill the **Email** text box, press Tab.
+8. After you fill the **Email** box, press Tab.
 
     >**Note:** Client side validation applies.
 
 9. On **Step 2 - Buy Tickets**, type the following:
 
-	- Email: **_&lt;A valid email of your choice&gt;_**
-	- Phone Number **_&lt;A phone number of your choice&gt;_**
+	- Email: _&lt;A valid email of your choice&gt;_
+	- Phone Number _&lt;A phone number of your choice&gt;_
 
 10. Click **Buy**.
 
-11. Close **Microsoft Edge**.
+11. Close Microsoft Edge.
 
-12. Close **Microsoft Visual Studio**.
+12. Close Microsoft Visual Studio.
 
->**Results**: After completing this exercise, you will be able to add jQuery to a web application using npm, modify HTML elements using jQuery, preform client-side validation and handle JavaScript events. 
+>**Results**: After completing this exercise, you will be able to add jQuery to a web application using npm, modify HTML elements by using jQuery, perform client-side validation and handle JavaScript events. 
 
 ©2018 Microsoft Corporation. All rights reserved.
 

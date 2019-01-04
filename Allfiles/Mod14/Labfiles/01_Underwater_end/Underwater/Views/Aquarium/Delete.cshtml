@@ -25,21 +25,30 @@
                 </div>
             }
         }
-            <div>
-                <p class="display-label">
-                    @Html.DisplayNameFor(model => model.ScientificName)
-                </p>
-                <br />
-                <p class="display-field">
-                    @Html.DisplayFor(model => model.ScientificName)
-                </p>
-            </div>
-                </div>
-                <form asp-action="Delete">
-                    <input type="hidden" asp-for="FishId" />
-                    <button id="btn-post" type="submit" class="btn btn-outline-primary">Delete</button>
-                    <button class="btn btn-secondary" type="button" onclick="location.href='@Url.Action("Index", "Aquarium")'">Back</button>
-                </form>
-            </div>
+        <div>
+            <p class="display-label">
+                @Html.DisplayNameFor(model => model.ScientificName)
+            </p>
+            <br />
+            <p class="display-field">
+                @Html.DisplayFor(model => model.ScientificName)
+            </p>
+        </div>
+        <div>
+            <p class="display-label">
+                @Html.DisplayNameFor(model => model.CommonName)
+            </p>
+            <br />
+            <p class="display-field">
+                @Html.DisplayFor(model => model.CommonName)
+            </p>
+        </div>
+    </div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="FishId" />
+        <button id="btn-post" type="submit" class="btn btn-outline-primary">Delete</button>
+        <button class="btn btn-secondary" type="button" onclick="location.href='@Url.Action("Index", "Aquarium")'">Back</button>
+    </form>
+</div>
 
 

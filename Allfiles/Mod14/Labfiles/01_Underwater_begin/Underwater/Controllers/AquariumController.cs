@@ -30,12 +30,12 @@ namespace Underwater.Controllers
 
         public IActionResult Details(int id)
         {
-            var cupcake = _repository.GetFishById(id);
-            if (cupcake == null)
+            var fish = _repository.GetFishById(id);
+            if (fish == null)
             {
                 return NotFound();
             }
-            return View(cupcake);
+            return View(fish);
         }
 
         [HttpGet]
