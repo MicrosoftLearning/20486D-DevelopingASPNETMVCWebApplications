@@ -715,6 +715,7 @@ The main tasks for this exercise are as follows:
 3. Close Microsoft Edge.
 
 4. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and open the **shirt_store_logs-XXXXXXXX.txt** file.
+
     >**Note**: Inspect the **ArgumentNullException** stack trace.
 
 5. Close **shirt_store_logs-XXXXXXXX.txt**.
@@ -728,7 +729,7 @@ The main tasks for this exercise are as follows:
     - Price: **10**
     - Tax: **1.2**
 
-8. In File Explorer, navigate to **Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and then open the **shirt_store_logs-XXXXXXXX.txt** file.
+8. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and then open the **shirt_store_logs-XXXXXXXX.txt** file.
     >**Note**: The log file does not contain another message because the action was successful and there are no errors.
 
 9. Close **shirt_store_logs-XXXXXXXX.txt**.
