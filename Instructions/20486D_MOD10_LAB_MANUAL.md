@@ -44,7 +44,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add a testing project
 
-1. From **Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, open the **ShirtStore.sln**.
+1. From **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, open the **ShirtStore.sln**.
 
 2. In the **ShirtStore** solution, add a new project with the following information:
     - Project name : **ShirtStoreWebsite.Tests**
