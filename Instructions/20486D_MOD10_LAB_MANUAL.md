@@ -530,7 +530,6 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add logging to the MVC application
 
-
 1. In the **ShirtStoreWebsite** project, create a new top-level **App Setting File** with the following information:
      - File Name: **appsettings.development.json**
      - Folder: **/**
@@ -642,9 +641,9 @@ The main tasks for this exercise are as follows:
         - Type: **Exception**
         - Name: **ex**
 
-37. Inside the **CATCH** statement code block, call the **LogDebug** method of the **_logger** parameter. 
+37. Inside the **CATCH** statement code block, call the **LogError** method of the **_logger** parameter. 
 
-38. Pass the **ex** parameter and **$"An error occured while trying to delete shirt with id of {id}."** as a parameters to the **LogDebug** method.
+38. Pass the **ex** parameter and **$"An error occured while trying to delete shirt with id of {id}."** as a parameters to the **LogError** method.
 
 39. Inside the **CATCH** statement code block, throw the **ex** parameter.
 
