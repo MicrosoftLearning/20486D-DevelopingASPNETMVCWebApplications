@@ -41,7 +41,6 @@ The main tasks for this exercise are as follows:
 
 5.	Run the unit test – it succeeds
 
-
 #### Task 1: Add a testing project
 
 1. From **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, open the **ShirtStore.sln**.
@@ -59,7 +58,7 @@ The main tasks for this exercise are as follows:
 1. Create a new folder with the following information:
 
     - Folder name: **Models**
-    - Project: **ShirtStoreWebsite**
+    - Project: **ShirtStoreWebsite.Tests**
 
 2. In the **ShirtStoreWebsite.Tests** project, rename the **UnitTest1** class to **ShirtTest**.
 
