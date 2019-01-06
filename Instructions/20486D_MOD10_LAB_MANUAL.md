@@ -138,7 +138,7 @@ The main tasks for this exercise are as follows:
      - Name:  **IShirtRepository**
      - Scope: **public**
 
-3. In the **IShirtRepository** interface, add a **USING** statement for the following namespace:
+3. In the **IShirtRepository** class, add a **USING** statement for the following namespace:
    - **ShirtStoreWebsite.Models**
 
 4. Declare a method with the following information:
