@@ -404,7 +404,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 22. In Microsoft Edge, click **Close**.
 
-23. In File Explorer, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+23. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
 
     >**Note**: Inspect the **KeyNotFoundException** stack trace.
 
