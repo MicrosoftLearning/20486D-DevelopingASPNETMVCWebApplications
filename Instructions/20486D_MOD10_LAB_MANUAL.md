@@ -46,6 +46,8 @@ The main tasks for this exercise are as follows:
 
 1. From **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, open the **ShirtStore.sln**.
 
+    >**Note**: If a **Security Warning for RazorSyntaxExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
 2. In the **ShirtStore** solution, add a new project with the following information:
     - Project name : **ShirtStoreWebsite.Tests**
     - Project template : **MSTest Test Project (.NET Core)**
