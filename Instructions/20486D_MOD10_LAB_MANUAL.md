@@ -671,7 +671,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Run the unit test
 
-Run all tests.
+1. Run all tests.
 
     >**Note**: The **Test Explorer** displays two passed tests: **IndexModelShouldContainAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
