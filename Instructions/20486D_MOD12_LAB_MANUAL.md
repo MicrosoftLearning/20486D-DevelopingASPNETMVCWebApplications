@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You have been asked to create a web-based electric store application for your organization's customers. The application should have a page showing sale of the day, products sorted by category, ability to add products to your shopping list, and a chat page that lets users talk online. The application should contain a cache tag helper to cache content in a view, a memory cache in a controller, and a session state configuration. Finally, you will write a chat room using SignalR.
+You have been asked to create a web-based electric store application for your organization's customers. The application should have a page showing the sale of the day, products sorted by category, the ability to add products to your shopping list, and a chat page that lets users talk online. The application should contain a cache tag helper to cache content in a view, a memory cache in a controller, and a session state configuration. Finally, you will write a chat room app by using SignalR.
 
 #### Objectives
 
@@ -12,7 +12,7 @@ After completing this lab, you will be able to:
 
 - Implement a caching strategy.
 - Manage state.
-- Add a two-way communication.
+- Add two-way communication.
 
 #### Lab Setup
 
@@ -20,46 +20,46 @@ Estimated Time: **60 minutes**
 
 ### Preparation Steps
 
-1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
-2. Open the **Command Prompt** window using **Run as administrator**.
+2. Open the **Command Prompt** window by using **Run as administrator**.
 
-3. In Administrator: Command Prompt, run the following command: **cd &lt;The location of Allfiles\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore folder on your machine&gt;**.
+3. In the **Administrator: Command Prompt** window, run the following command: **cd** *&lt;The location of Allfiles***\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore folder on your machine&gt;*.
 
 4. Run the following command: **npm install**.
 
 5. Close the **Command Prompt** window.
 
-6. Open the **ElectricStore.sln** solution from the following location: **Allfiles\Mod12\Labfiles\01_ElectricStore_begin**.
+6. From the following location: **Allfiles\Mod12\Labfiles\01_ElectricStore_begin**, open the **ElectricStore.sln** solution.
 
 7. In the **ElectricStore - Microsoft Visual Studio** window, click **TOOLS** and then click **Options**.
 
 8. In the **Options** dialog box, click **Web Package Management**.
 
-9. In the **Locations of external tools** list box, select **$(PATH)**. Press the **Up** arrow button until **$(PATH)** is at the top of the list, and then click **OK**.
+9. In the **Locations of external tools** list, select **$(PATH)**, press the **Up arrow** key until **$(PATH)** is at the top of the list, and then click **OK**.
 
 10. Open the **package.json** file and examine its content.
 
-    >**Note:** There are dependencies to the 
+    >**Note**: There are dependencies to the 
     **jquery, jquery-validation, jquery-validation-unobtrusive, bootstrap** and **popper.js** packages.
 
 ### Exercise 1: Implementing a Caching Strategy
 
 #### Scenario
 
-To improve the performance of a web application, caching should be used in the web application. In this exercise, you will first add a cache tag helper to a view. After that you will use the memory cache to store and retrieve items.
+To improve the performance of a web application, caching should be used in the web application. In this exercise, you will first add a cache tag helper to a view. After that, you will use the memory cache to store and retrieve items.
 
 The main tasks for this exercise are as follows:
 
-1.	Add a cache tag helper to a view.
+1.	Add a cache tag helper to a view
 
-2.	Insert data to be cached by the cache tag helper.
+2.	Insert data to be cached by the cache tag helper
 
-3.	Run the application.
+3.	Run the application
 
-4.	Insert items to a memory cache.
+4.	Insert items to a memory cache
 
-5.	Run the application.
+5.	Run the application
 
 
 #### Task 1: Add a cache tag helper to a view.
@@ -68,7 +68,7 @@ The main tasks for this exercise are as follows:
 
     - vary-by-route: **RefreshCache**
 
-2. In the **CACHE** element, call the **Component.InvokeAsync** method using the **@await** operator. Pass **"NavbarMenu"** as a parameter to the **InvokeAsync** method.
+2. In the **CACHE** element, call the **Component.InvokeAsync** method by using the **@await** operator. To the **InvokeAsync** method, pass **"NavbarMenu"** as a parameter.
 
 #### Task 2: Insert data to be cached by the cache tag helper.
 
@@ -81,7 +81,7 @@ The main tasks for this exercise are as follows:
     - Name: **NavbarMenuViewComponent**
     - Folder: **ViewComponents**   
 
-3. In the **NavbarMenuViewComponent** class, add **USING** statements for the following namespaces:
+3. In the **NavbarMenuViewComponent** class, add the **USING** statements for the following namespaces:
 
    - **ElectricStore.Data**
    - **Microsoft.AspNetCore.Mvc**
@@ -101,7 +101,7 @@ The main tasks for this exercise are as follows:
 
 7. In the constructor, initialize the  **_context** field with the value of the **context** parameter.
 
-8. Declare a method with following information:
+8. Declare a method with the following information:
 
    - Name: **Invoke**
    - Return type: **IViewComponentResult**
@@ -109,7 +109,7 @@ The main tasks for this exercise are as follows:
 
 9.   In the **Invoke** method, create a variable named **categories** of type **var** with the value of **_context.menuCategories.OrderBy(c => c.Name).ToList()**.
 
-10. Return the **IViewComponentResult** result using the **View** method. Pass the **"MenuCategories"** and **categories** as a parameters to the **View** method.
+10. Return the **IViewComponentResult** result by using the **View** method. Pass **"MenuCategories"** and **categories** as parameters to the **View** method.
 
 11. Create a new folder with the following information:
 
@@ -131,11 +131,11 @@ The main tasks for this exercise are as follows:
 15. Add a **@model** directive with the following information:
      - Type: **IEnumerable&lt;ElectricStore.Models.MenuCategory&#62;**
 
-16. Add a **LI** element with the following information:
+16. Add an **LI** element with the following information:
 
      - Class: **nav-item**
 
-17. In the  **LI** element, add a **A** element with the following information:
+17. In the **LI** element, add an **A** element with the following information:
 
      - Content: **Home&#60;span class="sr-only"&#62;(current)&#60;/span&#62;**
      - Attributes:
@@ -143,12 +143,12 @@ The main tasks for this exercise are as follows:
         - href: **@Url.Action("Index", "Products")**
 
 
-18. After the **LI** element, add a **LI** element with the following information:
+18. After the **LI** element, add an **LI** element with the following information:
 
      - Class: **nav-item dropdown**
 
 
-18. In the new **LI** element, add a **A** element with the following information:
+19. In the new **LI** element, add an **A** element with the following information:
 
      - Content: **Electronics**
      - Attributes:
@@ -160,18 +160,18 @@ The main tasks for this exercise are as follows:
         - aria-expanded: **false**
     
 
-19. After the **A** element, add a **DIV** element with the following information:
+20. After the **A** element, add a **DIV** element with the following information:
 
      - class: **dropdown-menu**
      - aria-labelledby: **navbarDropdownMenuLink**
 
-20. In the **DIV** element, create a **FOREACH** statement, with the following information:
+21. In the **DIV** element, create a **FOREACH** statement, with the following information:
 
 	- Variable Type: **var**
 	- Variable Name: **item**
 	- Collection: **Model**
 
-21. In the **FOREACH** statement block, Add a **A** element with the following information:
+22. In the **FOREACH** statement block, add an **A** element with the following information:
 
 	- Content: **@Html.DisplayFor(modelItem => item.Name)**
     - Attributes:
@@ -180,11 +180,11 @@ The main tasks for this exercise are as follows:
         - asp-controller: **Products**
         - asp-route-id: **@item.Id**
 
-22. After the last **LI** element, add a **LI** element with the following information:
+23. After the last **LI** element, add an **LI** element with the following information:
 
      - Class: **nav-item**
 
-23. In the new **LI** element, add a **A** element with the following information:
+24. In the new **LI** element, add an **A** element with the following information:
 
      - Content: **Add to Shopping List**
      - Attributes:
@@ -192,22 +192,22 @@ The main tasks for this exercise are as follows:
         - href: **@Url.Action("AddToShoppingList", "Products")**
 
 
-24. After the last **LI** element, add a **LI** element with the following information:
+25. After the last **LI** element, add an**LI** element with the following information:
 
      - Class: **nav-item**
 
-25. In the new **LI** element, add a **A** element with the following information:
+26. In the new **LI** element, add an **A** element with the following information:
 
      - Content: **My Shopping Card**
      - Attributes:
         - class: **nav-link**
         - href: **@Url.Action("Index", "ShoppingCard")**
 
-26. After the last **LI** element, add a **LI** element with the following information:
+27. After the last **LI** element, add an **LI** element with the following information:
 
      - Class: **nav-item**
 
-27. In the new **LI** element, add a **DIV** element with the following information:
+28. In the new **LI** element, add a **DIV** element with the following information:
 
      - Content: **The content cached Since: @DateTime.Now**
      - Attributes:
@@ -221,21 +221,21 @@ The main tasks for this exercise are as follows:
 
 3. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-4. In the second **Microsoft Edge**, navigate to **http://localhost:[port]**.
+4. In the second **Microsoft Edge** window, navigate to **http://localhost:***[port]*.
 
-    >**Note:** The menu bar of the application is cached since the time displayed in the menu bar, the time is the same in both **Microsoft Edge** pages.
+    >**Note**: The menu bar of the application is cached since the time displayed in the menu bar, the time is the same in both **Microsoft Edge** pages.
 
 5. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-6. In the second **Microsoft Edge**, navigate to **http://localhost:[port]/products/index/1/RefreshCache**.
+6. In the second **Microsoft Edge** window, navigate to **http://localhost:***[port]***/products/index/1/RefreshCache**.
 
-    >**Note:** The menu bar of the application is cached since the time displayed in the menu bar, the time is not the same as the other two **Microsoft Edge** pages because the **RefreshCache** in the route triggers a reload of the view component.
+    >**Note**: The menu bar of the application is cached since the time displayed in the menu bar, the time is not the same as the other two **Microsoft Edge** pages because the **RefreshCache** in the route triggers a reload of the view component.
 
-7. Close all the **Microsoft Edge** window.
+7. Close all the **Microsoft Edge** windows.
 
 #### Task 4: Insert items to a memory cache.
 
-1. In the **ProductsController** class, add **USING** statements for the following namespace:
+1. In the **ProductsController** class, add the **USING** statements for the following namespace:
 
    - **Microsoft.Extensions.Caching.Memory**
 
@@ -269,24 +269,24 @@ The main tasks for this exercise are as follows:
 
 6. In the beginning of the  **Index** method, create a variable named **products** of type **List&#60;Product&#62;**.
 
-7. Add an **IF** statement that checks that value of **_memoryCache.TryGetValue(PRODUCT_KEY, out products)** is false.
+7. Add an **IF** statement that checks if the value of **_memoryCache.TryGetValue(PRODUCT_KEY, out products)** is false.
 
-8. In the **IF** statement, assign the **products** variable, with the value of **_context.Products.ToList()**.
+8. In the **IF** statement, assign the **products** variable with the value **_context.Products.ToList()**.
 
-9. call the **Select** method of the **products** variable, with the following information:
+9. Call the **Select** method of the **products** variable, with the following information:
 
-10. Pass a **lambda expression** as a parameter to the **Select** method with the following information:
-   - Lambda Expression: **c => { c.LoadedFromDatabase = DateTime.Now; return c; }**
+10. Pass a lambda expression as a parameter to the **Select** method with the following information:
+   - Lambda expression: **c => { c.LoadedFromDatabase = DateTime.Now; return c; }**
 
-11. Chain a **ToList** method call to the **Select** function call.
+11. To the **Select** function call, chain a **ToList** method call.
 
-12. Create a variable named **MemoryCacheEntryOptions** of type **cacheOptions**. Initialize the  **cacheOptions** variable using the  **MemoryCacheEntryOptions** constructor.
+12. Create a variable named **MemoryCacheEntryOptions** of type **cacheOptions**. Initialize the  **cacheOptions** variable by using the  **MemoryCacheEntryOptions** constructor.
 
 13. Call the **SetPriority** method of the  **cacheOptions** variable. Pass **CacheItemPriority.High** as a parameter to the  **SetPriority** method.
 
 14. Call the **SetSlidingExpiration** method of the  **cacheOptions** variable. Pass **TimeSpan.FromSeconds(60)** as a parameter to the  **SetSlidingExpiration** method.
 
-15. Call the **Set** method of the  **_memoryCache** variable. Pass **PRODUCT_KEY**,  **products** and  **cacheOptions** as a parameters to the  **Set** method.
+15. Call the **Set** method of the  **_memoryCache** variable. Pass **PRODUCT_KEY**,  **products**, and  **cacheOptions** as parameters to the  **Set** method.
 
 #### Task 5: Retrieve items from a memory cache
 
@@ -308,11 +308,11 @@ The main tasks for this exercise are as follows:
 
     - Content: **@Html.DisplayFor(modelItem => item.ProductName)**
 
-5. After the **H3** element, add a **IF** statement that checks that **item.PhotoFileName** is not **NULL**.
+5. After the **H3** element, add an **IF** statement that checks that **item.PhotoFileName** is not **NULL**.
 
 6. In the **IF** statement code block, add a **DIV** element.
 
-7. In the new **DIV** element,  add a **IMG** element with the following information:
+7. In the new **DIV** element,  add an **IMG** element with the following information:
 
      - src: **@Url.Action("GetImage", "Products", new { productId = item.Id })**
 
@@ -342,37 +342,37 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-    >**Note:** Examine the products **Last retrieved on** data.
+    >**Note**: Examine the product's **Last retrieved on** data.
 
 3. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-4. In the second **Microsoft Edge**, navigate to **http://localhost:[port]**.
+4. In the second **Microsoft Edge** window, navigate to **http://localhost:[port]**.
 
-    >**Note:** Examine the browser content, you can see that products in the **"Sale of The Day"** page content are cached, since the time displayed in the products **Last retrieved on** data is identical in both **Microsoft Edge** pages.
+    >**Note**: Examine the browser content, and you can see that products in the **"Sale of The Day"** page content are cached, since the time displayed in the products **Last retrieved on** data is identical in both **Microsoft Edge** pages.
 
-5. Close all the **Microsoft Edge** window.
+5. Close all the **Microsoft Edge** windows.
 
->**Results**: After completing this exercise, you will be able to implement caching strategy by adding cache tag helper to a view, and insert items to a memory cache.
+>**Results**: After completing this exercise, you will be able to implement a caching strategy by adding a cache tag helper to a view, and insert items into a memory cache.
 
 ### Exercise 2: Managing State
 
 #### Scenario
 
-To retain information across requests, state should be used in the web application. In this exercise you will use session state to manage state in the web application.
+To retain information across requests, the state should be used in the web application. In this exercise, you will use session state to manage the state in the web application.
 
 The main tasks for this exercise are as follows:
 
-1. Enable working with sessions.
+1. Enable working with sessions
 
-2. Use session to store values.
+2. Use session to store values
 
-3. Retrieve values from a session.
+3. Retrieve values from a session
 
-4. Run the application and navigate from view to view.
+4. Run the application and navigate from view to view
 
 #### Task 1: Enable working with sessions.
 
-1. In the **Startup** class, in the **ConfigureServices** method, after the **services.AddDbContext** method call, Call the **AddSession** method of the **services** parameter.
+1. In the **Startup** class, in the **ConfigureServices** method, after the **services.AddDbContext** method call, call the **AddSession** method of the **services** parameter.
 
 2. Pass the following **options =>
             {
@@ -383,7 +383,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Use session to store values.
 
-1. In the **ProductsController** class, add **USING** statements for the following namespaces:
+1. In the **ProductsController** class, add the **USING** statements for the following namespaces:
 
    - **Microsoft.AspNetCore.Http**
    - **Newtonsoft.Json**
@@ -398,7 +398,7 @@ The main tasks for this exercise are as follows:
 
 6. In the **IF** statement code block, call the **HttpContext.Session.SetInt32** method and pass **"CustomerPhoneNumber"** and **customer.PhoneNumber** as parameters.
 
-7. In the **IF** statement code block, add another **IF** statement, that checks that value of **HttpContext.Session.GetString("CustomerProducts")** variable is not null.
+7. In the **IF** statement code block, add another **IF** statement that checks that the value of the **HttpContext.Session.GetString("CustomerProducts")** variable is not null.
 
 8. In the **IF** statement code block, create a variable named **productsListId** of type **List<int>** and assign it with the value of **JsonConvert.DeserializeObject&lt;List<int>&gt;(HttpContext.Session.GetString("CustomerProducts"))**. 
 
@@ -408,13 +408,13 @@ The main tasks for this exercise are as follows:
 
 11. After the **IF** statement code block, create a variable named **serialisedDate** of type **var** and assign it with the value of **JsonConvert.SerializeObject(customer.SelectedProductsList)**.
 
-12. Call the **HttpContext.Session.SetString** method and pass **"CustomerProducts"** and **serialisedDate** as parameters.
+12. Call the **HttpContext.Session.SetString** method, and pass **"CustomerProducts"** and **serialisedDate** as parameters.
 
-13. Return the **RedirectToActionResult** result using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
+13. Return the **RedirectToActionResult** result by using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
 
 #### Task 3: Retrieve values from a session.
 
-1. In the **AddToShoppingList** action, before the call to **PopulateProductsList** method, add **IF** statement, that checks that value of **HttpContext.Session.GetString("CustomerProducts")** variable is not null.
+1. In the **AddToShoppingList** action, before the call to **PopulateProductsList** method, add an **IF** statement that checks that the value of the **HttpContext.Session.GetString("CustomerProducts")** variable is not null.
 
 2. In the **IF** statement code block, create a variable named **sessionCustomer** of type **Customer**.
 
@@ -432,7 +432,7 @@ The main tasks for this exercise are as follows:
 
 9. Return the **sessionCustomer** parameter to the view.
 
-10. In the **ShoppingCardController** class, add **USING** statements for the following namespaces:
+10. In the **ShoppingCardController** class, add the **USING** statements for the following namespaces:
 
    - **ElectricStore.Data**
    - **ElectricStore.Models**
@@ -464,32 +464,32 @@ The main tasks for this exercise are as follows:
 
 15. In the constructor, initialize the  **_context** field with the value of the **context** parameter.
 
-8. Remove the contents of the **Index** method.
+16. Remove the contents of the **Index** method.
 
-9. In the **Index** method,  add an **IF** statement that check that **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerFirstName"))** is false and **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts"))** is false. 
+17. In the **Index** method,  add an **IF** statement that checks that **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerFirstName"))** is false and **string.IsNullOrEmpty(HttpContext.Session.GetString("CustomerProducts"))** is false. 
 
-10. In the **IF** statement code block, create a variable named **productsListId** of type **List<int>** and assign it with the value of **JsonConvert.DeserializeObject&lt;int[]&gt;(HttpContext.Session.GetString("CustomerProducts"))**. 
+18. In the **IF** statement code block, create a variable named **productsListId** of type **List<int>**, and assign it with the value of **JsonConvert.DeserializeObject&lt;int[]&gt;(HttpContext.Session.GetString("CustomerProducts"))**. 
 
-11. Assign the **products** field with the value of **new List<Product>()**.
+19. Assign the **products** field with the value of **new List<Product>()**.
 
-12. Create a **FOREACH** statement, with the following information:
+20. Create a **FOREACH** statement, with the following information:
 
     - Variable Type: **var**
     - Variable Name: **item**
     - Collection: **productsListId**
 
-13. In the **FOREACH** statement code block, create a **product** variable of type **var** and assign it with the value of **_context.Products.SingleOrDefault(p => p.Id == item)**.
+21. In the **FOREACH** statement code block, create a **product** variable of type **var**, and assign it with the value of **_context.Products.SingleOrDefault(p => p.Id == item)**.
 
-14. Call the **Add** method of the **products** variable. Pass **product** as a parameter to the **Add** method. 
+22. Call the **Add** method of the **products** variable. Pass **product** as a parameter to the **Add** method. 
 
-15. After the **FOREACH** code block, assign the **sessionModel** field with the value of **new SessionStateViewModel** object. 
+23. After the **FOREACH** code block, assign the **sessionModel** field with the value of the **new SessionStateViewModel** object. 
 
-16. Inititialize the **CustomerName** property of the **sessionModel** field with the value of **HttpContext.Session.GetString("CustomerFirstName")**. 
+24. Inititialize the **CustomerName** property of the **sessionModel** field with the value of **HttpContext.Session.GetString("CustomerFirstName")**. 
 
-17. Inititialize the **SelectedProducts** property of the  **sessionModel** field with the value of **products**. 
+25. Inititialize the **SelectedProducts** property of the  **sessionModel** field with the value of **products**. 
 
 
-18. Return the **ViewResult** result using the **View** method. Pass **sessionModel** as a parameter to the **View** method. 
+26. Return the **ViewResult** result by using the **View** method. Pass **sessionModel** as a parameter to the **View** method. 
 
 #### Task 4: Run the application.
 
@@ -499,60 +499,60 @@ The main tasks for this exercise are as follows:
 
 3. In the menu bar, click **My Shopping Card**.
 
-    >**Note:** Examine the browser content.
+    >**Note**: Examine the browser content.
 
 4. In the menu bar, click **Add to Shopping List**.
 
 5. On the **Add Products to Shopping List** page, select the following:
 
-	-  Products List: **_&lt;Products of your choice&gt;_**
-    -  First Name: **_&lt;A first name of your choice&gt;_**
-    -  Last  Name: **_&lt;A last  name of your choice&gt;_**
-    -  Address:  **_&lt;An address of your choice&gt;_**
-    -  Email:  **_&lt;An email of your choice&gt;_**
-    -  Phone:  **_&lt;A phone number of your choice&gt;_**
+	-  Products List: _&lt;Products of your choice&gt;_
+    -  First Name: _&lt;A first name of your choice&gt;_
+    -  Last  Name: _&lt;A last  name of your choice&gt;_
+    -  Address:  _&lt;An address of your choice&gt;_
+    -  Email:  _&lt;An email of your choice&gt;_
+    -  Phone: _&lt;A phone number of your choice&gt;_
 
 6. In the menu bar, click **My Shopping Card**.
 
-    >**Note:** Examine the browser content, the browser displays the **ShoppingCard.cshtml** file content, rendered in the **_Layout.cshtml**, and the cached content is the products that where selectd by you in the **"Add Products to Shopping List"** page.
+    >**Note**: Examine the browser content; it displays the content of the **ShoppingCard.cshtml** file, rendered by **_Layout.cshtml**, and the cached contents are the products that were selected by you in the **"Add Products to Shopping List"** page.
 
 7. In the menu bar, click **Add to Shopping List**.
 
-    >**Note:** Examine the browser content, the browser displays your personal information cached.
+    >**Note**: Examine the browser content; it displays your cached personal information.
 
-8. On the **Add Products to Shopping List** page, in the **Products List** list, select again _&lt;Products of your choice&gt;._
+8. On the **Add Products to Shopping List** page, in the **Products List** list, again select  _&lt;Products of your choice&gt;._
 
 9. In the menu bar, click **My Shopping Card**.
 
-    >**Note:** Examine the browser content, the product you selected in the second selection is also displayed in the cached list of products you have selected in the past.
+    >**Note**: Examine the browser content; the product you selected in the second selection is also displayed in the cached list of products you have selected in the past.
 
 10. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-11. In the second **Microsoft Edge**, navigate to **http://localhost:[port]**.
+11. In the second **Microsoft Edge** window, navigate to **http://localhost:***[port]*.
 
 12. In the menu bar, click **My Shopping Card**.
 
-    >**Note:** Examine the browser content, the list of products is not displayed because it is empty. The session is saved only in the original browser.
+    >**Note**: Examine the browser content; the list of products is not displayed because it is empty. The session is saved only in the original browser.
 
-13. Close all **Microsoft Edge** window.
+13. Close all **Microsoft Edge** windows.
 
->**Results**: After completing this exercise, you will be able to manage state, by working with sessions.
+>**Results**: After completing this exercise, you will be able to manage state by working with sessions.
 
 ### Exercise 3: Calling a Web API using jQuery
 
 #### Scenario
 
-In this exercise, you will first add a SignalR Hub class named ChatHub. You will then add a SignalR Hub class named ChatHub, and register the ChatHub in the Startup class. After that you will add a chat view. Finally, you will write the JavaScript code to connect to the server, and run the application and navigate from view to view.
+In this exercise, you will first add a SignalR Hub class named ChatHub. You will then add a SignalR Hub class named ChatHub, and register the ChatHub in the Startup class. Then, you will add a chat view. Finally, you will write the JavaScript code to connect to the server, and run the application and navigate from view to view.
 
 The main tasks for this exercise are as follows:
 
-1. Add a SignalR Hub class named ChatHub.
+1. Add a SignalR Hub class named ChatHub
 
-2. Register the ChatHub in the Startup class.
+2. Register the ChatHub in the Startup class
 
-3. Add a chat view.
+3. Add a chat view
 
-4. Write the JavaScript code to connect to the server.
+4. Write the JavaScript code to connect to the server
 
 5. Run the application
 
@@ -569,7 +569,7 @@ The main tasks for this exercise are as follows:
     - Name: **ChatHub**
     - Folder: **Hubs**   
 
-3. In the **ChatHub** class, add **USING** statement for the following namespace:
+3. In the **ChatHub** class, add a **USING** statement for the following namespace:
 
    - **Microsoft.AspNetCore.SignalR**
 
@@ -589,7 +589,7 @@ The main tasks for this exercise are as follows:
             - Type: **string**
             - Name: **message**
 
-6. Call the **Clients.All.SendAsync** method using the **await** operator. Pass **"NewMessage"**, **user** and **message** as a parameters to the **SendAsync** method.
+6. Call the **Clients.All.SendAsync** method by using the **await** operator. Pass **"NewMessage"**, **user**, and **message** as parameters to the **SendAsync** method.
 
 
 #### Task 2: Configure SignalR in the Startup class.
@@ -613,15 +613,15 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Add a chat view
 
-1. In the **ShoppingCardController**, declare a method with following information:
+1. In the **ShoppingCardController**, declare a method with the following information:
 
    - Name: **Chat**
    - Return type: **IActionResult **
    - Scope: **public**
 
-2. In the **Configure** method, return the **ViewResult** result using the **View** method.
+2. In the **Configure** method, return the **ViewResult** result by using the **View** method.
 
-3. Create a new view using the **Add MVC View** dialog box, with the following information:
+3. Create a new view by using the **Add MVC View** dialog box, with the following information:
 
     - View Name: **Chat**
     - Template: **Empty (without model)**
@@ -644,7 +644,7 @@ The main tasks for this exercise are as follows:
 	 - Content: **Online Site Visitors**
      - Class: **chat-title**
 
-8. After the  **H2** element, add a **DIV** element with the following information:
+8. After the **H2** element, add a **DIV** element with the following information:
 
      - Class: **chat**
 
@@ -672,7 +672,7 @@ The main tasks for this exercise are as follows:
 
 	- Class: **col-sm-3**
 
-14. In the new **DIV** element, add a **INPUT** element with the following information:
+14. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Type: **type**
 	- Class: **btn btn-info**
@@ -687,7 +687,7 @@ The main tasks for this exercise are as follows:
 
     - Id: **messagesList**
 
-17. After the **DIV** element with the **chat** class, create a **@section**  with the following information: 
+17. After the **DIV** element with the **chat** class, create an **@section**  with the following information: 
     - Name: **Scripts**
 
 18. In the **Scripts** section, add a **SCRIPT** element with the following information:
@@ -710,7 +710,7 @@ The main tasks for this exercise are as follows:
 	- Folder name: **js**
 	- Parent folder: **wwwroot**
 
-2. Add **chat-hub.js** file to the **ElectricStore** project, with the following information:
+2. Add the **chat-hub.js** file to the **ElectricStore** project, with the following information:
 
 	- Source location: **Allfiles\Mod08\Labfiles\ElectricStoreJS**
 	- Target location: **Allfiles\Mod08\Labfiles\01_ElectricStore_begin\ElectricStore\wwwroot\js**
@@ -731,26 +731,26 @@ The main tasks for this exercise are as follows:
 
 5. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-6. In the second **Microsoft Edge**, open **http://localhost:[port]/ShoppingCard/Chat**.
+6. In the second **Microsoft Edge** window, open **http://localhost:[port]/ShoppingCard/Chat**.
 
-7. In the second **Microsoft Edge**, fill the following:
+7. In the second **Microsoft Edge** window, fill the following:
 
 	-  Name: **_&lt;A name of your choice&gt;_**
     -  Message: **_&lt;A message of your choice&gt;_**
 
-    >**Note:**  In both **Microsoft Edge** windows, the message appear.
+    >**Note**:  In both **Microsoft Edge** windows, the message appears.
 
-8. In the first **Microsoft Edge**, fill the following:
-	-  Name: **_&lt;A name of your choice&gt;_**
-    -  Message: **_&lt;A message of your choice&gt;_**
+8. In the first **Microsoft Edge** window, fill the following:
+	-  Name: _&lt;A name of your choice&gt;_
+    -  Message: _&lt;A message of your choice&gt;_
 
-    >**Note:**  In both **Microsoft Edge** windows, the message appear.
+    >**Note**: In both **Microsoft Edge** windows, the message appears.
 
 9. Close all **Microsoft Edge** windows.
 
-10. Close **Microsoft Visual Studio**.
+10. Close Microsoft Visual Studio.
 
->**Results**: After completing this exercise, you should have created an electric store in which users can view products details, order some as well, and chat with online site visitors.
+>**Results**: After completing this exercise, you would have created an electric store in which users can view product details, order some as well, and chat with online site visitors.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
