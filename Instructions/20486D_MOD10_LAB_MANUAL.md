@@ -184,7 +184,7 @@ The main tasks for this exercise are as follows:
     - Return Type: **IEnumerable&lt;Shirt&gt;**
     - Name: **GetShirts**
 
-6. In the **GetShirts** method, return the **IEnumerable&lt;Cupcake&gt;** result by using the following information:
+6. In the **GetShirts** method, return the **IEnumerable&lt;Shirt&gt;** result by using the following information:
 
     - Value:<br/>
     **new List&lt;Shirt&gt;()<br>
