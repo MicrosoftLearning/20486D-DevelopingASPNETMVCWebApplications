@@ -263,9 +263,9 @@ The main tasks for this exercise are as follows:
 
     - Scope: **public**
     - Return Type: **void**
-    - Name: **IsIndexReturnsAllShirts**
+    - Name: **IndexModelShouldContainAllShirts**
 
-6. Above the **IsIndexReturnsAllShirts** method, add a **TestMethod** attribute.
+6. Above the **IndexModelShouldContainAllShirts** method, add a **TestMethod** attribute.
 
 7. Create a variable named **fakeShirtRepository** of type **IShirtRepository**.
 
