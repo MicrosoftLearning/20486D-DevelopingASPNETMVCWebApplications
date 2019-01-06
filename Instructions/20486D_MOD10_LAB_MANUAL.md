@@ -102,7 +102,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: After completing this exercise, you will be able to create a test project, and test a model while fixing its code, as in a test-driven development environment.
 
-### Exercise 2: Testing a Controller by using a Fake Repository
+### Exercise 2: Testing a Controller using a Fake Repository
 
 #### Scenario
 
