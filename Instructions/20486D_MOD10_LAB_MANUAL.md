@@ -291,7 +291,7 @@ The main tasks for this exercise are as follows:
 #### Task 5: Run the unit test – it should fail
 
 1. Run all tests.
-    >**Note**: The **Test Explorer** displays 1 failed test: **IsIndexReturnsAllShirts**, and 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
+    >**Note**: The **Test Explorer** displays 1 failed test: **IndexModelShouldContainAllShirts**, and 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
 #### Task 6: Implement the controller class so the test will pass
 
@@ -316,7 +316,8 @@ The main tasks for this exercise are as follows:
 #### Task 7: Run the unit test – it succeeds
 
 1. Run all tests.
-    >**Note**: The **Test Explorer** displays two passed tests: **IsIndexReturnsAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
+
+    >**Note**: The **Test Explorer** displays two passed tests: **IndexModelShouldContainAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
 >**Results**: After completing this exercise, you will be able to test a controller using a fake repository.
 
@@ -660,7 +661,7 @@ The main tasks for this exercise are as follows:
    - **Microsoft.Extensions.Logging**
    - **moq**
 
-4. In the **IsIndexReturnsAllShirts** method, after initializing the **fakeShirtRepository** variable, add a new variable with the following information:
+4. In the **IndexModelShouldContainAllShirts** method, after initializing the **fakeShirtRepository** variable, add a new variable with the following information:
     - Type: **Mock&lt;ILogger&lt;ShirtController&gt;&gt;**
     - Name: **mockLogger**
     - Value: **new Mock&lt;ILogger&lt;ShirtController&gt;&gt;()**
@@ -672,7 +673,8 @@ The main tasks for this exercise are as follows:
 #### Task 3: Run the unit test
 
 Run all tests.
-    >**Note**: The **Test Explorer** displays two passed tests: **IsIndexReturnsAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
+
+    >**Note**: The **Test Explorer** displays two passed tests: **IndexModelShouldContainAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
 #### Task 4: Run the application in the development environment
 
