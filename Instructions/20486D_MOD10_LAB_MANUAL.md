@@ -425,7 +425,7 @@ The main tasks for this exercise are as follows:
 
 28. Inside the **ELSE** statement code block, return **FALSE**.
 
-#### Task 2: Pass the repository to the controller
+#### Task 2: Register the repository as a service
 
 1. In the **Startup** class, add a **USING** statement for the following namespace:
    - **ShirtStoreWebsite.Services**
