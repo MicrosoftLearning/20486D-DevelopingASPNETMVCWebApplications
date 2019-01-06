@@ -287,7 +287,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin**, and then double-click **LoggingExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod10\Democode\03_LoggingExample_begin**, and then double-click **LoggingExample.sln**.
 
 2. In the **LoggingExample - Microsoft Visual Studio** window, in Solution Explorer, click **Program.cs**. 
 
