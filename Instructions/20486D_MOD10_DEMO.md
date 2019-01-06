@@ -10,7 +10,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod10\Democode\01_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod10\Democode\01_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
 
 2. In the **UnitTestingExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Solution 'UnitTestingExample'**, point to **Add**, and then click **New Project**.
 
