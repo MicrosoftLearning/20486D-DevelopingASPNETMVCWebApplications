@@ -461,7 +461,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 33. In the **Microsoft Visual Studio** dialog box, click **Yes to All**.
 
-    >**Note**: In Solution Explorer, under **Dependencies**, under **npm**,  a new folder named **@aspnet/signalr** package has been added .
+    >**Note**: In Solution Explorer, under **Dependencies**, under **npm**,  a new folder named **@aspnet/signalr** has been added .
 
 34. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Square**, and then click **index.cshtml**.
 
