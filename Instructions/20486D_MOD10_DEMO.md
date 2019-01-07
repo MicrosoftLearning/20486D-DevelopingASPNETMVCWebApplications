@@ -36,6 +36,8 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 12. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TOOLS** menu, point to **NuGet Package Manager**, and then click **Package Manager Console**. 
 
+    >**Note**: In Package Manager Console if prompted **Only run scripts from trusted publishers** type **R** and then press Enter".
+
 13. In the **Package Manager Console** window, type the following text, and then press Enter.
 ```
     Install-Package Microsoft.AspNetCore.Mvc -ProjectName ProductsWebsite.Tests
