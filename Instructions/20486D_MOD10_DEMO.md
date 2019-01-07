@@ -297,6 +297,8 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 1. Navigate to **[Repository Root]\Allfiles\Mod10\Democode\03_LoggingExample_begin**, and then double-click **LoggingExample.sln**.
 
+    >**Note**: If a **Security Warning for LoggingExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
+
 2. In the **LoggingExample - Microsoft Visual Studio** window, in Solution Explorer, click **Program.cs**. 
 
 3. In the **Program.cs** code window, locate the following code:
