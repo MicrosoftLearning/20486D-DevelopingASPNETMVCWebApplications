@@ -30,7 +30,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 9. In the **UnitTestingExample - Microsoft Visual Studio** window, in Solution Explorer, under **ProductsWebsite.Tests**, right-click **UnitTest.cs**, and then click **Rename**.
 
-10. In the **UnitTest1.cs** box, type **ProductControllerTest**, and then press Enter.
+10. In the **UnitTest1.cs** box, type **ProductControllerTest.cs**, and then press Enter.
 
 11. In the **Microsoft Visual Studio** dialog box, click **Yes**.
 
