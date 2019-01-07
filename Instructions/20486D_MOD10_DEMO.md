@@ -12,7 +12,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 1. Navigate to **[Repository Root]\Allfiles\Mod10\Democode\01_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
 
-    >**Note**: If a **Security Warning for RazorSyntaxExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
+    >**Note**: If a **Security Warning for UnitTestingExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 2. In the **UnitTestingExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Solution 'UnitTestingExample'**, point to **Add**, and then click **New Project**.
 
@@ -184,6 +184,8 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 #### Demonstration Steps
 
 1. Navigate to **[Repository Root]\Allfiles\Mod10\Democode\02_ErrorHandlingExample_begin**, and then double-click **ErrorHandlingExample.sln**.
+
+    >**Note**: If a **Security Warning for ErrorHandlingExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 2. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
