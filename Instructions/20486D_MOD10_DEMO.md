@@ -327,7 +327,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
     })
 ```
 
-5. In Solution Explorer, expand **appsettings.json**, and then click **appsettings.development.json**.
+5. In Solution Explorer, click **appsettings.development.json**.
 
 6. Place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
 ```cs
@@ -410,7 +410,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 21. In Microsoft Edge, click **16**.
 
-    >**Note**: The browser does not display the numbers by which **16** can be divided.
+    >**Note**: The browser does not display how many times the number **16** was viewd.
 
 22. In Microsoft Edge, click **Close**.
 
