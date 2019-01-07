@@ -473,7 +473,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
     >**Note**: Press **Ctrl + F**, and then locate the following the sentence **GetDividedNumber - Success**.
 
-41. In the **myLog-XXXXXXXX.txt** window, click **Close**.
+41. In the **myLog-XXXXXXXX - Notepad** window, click **Close**.
 
 42. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
