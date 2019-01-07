@@ -718,7 +718,7 @@ The main tasks for this exercise are as follows:
 
     >**Note**: Inspect the **ArgumentNullException** stack trace.
 
-5. Close **shirt_store_logs-XXXXXXXX.txt**.
+5. Close **shirt_store_logs-XXXXXXXX - Notepad**.
 
 6. Select the **production** environment, and then start the application without debugging.
 
