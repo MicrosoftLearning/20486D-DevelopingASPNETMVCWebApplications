@@ -469,7 +469,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 39. In Microsoft Edge, click **Close**.
 
-40. In File Explorer, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+40. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
 
     >**Note**: Press **Ctrl + F**, and then locate the following the sentence **GetDividedNumber - Success**.
 
