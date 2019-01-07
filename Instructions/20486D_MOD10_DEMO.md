@@ -248,7 +248,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 	+	32.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
  ```
 
-20. In Microsoft Edge, click the **+** (plus) sign near **33**, and then inspect the code.
+20. In Microsoft Edge, click the **+** (plus) sign near **32**, and then inspect the code.
 
 21. In Microsoft Edge, locate the following text:
  ```
