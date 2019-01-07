@@ -414,11 +414,11 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 22. In Microsoft Edge, click **Close**.
 
-23. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+23. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX - Notepad**.
 
     >**Note**: Inspect the **KeyNotFoundException** stack trace.
 
-24. In the **myLog-XXXXXXXX.txt** window, click **Close**.
+24. In the **myLog-XXXXXXXX - Notepad** window, click **Close**.
 
 25. In Solution Explorer, expand **Services**, and then click **Counter.cs**. 
 
