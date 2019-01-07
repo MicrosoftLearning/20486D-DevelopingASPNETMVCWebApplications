@@ -189,6 +189,8 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 3. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
+    >**Note**: The browser  displays an Internal Server Error page.
+
 4. In Microsoft Edge, click **Close**.
 
 6. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the toolbar, click the arrow next to the **Start Debugging** button, and then click **Development**.​
