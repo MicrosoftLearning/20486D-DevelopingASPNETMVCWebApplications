@@ -732,7 +732,7 @@ The main tasks for this exercise are as follows:
 8. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and then open the **shirt_store_logs-XXXXXXXX.txt** file.
     >**Note**: The log file does not contain another message because the action was successful and there are no errors.
 
-9. Close **shirt_store_logs-XXXXXXXX.txt**.
+9. Close **shirt_store_logs-XXXXXXXX - Notepad**.
 
 10. Close Microsoft Visual Studio.
 
