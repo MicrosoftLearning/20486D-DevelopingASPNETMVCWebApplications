@@ -12,7 +12,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 1. Navigate to **[Repository Root]\Allfiles\Mod10\Democode\01_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
 
-    >**Note**: If a **Security Warning for UnitTestingExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
+    >**Note**: If a **Security Warning for ProductsWebsite** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 2. In the **UnitTestingExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Solution 'UnitTestingExample'**, point to **Add**, and then click **New Project**.
 
