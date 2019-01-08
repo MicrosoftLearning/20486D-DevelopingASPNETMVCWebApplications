@@ -184,6 +184,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 ```cs
     int? overallVisitsNumber = HttpContext.Session.GetInt32("Overall");
     int? controllerVisitsNumber = HttpContext.Session.GetInt32("Home");
+    int? AnotherControllerVisitsNumber = HttpContext.Session.GetInt32("Another");
     if (overallVisitsNumber == null)
     {
         overallVisitsNumber = 1;
