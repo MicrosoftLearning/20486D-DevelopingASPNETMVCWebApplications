@@ -263,12 +263,12 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-19. In the **StateExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
-    
-20. Place the cursor at the end of the located code, press Enter, and then type the following code:
+19. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     @using Microsoft.AspNetCore.Http
 ```
+    
+20. In the **StateExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 21. In the **StateExample - Microsoft Visual Studio** window, in Solution Explorer, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
