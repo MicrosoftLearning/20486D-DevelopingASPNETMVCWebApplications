@@ -540,7 +540,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: After completing this exercise, you will be able to manage state by working with sessions.
 
-### Exercise 3: Calling a Web API using jQuery
+### Exercise 3: Two-Way Communication 
 
 #### Scenario
 
@@ -558,9 +558,7 @@ The main tasks for this exercise are as follows:
 
 5. Run the application
 
-
 #### Task 1: Add a SignalR Hub class named ChatHub.
-
 
 1. Create a new folder with the following information:
 
@@ -618,7 +616,7 @@ The main tasks for this exercise are as follows:
 1. In the **ShoppingCardController**, declare a method with the following information:
 
    - Name: **Chat**
-   - Return type: **IActionResult **
+   - Return type: **IActionResult**
    - Scope: **public**
 
 2. In the **Configure** method, return the **ViewResult** result by using the **View** method.
