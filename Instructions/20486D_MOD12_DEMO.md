@@ -454,7 +454,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 29. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, click **package.json**.
 
-30. In the **Startup.cs** code window, locate the following code:
+30. In the **package.json** code window, locate the following code:
 ```cs
     "dependencies": {
 ```
