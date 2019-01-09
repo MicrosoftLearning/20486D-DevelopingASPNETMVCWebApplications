@@ -292,55 +292,53 @@ The main tasks for this exercise are as follows:
 
 15. Return the **products** parameter to the view.
 
-#### Task 5: Retrieve items from a memory cache
-
-1. In the **Views/Products/Index.cshtml** view, after the **H2** element, add a **DIV** element with the following information:
+16. In the **Views/Products/Index.cshtml** view, after the **H2** element, add a **DIV** element with the following information:
 
      - Class: **page-container**
 
-2. In the **DIV** element, create a **FOREACH** statement, with the following information:
+17. In the **DIV** element, create a **FOREACH** statement, with the following information:
 
 	- Variable Type: **var**
 	- Variable Name: **item**
 	- Collection: **Model**
 
-3. In the **FOREACH** statement block, add a **DIV** element with the following information:
+18. In the **FOREACH** statement block, add a **DIV** element with the following information:
 
     - class: **item**
 
-4. In the new **DIV** element, add a **H3** element with the following information:
+19. In the new **DIV** element, add a **H3** element with the following information:
 
     - Content: **@Html.DisplayFor(modelItem => item.ProductName)**
 
-5. After the **H3** element, add an **IF** statement that checks that **item.PhotoFileName** is not **NULL**.
+20. After the **H3** element, add an **IF** statement that checks that **item.PhotoFileName** is not **NULL**.
 
-6. In the **IF** statement code block, add a **DIV** element.
+21. In the **IF** statement code block, add a **DIV** element.
 
-7. In the new **DIV** element,  add an **IMG** element with the following information:
+22. In the new **DIV** element,  add an **IMG** element with the following information:
 
      - src: **@Url.Action("GetImage", "Products", new { productId = item.Id })**
 
-8. After the **IF** statement code block, add a **DIV** element,
+23. After the **IF** statement code block, add a **DIV** element,
 
-9. In the new **DIV** element, add a **P** element with the following information:
+24. In the new **DIV** element, add a **P** element with the following information:
 
      - Content: **@Html.DisplayFor(model => item.Description)**
 
-10. After the new **P** element, add a **P** element with the following information:
+25. After the new **P** element, add a **P** element with the following information:
 
      - Content: **@Html.DisplayFor(model => item.Price)**
 
-11. After the new **DIV** element, add another **DIV** element.
+26. After the new **DIV** element, add another **DIV** element.
 
-12. In the new **DIV** element, add a **P** element with the following information:
+27. In the new **DIV** element, add a **P** element with the following information:
 
      - Content: **@Html.DisplayNameFor(model => item.LoadedFromDatabase)**
 
-13. After the new **P** element, add a **P** element with the following information:
+28. After the new **P** element, add a **P** element with the following information:
 
      - Content: **@Html.DisplayFor(model => item.LoadedFromDatabase)**
 
-#### Task 6: Run the application
+#### Task 5: Run the application
 
 1. Save all the changes.
 
