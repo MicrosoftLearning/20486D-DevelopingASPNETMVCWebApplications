@@ -225,13 +225,13 @@ The main tasks for this exercise are as follows:
 
 3. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-4. In the second **Microsoft Edge** window, navigate to **http://localhost:***[port]*.
+4. In the second **Microsoft Edge** window, navigate to **http://localhost:[port]**.
 
     >**Note**: The menu bar of the application is cached since the time displayed in the menu bar, the time is the same in both **Microsoft Edge** pages.
 
 5. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-6. In the second **Microsoft Edge** window, navigate to **http://localhost:***[port]***/products/index/1/RefreshCache**.
+6. In the second **Microsoft Edge** window, navigate to **http://localhost:[port]/products/index/1/RefreshCache**.
 
     >**Note**: The menu bar of the application is cached since the time displayed in the menu bar, the time is not the same as the other two **Microsoft Edge** pages because the **RefreshCache** in the route triggers a reload of the view component.
 
