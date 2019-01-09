@@ -28,6 +28,8 @@ Estimated Time: **60 minutes**
 
 4. Run the following command: **npm install**.
 
+    >**Note**: If warning messages are shown in the command prompt you can ignore them.
+
 5. Close the **Command Prompt** window.
 
 6. From the following location: **Allfiles\Mod12\Labfiles\01_ElectricStore_begin**, open the **ElectricStore.sln** solution.
