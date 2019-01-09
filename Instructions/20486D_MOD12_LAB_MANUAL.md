@@ -128,7 +128,7 @@ The main tasks for this exercise are as follows:
 13. Create a new **Razor View** with the following information:
 
      - Name: **MenuCategories**
-     - Folder: **MenuCategories**
+     - Folder: **NavbarMenu**
 
 14. In the **MenuCategories.cshtml** view, remove all the content.
 
