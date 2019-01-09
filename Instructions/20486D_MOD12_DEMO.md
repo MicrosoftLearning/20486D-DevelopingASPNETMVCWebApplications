@@ -328,7 +328,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. In File Explorer, navigate to **Allfiles\Mod12\Democode\03_SignalRExample_begin\SignalRExample**, and then copy the address in the address bar.
+1. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod12\Democode\03_SignalRExample_begin\SignalRExample**, and then copy the address in the address bar.
 
     >**Note**: If a **Security Warning for SignalRExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
