@@ -327,7 +327,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
     })
 ```
 
-5. In Solution Explorer, click **appsettings.development.json**.
+5. In Solution Explorer, expand **appsettings.json**, and then click **appsettings.development.json**.
 
 6. Place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
 ```cs
