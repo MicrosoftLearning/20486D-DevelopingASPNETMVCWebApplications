@@ -288,9 +288,7 @@ The main tasks for this exercise are as follows:
 
 13. Call the **SetPriority** method of the  **cacheOptions** variable. Pass **CacheItemPriority.High** as a parameter to the  **SetPriority** method.
 
-14. Call the **SetSlidingExpiration** method of the  **cacheOptions** variable. Pass **TimeSpan.FromSeconds(60)** as a parameter to the  **SetSlidingExpiration** method.
-
-15. Call the **Set** method of the  **_memoryCache** variable. Pass **PRODUCT_KEY**,  **products**, and  **cacheOptions** as parameters to the  **Set** method.
+14. Call the **Set** method of the  **_memoryCache** variable. Pass **PRODUCT_KEY**,  **products**, and  **cacheOptions** as parameters to the  **Set** method.
 
 #### Task 5: Retrieve items from a memory cache
 
