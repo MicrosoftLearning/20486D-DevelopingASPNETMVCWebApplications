@@ -347,7 +347,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 7. Close the window.
 
-8. In File Explorer, navigate to **Allfiles\Mod12\Democode\03_SignalRExample_begin**, and then double-click **SignalRExample.sln**.
+8. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod12\Democode\03_SignalRExample_begin**, and then double-click **SignalRExample.sln**.
 
 9. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
