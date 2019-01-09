@@ -34,6 +34,8 @@ Estimated Time: **60 minutes**
 
 6. From the following location: **[Repository Root]\Allfiles\Mod12\Labfiles\01_ElectricStore_begin**, open the **ElectricStore.sln** solution.
 
+    >**Note**: If a **Security Warning for ElectricStore** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
+
 7. In the **ElectricStore - Microsoft Visual Studio** window, click **TOOLS** and then click **Options**.
 
 8. In the **Options** dialog box, click **Web Package Management**.
