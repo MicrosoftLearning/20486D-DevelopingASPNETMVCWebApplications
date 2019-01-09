@@ -136,7 +136,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod12\Democode\02_StateExample_begin**, and then double-click **StateExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod12\Democode\02_StateExample_begin**, and then double-click **StateExample.sln**.
 
 2. In the **StateExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
