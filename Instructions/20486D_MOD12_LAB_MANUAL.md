@@ -32,7 +32,7 @@ Estimated Time: **60 minutes**
 
 5. Close the **Administrator: Command Prompt** window.
 
-6. From the following location: **Allfiles\Mod12\Labfiles\01_ElectricStore_begin**, open the **ElectricStore.sln** solution.
+6. From the following location: **[Repository Root]\Allfiles\Mod12\Labfiles\01_ElectricStore_begin**, open the **ElectricStore.sln** solution.
 
 7. In the **ElectricStore - Microsoft Visual Studio** window, click **TOOLS** and then click **Options**.
 
