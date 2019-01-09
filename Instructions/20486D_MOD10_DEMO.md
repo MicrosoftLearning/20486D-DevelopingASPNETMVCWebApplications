@@ -410,7 +410,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 21. In Microsoft Edge, click **16**.
 
-    >**Note**: The browser does not display how many times the number **16** was viewd.
+    >**Note**: The browser does not display how many times the number **16** was viewed.
 
 22. In Microsoft Edge, click **Close**.
 
