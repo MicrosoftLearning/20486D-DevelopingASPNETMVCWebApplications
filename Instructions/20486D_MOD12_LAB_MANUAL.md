@@ -530,7 +530,7 @@ The main tasks for this exercise are as follows:
 
 10. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-11. In the second **Microsoft Edge** window, navigate to **http://localhost:***[port]*.
+11. In the second **Microsoft Edge** window, navigate to **http://localhost:[port]**.
 
 12. In the menu bar, click **My Shopping Card**.
 
