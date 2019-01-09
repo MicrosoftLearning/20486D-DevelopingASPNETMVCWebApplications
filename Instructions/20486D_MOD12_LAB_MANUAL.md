@@ -290,6 +290,8 @@ The main tasks for this exercise are as follows:
 
 14. Call the **Set** method of the  **_memoryCache** variable. Pass **PRODUCT_KEY**,  **products**, and  **cacheOptions** as parameters to the  **Set** method.
 
+15. Return the **products** parameter to the view.
+
 #### Task 5: Retrieve items from a memory cache
 
 1. In the **Products/Index.cshtml** view, after the **H2** element, add a **DIV** element with the following information:
