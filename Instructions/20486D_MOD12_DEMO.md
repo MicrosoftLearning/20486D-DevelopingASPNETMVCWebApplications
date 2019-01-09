@@ -466,7 +466,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 32. In the **SignalRExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-33. In the **Microsoft Visual Studio** dialog box, click **Yes to All**.
+33. If the **Microsoft Visual Studio** dialog box, click **Yes to All**.
 
     >**Note**: In Solution Explorer, under **Dependencies**, under **npm**,  a new folder named **@aspnet/signalr** has been added .
 
