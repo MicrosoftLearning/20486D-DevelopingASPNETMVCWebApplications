@@ -28,7 +28,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 8. In the **Reference Manager - ProductsWebsite.Tests** dialog box, in the result pane, select the **ProductsWebsite** check box, and then click **OK**.
 
-9. In the **UnitTestingExample - Microsoft Visual Studio** window, in Solution Explorer, under **ProductsWebsite.Tests**, right-click **UnitTest.cs**, and then click **Rename**.
+9. In the **UnitTestingExample - Microsoft Visual Studio** window, in Solution Explorer, under **ProductsWebsite.Tests**, right-click **UnitTest1.cs**, and then click **Rename**.
 
 10. In the **UnitTest1.cs** box, type **ProductControllerTest.cs**, and then press Enter.
 
