@@ -12,6 +12,8 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 1. Navigate to **[Repository Root]\Allfiles\Mod12\Democode\01_CachingExample_begin**, and then double-click **CachingExample.sln**.
 
+    >**Note**: If a **Security Warning for CachingExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
+
 2. In the **CachingExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Models**, and then click **Product.cs**.
 
 3. In the **Product.cs** code window, locate the following code:
