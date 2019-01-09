@@ -10,7 +10,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod12\Democode\01_CachingExample_begin**, and then double-click **CachingExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod12\Democode\01_CachingExample_begin**, and then double-click **CachingExample.sln**.
 
 2. In the **CachingExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Models**, and then click **Product.cs**.
 
