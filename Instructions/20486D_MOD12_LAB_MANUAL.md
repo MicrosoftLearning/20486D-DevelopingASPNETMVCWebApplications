@@ -294,7 +294,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Retrieve items from a memory cache
 
-1. In the **Products/Index.cshtml** view, after the **H2** element, add a **DIV** element with the following information:
+1. In the **Views/Products/Index.cshtml** view, after the **H2** element, add a **DIV** element with the following information:
 
      - Class: **page-container**
 
