@@ -733,14 +733,15 @@ The main tasks for this exercise are as follows:
 
 6. In the second **Microsoft Edge** window, open **http://localhost:[port]/ShoppingCard/Chat**.
 
-7. In the second **Microsoft Edge** window, fill the following:
+7. In the second **Microsoft Edge** window, fill the following, and then click **Send message**.
 
 	-  Name: **_&lt;A name of your choice&gt;_**
     -  Message: **_&lt;A message of your choice&gt;_**
 
     >**Note**:  In both **Microsoft Edge** windows, the message appears.
 
-8. In the first **Microsoft Edge** window, fill the following:
+8. In the first **Microsoft Edge** window, fill the following, and then click **Send message**.
+
 	-  Name: _&lt;A name of your choice&gt;_
     -  Message: _&lt;A message of your choice&gt;_
 
