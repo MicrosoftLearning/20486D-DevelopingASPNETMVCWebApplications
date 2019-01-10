@@ -355,6 +355,8 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 8. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod12\Democode\03_SignalRExample_begin**, and then double-click **SignalRExample.sln**.
 
+    >**Note**: If a **Security Warning for SignalRExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
+
 9. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
 10. In the **Startup.cs** code window, locate the following code:
