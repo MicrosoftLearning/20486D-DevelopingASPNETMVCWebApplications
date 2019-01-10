@@ -715,7 +715,7 @@ The main tasks for this exercise are as follows:
 	- Source location: **[Repository Root]\Allfiles\Mod12\Labfiles\ElectricStoreJS**
 	- Target location: **[Repository Root]\Allfiles\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore\wwwroot\js**
 
-3. In the **Chat.chtml** view, in the **Scripts** section, add a **SCRIPT** element with the following information:
+3. In the **Chat.cshtml** view, in the **Scripts** section, add a **SCRIPT** element with the following information:
 
     - Src: **~/js/chat-hub.js**
 
