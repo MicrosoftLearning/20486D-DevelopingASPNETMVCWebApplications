@@ -205,26 +205,26 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 	+	38.  cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
  ```
 
-9. In Microsoft Edge, click the **+** (plus) sign near **38**, and then inspect the code.
+8. In Microsoft Edge, click the **+** (plus) sign near **38**, and then inspect the code.
 
-10. In Microsoft Edge, locate the following text:
+9. In Microsoft Edge, locate the following text:
  ```
     ErrorHandlingExample.Services.Counter.IncrementRequestPathCount(string requestPath) in Counter.cs
 	+	19.            UrlCounter[requestPath]++;
  ```
 
-11. In Microsoft Edge, click the **+** (plus) sign near **19**, and then inspect the code.
+10. In Microsoft Edge, click the **+** (plus) sign near **19**, and then inspect the code.
 
-12. In Microsoft Edge, click **Close**.
+11. In Microsoft Edge, click **Close**.
 
-13. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Services**, and then click **Counter.cs**.
+12. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Services**, and then click **Counter.cs**.
 
-14. In the **Counter.cs** code window, select the following code:
+13. In the **Counter.cs** code window, select the following code:
 ```cs
     UrlCounter[requestPath]++;
 ```
 
-15. Replace the selected code with the following code:
+14. Replace the selected code with the following code:
 ```cs
     if (UrlCounter.ContainsKey(requestPath))
     {
@@ -236,54 +236,54 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
     }
 ```
 
-16. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+15. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-17. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+16. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-18. In Microsoft Edge, click **16**.
+17. In Microsoft Edge, click **16**.
      
-19. In Microsoft Edge, locate the following text:
+18. In Microsoft Edge, locate the following text:
  ```
     ErrorHandlingExample.Controllers.HomeController.GetDividedNumber(int id) in HomeController.cs
 	+	32.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
  ```
 
-20. In Microsoft Edge, click the **+** (plus) sign near **32**, and then inspect the code.
+19. In Microsoft Edge, click the **+** (plus) sign near **32**, and then inspect the code.
 
-21. In Microsoft Edge, locate the following text:
+20. In Microsoft Edge, locate the following text:
  ```
     ErrorHandlingExample.Services.DivisionCalculator.GetDividedNumbers(int number) in DivisionCalculator.cs
 	+	20.  if (number % i == 0)
  ```
 
-22. In Microsoft Edge, click the **+** (plus) sign near **20**, and then inspect the code.
+21. In Microsoft Edge, click the **+** (plus) sign near **20**, and then inspect the code.
 
-23. In Microsoft Edge, click **Close**.
+22. In Microsoft Edge, click **Close**.
 
-24. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in Solution Explorer, under **Services**, click **DivisionCalculator.cs**.
+23. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in Solution Explorer, under **Services**, click **DivisionCalculator.cs**.
 
-25. In the **DivisionCalculator.cs** code window, select the following code:
+24. In the **DivisionCalculator.cs** code window, select the following code:
 ```cs
     for (int i = 0; i < (number / 2) + 1; i++)
 ```
 
-26. Replace the selected code with the following code:
+25. Replace the selected code with the following code:
 ```cs
     for (int i = 1; i < (number / 2) + 1; i++)
 ```
 
-27. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+26. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
+27. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
-29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-30. In Microsoft Edge, click **16**.
+29. In Microsoft Edge, click **16**.
     >**Note**: The browser displays the numbers by which **16** can be divided.
 
-31. In Microsoft Edge, click **Close**.
+30. In Microsoft Edge, click **Close**.
 
-32. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+31. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Logging MVC Applications
 
