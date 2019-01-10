@@ -712,8 +712,8 @@ The main tasks for this exercise are as follows:
 
 2. Add the **chat-hub.js** file to the **ElectricStore** project, with the following information:
 
-	- Source location: **Allfiles\Mod08\Labfiles\ElectricStoreJS**
-	- Target location: **Allfiles\Mod08\Labfiles\01_ElectricStore_begin\ElectricStore\wwwroot\js**
+	- Source location: **[Repository Root]\Allfiles\Mod12\Labfiles\ElectricStoreJS**
+	- Target location: **[Repository Root]\Allfiles\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore\wwwroot\js**
 
 3. In the **Chat.chtml** view, in the **Scripts** section, add a **SCRIPT** element with the following information:
 
