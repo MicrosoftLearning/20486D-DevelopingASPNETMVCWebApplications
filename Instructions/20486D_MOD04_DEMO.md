@@ -397,7 +397,7 @@
 
 24. In the **FiltersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, point to **Windows** and, then click **Output**.
 
-25. In the **FiltersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+25. In the **FiltersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 26. On the taskbar, click **FiltersExample - Microsoft Visual Studio**.
 
