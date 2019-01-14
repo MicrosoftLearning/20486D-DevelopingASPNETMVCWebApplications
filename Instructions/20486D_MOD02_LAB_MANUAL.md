@@ -439,9 +439,9 @@ The main tasks for this exercise are as follows:
     - Width: **300**
     - Height: **150**
     - BorderBrush style: **Solid color brush**
-    - BorderBrush R: **0**
-    - BorderBrush G: **0**
-    - BorderBrush B: **0**
+    - BorderBrush R: **150**
+    - BorderBrush G: **175**
+    - BorderBrush B: **207**
     - Border Thickness: **2 (In each one of the 4 boxes)**
 
 18. Drag a label below the left-hand side of the canvas by using the following information:
