@@ -134,7 +134,7 @@
 
 1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\02_RoutesExample_begin**, and then double-click **RoutesExample.sln**.
 
-    >**Note**: If a **Security Warning for ControllersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
+    >**Note**: If a **Security Warning for RoutesExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
 
 2. In **Solution Explorer**, right-click **RoutesExample**, point to **Add**, and then click **New Folder**.
 
