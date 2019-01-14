@@ -423,7 +423,7 @@ The main tasks for this exercise are as follows:
     - Content: **By: Owner**
 
 14. To the current project's main directory, add an existing item by using the following information:
-    - File path: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+    - File path: **[Repository Root]\Allfiles\Mod02\Labfiles\01_DesignProject_begin**
     - File name: **photo.jpg**
 
 15. Drag an image below the last created label by using the following information:
