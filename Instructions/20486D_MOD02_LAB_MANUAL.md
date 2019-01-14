@@ -55,7 +55,7 @@ The main tasks for this exercise are as follows:
 #### Task 2: Plan the photo model class
 
 1. Open the **DetailedPlanningDocument** document and locate the **MVC Model** section.
-    - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+    - File location: **[Repository Root]\Allfiles\Mod02\Labfiles\01_DesignProject_begin**
 
 2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model** by using the following information:
     - Class name: **Photo**
