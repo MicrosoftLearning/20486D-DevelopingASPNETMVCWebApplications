@@ -523,6 +523,8 @@ The main tasks for this exercise are as follows:
 
 13. Paste another canvas below the last pasted canvas.
 
+    >**Note**: Notice that the pasted canvas may cover the original canvas.
+
 14. Paste another canvas to the left-hand side of the last pasted canvas.
 
 15. Save all changes.
