@@ -10,7 +10,7 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click **ControllersExample.sln**.
+1. Navigate to **[RepositoryRoot]\Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click **ControllersExample.sln**.
 
 2. In **Solution Explorer**, right-click **ControllersExample**, point to **Add**, and then click **New Folder**.
 
