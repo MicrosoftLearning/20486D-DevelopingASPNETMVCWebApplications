@@ -40,7 +40,7 @@ The main tasks for this exercise are as follows:
 
 1. Open the **InitialInvestigation** document by using the following information:
 
-    - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+    - File location: **[Repository Root]\Allfiles\Mod02\Labfiles\01_DesignProject_begin**
 
 2. Enable the **Navigation Pane** feature.
 
