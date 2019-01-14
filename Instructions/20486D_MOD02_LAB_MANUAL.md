@@ -519,6 +519,8 @@ The main tasks for this exercise are as follows:
 
 12. Paste the canvas on the right-hand side of the copied canvas.
 
+    >**Note**: Notice that the pasted canvas may cover the original canvas.
+
 13. Paste another canvas below the last pasted canvas.
 
 14. Paste another canvas to the left-hand side of the last pasted canvas.
