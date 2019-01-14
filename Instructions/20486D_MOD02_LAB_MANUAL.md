@@ -84,7 +84,7 @@ The main tasks for this exercise are as follows:
 7. Add a property by using the following information:
     - Class name: **Photo**
     - Property name: **CreatedDate**
-    - Data type: **Date**
+    - Data type: **DateTime**
 
 8. Add a property by using the following information:
     - Class name: **Photo**
