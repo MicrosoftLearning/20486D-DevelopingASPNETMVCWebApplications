@@ -201,6 +201,9 @@ The main tasks for this exercise are as follows:
 
 15. In **ModelDesign.cd**, change the **PhotoComments** property to **Show as Collection Association**.
 
+    >**Note**: See that the association has two arrowheads instead of one. It is a collection association between the **Photo** class and the **Comment** class. This indicates that the **Photo** class has a **PhotoComments** property that contains a collection of **Comment** objects.
+
+
 16. In the **Comment** class diagram, add a property by using the following information:
     - Property name: **CommentID**
     - Data type: **int**
