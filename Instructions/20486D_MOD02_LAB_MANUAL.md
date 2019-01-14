@@ -137,6 +137,8 @@ The main tasks for this exercise are as follows:
     - Property name: **Owner**
     - Data type: **string**
 
+    >**Note**: Keep the **DesignProject – Microsoft Visual Studio** window open for future tasks in this lab.
+
 21. In **Photo.cs**, in the **Title** property, change the property return type to **string**.
 
 22. In the **PhotoFile** property, change the property return type to **byte[]**.
