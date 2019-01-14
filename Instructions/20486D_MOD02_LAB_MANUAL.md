@@ -95,6 +95,8 @@ The main tasks for this exercise are as follows:
 
 10. Merge all the rows in the **Description** column that belong to the **Photo** class, and then save the document.
 
+    >**Note**: Keep the **DetailedPlanningDocument - Microsoft Word** window open for future tasks in this lab.
+
 11. Open Microsoft Visual Studio 2017 and create a new **WPF App (.NET Framework)** project by using the following information:
     - Name: **DesignProject**
     - Template: **WPF App (.NET Framework)**
