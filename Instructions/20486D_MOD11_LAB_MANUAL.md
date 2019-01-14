@@ -169,7 +169,7 @@ The main tasks for this exercise are as follows:
 21. Return the **Task&lt;IActionResult&gt;** result by using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
 
 
-#### Task 4: Add Register a user logic
+#### Task 4: Add user registration logic
 
 1. In the **AccountController** class, add a method with the following information:
     - Scope: **public**
