@@ -135,7 +135,7 @@ The main tasks for this exercise are as follows:
 
 20. Add a property by using the following information:
     - Property name: **Owner**
-    - Data type: **int**
+    - Data type: **string**
 
 21. In **Photo.cs**, in the **Title** property, change the property return type to **string**.
 
