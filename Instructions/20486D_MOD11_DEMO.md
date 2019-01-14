@@ -158,7 +158,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
                    return RedirectToAction("Index", "Student");
                }
            }
-           ModelState.AddModelError("", "Faild to Login");
+           ModelState.AddModelError("", "Failed to Login");
            return View();
        }
 ```
