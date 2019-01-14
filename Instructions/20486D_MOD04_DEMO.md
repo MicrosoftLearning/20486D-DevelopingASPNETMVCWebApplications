@@ -10,7 +10,7 @@
 
 #### Demonstration Steps
 
-1. Navigate to **[RepositoryRoot]\Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click **ControllersExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click **ControllersExample.sln**.
 
     >**Note**: If a **Security Warning for ControllersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
 
@@ -283,7 +283,9 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod04\Democode\03_FiltersExample_begin**, and then double-click **FiltersExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\03_FiltersExample_begin**, and then double-click **FiltersExample.sln**.
+
+    >**Note**: If a **Security Warning for FiltersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
 
 2. In **Solution Explorer**, right-click **FiltersExample**, point to **Add**, and then click **New Folder**.
 
