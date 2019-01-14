@@ -12,6 +12,8 @@
 
 1. Navigate to **[RepositoryRoot]\Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click **ControllersExample.sln**.
 
+    >**Note**: If a **Security Warning for ControllersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
+
 2. In **Solution Explorer**, right-click **ControllersExample**, point to **Add**, and then click **New Folder**.
 
 3. In the **NewFolder** text box, type **Controllers**, and then press Enter.
