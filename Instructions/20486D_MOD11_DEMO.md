@@ -6,14 +6,14 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. 
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 #### Demonstration Steps
 
-1. In **File Explorer**, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin\IdentityExample**, and then copy the address in the address bar.
+1. In File Explorer, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin\IdentityExample**, and then from the address bar, copy the address.
 
-2. Go to **Start**, and then type **cmd**.
+2. Click **Start**, and then type **cmd**.
 
 3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
@@ -21,35 +21,35 @@
 
 5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
-       cd {copied folder path}
+       cd *{copied folder path}*
 ```
 
->**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
+>**Note**: If the *{copied folder path}* is different from the disk drive where the command prompt is located, then you should type *{disk drive}:* before typing the **cd** *{copied folder path}* command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
        npm install
 ```
->**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+>**Note**: If warning messages are shown at the command prompt, you can ignore them.
 
 7. Close the window.
 
-8. In **File Explorer**, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin**, and then double-click **IdentityExample.sln**.
+8. In File Explorer, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin**, and then double-click **IdentityExample.sln**.
 
 9. In the **IdentityExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** Examine the page.
+      >**Note**: Examine the page.
 
-10.  In **Microsoft Edge**, click **Close**.
+10.  In Microsoft Edge, click **Close**.
 
-11. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+11. In the **IdentityExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
 12. In the **Startup.cs** code window, locate the following code:
   ```cs
       using Microsoft.Extensions.DependencyInjection;
 ```
 
-13. Ensure that the cursor is at the end of the  **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
+13. Ensure that the cursor is at the end of the **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
   ```cs
       using IdentityExample.Models;
 ```
@@ -75,7 +75,7 @@
   ```cs
        app.UseAuthentication();
 ```
-17. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **StudentController.cs**.
+17. In the **IdentityExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Controllers**, and then click **StudentController.cs**.
 
 18. In the **StudentController.cs** code window, select the following code:
   ```cs
@@ -97,11 +97,11 @@
        }
 ```
 
-20. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
+20. In the **IdentityExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
 21. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
-22. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **AccountController**, and then click **Add**.
+22. In the **Add Empty MVC Controller** dialog box, in the **Controller name** box, type **AccountController**, and then click **Add**.
 
 23. In the **AccountController.cs** code window, locate the following code:
   ```cs
@@ -158,7 +158,7 @@
                    return RedirectToAction("Index", "Student");
                }
            }
-           ModelState.AddModelError("", "Faild to Login");
+           ModelState.AddModelError("", "Failed to Login");
            return View();
        }
 ```
@@ -216,29 +216,29 @@
 
 34. In the menu bar, click **Student Portal**.
 
-      >**Note:** **Student Portal** page is only for authorized users therefore you redirected to the login page.
+      >**Note**: The **Student Portal** page is only for authorized users; therefore, you are redirected to the login page.
 
 35. On the **Login** page, click **Register**.
 
-36. On the **Register** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+36. On the **Register** page, in the **First Name** box, type _&lt;A first name of your choice&gt;._
 
-37. On the **Register** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+37. On the **Register** page, in the **Last Name** box, type _&lt;A last name of your choice&gt;._
 
-38. On the **Register** page, in the **Phone Number** text box, type _&lt;A phone number of your choice&gt;._
+38. On the **Register** page, in the **Phone Number** box, type _&lt;A phone number of your choice&gt;._
 
-39. On the **Register** page, in the **Email** text box, type _&lt;An email time of your choice&gt;._
+39. On the **Register** page, in the **Email** box, type _&lt;An email time of your choice&gt;._
 
-40. On the **Register** page, in the **User Name** text box, type _&lt;A user name of your choice&gt;._
+40. On the **Register** page, in the **User Name** box, type _&lt;A user name of your choice&gt;._
 
-41. On the **Register** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
+41. On the **Register** page, in the **Password** box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
 
-42. On the **Login** page, in the **User Name** text box, type _&lt;The registered user name&gt;._
+42. On the **Login** page, in the **User Name** box, type _&lt;The registered user name&gt;._
 
-43. On the **Login** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
+43. On the **Login** page, in the **Password** box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
 
-      >**Note:** Examine the page, you have been authorized to enter the **Student Portal** page.
+      >**Note**: Examine the page; you have been authorized to enter the **Student Portal** page.
 
-44.  In **Microsoft Edge**, click **Close**.
+44.  In Microsoft Edge, click **Close**.
 
 45. In the **IdentityExample  - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -248,14 +248,14 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. 
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 #### Demonstration Steps
 
-1. In **File Explorer**, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin\IdentityExample**, and then copy the address in the address bar.
+1. In File Explorer, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin\IdentityExample**, and then copy the address in the address bar.
 
-2. Go to **Start**, and then type **cmd**.
+2. Click **Start**, and then type **cmd**.
 
 3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
@@ -263,28 +263,28 @@
 
 5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
-       cd {copied folder path}
+       cd *{copied folder path}*
 ```
 
->**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
+>**Note**: If the *{copied folder path}* is different from the disk drive where the command prompt is located, then you should type *{disk drive}:* before typing the **cd** *{copied folder path}* command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
        npm install
 ```
->**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+>**Note**: If warning messages are shown in the command prompt, you can ignore them.
 
 7. Close the window.
 
-8. In **File Explorer**, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin**, and then double-click **IdentityExample.sln**.
+8. In File Explorer, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin**, and then double-click **IdentityExample.sln**.
 
-9. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+9. In the **IdentityExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
 10. In the **Startup.cs** code window, locate the following code:
   ```cs
       using Microsoft.Extensions.DependencyInjection;
 ```
-11. Ensure that the cursor is at the end of the  **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
+11. Ensure that the cursor is at the end of the **Microsoft.Extensions.DependencyInjection** namespace, press Enter, and then type the following code:
   ```cs
       using Microsoft.AspNetCore.Identity;
 ```
@@ -299,14 +299,14 @@
        services.AddIdentity<Student, IdentityRole>(options =>
 ```
 
-14. In the **IdentityExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **StudentController.cs**.
+14. In the **IdentityExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Controllers**, and then click **StudentController.cs**.
 
 15. In the **StudentController.cs** code window, locate the following code:
   ```cs
       using Microsoft.AspNetCore.Mvc;
 ```
 
-16. Ensure that the cursor is at the end of the  **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
+16. Ensure that the cursor is at the end of the **Microsoft.AspNetCore.Mvc** namespace, press Enter, and then type the following code:
   ```cs
       using Microsoft.AspNetCore.Authorization;
       using IdentityExample.Data;
@@ -355,35 +355,35 @@
 
 22. In the menu bar, click **Student Portal**.
 
-      >**Note:** **Student Portal** page is only for authorized users therefore you redirected to the login page.
+      >**Note**: The **Student Portal** page is only for authorized users; therefore, you are redirected to the login page.
 
 23. In the menu bar, click **Our Courses**.
 
-      >**Note:** **Our Courses** page is authorized for all site visitors therefore you can enter the page without registration.
+      >**Note**: The **Our Courses** page is authorized for all site visitors therefore, you can enter the page without registration.
       
 23. In the menu bar, click **Login**.
 
 24. On the **Login** page, click **Register**.
 
-25. On the **Register** page, in the **First Name** text box, type _&lt;A first name of your choice&gt;._
+25. On the **Register** page, in the **First Name** box, type _&lt;A first name of your choice&gt;._
 
-26. On the **Register** page, in the **Last Name** text box, type _&lt;A last name of your choice&gt;._
+26. On the **Register** page, in the **Last Name** box, type _&lt;A last name of your choice&gt;._
 
-27. On the **Register** page, in the **Phone Number** text box, type _&lt;A phone number of your choice&gt;._
+27. On the **Register** page, in the **Phone Number** box, type _&lt;A phone number of your choice&gt;._
 
-28. On the **Register** page, in the **Email** text box, type _&lt;An email time of your choice&gt;._
+28. On the **Register** page, in the **Email** box, type _&lt;An email time of your choice&gt;._
 
-29. On the **Register** page, in the **User Name** text box, type _&lt;A user name of your choice&gt;._
+29. On the **Register** page, in the **User Name** box, type _&lt;A user name of your choice&gt;._
 
-30. On the **Register** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
+30. On the **Register** page, in the **Password** box, type _&lt;123qwe!@#QWE&gt;,_, and then click **Register**.
 
-31. On the **Login** page, in the **User Name** text box, type _&lt;The registered user name&gt;._
+31. On the **Login** page, in the **User Name** box, type _&lt;The registered user name&gt;._
 
-32. On the **Login** page, in the **Password** text box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
+32. On the **Login** page, in the **Password** box, type _&lt;123qwe!@#QWE&gt;,_, and then click **Login**.
 
-      >**Note:** Examine the page, you have been authorized to enter the **Student Portal** page.
+      >**Note**: Examine the page; you have been authorized to enter the **Student Portal** page.
 
-33.  In **Microsoft Edge**, click **Close**.
+33.  In Microsoft Edge, click **Close**.
 
 34. In the **IdentityExample  - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
