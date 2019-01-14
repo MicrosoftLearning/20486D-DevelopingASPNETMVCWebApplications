@@ -107,7 +107,7 @@
 
       >**Note:** The **My param is: 2** text is the content result you added in the **ParamExample** action.
 
-22. In **Microsoft Edge**, the address bar, type **http://localhost:[port]/home/RouteDataExample/4**, and then press Enter.
+22. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/RouteDataExample/4**, and then press Enter.
 
       >**Note:** The **Action information: The action is in home controller, the action name is RouteDataExample and the id value is 4** text is the content result you added in the **RouteDataExample** action.
 
