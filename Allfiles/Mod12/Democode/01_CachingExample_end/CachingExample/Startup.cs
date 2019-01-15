@@ -30,8 +30,11 @@ namespace CachingExample
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, ProductContext context)
         {
+            context.Database.EnsureDeleted();
+            context.Database.EnsureCreated();
+
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {

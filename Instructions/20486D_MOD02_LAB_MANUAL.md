@@ -40,7 +40,7 @@ The main tasks for this exercise are as follows:
 
 1. Open the **InitialInvestigation** document by using the following information:
 
-    - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+    - File location: **[Repository Root]\Allfiles\Mod02\Labfiles\01_DesignProject_begin**
 
 2. Enable the **Navigation Pane** feature.
 
@@ -55,7 +55,7 @@ The main tasks for this exercise are as follows:
 #### Task 2: Plan the photo model class
 
 1. Open the **DetailedPlanningDocument** document and locate the **MVC Model** section.
-    - File location: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+    - File location: **[Repository Root]\Allfiles\Mod02\Labfiles\01_DesignProject_begin**
 
 2. Based on your reading of the **InitialInvestigation** document, add and describe a model class for photos in **Table 1: MVC Model** by using the following information:
     - Class name: **Photo**
@@ -84,7 +84,7 @@ The main tasks for this exercise are as follows:
 7. Add a property by using the following information:
     - Class name: **Photo**
     - Property name: **CreatedDate**
-    - Data type: **Date**
+    - Data type: **DateTime**
 
 8. Add a property by using the following information:
     - Class name: **Photo**
@@ -94,6 +94,8 @@ The main tasks for this exercise are as follows:
 9. Merge all the rows in the **Model Class** column that belong to the **Photo** class, and then save the document.
 
 10. Merge all the rows in the **Description** column that belong to the **Photo** class, and then save the document.
+
+    >**Note**: Keep the **DetailedPlanningDocument - Microsoft Word** window open for future tasks in this lab.
 
 11. Open Microsoft Visual Studio 2017 and create a new **WPF App (.NET Framework)** project by using the following information:
     - Name: **DesignProject**
@@ -133,7 +135,9 @@ The main tasks for this exercise are as follows:
 
 20. Add a property by using the following information:
     - Property name: **Owner**
-    - Data type: **int**
+    - Data type: **string**
+
+    >**Note**: Keep the **DesignProject – Microsoft Visual Studio** window open for future tasks in this lab.
 
 21. In **Photo.cs**, in the **Title** property, change the property return type to **string**.
 
@@ -196,6 +200,9 @@ The main tasks for this exercise are as follows:
 14. In **Photo.cs**, change the **PhotoComments** property return type to **List<Comment>**.
 
 15. In **ModelDesign.cd**, change the **PhotoComments** property to **Show as Collection Association**.
+
+    >**Note**: See that the association has two arrowheads instead of one. It is a collection association between the **Photo** class and the **Comment** class. This indicates that the **Photo** class has a **PhotoComments** property that contains a collection of **Comment** objects.
+
 
 16. In the **Comment** class diagram, add a property by using the following information:
     - Property name: **CommentID**
@@ -419,7 +426,7 @@ The main tasks for this exercise are as follows:
     - Content: **By: Owner**
 
 14. To the current project's main directory, add an existing item by using the following information:
-    - File path: **Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+    - File path: **[Repository Root]\Allfiles\Mod02\Labfiles\01_DesignProject_begin**
     - File name: **photo.jpg**
 
 15. Drag an image below the last created label by using the following information:
@@ -435,9 +442,9 @@ The main tasks for this exercise are as follows:
     - Width: **300**
     - Height: **150**
     - BorderBrush style: **Solid color brush**
-    - BorderBrush R: **0**
-    - BorderBrush G: **0**
-    - BorderBrush B: **0**
+    - BorderBrush R: **150**
+    - BorderBrush G: **175**
+    - BorderBrush B: **207**
     - Border Thickness: **2 (In each one of the 4 boxes)**
 
 18. Drag a label below the left-hand side of the canvas by using the following information:
@@ -515,7 +522,11 @@ The main tasks for this exercise are as follows:
 
 12. Paste the canvas on the right-hand side of the copied canvas.
 
+    >**Note**: Notice that the pasted canvas may cover the original canvas.
+
 13. Paste another canvas below the last pasted canvas.
+
+    >**Note**: Notice that the pasted canvas may cover the original canvas.
 
 14. Paste another canvas to the left-hand side of the last pasted canvas.
 

@@ -10,7 +10,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod10\Democode\01_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod10\Democode\01_UnitTestingExample_begin**, and then double-click **UnitTestingExample.sln**.
+
+    >**Note**: If a **Security Warning for ProductsWebsite** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 2. In the **UnitTestingExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Solution 'UnitTestingExample'**, point to **Add**, and then click **New Project**.
 
@@ -26,13 +28,15 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 8. In the **Reference Manager - ProductsWebsite.Tests** dialog box, in the result pane, select the **ProductsWebsite** check box, and then click **OK**.
 
-9. In the **UnitTestingExample - Microsoft Visual Studio** window, in Solution Explorer, under **ProductsWebsite.Tests**, right-click **UnitTest1**, and then click **Rename**.
+9. In the **UnitTestingExample - Microsoft Visual Studio** window, in Solution Explorer, under **ProductsWebsite.Tests**, right-click **UnitTest1.cs**, and then click **Rename**.
 
-10. In the **UnitTest1.cs** box, type **ProductControllerTest**, and then press Enter.
+10. In the **UnitTest1.cs** box, type **ProductControllerTest.cs**, and then press Enter.
 
 11. In the **Microsoft Visual Studio** dialog box, click **Yes**.
 
 12. In the **UnitTestingExample - Microsoft Visual Studio** window, on the **TOOLS** menu, point to **NuGet Package Manager**, and then click **Package Manager Console**. 
+
+    >**Note**: In Package Manager Console if prompted **Only run scripts from trusted publishers** type **R** and then press Enter".
 
 13. In the **Package Manager Console** window, type the following text, and then press Enter.
 ```
@@ -179,11 +183,15 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod10\Democode\02_ErrorHandlingExample_begin**, and then double-click **ErrorHandlingExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod10\Democode\02_ErrorHandlingExample_begin**, and then double-click **ErrorHandlingExample.sln**.
+
+    >**Note**: If a **Security Warning for ErrorHandlingExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 2. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
 3. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+    >**Note**: The browser  displays an Internal Server Error page.
 
 4. In Microsoft Edge, click **Close**.
 
@@ -197,26 +205,26 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 	+	38.  cnt.IncrementRequestPathCount(context.Request.GetDisplayUrl());
  ```
 
-9. In Microsoft Edge, click the **+** (plus) sign near **38**, and then inspect the code.
+8. In Microsoft Edge, click the **+** (plus) sign near **38**, and then inspect the code.
 
-10. In Microsoft Edge, locate the following text:
+9. In Microsoft Edge, locate the following text:
  ```
     ErrorHandlingExample.Services.Counter.IncrementRequestPathCount(string requestPath) in Counter.cs
 	+	19.            UrlCounter[requestPath]++;
  ```
 
-11. In Microsoft Edge, click the **+** (plus) sign near **19**, and then inspect the code.
+10. In Microsoft Edge, click the **+** (plus) sign near **19**, and then inspect the code.
 
-12. In Microsoft Edge, click **Close**.
+11. In Microsoft Edge, click **Close**.
 
-13. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Services**, and then click **Counter.cs**.
+12. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Services**, and then click **Counter.cs**.
 
-14. In the **Counter.cs** code window, select the following code:
+13. In the **Counter.cs** code window, select the following code:
 ```cs
     UrlCounter[requestPath]++;
 ```
 
-15. Replace the selected code with the following code:
+14. Replace the selected code with the following code:
 ```cs
     if (UrlCounter.ContainsKey(requestPath))
     {
@@ -228,54 +236,54 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
     }
 ```
 
-16. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+15. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-17. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+16. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-18. In Microsoft Edge, click **16**.
+17. In Microsoft Edge, click **16**.
      
-19. In Microsoft Edge, locate the following text:
+18. In Microsoft Edge, locate the following text:
  ```
     ErrorHandlingExample.Controllers.HomeController.GetDividedNumber(int id) in HomeController.cs
-	+	33.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
+	+	32.  DivisionResult divisionResult = _numberCalculator.GetDividedNumbers(id);
  ```
 
-20. In Microsoft Edge, click the **+** (plus) sign near **33**, and then inspect the code.
+19. In Microsoft Edge, click the **+** (plus) sign near **32**, and then inspect the code.
 
-21. In Microsoft Edge, locate the following text:
+20. In Microsoft Edge, locate the following text:
  ```
     ErrorHandlingExample.Services.DivisionCalculator.GetDividedNumbers(int number) in DivisionCalculator.cs
 	+	20.  if (number % i == 0)
  ```
 
-22. In Microsoft Edge, click the **+** (plus) sign near **20**, and then inspect the code.
+21. In Microsoft Edge, click the **+** (plus) sign near **20**, and then inspect the code.
 
-23. In Microsoft Edge, click **Close**.
+22. In Microsoft Edge, click **Close**.
 
-24. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in Solution Explorer, under **Services**, click **DivisionCalculator.cs**.
+23. In the **ErrorHandlingExample - Microsoft Visual Studio** window, in Solution Explorer, under **Services**, click **DivisionCalculator.cs**.
 
-25. In the **DivisionCalculator.cs** code window, select the following code:
+24. In the **DivisionCalculator.cs** code window, select the following code:
 ```cs
     for (int i = 0; i < (number / 2) + 1; i++)
 ```
 
-26. Replace the selected code with the following code:
+25. Replace the selected code with the following code:
 ```cs
     for (int i = 1; i < (number / 2) + 1; i++)
 ```
 
-27. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+26. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
+27. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the toolbar, click the arrow next to the **Start Debugging** button, and then click **Production**.​
 
-29. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+28. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-30. In Microsoft Edge, click **16**.
+29. In Microsoft Edge, click **16**.
     >**Note**: The browser displays the numbers by which **16** can be divided.
 
-31. In Microsoft Edge, click **Close**.
+30. In Microsoft Edge, click **Close**.
 
-32. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+31. In the **ErrorHandlingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Logging MVC Applications
 
@@ -287,7 +295,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin**, and then double-click **LoggingExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod10\Democode\03_LoggingExample_begin**, and then double-click **LoggingExample.sln**.
+
+    >**Note**: If a **Security Warning for LoggingExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 2. In the **LoggingExample - Microsoft Visual Studio** window, in Solution Explorer, click **Program.cs**. 
 
@@ -317,7 +327,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
     })
 ```
 
-5. In Solution Explorer, click **appsettings.development.json**.
+5. In Solution Explorer, expand **appsettings.json**, and then click **appsettings.development.json**.
 
 6. Place the cursor after the **{** (opening braces) sign, press Enter, and then type the following code:
 ```cs
@@ -400,15 +410,15 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 21. In Microsoft Edge, click **16**.
 
-    >**Note**: The browser does not display the numbers by which **16** can be divided.
+    >**Note**: The browser does not display how many times the number **16** was viewed.
 
 22. In Microsoft Edge, click **Close**.
 
-23. In File Explorer, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+23. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX - Notepad**.
 
     >**Note**: Inspect the **KeyNotFoundException** stack trace.
 
-24. In the **myLog-XXXXXXXX.txt** window, click **Close**.
+24. In the **myLog-XXXXXXXX - Notepad** window, click **Close**.
 
 25. In Solution Explorer, expand **Services**, and then click **Counter.cs**. 
 
@@ -459,11 +469,11 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 39. In Microsoft Edge, click **Close**.
 
-40. In File Explorer, navigate to **Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
+40. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Democode\03_LoggingExample_begin\LoggingExample**, and then double-click **myLog-XXXXXXXX.txt**.
 
     >**Note**: Press **Ctrl + F**, and then locate the following the sentence **GetDividedNumber - Success**.
 
-41. In the **myLog-XXXXXXXX.txt** window, click **Close**.
+41. In the **myLog-XXXXXXXX - Notepad** window, click **Close**.
 
 42. In the **LoggingExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 

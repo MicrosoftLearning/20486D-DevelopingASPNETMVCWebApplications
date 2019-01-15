@@ -41,10 +41,11 @@ The main tasks for this exercise are as follows:
 
 5.	Run the unit test – it succeeds
 
-
 #### Task 1: Add a testing project
 
-1. From **Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, open the **ShirtStore.sln**.
+1. From **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, open the **ShirtStore.sln**.
+
+    >**Note**: If a **Security Warning for RazorSyntaxExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **ShirtStore** solution, add a new project with the following information:
     - Project name : **ShirtStoreWebsite.Tests**
@@ -57,7 +58,7 @@ The main tasks for this exercise are as follows:
 1. Create a new folder with the following information:
 
     - Folder name: **Models**
-    - Project: **ShirtStoreWebsite**
+    - Project: **ShirtStoreWebsite.Tests**
 
 2. In the **ShirtStoreWebsite.Tests** project, rename the **UnitTest1** class to **ShirtTest**.
 
@@ -101,7 +102,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: After completing this exercise, you will be able to create a test project, and test a model while fixing its code, as in a test-driven development environment.
 
-### Exercise 2: Testing a Controller by using a Fake Repository
+### Exercise 2: Testing a Controller using a Fake Repository
 
 #### Scenario
 
@@ -137,7 +138,7 @@ The main tasks for this exercise are as follows:
      - Name:  **IShirtRepository**
      - Scope: **public**
 
-3. In the **IShirtRepository** interface, add a **USING** statement for the following namespace:
+3. In the **IShirtRepository** class, add a **USING** statement for the following namespace:
    - **ShirtStoreWebsite.Models**
 
 4. Declare a method with the following information:
@@ -183,7 +184,7 @@ The main tasks for this exercise are as follows:
     - Return Type: **IEnumerable&lt;Shirt&gt;**
     - Name: **GetShirts**
 
-6. In the **GetShirts** method, return the **IEnumerable&lt;Cupcake&gt;** result by using the following information:
+6. In the **GetShirts** method, return the **IEnumerable&lt;Shirt&gt;** result by using the following information:
 
     - Value:<br/>
     **new List&lt;Shirt&gt;()<br>
@@ -262,9 +263,9 @@ The main tasks for this exercise are as follows:
 
     - Scope: **public**
     - Return Type: **void**
-    - Name: **IsIndexReturnsAllShirts**
+    - Name: **IndexModelShouldContainAllShirts**
 
-6. Above the **IsIndexReturnsAllShirts** method, add a **TestMethod** attribute.
+6. Above the **IndexModelShouldContainAllShirts** method, add a **TestMethod** attribute.
 
 7. Create a variable named **fakeShirtRepository** of type **IShirtRepository**.
 
@@ -290,7 +291,7 @@ The main tasks for this exercise are as follows:
 #### Task 5: Run the unit test – it should fail
 
 1. Run all tests.
-    >**Note**: The **Test Explorer** displays 1 failed test: **IsIndexReturnsAllShirts**, and 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
+    >**Note**: The **Test Explorer** displays 1 failed test: **IndexModelShouldContainAllShirts**, and 1 passed test: **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
 #### Task 6: Implement the controller class so the test will pass
 
@@ -315,7 +316,8 @@ The main tasks for this exercise are as follows:
 #### Task 7: Run the unit test – it succeeds
 
 1. Run all tests.
-    >**Note**: The **Test Explorer** displays two passed tests: **IsIndexReturnsAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
+
+    >**Note**: The **Test Explorer** displays two passed tests: **IndexModelShouldContainAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
 >**Results**: After completing this exercise, you will be able to test a controller using a fake repository.
 
@@ -423,7 +425,7 @@ The main tasks for this exercise are as follows:
 
 28. Inside the **ELSE** statement code block, return **FALSE**.
 
-#### Task 2: Pass the repository to the controller
+#### Task 2: Register the repository as a service
 
 1. In the **Startup** class, add a **USING** statement for the following namespace:
    - **ShirtStoreWebsite.Services**
@@ -527,7 +529,6 @@ The main tasks for this exercise are as follows:
 5.	Run the application in the production environment
 
 #### Task 1: Add logging to the MVC application
-
 
 1. In the **ShirtStoreWebsite** project, create a new top-level **App Setting File** with the following information:
      - File Name: **appsettings.development.json**
@@ -640,9 +641,9 @@ The main tasks for this exercise are as follows:
         - Type: **Exception**
         - Name: **ex**
 
-37. Inside the **CATCH** statement code block, call the **LogDebug** method of the **_logger** parameter. 
+37. Inside the **CATCH** statement code block, call the **LogError** method of the **_logger** parameter. 
 
-38. Pass the **ex** parameter and **$"An error occured while trying to delete shirt with id of {id}."** as a parameters to the **LogDebug** method.
+38. Pass the **ex** parameter and **$"An error occured while trying to delete shirt with id of {id}."** as a parameters to the **LogError** method.
 
 39. Inside the **CATCH** statement code block, throw the **ex** parameter.
 
@@ -659,7 +660,7 @@ The main tasks for this exercise are as follows:
    - **Microsoft.Extensions.Logging**
    - **moq**
 
-4. In the **IsIndexReturnsAllShirts** method, after initializing the **fakeShirtRepository** variable, add a new variable with the following information:
+4. In the **IndexModelShouldContainAllShirts** method, after initializing the **fakeShirtRepository** variable, add a new variable with the following information:
     - Type: **Mock&lt;ILogger&lt;ShirtController&gt;&gt;**
     - Name: **mockLogger**
     - Value: **new Mock&lt;ILogger&lt;ShirtController&gt;&gt;()**
@@ -670,8 +671,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Run the unit test
 
-Run all tests.
-    >**Note**: The **Test Explorer** displays two passed tests: **IsIndexReturnsAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
+1. Run all tests.
+
+    >**Note**: The **Test Explorer** displays two passed tests: **IndexModelShouldContainAllShirts** and **IsGetFormattedTaxedPriceReturnsCorrectly**.
 
 #### Task 4: Run the application in the development environment
 
@@ -712,10 +714,11 @@ Run all tests.
 
 3. Close Microsoft Edge.
 
-4. In File Explorer, navigate to **Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and open the **shirt_store_logs-XXXXXXXX.txt** file.
+4. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWebsite**, and open the **shirt_store_logs-XXXXXXXX.txt** file.
+
     >**Note**: Inspect the **ArgumentNullException** stack trace.
 
-5. Close **shirt_store_logs-XXXXXXXX.txt**.
+5. Close **shirt_store_logs-XXXXXXXX - Notepad**.
 
 6. Select the **production** environment, and then start the application without debugging.
 
@@ -726,10 +729,10 @@ Run all tests.
     - Price: **10**
     - Tax: **1.2**
 
-8. In File Explorer, navigate to **Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWesite**, and then open the **shirt_store_logs-XXXXXXXX.txt** file.
+8. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin\ShirtStoreWebsite**, and then open the **shirt_store_logs-XXXXXXXX.txt** file.
     >**Note**: The log file does not contain another message because the action was successful and there are no errors.
 
-9. Close **shirt_store_logs-XXXXXXXX.txt**.
+9. Close **shirt_store_logs-XXXXXXXX - Notepad**.
 
 10. Close Microsoft Visual Studio.
 

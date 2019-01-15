@@ -6,13 +6,15 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod12\Democode\01_CachingExample_begin**, and then double-click **CachingExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod12\Democode\01_CachingExample_begin**, and then double-click **CachingExample.sln**.
 
-2. In the **CachingExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Models**, and then click **Product.cs**.
+    >**Note**: If a **Security Warning for CachingExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
+
+2. In the **CachingExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Models**, and then click **Product.cs**.
 
 3. In the **Product.cs** code window, locate the following code:
 ```cs
@@ -33,7 +35,7 @@
     public DateTime LoadedFromDatabase { get; set; }
 ```
 
-5. In the **CachingExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Repositories**, and then click **ProductRepository.cs**.
+5. In the **CachingExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Repositories**, and then click **ProductRepository.cs**.
 
 6. In the **ProductRepository.cs** code window, locate the following code:
 ```cs
@@ -48,7 +50,7 @@
     }
 ```
 
-8. In the **CachingExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Shared**, expand **Components**, expand **Product**, and then click **SelectedProduct.cshtml**.
+8. In the **CachingExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Shared**, expand **Components**, expand **Product**, and then click **SelectedProduct.cshtml**.
 
 9. In the **SelectedProduct.cshtml** code window, locate the following code:
 ```cs
@@ -79,15 +81,15 @@
 12. In the **CachingExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
     >**Note**: The browser displays a list of products.
 
-13. In **Microsoft Edge**, click **Basketball**.
+13. In Microsoft Edge, click **Basketball**.
     >**Note**: The browser displays the basketball details, and the last time that the product was retrieved from the database.
 
-14. In **Microsoft Edge**, click **Basketball**.
-    >**Note**: The browser displays the same page, but the **Last retrieved on** has changed since the item was retrieved from database.
+14. In Microsoft Edge, click **Basketball**.
+    >**Note**: The browser displays the same page, but the **Last retrieved on** has changed since the item was retrieved from the database.
 
-15.  In **Microsoft Edge**, click **Close**.
+15.  In Microsoft Edge, click **Close**.
    
-16. In the **CachingExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Product**, and then click **Index.cshtml**.
+16. In the **CachingExample - Microsoft Visual Studio** window, in Solution Explorer, under **Views**, expand **Product**, and then click **Index.cshtml**.
 
 17. In the **index.cshtml** code window, select the following code:
 ```cs
@@ -109,20 +111,20 @@
     
 20. In the **CachingExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-21. In **Microsoft Edge**, click **Basketball**.
+21. In Microsoft Edge, click **Basketball**.
 
-22. In **Microsoft Edge**, click **Basketball**.
+22. In Microsoft Edge, click **Basketball**.
     >**Note**: The browser displays the same page, but the **Last retrieved on** hasn't changed since the item was cached.
 
-23. In **Microsoft Edge**, click **Football**.
+23. In Microsoft Edge, click **Football**.
 
-24. In **Microsoft Edge**, click **Football**.
+24. In Microsoft Edge, click **Football**.
     >**Note**: The browser displays the same page, but the **Last retrieved on** hasn't changed since the item was cached.
 
-25. In **Microsoft Edge**, click **Basketball**.
+25. In Microsoft Edge, click **Basketball**.
     >**Note**: The browser displays the same page, but the **Last retrieved on** hasn't changed since the item was cached.
 
-26.  In **Microsoft Edge**, click **Close**.
+26.  In Microsoft Edge, click **Close**.
 
 27. In the **CachingExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -132,58 +134,61 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos.(**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course.(**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod12\Democode\02_StateExample_begin**, and then double-click **StateExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod12\Democode\02_StateExample_begin**, and then double-click **StateExample.sln**.
 
-3. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+    >**Note**: If a **Security Warning for StateExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
-4. In the **Startup.cs** code window, locate the following code:
+2. In the **StateExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
+
+3. In the **Startup.cs** code window, locate the following code:
 ```cs
     public void ConfigureServices(IServiceCollection services)
     {
 ```
 
-5. Place the cursor at the end of the located code, press Enter, and then type the following code:
+4. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     services.AddSession();
 ```
 
-6. In the **Startup.cs** code window, locate the following code:
+5. In the **Startup.cs** code window, locate the following code:
 ```cs
     public void Configure(IApplicationBuilder app)
     {
 ```
 
-7. Place the cursor at the end of the located code, press Enter, and then type the following code:
+6. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     app.UseSession();
 ```
 
-8. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
+7. In the **StateExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Controllers**, and then click **HomeController.cs**.
 
-9. In the **HomeController.cs** code window, locate the following code:
+8. In the **HomeController.cs** code window, locate the following code:
 ```cs
     using Microsoft.AspNetCore.Mvc;
 ```
 
-10. Place the cursor at the end of the located code, press Enter, and then type the following code:
+9. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     using Microsoft.AspNetCore.Http;
 ```
 
-11. In the **HomeController.cs** code window, locate the following code:
+10. In the **HomeController.cs** code window, locate the following code:
 ```cs
     public IActionResult Index()
     {
 ```
 
-12. Place the cursor at the end of the located code, press Enter, and then type the following code:
+11. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     int? overallVisitsNumber = HttpContext.Session.GetInt32("Overall");
     int? controllerVisitsNumber = HttpContext.Session.GetInt32("Home");
+    int? AnotherControllerVisitsNumber = HttpContext.Session.GetInt32("Another");
     if (overallVisitsNumber == null)
     {
         overallVisitsNumber = 1;
@@ -209,25 +214,25 @@
     HttpContext.Session.SetInt32("Another", AnotherControllerVisitsNumber.Value);
 ```
 
-13. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, click **AnotherController.cs**.
+12. In the **StateExample - Microsoft Visual Studio** window, in Solution Explorer, under **Controllers**, click **AnotherController.cs**.
 
-14. In the **AnotherController.cs** code window, locate the following code:
+13. In the **AnotherController.cs** code window, locate the following code:
 ```cs
     using Microsoft.AspNetCore.Mvc;
 ```
 
-15. Place the cursor at the end of the located code, press Enter, and then type the following code:
+14. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     using Microsoft.AspNetCore.Http;
 ```
 
-16. In the **AnotherController.cs** code window, locate the following code:
+15. In the **AnotherController.cs** code window, locate the following code:
 ```cs
     public IActionResult Index()
     {
 ```
 
-17. Place the cursor at the end of the located code, press Enter, and then type the following code:
+16. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     int? overallVisitsNumber = HttpContext.Session.GetInt32("Overall");
     int? controllerVisitsNumber = HttpContext.Session.GetInt32("Another");
@@ -251,21 +256,21 @@
     HttpContext.Session.SetInt32("Another", controllerVisitsNumber.Value);
 ```
 
-18. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, and then click **_ViewImports.cshtml**.
+17. In the **StateExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, and then click **_ViewImports.cshtml**.
 
-19. In the **_ViewImports.cshtml** code window, locate the following code:
+18. In the **_ViewImports.cshtml** code window, locate the following code:
 ```cs
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 
-20. In the **StateExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
-    
-20. Place the cursor at the end of the located code, press Enter, and then type the following code:
+19. Place the cursor at the end of the located code, press Enter, and then type the following code:
 ```cs
     @using Microsoft.AspNetCore.Http
 ```
+    
+20. In the **StateExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-21. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Home**, and then click **Index.cshtml**.
+21. In the **StateExample - Microsoft Visual Studio** window, in Solution Explorer, under **Views**, expand **Home**, and then click **Index.cshtml**.
 
 22. In the **Index.cshtml** code window, locate the following code:
 ```cs
@@ -279,7 +284,7 @@
     <div>Number of times visited overall during this session: @Context.Session.GetInt32("Overall")</div>
 ```
 
-24. In the **StateExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, expand **Another**, and then click **Index.cshtml**.
+24. In the **StateExample - Microsoft Visual Studio** window, in Solution Explorer, under **Views**, expand **Another**, and then click **Index.cshtml**.
 
 25. In the **Index.cshtml** code window, locate the following code:
 ```cs
@@ -297,17 +302,17 @@
 
 28. In the **StateExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-29. In **Microsoft Edge**, click **Another**.
+29. In Microsoft Edge, click **Another**.
 
-30. In **Microsoft Edge**, click **Home**.
+30. In Microsoft Edge, click **Home**.
 
 31. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New InPrivate Window**.
 
-32. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]**, and then press Enter.
+32. In Microsoft Edge, in the address bar, type **http://localhost:***[port]*, and then press Enter.
 
->**Note:** We opened a new browser therefore a new session created for the new browser.
+>**Note**: We opened a new browser, therefore a new session is created for the new browser.
 
-33. In the first **Microsoft Edge**, click **Home**.
+33. In the first **Microsoft Edge** window, click **Home**.
 
 34.  Close all the **Microsoft Edge** windows.
 
@@ -319,13 +324,15 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod12\Democode\03_SignalRExample_begin\SignalRExample**, and then copy the address in the address bar.
+1. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod12\Democode\03_SignalRExample_begin\SignalRExample**, and then copy the address in the address bar.
 
-2. Go to **Start**, and then type **cmd**.
+    >**Note**: If a **Security Warning for SignalRExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
+
+2. Click **Start**, and then type **cmd**.
 
 3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
@@ -333,22 +340,24 @@
 
 5. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
-       cd {copied folder path}
+       cd *{copied folder path}*
 ```
 
->**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
+>**Note**: If the *{copied folder path}* is different from the disk drive where the command prompt is located, then you should type *{disk drive}:* before typing the **cd**  *{copied folder path}* command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
        npm install
 ```
->**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+>**Note**: If warning messages are shown in the command prompt you can ignore them.
 
 7. Close the window.
 
-8. In the **File Explorer**, navigate to **Allfiles\Mod12\Democode\03_SignalRExample_begin**, and then double-click **SignalRExample.sln**.
+8. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod12\Democode\03_SignalRExample_begin**, and then double-click **SignalRExample.sln**.
 
-9. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+    >**Note**: If a **Security Warning for SignalRExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
+
+9. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
 10. In the **Startup.cs** code window, locate the following code:
 ```cs
@@ -372,13 +381,13 @@
     });
 ```
 
-14. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **SignalRExample**, point to **Add**, and then click **New Folder**.
+14. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **SignalRExample**, point to **Add**, and then click **New Folder**.
 
-15. In the **NewFolder** text box, type **Hubs**, and then press Enter.
+15. In the **NewFolder** box, type **Hubs**, and then press Enter.
 
-16. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Hubs**, point to **Add**, and then click **Class**.
+16. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Hubs**, point to **Add**, and then click **Class**.
 
-17.	In the **Add New Item - SignalRExample** dialog box, in the **Name** text box, type **SquaresHub**, and then click **Add**.
+17.	In the **Add New Item - SignalRExample** dialog box, in the **Name** box, type **SquaresHub**, and then click **Add**.
 
 18. In the **SquaresHub.cs** code window, locate the following code:
 ```cs
@@ -422,7 +431,7 @@
     }
 ```
 
-24. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+24. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
     
 25. In the **Startup.cs** code window, locate the following code:
 ```cs
@@ -445,9 +454,9 @@
     routes.MapHub<SquaresHub>("/squareshub");
 ```
 
-29. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **package.json**.
+29. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, click **package.json**.
 
-30. In the **Startup.cs** code window, locate the following code:
+30. In the **package.json** code window, locate the following code:
 ```cs
     "dependencies": {
 ```
@@ -459,11 +468,11 @@
 
 32. In the **SignalRExample – Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-33. In the **Microsoft Visual Studio** dialog box, click **Yes to All**.
+33. If the **Microsoft Visual Studio** dialog box, click **Yes to All**.
 
-    >**Note**: In **Solution Explorer**, under **Dependencies**, under **npm**  a new folder has been added named **@aspnet/signalr** package.
+    >**Note**: In Solution Explorer, under **Dependencies**, under **npm**,  a new folder named **@aspnet/signalr** has been added .
 
-34. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Square**, and then click **index.cshtml**.
+34. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Square**, and then click **index.cshtml**.
 
 35. In the **index.cshtml** code window, locate the following code:
 ```cs
@@ -475,7 +484,7 @@
     <script src="~/node_modules/@@aspnet/signalr/dist/browser/signalr.min.js"></script>
 ```
 
-37. In the **SignalRExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **wwwroot**, expand **js**, and then click **square-events.js**.
+37. In the **SignalRExample - Microsoft Visual Studio** window, in Solution Explorer, expand **wwwroot**, expand **js**, and then click **square-events.js**.
 
 38. In the **square-events.js** code window, place the cursor at the beginning of the document, and then type the following code:
 ```cs
@@ -503,19 +512,19 @@
 41. In the **SignalRExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
 42. In the **SignalRExample –  Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
-    >**Note**: The browser displays 9 blue squares.
+    >**Note**: The browser displays nine blue squares.
 
 43. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-44. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]**, and then press Enter.
+44. In Microsoft Edge, in the address bar, type **http://localhost:***[port]*, and then press Enter.
 
-45. In **Microsoft Edge**, click on one of the squares.
+45. In Microsoft Edge, click one of the squares.
     >**Note**: In both the **Microsoft Edge** windows, the square that was clicked is red.
 
 46. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-47. In **Microsoft Edge**, in the Address bar, type **http://localhost:[port]**, and then press Enter.
-    >**Note**: The browser displays 8 blue squares and 1 red square.
+47. In Microsoft Edge, in the address bar, type **http://localhost:***[port]*, and then press Enter.
+    >**Note**: The browser displays eight blue squares and one red square.
 
 48.  Close all the **Microsoft Edge** windows.
 

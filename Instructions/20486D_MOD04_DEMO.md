@@ -10,7 +10,9 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click **ControllersExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click **ControllersExample.sln**.
+
+    >**Note**: If a **Security Warning for ControllersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
 
 2. In **Solution Explorer**, right-click **ControllersExample**, point to **Add**, and then click **New Folder**.
 
@@ -105,7 +107,7 @@
 
       >**Note:** The **My param is: 2** text is the content result you added in the **ParamExample** action.
 
-22. In **Microsoft Edge**, the address bar, type **http://localhost:[port]/home/RouteDataExample/4**, and then press Enter.
+22. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/RouteDataExample/4**, and then press Enter.
 
       >**Note:** The **Action information: The action is in home controller, the action name is RouteDataExample and the id value is 4** text is the content result you added in the **RouteDataExample** action.
 
@@ -130,7 +132,9 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod04\Democode\02_RoutesExample_begin**, and then double-click **RoutesExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\02_RoutesExample_begin**, and then double-click **RoutesExample.sln**.
+
+    >**Note**: If a **Security Warning for RoutesExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
 
 2. In **Solution Explorer**, right-click **RoutesExample**, point to **Add**, and then click **New Folder**.
 
@@ -279,7 +283,9 @@
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod04\Democode\03_FiltersExample_begin**, and then double-click **FiltersExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\03_FiltersExample_begin**, and then double-click **FiltersExample.sln**.
+
+    >**Note**: If a **Security Warning for FiltersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
 
 2. In **Solution Explorer**, right-click **FiltersExample**, point to **Add**, and then click **New Folder**.
 
@@ -397,7 +403,7 @@
 
 24. In the **FiltersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, point to **Windows** and, then click **Output**.
 
-25. In the **FiltersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+25. In the **FiltersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Debugging**.
 
 26. On the taskbar, click **FiltersExample - Microsoft Visual Studio**.
 
