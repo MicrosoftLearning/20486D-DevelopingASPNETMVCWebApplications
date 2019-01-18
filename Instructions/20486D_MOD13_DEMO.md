@@ -6,13 +6,13 @@
 
 #### Preparation Steps 
 
-1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 #### Demonstration Steps
 
 1. Navigate to **Allfiles\Mod13\Democode\01_WebApiExample_begin**, and then double-click **WebApiExample.sln**.
 
-2. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Properties** click **launchSettings.json**.
+2. In the **WebApiExample - Microsoft Visual Studio** window, in Solution Explorer, under **Properties**, click **launchSettings.json**.
 
 3. In the **launchSettings.json** code window, select the following code:
   ```cs
@@ -24,19 +24,19 @@
 ```
 5. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-    >**Note:** The browser displays **HTTP 404** error. 
+    >**Note**: The browser displays the **HTTP 404** error. 
 
-6. In **Microsoft Edge**, click **Close**.
+6. In Microsoft Edge, click **Close**.
 
-7. In **Solution Explorer**, right-click **WebApiExample**, point to **Add**, and then click **New Folder**.
+7. In Solution Explorer, right-click **WebApiExample**, point to **Add**, and then click **New Folder**.
 
-8. In the **NewFolder** text box, type **Controllers**, and then press Enter.
+8. In the **NewFolder** box, type **Controllers**, and then press Enter.
 
-9. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
+9. In the **WebApiExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
 10. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
 
-11. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **PersonController**, and then click **Add**.
+11. In the **Add Empty API Controller** dialog box, in the **Controller name** box, type **PersonController**, and then click **Add**.
 
 12. In the **PersonController.cs** code window, locate the following code:
   ```cs
@@ -93,19 +93,19 @@
 
 20. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-    >**Note:** The browser displays a list of people in **JSON** format.
+    >**Note**: The browser displays a list of people in the JSON format.
 
-21. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/api/person/1**, and then press Enter.
+21. In Microsoft Edge, in the address bar, type **http://localhost:***[port]***/api/person/1**, and then press Enter.
 
-    >**Note:** The browser displays the person in **JSON** format.
+    >**Note**: The browser displays the person in the JSON format.
 
-22. In **Microsoft Edge**, click **Close**.
+22. In Microsoft Edge, click **Close**.
 
-23. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **WebApiExample**, and then click **Manage NuGet Packages**.
+23. In the **WebApiExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **WebApiExample**, and then click **Manage NuGet Packages**.
 
 24. In the **NuGet Package Manager: WebApiExample** window, click **Browse**.
 
-25. In the **Search** text box, type **Microsoft.AspNetCore.Mvc.Formatters.Xml**, and then press Enter.
+25. In the search box, type **Microsoft.AspNetCore.Mvc.Formatters.Xml**, and then press Enter.
 
 26. Click **Microsoft.AspNetCore.Mvc.Formatters.Xml**, select version **2.1.1**, and then click **Install.**
 
@@ -115,7 +115,7 @@
 
 29. Close the **NuGet Package Manager: WebApiExample** window.
 
-30. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+30. In the **WebApiExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
 31. In the **Startup.cs** code window, select the following code:
   ```cs
@@ -125,7 +125,7 @@
   ```cs
       services.AddMvc().AddXmlSerializerFormatters();
 ```
-33. In the **WebApiExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Controllers**, click **PersonController.cs**.
+33. In the **WebApiExample - Microsoft Visual Studio** window, in Solution Explorer, under **Controllers**, click **PersonController.cs**.
 
 34. In the **GetAll** action code block, locate the following code:
   ```cs
@@ -140,29 +140,29 @@
 
 37. In the **WebApiExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-    >**Note:** The browser displays a list of people in **XML** format.
+    >**Note**: The browser displays a list of people in the XML format.
 
-38. In **Microsoft Edge**, click **Close**.
+38. In Microsoft Edge, click **Close**.
 
 39. In the **WebApiExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Calling a Web API 
 
-### Demonstration: How to Call Web APIs Using jQuery Code
+### Demonstration: How to Call Web APIs by Using jQuery Code
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 #### Demonstration Steps
 
 1. Navigate to **Allfiles\Mod13\Democode\02_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
 
-2. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers**, point to **Add**, and then click **Controller**.
+2. In the **JQueryExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
 3. In the **Add Scaffold** dialog box, click **API Controller - Empty**, and then click **Add**.
 
-4. In the **Add Empty API Controller** dialog box, in the **Controller name** text box, type **PizzaController**, and then click **Add**.
+4. In the **Add Empty API Controller** dialog box, in the **Controller name** box, type **PizzaController**, and then click **Add**.
 
 5. In the **PizzaController.cs** code window, locate the following code:
   ```cs
@@ -215,15 +215,15 @@
        _pizzas.Add(pizza);
        return CreatedAtAction(nameof(GetById), new { id = pizza.Id }, pizza);
 ```
-12. In the **JQueryExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
+12. In the **JQueryExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **wwwroot**, point to **Add**, and then click **New Folder**.
 
-13. In the **NewFolder** text box, type **js**, and then press Enter.
+13. In the **NewFolder** box, type **js**, and then press Enter.
 
-14. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+14. In the **JQueryExample – Microsoft Visual Studio** window, in Solution Explorer, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
 
 15. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
 
-16. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **pizza-get**, and then click **Add**.
+16. In the **Add New Item – JQueryExample** dialog box, in the **Name** box, type **pizza-get**, and then click **Add**.
 
 17. In the **pizza-get.js** code window, type the following code:
   ```cs
@@ -244,11 +244,11 @@
        });
 ```
 
-18. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
+18. In the **JQueryExample – Microsoft Visual Studio** window, in Solution Explorer, under **wwwroot**, right-click **js**, point to **Add**, and then click **New Item**.
 
 19. In the **Add New Item – JQueryExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
 
-20. In the **Add New Item – JQueryExample** dialog box, in the **Name** text box, type **pizza-post**, and then click **Add**.
+20. In the **Add New Item – JQueryExample** dialog box, in the **Name** box, type **pizza-post**, and then click **Add**.
 
 21. In the **pizza-post.js** code window, type the following code:
   ```cs
@@ -272,7 +272,7 @@
        });
 ```
 
-22. In the **JQueryExample – Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
+22. In the **JQueryExample – Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
 23. In the **Index.cshtml** code window, locate the following code:
   ```cs
@@ -296,29 +296,29 @@
 
 28. On the **Home** page, click **Get Ajax Function**.
 
-    >**Note:** The browser displays the toppings and price of pizza with id=1.
+    >**Note**: The browser displays the toppings and price of pizza with id=1.
 
 29. On the **Home** page, click **Post Ajax Function**.
 
-    >**Note:** The browser displays the new pizza information.
+    >**Note**: The browser displays the new pizza information.
 
-30. In **Microsoft Edge**, click **Close**.
+30. In Microsoft Edge, click **Close**.
 
 31. In the **JQueryExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Calling a Web API 
 
-### Demonstration: How to Call Web APIs Using Server-Side Code
+### Demonstration: How to Call Web APIs by Using Server-Side Code
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
 
 #### Demonstration Steps
 
 1. Navigate to **Allfiles\Mod13\Democode\03_HttpClientExample_begin**, and then double-click **HttpClientExample.sln**.
 
-2. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide**, click **Startup.cs**.
+2. In the **HttpClientExample - Microsoft Visual Studio** window, in Solution Explorer, under **ClientSide**, click **Startup.cs**.
 
 3. In the **Startup.cs** code window, locate the following code:
   ```cs
@@ -328,15 +328,15 @@
   ```cs
       services.AddHttpClient();
 ```
-5. In **Solution Explorer**, right-click **ClientSide**, point to **Add**, and then click **New Folder**.
+5. In Solution Explorer, right-click **ClientSide**, point to **Add**, and then click **New Folder**.
 
-6. In the **NewFolder** text box, type **Controllers**, and then press Enter.
+6. In the **NewFolder** box, type **Controllers**, and then press Enter.
 
-7. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ClientSide**, right-click **Controllers**, point to **Add**, and then click **Controller**.
+7. In the **HttpClientExample - Microsoft Visual Studio** window, in Solution Explorer, under **ClientSide**, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
 8. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
-9. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **HomeController**, and then click **Add**.
+9. In the **Add Empty MVC Controller** dialog box, in the **Controller name** box, type **HomeController**, and then click **Add**.
 
 10. In the **HomeController.cs** code window, locate the following code:
   ```cs
@@ -410,11 +410,11 @@
            return Content("An error has occurred");
        }
 ```
-18. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **ServerSide**, expand **Controllers**, and then click **StoreController.cs**.
+18. In the **HttpClientExample - Microsoft Visual Studio** window, in Solution Explorer, expand **ServerSide**, expand **Controllers**, and then click **StoreController.cs**.
 
-    >**Note:** Examine the **StoreController** class content.
+    >**Note**: Examine the **StoreController** class content.
 
-19. In the **HttpClientExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **ServerSide**, under **Properties**, click **launchSettings.json**.
+19. In the **HttpClientExample - Microsoft Visual Studio** window, in Solution Explorer, under **ServerSide**, under **Properties**, click **launchSettings.json**.
 
 20. In the **launchSettings.json** code window, select the following code:
   ```cs
@@ -442,21 +442,21 @@
 
 22. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-23. In **Solution Explorer**, right-click **ServerSide**, and then click **Set as StartUp Project**. 
+23. In Solution Explorer, right-click **ServerSide**, and then click **Set as StartUp Project**. 
 
 24. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-25. In **Solution Explorer**, right-click **ClientSide**, and then click **Set as StartUp Project**. 
+25. In Solution Explorer, right-click **ClientSide**, and then click **Set as StartUp Project**. 
 
 26. In the **HttpClientExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-    >**Note:** The browser displays the grocery store object with id=1 in **JSON** format.
+    >**Note**: The browser displays the grocery store object with id=1 in the JSON format.
 
-27. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
+27. In Microsoft Edge, in the address bar, type **http://localhost:***[port]***/home/PostAsync**, and then press Enter.
 
-    >**Note:** The browser displays the new added grocery store in **JSON** format.
+    >**Note**: The browser displays the newly added grocery store in the JSON format.
 
-28. In **Microsoft Edge**, click **Close**.
+28. In Microsoft Edge, click **Close**.
 
 29. In the **HttpClientExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
