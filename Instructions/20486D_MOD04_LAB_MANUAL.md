@@ -56,7 +56,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add controllers to an MVC application
 
-1. From **Allfiles\Mod04\Labfiles\01_WorldJourney_begin**, open the **WorldJourney.sln**.
+1. From **[Repository Root]\Allfiles\Mod04\Labfiles\01_WorldJourney_begin**, open the **WorldJourney.sln**.
+
+    >**Note**: If a **Security Warning for WorldJourney** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **WorldJourney** project, create a new top-level folder, and name it **Controllers**.
 
@@ -185,7 +187,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 6: Store the result in a ViewBag property
 
-In the **Details** action code block, above the **return** statement, save the following key and value in the **ViewBag** property:
+1. In the **Details** action code block, above the **return** statement, save the following key and value in the **ViewBag** property:
      - Key: **Title**
      - Value: **city.CityName**
 
@@ -195,7 +197,11 @@ In the **Details** action code block, above the **return** statement, save the f
 
 2. Start the application without debugging.
 
+    >**Note**: The browser displays the **Index** action result inside the **City** controller.
+
 3.  Click the **London** area on the **Earth** image. Note the red arrow at the center of the **Earth** image.
+
+    >**Note**: The browser displays the **Details** action result inside the **City** controller.
 
 4. Close Microsoft Edge.
 
@@ -241,6 +247,9 @@ The main tasks for this exercise are as follows:
 3. In Microsoft Edge, request the following relative URL.
    - URL: **/Traveler/Index**
 
+    >**Note**: In the next task you will register a new route with the routing table. Then, you will not need to manually enter the **Traveler/Index** relative URL in the address bar.
+
+
 4. Close Microsoft Edge.
 
 #### Task 3: Register new routes in the routing table
@@ -251,6 +260,8 @@ The main tasks for this exercise are as follows:
     - Name: **TravelerRoute**
     - Template: **{controller}/{action}/{name}**
     - Defaults: **controller = "Traveler", action = "Index", name = "Katie Bruce"**
+
+    >**Note**: You can replace the default name **Katie Bruce** with your name.
 
 3. Use the **MapRoute** method to add another custom route with the following information: 
     - Name: **defaultRoute**
@@ -263,6 +274,8 @@ The main tasks for this exercise are as follows:
 1. Save all the changes.
 
 2. Start the application without debugging.
+
+    >**Note**:  The name **"Katie Bruce"** shown in the title comes from the new  **"TravelerRoute"** route, registered in the routing table.
 
 3. Close Microsoft Edge.
 
