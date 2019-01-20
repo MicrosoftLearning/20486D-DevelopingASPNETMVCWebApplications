@@ -281,7 +281,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: After completing this exercise, you can register new custom routes in the request pipeline for controllers in the application.
 
-### Exercise 3: Configuring Routes Using Attributes
+### Exercise 3: Configuring Routes by Using Attributes
 
 #### Scenario
 
@@ -309,9 +309,13 @@ The main tasks for this exercise are as follows:
 
 4. Click **Go Next**.
 
+    >**Note**: Verify that the new route works. As a result of applying a custom route to **CityController** in the **Index** action by using attributes, **http://localhost:[port]/WorldJourney** should appear in the address bar.
+
 5. Using the **Developer Tools**, move your cursor over the **Earth** image and verify that the **href** attribute value in the **area** tag is **/CityDetails/2**.
 
 6. On the **Earth** image, click the **London** area. Note the red arrow at the center of the **Earth** image.
+
+    >**Note**: Verify that the new route works. As a result of applying a custom route to a **CityController** in the **Details** action using attributes, **http://localhost:[port]/CityDetails/2** should appear in the address bar.
 
 7. Close Microsoft Edge.
 
@@ -411,7 +415,7 @@ The main tasks for this exercise are as follows:
 
 6. Create a variable of type **FileStream(* named *fs* inside a **USING** statement. 
 
-7. Initialize the *fs* variable by using the **FileStream** constructor, and pass it with the following parameters: **_fullPath**, and **FileMode.Create**.  
+7. Initialize the *fs* variable by using the **FileStream** constructor, and pass it with the following parameters: **_fullPath**, and **FileMode.Append**.  
 
 8. In the **USING** statement code block, create a nested **USING** statement.
 
@@ -469,7 +473,7 @@ The main tasks for this exercise are as follows:
 
 6. Create a variable of type **FileStream** named *fs* inside a **USING** statement. 
 
-7. Initialize the *fs* variable by using the **FileStream** constructor, and pass it with the following parameters: **_fullPath**, **FileMode.Create**.  
+7. Initialize the *fs* variable by using the **FileStream** constructor, and pass it with the following parameters: **_fullPath**, **FileMode.Append**.  
 
 8. In the **USING** statement code block, create a nested **USING** statement.
 
@@ -505,9 +509,9 @@ The main tasks for this exercise are as follows:
 
 6. Close Microsoft Edge.
 
-7. Close Microsoft Visual Studio.
+7. Close **WorldJourney** Microsoft Visual Studio.
 
-8. Navigate to the **Allfiles\Mod04\Labfiles\01_WorldJourney_begin\WorldJourney\LogFile**.
+8. Navigate to the **[Repository Root]\Allfiles\Mod04\Labfiles\01_WorldJourney_begin\WorldJourney\LogFile**.
 
     >**Note**: The text file displays the new filter result.
 
