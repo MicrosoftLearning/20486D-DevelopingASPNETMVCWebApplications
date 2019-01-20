@@ -11,7 +11,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, and then copy the address in the address bar.
+1. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, and then copy the address in the address bar.
 
 2. Select the **Start** button, and then type **cmd**.
 
@@ -34,7 +34,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 7. Close the window.
 
-8. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin**, and then double-click **BootstrapExample.sln**.
+8. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod09\Democode\01_BootstrapExample_begin**, and then double-click **BootstrapExample.sln**.
+
+    >**Note**: If a **Security Warning for BootstrapExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 9. In the **BootstrapExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Views**, point to **Add**, and then click **New Folder**.
 
@@ -176,7 +178,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 31. In the **Add New Item – BootstrapExample** dialog box, click **Web**, and then, in the result pane, click **Razor View**.
 
-32. In the **Add New Item – GulpExample** dialog box, in the **Name** box, type **_Alert**, and then click **Add**. 
+32. In the **Add New Item – BootstrapExample** dialog box, in the **Name** box, type **_Alert**, and then click **Add**. 
 
 33. In the **_Alert.cshtml** code window, select the following code:
   ```cs
@@ -244,7 +246,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin\GulpExample**, and then copy the address in the address bar.
+1. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod09\Democode\02_GulpExample_begin\GulpExample**, and then copy the address in the address bar.
 
 2. Select the **Start** button, and then type **cmd**.
 
@@ -267,7 +269,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 7. Close the window.
 
-8. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin**, and then double-click **GulpExample.sln**.
+8. Navigate to **[Repository Root]\Allfiles\Mod09\Democode\02_GulpExample_begin**, and then double-click **GulpExample.sln**.
+
+    >**Note**: If a **Security Warning for GulpExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 9. In the **GulpExample - Microsoft Visual Studio** window, on the **TOOLS** menu, click **Options**.
 
@@ -413,7 +417,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\03_GridExample_begin\GridExample**, and then copy the address in the address bar.
+1. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod09\Democode\03_GridExample_begin\GridExample**, and then copy the address in the address bar.
 
 2. Select the **Start** button, and then type **cmd**.
 
@@ -436,7 +440,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 7. Close the window.
 
-8. Navigate to **Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
+8. Navigate to **[Repository Root]\Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
+
+    >**Note**: If a **Security Warning for GridExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 9. In the **GridExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Controllers**, and then click **ChessController.cs**.
 
