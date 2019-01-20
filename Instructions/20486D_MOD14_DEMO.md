@@ -161,63 +161,87 @@
 
 21.	Open File Explorer.
 
-22.	 In File Explorer, browse to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin**, and then double-click  **AzureStorageDemo.sln**.
+22. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo**, and then copy the address in the address bar.
 
-23. In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer**, right-click **AzureStorageDemo**,  point to **Add**, and then click **Connected Service**.
+    >**Note**: If a Security Warning for AzureStorageDemo dialog box appears, verify that the Ask me for every project in this solution check box is cleared, and then click OK.
 
-24.	In the **Connected Service** window, click **Cloud Storage with Azure Storage**.
+23. Click **Start**, and then type **cmd**.
 
-25.	In the **Azure Storage** window, sign in to the Azure account.
+24. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
+
+25. In the **User Account Control** dialog box, click **Yes**.
+
+26. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+    ```cs
+        cd *{copied folder path}*
+    ```
+    >**Note**: If the *{copied folder path}* is different from the disk drive where the command prompt is located, then you should type *{disk drive}:* before typing the **cd**  *{copied folder path}* command.
+
+27. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
+    ```cs
+        npm install
+    ```
+    >**Note**: If warning messages are shown in the command prompt you can ignore them.
+
+28. Close the window.
+
+29.	 In File Explorer, browse to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin**, and then double-click  **AzureStorageDemo.sln**.
+
+30. In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer**, right-click **AzureStorageDemo**,  point to **Add**, and then click **Connected Service**.
+
+31.	In the **Connected Service** window, click **Cloud Storage with Azure Storage**.
+
+32.	In the **Azure Storage** window, sign in to the Azure account.
 
     >**Note**: In case you are already signed in, you will not see the sign-in dialog box. In that case, proceed to the next step.
 
-26.	In the **Azure Storage** window, click  **blobdemo***{unique name}* , and then click **Add**.
+33.	In the **Azure Storage** window, click  **blobdemo***{unique name}* , and then click **Add**.
 
     >**Note**: Microsoft Edge displays the following URL: https://docs.microsoft.com/en-us/azure/visual-studio/vs-storage-aspnet-getting-started-blobs.
 
-27. In Microsoft Edge, click **Close**.
+34. In Microsoft Edge, click **Close**.
 
-28.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer, click **appsettings.json**.
+35.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer, click **appsettings.json**.
 
-29.	In the **appsettings.json** window, right-click the following code, and then click **Copy**.
+36.	In the **appsettings.json** window, right-click the following code, and then click **Copy**.
 ```cs
       AzureStorageConnectionString-1
 ```
-30.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer,  expand **Controllers**, and then click **BlobController.cs**.
+37.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer,  expand **Controllers**, and then click **BlobController.cs**.
 
-31.	In the **BlobController.cs** window, locate the following code:
+38.	In the **BlobController.cs** window, locate the following code:
 ```cs
        _connectionString = _configuration.GetConnectionString("{your_connection_string_name}");
 ```
-32. Replace **{your_connection_string_name}** with the connection string name copied in step 28.
+39. Replace **{your_connection_string_name}** with the connection string name copied in step 28.
 
-33. In the **AzureStorageDemo - Microsoft Visual Studio** window, in Solution Explorer, right-click **AzureStorageDemo**, and then click **Manage NuGet Packages**.
+40. In the **AzureStorageDemo - Microsoft Visual Studio** window, in Solution Explorer, right-click **AzureStorageDemo**, and then click **Manage NuGet Packages**.
 
-34. In the **NuGet Package Manager: AzureStorageDemo** window, click **Browse**.
+41. In the **NuGet Package Manager: AzureStorageDemo** window, click **Browse**.
 
-35. In the **Search** box, type **WindowsAzure.Storage**, and then press Enter.
+42. In the **Search** box, type **WindowsAzure.Storage**, and then press Enter.
 
-36. Click **WindowsAzure.Storage**, select version **9.3.3**, and then click **Install.**
+43. Click **WindowsAzure.Storage**, select version **9.3.3**, and then click **Install.**
 
-37. If a **Preview Changes** dialog box appears, click **OK**.
+44. If a **Preview Changes** dialog box appears, click **OK**.
 
-38. If a **License Acceptance** dialog box appears, click **I Accept**.
+45. If a **License Acceptance** dialog box appears, click **I Accept**.
 
-39. Close the **NuGet Package Manager: AzureStorageDemo** window.
+46. Close the **NuGet Package Manager: AzureStorageDemo** window.
 
-40. In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer, click **BlobController.cs**.
+47. In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer, click **BlobController.cs**.
 
-41. In the **BlobController.cs** code window, locate the following code:
+48. In the **BlobController.cs** code window, locate the following code:
   ```cs
        using AzureStorageDemo.Data;
 ```
-42. Ensure that the cursor is at the end of the **AzureStorageDemo.Data** namespace, press Enter, and then type the following code:
+49. Ensure that the cursor is at the end of the **AzureStorageDemo.Data** namespace, press Enter, and then type the following code:
   ```cs
        using Microsoft.WindowsAzure.Storage;
        using Microsoft.WindowsAzure.Storage.Blob;
 ```
 
-43. Ensure that the cursor is at the end of the **CreateImageAsync** code block, press Enter twice, and then type the following code:
+50. Ensure that the cursor is at the end of the **CreateImageAsync** code block, press Enter twice, and then type the following code:
   ```cs
        public async Task UploadAsync(IFormFile photo)
        {
@@ -238,7 +262,7 @@
        }
 ```
 
-44. In the **BlobController.cs** code block, locate the following code:
+51. In the **BlobController.cs** code block, locate the following code:
   ```cs
        using (var memoryStream = new MemoryStream())
        {
@@ -247,48 +271,48 @@
        }
 ```
 
-45. Place the cursor at the end of the located code, press Enter, type the following code, and then press Enter twice.
+52. Place the cursor at the end of the located code, press Enter, type the following code, and then press Enter twice.
   ```cs
        await UploadAsync(photo.PhotoAvatar);
 ```
 
-46. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
+53. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-47. In the **AzureStorageDemo – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+54. In the **AzureStorageDemo – Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-48.	In Microsoft Edge, click **Upload New Image**.
+55.	In Microsoft Edge, click **Upload New Image**.
 
-49. On the **Add Photo to Album** page, in the **Title** box, type _&lt;A photo title of your choice&gt;._
+56. On the **Add Photo to Album** page, in the **Title** box, type _&lt;A photo title of your choice&gt;._
 
-50. On the **Add Photo to Album** page, in the **Description** box, type _&lt;A photo description of your choice&gt;._
+57. On the **Add Photo to Album** page, in the **Description** box, type _&lt;A photo description of your choice&gt;._
 
-51. In Microsoft Edge, click **Choose File**.
+58. In Microsoft Edge, click **Choose File**.
 
-52.	In File Explorer, browse to **Allfiles\Mod14\Democode\02_AzureStorageDemo_Images**, click **fungi.jpg**, and then click **Open**.
+59.	In File Explorer, browse to **Allfiles\Mod14\Democode\02_AzureStorageDemo_Images**, click **fungi.jpg**, and then click **Open**.
 
-53. In Microsoft Edge, click **Submit Photo to Azure**. 
+60. In Microsoft Edge, click **Submit Photo to Azure**. 
 
-54. In Microsoft Edge, open a new tab, type **http://portal.azure.com**, and then press Enter.
+61. In Microsoft Edge, open a new tab, type **http://portal.azure.com**, and then press Enter.
 
-55. In the portal, in the menu on the left-hand side, click **Storage Accounts**. 
+62. In the portal, in the menu on the left-hand side, click **Storage Accounts**. 
 	
-56. In the **Storage accounts** window, click **blobdemo***{unique name}*.
+63. In the **Storage accounts** window, click **blobdemo***{unique name}*.
 
-57.	In the **blobdemo***{unique name}* window, below **Blob services**, click **Blobs**.
+64.	In the **blobdemo***{unique name}* window, below **Blob services**, click **Blobs**.
 
-58.	In the **Blobs** window, click **myimagecontainer**.
+65.	In the **Blobs** window, click **myimagecontainer**.
 
     >**Note**: Verify the presence of the uploaded image.
 
-59. Click **fungi.jpg**.
+66. Click **fungi.jpg**.
 
-60. Click **Edit blob**.
+67. Click **Edit blob**.
 
     >**Note**: The uploaded image is displayed.
 
-61. Close all the Microsoft Edge windows.
+68. Close all the Microsoft Edge windows.
 
-62. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+69. In the **AzureStorageDemo - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2019 Microsoft Corporation. All rights reserved.
 
