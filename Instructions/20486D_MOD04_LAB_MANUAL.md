@@ -415,7 +415,7 @@ The main tasks for this exercise are as follows:
 
 6. Create a variable of type **FileStream(* named *fs* inside a **USING** statement. 
 
-7. Initialize the *fs* variable by using the **FileStream** constructor, and pass it with the following parameters: **_fullPath**, and **FileMode.Append**.  
+7. Initialize the *fs* variable by using the **FileStream** constructor, and pass it with the following parameters: **_fullPath**, and **FileMode.Create**.  
 
 8. In the **USING** statement code block, create a nested **USING** statement.
 
@@ -443,7 +443,7 @@ The main tasks for this exercise are as follows:
 
 5. Create a variable of type **FileStream** named *fs* inside a **USING** statement. 
 
-6. Initialize the *fs* variable by using the **FileStream** constructor and pass it with the following parameters: **_fullPath**, **FileMode.Create**.  
+6. Initialize the *fs* variable by using the **FileStream** constructor and pass it with the following parameters: **_fullPath**, **FileMode.Append**.  
 
 7. In the **USING** statement code block, create a nested **USING** statement.
 
