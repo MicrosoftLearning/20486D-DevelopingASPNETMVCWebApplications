@@ -379,7 +379,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 30. On the **Register** page, in the **User Name** box, type _&lt;A user name of your choice&gt;._
 
-31. On the **Register** page, in the **Password** box, type **123qwe!@#QWE&gt**, and then click **Register**.
+31. On the **Register** page, in the **Password** box, type **123qwe!@#QWE**, and then click **Register**.
 
 32. On the **Login** page, in the **User Name** box, type _&lt;The registered user name&gt;._
 
