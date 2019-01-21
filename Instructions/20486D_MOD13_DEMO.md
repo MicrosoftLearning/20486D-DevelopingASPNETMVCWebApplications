@@ -10,7 +10,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod13\Democode\01_WebApiExample_begin**, and then double-click **WebApiExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod13\Democode\01_WebApiExample_begin**, and then double-click **WebApiExample.sln**.
+
+    >**Note**: If a **Security Warning for WebApiExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **WebApiExample - Microsoft Visual Studio** window, in Solution Explorer, under **Properties**, click **launchSettings.json**.
 
@@ -95,7 +97,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
     >**Note**: The browser displays a list of people in the JSON format.
 
-21. In Microsoft Edge, in the address bar, type **http://localhost:***[port]***/api/person/1**, and then press Enter.
+21. In Microsoft Edge, in the address bar, type **http://localhost:[port]/api/person/1**, and then press Enter.
 
     >**Note**: The browser displays the person in the JSON format.
 
@@ -156,7 +158,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod13\Democode\02_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod13\Democode\02_JQueryExample_begin**, and then double-click **JQueryExample.sln**.
+
+    >**Note**: If a **Security Warning for JQueryExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **JQueryExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Controllers**, point to **Add**, and then click **Controller**.
 
@@ -316,7 +320,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod13\Democode\03_HttpClientExample_begin**, and then double-click **HttpClientExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod13\Democode\03_HttpClientExample_begin**, and then double-click **HttpClientExample.sln**.
+
+    >**Note**: If a **Security Warning for HttpClientExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **HttpClientExample - Microsoft Visual Studio** window, in Solution Explorer, under **ClientSide**, click **Startup.cs**.
 
@@ -452,7 +458,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
     >**Note**: The browser displays the grocery store object with id=1 in the JSON format.
 
-27. In Microsoft Edge, in the address bar, type **http://localhost:***[port]***/home/PostAsync**, and then press Enter.
+27. In Microsoft Edge, in the address bar, type **http://localhost:[port]/home/PostAsync**, and then press Enter.
 
     >**Note**: The browser displays the newly added grocery store in the JSON format.
 
