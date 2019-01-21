@@ -763,7 +763,7 @@ The main tasks for this exercise are as follows:
     - Asp-for: **Email**
     - Type: **email**
     - Class: **form-control**
-    - Placeholder: **email&commat;example.com**
+    - Placeholder: **email<span>@</span>example.com**
     - Required: **required**
   
 69. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
