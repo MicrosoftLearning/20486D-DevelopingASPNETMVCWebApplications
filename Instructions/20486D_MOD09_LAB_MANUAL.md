@@ -396,6 +396,8 @@ The main tasks for this exercise are as follows:
 
 2. In the **Task Runner Explorer** window, run the **min:scss** task.
 
+      >**Note**: If the **Tasks** list does not contain the **min:scss** and **sass-watcher** tasks, click **Refresh**.
+
       >**Note**: In Solution Explorer, under **wwwroot**, under **css**, a new css file has been added named **main.min.css**.
 
 3. Run the **sass-watcher** task.
@@ -449,7 +451,7 @@ The main tasks for this exercise are as follows:
 
 1. Save all changes.
 
-2. Run the **min-vendor:css** task.
+2. In the **Task Runner Explorer** window, run the **min-vendor:css** task.
 
      > **Note**: In Solution Explorer, under **wwwroot**, under **css**, a new css file has been added named **vendor.min.css**.
 
@@ -544,7 +546,7 @@ The main tasks for this exercise are as follows:
 20. Create a new **View** by using the **Add MVC View** dialog box, with the following information:
 
     - View Name: **Buy**
-    - Template: **Empty (without model**
+    - Template: **Empty (without model)**
     - Create as Partial View: **False**
     - Use a layout page: **True**
 
@@ -628,67 +630,71 @@ The main tasks for this exercise are as follows:
 40. In the **SELECT** element, add an **OPTION** element with the following information:
 
     - Content: **1**
+
+41. In the **SELECT** element, add an **OPTION** element with the following information:
+
+    - Content: **1.5**
     
-41. Add an **OPTION** element with the following information:
+42. Add an **OPTION** element with the following information:
 
     - Content: **2**
 
-42. Add an **OPTION** element with the following information:
+43. Add an **OPTION** element with the following information:
 
     - Content: **3**
     
-43. Add an **OPTION** element with the following information:
+44. Add an **OPTION** element with the following information:
 
     - Content: **4**
 
-44. After the last **DIV** element with the **col-2** class, add a **DIV** element with the following information:
+45. After the last **DIV** element with the **col-2** class, add a **DIV** element with the following information:
 
     - Class: **col-2**
     
-45. In the new **DIV** element, add a **DIV** element with the following information:
+46. In the new **DIV** element, add a **DIV** element with the following information:
 
     - Id: **totalAmount**   
 
-46. After the last **DIV** element with the **col-2** class, add a **DIV** element with the following information:
+47. After the last **DIV** element with the **col-2** class, add a **DIV** element with the following information:
 
     - Class: **col-2**
     
-47. In the new **DIV** element, add a**DIV** element.
+48. In the new **DIV** element, add a**DIV** element.
 
-48. In the new **DIV** element, add an **IMG** element with the following information:
+49. In the new **DIV** element, add an **IMG** element with the following information:
 
      - Class: **imageDisplay**
      - Id: **iceCreamImage**
      - Alt: **""**
 
-49. At the bottom of the **Buy.cshtml** view, add a **DIV** element with the following information:
+50. At the bottom of the **Buy.cshtml** view, add a **DIV** element with the following information:
 
     - Class: **row justify-content-center**
     
-50. In the new **DIV** element, add a **DIV** element with the following information:
+51. In the new **DIV** element, add a **DIV** element with the following information:
 
     - Class: **col-5**
 
-51. In the new **DIV** element, add a **FORM** element with the following information:
+52. In the new **DIV** element, add a **FORM** element with the following information:
 
     - Method: **post**
     - Enctype: **multipart/form-data**
     - Asp-action: **Buy**
 
-52. In the **FORM** element, add a **DIV** element with the following information:
+53. In the **FORM** element, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-53. In the new **DIV** element, add a **LABEL** element with the following information:
+54. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **FirstName**
     - Class: **col-sm-4 col-form-label**
 
-54. After the **LABEL** element, add a **DIV** element with the following information:
+55. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-55. In the new **DIV** element, add an **INPUT** element with the following information:
+56. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **FirstName**
     - Type: **text**
@@ -696,20 +702,20 @@ The main tasks for this exercise are as follows:
     - Placeholder: **First Name**
     - Required: **required**
 
-56. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
+57. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-57. In the new **DIV** element, add a **LABEL** element with the following information:
+58. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **LastName**
     - Class: **col-sm-4 col-form-label**
 
-58. After the **LABEL** element, add a **DIV** element with the following information:
+59. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-59. In the new **DIV** element, add an **INPUT** element with the following information:
+60. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **LastName**
     - Type: **text**
@@ -717,21 +723,21 @@ The main tasks for this exercise are as follows:
     - Placeholder: **Last Name**
     - Required: **required**
     
-60. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
+61. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-61. In the new **DIV** element, add a **LABEL** element with the following information:
+62. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **Address**
     - Class: **col-sm-4 col-form-label**
 
 
-62. After the **LABEL** element, add a **DIV** element with the following information:
+63. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-63. In the new **DIV** element, add an **INPUT** element with the following information:
+64. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **Address**
     - Type: **text**
@@ -739,41 +745,41 @@ The main tasks for this exercise are as follows:
     - Placeholder: **Address**
     - Required: **required**
  
-64. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
+65. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-65. In the new **DIV** element, add a **LABEL** element with the following information:
+66. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **Email**
     - Class: **col-sm-4 col-form-label**
 
-66. After the **LABEL** element, add a **DIV** element with the following information:
+67. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-67. In the new **DIV** element, add an **INPUT** element with the following information:
+68. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **Email**
     - Type: **email**
     - Class: **form-control**
-    - Placeholder: **email@example.com**
+    - Placeholder: **email&#64;example.com**
     - Required: **required**
   
-68. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
+69. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-69. In the new **DIV** element, add a **LABEL** element with the following information:
+70. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **PhoneNumber**
     - Class: **col-sm-4 col-form-label**
 
-70. After the **LABEL** element, add a **DIV** element with the following information:
+71. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-71. In the new **DIV** element, add an **INPUT** element with the following information:
+72. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **PhoneNumber**
     - Type: **number**
@@ -781,19 +787,20 @@ The main tasks for this exercise are as follows:
     - Placeholder: **Phone Number**
     - Required: **required**
     
-72. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
+73. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-73. In the new **DIV** element, add a **DIV** element with the following information:
+74. In the new **DIV** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-10**
 
-74. In the new **DIV** element, add a **BUTTON** element with the following information:
+75. In the new **DIV** element, add a **BUTTON** element with the following information:
 
     - Id: **formButton**
     - Type: **submit**
     - Class: **btn btn-outline-primary**
+    - Content: **Make a Purchase**
   
 #### Task 4: Run the application
 
@@ -817,7 +824,7 @@ The main tasks for this exercise are as follows:
 
 10. In the **Phone Number** box, select _&lt;A phone number of your choice&gt;_, and then click **Make a Purchase**.
     
-11. On the **Thank you** page, in the **menu bar** click **Home**, and examine the browser content.
+11. On the **Thank you for purchase, hope you will enjoy the ice cream!** page, in the **menu bar** click **Home**, and examine the browser content.
 
 12. Close Microsoft Edge.
 
