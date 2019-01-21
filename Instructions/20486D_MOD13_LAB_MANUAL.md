@@ -27,13 +27,13 @@ Estimated Time: **60 minutes**
 2. Open the **Command Prompt** window by using **Run as administrator**.
 
 3. In **Administrator: Command Prompt**, run the following command:
- **cd** *&lt;The location of Allfiles***\Mod13\Labfiles\01_Restaurant_begin\Client folder on your machine&gt;.**
+ **cd [Repository Root]\Allfiles\Mod13\Labfiles\01_Restaurant_begin\Client** command.
 
 4. Run the following command: **npm install**.
 
 5. Close the **Command Prompt** window.
 
-### Exercise 1: Adding Actions and Call them by using Microsoft Edge
+### Exercise 1: Adding Actions and Calling them by using Microsoft Edge
 
 #### Scenario
 
@@ -53,7 +53,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add a controller and an action to a Web API application
 
-1. From **Allfiles\Mod13\Labfiles\01_Restaurant_begin**, open the **Restaurant.sln** file.
+1. From **[Repository Root]\Allfiles\Mod13\Labfiles\01_Restaurant_begin**, open the **Restaurant.sln** file.
+
+    >**Note**: If a **Security Warning for Restaurant** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. Create a new controller with the following information:
    - Controller name: **RestaurantBranchesController**
@@ -246,7 +248,7 @@ The main tasks for this exercise are as follows:
 
 17. Inside the **ELSE** statement code block, return the **ViewResult** result by using the **View** method. Pass **"Error"** as a parameter to the **View** method.
 
-18. Under the **Restaurant** folder, view the content of the **Index.cshtml** view.
+18. Under the **RestaurantBranches** folder, view the content of the **Index.cshtml** view.
 
 #### Task 2: Run the application
 
@@ -436,9 +438,9 @@ The main tasks for this exercise are as follows:
    - Folder: **Client/wwwroot/js**
    - Name: **wanted-ad-get**
    
-3. In the **wanted-ad-get.js** file, call the **$** function and pass an anonymous function as parameter.
+2. In the **wanted-ad-get.js** file, call the **$** function and pass an anonymous function as parameter.
 
-4. Inside the **anonymous function** code block, call the **$.ajax** function. Pass a JSON object as a parameter to the **$.ajax** function by using the following information:
+3. Inside the **anonymous function** code block, call the **$.ajax** function. Pass a JSON object as a parameter to the **$.ajax** function by using the following information:
 
     - Properties: 
       - type: **"GET"**
@@ -448,13 +450,13 @@ The main tasks for this exercise are as follows:
       - done: **function(data) { }**      
       - fail: **function() {  alert('An error has occurred'); }**
 
-5. Inside the **anonymous function** code block assigned to the **done** property, call the **$.each** method. Pass **data** and **anonymous function** parameters to the **$.each** method.
+4. Inside the **anonymous function** code block assigned to the **done** property, call the **$.each** method. Pass **data** and **anonymous function** parameters to the **$.each** method.
 
-6. Change the signature of the anonymous function passed to the **$.each** method to accept **index** and **item** parameters.
+5. Change the signature of the anonymous function passed to the **$.each** method to accept **index** and **item** parameters.
 
-7. Inside the anonymous function passed to the **$.each** method, add a variable of type **var** with the name of *html*. 
+6. Inside the anonymous function passed to the **$.each** method, add a variable of type **var** with the name of *html*. 
 
-8. Assign the *html* variable the value of: 
+7. Assign the *html* variable the value of: 
   ```cs
    `<div class="photo-index-card-data">
            <div class="image-wrapper">
@@ -471,17 +473,17 @@ The main tasks for this exercise are as follows:
      </div>`
 ```
 
-9. Call the **$** function and pass **'.container'** as parameter.
+8. Call the **$** function and pass **'.container'** as parameter.
 
-10. Chain a **append** function call to the $ function call. Pass *html* as a parameter to the  **append** function.
+9. Chain a **append** function call to the $ function call. Pass *html* as a parameter to the  **append** function.
 
-11. Call the **$** function and pass **'.photo-display-img'** as parameter.
+10. Call the **$** function and pass **'.photo-display-img'** as parameter.
 
-12. Chain a **attr** function call to the **$** function call. Pass **'src'** and **'/images/white-plate.jpg'** as parameters to the  **attr** function.
+11. Chain a **attr** function call to the **$** function call. Pass **'src'** and **'/images/white-plate.jpg'** as parameters to the  **attr** function.
 
-13. Inside the **WantedAd/Index.cshtml** view, after the **DIV** element with the **"container"** class, add a **Scripts** section code block.
+12. Inside the **WantedAd/Index.cshtml** view, after the **DIV** element with the **"container"** class, add a **Scripts** section code block.
 
-14. In the **Scripts** section code block, add a **SCRIPT** element with the following information:
+13. In the **Scripts** section code block, add a **SCRIPT** element with the following information:
 
     - Src: **~/js/wanted-ad-get.js**
 
