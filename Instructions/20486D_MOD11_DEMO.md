@@ -365,31 +365,31 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
       >**Note**: The **Our Courses** page is authorized for all site visitors therefore, you can enter the page without registration.
       
-23. In the menu bar, click **Login**.
+24. In the menu bar, click **Login**.
 
-24. On the **Login** page, click **Register**.
+25. On the **Login** page, click **Register**.
 
-25. On the **Register** page, in the **First Name** box, type _&lt;A first name of your choice&gt;._
+26. On the **Register** page, in the **First Name** box, type _&lt;A first name of your choice&gt;._
 
-26. On the **Register** page, in the **Last Name** box, type _&lt;A last name of your choice&gt;._
+27. On the **Register** page, in the **Last Name** box, type _&lt;A last name of your choice&gt;._
 
-27. On the **Register** page, in the **Phone Number** box, type _&lt;A phone number of your choice&gt;._
+28. On the **Register** page, in the **Phone Number** box, type _&lt;A phone number of your choice&gt;._
 
-28. On the **Register** page, in the **Email** box, type _&lt;An email time of your choice&gt;._
+29. On the **Register** page, in the **Email** box, type _&lt;An email address of your choice&gt;._
 
-29. On the **Register** page, in the **User Name** box, type _&lt;A user name of your choice&gt;._
+30. On the **Register** page, in the **User Name** box, type _&lt;A user name of your choice&gt;._
 
-30. On the **Register** page, in the **Password** box, type _&lt;123qwe!@#QWE&gt;,_, and then click **Register**.
+31. On the **Register** page, in the **Password** box, type **123qwe!@#QWE&gt**, and then click **Register**.
 
-31. On the **Login** page, in the **User Name** box, type _&lt;The registered user name&gt;._
+32. On the **Login** page, in the **User Name** box, type _&lt;The registered user name&gt;._
 
-32. On the **Login** page, in the **Password** box, type _&lt;123qwe!@#QWE&gt;,_, and then click **Login**.
+33. On the **Login** page, in the **Password** box, type **123qwe!@#QWE**, and then click **Login**.
 
       >**Note**: Examine the page; you have been authorized to enter the **Student Portal** page.
 
-33.  In Microsoft Edge, click **Close**.
+34.  In Microsoft Edge, click **Close**.
 
-34. In the **IdentityExample  - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
+35. In the **IdentityExample  - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
