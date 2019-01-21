@@ -46,13 +46,15 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Use npm to install gulp
 
-1. At the command prompt, run the  **cd** *{The location of  Allfiles***\Mod09\Labfiles\01_IceCreamCompany_begin folder on your machine}** command
+1. At the command prompt, run the  **cd** *{The location of [Repository Root]\Allfiles***\Mod09\Labfiles\01_IceCreamCompany_begin folder on your machine}** command
 
 2. Run the **npm install** command.
 
 3. Close the  **Command Prompt** window.
 
-4. From the following location: **Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin**, open the **IceCreamCompany.sln** file.
+4. From the following location: **[Repository Root]\Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin**, open the **IceCreamCompany.sln** file.
+
+    >**Note**: If a **Security Warning for Library** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 5. In the **IceCreamCompany - Microsoft Visual Studio** window, on the **TOOLS** menu, click **Options**.
 
@@ -163,7 +165,9 @@ The main tasks for this exercise are as follows:
 
 4. Run the **min:js** task.
 
-5. From the **wwwroot/script** folder, open the **script.min.js** file.
+      >**Note**: In Solution Explorer, under **wwwroot**, under **scripts**, a new file named **script.min.js** has been added.  
+
+5. From the **wwwroot/scripts** folder, open the **script.min.js** file.
 
       >**Note**: The **script.min.js** file is a minified version of the **payment-calc.js** file. It contains the **form-control-mistake** string.
 
@@ -175,7 +179,7 @@ The main tasks for this exercise are as follows:
 
 9. In the **Microsoft Visual Studio** dialog box, click **Yes to All**.
 
-10. From the **wwwroot/script** folder, open the **script.min.js** file.
+10. From the **wwwroot/scripts** folder, open the **script.min.js** file.
 
       >**Note**: In the **script.min.js** file, the **form-control-mistake** string was replaced with **form-control**.
 
