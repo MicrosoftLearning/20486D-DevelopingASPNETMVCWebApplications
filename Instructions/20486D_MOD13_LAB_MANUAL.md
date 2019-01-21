@@ -27,7 +27,7 @@ Estimated Time: **60 minutes**
 2. Open the **Command Prompt** window by using **Run as administrator**.
 
 3. In **Administrator: Command Prompt**, run the following command:
- **cd [Repository Root]\Allfiles\Mod13\Labfiles\01_Restaurant_begin\Client** command.
+ **cd [Repository Root]\Allfiles\Mod13\Labfiles\01_Restaurant_begin\Client**.
 
 4. Run the following command: **npm install**.
 
