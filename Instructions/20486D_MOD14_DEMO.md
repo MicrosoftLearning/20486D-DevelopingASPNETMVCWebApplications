@@ -203,7 +203,7 @@
 
 35.	In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer, click **appsettings.json**.
 
-36.	In the **appsettings.json** window, right-click the following code, and then click **Copy**.
+36.	In the **appsettings.json** window, highlight the following code, and then right-click and click **Copy**.
 ```cs
       AzureStorageConnectionString-1
 ```
