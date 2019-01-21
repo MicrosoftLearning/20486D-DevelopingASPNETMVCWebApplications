@@ -54,7 +54,7 @@ The main tasks for this exercise are as follows:
 
 4. From the following location: **[Repository Root]\Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin**, open the **IceCreamCompany.sln** file.
 
-    >**Note**: If a **Security Warning for Library** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+    >**Note**: If a **Security Warning for IceCreamCompany** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 5. In the **IceCreamCompany - Microsoft Visual Studio** window, on the **TOOLS** menu, click **Options**.
 
