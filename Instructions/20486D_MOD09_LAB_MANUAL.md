@@ -46,7 +46,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Use npm to install gulp
 
-1. At the command prompt, run the  **cd [Repository Root]\Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin ** command
+1. At the command prompt, run the  **cd [Repository Root]\Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin** command
 
 2. Run the **npm install** command.
 
