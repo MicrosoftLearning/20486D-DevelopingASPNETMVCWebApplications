@@ -11,7 +11,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. In File Explorer, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin\IdentityExample**, and then from the address bar, copy the address.
+1. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod11\Democode\01_IdentityExample_begin\IdentityExample**, and then from the address bar, copy the address.
 
 2. Click **Start**, and then type **cmd**.
 
@@ -34,7 +34,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 7. Close the window.
 
-8. In File Explorer, navigate to **Allfiles\Mod11\Democode\01_IdentityExample_begin**, and then double-click **IdentityExample.sln**.
+8. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod11\Democode\01_IdentityExample_begin**, and then double-click **IdentityExample.sln**.
+
+    >**Note**: If a **Security Warning for IdentityExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 9. In the **IdentityExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
@@ -226,15 +228,15 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 38. On the **Register** page, in the **Phone Number** box, type _&lt;A phone number of your choice&gt;._
 
-39. On the **Register** page, in the **Email** box, type _&lt;An email time of your choice&gt;._
+39. On the **Register** page, in the **Email** box, type _&lt;An email address of your choice&gt;._
 
 40. On the **Register** page, in the **User Name** box, type _&lt;A user name of your choice&gt;._
 
-41. On the **Register** page, in the **Password** box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Register**.
+41. On the **Register** page, in the **Password** box, type **123qwe!@#QWE**, and then click **Register**.
 
 42. On the **Login** page, in the **User Name** box, type _&lt;The registered user name&gt;._
 
-43. On the **Login** page, in the **Password** box, type _&lt;123qwe!@#QWE&gt;,_ and then click **Login**.
+43. On the **Login** page, in the **Password** box, type **123qwe!@#QWE**, and then click **Login**.
 
       >**Note**: Examine the page; you have been authorized to enter the **Student Portal** page.
 
@@ -253,7 +255,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Demonstration Steps
 
-1. In File Explorer, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin\IdentityExample**, and then copy the address in the address bar.
+1. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod11\Democode\02_AuthorizeExample_begin\IdentityExample**, and then copy the address in the address bar.
 
 2. Click **Start**, and then type **cmd**.
 
@@ -276,7 +278,9 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 7. Close the window.
 
-8. In File Explorer, navigate to **Allfiles\Mod11\Democode\02_AuthorizeExample_begin**, and then double-click **IdentityExample.sln**.
+8. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod11\Democode\02_AuthorizeExample_begin**, and then double-click **IdentityExample.sln**.
+
+    >**Note**: If a **Security Warning for IdentityExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 9. In the **IdentityExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
