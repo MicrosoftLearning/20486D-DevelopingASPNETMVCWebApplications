@@ -484,7 +484,7 @@ as parameters to the **_userManager.AddToRoleAsync** method.
     - Phone Number: _&lt;A phone of your choice&gt;_
     - Email: _&lt;An email of your choice&gt;_
     - User Name: _&lt;A user name of your choice&gt;_  
-    - Password: _&lt;123qwe!@#QWE&gt;_** 
+    - Password: **123qwe!@#QWE** 
     - Role Name: **Administrator** 
 
 6. Click **Register**.
@@ -508,7 +508,7 @@ as parameters to the **_userManager.AddToRoleAsync** method.
 
 12. In the menu bar, click **Login**. 
 
-12. On the **Login** page, click **Logout**.   
+12. On the **Login** page, click **Register**.   
 
 13. On **Register** page, register with the following credentials:
    
@@ -517,7 +517,7 @@ as parameters to the **_userManager.AddToRoleAsync** method.
     - Phone Number: _&lt;A phone of your choice&gt;_ 
     - Email: _&lt;An email of your choice&gt;_
     - User Name: _&lt;A user name of your choice&gt;_  
-    - Password: _&lt;123qwe!@#QWE&gt;_
+    - Password: **123qwe!@#QWE**
     - Role Name: **Member** 
 
 14. In Microsoft Edge, navigate to **http://localhost:[port]/Librarian/Index**.
