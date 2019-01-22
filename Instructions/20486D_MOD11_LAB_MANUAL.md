@@ -508,9 +508,9 @@ as parameters to the **_userManager.AddToRoleAsync** method.
 
 12. In the menu bar, click **Login**. 
 
-12. On the **Login** page, click **Register**.   
+13. On the **Login** page, click **Register**.   
 
-13. On **Register** page, register with the following credentials:
+14. On **Register** page, register with the following credentials:
    
     - First Name: _&lt;A first name of your choice&gt;_
     - Last Name: &lt;A last name of your choice&gt;_
@@ -520,10 +520,10 @@ as parameters to the **_userManager.AddToRoleAsync** method.
     - Password: **123qwe!@#QWE**
     - Role Name: **Member** 
 
-14. In Microsoft Edge, navigate to **http://localhost:[port]/Librarian/Index**.
+15. In Microsoft Edge, navigate to **http://localhost:[port]/Librarian/Index**.
     >**Note**: You are redirected to the **access denied** page. Only administrators are allowed to view the page. Also, note that the menu bar doesn't have a navigation tab for **Workers Portal**.
 
-15. Close all Microsoft Edge windows.
+16. Close all Microsoft Edge windows.
 
 >**Results**: After completing this exercise, you can add authorization to the application, and add configuration and the relevant attribute for role-based and claims-based policy authentication.
 
