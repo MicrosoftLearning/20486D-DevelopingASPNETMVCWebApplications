@@ -30,7 +30,7 @@ Estimated Time: **60 minutes**
 
 4. Run the following command: **npm install**.
 
-5. Close Command Prompt. 
+5. Close the **Command Prompt** window. 
 
 ### Exercise 1: Deploying a Web Application to Microsoft Azure
 

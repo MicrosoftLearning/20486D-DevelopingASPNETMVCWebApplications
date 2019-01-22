@@ -16,7 +16,7 @@ After completing this lab, you will be able to:
 
 #### Lab Setup
 
-Estimated Time: **60 minutes**
+Estimated Time: **90 minutes**
 
 ### Preparation Steps
 
@@ -30,7 +30,7 @@ Estimated Time: **60 minutes**
 
     >**Note**: If warning messages are shown in the command prompt you can ignore them.
 
-5. Close the **Administrator: Command Prompt** window.
+5. Close the **Command Prompt** window. 
 
 6. From the following location: **[Repository Root]\Allfiles\Mod12\Labfiles\01_ElectricStore_begin**, open the **ElectricStore.sln** solution.
 
