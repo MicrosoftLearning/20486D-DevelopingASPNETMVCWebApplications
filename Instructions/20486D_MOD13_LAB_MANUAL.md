@@ -26,6 +26,8 @@ Estimated Time: **60 minutes**
 
 2. Open the **Command Prompt** window by using **Run as administrator**.
 
+    >**Note**: If a **User Account Control** dialog appears, click yes.
+
 3. In **Administrator: Command Prompt**, run the following command:
  **cd [Repository Root]\Allfiles\Mod13\Labfiles\01_Restaurant_begin\Client**.
 

@@ -26,6 +26,8 @@ Estimated Time: **90 minutes**
 
 2. Open Command Prompt by using **Run as administrator**.
 
+    >**Note**: If a **User Account Control** dialog appears, click yes. 
+
 3. In Administrator: Command Prompt, run the following command: **cd [Repository Root]\Allfiles\Mod14\Labfiles\01_Underwater_begin\Underwater**.
 
 4. Run the following command: **npm install**.
