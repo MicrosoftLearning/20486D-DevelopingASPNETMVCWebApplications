@@ -139,7 +139,7 @@
 
 10.	In the **Microsoft.StorageAccount - Overview** window, click **Go to resource**.
 
-11. In the **blobdemo{unique name}** window, below **Blob services**, click **Blobs**.
+11. In the **blobdemo{unique name}** window, below **Blob service**, click **Blobs**.
 
 12. In the **blobdemo{unique name}** **- Blobs** window, in the menu bar, click **Container**.
 
@@ -153,7 +153,7 @@
 
 17.	In the **Upload blob** window, click **Select a file**. 
 
-18.	In File Explorer, browse to **Allfiles\Mod14\Democode\02_AzureStorageDemo_Images**, click **blackberries.jpg**, and then click **Open**.
+18.	In File Explorer, browse to **[Repository Root]\Allfiles\Mod14\Democode\02_AzureStorageDemo_Images**, click **blackberries.jpg**, and then click **Open**.
 
 19.	In the **Upload blob** window, click **Upload**.
 
@@ -162,8 +162,6 @@
 21.	Open File Explorer.
 
 22. In File Explorer, navigate to **[Repository Root]\Allfiles\Mod14\Democode\02_AzureStorageDemo_begin\AzureStorageDemo**, and then copy the address in the address bar.
-
-    >**Note**: If a **Security Warning for AzureStorageDemo** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 23. Click **Start**, and then type **cmd**.
 
@@ -185,9 +183,11 @@
 
 28. Close the window.
 
-29.	 In File Explorer, browse to **Allfiles\Mod14\Democode\02_AzureStorageDemo_begin**, and then double-click  **AzureStorageDemo.sln**.
+29.	 In File Explorer, browse to **[Repository Root]\Allfiles\Mod14\Democode\02_AzureStorageDemo_begin**, and then double-click  **AzureStorageDemo.sln**.
 
-30. In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer**, right-click **AzureStorageDemo**,  point to **Add**, and then click **Connected Service**.
+    >**Note**: If a **Security Warning for AzureStorageDemo** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
+30. In the **AzureStorageDemo – Microsoft Visual Studio** window, in Solution Explorer, right-click **AzureStorageDemo**,  point to **Add**, and then click **Connected Service**.
 
 31.	In the **Connected Service** window, click **Cloud Storage with Azure Storage**.
 
@@ -213,7 +213,7 @@
 ```cs
        _connectionString = _configuration.GetConnectionString("{your_connection_string_name}");
 ```
-39. Replace **{your_connection_string_name}** with the connection string name copied in step 28.
+39. Replace **{your_connection_string_name}** with the connection string name copied in step 36.
 
 40. In the **AzureStorageDemo - Microsoft Visual Studio** window, in Solution Explorer, right-click **AzureStorageDemo**, and then click **Manage NuGet Packages**.
 
@@ -222,6 +222,8 @@
 42. In the **Search** box, type **WindowsAzure.Storage**, and then press Enter.
 
 43. Click **WindowsAzure.Storage**, select version **9.3.3**, and then click **Install.**
+
+    >**Note**: If you have already installed a previous version of **WindowsAzure.Storage**, the button will display **Update** instead of **Install**.
 
 44. If a **Preview Changes** dialog box appears, click **OK**.
 
@@ -286,9 +288,9 @@
 
 57. On the **Add Photo to Album** page, in the **Description** box, type _&lt;A photo description of your choice&gt;._
 
-58. In Microsoft Edge, click **Choose File**.
+58. In Microsoft Edge, click **Browse**.
 
-59.	In File Explorer, browse to **Allfiles\Mod14\Democode\02_AzureStorageDemo_Images**, click **fungi.jpg**, and then click **Open**.
+59.	In File Explorer, browse to **[Repository Root]\Allfiles\Mod14\Democode\02_AzureStorageDemo_Images**, click **fungi.jpg**, and then click **Open**.
 
 60. In Microsoft Edge, click **Submit Photo to Azure**. 
 
@@ -298,7 +300,7 @@
 	
 63. In the **Storage accounts** window, click **blobdemo{unique name}**.
 
-64.	In the **blobdemo{unique name}** window, below **Blob services**, click **Blobs**.
+64.	In the **blobdemo{unique name}** window, below **Blob service**, click **Blobs**.
 
 65.	In the **Blobs** window, click **myimagecontainer**.
 
