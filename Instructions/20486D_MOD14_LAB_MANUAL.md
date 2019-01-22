@@ -142,7 +142,7 @@ The main tasks for this exercise are:
 
 2. In the new  **PropertyGroup** element, add a **Content** element, with the following information:
 
-	-  Include: **node_modules\**
+	-  Include: *node_modules*
     -  CopyToPublishDirectory: **PreserveNewest**
 
 3. Save all the changes. 
@@ -171,23 +171,23 @@ The main tasks for this exercise are:
 
 14. Expand **Databases**.
 
-15. Under  **Default Connection String**, select the **Use this connection string at runtime** check box.
+15. Under  **Default Connection**, select the **Use this connection string at runtime** check box.
 
-16.  Fill the **Default Connection String** box with the following information:
+16.  Fill the **Default Connection** box with the following information:
 
-	 -  Default Connection String: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
+	 -  Default Connection: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
 
 17. Expand **Entity Framework Migration**, and then click **Apply this migration on publish**.
 
-18.  Expand **Entity Framework Migration**,  and then fill the **Default Connection String** box with the following information:
+18.  Expand **Entity Framework Migration**,  and then fill the **Default Connection** box with the following information:
 
-	 -  Default Connection String: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
+	 -  Default Connection: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
 
 19. Click **Save**.
 
 #### Task 4: Deploy the application
 
-1. In Microsoft Visual Studio, open Solution Explorer, right-click **Underwater**, and then click **Publish**.
+1. In Microsoft Visual Studio, in the **Publish** window, click **Publish**.
 
 2. In Microsoft Edge, in the menu bar, click **Add Fish**.
 
@@ -210,7 +210,7 @@ The main tasks for this exercise are:
 
 8. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Edit**.
 
-9. On the **Edit Fish** page, in the **Scientic Name** box, type **_&lt;A scientific name of your choice>&gt;_**, and then click **Save**.
+9. On the **Edit Fish** page, in the **Scientic Name** box, type **_&lt;A scientific name of your choice&gt;_**, and then click **Save**.
 
 10. On the **Dive into Our Fish Species** page, select the fish you edited, and then click **Details**.
 
@@ -218,7 +218,7 @@ The main tasks for this exercise are:
 
 12. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
 
-13. On the **Fish Delete** page, click **Delete**.
+13. On the **Are you sure you want to delete this?** page, click **Delete**.
 
 14. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
 
@@ -350,7 +350,7 @@ The main tasks for this exercise are:
 
 37. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
 
-38. On the **Fish Delete** page, click **Delete**.
+38. On the **Are you sure you want to delete this?** page, click **Delete**.
 
 39. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
 
