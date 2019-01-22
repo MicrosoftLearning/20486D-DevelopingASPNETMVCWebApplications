@@ -320,7 +320,7 @@ The main tasks for this exercise are:
 
 25. In Solution Explorer, right-click **Underwater**, and then click **Publish**.
 
-26. In the **Pick a publish target** dialog box, verify that **Underwater** *{unique name}* is selected in the drop-down list, and then click **Publish**.
+26. In the **Pick a publish target** dialog box, verify that **Underwater{unique name}** is selected in the drop-down list, and then click **Publish**.
 
 27. In Microsoft Edge, in the menu bar, click **Add Fish**.
 
@@ -394,7 +394,7 @@ The main tasks for this exercise are as follows:
 
 8. Click **Create**.
 
-9. In the **Microsoft.StorageAccount-***{unique number}* **- Overview** window, below **RESOURCE**, click **underwater{unique name}**.
+9. In the **Microsoft.StorageAccount-{unique number}** **- Overview** window, below **RESOURCE**, click **underwater{unique name}**.
 
 10. In the **Underwater{unique name}** window, below **Blob Service**, click **Blobs**.
 
@@ -621,7 +621,7 @@ The main tasks for this exercise are as follows:
 
 1. In Solution Explorer, right-click **Underwater**, and then click **Publish**.
 
-2. In the **Pick a publish target** dialog box, verify that **Underwater** *{unique name}* is selected in the drop-down list, and then click **Publish**.
+2. In the **Pick a publish target** dialog box, verify that **Underwater{unique name}** is selected in the drop-down list, and then click **Publish**.
 
 3. In Microsoft Edge, in the menu bar, click **Add Fish**.
 
@@ -639,7 +639,7 @@ The main tasks for this exercise are as follows:
 
 7. Close Microsoft Edge.
 
-8. Close Visual Studio.
+8. Close Microsoft Visual Studio.
 
 9. In Microsoft Edge, go to **http://portal.azure.com**.
 
@@ -652,7 +652,7 @@ The main tasks for this exercise are as follows:
 13. In the **Blobs** window, click **aquarium**.
     >**Note**: Verify the presence of uploaded image.
 
-14. Click **clownfish.jpg**.
+14. Click **clown-trigger.jpg**.
 
 15. Click **Edit blob**.
     >**Note**: The uploaded image is displayed.
