@@ -467,14 +467,14 @@ The main tasks for this exercise are as follows:
 
 13. In the **Index.cshtml** view, remove the contents of the **IF** statement. 
 
-14. In the **IF** statement code block, add an **IF** statement that checks that the value of **Model.ImageURL** is **NOT NULL**.
+14. In the **IF** statement code block, add an **IF** statement that checks that the value of **item.ImageURL** is **NOT NULL**.
  
 15. In the **IF** statement code block, add a **DIV** element with the following information:
     - Class: **photo-display**
  
 16. In the new **DIV** element, add an **IMG** element with the following information:
     - Class: **photo-display-img**
-    - Src: **@Model.ImageURL**
+    - Src: **@item.ImageURL**
 
 17. After the **IF** statement, add an **ELSE** statement. 
 
@@ -483,7 +483,7 @@ The main tasks for this exercise are as follows:
 
 19.  In the new **DIV** element, add an **IMG** element with the following information:
      - Class: **photo-display-img**
-     - Src: **@Url.Action("GetImage", "Aquarium", new { Id = Model.FishId })**      
+     - Src: **@Url.Action("GetImage", "Aquarium", new { Id = item.FishId })**      
 
 20. In the **Delete.cshtml** view, remove the contents of the **IF** statement. 
 
@@ -496,10 +496,9 @@ The main tasks for this exercise are as follows:
     - Class: **photo-display-img**
     - Src: **@Model.ImageURL**
 
-24. After the **IF** statement, and an **ELSE** statement. 
+24. After the **IF** statement, add an **ELSE** statement. 
 
-25. In the  **ELSE** statement code block,  add a **DIV** element with the following information:
-    - Class: **photo-display**
+25. In the  **ELSE** statement code block,  add a **DIV** element. 
 
 26.  In the new **DIV** element, add an **IMG** element with the following information:
      - Class: **photo-display-img**
@@ -507,7 +506,7 @@ The main tasks for this exercise are as follows:
 
 27. Add a **NuGet Package** with the following information:
 
-    - Package: **WindowsAzure.Storage*** 
+    - Package: **WindowsAzure.Storage**
     - Version: **9.3.3**
 
 28. In the **UnderwaterRepository** class, add **USING** statements for the following namespaces:
@@ -596,7 +595,7 @@ The main tasks for this exercise are as follows:
 
 54. In the **RemoveFish** method, create a variable named *fish* of the var type, and assign it with the **_context.fishes.SingleOrDefault(f => f.FishId == id)** value.
 
-55. Create an **IF** statement that checks that the value of **Model.ImageURL** is **NOT NULL**.
+55. Create an **IF** statement that checks that the value of **fish.ImageURL** is **NOT NULL**.
 
 56.  In the **IF** statement code block, call the **DeleteImageAsync** method. Pass *fish.ImageName* as a parameter to the **DeleteImageAsync** method. 
 
