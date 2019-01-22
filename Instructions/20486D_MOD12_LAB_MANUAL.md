@@ -16,7 +16,7 @@ After completing this lab, you will be able to:
 
 #### Lab Setup
 
-Estimated Time: **90 minutes**
+Estimated Time: **60 minutes**
 
 ### Preparation Steps
 
