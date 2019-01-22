@@ -581,10 +581,13 @@ The main tasks for this exercise are as follows:
 
 8. Add a **FORM** element, with the following information: 
 
-    - action: **http://localhost:55606/Account/Register?FirstName=Forgery_Attacker&LastName=Cross_Site&PhoneNumber=123&Email=attack@@.com&UserName=Forgery_Attacker&Password=123qwe!!!QWE123&RoleName=Member**
+    - action: **http:<span>/</span>/localhost:[Port]/Account/Register?FirstName=Forgery_Attacker&LastName=Cross_Site&PhoneNumber=123&Email=attack@@.com&UserName=Forgery_Attacker&Password=123qwe!!!QWE123&RoleName=Member**
     - method: **post**
 
+9. Inside the **FORM** element, add an **INPUT** element, with the following properties:
 
+    - type: **Submit**
+    - value: **Attack**
 
 #### Task 2: Run the application – now the attack is possible
 
@@ -603,6 +606,8 @@ The main tasks for this exercise are as follows:
       >**Note**: The menu bar has a navigation tab for **Logout**, meaning you are logged in.
 
 6. Close all Microsoft Edge windows.
+
+7. In Microsoft Visual Studio, stop debugging.
 
 #### Task 3: Avoid the Cross-Site Request Forgery attack
 
@@ -631,7 +636,9 @@ The main tasks for this exercise are as follows:
 
 6. Close all Microsoft Edge windows.
 
-7. Close Microsoft Visual Studio.
+7. In Microsoft Visual Studio, stop debugging.
+
+8. Close Microsoft Visual Studio.
 
 >**Results**: After completing this exercise, you can avoid cross-site request forgery attacks.
 
