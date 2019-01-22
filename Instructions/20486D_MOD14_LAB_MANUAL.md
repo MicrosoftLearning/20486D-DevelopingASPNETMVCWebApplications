@@ -26,7 +26,7 @@ Estimated Time: **60 minutes**
 
 2. Open Command Prompt by using **Run as administrator**.
 
-3. In Administrator: Command Prompt, run the following command: **cd &lt;The location of  Allfiles\Mod14\Labfiles\01_Underwater_begin\Underwater folder on your machine&gt;**.
+3. In Administrator: Command Prompt, run the following command: **cd [Repository Root]\Allfiles\Mod14\Labfiles\01_Underwater_begin\Underwater **.
 
 4. Run the following command: **npm install**.
 
@@ -52,7 +52,9 @@ The main tasks for this exercise are:
 
 #### Task 1: Explore and run the application locally
 
-1. Open the **UnderWater.sln** solution from the following location: **Allfiles\Mod14\Labfiles\01_Underwater_begin**. 
+1. Open the **UnderWater.sln** solution from the following location: **[Repository Root]\Allfiles\Mod14\Labfiles\01_Underwater_begin**. 
+
+    >**Note**: If a **Security Warning for Underwater** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 2. Open the **Package Manager Console** window.
 
@@ -69,7 +71,7 @@ The main tasks for this exercise are:
 	-  Aquarium: **_&lt;A aquarium of your choice&gt;_**
     -  Fish Name: **_&lt;A fish name of your choice&gt;_**
     -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
-    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click koi.jpg&gt;_**
+    -  Picture:  **_&lt;go to [Repository Root]\Allfiles\Mod14\Labfiles\Images, and click koi.jpg&gt;_**
 
 8. Click **Add**
 
@@ -91,13 +93,13 @@ The main tasks for this exercise are:
 
 16. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
 
-17. On the **Fish Delete** page, click **Delete**.
+17. On the **Are you sure you want to delete this?** page, click **Delete**.
 
 18. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
 
 19. Close Microsoft Edge. 
 
-#### Task 2: Create a new Web App in Azure
+#### Task 2: Create a new Web App in Microsoft Azure
 
 1. Open Microsoft Edge.
 
@@ -107,9 +109,9 @@ The main tasks for this exercise are:
 
 4. In the **App Services** window, click **Add**.
 
-5. In the **Web** window, click **Web App + SQL**, and then click **Create**.
+5. In the **Marketplace** window, click **Web App + SQL**, and then click **Create**.
 
-6. In the **Web App + SQL** window, in the **App Name** box, type **Underwater***{unique name}*.
+6. In the **Web App + SQL** window, in the **App Name** box, type **Underwater{unique name}**.
 
     >**Note**: The name must be unique. You can add your first name, last name, or birthdate to the current name.
 
@@ -123,7 +125,7 @@ The main tasks for this exercise are:
 
 11. In the **New server** window, select the following:
 
-	-  Server name: **Underwater***{unique name}*
+	-  Server name: **Underwater{unique name}**
     -  Server admin login: **Underwateradmin**
     -  Password: **p@@sw0rd**
     -  Confirm password: **p@@sw0rd**
@@ -161,7 +163,7 @@ The main tasks for this exercise are:
 
 10. Type **Password**, and then click **Sign in**.
 
-11. In the **App Service** dialog box, expand **Underwater***{unique name}*, click **Underwater***{unique name}*, and then click **OK**.
+11. In the **App Service** dialog box, expand **Underwater{unique name}**, click **Underwater{unique name}**, and then click **OK**.
 
 12. In the **Publish** window, click **Configure**.
 
@@ -194,7 +196,7 @@ The main tasks for this exercise are:
 	-  Aquarium: **_&lt;A aquarium of your choice&gt;_**
     -  Fish Name: **_&lt;A fish name of your choice&gt;_**
     -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
-    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
+    -  Picture:  **_&lt;go to [Repository Root]\Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
 
 4. Click **Add**.
 
@@ -326,7 +328,7 @@ The main tasks for this exercise are:
     -  Fish Name: **_&lt;A fish name of your choice&gt;_**
     -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
     -  Common Name: **_&lt;A common name of your choice&gt;_** 
-    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
+    -  Picture:  **_&lt;go to [Repository Root]\Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
 
 29. Click **Add**.
 
@@ -380,21 +382,21 @@ The main tasks for this exercise are as follows:
 
 4. In the **Storage accounts** window, in the menu bar, click **Add**.
 
-5. In the **Create storage account** window , in the **Storage account name** box, type **underwater***{unique name}*.
+5. In the **Create storage account** window , in the **Storage account name** box, type **underwater{unique name}**.
 
     >**Note**: The name must be unique. You can add your first name, last name, or birthdate to the current name.
 
-6.  Under **Resource group**, select **Underwater***{unique name}*.
+6.  Under **Resource group**, select **Underwater{unique name}**.
 
 7. Click **Review + create**.
 
 8. Click **Create**.
 
-9. In the **Microsoft.StorageAccount-***{unique number}* **- Overview** window, below **RESOURCE**, click **underwater***{unique name}*.
+9. In the **Microsoft.StorageAccount-***{unique number}* **- Overview** window, below **RESOURCE**, click **underwater{unique name}**.
 
-10. In the **Underwater***{unique name}* window, below **Blob Service**, click **Blobs**.
+10. In the **Underwater{unique name}** window, below **Blob Service**, click **Blobs**.
 
-11. In the **Underwater***{unique name}* **- Blobs** window, in the menu bar, click **Container**.
+11. In the **Underwater{unique name}** **- Blobs** window, in the menu bar, click **Container**.
 
 12. In the **New container** window, in the **Name** box, type **aquarium**.
 
@@ -410,7 +412,7 @@ The main tasks for this exercise are as follows:
 
     >**Note**: In case you are already signed-in, you will not see the **Sign in** dialog box. In that case, proceed to the next step.
 
-4. In the **Azure Storage** window, click **Underwater***{unique name}* , and then click **Add**.
+4. In the **Azure Storage** window, click **Underwater{unique name}** , and then click **Add**.
 
     >**Note**: Microsoft Edge displays the following URL: https://docs.microsoft.com/en-us/azure/visual-studio/vs-storage-aspnet-getting-started-blobs.
 
@@ -628,7 +630,7 @@ The main tasks for this exercise are as follows:
     -  Fish Name: **_&lt;A fish name of your choice&gt;_**
     -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
     -  Common Name: **_&lt;A common name of your choice&gt;_** 
-    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click clown-trigger.jpg&gt;_**
+    -  Picture:  **_&lt;go to [Repository Root]\Allfiles\Mod14\Labfiles\Images, and click clown-trigger.jpg&gt;_**
 
 5. Click **Add**.
 
@@ -642,7 +644,7 @@ The main tasks for this exercise are as follows:
 
 10. On the menu, click **Storage Accounts**.
 
-11. In the **Storage accounts** window, click **Underwater***{unique name}*.
+11. In the **Storage accounts** window, click **Underwater{unique name}**.
 
 12. In the **Underwater{unique name}** window, below **Blob services**, click **Blobs**.
 
