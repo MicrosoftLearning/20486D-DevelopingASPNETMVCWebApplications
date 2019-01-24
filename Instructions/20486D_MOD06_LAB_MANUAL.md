@@ -4,7 +4,7 @@
 
 #### Scenario
 
-You are planning to create and code a MVC model that will be used in the butterflies’ shop application. The model includes properties that describe a butterfly. The model must enable the application to store the uploaded butterflies.
+You are planning to create and code a Model-View-Controller (MVC) model that will be used in the butterflies’ shop application. The model includes properties that describe a butterfly. The model must enable the application to store the uploaded butterflies.
 
 
 
@@ -25,7 +25,7 @@ Estimated Time: **60 minutes**
 
 #### Preparation Steps
 
-1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos.
+1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course.
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 ### Exercise 1: Adding a Model
@@ -40,21 +40,21 @@ In this exercise, you will:
 
 The main tasks for this exercise are as follows:
 
-1. Create a new model.
+1. Create a new model
 
-2. Use the model in a view.
+2. Use the model in a view
 
-3. Pass the model from the controller to a view.
+3. Pass the model from the controller to a view
 
-4. Run the application.
+4. Run the application
 
-5. Write a **GET** action.
+5. Write a GET action
 
-6. Write a **POST** action that accepts the model.
+6. Write a POST action that accepts the model
 
 #### Task 1: Create a new model
 
-1. From **Allfiles\Mod06\Labfiles\01_ButterfliesShop_begin** open the **ButterfliesShop.sln**.
+1. From **Allfiles\Mod06\Labfiles\01_ButterfliesShop_begin**, open the **ButterfliesShop.sln**.
 
 2. In the **Butterfly** class, add a **using** statement for the following namespace:
 
@@ -151,7 +151,7 @@ The main tasks for this exercise are as follows:
 
     - Class: **container**
 
-3. In the **DIV** element, add a **H1** element with the following information:
+3. In the **DIV** element, add an **H1** element with the following information:
 
     - Class: **main-title**
     - Content: **Butterflies Shop**
@@ -212,13 +212,13 @@ The main tasks for this exercise are as follows:
     - Return Type: **IActionResult**
     - Name: **Index**
 
-3. In the **Index** action code block,  create a variable named **indexViewModel** of type **IndexViewModel**.
+3. In the **Index** action code block,  create a variable named *indexViewModel* of type **IndexViewModel**.
 
-4. Initialize the **indexViewModel** varible using the **IndexViewModel** constructor.
+4. Initialize the *indexViewModel* variable by using the **IndexViewModel** constructor.
 
-5. Assign the **Butterflies** property of the **indexViewModel** varible, the value of **_data.ButterfliesList**.
+5. Assign the **Butterflies** property of the *indexViewModel* variable the value of **_data.ButterfliesList**.
 
-6. Return the **ViewResult** result using the **View** method. Pass the **indexViewModel** varible as a parameter to the **View** method.
+6. Return the **ViewResult** result by using the **View** method. Pass the *indexViewModel* variable as a parameter to the **View** method.
 
 #### Task 4: Run the application
 
@@ -227,7 +227,7 @@ The main tasks for this exercise are as follows:
 2. Start the application without debugging.
 
 3. View the page you have added.
-    >**Note:** The browser displays the **Index** action result inside the **Butterfly** Controller.
+    >**Note**: The browser displays the **Index** action result inside the **Butterfly** Controller.
 
 4. Close Microsoft Edge.
 
@@ -254,11 +254,11 @@ The main tasks for this exercise are as follows:
         - Type: **Butterfly**
         - Name: **butterfly**.
 
-2. In the **Create** action code block annotated with the **HTTP POST** verb, add a varible named **lastButterfly** of type **Butterfly** with the value of **_data.ButterfliesList.LastOrDefault()**.
+2. In the **Create** action code block annotated with the **HTTP POST** verb, add a variable named *lastButterfly* of type **Butterfly** with the value of **_data.ButterfliesList.LastOrDefault()**.
 
-3. Assign to the **CreatedDate** property of the **butterfly** parameter the value of **DateTime.Today**.
+3. Assign to the **CreatedDate** property of the *butterfly* parameter the value of **DateTime.Today**.
 
-4. Create an **IF** statement that checks that the value of the **butterfly.PhotoAvatar**  is not null, **AND** **butterfly.PhotoAvatar.Length** is bigger then 0.
+4. Create an **IF** statement that checks that the value of the **butterfly.PhotoAvatar**  is not null, **AND** **butterfly.PhotoAvatar.Length** is bigger than 0.
 
 5. In the **IF** statement block, assign the **ImageMimeType** property of the **butterfly** parameter, the value of **butterfly.PhotoAvatar.ContentType**.
 
@@ -266,21 +266,21 @@ The main tasks for this exercise are as follows:
 
 7. Assign to the **Id** property of the **butterfly** parameter the value of **lastButterfly.Id + 1**.
 
-8. Call the **AddButterfliesQuantityData** method  of the **_butterfliesQuantityService** field, and pass **butterfly** as a parameter.
+8. Call the **AddButterfliesQuantityData** method of the **_butterfliesQuantityService** field, and pass **butterfly** as a parameter.
 
-9. Create a variable named **memoryStream** of type **MemoryStream** inside a **USING** statement.
+9. Create a variable named *memoryStream* of type **MemoryStream** inside a **USING** statement.
 
-10. Initialize the **memoryStream** varaible using the **MemoryStream** constructor.
+10. Initialize the *memoryStream* variable by using the **MemoryStream** constructor.
 
 11. In the **USING** statement block, call the **CopyTo** method, of the **butterfly.PhotoAvatar** property, and pass **memoryStream** as a parameter.
 
 12. Assign the **PhotoFile** property of the **butterfly** parameter, the value of **memoryStream.ToArray()**.
 
-13. After the **USING** statement block, call the **AddButterfly** method  of the **_data** field, and pass **butterfly** as a parameter.
+13. After the **USING** statement block, call the **AddButterfly** method of the **_data** field, and pass **butterfly** as a parameter.
 
-14. Return the **RedirectToActionResult** result using the **RedirectToAction** method, and Pass **"Index"** as a parameter.
+14. Return the **RedirectToActionResult** result by using the **RedirectToAction** method, and pass **"Index"** as a parameter.
 
-15. After the **IF** statement block,  return the **ViewResult** result using the **View** method, and pass **butterfly** as a parameter.
+15. After the **IF** statement block,  return the **ViewResult** result by using the **View** method, and pass **butterfly** as a parameter.
 
 >**Results**: After completing this exercise, you will be able to create a model, pass it to the view, and use it to display the data.
 
@@ -296,21 +296,21 @@ In this exercise, you will:
 
 The main tasks for this exercise are as follows:
 
-1. Add display and edit data annotations to a model.
+1. Add display and edit data annotations to a model
 
-2. Update an action to return **FileContentResult**.
+2. Update an action to return FileContentResult
 
-3. Add Display Helpers.
+3. Add Display Helpers
 
-4. Add Form Helpers.
+4. Add Form Helpers
 
-5. Add Editor Helpers.
+5. Add Editor Helpers
 
-6. Run the application.
+6. Run the application
 
 #### Task 1: Add display and edit data annotations to a model
 
-1. In the **Butterfly** class, add **using** statement for the following namespace:
+1. In the **Butterfly** class, add a **using** statement for the following namespace:
 
    - **System.ComponentModel.DataAnnotations**
 
@@ -350,55 +350,55 @@ The main tasks for this exercise are as follows:
 
 1. In the **GetImage** action code block, at the beginning of **IF** statement, remove the **return** statement.
 
-2. Add a varible named **webRootpath** of type **string** with the value of **_environment.WebRootPath**. 
+2. Add a variable named *webRootpath* of type **string** with the value of **_environment.WebRootPath**. 
 
-3. Add a varible named **folderPath** of type **string** with the value of  **"\\images\\"**.
+3. Add a variable named *folderPath* of type **string** with the value of  **"\\images\\"**.
 
-4. Add a varible named **fullPath** of type **string** with the value of **webRootpath + folderPath + requestedCity.ImageName**.
+4. Add a variable named *fullPath* of type **string** with the value of **webRootpath + folderPath + requestedCity.ImageName**.
 
-5. Create an **IF** statement that checks that the value of **System.IO.File.Exists(fullPath)** is **true**.
+5. Create an **IF** statement that checks whether the value of **System.IO.File.Exists(fullPath)** is **true**.
 
-6. In the **IF** statement block, add a varible named **fileOnDisk** of type **FileStream**. 
+6. In the **IF** statement block, add a variable named *fileOnDisk* of type **FileStream**. 
 
-7. Initialize the **fileOnDisk** varaible using the **FileStream** constructor and pass it the following parameters: **fullPath** and **FileMode.Open**. 
+7. Initialize the *fileOnDisk* variable by using the **FileStream** constructor and pass it the following parameters: **fullPath** and **FileMode.Open**. 
 
-8. Create a variable named **fileBytes** of type **byte[]**.
+8. Create a variable named *fileBytes* of type **byte[]**.
 
-9. Create a variable named **br** of type **BinaryReader** inside a **USING** statement.
+9. Create a variable named *br* of type **BinaryReader** inside a **USING** statement.
 
-10. Initialize the **br** varaible using the **BinaryReader** constructor, and pass it the following parameter: **fileOnDisk**.  
+10. Initialize the *br* variable by using the **BinaryReader** constructor, and pass it the following parameter: **fileOnDisk**.  
 
-11. In the **USING** statement block, assign the **fileBytes** varible the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
+11. In the **USING** statement block, assign the *fileBytes* variable the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
 
-12. After the **USING** statement block, return a **FileResult** result using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedButterfly.ImageMimeType**. 
+12. After the **USING** statement block, return a **FileResult** result by using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedButterfly.ImageMimeType**. 
 
 13. After the end of the nested **IF** statement, add an **ELSE** statement.
 
-14. In the new **ELSE** statement block, create a nested  **IF** statement that checks that the value of **requestedButterfly.PhotoFile.Length**  is bigger then **0**.
+14. In the new **ELSE** statement block, create a nested  **IF** statement that checks whether the value of **requestedButterfly.PhotoFile.Length**  is bigger than **0**.
 
-15. In the nested **IF** statement block, return a **FileResult** result using the **File** method. Pass the following parameters to the **File** method: **requestedButterfly.PhotoFile** and **requestedButterfly.ImageMimeType**. 
+15. In the nested **IF** statement block, return a **FileResult** result by using the **File** method. Pass the following parameters to the **File** method: **requestedButterfly.PhotoFile** and **requestedButterfly.ImageMimeType**. 
 
 16. After the end of nested **IF** statement, add an **ELSE** statement.
 
-16. In the **ELSE** statement block, return the **NotFoundResult** result using the **NotFound** method.
+17. In the **ELSE** statement block, return the **NotFoundResult** result by using the **NotFound** method.
 
 #### Task 3: Add Display Helpers
 
 1. In the **Index.cshtml** view, **remove** the code in the **FOREACH** code block.
 
-2. In the **FOREACH** code block, add a **H3** element with the following information:
+2. In the **FOREACH** code block, add an **H3** element with the following information:
 
     - Class: **display-picture-title**
     - Content: **"@Html.DisplayFor(item => item.CommonName)"**
 
 
-3. After the **H3** element, add a **IF** statement that checks that the value of **item.ImageName** is not **null**.
+3. After the **H3** element, add an **IF** statement that checks whether the value of **item.ImageName** is not **null**.
 
-4. In the **IF** statement block, add a **DIV** element using the following information:
+4. In the **IF** statement block, add a **DIV** element by using the following information:
 
    - Class: **photo-display**
 
-5. In the **DIV** element, add a **IMG** element with the following information:
+5. In the **DIV** element, add an **IMG** element with the following information:
 
    - Class: **photo-display-img**
 
@@ -489,7 +489,7 @@ The main tasks for this exercise are as follows:
 
     - Class: **container**
 
-4. In the **DIV** element, add a **H1** element with the following information:
+4. In the **DIV** element, add an **H1** element with the following information:
 
     - Class: **main-title**
     - Content: **Add Butterflies to the Shop**
@@ -573,11 +573,11 @@ The main tasks for this exercise are as follows:
     - asp-for: **PhotoAvatar**
 
 
-17. After the last **DIV** element with **form-field** class,  add a **DIV** element using the following information:
+17. After the last **DIV** element with **form-field** class,  add a **DIV** element by using the following information:
 
     - Class: **form-field**
 
-19. In the **DIV** element, add an  **INPUT** element with the following information:
+18. In the **DIV** element, add an  **INPUT** element with the following information:
 
     - Type: **submit**
     - Value: **Submit**
@@ -590,7 +590,7 @@ The main tasks for this exercise are as follows:
 
 3. Click **Add Butterflies**.
 
-4. On the **Add Butterflies to The Shop** page, Create a new butterfly with the following credentials:
+4. On the **Add Butterflies to The Shop** page, create a new butterfly with the following credentials:
 
     - Common Name: **_&lt;A butterfly common name of your choice&gt;_**
     - Butterfly Family: **_&lt;A butterfly family of your choice&gt;_**
@@ -600,9 +600,9 @@ The main tasks for this exercise are as follows:
 
 5. Click **Submit**.
 
-      >**Note:** Verify that the submitted butterfly details are valid and that a new butterfly was added to the homepage.
+      >**Note**: Verify that the submitted butterfly details are valid and that a new butterfly was added to the homepage.
 
-6. Close **Microsoft Edge**.
+6. Close Microsoft Edge.
 
 >**Results** : After completing this exercise, you will be able to add data annotations to the Butterfly model class in the application and add tag helpers to views. 
 
@@ -614,22 +614,22 @@ In this exercise, you will:
 
 - Add validation data annotations to a butterfly model.
 - Add validation Helpers to the Create view.
-- Add **ModelState.IsValid** property in a ButterflyController.
+- Add **ModelState.IsValid** property in ButterflyController.
 - Add **MaxButterflyQuantityValidation** custom validation.
 
 The main tasks for this exercise are as follows:
 
-1. Add validation data annotations to a model.
+1. Add validation data annotations to a model
 
-2. Add validation helpers to a view.
+2. Add validation helpers to a view
 
-3. Using **ModelState.IsValid** property in a controller.
+3. Using ModelState.IsValid property in a controller
 
-4. Run the application.
+4. Run the application
 
-5. Add custom validation.
+5. Add custom validation
 
-6. Run the application.
+6. Run the application
 
 #### Task 1: Add validation data annotations to a model
 
@@ -661,20 +661,20 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Add validation helpers to a view
 
-1. In the **Create.cshtml** view, at the beginning of the **FORM** element, add a **DIV** element using the following information:
+1. In the **Create.cshtml** view, at the beginning of the **FORM** element, add a **DIV** element by using the following information:
 
    - asp-validation-summary: **All**
 
-2. After the **INPUT** element with **asp-for="CommonName"** helper, add a **SPAN** element with the following information:
+2. After the **INPUT** element with the **asp-for="CommonName"** helper, add a **SPAN** element with the following information:
    - asp-validation-for: **CommonName**
 
-3. After the **SELECT** element with **asp-for="ButterflyFamily"** helper, add a **SPAN** element with the following information:
+3. After the **SELECT** element with the **asp-for="ButterflyFamily"** helper, add a **SPAN** element with the following information:
    - asp-validation-for: **ButterflyFamily**
 
-4. After the **TEXTAREA** element with **asp-for="Characteristics"** helper, add a **SPAN** element with the following information:
+4. After the **TEXTAREA** element with the **asp-for="Characteristics"** helper, add a **SPAN** element with the following information:
    - asp-validation-for: **Characteristics**
 
-5. After the **INPUT** element with **asp-for="Quantity"** helper, add a **SPAN** element with the following information:
+5. After the **INPUT** element with the **asp-for="Quantity"** helper, add a **SPAN** element with the following information:
    - asp-validation-for: **Quantity**
 
 6. After the **INPUT** element with **asp-for="PhotoAvatar"** helper, add a **SPAN** element with the following information:
@@ -685,15 +685,15 @@ The main tasks for this exercise are as follows:
 
 1. In the **ButterflyController** class, locate the **Create** action code block annotated with the **HTTP POST** verb.
 
-2. At the beginning of the **Create** action, add an **IF** statement  that checks that the value of **ModelState.isValid** is true.
+2. At the beginning of the **Create** action, add an **IF** statement that checks that the value of **ModelState.isValid** is true.
 
-3. Close the **IF** statment at the end of the **Create** action code block. 
+3. Close the **IF** statement at the end of the **Create** action code block. 
 
-      >**Note:** The **IF** statment should serround the content of the **Create** action. 
+      >**Note**: The **IF** statement should surround the content of the **Create** action. 
 
-4. After the **IF** statment, add an **ELSE** statement.
+4. After the **IF** statement, add an **ELSE** statement.
 
-5. Inside the **ELSE**  statement, return the **ViewResult** result using the **View** method. Pass the **butterfly** model as a parameter to the **View** method. 
+5. Inside the **ELSE**  statement, return the **ViewResult** result by using the **View** method. Pass the **butterfly** model as a parameter to the **View** method. 
 
 #### Task 4: Run the application
 
@@ -703,11 +703,11 @@ The main tasks for this exercise are as follows:
 
 3. On the **Add Butterflies to The Shop** page, leave all the fields blank, and then click **Submit**.
 
-4. Correct all the fields with the validation message, and then click **Submit**.
+4. Correct all the fields that have validation messages, and then click **Submit**.
 
-      >**Note:** Verify that the submitted butterfly details are valid and that a new butterfly was added to the homepage.
+      >**Note**: Verify that the submitted butterfly details are valid and that a new butterfly was added to the homepage.
 
-6. Close **Microsoft Edge**.
+6. Close Microsoft Edge.
 
 #### Task 5: Add custom validation
 
@@ -717,7 +717,7 @@ The main tasks for this exercise are as follows:
    - Name: **MaxButterflyQuantityValidation**
    - Folder: **Validators**
 
-3. Add **using** statements for the following namespaces:
+3. Add the **using** statements for the following namespaces:
 
    - **ButterfliesShop.Models**
    - **ButterfliesShop.Services**
@@ -749,27 +749,27 @@ The main tasks for this exercise are as follows:
             - Name: **validationContext**
 
 
-9. In the **IsValid** method, add a varible named **service** of type **var** with the value of **(IButterfliesQuantityService)validationContext.GetService(typeof(IButterfliesQuantityService))**. 
+9. In the **IsValid** method, add a variable named *service* of type **var** with the value of **(IButterfliesQuantityService)validationContext.GetService(typeof(IButterfliesQuantityService))**. 
 
-10. Add a varible named **butterfly** of type **Butterfly** with the value of **(Butterfly)validationContext.ObjectInstance)**. 
+10. Add a variable named *butterfly* of type **Butterfly** with the value of **(Butterfly)validationContext.ObjectInstance)**. 
 
-11. Create an **IF** statement that checks that the value of the **ButterflyFamily** property of the **butterfly** varible is **not null**.
+11. Create an **IF** statement that checks whether the value of the **ButterflyFamily** property of the **butterfly** variable is **not null**.
 
-12. Inside the **IF** statement code block, add a varible named **quantity** of type **int?** with the value of **service.GetButterflyFamilyQuantity(butterfly.ButterflyFamily.Value)**. 
+12. Inside the **IF** statement code block, add a variable named *quantity* of type **int?** with the value of **service.GetButterflyFamilyQuantity(butterfly.ButterflyFamily.Value)**. 
 
-13. Add a varible named **quantity** of type **int?** with the value of **quantity + butterfly.Quantity**. 
+13. Add a variable named *quantity* of type **int?** with the value of **quantity + butterfly.Quantity**. 
 
-14. Create a nested **IF** statement that checks that the value of  **sumQuantity** is bigger than **_maxAmount**.
+14. Create a nested **IF** statement that checks whether the value of  **sumQuantity** is bigger than **_maxAmount**.
 
-15.  Inside the nested **IF** statement code block, return a new **ValidationResult** result using the  **ValidationResult** constructor. 
+15.  Inside the nested **IF** statement code block, return a new **ValidationResult** result by using the  **ValidationResult** constructor. 
 
 16. Pass **string.Format("Limit of butterflies from the same family in the store is {0} butterflies. Currently there are {1}", _maxAmount, quantity)** as a parameter to the **ValidationResult** constructor.
 
-17. After the nested **IF** statement, return **ValidationResult** result using the **ValidationResult.Success** property.
+17. After the nested **IF** statement, return **ValidationResult** result by using the **ValidationResult.Success** property.
 
-18. After the outer **IF** statement, return **ValidationResult** result using the **ValidationResult.Success** property.
+18. After the outer **IF** statement, return **ValidationResult** result by using the **ValidationResult.Success** property.
 
-19. In the **Butterfly** class, add **using** statement for the following namespace:
+19. In the **Butterfly** class, add a **using** statement for the following namespace:
 
     - **ButterfliesShop.Validators**
 
@@ -784,7 +784,7 @@ The main tasks for this exercise are as follows:
 
 3. Click **Add Butteflies**.
 
-4. On the **Add Butterflies to The Shop** page, Create a new butterfly with the following credentials:
+4. On the **Add Butterflies to The Shop** page, create a new butterfly with the following credentials:
 
     - Common Name: **_&lt;A butterfly common name of your choice&gt;_**
     - Butterfly Family: **_&lt;A butterfly family of your choice&gt;_**
@@ -792,13 +792,13 @@ The main tasks for this exercise are as follows:
     - Butterflies Quantity: **type 60**
     - Butterflies Picture: **_&lt;A butterfly picture of your choice&gt;_**
 
-5. Correct the **Butterflies Quantity** box, type 2.
+5. Correct the **Butterflies Quantity** box, type **2**.
 
 6. Add the **Butterflies Picture** once again, and then click **Submit**.
 
-      >**Note:** Verify that the submitted butterfly details are valid and that a new butterfly was added to the homepage.
+      >**Note**: Verify that the submitted butterfly details are valid and that a new butterfly was added to the homepage.
 
-7. Close **Microsoft Edge**.
+7. Close Microsoft Edge.
 
 8. Close Microsoft Visual Studio.
 
