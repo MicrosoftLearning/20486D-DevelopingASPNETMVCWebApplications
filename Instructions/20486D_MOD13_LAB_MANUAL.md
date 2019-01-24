@@ -57,7 +57,7 @@ The main tasks for this exercise are as follows:
 
 1. From **[Repository Root]\Allfiles\Mod13\Labfiles\01_Restaurant_begin**, open the **Restaurant.sln** file.
 
-    >**Note**: If a **Security Warning for Restaurant** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+    >**Note**: If a **Security Warning for Server** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. Create a new controller with the following information:
    - Controller name: **RestaurantBranchesController**
@@ -75,6 +75,7 @@ The main tasks for this exercise are as follows:
 
 5.  Add a constructor with the following parameter:
      - Parameter: 
+         - Scope: **public**
          - Type: **RestaurantContext** 
          - Name: **context**
 
@@ -176,7 +177,7 @@ The main tasks for this exercise are as follows:
 
 4. Call the **SaveChanges** method of the **_context** field. 
 
-5. Return the **ActionResult&lt;OrderTable&gt** result by using the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and **orderTable** as parameters to the **CreatedAtAction** method.
+5. Return the **ActionResult&lt;OrderTable&gt;** result by using the **CreatedAtAction** method. Pass **nameof(GetById)**,  **new { id = orderTable.Id }** and **orderTable** as parameters to the **CreatedAtAction** method.
 
 >**Results**: After completing this exercise, you will be able to add controllers and actions to a Web API application, and call them by using Microsoft Edge.
 
@@ -358,12 +359,13 @@ The main tasks for this exercise are as follows:
 
 28. Inside the **IF** statement code block, add a variable named *restaurantBranches* of type **IEnumerable<RestaurantBranch>** and assign the *restaurantBranches* field with the value of **await response.Content.ReadAsAsync&lt;IEnumerable&lt;RestaurantBranch&gt;&gt;()**.
    
-29. Assign the **RestaurantBranches** property of the **ViewBag** field with the value of **new SelectList(_restaurantBranches, "Id", "City")**.
+29. Assign the **RestaurantBranches** property of the **ViewBag** field with the value of **new SelectList(restaurantBranches, "Id", "City")**.
 
 #### Task 4: Calling a Web API Get method with parameter
 
 1. Add a method with the following information:
    - Scope: **public**
+   - Modifier: **async**
    - Return type: **IActionResult**
    - Name: **ThankYouAsync**
    - Parameter: 
@@ -543,7 +545,7 @@ The main tasks for this exercise are as follows:
    
 9. Return the **Task&lt;IActionResult&gt;** result by using the **View** method. 
 
-10. Under the **JobApplication** folder, view the content of the **ThankYou.cshtml** view.
+10. Under the **JobApplication** folder, view the content of the **Create.cshtml** view.
 
 11. Add a **PopulateEmployeeRequirementsDropDownListAsync** method with the following information:
      - Scope: **private**
@@ -656,7 +658,7 @@ The main tasks for this exercise are as follows:
     - First name: _&lt;A first name of your choice&gt;_
     - Last name: _&lt;A last name of your choice&gt;_
     - Phone number: _&lt;A phone of your choice&gt;_
-    - Email: _&lt;An email time of your choice&gt;_
+    - Email: _&lt;An email address of your choice&gt;_
     - Address: _&lt;An address of your choice&gt;_
     
 8. Click **Apply For a Job**.
