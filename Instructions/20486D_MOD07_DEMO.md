@@ -10,7 +10,9 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
 #### Demonstration Steps
 
-1. Go to **Allfiles\Mod07\Democode\01_EntityFrameworkExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod07\Democode\01_EntityFrameworkExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+
+    >**Note**: If a **Security Warning for EntityFrameworkExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **EntityFrameworkExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **EntityFrameworkExample**, and then click **Manage NuGet Packages**.
 
@@ -204,9 +206,9 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
 39. Select a person of your choice, and then click **Delete**.
 
-40. Click **Close**.
+40. In Microsoft Edge, click **Close**.
 
-41. On the **FILE** menu, click **Exit**.
+41. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
 # Lesson 3: Using Entity Framework Core to Connect to Microsoft SQL Server
 
@@ -218,7 +220,9 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
 #### Demonstration Steps
 
-1. Go to **Allfiles\Mod07\Democode\02_RepositoryExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod07\Democode\02_RepositoryExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+
+    >**Note**: If a **Security Warning for EntityFrameworkExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **EntityFrameworkExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Repositories**, and then click **IRepository.cs**.
 
@@ -436,7 +440,7 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
 43. Select a person of your choice, and then click **Delete**.
 
-44. Click **Close**.
+44. In Microsoft Edge, click **Close**.
 
 45. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
