@@ -10,7 +10,9 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
 #### Demonstration Steps
 
-1. Go to **Allfiles\Mod06\Democode\01_BindViewsExample_begin**, and then double-click **BindViewsExample.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod06\Democode\01_BindViewsExample_begin**, and then double-click **BindViewsExample.sln**.
+
+    >**Note**: If a **Security Warning for BindViewsExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In **Solution Explorer**, right-click **BindViewsExample**, point to **Add**, and then click **New Folder**.
 
@@ -116,7 +118,7 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
        >**Note**: The browser window displays the **Index.cshtml** view. 
 
-24. In Microsoft Edge, in the address bar, type **http://localhost:***[port]***/Home/Display**, and then press Enter.
+24. In Microsoft Edge, in the address bar, type **http://localhost:[port]/Home/Display**, and then press Enter.
 
       >**Note**: The browser window displays the **AnotherWayToDisplay.cshtml** view. 
 
@@ -134,7 +136,9 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
 #### Demonstration Steps
 
-1. Go to **Allfiles\Mod06\Democode\02_DataAnnotationsExample_begin**, and then double-click **DataAnnotationsExample.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod06\Democode\02_DataAnnotationsExample_begin**, and then double-click **DataAnnotationsExample.sln**.
+
+    >**Note**: If a **Security Warning for DataAnnotationsExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Models**, and then click **User.cs**.
 
@@ -255,7 +259,7 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
 18. On the **DEBUG** menu, click **Start Without Debugging**.
 
-19. On the **Register** page, in the **Full Name** box, type **&lt;A full name of your choice&gt;**.
+19. On the **Create an account** page, in the **Full Name** box, type **&lt;A full name of your choice&gt;**.
 
 20. In the **Email Address** box, type **&lt;An email address of your choice&gt;**.
 
@@ -280,7 +284,9 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
 #### Demonstration Steps
 
-1. Go to **Allfiles\Mod06\Democode\03_DataAnnotationsValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod06\Democode\03_DataAnnotationsValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
+
+    >**Note**: If a **Security Warning for DataAnnotationsExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Models**, and then click **Person.cs**.
 
@@ -319,7 +325,7 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 ```
 9. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **HomeController.cs**.
 
-10. In the **HomeController** code window, locate the following code:
+10. In the **HomeController.cs** code window, locate the following code:
   ```cs
       public IActionResult Details(Person person)
       {
@@ -424,7 +430,9 @@ Ensure that you have cloned the 20486D directory from GitHub (**https://github.c
 
 #### Demonstration Steps
 
-1. Go to **Allfiles\Mod06\Democode\04_DataAnnotationsCustomValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod06\Democode\04_DataAnnotationsCustomValidationExample_begin**, and then double-click **DataAnnotationsExample.sln**.
+
+    >**Note**: If a **Security Warning for DataAnnotationsExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **DataAnnotationsExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **DataAnnotationsExample**, point to **Add**, and then click **New Folder**.
 
