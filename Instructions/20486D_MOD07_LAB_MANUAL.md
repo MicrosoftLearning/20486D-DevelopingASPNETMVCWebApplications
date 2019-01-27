@@ -517,6 +517,7 @@ The main tasks for this exercise are as follows:
 
 14. Add a constructor with the following parameter:
 
+       - Scope: **public**
        - Type: **CupcakeContext**
        - Name: **context**
 
@@ -639,6 +640,7 @@ The main tasks for this exercise are as follows:
 4. Add a constructor with the following parameters:
 
    - Parameter:
+        - Scope: **public**
         - Type: **ICupcakeRepository**
         - Name: **repository**
    - Parameter:
@@ -687,7 +689,7 @@ The main tasks for this exercise are as follows:
     - Key: **BakeryID**
     - Value: **new SelectList(bakeries.AsNoTracking(), "BakeryId", "BakeryName", selectedbakery)**
 
-#### Task 4: Manipulate data using Entity Framework Core
+#### Task 4: Manipulate data by using Entity Framework Core
 
 1. In the **CupcakeController** class, add a method with the following information:
 
@@ -827,7 +829,9 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In Microsoft Edge, click **Add Cupcakes**.
+3. In Microsoft Edge, click **Add Cupcake**.
+
+    >**Note**: The browser displays the **Create** action inside the **CupcakesController**.
 
 4. On the **Add a Cupcake to the Shop** page, create a new cupcake with the following credentials:
 
