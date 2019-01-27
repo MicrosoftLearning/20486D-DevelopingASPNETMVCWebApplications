@@ -43,7 +43,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create model classes
 
-1. Go to **Allfiles\Mod07\Labfiles\01_Cupcakes_begin**, and then open **Cupcakes.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod07\Labfiles\01_Cupcakes_begin**, and then open **Cupcakes.sln**.
+
+    >**Note**: If a **Security Warning for Cupcakes** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. Create a new class with the following information:
 
@@ -132,7 +134,7 @@ The main tasks for this exercise are as follows:
     - Name: **Bakery**
     - Type: **Bakery**
     - Access: **Read and write**
-    - Modifier: **override**
+    - Modifier: **virtual**
 
 15. Above the **CupcakeId** property, add a **Key** attribute.
 
@@ -226,7 +228,7 @@ The main tasks for this exercise are as follows:
      - Name: **Cupcakes**
      - Type: **ICollection&lt;Cupcake&gt;**
      - Access: **Read and write**
-     - Modifier: **override**
+     - Modifier: **virtual**
 
 35. Above the **BakeryId** property, add a **Key** attribute.
 
@@ -360,12 +362,12 @@ The main tasks for this exercise are as follows:
         - **New Bakery**:
             - BakeryId: **2**
             - BakeryName: **"Cupcakes Break"**
-            - Address: **"Cupcakes Break"**
+            - Address: **"4323 Jerome Avenue"**
             - Quantity: **22**
         - **New Bakery**:
             - BakeryId: **3**
             - BakeryName: **"Cupcakes Ahead"**
-            - Address: **"Cupcakes Break"**
+            - Address: **"2553 Pin Oak Drive"**
             - Quantity: **18**
         - **New Bakery**:
             - BakeryId: **4**
@@ -834,7 +836,7 @@ The main tasks for this exercise are as follows:
     - Description: **_&lt;A cupcake description of your choice&gt;_**
     - Gluten Free: **_&lt;Choose if the cupcake is gluten-free&gt;_**
     - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
-    - Cupcake Picture: **import from Allfiles\Mod07\Labfiles\Image a strawberry-cupcake.jpg**
+    - Cupcake Picture: **import from [Repository Root]\Allfiles\Mod07\Labfiles\Image a strawberry-cupcake.jpg**
 
 5. Click **Submit**.
 
@@ -944,7 +946,7 @@ The main tasks for this exercise are as follows:
     - Description: **_&lt;A cupcake description of your choice&gt;_**
     - Gluten Free: **_&lt;Choose if the cupcake is gluten-free&gt;_**
     - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
-    - Cupcake Picture: **import from Allfiles\Mod07\Labfiles\Image a vanilla-cupcake.jpg**
+    - Cupcake Picture: **import from [Repository Root]\Allfiles\Mod07\Labfiles\Image a vanilla-cupcake.jpg**
 
 5. Click **Submit**.
 
