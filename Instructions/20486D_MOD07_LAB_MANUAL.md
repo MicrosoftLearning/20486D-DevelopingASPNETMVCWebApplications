@@ -927,6 +927,8 @@ The main tasks for this exercise are as follows:
      - Command: **Add-Migration**
      - Migration Name: **InitalCreate**
 
+    >**Note**: In **Solution Explorer**, verify if a new folder named **Migrations** is created with multiple files.
+
 3. Create the database by using the following information:
 
      - Command: **Update-Database**
@@ -941,7 +943,9 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In Microsoft Edge, click **Add Cupcakes**.
+3. In Microsoft Edge, click **Add Cupcake**.
+
+    >**Note**: The browser displays the **Create** action inside the **CupcakesController**.
 
 4. On the **Add a Cupcake to The Shop** page, create a new cupcake with the following credentials:
 
@@ -950,7 +954,7 @@ The main tasks for this exercise are as follows:
     - Description: **_&lt;A cupcake description of your choice&gt;_**
     - Gluten Free: **_&lt;Choose if the cupcake is gluten-free&gt;_**
     - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
-    - Cupcake Picture: **import from [Repository Root]\Allfiles\Mod07\Labfiles\Image a vanilla-cupcake.jpg**
+    - Cupcake Picture: **import from [Repository Root]\Allfiles\Mod07\Labfiles\Image a strawberry-cupcake.jpg**
 
 5. Click **Submit**.
 
@@ -1112,7 +1116,7 @@ The main tasks for this exercise are as follows:
 
 5. Close Microsoft Edge.
 
-6. Close Visual Studio.
+6. Close Microsoft Visual Studio.
 
 >**Results**: After completing this exercise, you should have created a Cupcakes Shop application in which users can add a new cupcake, edit a cupcake, delete a cupcake and view a cupcake’s details.
 
