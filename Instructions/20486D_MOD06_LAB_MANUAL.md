@@ -54,7 +54,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create a new model
 
-1. From **Allfiles\Mod06\Labfiles\01_ButterfliesShop_begin**, open the **ButterfliesShop.sln**.
+1. From **[Repository Root]\Allfiles\Mod06\Labfiles\01_ButterfliesShop_begin**, open the **ButterfliesShop.sln**.
+
+    >**Note**: If a **Security Warning for ButterfliesShop** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **Butterfly** class, add a **using** statement for the following namespace:
 
@@ -189,16 +191,16 @@ The main tasks for this exercise are as follows:
     - Class: **photo-index-card**
 
 11. In the **DIV** element with the **photo-index-card** class, add a **P** element with the following information:
-    - Content: **Model.CommonName**
+    - Content: **item.CommonName**
 
 12. Add a **P** element with the following information:
-    - Content: **Model.ButterflyFamily**
+    - Content: **item.ButterflyFamily**
 
 13. Add a **P** element with the following information:
-    - Content: **Model.Quantity**
+    - Content: **item.Quantity**
 
 14. Add a **P** element with the following information:
-    - Content: **Model.CreatedDate**
+    - Content: **item.CreatedDate**
 
 #### Task 3: Pass the model from the controller to a view
 
