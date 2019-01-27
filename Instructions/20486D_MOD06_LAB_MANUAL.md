@@ -356,7 +356,7 @@ The main tasks for this exercise are as follows:
 
 3. Add a variable named *folderPath* of type **string** with the value of  **"\\images\\"**.
 
-4. Add a variable named *fullPath* of type **string** with the value of **webRootpath + folderPath + requestedCity.ImageName**.
+4. Add a variable named *fullPath* of type **string** with the value of **webRootpath + folderPath + requestedButterfly.ImageName**.
 
 5. Create an **IF** statement that checks whether the value of **System.IO.File.Exists(fullPath)** is **true**.
 
@@ -391,7 +391,7 @@ The main tasks for this exercise are as follows:
 2. In the **FOREACH** code block, add an **H3** element with the following information:
 
     - Class: **display-picture-title**
-    - Content: **"@Html.DisplayFor(item => item.CommonName)"**
+    - Content: **"@Html.DisplayFor(modelItem => item.CommonName)"**
 
 
 3. After the **H3** element, add an **IF** statement that checks whether the value of **item.ImageName** is not **null**.
@@ -598,7 +598,7 @@ The main tasks for this exercise are as follows:
     - Butterfly Family: **_&lt;A butterfly family of your choice&gt;_**
     - Characteristics: **_&lt;A butterfly characteristics of your choice&gt;_**
     - Butterflies Quantity: **_&lt;A butterflies quantity of your choice&gt;_**
-    - Butterflies Picture: **_&lt;A butterfly picture of your choice&gt;_**
+    - Butterflies Picture: **_&lt;A butterfly picture of your choice from [Repository Root]\AllFiles\Mod06\Labfiles\Images&gt;_**
 
 5. Click **Submit**.
 
@@ -703,7 +703,11 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
+    >**Note**: The browser displays the **Index** action result inside the **Butterfly** Controller.
+
 3. On the **Add Butterflies to The Shop** page, leave all the fields blank, and then click **Submit**.
+
+      >**Note**: The browser window displays the **Create.cshtml** view with validation messages below all the boxes.
 
 4. Correct all the fields that have validation messages, and then click **Submit**.
 
@@ -792,7 +796,7 @@ The main tasks for this exercise are as follows:
     - Butterfly Family: **_&lt;A butterfly family of your choice&gt;_**
     - Characteristics: **_&lt;A butterfly characteristics of your choice&gt;_**
     - Butterflies Quantity: **type 60**
-    - Butterflies Picture: **_&lt;A butterfly picture of your choice&gt;_**
+    - Butterflies Picture: **_&lt;A butterfly picture of your choice from [Repository Root]\AllFiles\Mod06\Labfiles\Images&gt;_**
 
 5. Correct the **Butterflies Quantity** box, type **2**.
 
