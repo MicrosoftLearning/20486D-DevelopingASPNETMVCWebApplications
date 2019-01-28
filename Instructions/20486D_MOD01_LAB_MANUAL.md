@@ -261,7 +261,7 @@ The main tasks for this exercise are as follows:
 
 4. In the **Actors** window, click the **Details** link.
 
-5. Verify that the **site.css** file is used to apply style to all the pages.
+5. Verify that the **site.css** file is used to apply styles to all the pages.
 
 6. Close the **Microsoft Edge** window.
 
@@ -459,7 +459,7 @@ In this exercise, you will create a simple MVC application, and explore its stru
 
 The main tasks for this exercise are as follows:
 
-1. Creating a MVC  application
+1. Creating an MVC  application
 
 2. Explore the application structure
 
@@ -729,7 +729,7 @@ The main tasks for this exercise are as follows:
 
 4. In the **Animals** window, click the **Details** link.
 
-5. Verify that the **site.css** file is used to apply style to all the pages.
+5. Verify that the **site.css** file is used to apply styles to all the pages.
 
 6. Close the **Microsoft Edge** window.
 
