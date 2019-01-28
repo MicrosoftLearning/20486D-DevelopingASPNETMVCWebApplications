@@ -1,17 +1,17 @@
-﻿# Module 1: Exploring ASP.NET Core MVC
+# Module 1: Exploring ASP.NET Core MVC
 
 # Lab: Exploring ASP.NET Core MVC 
 
 #### Scenario
 
-You are working as a junior developer at Adventure Works. You have been asked by a senior developer to investigate the possibility of creating a web-based ASP.NET Core MVC application for your organization's customers, similar to one that the senior developer has seen on the Internet. Such an application will promote a community of cyclists who use Adventure Works equipment, and the community members will be able to share their experiences. This initiative is intended to increase the popularity of Adventure Works Cycles, and thereby to increase sales. You have been asked to begin the planning of the application. You have also been asked to examine programming models available to ASP.NET Core developers. To do this, you need to create basic web applications written with three different models: Razor Pages , Web API , and MVC. 
+You are working as a junior developer at Adventure Works. You have been asked by a senior developer to investigate the possibility of creating a web-based ASP.NET Core MVC application for your organization's customers, similar to the one that the senior developer has seen on the internet. Such an application will promote a community of cyclists who use Adventure Works equipment, and the community members will be able to share their experiences. This initiative is intended to increase the popularity of Adventure Works Cycles, and thereby to increase their sales. You have been asked to begin the planning of the application. You have also been asked to examine programming models available to ASP.NET Core developers. To do this, you need to create basic web applications using three different models: Razor Pages, Web API, and MVC. 
 
 #### Objectives
 
 After completing this lab, you will be able to:
 
-- Describe and compare the three programming models —Razor Pages, Web API, and MVC.
-- Describe the structure of each web application developed in the three programming models —Razor Pages , Web API , and MVC.
+- Describe and compare the three programming models — Razor Pages, Web API, and MVC.
+- Describe the structure of each web application developed in the three programming models — Razor Pages, Web API, and MVC.
 - Select an appropriate programming model for a given set of web application requirements.
 
 #### Lab Setup
@@ -20,7 +20,7 @@ Estimated Time: **90 minutes**
 
 ### Preparation Steps
 
-1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos.
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course.
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 ### Exercise 1: Exploring a Razor Pages Application
@@ -31,17 +31,17 @@ In this exercise, you will create a simple Razor Pages application, and explore 
 
 The main tasks for this exercise are as follows:
 
-1. Creating a Razor Pages application.
+1. Creating a Razor Pages application
 
-2. Explore the application structure.
+2. Exploring the application structure
 
-3. Add simple functionality.
+3. Adding simple functionality
 
-4. Run the application.
+4. Running the application
 
 #### Task 1: Creating a Razor Pages application
 
-1. Open **Visual Studio 2017** and create a new **ASP.NET Core Web Application** with following information:
+1. Start Visual Studio 2017 and create a new **ASP.NET Core Web Application** with following information:
 
     - Name: **ActorsRazorPages**
     - Location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
@@ -53,7 +53,7 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In **Microsoft Edge** window, view the **Contact** page.
+3. In the **Microsoft Edge** window, view the **Contact** page.
 
 4. Close Microsoft Edge.
 
@@ -67,7 +67,7 @@ The main tasks for this exercise are as follows:
 
 4. Open the **site.css** file.
 
-    >**Note:** This is the CSS **style sheet** file that applied in the **_Layout.cshtml**.
+    >**Note**: This is the CSS stylesheet file that is applied in **_Layout.cshtml**.
 
 #### Task 3: Add simple functionality
 
@@ -158,17 +158,17 @@ The main tasks for this exercise are as follows:
     - Folder: **Models**
     - Scope: **public**
 
-17. In **IData** interface, declare a property with following information:
+17. In the **IData** interface, declare a property with the following information:
 
     - Type: **List&lt;Actor&gt;**
     - Name: **ActorsList**
 
-18. Declare a method with following information:
+18. Declare a method with the following information:
 
     - Return type: **List&lt;Actor&gt;**
     - Name: **ActorsInitializeData**
 
-19. Declare a method with following information:
+19. Declare a method with the following information:
 
     - Return type: **Actor**
     - Name: **GetActorById**
@@ -220,15 +220,15 @@ The main tasks for this exercise are as follows:
      - Type: **List&lt;Actor&gt;**
      - Access:  **Read and write**
 
-29. In the **OnGet** method, initialize the **Actors** property using the **ActorsInitializeData** method of the **_data.** field.
+29. In the **OnGet** method, initialize the **Actors** property by using the **ActorsInitializeData** method of the **_data.** field.
 
 30. Delete the contents of the **Index.cshtml** page.
 
-31. Copy the content of **Indexcshtml.txt** text file to the **Index.cshtml** page, using the following information:
+31. Copy the content of the **Indexcshtml.txt** text file to the **Index.cshtml** page by using the following information:
 
      - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
 
-32. Copy the **Details.cs** and **Details.cshtml** files to the **ActorsRazorPages** project, with the following information:
+32. Copy the **Details.cs** and **Details.cshtml** files to the **ActorsRazorPages** project with the following information:
 
      - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
      - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Pages\Actors**
@@ -237,12 +237,12 @@ The main tasks for this exercise are as follows:
 
     - **ActorsRazorPages.Models**
 
-34. In the **ConfigureServices** method, call the **AddSingleton** method of **services** parameter with the following information:
+34. In the **ConfigureServices** method, call the **AddSingleton** method of the **services** parameter with the following information:
 
     - Interface: **IData**
     - Implementation: **data**
 
-35. In the **_Layout.cshtml** page, in the **UL** element, add a **LI** element.
+35. In the **_Layout.cshtml** page, in the **UL** element, add an **LI** element.
 
 36. In the new **LI** element,  add an **A** element with the following information:
 
@@ -259,13 +259,13 @@ The main tasks for this exercise are as follows:
 
 3. View the **Test Page** and **Actors** pages you have added.
 
-4. In the Actors window, click on the **Details** link.
+4. In the **Actors** window, click the **Details** link.
 
 5. Verify that the **site.css** file is used to apply style to all the pages.
 
-6. Close the Microsoft Edge window.
+6. Close the **Microsoft Edge** window.
 
-7. Close the **Visual Studio**.
+7. Close Visual Studio.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
 
@@ -277,17 +277,17 @@ In this exercise, you will create a simple Web API application, and explore its 
 
 The main tasks for this exercise are as follows:
 
-1. Creating a Web API  application.
+1. Creating a Web API  application
 
-2. Explore the application structure.
+2. Exploring the application structure
 
-3. Add simple functionality.
+3. Adding simple functionality
 
-4. Run the application.
+4. Running the application
 
 #### Task 1: Creating a Web API application
 
-1. Open **Visual Studio 2017** and create a new **ASP.NET Core Web Application** with following information:
+Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with the following information:
 
     - Name: **CakeStoreApi**
     - Location: **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
@@ -303,7 +303,7 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In **Microsoft Edge** window, view the content in the browser.
+3. In the **Microsoft Edge** window, view the content in the browser.
 
 4. Close Microsoft Edge.
 
@@ -346,17 +346,17 @@ The main tasks for this exercise are as follows:
     - Folder: **Models**
     - Scope: **public**
 
-7. In **IData** interface, declare a property with following information:
+7. In the **IData** interface, declare a property with the following information:
 
     - Type: **List&lt;CakeStore&gt;**
     - Name: **CakesList**
 
-8. Declare a method with following information:
+8. Declare a method with the following information:
 
     - Return type: **List&lt;CakeStore&gt;**
     - Name: **CakesInitializeData**
 
-9. Declare a method with following information:
+9. Declare a method with the following information:
 
     - Return type: **CakeStore**
     - Name: **GetCakeById**
@@ -397,9 +397,9 @@ The main tasks for this exercise are as follows:
      - Return Type:  **ActionResult&lt;List&lt;CakeStore&gt;&gt;**
      - Name: **GetAll**
 
-17. In the **GetAll** action code block, return the **List&lt;CakeStore&gt;** result using the **_data.CakesInitializeData** method
+17. In the **GetAll** action code block, return the **List&lt;CakeStore&gt;** result by using the **_data.CakesInitializeData** method
 
-    >**Note**: The **_data** field is the private object you just Instantiate.
+    >**Note**: The **_data** field is the private object you just instantiated.
 
 18. Above the **GetAll** action, add a **HttpGet** attribute with the following information:
 
@@ -415,22 +415,22 @@ The main tasks for this exercise are as follows:
         - Type: **int?**
         - Name: **id**
 
-20. In the **GetById** action, add a varible named **item** of type **var** and initialize it with the value of **_data.GetCakeById(id)**.
+20. In the **GetById** action, add a variable named *item* of type **var**, and initialize it with the value of **_data.GetCakeById(id)**.
 
-21. Add an **IF** statement that checks that the value of the **item** varible is **NULL**.
+21. Add an **IF** statement that checks whether that the value of the *item* variable is **NULL**.
 
-22. In the **IF**  statement code block, return the **NotFoundResult** result using the **NotFound** method.
+22. In the **IF**  statement code block, return the **NotFoundResult** result by using the **NotFound** method.
 
-23. After the **IF**  statement, return a new **ObjectResult** result using the **ObjectResult** constructor. Pass **item** varible as a parameter to the **ObjectResult** constructor.
+23. After the **IF**  statement, return a new **ObjectResult** result by using the **ObjectResult** constructor. Pass the *item* variable as a parameter to the **ObjectResult** constructor.
 
 24. Above the **GetById** action, add a **HttpGet** attribute with the following information:
      - template : **"/api/CakeStore/{id}"**
 
-25. In the **Startup** class, add **using** statement for the following namespace:
+25. In the **Startup** class, add a **using** statement for the following namespace:
 
       - **CakeStoreApi.Models**
 
-26. In the **ConfigureServices** method, call the **AddSingleton** method of **services** parameter with the following information:
+26. In the **ConfigureServices** method, call the **AddSingleton** method of the **services** parameter with the following information:
 
     - Interface: **IData**
     - Implementation: **data**
@@ -459,17 +459,17 @@ In this exercise, you will create a simple MVC application, and explore its stru
 
 The main tasks for this exercise are as follows:
 
-1. Creating a MVC  application.
+1. Creating a MVC  application
 
-2. Explore the application structure.
+2. Explore the application structure
 
-3. Add simple functionality.
+3. Add simple functionality
 
-4. Run the application.
+4. Run the application
 
 #### Task 1: Creating an MVC application
 
-1. Open **Visual Studio 2017** and create a new **ASP.NET Core Web Application** with following information:
+1. Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with following information:
 
     - Name: **AnimalsMvc**
     - Location: **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin**
@@ -481,7 +481,7 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In **Microsoft Edge** window, view the **Contact** page.
+3. In the **Microsoft Edge** window, view the **Contact** page.
 
 4. Close Microsoft Edge.
 
@@ -489,13 +489,13 @@ The main tasks for this exercise are as follows:
 
 1. In the **_ViewStart** file, note that the value of **Layout** is **"_Layout"**.
 
-2. In the **Contact.cshtml**  page, note that there are no links to **.css** files..
+2. In the **Contact.cshtml**  page, note that there are no links to the **.css** files.
 
 3.  In the **_Layout.cshtml** page, in the **HEAD** element, note that there is a link to **~/css/site.css**.
 
 4. Open the **site.css** style sheet.
 
-    >**Note:** This is the CSS **style sheet** file that applied in the **_Layout.cshtml**.
+    >**Note**: This is the CSS **style sheet** file that is applied in the **_Layout.cshtml**.
 
 
 #### Task 3: Add simple functionality
@@ -506,11 +506,11 @@ The main tasks for this exercise are as follows:
    - Return type: **IActionResult**
    - Name: **TestPage**
 
-2. In the **TestPage**  action, return the **ViewResult** result using the **View** method. 
+2. In the **TestPage**  action, return the **ViewResult** result by using the **View** method. 
 
-3. Right-click on the **TestPage** action name, and then click **Add View**.
+3. Right-click the **TestPage** action name, and then click **Add View**.
 
-4. Create a new view using the **Add MVC View** dialog box, with the following information:
+4. Create a new view by using the **Add MVC View** dialog box, with the following information:
 
     - Name: **TestPage**
     - Scaffold template: **Empty (without model)**  
@@ -536,7 +536,7 @@ The main tasks for this exercise are as follows:
     - Name: **Animal**
     - Folder: **Models**
 
-9. In the the **Animal** model class, add a new property with the following information:
+9. In the **Animal** model class, add a new property with the following information:
 
     - Scope: **public**
     - Name: **id**
@@ -577,17 +577,17 @@ The main tasks for this exercise are as follows:
     - Folder: **Models**
     - Scope: **public**
 
-15. In **IData** interface, declare a property with following information:
+15. In the **IData** interface, declare a property with the following information:
 
     - Type: **List&lt;Animal&gt;**
     - Name: **AnimalsList**
 
-16. Declare a method with following information:
+16. Declare a method with the following information:
 
     - Return type: **List&lt;Animal&gt;**
     - Name: **AnimalsInitializeData**
 
-17. Declare a method with following information:
+17. Declare a method with the following information:
 
     - Return type: **Animal **
     - Name: **GetAnimalById**
@@ -606,7 +606,7 @@ The main tasks for this exercise are as follows:
      - Folder: **Models**
 
 
-20. In the the **IndexViewModel** model class, add a new property with the following information:
+20. In the **IndexViewModel** model class, add a new property with the following information:
 
     - Scope: **public**
     - Property name: **Animals**
@@ -618,7 +618,7 @@ The main tasks for this exercise are as follows:
      - Template: **MVC Controller - Empty**
      - Folder: **Controllers**
 
-22. In the **AnimalsController** class, add **using** statement for the following namespace:
+22. In the **AnimalsController** class, add a **using** statement for the following namespace:
 
       - **AnimalMvc.Models**
 
@@ -635,17 +635,17 @@ The main tasks for this exercise are as follows:
 
 25. In the constructor, initialize the **_tempData** field with the value of the **tempData** parameter.
 
-26.  In the **Index** action code block, add a varible named **animals** of type  **List&lt;Animal&gt;**. 
+26.  In the **Index** action code block, add a variable named *animals* of type  **List&lt;Animal&gt;**. 
 
-27. Initialize the **animals** varible  with the value of **_tempData.AnimalsInitializeData()**.
+27. Initialize the *animals* variable  with the value of **_tempData.AnimalsInitializeData()**.
 
-28. Add a varible named **indexViewModel** of type **IndexViewModel**.
+28. Add a variable named *indexViewModel* of type **IndexViewModel**.
 
-29. Initialize the  **indexViewModel** varible using a **IndexViewModel** parameterless constructor.
+29. Initialize the  *indexViewModel* variable by using a **IndexViewModel** parameterless constructor.
 
-30. Initialize  the  **Animals** property of the **indexViewModel** varible with the value of **animals** varible.
+30. Initialize  the  **Animals** property of the *indexViewModel* variable with the value of *animals* variable.
 
-31. Return the **ViewResult** result using the **View** method. Pass **indexViewModel** as a parameter to the **View** method.
+31. Return the **ViewResult** result by using the **View** method. Pass **indexViewModel** as a parameter to the **View** method.
 
 32. Add a method for the **Details** action with the following information:
     - Scope: **public**
@@ -655,22 +655,22 @@ The main tasks for this exercise are as follows:
         - Type: **int?**
         - Name: **id**
 
-33.  In the **Details** action code block, add a varible named **model** of type  **var** initialize it with the value of **_tempData.GetAnimalById(id)**.
+33.  In the **Details** action code block, add a variable named *model* of type  **var**, and initialize it with the value of **_tempData.GetAnimalById(id)**.
 
-34. Add an **IF** statement that checks that the value of the **model** varible is **NULL**.
+34. Add an **IF** statement that checks that the value of the *model* variable is **NULL**.
 
-35. In the **IF**  statement code block, return the **NotFoundResult** result using the **NotFound** method.
+35. In the **IF**  statement code block, return the **NotFoundResult** result by using the **NotFound** method.
 
-36. After the **IF**  statement, return a new **ViewResult** result using the **View** method. Pass **model** varible as a parameter to the **View** method.
+36. After the **IF**  statement, return a new **ViewResult** result by using the **View** method. Pass the *model* variable as a parameter to the **View** method.
 
-37. Copy the **images** folder content to the **AnimalMvc** project, with the following information:
+37. Copy the **images** folder contents to the **AnimalMvc** project, with the following information:
 
      - Source location: **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Images**
      - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\wwwroot\images**
 
-38. In the **AnimalsController** class, right-click on the **Index** action name, and then click **Add View**.
+38. In the **AnimalsController** class, right-click the **Index** action name, and then click **Add View**.
 
-39. Create a new view using the **Add MVC View** dialog box, with the following information:
+39. Create a new view by using the **Add MVC View** dialog box, with the following information:
 
     - Name: **Index**
     - Scaffold template: **Empty (without model)**  
@@ -680,13 +680,13 @@ The main tasks for this exercise are as follows:
 
 40. Delete the contents of the **Index.cshtml** view.
 
-41. Copy the content of **Indexcshtml.txt** text file to the **Index.cshtml** view, using the following information:
+41. Copy the content of the **Indexcshtml.txt** text file to the **Index.cshtml** view  by using the following information:
 
      - **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
-42. In the **AnimalsController** class, right-click on the **Details** action name, and then click **Add View**.
+42. In the **AnimalsController** class, right-click the **Details** action name, and then click **Add View**.
 
-43. Create a new view using the **Add MVC View** dialog box, with the following information:
+43. Create a new view by using the **Add MVC View** dialog box, with the following information:
 
     - Name: **Details**
     - Scaffold template: **Empty (without model)**  
@@ -696,7 +696,7 @@ The main tasks for this exercise are as follows:
 
 44. Delete the contents of the **Details.cshtml** view.
 
-45. Copy the content of **Detailscshtml.txt** text file to the **Details.cshtml** view, using the following information:
+45. Copy the contents of the **Detailscshtml.txt** text file to the **Details.cshtml** view by using the following information:
 
      - Source location: **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
@@ -709,7 +709,7 @@ The main tasks for this exercise are as follows:
     - asp-controller: **"Animals"**
     - asp-action: **"Index"**
 
-48. In the **Startup** class, add **using** statement for the following namespace:
+48. In the **Startup** class, add a **using** statement for the following namespace:
 
       - **AnimalsMvc.Models**
 
@@ -727,13 +727,13 @@ The main tasks for this exercise are as follows:
 
 3. View the **Test Page** and **Animals** pages you have added.
 
-4. In the **Animals** window, click on the **Details** link.
+4. In the **Animals** window, click the **Details** link.
 
 5. Verify that the **site.css** file is used to apply style to all the pages.
 
 6. Close the **Microsoft Edge** window.
 
-7. Close the **Visual Studio**.
+7. Close the **Visual Studio** window.
 
 >**Results**: At the end of this exercise, you will be able to build a simple MVC application in Visual Studio.
 
