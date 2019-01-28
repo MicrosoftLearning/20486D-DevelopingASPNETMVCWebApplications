@@ -1,4 +1,4 @@
-﻿# Module 1: Exploring ASP.NET Core MVC
+# Module 1: Exploring ASP.NET Core MVC
 
 # Lesson 3: Introduction to ASP.NET Core MVC 
 
@@ -6,22 +6,22 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos.
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course.
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 2. Navigate to **Allfiles/Mod01/Democode/01_PhotoSharingSample**, and then open the **PhotoSharingSample.sln**.
 
 3. In the **PhotoSharingSample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-4. In **Microsoft Edge**, in the address bar, note the port number that appears at the end of the URL "http://localhost:[port]." You will use the port number during this demonstration.
+4. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:***[port]*. You will use the port number during this demonstration.
 
-5. In **Microsoft Edge**, click **Close**.
+5. In Microsoft Edge, click **Close**.
 
 #### Demonstration Steps
 
 1. In the **PhotoSharingSample – Microsoft Visual Studio** window, in **Solution Explorer**, expand **PhotoSharingSample**.
 
-    >**Note:** The **PhotoSharingSample** application  does not have **default.html**, **default.aspx** or **default.cshtml** to act as a home page.
+    >**Note**: The PhotoSharingSample application  does not have **default.html**, **default.aspx** or **default.cshtml** to act as a home page.
 
 2. In **Solution Explorer**, under **PhotoSharingSample**, expand **Controllers**, and then click **HomeController.cs**.
 
@@ -33,7 +33,7 @@
        }
 ```
 
->**Note:** This code block sends a list of Photos to the view. 
+>**Note**: This code block sends a list of photos to the view. 
 
 4. In **Solution Explorer**, expand **Views**, expand **Home**, and then click **Index.cshtml**.
 
@@ -42,13 +42,13 @@
        @model IEnumerable<PhotoSharingSample.Models.Photo>
 ```
 
->**Note:** This code block represents how the view accepts the list of Photos from the Index action.
+>**Note**: This code block represents how the view accepts the list of photos from the **Index** action.
 
 6. In the **PhotoSharingSample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-    >**Note:** The browser displays the default home page. You reached the **Index** action of **Home** controller.  
+    >**Note**: The browser displays the default home page. You have reached the **Index** action of the **Home** controller.  
     
-7. On taskbar, click the **Microsoft Visual Studio** icon.
+7. On the taskbar, click the **Microsoft Visual Studio** icon.
 
 8. In the **PhotoSharingSample – Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
 
@@ -57,13 +57,13 @@
        app.UseMvcWithDefaultRoute();
 ```
 
->**Note:** This code block adds MVC to the request execution pipeline, with a default route which contains the following template: '{controller=Home}/{action=Index}/{id?}'.
+>**Note**: This code block adds MVC to the request execution pipeline, with a default route which contains the following template: **{controller=Home}/{action=Index}/{id?}**.
 
 10. On the taskbar, click the **Microsoft Edge** icon.
 
-11. In **Microsoft Edge**, in the address bar, type the URL **http://localhost:[port]/home/index**, and then press Enter.
+11. In Microsoft Edge, in the address bar, type the URL **http://localhost:***[port]***/home/index**, and then press Enter.
 
-    >**Note:** The browser window displays the **Home** page of the **PhotoSharingSample** web application.
+    >**Note**: The browser window displays the **Home** page of the **PhotoSharingSample** web application.
 
 12. On the taskbar, click the **Microsoft Visual Studio** icon.
 
@@ -75,7 +75,7 @@
        public string Title { get; set;}
 ```
 
->**Note:** This code block represents the **Title** property for a photo stored in the application.
+>**Note**: This code block represents the **Title** property for a photo stored in the application.
 
 15. In **Solution Explorer**, under **Controllers**, click **HomeController.cs**.
 
@@ -84,7 +84,7 @@
        public class HomeController : Controller
 ```
 
->**Note:** This code block indicates that the **HomeController** inherits from the **Controller** base class, which is in the **Microsoft.AspNetCore.Mvc** namespace.
+>**Note**: This code block indicates that the **HomeController** inherits from the **Controller** base class, which is in the **Microsoft.AspNetCore.Mvc** namespace.
 
 17. In the **HomeController.cs** code window, locate the following code:
   ```cs
@@ -109,7 +109,7 @@
        }
 ```
 
->**Note:** This code block represents the **GetImage** action of the **HomeController** class.
+>**Note**: This code block represents the **GetImage** action of the **HomeController** class.
 
 18. In **Solution Explorer**, under **Views**, under **Home**, click **Index.cshtml**.
 
@@ -121,9 +121,9 @@
        </div>
 ```
 
->**Note:** The Razor view engine runs this code and renders the **Photo** Image.
+>**Note**: The Razor view engine runs this code and renders the **Photo** image.
 
-20. In **Microsoft Edge**, click **Close**.
+20. In Microsoft Edge, click **Close**.
 
 21. In the **PhotoSharingSample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
