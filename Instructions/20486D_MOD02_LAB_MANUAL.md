@@ -100,7 +100,7 @@ The main tasks for this exercise are as follows:
 11. Open Microsoft Visual Studio 2017 and create a new **WPF App (.NET Framework)** project by using the following information:
     - Name: **DesignProject**
     - Template: **WPF App (.NET Framework)**
-    - Location: **Allfiles/Mod02/Labfiles/01_DesignProject_begin**
+    - Location: **[Repository Root]\Allfiles\Mod02\Labfiles\01_DesignProject_begin**
     - Solution name: **DesignProject**
     - Create directory for solution: **True**
 
@@ -123,7 +123,7 @@ The main tasks for this exercise are as follows:
 
 17. Add a property by using the following information:
     - Property name: **PhotoFile**
-    - Data type: **byte[]**
+    - Data type: **byte**
 
 18. Add a property by using the following information:
     - Property name: **Description**
@@ -141,7 +141,7 @@ The main tasks for this exercise are as follows:
 
 21. In **Photo.cs**, in the **Title** property, change the property return type to **string**.
 
-22. In the **PhotoFile** property, change the property return type to **byte[]**.
+22. In the **PhotoFile** property, change the property return type to **byte**.
 
 23. In the **Description** property, change the property return type to **string**.
 
@@ -414,7 +414,7 @@ The main tasks for this exercise are as follows:
 
 9. Copy the button and paste it to the right-hand side of the previous button. Change its content to **Gallery**.
 
-10. Paste the button again and place it to the right-hand side of the last pasted button. Change its content to **Photo**.
+10. Paste the button again and place it to the right-hand side of the last pasted button. Change its content to **Add a Photo**.
 
 11. Paste the button again and place it to the right-hand side of the last pasted button. Change its content to **Slideshow**.
 
@@ -435,7 +435,7 @@ The main tasks for this exercise are as follows:
     - Height: **240**
 
 16. Drag a label below the left-hand side of the image by using the following information:
-    - Content: **Description:**
+    - Content: **Description**
 
 17. Drag a label below the last created label by using the following information:
     - Content: **Photo Description...**
@@ -500,6 +500,7 @@ The main tasks for this exercise are as follows:
 6. Drag a canvas below the last created canvas by using the following information:
     - Width: **150**
     - Height: **190**
+    - Background style: **Solid color brush**
     - Background R: **150**
     - Background G: **175**
     - Background B: **207**
@@ -548,17 +549,19 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Hosting options
 
-   Based on your reading of the **InitialInvestigation** document, add a description of the web server arrangements by using the following information:
+1. Based on your reading of the **DetailedPlanningDocument** document, add a description of the web server arrangements by using the following information:
 
     - Description: **The author recommends using Microsoft Azure to host the Photo Sharing application. Microsoft Azure can host any ASP.NET website, including the ASP.NET Core MVC application proposed in this document. Scaling is very simple because Microsoft, not Adventure Works, is responsible for adding server resources at times of high traffic. Costs are minimal: they depend on the amount of data served to visitors but it is not necessary to maintain our own hardware.**
 
 #### Task 2: Choosing a data store
 
-1. Based on your reading of the **InitialInvestigation** document, add a description of the database server arrangements by using the following information:
+1. Based on your reading of the **DetailedPlanningDocument** document, add a description of the database server arrangements by using the following information:
 
     - Description: **DetailedPlanningDocument(docx) - Microsoft Word** window, type **The author recommends using SQL Database, within Microsoft Azure, to host the Photo Sharing application underlying database. As for the web server, this recommendation ensures high-availability hosting for the database with good value for money. This makes particular sense if the web site is hosted in Microsoft Azure.**
 
 2. Close the **InitialInvestigation** document.
+
+3. In the **Microsoft Word** dialog box, click **Save** to save the changes.
 
 
 >**Results**: After completing this exercise, you will be able to create proposals for hosting arrangements.
