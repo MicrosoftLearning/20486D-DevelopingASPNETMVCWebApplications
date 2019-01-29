@@ -122,7 +122,7 @@ The main tasks for this exercise are the following:
     - Value: **Submit Poll**
 
 12. Copy the content of the **html-text.txt** file with following information:
-    - Source location: **Allfiles\Mod03\Labfiles\01_PollBall_begin**
+    - Source location: **[Repository Root]\Allfiles\Mod03\Labfiles\01_PollBall_begin**
 
 13. In the **poll-questions.html** file, paste the copied content into the **DIV** element with the **main-div** class.
 
@@ -335,7 +335,7 @@ The main tasks for this exercise are as follows:
 4. Add a parameter-less constructor with the following information:
     - Scope: **public**
 
-5. In the constructor, initialize the **_selectionVotes** field by using the **SortedDictionary&lt;SelectedGame, int&gt;** constructor.
+5. In the constructor, initialize the **_selectionVotes** field by using the **Dictionary&lt;SelectedGame, int&gt;** constructor.
 
 6. Add a method with the following information:
     - Scope: **public**
@@ -571,7 +571,7 @@ The main tasks for this exercise are the following:
 
 9. Close all the Microsoft Edge windows.
 
-10. Close Visual Studio.
+10. Close Microsoft Visual Studio.
 
 >**Result**: At the end of this exercise, you will be able to create a controller, and inject a service into it with dependency injection. 
 
