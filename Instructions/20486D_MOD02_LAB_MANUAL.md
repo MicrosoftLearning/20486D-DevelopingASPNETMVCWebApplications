@@ -559,7 +559,7 @@ The main tasks for this exercise are as follows:
 
     - Description: **DetailedPlanningDocument(docx) - Microsoft Word** window, type **The author recommends using SQL Database, within Microsoft Azure, to host the Photo Sharing application underlying database. As for the web server, this recommendation ensures high-availability hosting for the database with good value for money. This makes particular sense if the web site is hosted in Microsoft Azure.**
 
-2. Close the **InitialInvestigation** document.
+2. Close the **DetailedPlanningDocument** document.
 
 3. In the **Microsoft Word** dialog box, click **Save** to save the changes.
 
