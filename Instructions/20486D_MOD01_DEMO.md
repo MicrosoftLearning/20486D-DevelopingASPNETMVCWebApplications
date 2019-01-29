@@ -9,7 +9,7 @@
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course.
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
-2. Navigate to **[Repository Root]\Allfiles/Mod01/Democode/01_PhotoSharingSample**, and then open the **PhotoSharingSample.sln**.
+2. Navigate to **[Repository Root]\Allfiles\Mod01\Democode\01_PhotoSharingSample**, and then open the **PhotoSharingSample.sln**.
 
     >**Note**: If a **Security Warning for PhotoSharingSample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
