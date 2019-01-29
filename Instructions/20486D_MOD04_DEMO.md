@@ -6,23 +6,23 @@
 
 #### Preparation Steps
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course.
 
 #### Demonstration Steps
 
-1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\01_ControllersExample_begin**, and then double-click **ControllersExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\01_ControllersExample_begin** and double-click **ControllersExample.sln**.
+    
+    >**Note**: If a **Security Warning for ControllersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
-    >**Note**: If a **Security Warning for ControllersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
+2. In Solution Explorer, right-click **ControllersExample**, point to **Add**, and then select **New Folder**.
 
-2. In **Solution Explorer**, right-click **ControllersExample**, point to **Add**, and then click **New Folder**.
+3. In the **NewFolder** box, type **Controllers**, and then press Enter.
 
-3. In the **NewFolder** text box, type **Controllers**, and then press Enter.
-
-4. In the **ControllersExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
+4. In the **ControllersExample - Microsoft Visual Studio** window, in Solution Explorer, right-click the **Controllers** folder, point to **Add**, and then select **Controller**.
 
 5. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
-6. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **HomeController**, and then click **Add**.
+6. In the **Add Empty MVC Controller** dialog box, in the **Controller name** box, type **HomeController**, and then click **Add**.
 
 7. In the **HomeController.cs** code window, locate the following code:
   ```cs
@@ -34,7 +34,7 @@
        using ControllersExample.Models;
 ```
 
-9. In the **HomeController** class code block, In the **Index** action code block, select the following code:
+9. In the **HomeController** class code block, in the **Index** action code block, select the following code:
   ```cs
        return View();
 ```
@@ -101,25 +101,25 @@
 
 20. In the **ControllersExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The **Welcome to module 4 demo 1** text is the action result you added to the **Index** action.
+      >**Note**: The **Welcome to module 4 demo 1** text is the action result you added to the **Index** action.
 
-21. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/ParamExample/2**, and then press Enter.
+21. In Microsoft Edge, in the address bar, type **http://localhost:[port]/home/ParamExample/2**, and then press Enter.
 
-      >**Note:** The **My param is: 2** text is the content result you added in the **ParamExample** action.
+      >**Note**: The **My param is: 2** text is the content result you added in the **ParamExample** action.
 
-22. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/RouteDataExample/4**, and then press Enter.
+22. In Microsoft Edge, in the address bar, type **http://localhost:[port]/home/RouteDataExample/4**, and then press Enter.
 
-      >**Note:** The **Action information: The action is in home controller, the action name is RouteDataExample and the id value is 4** text is the content result you added in the **RouteDataExample** action.
+      >**Note**: The **Action information: The action is in home controller, the action name is RouteDataExample and the id value is 4** text is the content result you added in the **RouteDataExample** action.
 
-23. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/ViewBagExample**, and then press Enter.
+23. In Microsoft Edge, in the address bar, type **http://localhost:[port]/home/ViewBagExample**, and then press Enter.
 
-      >**Note:** The **The Message is: ViewBag Example** text is the action result you added in the **ViewBagExample** action.
+      >**Note**: The **The Message is: ViewBag Example** text is the action result you added in the **ViewBagExample** action.
 
-24. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/home/ViewDataExample**, and then press Enter.
+24. In Microsoft Edge, in the address bar, type **http://localhost:[port]/home/ViewDataExample**, and then press Enter.
 
-      >**Note:** The **The Message is: ViewData Example** text is the action result you added in the **ViewDataExample** action.
+      >**Note**: The **The Message is: ViewData Example** text is the action result you added in the **ViewDataExample** action.
 
-25. In **Microsoft Edge**, click **Close**.
+25. In Microsoft Edge, click **Close**.
 
 26. In the **ControllersExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -128,23 +128,23 @@
 ### Demonstration: How to Add Routes
 #### Preparation Steps
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos.  (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course.  
 
 #### Demonstration Steps
 
-1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\02_RoutesExample_begin**, and then double-click **RoutesExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\02_RoutesExample_begin** and double-click **RoutesExample.sln**.
 
-    >**Note**: If a **Security Warning for RoutesExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
+    >**Note**: If a **Security Warning for RoutesExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
-2. In **Solution Explorer**, right-click **RoutesExample**, point to **Add**, and then click **New Folder**.
+2. In Solution Explorer, right-click **RoutesExample**, point to **Add**, and then click **New Folder**.
 
-3. In the **NewFolder** text box, type **Controllers**, and then press Enter.
+3. In the **NewFolder** box, type **Controllers**, and then press Enter.
 
-4. In the **RoutesExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
+4. In the **RoutesExample - Microsoft Visual Studio** window, in Solution Explorer, right-click the **Controllers** folder, point to **Add**, and then click **Controller**.
 
 5. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
-6. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **HomeController**, and then click **Add**.
+6. In the **Add Empty MVC Controller** dialog box, in the **Controller name** box, type **HomeController**, and then click **Add**.
 
 7. In the **HomeController** class code block, select the following code:
   ```cs
@@ -175,11 +175,11 @@
         return Content($"Hello {firstName} {lastName} from module 4 demo 2");
 ```
 
-11. In the **RoutesExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Controllers** folder, point to **Add**, and then click **Controller**.
+11. In the **RoutesExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Controllers** folder, point to **Add**, and then click **Controller**.
 
 12. In the **Add Scaffold** dialog box, click **MVC Controller - Empty**, and then click **Add**.
 
-13. In the **Add Empty MVC Controller** dialog box, in the **Controller name** text box, type **CalculatorController**, and then click **Add**.
+13. In the **Add Empty MVC Controller** dialog box, in the **Controller name** box, type **CalculatorController**, and then click **Add**.
 
 14. In the **CalculatorController** class code block, select the following code:
   ```cs
@@ -226,7 +226,7 @@
         return Content(result.ToString());
 ```
 
-20. In the **RoutesExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **Startup.cs**.
+20. In the **RoutesExample - Microsoft Visual Studio** window, in Solution Explorer, click **Startup.cs**.
 
 21. In the **Configure** method code block, type the following code:
 ```cs
@@ -247,29 +247,29 @@
 
 23. In the **RoutesExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser window displays the **This is the Home controller with default param: 50** message. You reached the **Index** action of the **Home** controller because of a convention-based route.
+      >**Note**: The browser window displays the **This is the Home controller with default param: 50** message. You reached the **Index** action of the **Home** controller because of a convention-based route.
 
-24. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/Hello/Gerald/Tesch** and then press Enter.
+24. In Microsoft Edge, in the address bar, type **http://localhost:[port]/Hello/Gerald/Tesch**, and then press Enter.
 
-      >**Note:** The browser window displays the **Hello Gerald Tesch from module 4 demo 2** message. You reached the **Greeting** action of the **Home** controller because of an attribute-based route.
+      >**Note**: The browser window displays the **Hello Gerald Tesch from module 4 demo 2** message. You reached the **Greeting** action of the **Home** controller because of an attribute-based route.
 
-25. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/Calculator/MultByTwo/4** and then press Enter.
+25. In Microsoft Edge, in the address bar, type **http://localhost:[port]/Calculator/MultByTwo/4**, and then press Enter.
 
-      >**Note:** The browser window displays **8**. You reached the **MultByTwo** action of the **Calculator** controller because of a convention-based route.
+      >**Note**: The browser window displays **8**. You reached the **MultByTwo** action of the **Calculator** controller because of a convention-based route.
 
-26. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/Calc/Mult/5/5** and then press Enter.
+26. In Microsoft Edge, in the address bar, type **http://localhost:[port]/Calc/Mult/5/5**, and then press Enter.
 
-      >**Note:** The browser window displays **25**. You reached the **Mult** action of the **Calculator** controller because of an attribute-based route.
+      >**Note**: The browser window displays **25**. You reached the **Mult** action of the **Calculator** controller because of an attribute-based route.
 
-27. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/Divide/100** and then press Enter.
+27. In Microsoft Edge, in the address bar, type **http://localhost:[port]/Divide/100**, and then press Enter.
 
-      >**Note:** The browser window displays **10**. You reached the **DivideByTen** action of the **Calculator** controller because of an attribute-based route.
+      >**Note**: The browser window displays **10**. You reached the **DivideByTen** action of the **Calculator** controller because of an attribute-based route.
 
-28. In **Microsoft Edge**, in the address bar, type **http://localhost:[port]/Divide** and then press Enter.
+28. In Microsoft Edge, in the address bar, type **http://localhost:[port]/Divide**, and then press Enter.
 
-      >**Note:** The browser window displays **0**. Because no value was provided to **param** it received the value **0**. 
+      >**Note**: The browser window displays **0**. Because no value was provided to **param**, it received the value **0**. 
 
-29. In **Microsoft Edge**, click **Close**.
+29. In Microsoft Edge, click **Close**.
 
 30. In the **RoutesExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -279,21 +279,21 @@
 
 #### Preparation Steps
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the **20486D** directory from GitHub (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course.
 
 #### Demonstration Steps
 
-1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\03_FiltersExample_begin**, and then double-click **FiltersExample.sln**.
+1. Navigate to **[Repository Root]\Allfiles\Mod04\Democode\03_FiltersExample_begin** and double-click **FiltersExample.sln**.
 
-    >**Note**: If a **Security Warning for FiltersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**.
+    >**Note**: If a **Security Warning for FiltersExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
-2. In **Solution Explorer**, right-click **FiltersExample**, point to **Add**, and then click **New Folder**.
+2. In Solution Explorer, right-click **FiltersExample**, point to **Add**, and then click **New Folder**.
 
-3. In **NewFolder** text box, type **Filters**, and then press Enter.
+3. In **NewFolder** box, type **Filters**, and then press Enter.
 
-4. In the **FiltersExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Filters**, point to **Add**, and then click **Class**.
+4. In the **FiltersExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Filters**, point to **Add**, and then click **Class**.
 
-5. In the **Add New Item – FiltersExample** dialog box, in the **Name** text box, type **CustomActionFilter**, and then click **Add**.
+5. In the **Add New Item – FiltersExample** dialog box, in the **Name** box, type **CustomActionFilter**, and then click **Add**.
 
 6. In the **CustomActionFilter** class code window, locate the following code:
   ```cs
@@ -409,7 +409,7 @@
 
 27. In the **FiltersExample - Microsoft Visual Studio** window, in the **Output** pane, click the **Output** tab.
 
-28. On the **Output** tab, in the **Show output from** text box, select **Debug**.
+28. On the **Output** tab, in the **Show output from** box, click **Debug**.
 
 29. On the **Output** tab, locate the following lines of code:
   ```cs
@@ -418,13 +418,13 @@
        >>> Index before result, event fired: OnResultExecuting
        >>> Index result is: Welcome to module 4 demo 3, event fired: OnResultExecuted
 ```
-   >**Note:** The text above was generated by the calls to the **Debug.WriteLine** method in the **CustomActionFilter** class.
+   >**Note**: The text above was generated by the calls to the **Debug.WriteLine** method in the **CustomActionFilter** class.
 
-30. In **Microsoft Edge**, click **Close**.
+30. In Microsoft Edge, click **Close**.
 
 31. In the **FiltersExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
-©2018 Microsoft Corporation. All rights reserved.
+©2019 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not** included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

@@ -6,19 +6,21 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the 20486D directory from GitHub (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course. 
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod07\Democode\01_EntityFrameworkExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod07\Democode\01_EntityFrameworkExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+
+    >**Note**: If a **Security Warning for EntityFrameworkExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **EntityFrameworkExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **EntityFrameworkExample**, and then click **Manage NuGet Packages**.
 
 3. In the **NuGet Package Manager: EntityFrameworkExample** window, click **Browse**.
 
-4. In the **Search** text box, type **Microsoft.EntityFrameworkCore.Sqlite**, and then press Enter.
+4. In the **Search** box, type **Microsoft.EntityFrameworkCore.Sqlite**, and then press Enter.
 
-5. Click **Microsoft.EntityFrameworkCore.Sqlit**, select version **2.1.0**, and then click **Install.**
+5. Click **Microsoft.EntityFrameworkCore.Sqlit**, select version **2.1.0**, and then click **Install**.
 
 6. If a **Preview Changes** dialog box appears, click **OK**.
 
@@ -59,7 +61,7 @@
       public DbSet<Person> People { get; set; }
 ```
  
-15. Place the cursor immediately after the last typed } (closing bracket) sign, press Enter twice, and then type the following code:
+15. Place the cursor immediately after the last typed **}** (closing braces) sign, press Enter two times, and then type the following code:
   ```cs
       protected override void OnModelCreating(ModelBuilder modelBuilder)
       {
@@ -149,7 +151,7 @@
        return View(_context.People.ToList());
 ```
 
-29. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code:
+29. Ensure that the cursor is at the end of the **Index** action code block, press Enter two times, and then type the following code:
   ```cs
        public IActionResult Edit(int id)
        {
@@ -165,7 +167,7 @@
        return RedirectToAction(nameof(Index));
 ```
 
-31. Ensure that the cursor is at the end of the **Edit** action code block, press Enter twice, and then type the following code:
+31. Ensure that the cursor is at the end of the **Edit** action code block, press Enter two times, and then type the following code:
   ```cs
        public IActionResult Create()
        {
@@ -179,7 +181,7 @@
        return RedirectToAction(nameof(Index));
 ```
 
-33. Ensure that the cursor is at the end of the **Create** action code block, press Enter twice, and then type the following code:
+33. Ensure that the cursor is at the end of the **Create** action code block, press Enter two times, and then type the following code:
   ```cs
        public IActionResult Delete(int id)
        {
@@ -196,15 +198,15 @@
 
 35. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-36. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+36. On the **DEBUG** menu, click **Start Without Debugging**.
 
-37. In **Microsoft Edge**, click **Create New Person**.
+37. In Microsoft Edge, click **Create New Person**.
 
-38. In **Microsoft Edge**, select a person of your choice, and then click **Edit**.
+38. Select a person of your choice, and then click **Edit**.
 
-39. In **Microsoft Edge**, select a person of your choice, and then click **Delete**.
+39. Select a person of your choice, and then click **Delete**.
 
-40. In **Microsoft Edge**, click **Close**.
+40. In Microsoft Edge, click **Close**.
 
 41. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -214,11 +216,13 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the 20486D directory from GitHub (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course. 
 
 #### Demonstration Steps
 
-1. Navigate to **Allfiles\Mod07\Democode\02_RepositoryExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod07\Democode\02_RepositoryExample_begin**, and then double-click **EntityFrameworkExample.sln**.
+
+    >**Note**: If a **Security Warning for EntityFrameworkExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **EntityFrameworkExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Repositories**, and then click **IRepository.cs**.
 
@@ -269,7 +273,7 @@
             _context = context;
       }
 ```
-12. Ensure that the cursor is at the end of the **constructor** code block, press Enter twice, and then type the following code:
+12. Ensure that the cursor is at the end of the **constructor** code block, press Enter two times, and then type the following code:
   ```cs
       public IEnumerable<Person> GetPeople()
       {
@@ -277,7 +281,7 @@
       }
 ```
 
-13. Ensure that the cursor is at the end of the **GetPeople** method code block, press Enter twice, and then type the following code:
+13. Ensure that the cursor is at the end of the **GetPeople** method code block, press Enter two times, and then type the following code:
   ```cs
       public void CreatePerson()
       {
@@ -286,7 +290,7 @@
       }
 ```
 
-14. Ensure that the cursor is at the end of the **CreatePerson** method code block, press Enter twice, and then type the following code:
+14. Ensure that the cursor is at the end of the **CreatePerson** method code block, press Enter two times, and then type the following code:
   ```cs
       public void UpdatePerson(int id)
       {
@@ -296,7 +300,7 @@
            _context.SaveChanges();
       }
 ```
-15. Ensure that the cursor is at the end of the **UpdatePerson** method code block, press Enter twice, and then type the following code:
+15. Ensure that the cursor is at the end of the **UpdatePerson** method code block, press Enter two times, and then type the following code:
   ```cs
       public void DeletePerson(int id)
       {
@@ -308,7 +312,7 @@
 
 16. In the **EntityFrameworkExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **EntityFrameworkExample**, point to **Add**, and then click **New Item**.
 
-17. In Navigation, under **Installed**, click **ASP.NET Core**, in the result pane, click **App Settings File**, and then click **Add**.
+17. In Navigation, under **Installed**, click **ASP.NET Core**. In the result pane, click **App Settings File**, and then click **Add**.
 
 18. In the **appsettings.json** code window, select the following code:
   ```cs
@@ -388,7 +392,7 @@
        var list = _repository.GetPeople();
        return View(list);
 ```
-33. Ensure that the cursor is at the end of the **Index** action code block, press Enter twice, and then type the following code:
+33. Ensure that the cursor is at the end of the **Index** action code block, press Enter two times, and then type the following code:
   ```cs
        public IActionResult Create()
        {
@@ -401,7 +405,7 @@
        return RedirectToAction(nameof(Index));
 ```
 
-35. Ensure that the cursor is at the end of the **Create** action code block, press Enter twice, and then type the following code:
+35. Ensure that the cursor is at the end of the **Create** action code block, press Enter two times, and then type the following code:
   ```cs
        public IActionResult Edit(int id)
        {
@@ -414,7 +418,7 @@
        return RedirectToAction(nameof(Index));
 ```
 
-37. Ensure that the cursor is at the end of the **Edit** action code block, press Enter twice, and then type the following code:
+37. Ensure that the cursor is at the end of the **Edit** action code block, press Enter two times, and then type the following code:
   ```cs
        public IActionResult Delete(int id)
        {
@@ -428,15 +432,15 @@
 
 39. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-40. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+40. On the **DEBUG** menu, click **Start Without Debugging**.
 
-41. In **Microsoft Edge**, click **Create New Person**.
+41. In Microsoft Edge, click **Create New Person**.
 
-42. In **Microsoft Edge**, select a person of your choice, and then click **Edit**.
+42. Select a person of your choice, and then click **Edit**.
 
-43. In **Microsoft Edge**, select a person of your choice, and then click **Delete**.
+43. Select a person of your choice, and then click **Delete**.
 
-44. In **Microsoft Edge**, click **Close**.
+44. In Microsoft Edge, click **Close**.
 
 45. In the **EntityFrameworkExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 

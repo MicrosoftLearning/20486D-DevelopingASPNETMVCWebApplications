@@ -24,13 +24,15 @@ Estimated Time: **60 minutes**
 
 2. Open the **Command Prompt** window by using **Run as administrator**.
 
+    >**Note**: If a **User Account Control** dialog appears, click yes.
+
 3. In the **Administrator: Command Prompt** window, run the following command: **cd** *&lt;The location of [Repository Root]\Allfiles\Mod12\Labfiles\01_ElectricStore_begin\ElectricStore folder on your machine&gt;*.
 
 4. Run the following command: **npm install**.
 
     >**Note**: If warning messages are shown in the command prompt you can ignore them.
 
-5. Close the **Administrator: Command Prompt** window.
+5. Close the **Command Prompt** window. 
 
 6. From the following location: **[Repository Root]\Allfiles\Mod12\Labfiles\01_ElectricStore_begin**, open the **ElectricStore.sln** solution.
 

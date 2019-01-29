@@ -18,7 +18,7 @@ After completing this lab, you will be able to:
 
 #### Lab Setup
 
-Estimated Time: **60 minutes**
+Estimated Time: **90 minutes**
 
 ### Preparation Steps
 
@@ -26,11 +26,13 @@ Estimated Time: **60 minutes**
 
 2. Open Command Prompt by using **Run as administrator**.
 
-3. In Administrator: Command Prompt, run the following command: **cd &lt;The location of  Allfiles\Mod14\Labfiles\01_Underwater_begin\Underwater folder on your machine&gt;**.
+    >**Note**: If a **User Account Control** dialog appears, click yes. 
+
+3. In Administrator: Command Prompt, run the following command: **cd [Repository Root]\Allfiles\Mod14\Labfiles\01_Underwater_begin\Underwater**.
 
 4. Run the following command: **npm install**.
 
-5. Close Command Prompt. 
+5. Close the **Command Prompt** window. 
 
 ### Exercise 1: Deploying a Web Application to Microsoft Azure
 
@@ -52,7 +54,9 @@ The main tasks for this exercise are:
 
 #### Task 1: Explore and run the application locally
 
-1. Open the **UnderWater.sln** solution from the following location: **Allfiles\Mod14\Labfiles\01_Underwater_begin**. 
+1. Open the **UnderWater.sln** solution from the following location: **[Repository Root]\Allfiles\Mod14\Labfiles\01_Underwater_begin**. 
+
+    >**Note**: If a **Security Warning for Underwater** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 2. Open the **Package Manager Console** window.
 
@@ -69,7 +73,7 @@ The main tasks for this exercise are:
 	-  Aquarium: **_&lt;A aquarium of your choice&gt;_**
     -  Fish Name: **_&lt;A fish name of your choice&gt;_**
     -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
-    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click koi.jpg&gt;_**
+    -  Picture:  **_&lt;go to [Repository Root]\Allfiles\Mod14\Labfiles\Images, and click koi.jpg&gt;_**
 
 8. Click **Add**
 
@@ -91,13 +95,13 @@ The main tasks for this exercise are:
 
 16. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
 
-17. On the **Fish Delete** page, click **Delete**.
+17. On the **Are you sure you want to delete this?** page, click **Delete**.
 
 18. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
 
 19. Close Microsoft Edge. 
 
-#### Task 2: Create a new Web App in Azure
+#### Task 2: Create a new Web App in Microsoft Azure
 
 1. Open Microsoft Edge.
 
@@ -107,9 +111,9 @@ The main tasks for this exercise are:
 
 4. In the **App Services** window, click **Add**.
 
-5. In the **Web** window, click **Web App + SQL**, and then click **Create**.
+5. In the **Marketplace** window, click **Web App + SQL**, and then click **Create**.
 
-6. In the **Web App + SQL** window, in the **App Name** box, type **Underwater***{unique name}*.
+6. In the **Web App + SQL** window, in the **App Name** box, type **Underwater{unique name}**.
 
     >**Note**: The name must be unique. You can add your first name, last name, or birthdate to the current name.
 
@@ -123,7 +127,7 @@ The main tasks for this exercise are:
 
 11. In the **New server** window, select the following:
 
-	-  Server name: **Underwater***{unique name}*
+	-  Server name: **Underwater{unique name}**
     -  Server admin login: **Underwateradmin**
     -  Password: **p@@sw0rd**
     -  Confirm password: **p@@sw0rd**
@@ -140,7 +144,7 @@ The main tasks for this exercise are:
 
 2. In the new  **PropertyGroup** element, add a **Content** element, with the following information:
 
-	-  Include: **node_modules\**
+	-  Include: *node_modules*
     -  CopyToPublishDirectory: **PreserveNewest**
 
 3. Save all the changes. 
@@ -161,7 +165,7 @@ The main tasks for this exercise are:
 
 10. Type **Password**, and then click **Sign in**.
 
-11. In the **App Service** dialog box, expand **Underwater***{unique name}*, click **Underwater***{unique name}*, and then click **OK**.
+11. In the **App Service** dialog box, expand **Underwater{unique name}**, click **Underwater{unique name}**, and then click **OK**.
 
 12. In the **Publish** window, click **Configure**.
 
@@ -169,23 +173,23 @@ The main tasks for this exercise are:
 
 14. Expand **Databases**.
 
-15. Under  **Default Connection String**, select the **Use this connection string at runtime** check box.
+15. Under  **Default Connection**, select the **Use this connection string at runtime** check box.
 
-16.  Fill the **Default Connection String** box with the following information:
+16.  Fill the **Default Connection** box with the following information:
 
-	 -  Default Connection String: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
+	 -  Default Connection: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
 
 17. Expand **Entity Framework Migration**, and then click **Apply this migration on publish**.
 
-18.  Expand **Entity Framework Migration**,  and then fill the **Default Connection String** box with the following information:
+18.  Expand **Entity Framework Migration**,  and then fill the **Default Connection** box with the following information:
 
-	 -  Default Connection String: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
+	 -  Default Connection: **Server=tcp:Underwater{unique name}.database.windows.net,1433;Initial Catalog=UnderwaterDB;Persist Security Info=False;User ID=Underwateradmin;Password=p@@sw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
 
 19. Click **Save**.
 
 #### Task 4: Deploy the application
 
-1. In Microsoft Visual Studio, open Solution Explorer, right-click **Underwater**, and then click **Publish**.
+1. In Microsoft Visual Studio, in the **Publish** window, click **Publish**.
 
 2. In Microsoft Edge, in the menu bar, click **Add Fish**.
 
@@ -194,7 +198,7 @@ The main tasks for this exercise are:
 	-  Aquarium: **_&lt;A aquarium of your choice&gt;_**
     -  Fish Name: **_&lt;A fish name of your choice&gt;_**
     -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
-    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
+    -  Picture:  **_&lt;go to [Repository Root]\Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
 
 4. Click **Add**.
 
@@ -208,7 +212,7 @@ The main tasks for this exercise are:
 
 8. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Edit**.
 
-9. On the **Edit Fish** page, in the **Scientic Name** box, type **_&lt;A scientific name of your choice>&gt;_**, and then click **Save**.
+9. On the **Edit Fish** page, in the **Scientic Name** box, type **_&lt;A scientific name of your choice&gt;_**, and then click **Save**.
 
 10. On the **Dive into Our Fish Species** page, select the fish you edited, and then click **Details**.
 
@@ -216,7 +220,7 @@ The main tasks for this exercise are:
 
 12. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
 
-13. On the **Fish Delete** page, click **Delete**.
+13. On the **Are you sure you want to delete this?** page, click **Delete**.
 
 14. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
 
@@ -316,7 +320,7 @@ The main tasks for this exercise are:
 
 25. In Solution Explorer, right-click **Underwater**, and then click **Publish**.
 
-26. In the **Pick a publish target** dialog box, verify that **Underwater** *{unique name}* is selected in the drop-down list, and then click **Publish**.
+26. In the **Pick a publish target** dialog box, verify that **Underwater{unique name}** is selected in the drop-down list, and then click **Publish**.
 
 27. In Microsoft Edge, in the menu bar, click **Add Fish**.
 
@@ -326,7 +330,7 @@ The main tasks for this exercise are:
     -  Fish Name: **_&lt;A fish name of your choice&gt;_**
     -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
     -  Common Name: **_&lt;A common name of your choice&gt;_** 
-    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
+    -  Picture:  **_&lt;go to [Repository Root]\Allfiles\Mod14\Labfiles\Images, and click salmon.jpg&gt;_**
 
 29. Click **Add**.
 
@@ -348,7 +352,7 @@ The main tasks for this exercise are:
 
 37. On the **Dive into Our Fish Species** page, select a fish of your choice, and then click **Delete**.
 
-38. On the **Fish Delete** page, click **Delete**.
+38. On the **Are you sure you want to delete this?** page, click **Delete**.
 
 39. On the **Dive into Our Fish Species** page, verify that the fish is deleted.
 
@@ -380,21 +384,21 @@ The main tasks for this exercise are as follows:
 
 4. In the **Storage accounts** window, in the menu bar, click **Add**.
 
-5. In the **Create storage account** window , in the **Storage account name** box, type **underwater***{unique name}*.
+5. In the **Create storage account** window , in the **Storage account name** box, type **underwater{unique name}**.
 
     >**Note**: The name must be unique. You can add your first name, last name, or birthdate to the current name.
 
-6.  Under **Resource group**, select **Underwater***{unique name}*.
+6.  Under **Resource group**, select **Underwater{unique name}**.
 
 7. Click **Review + create**.
 
 8. Click **Create**.
 
-9. In the **Microsoft.StorageAccount-***{unique number}* **- Overview** window, below **RESOURCE**, click **underwater***{unique name}*.
+9. In the **Microsoft.StorageAccount-{unique number}** **- Overview** window, below **RESOURCE**, click **underwater{unique name}**.
 
-10. In the **Underwater***{unique name}* window, below **Blob Service**, click **Blobs**.
+10. In the **Underwater{unique name}** window, below **Blob Service**, click **Blobs**.
 
-11. In the **Underwater***{unique name}* **- Blobs** window, in the menu bar, click **Container**.
+11. In the **Underwater{unique name}** **- Blobs** window, in the menu bar, click **Container**.
 
 12. In the **New container** window, in the **Name** box, type **aquarium**.
 
@@ -410,7 +414,7 @@ The main tasks for this exercise are as follows:
 
     >**Note**: In case you are already signed-in, you will not see the **Sign in** dialog box. In that case, proceed to the next step.
 
-4. In the **Azure Storage** window, click **Underwater***{unique name}* , and then click **Add**.
+4. In the **Azure Storage** window, click **Underwater{unique name}** , and then click **Add**.
 
     >**Note**: Microsoft Edge displays the following URL: https://docs.microsoft.com/en-us/azure/visual-studio/vs-storage-aspnet-getting-started-blobs.
 
@@ -465,14 +469,14 @@ The main tasks for this exercise are as follows:
 
 13. In the **Index.cshtml** view, remove the contents of the **IF** statement. 
 
-14. In the **IF** statement code block, add an **IF** statement that checks that the value of **Model.ImageURL** is **NOT NULL**.
+14. In the **IF** statement code block, add an **IF** statement that checks that the value of **item.ImageURL** is **NOT NULL**.
  
 15. In the **IF** statement code block, add a **DIV** element with the following information:
     - Class: **photo-display**
  
 16. In the new **DIV** element, add an **IMG** element with the following information:
     - Class: **photo-display-img**
-    - Src: **@Model.ImageURL**
+    - Src: **@item.ImageURL**
 
 17. After the **IF** statement, add an **ELSE** statement. 
 
@@ -481,7 +485,7 @@ The main tasks for this exercise are as follows:
 
 19.  In the new **DIV** element, add an **IMG** element with the following information:
      - Class: **photo-display-img**
-     - Src: **@Url.Action("GetImage", "Aquarium", new { Id = Model.FishId })**      
+     - Src: **@Url.Action("GetImage", "Aquarium", new { Id = item.FishId })**      
 
 20. In the **Delete.cshtml** view, remove the contents of the **IF** statement. 
 
@@ -494,10 +498,9 @@ The main tasks for this exercise are as follows:
     - Class: **photo-display-img**
     - Src: **@Model.ImageURL**
 
-24. After the **IF** statement, and an **ELSE** statement. 
+24. After the **IF** statement, add an **ELSE** statement. 
 
-25. In the  **ELSE** statement code block,  add a **DIV** element with the following information:
-    - Class: **photo-display**
+25. In the  **ELSE** statement code block,  add a **DIV** element. 
 
 26.  In the new **DIV** element, add an **IMG** element with the following information:
      - Class: **photo-display-img**
@@ -505,7 +508,7 @@ The main tasks for this exercise are as follows:
 
 27. Add a **NuGet Package** with the following information:
 
-    - Package: **WindowsAzure.Storage*** 
+    - Package: **WindowsAzure.Storage**
     - Version: **9.3.3**
 
 28. In the **UnderwaterRepository** class, add **USING** statements for the following namespaces:
@@ -594,7 +597,7 @@ The main tasks for this exercise are as follows:
 
 54. In the **RemoveFish** method, create a variable named *fish* of the var type, and assign it with the **_context.fishes.SingleOrDefault(f => f.FishId == id)** value.
 
-55. Create an **IF** statement that checks that the value of **Model.ImageURL** is **NOT NULL**.
+55. Create an **IF** statement that checks that the value of **fish.ImageURL** is **NOT NULL**.
 
 56.  In the **IF** statement code block, call the **DeleteImageAsync** method. Pass *fish.ImageName* as a parameter to the **DeleteImageAsync** method. 
 
@@ -618,7 +621,7 @@ The main tasks for this exercise are as follows:
 
 1. In Solution Explorer, right-click **Underwater**, and then click **Publish**.
 
-2. In the **Pick a publish target** dialog box, verify that **Underwater** *{unique name}* is selected in the drop-down list, and then click **Publish**.
+2. In the **Pick a publish target** dialog box, verify that **Underwater{unique name}** is selected in the drop-down list, and then click **Publish**.
 
 3. In Microsoft Edge, in the menu bar, click **Add Fish**.
 
@@ -628,7 +631,7 @@ The main tasks for this exercise are as follows:
     -  Fish Name: **_&lt;A fish name of your choice&gt;_**
     -  Scientific Name: **_&lt;A scientific name of your choice&gt;_**
     -  Common Name: **_&lt;A common name of your choice&gt;_** 
-    -  Picture:  **_&lt;go to Allfiles\Mod14\Labfiles\Images, and click clown-trigger.jpg&gt;_**
+    -  Picture:  **_&lt;go to [Repository Root]\Allfiles\Mod14\Labfiles\Images, and click clown-trigger.jpg&gt;_**
 
 5. Click **Add**.
 
@@ -636,20 +639,20 @@ The main tasks for this exercise are as follows:
 
 7. Close Microsoft Edge.
 
-8. Close Visual Studio.
+8. Close Microsoft Visual Studio.
 
 9. In Microsoft Edge, go to **http://portal.azure.com**.
 
 10. On the menu, click **Storage Accounts**.
 
-11. In the **Storage accounts** window, click **Underwater***{unique name}*.
+11. In the **Storage accounts** window, click **Underwater{unique name}**.
 
 12. In the **Underwater{unique name}** window, below **Blob services**, click **Blobs**.
 
 13. In the **Blobs** window, click **aquarium**.
     >**Note**: Verify the presence of uploaded image.
 
-14. Click **clownfish.jpg**.
+14. Click **clown-trigger.jpg**.
 
 15. Click **Edit blob**.
     >**Note**: The uploaded image is displayed.

@@ -1,4 +1,4 @@
-﻿# Module 3: Configuring Middleware and Services in ASP.NET Core
+# Module 3: Configuring Middleware and Services in ASP.NET Core
 
 # Lab: Configuring Middleware and Services in ASP.NET Core
 

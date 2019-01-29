@@ -48,13 +48,15 @@ The main tasks for this exercise are as follows:
 
 1. Open the **Command Prompt** window by using **Run as administrator**.
 
-2. In the **Administrator: Command Prompt** window, run the following command: **cd &lt;The location of Allfiles\Mod11\Labfiles\01_Library_begin\Library folder on your machine&gt;**.
+2. In the **Administrator: Command Prompt** window, run the following command: **cd [Repository Root]\Allfiles\Mod11\Labfiles\01_Library_begin\Library**.
 
 3. Run the following command: **npm install**.
 
 4. Close the **Command Prompt** window.
 
-5. From the following location: **Allfiles\Mod11\Labfiles\01_Library_begin**, open the **Library.sln** solution.
+5. From the following location: **[Repository Root]\Allfiles\Mod11\Labfiles\01_Library_begin**, open the **Library.sln** solution.
+
+    >**Note**: If a **Security Warning for Library** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click **OK**. 
 
 6. In the **User** class, add a **USING** statement for the following namespace:
 
@@ -97,7 +99,7 @@ The main tasks for this exercise are as follows:
 
 1. Create a new controller with the following information:
    - Controller name: **AccountController**
-   - Template: **API Controller - Empty**
+   - Template: **MVC Controller - Empty**
    - Folder: **Controllers**
    - Project: **Library**
 
@@ -135,6 +137,17 @@ The main tasks for this exercise are as follows:
 
 10. Add a method with the following information:
     - Scope: **public**
+    - Return type: **Task&lt;IActionResult&gt;**
+    - Name: **Login**
+
+11. Create an **IF** statement that checks whether the value of **this.User.Identity.IsAuthenticated** is **true**.
+
+12. In the **IF** statement code block, return the **Task&lt;IActionResult&gt;** result by using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
+
+13. After the **IF** statement code block, return the **Task&lt;IActionResult&gt;** result by using the **View** method. 
+
+14. Add a method with the following information:
+    - Scope: **public**
     - Modifier: **async**
     - Return type: **Task&lt;IActionResult&gt;**
     - Name: **LoginPost**
@@ -142,31 +155,31 @@ The main tasks for this exercise are as follows:
          - Type: **LoginViewModel**
          - Name: **loginModel**
 
-11. Above the **LoginPost** method, add a **HttpPost** attribute.
+15. Above the **LoginPost** method, add a **HttpPost** attribute.
 
-12. Add a **ActionName** attribute. Pass **"Login"** as a parameter to the **ActionName** attribute.
+16. Add a **ActionName** attribute. Pass **"Login"** as a parameter to the **ActionName** attribute.
 
-13. Create an **IF** statement that checks whether the value of **ModelState.IsValid** is **true**. 
+17. Create an **IF** statement that checks whether the value of **ModelState.IsValid** is **true**. 
 
-14. In the **IF** statement code block, create a variable named **result** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, loginModel.RememberMe, false)**.
+18. In the **IF** statement code block, create a variable named **result** of type **var** and assign it with the value of **await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, loginModel.RememberMe, false)**.
 
-15. Create an **IF** statement that checks whether the value of **result.Succeeded** is **true**.
+19. Create an **IF** statement that checks whether the value of **result.Succeeded** is **true**.
 
-16. In the nested **IF** statement code block, return the **Task&lt;IActionResult&gt;** result by using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
+20. In the nested **IF** statement code block, return the **Task&lt;IActionResult&gt;** result by using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
 
-17. After the first **IF** statement code block, call the **AddModelError** method of the **ModelState** propery.  Pass **""** and **"Faild to Login"** as parameters to the **AddModelError** method.
+21. After the first **IF** statement code block, call the **AddModelError** method of the **ModelState** propery.  Pass **""** and **"Faild to Login"** as parameters to the **AddModelError** method.
 
-18.  Return the **Task&lt;IActionResult&gt;** result by using the **View** method. 
+22.  Return the **Task&lt;IActionResult&gt;** result by using the **View** method. 
 
-19. Add a method with the following information:
+23. Add a method with the following information:
     - Scope: **public**
     - Modifier: **async**
     - Return type: **Task&lt;IActionResult&gt;**
     - Name: **Logout**
 
-20. In the **Logout** method, call the **_signInManager.SignOutAsync** method by using the **await** keyword. 
+24. In the **Logout** method, call the **_signInManager.SignOutAsync** method by using the **await** keyword. 
 
-21. Return the **Task&lt;IActionResult&gt;** result by using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
+25. Return the **Task&lt;IActionResult&gt;** result by using the **RedirectToAction** method. Pass **"Index"** and **"Library"** as parameters to the **RedirectToAction** method.
 
 
 #### Task 4: Add user registration logic
@@ -292,7 +305,7 @@ The main tasks for this exercise are as follows:
     - Phone Number: _&lt;A phone of your choice&gt;_ 
     - Email: _&lt;An email of your choice&gt;_
     - User Name: _&lt;A user name of your choice&gt;_  
-    - Password: _&lt;123qwe!@#QWE&gt;_
+    - Password: **123qwe!@#QWE**
 
 6. Click **Register**.
 
@@ -471,7 +484,7 @@ as parameters to the **_userManager.AddToRoleAsync** method.
     - Phone Number: _&lt;A phone of your choice&gt;_
     - Email: _&lt;An email of your choice&gt;_
     - User Name: _&lt;A user name of your choice&gt;_  
-    - Password: _&lt;123qwe!@#QWE&gt;_** 
+    - Password: **123qwe!@#QWE** 
     - Role Name: **Administrator** 
 
 6. Click **Register**.
@@ -486,7 +499,7 @@ as parameters to the **_userManager.AddToRoleAsync** method.
     - Author: _&lt;A author of your choice&gt;_
     - Date Published: _&lt;A date time of your choice&gt;_
 
-9. On the **Add Book to Library** page, in **Photo box**, import an image from **Allfiles\Mod11\Labfiles\Image\book.jpg**, and then click **Add a Book**.
+9. On the **Add Book to Library** page, in **Photo box**, import an image from **[Repository Root]\Allfiles\Mod11\Labfiles\Image\book.jpg**, and then click **Add a Book**.
 
 10. Click **Back to Our Books**.
     >**Note**: The book you added is in the library books list.
@@ -495,22 +508,22 @@ as parameters to the **_userManager.AddToRoleAsync** method.
 
 12. In the menu bar, click **Login**. 
 
-12. On the **Login** page, click **Logout**.   
+13. On the **Login** page, click **Register**.   
 
-13. On **Register** page, register with the following credentials:
+14. On **Register** page, register with the following credentials:
    
     - First Name: _&lt;A first name of your choice&gt;_
     - Last Name: &lt;A last name of your choice&gt;_
     - Phone Number: _&lt;A phone of your choice&gt;_ 
     - Email: _&lt;An email of your choice&gt;_
     - User Name: _&lt;A user name of your choice&gt;_  
-    - Password: _&lt;123qwe!@#QWE&gt;_
+    - Password: **123qwe!@#QWE**
     - Role Name: **Member** 
 
-14. In Microsoft Edge, navigate to **http://localhost:***[port]***/Librarian/Index**.
+15. In Microsoft Edge, navigate to **http://localhost:[port]/Librarian/Index**.
     >**Note**: You are redirected to the **access denied** page. Only administrators are allowed to view the page. Also, note that the menu bar doesn't have a navigation tab for **Workers Portal**.
 
-15. Close all Microsoft Edge windows.
+16. Close all Microsoft Edge windows.
 
 >**Results**: After completing this exercise, you can add authorization to the application, and add configuration and the relevant attribute for role-based and claims-based policy authentication.
 
@@ -568,10 +581,13 @@ The main tasks for this exercise are as follows:
 
 8. Add a **FORM** element, with the following information: 
 
-    - action: **http://localhost:55606/Account/Register?FirstName=Forgery_Attacker&LastName=Cross_Site&PhoneNumber=123&Email=attack@@.com&UserName=Forgery_Attacker&Password=123qwe!!!QWE123&RoleName=Member**
+    - action: **http:<span>/</span>/localhost:[Port]/Account/Register?FirstName=Forgery_Attacker&LastName=Cross_Site&PhoneNumber=123&Email=attack@@.com&UserName=Forgery_Attacker&Password=123qwe!!!QWE123&RoleName=Member**
     - method: **post**
 
+9. Inside the **FORM** element, add an **INPUT** element, with the following properties:
 
+    - type: **Submit**
+    - value: **Attack**
 
 #### Task 2: Run the application – now the attack is possible
 
@@ -590,6 +606,8 @@ The main tasks for this exercise are as follows:
       >**Note**: The menu bar has a navigation tab for **Logout**, meaning you are logged in.
 
 6. Close all Microsoft Edge windows.
+
+7. In Microsoft Visual Studio, stop debugging.
 
 #### Task 3: Avoid the Cross-Site Request Forgery attack
 
@@ -618,7 +636,9 @@ The main tasks for this exercise are as follows:
 
 6. Close all Microsoft Edge windows.
 
-7. Close Microsoft Visual Studio.
+7. In Microsoft Visual Studio, stop debugging.
+
+8. Close Microsoft Visual Studio.
 
 >**Results**: After completing this exercise, you can avoid cross-site request forgery attacks.
 

@@ -10,49 +10,51 @@ You have been asked to create a web-based ice cream application for your organiz
 
 After completing this lab, you will be able to:
 
-- Install gulp using npm.
-- Write tasks using gulp.
-- Style the application using Sass and Bootstrap.
+- Install gulp by using npm.
+- Write tasks by using gulp.
+- Style the application by using Sass and Bootstrap.
 
 #### Lab Setup
 
 Estimated Time: **60 minutes**
 
 #### Preparation Steps
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. 
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 ### Exercise 1: Using gulp to Run Tasks 
 
 #### Scenario
 
-In this exercise, you will first install gulp using npm. You will then create a JavaScript file named gulpfile.js. After that you will write tasks in the gulpfile.js file to bundle and minify JavaScript files. Finally, you will write a watcher task to track for any changes occurring in files which are located in the **Scripts** folder.
+In this exercise, you will first install gulp by using npm. You will then create a JavaScript file named **gulpfile.js**. After that, you will write tasks in the **gulpfile.js** file to bundle and minify JavaScript files. Finally, you will write a watcher task to track for any changes occurring in files which are located in the **Scripts** folder.
 
 The main tasks for this exercise are as follows:
 
-1. Use npm to install gulp.
+1. Use npm to install gulp
 
-2. Write a task to copy a JavaScript file.
+2. Write a task to copy a JavaScript file
 
-3. Run the task.
+3. Run the task
 
-4. Write a task to minify a JavaScript file.
+4. Write a task to minify a JavaScript file
 
-5. Write a task to bundle and minify all JavaScript files in a folder.
+5. Write a task to bundle and minify all JavaScript files in a folder
 
-6. Add a watcher task.
+6. Add a watcher task
 
-7. Run the tasks.
+7. Run the tasks
 
 #### Task 1: Use npm to install gulp
 
-1. In the **Command Prompt**, run the command **cd {The location of  Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin folder on your machine}** 
+1. At the command prompt, run the  **cd [Repository Root]\Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin** command.
 
-2. Run **npm install** command.
+2. Run the **npm install** command.
 
 3. Close the  **Command Prompt** window.
 
-4. Open the **IceCreamCompany.sln** file from the following location: **Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin**.
+4. From the following location: **[Repository Root]\Allfiles\Mod09\Labfiles\01_IceCreamCompany_begin**, open the **IceCreamCompany.sln** file.
+
+    >**Note**: If a **Security Warning for IceCreamCompany** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 5. In the **IceCreamCompany - Microsoft Visual Studio** window, on the **TOOLS** menu, click **Options**.
 
@@ -62,29 +64,29 @@ The main tasks for this exercise are as follows:
 
 8. Open the **package.json** file and view its content.
 
-      >**Note:** There are dependencies to the **gulp**, **gulp-concat**, **gulp-cssmin**, **gulp-sass**, **gulp-uglify** packages appear in the **devDependencies** section, and **bootstrap**, **hoek**, **jquery**, **lodash**, **popper.js** packages appear in the **Dependencies** section.
+      >**Note**: There are dependencies to the **gulp**, **gulp-concat**, **gulp-cssmin**, **gulp-sass**, **gulp-uglify** packages which appear in the **devDependencies** section, and the **bootstrap**, **hoek**, **jquery**, **lodash**, **popper.js** packages appear in the **Dependencies** section.
       
 #### Task 2: Write a task to copy a JavaScript file
 
-1. Add a **JavaScript** **File** with the following information:
+1. Add a JavaScript file with the following information:
 
     - Folder: **/**
     - Name: **gulpfile**
 
-2. In the **gulpfile.js** file, add a new variable named **gulp** with the value of **require('gulp')**.
+2. In the **gulpfile.js** file, add a new variable named *gulp* with the value of **require('gulp')**.
 
-3. Add a new variable named **paths** with the value of **{}**.
+3. Add a new variable named *paths* with the value of **{}**.
 
 4. In the **paths** object, add the following properties:
 
     - webroot: **"./wwwroot/"**
     - nodeModules: **"./node_modules/"**
 
-5. Assign the **jqueryjs** property of the **paths** variable the value of **paths.nodeModules + "jquery/dist/jquery.js"**.
+5. Assign the **jqueryjs** property of the *paths* variable the value of **paths.nodeModules + "jquery/dist/jquery.js"**.
 
-6. Assign the **destinationjsFolder** property of the **paths** variable the value of **paths.webroot + "scripts/"**.
+6. Assign the **destinationjsFolder** property of the *paths* variable the value of **paths.webroot + "scripts/"**.
 
-7. Call the **task** method of the **gulp** variable. 
+7. Call the **task** method of the *gulp* variable. 
 
 8. Pass **"copy-js-file"** and an **anonymous function** as parameters to the **task** function.
 
@@ -100,21 +102,21 @@ The main tasks for this exercise are as follows:
 
 2. Open **Task Runner Explorer**.
 
-    >**Note:** If the **Tasks** list does not contain a task named **copy-js-file**, click **Refresh**.
+    >**Note**: If the **Tasks** list does not contain a task named **copy-js-file**, click **Refresh**.
 
 3. Run the **copy-js-file** task.
 
-    >**Note:** In **Solution Explorer**, under **wwwroot**, a new folder has been added named **scripts** with a JavaScript file named **jquery.js**
+    >**Note**: In Solution Explorer, under **wwwroot**, a new folder has been added named **scripts** with a JavaScript file named **jquery.js**
 
 #### Task 4:  Write a task to minify a JavaScript file
 
-1. In the **gulpfile.js**, after the **gulp** variable, add a variable named **concat** with the value of **require('gulp-concat')**.
+1. In **gulpfile.js**, after the *gulp* variable, add a variable named *concat* with the value of **require('gulp-concat')**.
 
-2. Add a variable named **uglify** with the value of **require('gulp-uglify')**.
+2. Add a variable named *uglify* with the value of **require('gulp-uglify')**.
 
 3. Before the **gulp.task** method call, assign the **vendorjsFileName** property of the **path** object the value of **"vendor.min.js"**.
 
-4. After the **gulp.task** method call, call the **task** method of the **gulp** variable. 
+4. After the **gulp.task** method call, call the **task** method of the *gulp* variable. 
 
 5. Pass **"min-vendor:js"** and an **anonymous function** as parameters to the **task** function.
 
@@ -129,11 +131,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Write a task to bundle and minify all JavaScript files in a folder
 
-1. Before the first **gulp.task** method call, assign the **jsFiles** property of the **path** object the value of **"./Scripts/*.js"**.
+1. Before the first **gulp.task** method call, assign the **jsFiles** property of the **path** object the value of __"./Scripts/*.js"__.
 
 2. Assign the **jsFileName** property of the **path** object, the value of **"script.min.js"**.
 
-3. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"min:js"** and an **anonymous function** as parameters to the **task** function.
+3. After the last **gulp.task** method call, call the **task** method of the *gulp* variable. Pass **"min:js"** and an **anonymous function** as parameters to the **task** function.
 
 4. In the **anonymous function** code block, return the **gulp.src(paths.jsFiles)** function call result. 
 
@@ -145,11 +147,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 6: Add a watcher task
 
-1. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. 
+1. After the last **gulp.task** method call, call the **task** method of the *gulp* variable. 
 
 2. Pass **"js-watcher"** and an **anonymous function** as parameters to the **task** function.
 
-3. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Scripts/*.js"** and **gulp.series("min:js")** as parameters to the **gulp.watch** function.
+3. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass __"./Scripts/*.js"__ and **gulp.series("min:js")** as parameters to the **gulp.watch** function.
 
 #### Task 7: Run the tasks
 
@@ -157,15 +159,17 @@ The main tasks for this exercise are as follows:
 
 2. In the **Task Runner Explorer** window, run the **min-vendor:js** task.
 
-3. Open the **payment-calc.js** file which is located under the **Scripts** folder.
+3. From the **Scripts** folder, open the **payment-calc.js** file.
 
-      >**Note:** In the fourth line there is an error: **form-control-mistake**.
+      >**Note**: In the fourth line there is an error: **form-control-mistake**.
 
 4. Run the **min:js** task.
 
-5. Open the **script.min.js** file which is located under the **wwwroot/script** folder.
+      >**Note**: In Solution Explorer, under **wwwroot**, under **scripts**, a new file named **script.min.js** has been added.  
 
-      >**Note:** The **script.min.js** file is a minified version of the **payment-calc.js** file. It contains the string **form-control-mistake**.
+5. From the **wwwroot/scripts** folder, open the **script.min.js** file.
+
+      >**Note**: The **script.min.js** file is a minified version of the **payment-calc.js** file. It contains the **form-control-mistake** string.
 
 6. Run the **js-watcher** task.
 
@@ -175,25 +179,25 @@ The main tasks for this exercise are as follows:
 
 9. In the **Microsoft Visual Studio** dialog box, click **Yes to All**.
 
-10. Open the **script.min.js** file which is located under the **wwwroot/script** folder.
+10. From the **wwwroot/scripts** folder, open the **script.min.js** file.
 
-      >**Note:** In the **script.min.js** file, the string **form-control-mistake** was replaced with **form-control**.
+      >**Note**: In the **script.min.js** file, the **form-control-mistake** string was replaced with **form-control**.
 
->**Results**: After completing this exercise, you will be able to use **gulp** to copy, bundle and minify JavaScript files, and add watcher tasks.
+>**Results**: After completing this exercise, you will be able to use gulp to copy, bundle and minify JavaScript files, and add watcher tasks.
 
-### Exercise 2: Styling Using Sass
+### Exercise 2: Styling by Using Sass
 
 #### Scenario
 
-In this exercise, you will first create a Sass file named **main.scss** and fill its content. After that you will create a gulp task to compile the Sass file to a CSS file. Then you will create a gulp watcher task so compilation of Sass file to CSS file will be done automatically when the Sass file is changed.
+In this exercise, you will first create a Sass file named **main.scss** and fill its content. After that, you will create a gulp task to compile the Sass file to a CSS file. Then you will create a gulp watcher task so compilation of the Sass file to a CSS file will be done automatically when the Sass file is changed.
 
 The main tasks for this exercise are as follows:
 
-1. Add a new Sass file to the project.
+1. Add a new Sass file to the project
 
-2. Add gulp tasks to handle Sass files.
+2. Add gulp tasks to handle the Sass files
 
-3. Run a task.
+3. Run a task
 
 #### Task 1: Add a new Sass file to the project
 
@@ -206,18 +210,18 @@ The main tasks for this exercise are as follows:
     - Folder: **Styles**
     - Name: **main**
  
-3. Delete the contents of the **main.scss** file.
+3. Delete the content of the **main.scss** file.
 
-4. In the **main.scss** file, add a new variable named **$highlights** with the value of **#124eab**.
+4. In the **main.scss** file, add a new variable named *$highlights* with the value of **#124eab**.
 
-5. Add a new **mixin** with the name of **normalized-text**.
+5. Add a new mixin with the name of **normalized-text**.
 
 6. In the **normalized-text** mixin, add the following properties:
 
     - font-family: **"Playfair Display", Arial, Tahoma, sans-serif**
     - text-align: **center**
 
-7. Add a new **mixin** with the name of **normalized-image**.
+7. Add a new mixin with the name of **normalized-image**.
 
 8. In the **normalized-image** mixin, add the following properties:
 
@@ -228,7 +232,7 @@ The main tasks for this exercise are as follows:
 
 10. Inside the **DIV** selector, add a **H1** nested selector.
 
-11. Inside the **H1** selector, add the **normalized-text** mixin using the **@include** directive. 
+11. Inside the **H1** selector, add the **normalized-text** mixin by using the **@include** directive. 
 
 12. After the **@include** directive, add the following properties:
 
@@ -253,7 +257,7 @@ The main tasks for this exercise are as follows:
     
 14. Inside the **.main-title** selector, add a nested **H1** selector.
 
-15. Inside the **H1** selector, add the **normalized-text** mixin using the **@include** directive. 
+15. Inside the **H1** selector, add the **normalized-text** mixin by using the **@include** directive. 
 
 16. After the **@include** directive, add the following properties:
 
@@ -265,7 +269,7 @@ The main tasks for this exercise are as follows:
     
 17.  After the **H1** selector, add a **button** selector.
 
-18. Inside the **button** selector, add the **normalized-text** mixin using the **@include** directive. 
+18. Inside the **button** selector, add the **normalized-text** mixin by using the **@include** directive. 
 
 19. After the **@include** directive, add the following properties:
 
@@ -299,7 +303,7 @@ The main tasks for this exercise are as follows:
     
 22. Inside the **.item** selector, add a nested **h3** selector.
 
-23. Inside the **h3** selector, add the **normalized-text** mixin using the **@include** directive. 
+23. Inside the **h3** selector, add the **normalized-text** mixin by using the **@include** directive. 
 
 24. After the **@include** directive, add the following properties:
     - color: **#736454**
@@ -309,13 +313,13 @@ The main tasks for this exercise are as follows:
 
 26. Inside the **DIV** selector, add a nested **img** selector. 
 
-27. Inside the **img** selector, add the **normalized-image** mixin using the **@include** directive. 
+27. Inside the **img** selector, add the **normalized-image** mixin by using the **@include** directive. 
  
 28. After the **DIV** selector, add a **DIV** selector.  
 
 29. Inside the **DIV** selector, add a nested **p** selector. 
 
-30. Inside the **p** selector, add the **normalized-text** mixin using the **@include** directive.
+30. Inside the **p** selector, add the **normalized-text** mixin by using the **@include** directive.
 
 31. After the **@include** directive, add the following properties:
     - color: **#736454**
@@ -356,21 +360,21 @@ The main tasks for this exercise are as follows:
 
 40. After the **.row** selector, add a **.imageDisplay** selector.
 
-41. Inside the **imageDisplay** selector, add the **normalized-image** mixin using the **@include** directive.
+41. Inside the **imageDisplay** selector, add the **normalized-image** mixin by using the **@include** directive.
 
 #### Task 2: Add gulp tasks to handle Sass files
 
-1. In the **gulpfile.js**, after the **uglify** variable assigment, add a variable named **sass** with the value of **require('gulp-sass')**.
+1. In the **gulpfile.js**, after the *uglify* variable assigment, add a variable named *sass* with the value of **require('gulp-sass')**.
 
-2. Add a variable named **cssmin** with the value of **require('gulp-cssmin')**.
+2. Add a variable named *cssmin* with the value of **require('gulp-cssmin')**.
 
-3. Before the first **gulp.task** method call, assign the **sassFiles** property of the **path** object the value of **"./Styles/*.scss"**.
+3. Before the first **gulp.task** method call, assign the **sassFiles** property of the **path** object the value of __./Styles/*.scss"__.
 
 4. Assign the **compiledCssFileName** property of the **path** object the value of **"main.min.css"**.
 
 5. Assign the **destinationCssFolder** property of the **path** object the value of **paths.webroot + "css/"**.
 
-6. After the declaration of the **min:js** task, call the **task** method of the **gulp** variable. Pass **"min:scss"** and an **anonymous function** as parameters to the **task** function.
+6. After the declaration of the **min:js** task, call the **task** method of the *gulp* variable. Pass **"min:scss"** and an **anonymous function** as parameters to the **task** function.
 
 7. In the **anonymous function** code block, return the **gulp.src** function call result. Pass **paths.sassFiles** as a parameter to the **gulp.src** function.
 
@@ -382,9 +386,9 @@ The main tasks for this exercise are as follows:
 
 11. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the pipe function. 
 
-12. After the last **gulp.task** method call, call the **task** method of the **gulp** variable. Pass **"sass-watcher"** and an **anonymous function** as parameters to the **task** function.
+12. After the last **gulp.task** method call, call the **task** method of the *gulp* variable. Pass **"sass-watcher"** and an **anonymous function** as parameters to the **task** function.
 
-13. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass **"./Styles/*.scss"** and **gulp.series("min:scss")** as parameters to the **gulp.watch** function.
+13. In the **anonymous function** code block, return the **gulp.watch** function call result. Pass __"./Styles/*.scss"__ and **gulp.series("min:scss")** as parameters to the **gulp.watch** function.
 
 #### Task 3: Run the tasks
 
@@ -392,29 +396,31 @@ The main tasks for this exercise are as follows:
 
 2. In the **Task Runner Explorer** window, run the **min:scss** task.
 
-      >**Note:** In **Solution Explorer**, under **wwwroot**, under **css**, a new css file has been added named **main.min.css**.
+      >**Note**: If the **Tasks** list does not contain the **min:scss** and **sass-watcher** tasks, click **Refresh**.
+
+      >**Note**: In Solution Explorer, under **wwwroot**, under **css**, a new css file has been added named **main.min.css**.
 
 3. Run the **sass-watcher** task.
 
-      >**Note:** From now whenever you change the **main.scss** file, the **main.min.css** file will automatically be changed.
+      >**Note**: From now whenever you change the **main.scss** file, the **main.min.css** file will automatically be changed.
 
->**Results**: After completing this exercise, you will be able to create sass files and add gulp tasks to compile, bundle and minify them.
+>**Results**: After completing this exercise, you will be able to create Sass files and add gulp tasks to compile, bundle and minify them.
 
 ### Exercise 3: Using Bootstrap
 
 #### Scenario
 
-In this exercise, you will first update the **min-vendor:js** task that bundles and minifies JavaScript files to include the JavaScript files of Bootstrap. After that you will add a task to handle to CSS files of Bootstrap. You will then run the tasks to create the **vendor.min.css** file and to update the **vendor.min.js** file. After that you will style the layout using Bootstrap. Finally, you will create a view to buy an ice cream, and style it using Bootstrap.
+In this exercise, you will first update the **min-vendor:js** task that bundles and minifies JavaScript files to include the JavaScript files of Bootstrap. After that, you will add a task to handle the CSS files of Bootstrap. You will then run the tasks to create the **vendor.min.css** file and to update the **vendor.min.js** file. After that, you will style the layout by using Bootstrap. Finally, you will create a view to buy an ice cream and style it by using Bootstrap.
 
 The main tasks for this exercise are as follows:
 
-1. Update gulpfile.js to handle Bootstrap.
+1. Update gulpfile.js to handle Bootstrap
 
-2. Run the tasks.
+2. Run the tasks
 
-3. Style the application using Bootstrap.
+3. Style the application by using Bootstrap
 
-4. Run the application.
+4. Run the application
 
 
 #### Task 1: Update gulpfile.js to handle Bootstrap
@@ -435,64 +441,64 @@ The main tasks for this exercise are as follows:
 
 8. In the **anonymous function** code block, return the **gulp.src** function call result. Pass **paths.bootstrapCss** as a parameter to the **gulp.src** function.
 
-9. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorCssFileName)** as a parameter to the **pipe** function. 
+9. Chain a **pipe** function call to the **src** function call. Pass **concat(paths.vendorCssFileName)** as a parameter to the pipe function. 
 
-10. Chain a **pipe** function call to the **pipe** function call. Pass **cssmin()** as a parameter to the **pipe** function. 
+10. Chain a **pipe** function call to the **pipe** function call. Pass **cssmin()** as a parameter to the pipe function. 
 
-11. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the **pipe** function. 
+11. Chain a **pipe** function call to the **pipe** function call. Pass **gulp.dest(paths.destinationCssFolder)** as a parameter to the pipe function. 
 
 #### Task 2: Run the tasks
 
 1. Save all changes.
 
-2. Run the **min-vendor:css** task.
+2. In the **Task Runner Explorer** window, run the **min-vendor:css** task.
 
-     > **Note**: In **Solution Explorer**, under **wwwroot**, under **css**, a new css file has been added named **vendor.min.css**.
+     > **Note**: In Solution Explorer, under **wwwroot**, under **css**, a new css file has been added named **vendor.min.css**.
 
 3. Run the **min-vendor:js** task.
 
 4. In the **Microsoft Visual Studio** dialog box, click **Yes**.
 
-     > **Note:** In **Solution Explorer**, under **wwwroot**, under **scripts**, a file named **vendor.min.js** was updated.
+     > **Note**: In Solution Explorer, under **wwwroot**, under **scripts**, a file named **vendor.min.js** was updated.
 
 
-#### Task 3: Style the application using Bootstrap
+#### Task 3: Style the application by using Bootstrap
 
-1. In the **_Layout.cshtml** file, after the **TITLE** element, add a **SCRIPT** with the following information:
+1. In the **_Layout.cshtml** file, after the **TITLE** element, add a **SCRIPT** element with the following information:
     - Src: **~/scripts/vendor.min.js**
     
-2. After the **SCRIPT** element, add a **SCRIPT** with the following information:
+2. After the **SCRIPT** element, add a **SCRIPT** element with the following information:
     - Src: **~/script/script.min.js**
     
-3. After the **SCRIPT** element, add a **LINK** with the following information:
+3. After the **SCRIPT** element, add a **LINK** element with the following information:
     - Href: **~/css/vendor.min.css**
     - rel: **stylesheet**
     
-4. After the **LINK** element, add a **LINK** with the following information:
+4. After the **LINK** element, add a **LINK** element with the following information:
     - Href: **~/css/main.min.css**
     - rel: **stylesheet**
 
-5. In the **_Layout.cshtml** file, before the **DIV** element with **@RenderBody()** content, add a **DIV**.
+5. In the **_Layout.cshtml** file, before the **DIV** element with **@RenderBody()** content, add a **DIV** element.
 
 6. In the new **DIV** element, add a **NAV** element with the following information:
     - Class: **navbar navbar-expand-lg navbar-light bg-light mx-auto**
     
-7. In the **NAV** element, add a **A** element with the following information:
+7. In the **NAV** element, add an **A** element with the following information:
     - Class: **navbar-brand**
     - Href: **@Url.Action("Index", "IceCream")**
      Content: **Ice Cream of Dreams**
 
-8. In the **A** element, before its content, add a **IMG** element with the following information:
+8. In the **A** element, before its content, add an **IMG** element with the following information:
     - Src: **~/images/brand.jpg**
     - Class: **d-inline-block align-top**
     - Alt: **""**
  
-9. After the **A** element, add **DIV** element with the following information:
+9. After the **A** element, add a **DIV** element with the following information:
 
     - Class: **collapse navbar-collapse**
     - Id: **nav-content**   
     
-10. In the new **DIV** element, add **UL** element with the following information:
+10. In the new **DIV** element, add an **UL** element with the following information:
 
     - Class: **navbar-nav**
     - Id: **nav-content**  
@@ -501,7 +507,7 @@ The main tasks for this exercise are as follows:
 
     - Class: **nav-item active**
 
-12. In the **LI** element, add **A** element with the following information:
+12. In the **LI** element, add an **A** element with the following information:
 
     - Class: **nav-link**
     - Href: **@Url.Action("Index", "IceCream")**
@@ -511,25 +517,25 @@ The main tasks for this exercise are as follows:
     - Class: **sr-only**
     - Content: **(current)**
 
-14. After the last **LI** element, add **LI** element with the following information:
+14. After the last **LI** element, add an **LI** element with the following information:
 
     - Class: **nav-item**
     
-15. In the **LI** element, add **A** element with the following information:
+15. In the **LI** element, add a **A** element with the following information:
 
     - Class: **nav-link**
     - Href: **@Url.Action("Buy", "IceCream")**
     - Content: **Buy Ice Cream**
     
-16. After the **DIV** element with the **NAV** element inside, add **DIV** element with the following information:
+16. After the **DIV** element with the **NAV** element inside, add a **DIV** element with the following information:
 
     - Class: **main-title**
     
-17. In the **DIV** element, add **H1** element with the following information:
+17. In the **DIV** element, add an **H1** element with the following information:
 
     - Content: **The Best Ice Cream You Will Taste in Your Life**
     
-18. After the **H1** element, add **BUTTON** element with the following information:
+18. After the **H1** element, add a **BUTTON** element with the following information:
 
     - Type: **button**
     - Onclick: **location.href='@Url.Action("Buy", "IceCream")'**
@@ -537,10 +543,10 @@ The main tasks for this exercise are as follows:
   
 19. In the **IceCreamController** class, right-click on the **Buy** action name, and then click **Add View**.
 
-20. Create a new **View** using the **Add MVC View** dialog box, with the following information:
+20. Create a new **View** by using the **Add MVC View** dialog box, with the following information:
 
     - View Name: **Buy**
-    - Template: **Empty (without model**
+    - Template: **Empty (without model)**
     - Create as Partial View: **False**
     - Use a layout page: **True**
 
@@ -550,15 +556,15 @@ The main tasks for this exercise are as follows:
     
 22. Remove the **H2** element. 
 
-23. Add **DIV** element with the following information:
+23. Add a **DIV** element with the following information:
 
     - Class: **container**
     
-24. In the **DIV** element, add **H1** element with the following information:
+24. In the **DIV** element, add an **H1** element with the following information:
 
     - Content: **Choose Your Flavor**
     
-25. After the **H1** element, add **DIV** element with the following information:
+25. After the **H1** element, add a **DIV** element with the following information:
 
     - Class: **checkout**
     
@@ -571,120 +577,124 @@ The main tasks for this exercise are as follows:
     - Class: **col-4**
     - Content: **Ice Cream Flavors**
 
-28. After the new **DIV** element, add **DIV** element with the following information:
+28. After the new **DIV** element, add a **DIV** element with the following information:
 
     - Class: **col-2**
     - Content: **Buy Bulk(lbs)**
 
-29. After the new **DIV** element, add **DIV** element with the following information:
+29. After the new **DIV** element, add a **DIV** element with the following information:
 
     - Class: **col-2**
     - Content: **Total Amount**
     
-30. After the new **DIV** element, add **DIV** element.
+30. After the new **DIV** element, add a **DIV** element.
 
-31. After the **DIV** element with the **row justify-content-center intro-row** classes, add **DIV** element with the following information:
+31. After the **DIV** element with the **row justify-content-center intro-row** classes, add a **DIV** element with the following information:
 
     - Class: **row justify-content-center**
     
-32. In the new **DIV** element, add **DIV** element with the following information:
+32. In the new **DIV** element, add a **DIV** element with the following information:
 
     - Class: **col-4**
 
-33. In the new **DIV** element, add **SELECT** element with the following information:
+33. In the new **DIV** element, add a **SELECT** element with the following information:
 
     - Class: **form-control**
     - Id: **flavor**
 
-34. In the **SELECT** element, add **OPTION** element with the following information:
+34. In the **SELECT** element, add an **OPTION** element with the following information:
 
     - Content: **Select**
     
-35. Add **OPTION** element with the following information:
+35. Add an **OPTION** element with the following information:
 
     - Content: **Vanilla Ice Cream with Caramel Ripple and Almonds**
 
-36. Add **OPTION** element with the following information:
+36. Add an **OPTION** element with the following information:
 
     - Content: **Vanilla Ice Cream with Cherry Dark Chocolate Ice Cream**
     
-37. Add **OPTION** element with the following information:
+37. Add an **OPTION** element with the following information:
 
     - Content: **Vanilla Ice Cream with Pistachio**
 
-38. After the last **DIV** element with the **col-2** class, add **DIV** element with the following information:
+38. After the last **DIV** element with the **col-2** class, add the **DIV** element with the following information:
 
     - Class: **col-2**
 
-39. In the new **DIV** element, add **SELECT** element with the following information:
+39. In the new **DIV** element, add a **SELECT** element with the following information:
 
     - Class: **form-control**
     - Id: **quantity**
     
-40. In the **SELECT** element, add **OPTION** element with the following information:
+40. In the **SELECT** element, add an **OPTION** element with the following information:
 
     - Content: **1**
+
+41. In the **SELECT** element, add an **OPTION** element with the following information:
+
+    - Content: **1.5**
     
-41. Add **OPTION** element with the following information:
+42. Add an **OPTION** element with the following information:
 
     - Content: **2**
 
-42. Add **OPTION** element with the following information:
+43. Add an **OPTION** element with the following information:
 
     - Content: **3**
     
-43. Add **OPTION** element with the following information:
+44. Add an **OPTION** element with the following information:
 
     - Content: **4**
 
-44. After the last **DIV** element with the **col-2** class, add **DIV** element with the following information:
+45. After the last **DIV** element with the **col-2** class, add a **DIV** element with the following information:
 
     - Class: **col-2**
     
-45. In the new **DIV** element, add **DIV** element with the following information:
+46. In the new **DIV** element, add a **DIV** element with the following information:
 
     - Id: **totalAmount**   
 
-46. After the last **DIV** element with the **col-2** class, add **DIV** element with the following information:
+47. After the last **DIV** element with the **col-2** class, add a **DIV** element with the following information:
 
     - Class: **col-2**
     
-47. In the new **DIV** element, add **DIV** element.
+48. In the new **DIV** element, add a**DIV** element.
 
-48. In the new **DIV** element, add **IMG** element with the following information:
+49. In the new **DIV** element, add an **IMG** element with the following information:
 
      - Class: **imageDisplay**
      - Id: **iceCreamImage**
      - Alt: **""**
 
-49. At the bottom of the **Buy.cshtml** view, add **DIV** element with the following information:
+50. At the bottom of the **Buy.cshtml** view, add a **DIV** element with the following information:
 
     - Class: **row justify-content-center**
     
-50. In the new **DIV** element, add **DIV** element with the following information:
+51. In the new **DIV** element, add a **DIV** element with the following information:
 
     - Class: **col-5**
 
-51. In the new **DIV** element, add **FORM** element with the following information:
+52. In the new **DIV** element, add a **FORM** element with the following information:
 
     - Method: **post**
     - Enctype: **multipart/form-data**
     - Asp-action: **Buy**
 
-52. In the **FORM** element, add **DIV** element with the following information:
+53. In the **FORM** element, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-53. In the new **DIV** element, add **LABEL** element with the following information:
+54. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **FirstName**
     - Class: **col-sm-4 col-form-label**
 
-54. After the **LABEL** element, add **DIV** element with the following information:
+55. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-55. In the new **DIV** element, add **INPUT** element with the following information:
+56. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **FirstName**
     - Type: **text**
@@ -692,20 +702,20 @@ The main tasks for this exercise are as follows:
     - Placeholder: **First Name**
     - Required: **required**
 
-56. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+57. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-57. In the new **DIV** element, add **LABEL** element with the following information:
+58. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **LastName**
     - Class: **col-sm-4 col-form-label**
 
-58. After the **LABEL** element, add **DIV** element with the following information:
+59. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-59. In the new **DIV** element, add **INPUT** element with the following information:
+60. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **LastName**
     - Type: **text**
@@ -713,21 +723,21 @@ The main tasks for this exercise are as follows:
     - Placeholder: **Last Name**
     - Required: **required**
     
-60. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+61. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-61. In the new **DIV** element, add **LABEL** element with the following information:
+62. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **Address**
     - Class: **col-sm-4 col-form-label**
 
 
-62. After the **LABEL** element, add **DIV** element with the following information:
+63. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-63. In the new **DIV** element, add **INPUT** element with the following information:
+64. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **Address**
     - Type: **text**
@@ -735,41 +745,41 @@ The main tasks for this exercise are as follows:
     - Placeholder: **Address**
     - Required: **required**
  
-64. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+65. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-65. In the new **DIV** element, add **LABEL** element with the following information:
+66. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **Email**
     - Class: **col-sm-4 col-form-label**
 
-66. After the **LABEL** element, add **DIV** element with the following information:
+67. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-67. In the new **DIV** element, add **INPUT** element with the following information:
+68. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **Email**
     - Type: **email**
     - Class: **form-control**
-    - Placeholder: **email@example.com**
+    - Placeholder: **email<span>@</span>example.com**
     - Required: **required**
   
-68. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+69. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-69. In the new **DIV** element, add **LABEL** element with the following information:
+70. In the new **DIV** element, add a **LABEL** element with the following information:
 
     - Asp-for: **PhoneNumber**
     - Class: **col-sm-4 col-form-label**
 
-70. After the **LABEL** element, add **DIV** element with the following information:
+71. After the **LABEL** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-6**
 
-71. In the new **DIV** element, add **INPUT** element with the following information:
+72. In the new **DIV** element, add an **INPUT** element with the following information:
 
     - Asp-for: **PhoneNumber**
     - Type: **number**
@@ -777,19 +787,20 @@ The main tasks for this exercise are as follows:
     - Placeholder: **Phone Number**
     - Required: **required**
     
-72. After the last **DIV** element with the **form-group row** class, add **DIV** element with the following information:
+73. After the last **DIV** element with the **form-group row** class, add a **DIV** element with the following information:
 
     - Class: **form-group row**
 
-73. In the new **DIV** element, add **DIV** element with the following information:
+74. In the new **DIV** element, add a **DIV** element with the following information:
 
     - Class: **col-sm-10**
 
-74. In the new **DIV** element, add **BUTTON** element with the following information:
+75. In the new **DIV** element, add a **BUTTON** element with the following information:
 
     - Id: **formButton**
     - Type: **submit**
     - Class: **btn btn-outline-primary**
+    - Content: **Make a Purchase**
   
 #### Task 4: Run the application
 
@@ -803,23 +814,23 @@ The main tasks for this exercise are as follows:
     
 5. In the **Buy Bulk(lbs)** list, select _&lt;A bulk of your choice&gt;_.
 
-6. In the **First Name** text box, select _&lt;A first name of your choice&gt;_.
+6. In the **First Name** box, select _&lt;A first name of your choice&gt;_.
 
-7. In the **Last Name** text box,, select _&lt;A last  name of your choice&gt;_.
+7. In the **Last Name** box, select _&lt;A last name of your choice&gt;_.
     
-8. In the **Address** text box, select _&lt;A address of your choice&gt;_.
+8. In the **Address** box, select _&lt;A address of your choice&gt;_.
     
-9. In the **Email** text box, select _&lt;A email of your choice&gt;_.
+9. In the **Email** box, select _&lt;A email of your choice&gt;_.
 
-10. In the **Phone Number** text box, select _&lt;A phone number of your choice&gt;_, and then click **Make a Purchase**.
+10. In the **Phone Number** box, select _&lt;A phone number of your choice&gt;_, and then click **Make a Purchase**.
     
-11. On the **Thank you** page, in the **menu bar** click **Home**, and examine the browser content.
+11. On the **Thank you for purchase, hope you will enjoy the ice cream!** page, in the **menu bar** click **Home**, and examine the browser content.
 
-12. Close **Microsoft Edge**.
+12. Close Microsoft Edge.
 
-13. Close **Microsoft Visual Studio**.
+13. Close Microsoft Visual Studio.
 
->**Results**: After completing this exercise, you should have created a ice cream company application in which users can view ice cream details, and buy some as well.
+>**Results**: After completing this exercise, you should have created an ice cream company application in which users can view ice cream details, and buy some as well.
 
 ©2018 Microsoft Corporation. All rights reserved. 
 

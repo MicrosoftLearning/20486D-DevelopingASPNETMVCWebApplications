@@ -6,14 +6,14 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. 
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, and then copy the address in the address bar.
+1. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod09\Democode\01_BootstrapExample_begin\BootstrapExample**, and then copy the address in the address bar.
 
-2. Go to **Start**, and then type **cmd**.
+2. Select the **Start** button, and then type **cmd**.
 
 3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
@@ -24,23 +24,25 @@
        cd {copied folder path}
 ```
 
->**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
+>**Note**: If the *{copied folder path}* is different from the disk drive where the command prompt is located, then you should type *{disk drive}:* before typing the **cd** *{copied folder path}* command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
        npm install
 ```
->**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+>**Note**: If warning messages are shown in the command prompt you can ignore them.
 
 7. Close the window.
 
-8. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\01_BootstrapExample_begin**, and then double-click **BootstrapExample.sln**.
+8. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod09\Democode\01_BootstrapExample_begin**, and then double-click **BootstrapExample.sln**.
 
-9. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Views**, point to **Add**, and then click **New Folder**.
+    >**Note**: If a **Security Warning for BootstrapExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
-10. In the **NewFolder** text box, type **Shared**, and then press Enter.
+9. In the **BootstrapExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Views**, point to **Add**, and then click **New Folder**.
 
-11. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
+10. In the **NewFolder**  box, type **Shared**, and then press Enter.
+
+11. In the **BootstrapExample - Microsoft Visual Studio** window, in Solution Explorer, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
 
 12. In the **Add New Item – BootstrapExample** dialog box, click **Web**, in the result pane, click **Razor Layout**, and then click **Add**.
 
@@ -122,18 +124,18 @@
        </div>
 ```
 
-22. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **LibraryController.cs**.
+22. In the **BootstrapExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Controllers**, and then click **LibraryController.cs**.
 
 23. In the **LibraryController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-24. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.
+24. In the **Add MVC View** dialog box, ensure that the value in the **View name** box is **Index**.
 
 25. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-26. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is **unchecked** and the **Use a layout page** check box is **checked**, and then click **Add**.
+26. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** check box is cleared and the **Use a layout page** check box is selected, and then click **Add**.
 
 27. In the **Index.cshtml** code window, select the following code:
   ```cs
@@ -172,11 +174,11 @@
        </div>
 ```
 
-30. In the **BootstrapExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
+30. In the **BootstrapExample - Microsoft Visual Studio** window, in Solution Explorer, under **Views**, right-click **Shared**, point to **Add**, and then click **New Item**.
 
 31. In the **Add New Item – BootstrapExample** dialog box, click **Web**, and then, in the result pane, click **Razor View**.
 
-32. In the **Add New Item – GulpExample** dialog box, in the **Name** text box, type **_Alert**, and then click **Add**. 
+32. In the **Add New Item – BootstrapExample** dialog box, in the **Name** box, type **_Alert**, and then click **Add**. 
 
 33. In the **_Alert.cshtml** code window, select the following code:
   ```cs
@@ -217,19 +219,19 @@
 
 40. In the **Drama Books** page, click **Yes**.
 
-      >**Note:** Examine the **alert** that appears.
+      >**Note**: Examine the alert that appears.
       
-41. Press the **X** close button in order to close the alert.
+41. To close the alert, press the **X** close button.
 
 42. In the menu bar, click **Genres**, and then click **Science Fiction**. 
 
 43. In the **Science Fiction Books** page, click **No**.
 
-      >**Note:** Examine the **alert** that appears.
+      >**Note**: Examine the alert that appears.
       
-44. Press the **X** close button in order to close the alert.
+44. To close the alert, press the **X** close button.
 
-45. In **Microsoft Edge**, click **Close**.
+45. In Microsoft Edge, click **Close**.
 
 46. In the **BootstrapExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -239,14 +241,14 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. 
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin\GulpExample**, and then copy the address in the address bar.
+1. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod09\Democode\02_GulpExample_begin\GulpExample**, and then copy the address in the address bar.
 
-2. Go to **Start**, and then type **cmd**.
+2. Select the **Start** button, and then type **cmd**.
 
 3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
@@ -257,53 +259,55 @@
        cd {copied folder path}
 ```
 
->**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
+>**Note**: If the *{copied folder path}* is different from the disk drive where the command prompt is located, then you should type *{disk drive}:* before typing the **cd** *{copied folder path}* command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
        npm install
 ```
->**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+>**Note**: If warning messages are shown in the command prompt you can ignore them.
 
 7. Close the window.
 
-8. Navigate to **Allfiles\Mod09\Democode\02_GulpExample_begin**, and then double-click **GulpExample.sln**.
+8. Navigate to **[Repository Root]\Allfiles\Mod09\Democode\02_GulpExample_begin**, and then double-click **GulpExample.sln**.
+
+    >**Note**: If a **Security Warning for GulpExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 9. In the **GulpExample - Microsoft Visual Studio** window, on the **TOOLS** menu, click **Options**.
 
-10. In the **Options** dialog box, in the **Search Options** text box, type **Web Package Management**, and then press Enter.
+10. In the **Options** dialog box, in the **Search Options** box, type **Web Package Management**, and then press Enter.
 
-11. In the **Locations of external tools** list box, select **$(PATH)**, press the **Ap arrow** button until **$(PATH)** is at the top of the list, and then click **OK**.
+11. In the **Locations of external tools** list box, select **$(PATH)**, press the Up arrow button until **$(PATH)** is at the top of the list, and then click **OK**.
 
 12. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser displays a page which is not designed by a CSS.
+      >**Note**: The browser displays a page which is not designed by a CSS.
 
-13. In **Microsoft Edge**, click **Close**.
+13. In Microsoft Edge, click **Close**.
 
-14. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, click **package.json**.
+14. In the **GulpExample - Microsoft Visual Studio** window, in Solution Explorer, click **package.json**.
 
 15. In the **package.json** code window, examine the code.
 
-      >**Note:** The **gulp** and **gulp-sass** packages appear in the **devDependencies** section.
+      >**Note**: The **gulp** and **gulp-sass** packages appear in the **devDependencies** section.
 
-16. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Views**, expand **PhotoBook**, and then click **Index.cshtml**.
+16. In the **GulpExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Views**, expand **PhotoBook**, and then click **Index.cshtml**.
 
 17. In the **Index.cshtml** code window, examine the code. 
 
-      >**Note:** Currently there are no links to **CSS** files.
+      >**Note**: Currently there are no links to CSS files.
 
-18. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Folder**.
+18. In the **GulpExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **GulpExample**, point to **Add**, and then click **New Folder**.
 
-19. In the **NewFolder** text box, type **Styles**, and then press Enter.
+19. In the **NewFolder** box, type **Styles**, and then press Enter.
 
-20. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **Styles**, point to **Add**, and then click **New Item**.
+20. In the **GulpExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **Styles**, point to **Add**, and then click **New Item**.
 
-21. In the **Add New Item - GulpExample** dialog box, in the **search** text box type **scss**, and then press Enter.
+21. In the **Add New Item - GulpExample** dialog box, in the search box, type **scss**, and then press Enter.
 
 22. In the **Add New Item - GulpExample** dialog box, click **SCSS Style Sheet (SASS)**.
 
-23. In the **Add New Item – GulpExample** dialog box, in the **Name** text box, type **main**, and then click **Add**. 
+23. In the **Add New Item – GulpExample** dialog box, in the **Name** box, type **main**, and then click **Add**. 
 
 24. In the **main.scss** code window, select the following code: 
   ```cs
@@ -354,11 +358,11 @@
             }
        }
 ```
-27. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **GulpExample**, point to **Add**, and then click **New Item**.
+27. In the **GulpExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **GulpExample**, point to **Add**, and then click **New Item**.
 
-28. In the **Add New Item - GulpExample** dialog box, click **Web**, and then, in the result pane, click **JavaScript File**.
+28. In the **Add New Item - GulpExample** dialog box, click **Web**, and then in the result pane, click **JavaScript File**.
 
-29. In the **Add New Item - GulpExample** dialog box, in the **Name** text box, type **gulpfile**, and then click **Add**.
+29. In the **Add New Item - GulpExample** dialog box, in the **Name** box, type **gulpfile**, and then click **Add**.
 
 30. In the **gulpfile.js** code window, type the following code:
   ```cs
@@ -374,15 +378,15 @@
 ```
 31. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Save All**.
 
-32. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, right-click **gulpfile.js**, and then click **Task Runner Explorer**.
+32. In the **GulpExample - Microsoft Visual Studio** window, in Solution Explorer, right-click **gulpfile.js**, and then click **Task Runner Explorer**.
 
-      >**Note:** If the **sass** task doesn't appear in the **Tasks** list click **Refresh**.
+      >**Note**: If the **sass** task doesn't appear in the **Tasks** list, click **Refresh**.
 
 33. In the **Task Runner Explorer** pane, under **Tasks**, right-click **sass**, and then click **Run**.
 
-      >**Note:** In **Solution Explorer**, under **wwwroot**, a new folder has been added named **css** which contains a CSS file named **main.css**.
+      >**Note**: In Solution Explorer, under **wwwroot**, a new folder has been added named **css** which contains a CSS file named **main.css**.
 
-34. In the **GulpExample - Microsoft Visual Studio** window, in **Solution Explorer**, under **Views**, under **PhotoBook**, click **Index.cshtml**.
+34. In the **GulpExample - Microsoft Visual Studio** window, in Solution Explorer, under **Views**, under **PhotoBook**, click **Index.cshtml**.
 
 35. In the **Index.cshtml** code window, locate the following code:
   ```cs
@@ -396,9 +400,9 @@
 
 38. In the **GulpExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser displays a page which is designed by a CSS.
+      >**Note**: The browser displays a page which is designed by using CSS.
 
-39. In **Microsoft Edge**, click **Close**.
+39. In Microsoft Edge, click **Close**.
 
 40. In the **GulpExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 
@@ -408,14 +412,14 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. 
+Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. 
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
 #### Demonstration Steps
 
-1. In the **File Explorer**, navigate to **Allfiles\Mod09\Democode\03_GridExample_begin\GridExample**, and then copy the address in the address bar.
+1. In the **File Explorer**, navigate to **[Repository Root]\Allfiles\Mod09\Democode\03_GridExample_begin\GridExample**, and then copy the address in the address bar.
 
-2. Go to **Start**, and then type **cmd**.
+2. Select the **Start** button, and then type **cmd**.
 
 3. Under **Best match**, right-click **Command Prompt**, and then click **Run as administrator**.
 
@@ -426,30 +430,32 @@
        cd {copied folder path}
 ```
 
->**Note:** If the **{copied folder path}** is different from the disk drive where the **Command Prompt** is located, then you should type **{disk drive}:** before typing the **cd  {copied folder path}** command.
+>**Note**: If the *{copied folder path}* is different from the disk drive where the command prompt is located, then you should type *{disk drive}:* before typing the **cd** *{copied folder path}* command.
 
 6. In the **Administrator: Command Prompt** window, type the following command, and then press Enter.
   ```cs
        npm install
 ```
->**Note:** If warning messages are shown in the **Command Prompt** you can ignore them.
+>**Note**: If warning messages are shown in the command prompt you can ignore them.
 
 7. Close the window.
 
-8. Navigate to **Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
+8. Navigate to **[Repository Root]\Allfiles\Mod09\Democode\03_GridExample_begin**, and then double-click **GridExample.sln**.
 
-9. In the **GridExample - Microsoft Visual Studio** window, in **Solution Explorer**, expand **Controllers**, and then click **ChessController.cs**.
+    >**Note**: If a **Security Warning for GridExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
+9. In the **GridExample - Microsoft Visual Studio** window, in Solution Explorer, expand **Controllers**, and then click **ChessController.cs**.
 
 10. In the **ChessController.cs** code window, right-click the following code, and then click **Add View**.
   ```cs
        public IActionResult Index()
 ```
 
-11. In the **Add MVC View** dialog box, ensure that the name in the **View name** text box is **Index**.
+11. In the **Add MVC View** dialog box, ensure that the value in the **View name** box is **Index**.
 
 12. In the **Add MVC View** dialog box, ensure that the **Empty (without model)** template is selected.
 
-13. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** and the **Use a layout page** check boxes are **unchecked**, and then click **Add**.
+13. In the **Add MVC View** dialog box, ensure that the **Create as a partial view** and the **Use a layout page** check boxes are cleared, and then click **Add**.
 
 14. In the **Index.cshtml** code window, locate the following code:
   ```cs
@@ -458,7 +464,7 @@
        }
 ```
 
-15. Place the cursor before the **@** (at) sign, press the Up Arrow key, type the following code, and then press Enter.
+15. Place the cursor before the **@** (at) sign, press the Up arrow key, type the following code, and then press Enter.
   ```cs
        @model IEnumerable<GridExample.Models.Game>
 ```
@@ -532,7 +538,7 @@
        </div>  
 ```
 
-21. Place the cursor before the **<** (less then) sign of the **&lt;/body&gt;** tag, press Enter twice, press the Up Arrow key, and then type the following code:
+21. Place the cursor before the **<** (less than) sign of the **&lt;/body&gt;** tag, press Enter twice, press the Up arrow key, and then type the following code:
   ```cs
        <script src="~/node_modules/jquery/dist/jquery.js"></script>
        <script src="~/node_modules/popper.js/dist/umd/popper.js"></script>
@@ -543,9 +549,9 @@
 
 23. In the **GridExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-      >**Note:** The browser displays a page which is designed using the **Bootstrap grid system**.
+      >**Note**: The browser displays a page which is designed by using the **Bootstrap grid system**.
 
-24. In **Microsoft Edge**, click **Close**.
+24. In Microsoft Edge, click **Close**.
 
 25. In the **GridExample - Microsoft Visual Studio** window, on the **FILE** menu, click **Exit**.
 

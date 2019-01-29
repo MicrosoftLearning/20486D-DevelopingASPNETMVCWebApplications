@@ -12,7 +12,7 @@ After completing this lab, you will be able to:
 
 - Add new models to the application and add properties to the models.
 - Add a class that derives from the DbContext class.
-- Use a repository to the application to connect to the database.
+- Use a repository for the application to connect to the database.
 - Use Entity Framework Core to retrieve and store data.
 - Use Migrations to create a database and to update the schema of the database.
 
@@ -23,34 +23,36 @@ Estimated Time: **60 minutes**
 
 ### Preparation Steps
 
-1.	Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for this course's labs and demos. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+Ensure that you have cloned the 20486D directory from GitHub (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course. 
 
 ### Exercise 1: Adding Entity Framework Core 
 
 #### Scenario
 
-In this exercise, you will first add the Cupcake model and the Bakery model to the Cupcake web application. You will then add an Entity Framework context class named CupcakeContext to the web application. After that you will configure the CupcakeContext class to connect to a SQLite database. Finally, you will use data seeding to populate the database with sample data when the database is created.
+In this exercise, you will first add the Cupcake model and the Bakery model to the Cupcake web application. You will then add an Entity Framework context class named CupcakeContext to the web application. After that you will configure the CupcakeContext class to connect to an SQLite database. Finally, you will use data seeding to populate the database with sample data when the database is created.
 
 The main tasks for this exercise are as follows:
 
-1. Create model classes.
+1. Create model classes
 
-2. Create a class that derives from DbContext.
+2. Create a class that derives from DbContext
 
-3. Set up Entity Framework Core to use SQLite.
+3. Set up Entity Framework Core to use SQLite
 
-4. Use OnModelCreating to populate the database.
+4. Use OnModelCreating to populate the database
 
 #### Task 1: Create model classes
 
-1. From **Allfiles\Mod07\Labfiles\01_Cupcakes_begin**, open the **Cupcakes.sln**.
+1. Go to **[Repository Root]\Allfiles\Mod07\Labfiles\01_Cupcakes_begin**, and then open **Cupcakes.sln**.
+
+    >**Note**: If a **Security Warning for Cupcakes** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. Create a new class with the following information:
 
     - Name: **Cupcake**
     - Folder: **Models**
 
-3. In the **Cupcake** class, add **USING** statements for the following namespaces:
+3. In the **Cupcake** class, add the **USING** statements for the following namespaces:
 
    - **Microsoft.AspNetCore.Http**
    - **System.ComponentModel.DataAnnotations**
@@ -58,21 +60,21 @@ The main tasks for this exercise are as follows:
 
 4. Add a new property with the following information:
 
-   - Scope:   **public**
+   - Scope: **public**
    - Name: **CupcakeId**
    - Type: **int**
    - Access: **Read and write**
 
 5. Add a new property with the following information:
 
-   - Scope:   **public**
+   - Scope: **public**
    - Name: **CupcakeType**
    - Type: **CupcakeType?**
    - Access: **Read and write**
 
 6. Add a new property with the following information:
 
-   - Scope:   **public**
+   - Scope: **public**
    - Name: **Description**
    - Type: **string**
    - Access: **Read and write**
@@ -132,11 +134,11 @@ The main tasks for this exercise are as follows:
     - Name: **Bakery**
     - Type: **Bakery**
     - Access: **Read and write**
-    - Modifier: **override**
+    - Modifier: **virtual**
 
 15. Above the **CupcakeId** property, add a **Key** attribute.
 
-16. Above the **CupcakeType** property,  add a **Required** attribute with the following information:
+16. Above the **CupcakeType** property, add a **Required** attribute with the following information:
 
     - Error Message: **Please select a cupcake type**
 
@@ -144,7 +146,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **Cupcake Type:**
 
-18. Above the **Description** property,  add a **Required** attribute with the following information:
+18. Above the **Description** property, add a **Required** attribute with the following information:
 
     - Error Message: **Please enter a cupcake description**
 
@@ -152,11 +154,11 @@ The main tasks for this exercise are as follows:
 
     - Name: **Description:**
 
-20. Above the **GlutenFree** property,  add a **Display** attribute with the following information:
+20. Above the **GlutenFree** property, add a **Display** attribute with the following information:
 
     - Name: **Gluten Free:**
 
-21. Above the **Price** property,  add a **Range** attribute with the following information:
+21. Above the **Price** property, add a **Range** attribute with the following information:
 
     - Minimum: **1**
     - Maximum: **15**
@@ -173,17 +175,17 @@ The main tasks for this exercise are as follows:
 
     - Name: **Price:**
 
-25. Above the **PhotoAvatar** property,  add a **NotMapped** attribute.
+25. Above the **PhotoAvatar** property, add a **NotMapped** attribute.
 
 26. Add a **Display** attribute with the following information:
 
     - Name: **Cupcake Picture:**
 
-27. Above the **BakeryId** property,  add a  **Required** attribute with the following information:
+27. Above the **BakeryId** property, add a **Required** attribute with the following information:
 
     - Error Message: **Please select a bakery**
 
-28.  Create a new model with the following information:
+28. Create a new model with the following information:
 
      - Name: **Bakery**
      - Folder: **Models**
@@ -194,53 +196,53 @@ The main tasks for this exercise are as follows:
 
 30. Add a new property with the following information:
 
-    - Scope:   **public**
+    - Scope: **public**
     - Name: **BakeryId**
     - Type: **int**
     - Access: **Read and write**
 
 31. Add a new property with the following information:
 
-    - Scope:   **public**
+    - Scope: **public**
     - Name: **BakeryName**
     - Type: **string**
     - Access: **Read and write**
 
 32. Add a new property with the following information:
 
-    - Scope:   **public**
+    - Scope: **public**
     - Name: **Quantity**
     - Type: **int**
     - Access: **Read and write**
 
 33. Add a new property with the following information:
 
-     - Scope:   **public**
+     - Scope: **public**
      - Name: **Address**
      - Type: **string**
      - Access: **Read and write**
 
 34. Add a new property with the following information:
 
-     - Scope:   **public**
+     - Scope: **public**
      - Name: **Cupcakes**
      - Type: **ICollection&lt;Cupcake&gt;**
      - Access: **Read and write**
-     - Modifier: **override**
+     - Modifier: **virtual**
 
 35. Above the **BakeryId** property, add a **Key** attribute.
 
-36. Above the **BakeryName** property,  add a **StringLength** attribute with the following information:
+36. Above the **BakeryName** property, add a **StringLength** attribute with the following information:
 
     - Maximum Length: **50**
     - Minimum Length: **4**
 
-37. Above the **Quantity** property,  add a **Range** attribute with the following information:
+37. Above the **Quantity** property, add a **Range** attribute with the following information:
 
     - Minimum: **1**
     - Maximum: **40**
 
-38. Above the **Address** property,  add a **StringLength** attribute with the following information:
+38. Above the **Address** property, add a **StringLength** attribute with the following information:
 
     - Maximum Length: **50**
     - Minimum Length: **4**
@@ -257,7 +259,7 @@ The main tasks for this exercise are as follows:
     - Name: **CupcakeContext**
     - Folder: **Data**
 
-3. Add **USING** statements for the following namespaces:
+3. Add the **USING** statements for the following namespaces:
 
    - **Cupcakes.Models**
    - **Microsoft.EntityFrameworkCore**
@@ -292,7 +294,7 @@ The main tasks for this exercise are as follows:
    - Package: **Microsoft.EntityFrameworkCore.Sqlite** 
    - Version: **2.1.0**
 
-2. In the **Startup** class, add **USING** statements  for the following namespaces:
+2. In the **Startup** class, add the **USING** statements for the following namespaces:
 
    - **Microsoft.Extensions.Configuration**
    - **Cupcakes.Data**
@@ -309,9 +311,9 @@ The main tasks for this exercise are as follows:
    - Type: **IConfiguration**
    - Name: **configuration**
 
-5. In the constructor, initialize the  **_configuration** field with the value of the **configuration** parameter.
+5. In the constructor, initialize the **_configuration** field with the value of the **configuration** parameter.
 
-6. In the beginning of the **ConfigureServices** method, call the **AddDbContext** method of the **services** parameter, with the following information:
+6. At the beginning of the **ConfigureServices** method, call the **AddDbContext** method of the **services** parameter, with the following information:
 
    - Type: **CupcakeContext**
 
@@ -328,11 +330,11 @@ The main tasks for this exercise are as follows:
         - Type: **CupcakeContext**
         - Name: **cupcakeContext**
 
-9. In the beginning of the **Configure** method code block, call the **cupcakeContext.Database.EnsureDeleted** method.
+9. At the beginning of the **Configure** method code block, call the **cupcakeContext.Database.EnsureDeleted** method.
 
-10. In the beginning of the **Configure** method code block, call the **cupcakeContext.Database.EnsureCreated** method.
+10. At the beginning of the **Configure** method code block, call the **cupcakeContext.Database.EnsureCreated** method.
 
-
+	
 #### Task 4: Use OnModelCreating to populate the database
 
 1. In the **CupcakeContext** class, add a method with the following information:
@@ -354,22 +356,22 @@ The main tasks for this exercise are as follows:
     - Parameters:
         - **New Bakery**:
             - BakeryId: **1**
-            - BakeryName:  **"Gluteus Free"**
+            - BakeryName: **"Gluteus Free"**
             - Address: **"635 Brighton Circle Road"**
             - Quantity: **8**
         - **New Bakery**:
             - BakeryId: **2**
-            - BakeryName:  **"Cupcakes Break"**
-            - Address: **"Cupcakes Break"**
+            - BakeryName: **"Cupcakes Break"**
+            - Address: **"4323 Jerome Avenue"**
             - Quantity: **22**
         - **New Bakery**:
             - BakeryId: **3**
-            - BakeryName:  **"Cupcakes Ahead"**
-            - Address: **"Cupcakes Break"**
+            - BakeryName: **"Cupcakes Ahead"**
+            - Address: **"2553 Pin Oak Drive"**
             - Quantity: **18**
         - **New Bakery**:
             - BakeryId: **4**
-            - BakeryName:  **"Sugar"**
+            - BakeryName: **"Sugar"**
             - Address: **"1608 Charles Street"**
             - Quantity: **30**
 
@@ -382,40 +384,40 @@ The main tasks for this exercise are as follows:
     - Parameters:
         - **New Cupcake**:
             - CupcakeId: **1**
-            - CupcakeType : **CupcakeType.Birthday**
-            - Description:  **"Vanilla cupcake with coconut cream"**
+            - CupcakeType: **CupcakeType.Birthday**
+            - Description: **"Vanilla cupcake with coconut cream"**
             - GlutenFree: **true**
             - Price: **2.5**
             - BakeryId: **1**
-            - ImageMimeType:  **"image/jpeg"**
-            - ImageName :  **"birthday-cupcake.jpg"**
+            - ImageMimeType: **"image/jpeg"**
+            - ImageName: **"birthday-cupcake.jpg"**
         - **New Cupcake**:
             - CupcakeId: **2**
-            - CupcakeType : **CupcakeType.Chocolate**
-            - Description:  **"Chocolate cupcake with caramel filling and chocolate butter cream"**
+            - CupcakeType: **CupcakeType.Chocolate**
+            - Description: **"Chocolate cupcake with caramel filling and chocolate butter cream"**
             - GlutenFree: **false**
             - Price: **3.2**
             - BakeryId: **2**
-            - ImageMimeType:  **"image/jpeg"**
-            - ImageName :  **"chocolate-cupcake.jpg"**
+            - ImageMimeType: **"image/jpeg"**
+            - ImageName: **"chocolate-cupcake.jpg"**
         - **New Cupcake**:
             - CupcakeId: **3**
-            - CupcakeType : **CupcakeType.Strawberry**
-            - Description:  **"Chocolate cupcake with straberry cream filling"**
+            - CupcakeType: **CupcakeType.Strawberry**
+            - Description: **"Chocolate cupcake with straberry cream filling"**
             - GlutenFree: **false**
             - Price: **4**
             - BakeryId: **3**
-            - ImageMimeType:  **"image/jpeg"**
-            - ImageName :  **"pink-cupcake.jpg"**
+            - ImageMimeType: **"image/jpeg"**
+            - ImageName: **"pink-cupcake.jpg"**
         - **New Cupcake**:
             - CupcakeId: **4**
-            - CupcakeType : **CupcakeType.Turquoise**
-            - Description:  **"Vanilla cupcake with butter cream"**
+            - CupcakeType: **CupcakeType.Turquoise**
+            - Description: **"Vanilla cupcake with butter cream"**
             - GlutenFree: **true**
             - Price: **1.5**
             - BakeryId: **4**
-            - ImageMimeType:  **"image/jpeg"**
-            - ImageName :  **"turquoise-cupcake.jpg"**
+            - ImageMimeType: **"image/jpeg"**
+            - ImageName: **"turquoise-cupcake.jpg"**
 
 >**Results**: After completing this exercise, you will be able to add Entity Framework Core to the Cupcake Shop application. 
 
@@ -423,19 +425,19 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will first create a repository to the web application. The repository will access a SQLite database using Entity Framework Core. You will then use a dependency injection to inject the service to a controller. You will use the repository in the controller to access the database. In the controller you will retrieve cupcakes and bakeries data, and you will manipulate cupcakes and bakeries data. 
+In this exercise, you will first create a repository for the web application. The repository will access an SQLite database by using Entity Framework Core. You will then use a dependency injection to inject the service to a controller. You will use the repository in the controller to access the database. In the controller, you will retrieve the cupcakes and bakeries data, and then you will manipulate the data. 
 
 The main tasks for this exercise are as follows:
 
-1. Create a repository.  
+1. Create a repository
 
-2. Update a controller to use a repository.
+2. Update a controller to use a repository
 
-3. Use Entity Framework Core to retrieve data.
+3. Use Entity Framework Core to retrieve data
 
-4. Manipulate data using Entity Framework Core.
+4. Manipulate data by using Entity Framework Core
 
-5. Run the application. 
+5. Run the application
 
 #### Task 1: Create a repository
 
@@ -446,48 +448,48 @@ The main tasks for this exercise are as follows:
 2. Create a new interface with the following information:
 
      - Folder: **Repositories**
-     - Name:  **ICupcakeRepository**
+     - Name: **ICupcakeRepository**
      - Scope: **public**
 
 3. In the **ICupcakeRepository** interface, add a **USING** statement for the following namespaces:
 
    - **Cupcakes.Models**
 
-4. Declare a method with following information:
+4. Declare a method with the following information:
 
    - Name: **GetCupcakes**
    - Return type: **IEnumerable&lt;Cupcake&gt;**
 
-5. Declare a method with following information:
+5. Declare a method with the following information:
 
    - Name: **GetCupcakeById**
    - Return type: **Cupcake**
    - Parameter:
         - Name: **id**
-        - Type : **int**
+        - Type: **int**
 
-6. Declare a method with following information:
+6. Declare a method with the following information:
 
    - Name: **CreateCupcake**
    - Return type: **void**
    - Parameter:
         - Name: **Cupcake**
-        - Type : **cupcake**
+        - Type: **cupcake**
 
-7. Declare a method with following information:
+7. Declare a method with the following information:
 
    - Name: **DeleteCupcake**
    - Return type: **void**
    - Parameter:
         - Name: **id**
-        - Type : **int**
+        - Type: **int**
 
-8. Declare a method with following information:
+8. Declare a method with the following information:
 
    - Name: **SaveChanges**
    - Return type: **void**
 
-9. Declare a method with following information:
+9. Declare a method with the following information:
 
    - Name: **PopulateBakeriesDropDownList**
    - Return type: **IQueryable&lt;Bakery&gt;**
@@ -495,13 +497,13 @@ The main tasks for this exercise are as follows:
 10. Create a new class with the following information:
 
     - Folder: **Repositories**
-    - Name:  **CupcakeRepository**
+    - Name: **CupcakeRepository**
     - Scope: **public**
 
-11. In the **CupcakeRepository** class, add **USING** statements for the following namespaces:
+11. In the **CupcakeRepository** class, add the **USING** statements for the following namespaces:
 
       - **System.IO**
-      - **Cupcakes.Data**  
+      - **Cupcakes.Data**
       - **Cupcakes.Models**
       - **Microsoft.EntityFrameworkCore**
 
@@ -515,6 +517,7 @@ The main tasks for this exercise are as follows:
 
 14. Add a constructor with the following parameter:
 
+       - Scope: **public**
        - Type: **CupcakeContext**
        - Name: **context**
 
@@ -526,7 +529,7 @@ The main tasks for this exercise are as follows:
     - Return Type: **IEnumerable&lt;Cupcake&gt;**
     - Name: **GetCupcakes**
 
-17. In the **GetCupcakes** method, return **IEnumerable&lt;Cupcake&gt;** using the **_context.Cupcakes.ToList()** method.
+17. In the **GetCupcakes** method, return **IEnumerable&lt;Cupcake&gt;** by using the **_context.Cupcakes.ToList()** method.
 
 18. Add a method with the following information:
 
@@ -537,7 +540,7 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-19. In the **GetCupcakeById** method, return **Cupcake**  using the **_context.Cupcakes.Include(b => b.Bakery).SingleOrDefault(c => c.CupcakeId == id)** method.
+19. In the **GetCupcakeById** method, return **Cupcake** by using the **_context.Cupcakes.Include(b => b.Bakery).SingleOrDefault(c => c.CupcakeId == id)** method.
 
 20. Add a method with the following information:
 
@@ -550,17 +553,17 @@ The main tasks for this exercise are as follows:
 
 21. In the **CreateCupcake** method, create an **IF** statement that checks that the value of **cupcake.PhotoAvatar** is not **NULL** and that **cupcake.PhotoAvatar.Length** is bigger than **0**.
 
-22. Assign to the **ImageMimeType** property of the **cupcake** parameter the value of **cupcake.PhotoAvatar.ContentType**.
+22. In the **cupcake** parameter, to the **ImageMimeType** property, assign the value of **cupcake.PhotoAvatar.ContentType**.
 
-23. Assign to the **ImageName** property of the **cupcake** parameter the value of **Path.GetFileName(cupcake.PhotoAvatar.FileName)**.
+23. In the **cupcake** parameter, to the **ImageName** property, assign the value of **Path.GetFileName(cupcake.PhotoAvatar.FileName)**.
 
-24. Create a variable named **memoryStream** of type **var** inside a **USING** statement.
+24. Create a variable named *memoryStream* of type **var** inside a **USING** statement.
 
-25. Initialize the **memoryStream** varaible using the **MemoryStream** constructor.
+25. Initialize the *memoryStream* variable by using the **MemoryStream** constructor.
 
-26. In the **USING** statement block, call the **CopyTo** method of the **cupcake.PhotoAvatar** property. Pass **memoryStream** as a parameter to the the **CopyTo** method.
+26. In the **USING** statement block, call the **CopyTo** method of the **cupcake.PhotoAvatar** property. Pass **memoryStream** as a parameter to the **CopyTo** method.
 
-27. Assign to the **PhotoFile** property of the **cupcake** parameter the value of **memoryStream.ToArray()**.
+27. In the **cupcake** parameter, to the **PhotoFile** property, assign the value of **memoryStream.ToArray()**.
 
 28. After the **IF** statement, call the **Add** method of the **_context** field. Pass **cupcake** as a parameter to the **Add** method.
 
@@ -575,7 +578,7 @@ The main tasks for this exercise are as follows:
             - Type: **int**
             - Name: **id**
 
-31. In the **DeleteCupcake** method, create a **cupcake** variable of type **var** and assign it the value of  **_context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id)**.
+31. In the **DeleteCupcake** method, create a *cupcake* variable of type **var**, and then assign it the value of **_context.Cupcakes.SingleOrDefault(c => c.CupcakeId == id)**.
 
 32. Call the **Remove** method of the **_context.Cupcakes** property. Pass **cupcake** as a parameter to the **Remove** method.
 
@@ -595,26 +598,26 @@ The main tasks for this exercise are as follows:
     - Return Type: **IQueryable&lt;Bakery&gt;**
     - Name: **PopulateBakeriesDropDownList**
 
-37. In the **PopulateBakeriesDropDownList** method, create a variable named **bakeriesQuery** of type **var** and assign it the value of the following **LINQ** query:
+37. In the **PopulateBakeriesDropDownList** method, create a variable named *bakeriesQuery* of type **var**, and then assign it the value of the following **LINQ** query:
 
     - From: **b in _context.Bakeries**
     - Orderby: **BakeryName**
     - Select: **b**
 
-38.  Return the **IQueryable&lt;Bakery&gt;** using the **bakeriesQuery** variable.
+38. Return **IQueryable&lt;Bakery&gt;** by using the *bakeriesQuery* variable.
 
-39. In the **Startup** class, add **USING** statement for the following namespace:
+39. In the **Startup** class, add a **USING** statement for the following namespace:
 
       - **Cupcakes.Repositories**
 
-40. In the beginning of the **ConfigureServices** method, call the **AddTransient** method of **services** parameter with the following information:
+40. At the beginning of the **ConfigureServices** method, call the **AddTransient** method of **services** parameter with the following information:
 
     - Interface: **ICupcakeRepository**
     - Implementation: **CupcakeRepository**
 
 #### Task 2: Update a controller to use a repository
 
-1. In the **CupcakeController** class, add **USING** statements for the following namespaces:
+1. In the **CupcakeController** class, add the **USING** statements for the following namespaces:
 
       - **Microsoft.AspNetCore.Hosting**
       - **Cupcakes.Models**
@@ -637,6 +640,7 @@ The main tasks for this exercise are as follows:
 4. Add a constructor with the following parameters:
 
    - Parameter:
+        - Scope: **public**
         - Type: **ICupcakeRepository**
         - Name: **repository**
    - Parameter:
@@ -649,7 +653,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Use Entity Framework Core to retrieve data
 
-1. Edit the code in the **Index** action to return the **ViewResult** result using the **View** method. Pass **_repository.GetCupcakes()** as a parameter to the **View** method.
+1. Edit the code in the **Index** action to return the **ViewResult** result by using the **View** method. Pass **_repository.GetCupcakes()** as a parameter to the **View** method.
 
 2. Add a method with the following information:
 
@@ -660,13 +664,13 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-3. In the **Details** action, add a variable named **cupcake** of type **var**. Initialize the **cupcake** variable with the value of **_repository.GetCupcakeById(id)**.
+3. In the **Details** action, add a variable named *cupcake* of type **var**. Initialize the *cupcake* variable with the value of **_repository.GetCupcakeById(id)**.
 
-4. Create an **IF** statement that checks that the value of the **cupcake** variable is **NULL**.
+4. Create an **IF** statement that checks that the value of the *cupcake* variable is **NULL**.
 
-5. Inside the **IF** statement code block, return the **NotFoundResult** result using the **NotFound** method.
+5. Inside the **IF** statement code block, return the **NotFoundResult** result by using the **NotFound** method.
 
-6. After the **IF** statement, return the **ViewResult** result using the **View** method. Pass the **cupcake** variable as a parameter to the **View** method.
+6. After the **IF** statement, return the **ViewResult** result by using the **View** method. Pass the *cupcake* variable as a parameter to the **View** method.
 
 7. Add a method with the following information:
 
@@ -678,14 +682,14 @@ The main tasks for this exercise are as follows:
         - Name: **selectedBakery**
         - Defualt Value: **null**
 
-8. In the **PopulateBakeriesDropDownList** method, add a variable named **bakeries** of type **var**. Initialize the **bakeries** variable with the value of **_repository.PopulateBakeriesDropDownList()**.
+8. In the **PopulateBakeriesDropDownList** method, add a variable named *bakeries* of type **var**. Initialize the *bakeries* variable with the value of **_repository.PopulateBakeriesDropDownList()**.
 
 9. Save the following key and value in the **ViewBag** property:
 
     - Key: **BakeryID**
     - Value: **new SelectList(bakeries.AsNoTracking(), "BakeryId", "BakeryName", selectedbakery)**
 
-#### Task 4: Manipulate data using Entity Framework Core
+#### Task 4: Manipulate data by using Entity Framework Core
 
 1. In the **CupcakeController** class, add a method with the following information:
 
@@ -693,11 +697,11 @@ The main tasks for this exercise are as follows:
    - Return type: **IActionResult**
    - Name: **Create**
 
-2. Above the **Create** method, add a **HttpGet** attribute.
+2. Above the **Create** method, add an **HttpGet** attribute.
 
 3. In the **Create** action, call the **PopulateBakeriesDropDownList** method.
 
-4. Return the **ViewResult** result using the **View** method.
+4. Return the **ViewResult** result by using the **View** method.
 
 5. Add a method with the following information:
 
@@ -708,21 +712,21 @@ The main tasks for this exercise are as follows:
         - Type: **Cupcake**
         - Name: **cupcake**
 
-6. Above the **CreatePost** method, add a **HttpPost** attribute.
+6. Above the **CreatePost** method, add an **HttpPost** attribute.
 
 7. Above the **CreatePost** method, add an **ActionName** attribute with the following information:
 
     - Name: **Create**
 
-8. In the **CreatePost** method, create an **IF** statement that checks that the value of the **ModelState.IsValid**  is **true**.
+8. In the **CreatePost** method, create an **IF** statement that checks that the value of the **ModelState.IsValid** is **true**.
 
 9. Inside the **IF** statement code block, call the **CreateCupcake** method of the **_repository** field. Pass **cupcake** as a parameter to the **CreateCupcake** method.
 
-10. Return the **RedirectToActionResult** result using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
+10. Return the **RedirectToActionResult** result by using the **RedirectToAction** method. Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
 
 11. After the **IF** statement, call the **PopulateBakeriesDropDownList** method. Pass **cupcake.BakeryId** as a parameter to the **PopulateBakeriesDropDownList** method.
 
-12.  Return the **ViewResult** result using the **View** method.  Pass **cupcake** as a parameter to the **View** method.
+12. Return the **ViewResult** result by using the **View** method. Pass **cupcake** as a parameter to the **View** method.
 
 13. Add a method with the following information:
 
@@ -733,17 +737,17 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-14. Above the **Edit** method, add a **HttpGet** attribute.
+14. Above the **Edit** method, add an **HttpGet** attribute.
 
-15. In the **Edit** action, add a variable named **cupcake** of type **Cupcake**. Initialize the **cupcake** variable with the value of **_repository.GetCupcakeById(id)**.
+15. In the **Edit** action, add a variable named *cupcake* of type **Cupcake**. Initialize the *cupcake* variable with the value of **_repository.GetCupcakeById(id)**.
 
-16. Create an **IF** statement that checks that the value of the **cupcake**  is **NULL**.
+16. Create an **IF** statement that checks that the value of the **cupcake** is **NULL**.
 
-17. Inside the **IF** statement code block, return the **NotFoundResult** result using the **NotFound** method.
+17. Inside the **IF** statement code block, return the **NotFoundResult** result by using the **NotFound** method.
 
 18. After the **IF** statement, call the **PopulateBakeriesDropDownList** method. Pass **cupcake.BakeryId** as a parameter to the **PopulateBakeriesDropDownList** method.
 
-19.  Return the **ViewResult** result using the **View** method.  Pass **cupcake** as a parameter to the **View** method.
+19. Return the **ViewResult** result by using the **View** method. Pass **cupcake** as a parameter to the **View** method.
 
 20. Add a method with the following information:
 
@@ -754,15 +758,15 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-21. Above the **EditPost** method, add a **HttpPost** attribute.
+21. Above the **EditPost** method, add an **HttpPost** attribute.
 
-22. Above the **EditPost** method, add a **ActionName** attribute with the following information:
+22. Above the **EditPost** method, add an **ActionName** attribute with the following information:
 
     - Name: **Edit**
 
-23. In the **EditPost** method, add a variable named **cupcakeToUpdate** of type **var**. Initialize the **cupcakeToUpdate** variable with the value of **_repository.GetCupcakeById(id)**.
+23. In the **EditPost** method, add a variable named *cupcakeToUpdate* of type **var**. Initialize the *cupcakeToUpdate* variable with the value of **_repository.GetCupcakeById(id)**.
 
-24. Add a variable named **isUpdated** of type **bool**. Initialize the **isUpdated** variable with the value of **await TryUpdateModelAsync<Cupcake>(
+24. Add a variable named *isUpdated* of type **bool**. Initialize the *isUpdated* variable with the value of **await TryUpdateModelAsync<Cupcake>(
                                 cupcakeToUpdate,
                                 "",
                                 c => c.BakeryId, 
@@ -771,15 +775,15 @@ The main tasks for this exercise are as follows:
                                 c => c.GlutenFree,
                                 c => c.Price)**.
 
-25. Create an **IF** statement that checks that the value of the **isUpdated**  is **TRUE**.
+25. Create an **IF** statement that checks that the value of the *isUpdated* variable is **TRUE**.
 
 26. Inside the **IF** statement code block, call the **SaveChanges** method of the **_repository** field.
 
-27. Return the **RedirectToActionResult** result using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
+27. Return the **RedirectToActionResult** result by using the **RedirectToAction** method. Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
 
 28. After the **IF** statement, call the **PopulateBakeriesDropDownList** method. Pass **cupcakeToUpdate.BakeryId** as a parameter to the **PopulateBakeriesDropDownList** method.
 
-29.  Return the **ViewResult** result using the **View** method.  Pass **cupcakeToUpdate** as a parameter to the **View** method.
+29. Return the **ViewResult** result by using the **View** method. Pass **cupcakeToUpdate** as a parameter to the **View** method.
 
 30. Add a method with the following information:
 
@@ -790,15 +794,15 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-31. Above the **Delete** method, add a **HttpGet** attribute.
+31. Above the **Delete** method, add an **HttpGet** attribute.
 
-32. In the **Delete** method, add a variable named **cupcake** of type **var**. Initialize the **cupcake** variable with the value of **_repository.GetCupcakeById(id)**.
+32. In the **Delete** method, add a variable named *cupcake* of type **var**. Initialize the *cupcake* variable with the value of **_repository.GetCupcakeById(id)**.
 
-33. Create an **IF** statement that checks if the value of the **cupcake**  is **NULL**.
+33. Create an **IF** statement that checks if the value of the **cupcake** is **NULL**.
 
-34. Inside the **IF** statement code block, return the **NotFoundResult** result using the **NotFound** method.
+34. Inside the **IF** statement code block, return the **NotFoundResult** result by using the **NotFound** method.
 
-35. After the **IF** statement, return the **ViewResult** result using the **View** method. Pass **cupcake** as a parameter to the **View** method.
+35. After the **IF** statement, return the **ViewResult** result by using the **View** method. Pass **cupcake** as a parameter to the **View** method.
 
 36. Add a method with the following information:
 
@@ -809,7 +813,7 @@ The main tasks for this exercise are as follows:
         - Type: **int**
         - Name: **id**
 
-37. Above the **DeleteConfirmed** method, add a **HttpPost** attribute.
+37. Above the **DeleteConfirmed** method, add an **HttpPost** attribute.
 
 38. Above the **DeleteConfirmed** method, add an **ActionName** attribute with the following information:
 
@@ -817,7 +821,7 @@ The main tasks for this exercise are as follows:
 
 39. In the **Delete** action with **HTTP POST** verb, call the **DeleteCupcake** method of the **_repository** field. Pass **id** as a parameter to the  **DeleteCupcake** method.
 
-40. Return the **RedirectToActionResult** using the **RedirectToAction** method.  Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
+40. Return **RedirectToActionResult** by using the **RedirectToAction** method. Pass **nameof(Index)** as a parameter to the **RedirectToAction** method.
 
 #### Task 5: Run the application
 
@@ -825,7 +829,9 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In **Microsoft Edge**, click **Add Cupcakes**.
+3. In Microsoft Edge, click **Add Cupcake**.
+
+    >**Note**: The browser displays the **Create** action inside the **CupcakesController**.
 
 4. On the **Add a Cupcake to the Shop** page, create a new cupcake with the following credentials:
 
@@ -834,7 +840,7 @@ The main tasks for this exercise are as follows:
     - Description: **_&lt;A cupcake description of your choice&gt;_**
     - Gluten Free: **_&lt;Choose if the cupcake is gluten-free&gt;_**
     - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
-    - Cupcake Picture: **import from Allfiles\Mod07\Labfiles\Image a strawberry-cupcake.jpg**
+    - Cupcake Picture: **import from [Repository Root]\Allfiles\Mod07\Labfiles\Image a strawberry-cupcake.jpg**
 
 5. Click **Submit**.
 
@@ -850,7 +856,7 @@ The main tasks for this exercise are as follows:
 
     - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
 
-11. On the **Welcome to our Cupcakes Shop** page, select the cupcake you edited, and then click on **Details**.
+11. On the **Welcome to our Cupcakes Shop** page, select the cupcake you edited, and then click **Details**.
 
 12. Verify the newly edited cupcake details, and then click **Back to List**.
 
@@ -860,7 +866,7 @@ The main tasks for this exercise are as follows:
 
 15. On the **Welcome to our Cupcakes Shop** page, verify that the cupcake is deleted.
 
-16. Close **Microsoft Edge.**
+16. Close Microsoft Edge.
 
 >**Results**: After completing this exercise, you will be able to use Entity Framework Core to retrieve and store data through a repository in the **CupcakeController**. 
 
@@ -868,27 +874,27 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will first configure the cupcakes shop web application to connect to a SQL Server database instead of connecting to a SQLite database. You will then store the connection string which is used to connect to the database in a configuration file. After that you will use Migrations to create the database. Finally, you will add a property to an entity, and use Migrations to update the database schema.
+In this exercise, you will first configure the Cupcakes Shop web application to connect to an SQL Server database instead of connecting to an SQLite database. You will then store the connection string which is used to connect to the database in a configuration file. After that, you will use Migrations to create the database. Finally, you will add a property to an entity, and use Migrations to update the database schema.
 
 The main tasks for this exercise are as follows:
 
-1. Connect to a Microsoft SQL Server.
+1. Connect to a Microsoft SQL Server
 
-2. Specify a connection string in a configuration file.
+2. Specify a connection string in a configuration file
 
-3. Use Migrations to create a database.
+3. Use Migrations to create a database
 
-4. Run the application.
+4. Run the application
 
-5. Use Migrations to update the database schema.
+5. Use Migrations to update the database schema
 
-6. Run the application.
+6. Run the application
 
-#### Task 1: Connect to a Microsoft SQL Server.
+#### Task 1: Connect to a Microsoft SQL Server
 
-1. In the **Startup** class, in the **ConfigureServices** method, add a variable named **connectionString** of type **string**. Initialize the **connectionString** variable with the value **"Server=(localdb)\\MSSQLLocalDB;Database=BakeriesDb;Trusted_Connection=True;MultipleActiveResultSets=true"**.
+1. In the **Startup** class, in the **ConfigureServices** method, add a variable named *connectionString* of type **string**. Initialize the *connectionString* variable with the value **"Server=(localdb)\\MSSQLLocalDB;Database=BakeriesDb;Trusted_Connection=True;MultipleActiveResultSets=true"**.
 
-2. Replace the **lambda expression** which is send as a parameter to the **AddDbContext** method with the following information:
+2. Replace the **lambda expression** which is sent as a parameter to the **AddDbContext** method with the following information:
 
      - Lambda Expression: **options => options.UseSqlServer(connectionString))**.
 
@@ -906,7 +912,7 @@ The main tasks for this exercise are as follows:
 
 2. Change the value of the **Database** property to **BakeriesDb**.
 
-3. In the **Startup** class, in the **ConfigureServices** method, delete the declaration of the **connectionString** variable.
+3. In the **Startup** class, in the **ConfigureServices** method, delete the declaration of the *connectionString* variable.
 
 4. Replace the **lambda expression** which is sent as a parameter to the **AddDbContext** method with the following information:
 
@@ -916,12 +922,14 @@ The main tasks for this exercise are as follows:
 
 1. Open the **Package Manager Console** window. 
 
-2. Create a **migration** using the following information:
+2. Create a migration by using the following information:
 
      - Command: **Add-Migration**
      - Migration Name: **InitalCreate**
 
-3. Create the **database** using the following information:
+    >**Note**: In **Solution Explorer**, verify if a new folder named **Migrations** is created with multiple files.
+
+3. Create the database by using the following information:
 
      - Command: **Update-Database**
 
@@ -935,7 +943,9 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In **Microsoft Edge**, click **Add Cupcakes**.
+3. In Microsoft Edge, click **Add Cupcake**.
+
+    >**Note**: The browser displays the **Create** action inside the **CupcakesController**.
 
 4. On the **Add a Cupcake to The Shop** page, create a new cupcake with the following credentials:
 
@@ -944,15 +954,15 @@ The main tasks for this exercise are as follows:
     - Description: **_&lt;A cupcake description of your choice&gt;_**
     - Gluten Free: **_&lt;Choose if the cupcake is gluten-free&gt;_**
     - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
-    - Cupcake Picture: **import from Allfiles\Mod07\Labfiles\Image a vanilla-cupcake.jpg**
+    - Cupcake Picture: **import from [Repository Root]\Allfiles\Mod07\Labfiles\Image a strawberry-cupcake.jpg**
 
 5. Click **Submit**.
 
 6. On the **Welcome to our Cupcakes Shop** page, verify the newly submitted cupcake details.
 
-7. Select a cupcake of your choice, and click on **Details**.
+7. Select a cupcake of your choice, and click **Details**.
 
-8. View  the cupcake details, and then click **Back to List**.
+8. View the cupcake details, and then click **Back to List**.
 
 9. Select a cupcake of your choice, and then click **Edit**.
 
@@ -960,7 +970,7 @@ The main tasks for this exercise are as follows:
 
     - Price: **_&lt;A cupcake price of your choice between 1 and 15&gt;_**
 
-11. On the **Welcome to our Cupcakes Shop** page, select the cupcake you edited, and then click on **Details**.
+11. On the **Welcome to our Cupcakes Shop** page, select the cupcake you edited, and then click **Details**.
 
 12. Verify the newly edited cupcake details and then click **Back to List**.
 
@@ -968,16 +978,16 @@ The main tasks for this exercise are as follows:
 
 14. On the **Cupcake's Delete** page, click **Delete**.
 
-15.  On the **Welcome to our Cupcakes Shop** page, verify that the cupcake is deleted.
+15. On the **Welcome to our Cupcakes Shop** page, verify that the cupcake is deleted.
 
-16. Close **Microsoft Edge.**
+16. Close Microsoft Edge.
 
 
 #### Task 5: Use Migrations to update the database schema 
 
 1. In the **Cupcake** class, add a new property with the following information:
 
-   - Scope:   **public**
+   - Scope: **public**
    - Name: **CaloricValue**
    - Type: **int**
    - Access: **Read and write**
@@ -996,7 +1006,7 @@ The main tasks for this exercise are as follows:
     - Name: **CaloricValue**
     - Value: **355**
 
-5. Locate the capcake instance with the following information:
+5. Locate the cupcake instance with the following information:
 
     - Name: **CupcakeId**
     - Value: **2**
@@ -1004,9 +1014,9 @@ The main tasks for this exercise are as follows:
 6. Add a new parameter with the following information:
 
     - Name: **CaloricValue**
-    - Value: **195**   
+    - Value: **195**
 
-7. Locate the capcake instance with the following information:
+7. Locate the cupcake instance with the following information:
 
     - Name: **CupcakeId**
     - Value: **3**
@@ -1014,9 +1024,9 @@ The main tasks for this exercise are as follows:
 8. Add a new parameter with the following information:
 
     - Name: **CaloricValue**
-    - Value: **295**   
+    - Value: **295**
 
-9. Locate the capcake instance with the following information:
+9. Locate the cupcake instance with the following information:
 
     - Name: **CupcakeId**
     - Value: **4**
@@ -1024,7 +1034,7 @@ The main tasks for this exercise are as follows:
 10. Add a new parameter with the following information:
 
     - Name: **CaloricValue**
-    - Value: **360**  
+    - Value: **360**
 
 11. In the **Details.cshtml** file, add a **DIV** element before the **DIV** element with the following information: 
 
@@ -1081,16 +1091,16 @@ The main tasks for this exercise are as follows:
 
 24. Open the **Package Manager Console** window.
 
-25. Create a **migration** using the following information:
+25. Create a **migration** by using the following information:
 
      - Command: **Add-Migration**
-     - Migration Name: **AddCupcakeCaloricValue**
+     - Migration name: **AddCupcakeCaloricValue**
 
-26. Create the **database** using the following information:
+26. Create the database by using the following information:
 
      - Command: **Update-Database**
 
-    >**Note:** Verify in the **Cupcakes - Microsoft Visual Studio** window, in **Solution Explorer**, under  **Migrations**, a new file created.
+    >**Note**: In the **Cupcakes - Microsoft Visual Studio** window, in **Solution Explorer**, under **Migrations**, verify that a new file is created.
 
 #### Task 6: Run the application
 
@@ -1098,17 +1108,17 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. Select a cupcake of your choice, and click on **Details**.
+3. Select a cupcake of your choice, and click **Details**.
 
-    >**Note:** The browser displays the caloric value of the cupcake. 
+    >**Note**: The browser displays the caloric value of the cupcake. 
 
 4. Verify the cupcake details, and then click **Back to List**.
 
-5. Close **Microsoft Edge.**
+5. Close Microsoft Edge.
 
-6. Close **Microsoft Visual Studio**.
+6. Close Microsoft Visual Studio.
 
->**Results**: After completing this exercise, you should have created a cupcakes shop application in which users can add a new cupcake, edit a cupcake, delete a cupcake and view a cupcake’s details.
+>**Results**: After completing this exercise, you should have created a Cupcakes Shop application in which users can add a new cupcake, edit a cupcake, delete a cupcake and view a cupcake’s details.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
