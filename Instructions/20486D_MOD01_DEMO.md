@@ -9,11 +9,13 @@
 1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course.
 **(https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles)**
 
-2. Navigate to **Allfiles/Mod01/Democode/01_PhotoSharingSample**, and then open the **PhotoSharingSample.sln**.
+2. Navigate to **[Repository Root]\Allfiles/Mod01/Democode/01_PhotoSharingSample**, and then open the **PhotoSharingSample.sln**.
+
+    >**Note**: If a **Security Warning for PhotoSharingSample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 3. In the **PhotoSharingSample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-4. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:***[port]*. You will use the port number during this demonstration.
+4. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this demonstration.
 
 5. In Microsoft Edge, click **Close**.
 
@@ -61,7 +63,7 @@
 
 10. On the taskbar, click the **Microsoft Edge** icon.
 
-11. In Microsoft Edge, in the address bar, type the URL **http://localhost:***[port]***/home/index**, and then press Enter.
+11. In Microsoft Edge, in the address bar, type the URL **http://localhost:[port]/home/index**, and then press Enter.
 
     >**Note**: The browser window displays the **Home** page of the **PhotoSharingSample** web application.
 
