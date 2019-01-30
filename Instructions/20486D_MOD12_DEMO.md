@@ -320,7 +320,7 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 31. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New InPrivate Window**.
 
-32. In Microsoft Edge, in the address bar, type **http://localhost:***[port]*, and then press Enter.
+32. In Microsoft Edge, in the address bar, type **http://localhost:[port]**, and then press Enter.
 
 >**Note**: We opened a new browser, therefore a new session is created for the new browser.
 
