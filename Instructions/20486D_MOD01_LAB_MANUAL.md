@@ -1,5 +1,7 @@
 # Module 1: Exploring ASP.NET Core MVC
 
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20486 repository resides. For example, if you cloned or extracted the 20486 repository to **C:\Users\John Doe\Downloads\20486**, change the path: **[Repository Root]\AllFiles\20486D\Mod01** to **C:\Users\John Doe\Downloads\20486\AllFiles\20486D\Mod01**.
+
 # Lab: Exploring ASP.NET Core MVC 
 
 #### Scenario
@@ -44,7 +46,7 @@ The main tasks for this exercise are as follows:
 1. Start Visual Studio 2017 and create a new **ASP.NET Core Web Application** with following information:
 
     - Name: **ActorsRazorPages**
-    - Location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
+    - Location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
     - Solution name: **ActorsRazorPages**
     - Create directory for solution: **True**
     - Project template: **Web Application**
@@ -178,13 +180,13 @@ The main tasks for this exercise are as follows:
 
 20. Copy the **Data.cs** file to the **ActorsRazorPages** project, with the following information:
 
-     - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
-     - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Models**
+     - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Models**
 
 21. Copy the **images** folder to the **ActorsRazorPages** project, with the following information:
 
-     - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
-     - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\wwwroot**
+     - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\wwwroot**
 
 22. Create a new folder with the following information:
   
@@ -226,12 +228,12 @@ The main tasks for this exercise are as follows:
 
 31. Copy the content of the **Indexcshtml.txt** text file to the **Index.cshtml** page by using the following information:
 
-     - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
+     - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
 
 32. Copy the **Details.cs** and **Details.cshtml** files to the **ActorsRazorPages** project with the following information:
 
-     - Source location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
-     - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Pages\Actors**
+     - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Pages\Actors**
 
 33. In the **Startup** class, add a **using** statement for the following namespace:
 
@@ -290,7 +292,7 @@ The main tasks for this exercise are as follows:
 Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with the following information:
 
     - Name: **CakeStoreApi**
-    - Location: **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
+    - Location: **[Repository Root]\Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
     - Solution name: **CakeStoreApi**
     - Create directory for solution: **True**
     - Project template: **API**
@@ -366,8 +368,8 @@ Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with t
  
 10. Copy the **Data.cs** file to the **CakeStoreApi** project, with the following information:
 
-     - Source location: **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
-     - Target location: **Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin\CakeStoreApi\Models**
+     - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin\CakeStoreApi\Models**
 
 11. Create a new controller with the following information:
     - Controller name: **CakeStoreApiController**
@@ -472,7 +474,7 @@ The main tasks for this exercise are as follows:
 1. Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with following information:
 
     - Name: **AnimalsMvc**
-    - Location: **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin**
+    - Location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin**
     - Solution name: **AnimalsMvc**
     - Create directory for solution: **True**
     - Project template: **Web Application (Model-View-Controller)**
@@ -597,8 +599,8 @@ The main tasks for this exercise are as follows:
 
 18. Copy the **Data.cs** file to the **AnimalMvc** project, with the following information:
 
-     - Source location: **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin**
-     - Target location: **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\AnimalMvc\Models**
+     - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\AnimalMvc\Models**
 
 19. Create a new model with the following information:
 
@@ -665,8 +667,8 @@ The main tasks for this exercise are as follows:
 
 37. Copy the **images** folder contents to the **AnimalMvc** project, with the following information:
 
-     - Source location: **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Images**
-     - Target location: **Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\wwwroot\images**
+     - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Images**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\wwwroot\images**
 
 38. In the **AnimalsController** class, right-click the **Index** action name, and then click **Add View**.
 
@@ -682,7 +684,7 @@ The main tasks for this exercise are as follows:
 
 41. Copy the content of the **Indexcshtml.txt** text file to the **Index.cshtml** view  by using the following information:
 
-     - **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
+     - **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
 42. In the **AnimalsController** class, right-click the **Details** action name, and then click **Add View**.
 
@@ -698,7 +700,7 @@ The main tasks for this exercise are as follows:
 
 45. Copy the contents of the **Detailscshtml.txt** text file to the **Details.cshtml** view by using the following information:
 
-     - Source location: **Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
+     - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Views**
 
 46. In the **_Layout.cshtml** page, in the **UL** element, add an **LI** element.
 
