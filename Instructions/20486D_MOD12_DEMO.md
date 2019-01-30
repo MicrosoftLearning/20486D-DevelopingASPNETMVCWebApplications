@@ -538,14 +538,14 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 43. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-44. In Microsoft Edge, in the address bar, type **http://localhost:***[port]*, and then press Enter.
+44. In Microsoft Edge, in the address bar, type **http://localhost:[port]**, and then press Enter.
 
 45. In Microsoft Edge, click one of the squares.
     >**Note**: In both the **Microsoft Edge** windows, the square that was clicked is red.
 
 46. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-47. In Microsoft Edge, in the address bar, type **http://localhost:***[port]*, and then press Enter.
+47. In Microsoft Edge, in the address bar, type **http://localhost:[port]**, and then press Enter.
     >**Note**: The browser displays eight blue squares and one red square.
 
 48.  Close all the **Microsoft Edge** windows.
