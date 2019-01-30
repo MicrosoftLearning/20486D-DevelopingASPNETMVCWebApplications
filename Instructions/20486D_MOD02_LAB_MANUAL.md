@@ -102,7 +102,7 @@ The main tasks for this exercise are as follows:
 11. Open Microsoft Visual Studio 2017 and create a new **WPF App (.NET Framework)** project by using the following information:
     - Name: **DesignProject**
     - Template: **WPF App (.NET Framework)**
-    - Location: **[Repository Root]\Allfiles\Mod02\Labfiles\01_DesignProject_begin**
+    - Location: **[Repository Root]\Allfiles\Mod02\Labfiles**
     - Solution name: **DesignProject**
     - Create directory for solution: **True**
 
