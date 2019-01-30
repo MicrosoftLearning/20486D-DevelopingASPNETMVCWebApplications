@@ -1,5 +1,7 @@
 # Module 12: Performance and Communication
 
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20486 repository resides. For example, if you cloned or extracted the 20486 repository to **C:\Users\John Doe\Downloads\20486**, change the path: **[Repository Root]\AllFiles\20486D\Mod01** to **C:\Users\John Doe\Downloads\20486\AllFiles\20486D\Mod01**
+
 # Lab: Performance and Communication
 
 #### Scenario
@@ -48,6 +50,12 @@ Estimated Time: **60 minutes**
 
     >**Note**: There are dependencies to the 
     **jquery, jquery-validation, jquery-validation-unobtrusive, bootstrap** and **popper.js** packages.
+
+11. In the **ElectricStore - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+12. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this demonstration.
+
+13. In Microsoft Edge, click **Close**.
 
 ### Exercise 1: Implementing a Caching Strategy
 

@@ -1,5 +1,7 @@
 # Module 12: Performance and Communication
 
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20486 repository resides. For example, if you cloned or extracted the 20486 repository to **C:\Users\John Doe\Downloads\20486**, change the path: **[Repository Root]\AllFiles\20486D\Mod01** to **C:\Users\John Doe\Downloads\20486\AllFiles\20486D\Mod01**
+
 # Lesson 1: Implementing a Caching Strategy
 
 ### Demonstration: How to Configure Caching
@@ -134,7 +136,17 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Preparation Steps 
 
-Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course.(**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course.(**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+
+2. Navigate to **[Repository Root]\Allfiles\Mod12\Democode\02_StateExample_begin**, and then open the **StateExample.sln**.
+
+    >**Note**: If a **Security Warning for StateExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
+3. In the **StateExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+4. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this demonstration.
+
+5. In Microsoft Edge, click **Close**.
 
 #### Demonstration Steps
 
@@ -324,7 +336,17 @@ Ensure that you have cloned the **20486D** directory from GitHub. It contains th
 
 #### Preparation Steps 
 
-Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+
+2. Navigate to **[Repository Root]\Allfiles\Mod12\Democode\03_SignalRExample_begin**, and then open the **SignalRExample.sln**.
+
+    >**Note**: If a **Security Warning for SignalRExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
+3. In the **SignalRExample - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+4. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this demonstration.
+
+5. In Microsoft Edge, click **Close**.
 
 #### Demonstration Steps
 

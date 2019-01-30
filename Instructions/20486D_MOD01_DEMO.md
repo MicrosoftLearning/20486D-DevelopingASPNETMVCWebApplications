@@ -1,5 +1,7 @@
 # Module 1: Exploring ASP.NET Core MVC
 
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20486 repository resides. For example, if you cloned or extracted the 20486 repository to **C:\Users\John Doe\Downloads\20486**, change the path: **[Repository Root]\AllFiles\20486D\Mod01** to **C:\Users\John Doe\Downloads\20486\AllFiles\20486D\Mod01**.
+
 # Lesson 3: Introduction to ASP.NET Core MVC 
 
 ### Demonstration: How to Explore an ASP.NET Core MVC Application

@@ -1,5 +1,7 @@
 # Module 10: Testing and Troubleshooting
 
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20486 repository resides. For example, if you cloned or extracted the 20486 repository to **C:\Users\John Doe\Downloads\20486**, change the path: **[Repository Root]\AllFiles\20486D\Mod01** to **C:\Users\John Doe\Downloads\20486\AllFiles\20486D\Mod01**
+
 # Lab: Testing and Troubleshooting
 
 #### Scenario
@@ -20,7 +22,17 @@ Estimated Time: **60 minutes**
 
 ### Preparation Steps
 
-Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+1. Ensure that you have cloned the **20486D** directory from GitHub. It contains the code segments for the labs and demos in this course. (**https://github.com/MicrosoftLearning/20486D-DevelopingASPNETMVCWebApplications/tree/master/Allfiles**)
+
+2. Navigate to **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, and then open the **ShirtStore.sln**.
+
+    >**Note**: If a **Security Warning for ShirtStore** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
+3. In the **ShirtStore - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+4. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this demonstration.
+
+5. In Microsoft Edge, click **Close**.
 
 ### Exercise 1: Testing a Model
 
@@ -45,7 +57,7 @@ The main tasks for this exercise are as follows:
 
 1. From **[Repository Root]\Allfiles\Mod10\Labfiles\01_ShirtStore_begin**, open the **ShirtStore.sln**.
 
-    >**Note**: If a **Security Warning for RazorSyntaxExample** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+    >**Note**: If a **Security Warning for ShirtStore** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
 
 2. In the **ShirtStore** solution, add a new project with the following information:
     - Project name : **ShirtStoreWebsite.Tests**

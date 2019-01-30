@@ -1,5 +1,7 @@
 # Module 13: Implementing Web APIs
 
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20486 repository resides. For example, if you cloned or extracted the 20486 repository to **C:\Users\John Doe\Downloads\20486**, change the path: **[Repository Root]\AllFiles\20486D\Mod01** to **C:\Users\John Doe\Downloads\20486\AllFiles\20486D\Mod01**
+
 # Lab: Implementing Web APIs
 
 #### Scenario
@@ -34,6 +36,17 @@ Estimated Time: **60 minutes**
 4. Run the following command: **npm install**.
 
 5. Close the **Command Prompt** window.
+
+6. Navigate to **[Repository Root]\Allfiles\Mod13\Labfiles\01_Restaurant_begin**, and then open the **Restaurant.sln**.
+
+    >**Note**: If a **Security Warning for Server** dialog box appears, verify that the **Ask me for every project in this solution** check box is cleared, and then click OK.
+
+7. In the **Server - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
+
+8. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this demonstration.
+
+9. In Microsoft Edge, click **Close**.
+
 
 ### Exercise 1: Adding Actions and Calling them by using Microsoft Edge
 

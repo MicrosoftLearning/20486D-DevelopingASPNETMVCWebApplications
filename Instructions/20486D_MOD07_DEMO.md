@@ -1,5 +1,7 @@
 # Module 7: Using Entity Framework Core in ASP.NET Core
 
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20486 repository resides. For example, if you cloned or extracted the 20486 repository to **C:\Users\John Doe\Downloads\20486**, change the path: **[Repository Root]\AllFiles\20486D\Mod01** to **C:\Users\John Doe\Downloads\20486\AllFiles\20486D\Mod01**
+
 # Lesson 2: Working with Entity Framework Core
 
 ### Demonstration: How to Use Entity Framework Core
