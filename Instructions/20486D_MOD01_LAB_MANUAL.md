@@ -492,7 +492,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Explore the application structure
 
-1. In the **_ViewStart** file, note that the value of **Layout** is **"_Layout"**.
+1. In the **_ViewStart.cshtml** file, note that the value of **Layout** is **"_Layout"**.
 
 2. In the **Contact.cshtml**  page, note that there are no links to the **.css** files.
 
@@ -603,7 +603,7 @@ The main tasks for this exercise are as follows:
 18. Copy the **Data.cs** file to the **AnimalMvc** project, with the following information:
 
      - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin**
-     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\AnimalMvc\Models**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\AnimalMvc\AnimalMvc\Models**
 
 19. Create a new model with the following information:
 
@@ -671,7 +671,7 @@ The main tasks for this exercise are as follows:
 37. Copy the **images** folder contents to the **AnimalMvc** project, with the following information:
 
      - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\Images**
-     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\wwwroot\images**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\03_AnimalMvc_begin\AnimalMvc\AnimalMvc\wwwroot\Images**
 
 38. In the **AnimalsController** class, right-click the **Index** action name, and then click **Add View**.
 
@@ -732,13 +732,19 @@ The main tasks for this exercise are as follows:
 
 3. View the **Test Page** and **Animals** pages you have added.
 
+    >**Note**: The browser window displays the text **&quot;This is a Test Page&quot;**.
+
+    >**Note**: The browser window displays the **Index.cshtml** page, under the **Animals** folder.
+
 4. In the **Animals** window, click the **Details** link.
+
+    >**Note**: The browser window displays the **Details.cshtml** page, under the **Animals** folder.
 
 5. Verify that the **site.css** file is used to apply styles to all the pages.
 
 6. Close the **Microsoft Edge** window.
 
-7. Close the **Visual Studio** window.
+7. Close Microsoft Visual Studio.
 
 >**Results**: At the end of this exercise, you will be able to build a simple MVC application in Visual Studio.
 
