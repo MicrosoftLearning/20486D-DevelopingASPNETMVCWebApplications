@@ -262,7 +262,13 @@ The main tasks for this exercise are as follows:
 
 3. View the **Test Page** and **Actors** pages you have added.
 
+    >**Note**: The browser window displays the title **Test Page** and the text **&quot;This is a Test Page&quot;**. 
+
+    >**Note**: The browser window displays the **Index.cshtml** page under the **Actors** folder.
+
 4. In the **Actors** window, click the **Details** link.
+
+    >**Note**: The browser window displays the **Details.cshtml** page under the **Actors** folder.
 
 5. Verify that the **site.css** file is used to apply styles to all the pages.
 
