@@ -61,7 +61,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Explore the application structure
 
-1. In the **_ViewStart** file, note that the value of **Layout** is **"_Layout"**.
+1. In the **_ViewStart.cshtml** file, note that the value of **Layout** is **"_Layout"**.
 
 2. In the **Contact.cshtml**  page, note that there are no links to **.css** files..
 
@@ -164,6 +164,7 @@ The main tasks for this exercise are as follows:
 
     - Type: **List&lt;Actor&gt;**
     - Name: **ActorsList**
+    - Access: **Read and write**
 
 18. Declare a method with the following information:
 
@@ -181,12 +182,12 @@ The main tasks for this exercise are as follows:
 20. Copy the **Data.cs** file to the **ActorsRazorPages** project, with the following information:
 
      - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
-     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Models**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\ActorsRazorPages\Models**
 
 21. Copy the **images** folder to the **ActorsRazorPages** project, with the following information:
 
      - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin**
-     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\wwwroot**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\ActorsRazorPages\wwwroot**
 
 22. Create a new folder with the following information:
   
@@ -219,7 +220,7 @@ The main tasks for this exercise are as follows:
 
      - Scope: **public**
      - Name: **Actors**
-     - Type: **List&lt;Actor&gt;**
+     - Type: **IList&lt;Actor&gt;**
      - Access:  **Read and write**
 
 29. In the **OnGet** method, initialize the **Actors** property by using the **ActorsInitializeData** method of the **_data.** field.
@@ -230,7 +231,7 @@ The main tasks for this exercise are as follows:
 
      - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
 
-32. Copy the **Details.cs** and **Details.cshtml** files to the **ActorsRazorPages** project with the following information:
+32. Copy the **Details.cshtml.cs** and **Details.cshtml** files to the **ActorsRazorPages** project with the following information:
 
      - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
      - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Pages\Actors**
@@ -267,7 +268,7 @@ The main tasks for this exercise are as follows:
 
 6. Close the **Microsoft Edge** window.
 
-7. Close Visual Studio.
+7. Close Microsoft Visual Studio.
 
 >**Results**: At the end of this exercise, you will be able to build a simple Razor Pages application in Visual Studio.
 
