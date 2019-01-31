@@ -353,6 +353,7 @@ The main tasks for this exercise are as follows:
 
     - Type: **List&lt;CakeStore&gt;**
     - Name: **CakesList**
+    - Access: **Read and write**
 
 8. Declare a method with the following information:
 
@@ -389,6 +390,8 @@ The main tasks for this exercise are as follows:
 
 14. Add a constructor with the following parameter:
 
+     - Scope: **public**
+     - Class: **CakeStoreApiController**
      - Type: **IData**
      - Name: **data**
 
@@ -427,7 +430,8 @@ The main tasks for this exercise are as follows:
 23. After the **IF**  statement, return a new **ObjectResult** result by using the **ObjectResult** constructor. Pass the *item* variable as a parameter to the **ObjectResult** constructor.
 
 24. Above the **GetById** action, add a **HttpGet** attribute with the following information:
-     - template : **"/api/CakeStore/{id}"**
+     - Template: **"/api/CakeStore/{id}"**
+     - Name: **GetCake**
 
 25. In the **Startup** class, add a **using** statement for the following namespace:
 
@@ -446,9 +450,13 @@ The main tasks for this exercise are as follows:
 
     - Path: **/api/CakeStore**
 
+    >**Note**: The browser displays a list of cake stores in JSON format.
+
 3. In the **Microsoft Edge** window, access the following relative path:
 
     - Path: **/api/CakeStore/1**
+
+    >**Note**: The browser displays the first cake store in the JSON format.
 
 4. Close Microsoft Edge.
 
@@ -594,7 +602,7 @@ The main tasks for this exercise are as follows:
 
 17. Declare a method with the following information:
 
-    - Return type: **Animal **
+    - Return type: **Animal**
     - Name: **GetAnimalById**
     - Parameter:
         - Name:  **id**
@@ -635,6 +643,8 @@ The main tasks for this exercise are as follows:
 
 24. Add a constructor with the following parameter:
 
+     - Scope: **public**
+     - ClassName: **AnimalsController**
      - Type: **IData**
      - Name: **tempData**
 
