@@ -234,7 +234,7 @@ The main tasks for this exercise are as follows:
 32. Copy the **Details.cshtml.cs** and **Details.cshtml** files to the **ActorsRazorPages** project with the following information:
 
      - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\Pages**
-     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\Pages\Actors**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\01_ActorsRazorPages_begin\ActorsRazorPages\ActorsRazorPages\Pages\Actors**
 
 33. In the **Startup** class, add a **using** statement for the following namespace:
 
@@ -290,7 +290,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Creating a Web API application
 
-Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with the following information:
+1. Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with the following information:
 
     - Name: **CakeStoreApi**
     - Location: **[Repository Root]\Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
@@ -302,7 +302,7 @@ Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with t
 
 #### Task 2: Explore the application structure
 
-1. In the **ValuesController** controller, note that the **Get** method returns **value1** and **value2**.
+1. In the **ValuesController** class, note that the **Get** method returns **value1** and **value2**.
 
 2. Start the application without debugging.
 
@@ -370,7 +370,7 @@ Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with t
 10. Copy the **Data.cs** file to the **CakeStoreApi** project, with the following information:
 
      - Source location: **[Repository Root]\Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin**
-     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin\CakeStoreApi\Models**
+     - Target location: **[Repository Root]\Allfiles\Mod01\Labfiles\02_CakeStoreApi_begin\CakeStoreApi\CakeStoreApi\Models**
 
 11. Create a new controller with the following information:
     - Controller name: **CakeStoreApiController**
@@ -453,6 +453,8 @@ Open Visual Studio 2017 and create a new **ASP.NET Core Web Application** with t
 4. Close Microsoft Edge.
 
     >**Results**: At the end of this exercise, you will be able to build a simple Web API application in Visual Studio.
+
+5. Close Microsoft Visual Studio.
 
 ### Exercise 3: Exploring an MVC Application
 
