@@ -61,7 +61,7 @@ The main tasks for this exercise are the following:
 
 2. Start the application without debugging.
 
-3. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this demonstration.
+3. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this lab.
 
 4. Close Microsoft Edge.  
 

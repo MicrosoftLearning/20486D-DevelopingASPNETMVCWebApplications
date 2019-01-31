@@ -43,7 +43,7 @@ Estimated Time: **60 minutes**
 
 7. In the **Server - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-8. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this demonstration.
+8. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this lab.
 
 9. In Microsoft Edge, click **Close**.
 

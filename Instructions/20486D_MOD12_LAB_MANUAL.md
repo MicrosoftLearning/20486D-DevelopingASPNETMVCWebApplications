@@ -53,7 +53,7 @@ Estimated Time: **60 minutes**
 
 11. In the **ElectricStore - Microsoft Visual Studio** window, on the **DEBUG** menu, click **Start Without Debugging**.
 
-12. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this demonstration.
+12. In Microsoft Edge, in the address bar, note the port number that appears at the end of the URL **http://localhost:[port]**. You will use the port number during this lab.
 
 13. In Microsoft Edge, click **Close**.
 
