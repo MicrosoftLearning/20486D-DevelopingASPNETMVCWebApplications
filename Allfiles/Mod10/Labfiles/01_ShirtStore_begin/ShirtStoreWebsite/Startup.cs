@@ -34,6 +34,11 @@ namespace ShirtStoreWebsite
             shirtContext.Database.EnsureDeleted();
             shirtContext.Database.EnsureCreated();
 
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("en-US")
+            });
+            
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
