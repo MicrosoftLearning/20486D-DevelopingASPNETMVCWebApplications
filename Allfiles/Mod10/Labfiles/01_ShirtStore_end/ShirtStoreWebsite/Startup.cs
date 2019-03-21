@@ -43,6 +43,11 @@ namespace ShirtStoreWebsite
                 app.UseExceptionHandler("/error.html");
             }
 
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("en-US")
+            });
+            
             shirtContext.Database.EnsureDeleted();
             shirtContext.Database.EnsureCreated();
 
