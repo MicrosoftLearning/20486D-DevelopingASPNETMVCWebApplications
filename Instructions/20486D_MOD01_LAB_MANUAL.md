@@ -548,7 +548,7 @@ The main tasks for this exercise are as follows:
     - Content: **Test Page**
     - asp-area: **""**
     - asp-controller: **"Home"**
-    - asp-action: **"Test Page"**
+    - asp-action: **"TestPage"**
 
 8. Create a new model with the following information:
 
@@ -639,7 +639,7 @@ The main tasks for this exercise are as follows:
 
 22. In the **AnimalsController** class, add a **using** statement for the following namespace:
 
-      - **AnimalMvc.Models**
+      - **AnimalsMvc.Models**
 
 23. Create a new field with the following information:
 
