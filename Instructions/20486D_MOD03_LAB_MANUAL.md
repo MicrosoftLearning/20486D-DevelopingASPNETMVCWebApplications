@@ -507,47 +507,49 @@ The main tasks for this exercise are the following:
 
 1. In the **Startup** class, in the **Configure** method, remove the *gameVotes* variable and the **FOREACH** statement with its content.
 
-2. Call the **context.Response.WriteAsync** method by using the **await** operator. To the **WriteAsync** method, pass *"Thank you for submitting the poll. You may look at the poll results &lt;a href='/?submitted=true'&gt;Here&lt;/a&gt;."* as a parameter.
+2. Call the **Add** method on the **context.Response.Headers** object as pass *"Content-Type"* and *"text/html"* as parameters.
 
-3. In the **HomeController** class, add the **USING** statements for the **PollBall.Services** and **System.Text** namespaces.
+3. Call the **context.Response.WriteAsync** method by using the **await** operator. To the **WriteAsync** method, pass *"Thank you for submitting the poll. You may look at the poll results &lt;a href='/?submitted=true'&gt;Here&lt;/a&gt;."* as a parameter.
 
-4. Add a new field with the following information:
+4. In the **HomeController** class, add the **USING** statements for the **PollBall.Services** and **System.Text** namespaces.
+
+5. Add a new field with the following information:
     - Type: **IPollResultsService**
     - Name: **_pollResults**
     - Scope: **private**
 
-5. Add a constructor with the following information:
+6. Add a constructor with the following information:
     - Type: **IPollResultsService**
     - Name: **pollResults**
 
-6. In the constructor, initialize the **_pollResults** field with the value of the *pollResults* parameter.
+7. In the constructor, initialize the **_pollResults** field with the value of the *pollResults* parameter.
 
-7. Remove the content of the **Index** action.
+8. Remove the content of the **Index** action.
 
 
-8. In the **Index** action, add an **IF** statement that checks if the **Request.Query.ContainsKey** method returns **TRUE**. To the **ContainsKey** method, pass **"submitted"** as a parameter. 
+9. In the **Index** action, add an **IF** statement that checks if the **Request.Query.ContainsKey** method returns **TRUE**. To the **ContainsKey** method, pass **"submitted"** as a parameter. 
 
-9. Inside the **IF** statement, add a *results* variable of the **StringBuilder** type.
+10. Inside the **IF** statement, add a *results* variable of the **StringBuilder** type.
 
-10. Initialize the *results* variable by using the **StringBuilder** constructor.
+11. Initialize the *results* variable by using the **StringBuilder** constructor.
 
-11. Add a *voteList* variable of the **&lt;SortedDictionary&lt;SelectedGame, int&gt;&gt;** type.
+12. Add a *voteList* variable of the **&lt;SortedDictionary&lt;SelectedGame, int&gt;&gt;** type.
 
-12. Initialize the *voteList* variable with the result of **_pollResults.GetVoteResult** method call.
+13. Initialize the *voteList* variable with the result of **_pollResults.GetVoteResult** method call.
 
-13. Create a **FOREACH** statement block with the following information:
+14. Create a **FOREACH** statement block with the following information:
 
     - Variable Type: **var**
     - Variable Name: **gameVotes**
     - Collection: **voteList**
 
-14. In the **FOREACH** statement block, call the **Append** method of the *results* variable. To the **Append** method, pass *$"Game name: {gameVotes.Key}. Votes: {gameVotes.Value}{Environment.NewLine}"* as a parameter. 
+15. In the **FOREACH** statement block, call the **Append** method of the *results* variable. To the **Append** method, pass *$"Game name: {gameVotes.Key}. Votes: {gameVotes.Value}{Environment.NewLine}"* as a parameter. 
 
-15. After the **FOREACH** statement block, return the **ContentResult** result by using the **Content** method. To the **Content** method, pass the *results.ToString()* string as a parameter.
+16. After the **FOREACH** statement block, return the **ContentResult** result by using the **Content** method. To the **Content** method, pass the *results.ToString()* string as a parameter.
 
-16. After the **IF** statement, add an **ELSE** statement.
+17. After the **IF** statement, add an **ELSE** statement.
 
-17. Inside the **ELSE** statement, return the **RedirectResult** result by using the **Redirect** method. To the **Redirect** method, pass *"poll-questions.html"* as a parameter.
+18. Inside the **ELSE** statement, return the **RedirectResult** result by using the **Redirect** method. To the **Redirect** method, pass *"poll-questions.html"* as a parameter.
 
 ####	Task 5: Run the application
 

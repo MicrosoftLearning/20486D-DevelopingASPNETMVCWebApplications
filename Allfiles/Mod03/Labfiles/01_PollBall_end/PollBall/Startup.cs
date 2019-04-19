@@ -28,6 +28,7 @@ namespace PollBall
                     SelectedGame selectedGame = (SelectedGame)Enum.Parse(typeof(SelectedGame), selectedValue, true);
                     pollResults.AddVote(selectedGame);
 
+                    context.Response.Headers.Add("content-type", "text/html");
                     await context.Response.WriteAsync("Thank you for submitting the poll. You may look at the poll results <a href='/?submitted=true'>Here</a>.");
                 }
                 else
