@@ -70,10 +70,7 @@ The main tasks for this exercise are as follows:
       
 #### Task 2: Write a task to copy a JavaScript file
 
-1. Add a JavaScript file with the following information:
-
-    - Folder: **/**
-    - Name: **gulpfile**
+1. Right-click your project 'IceCreamCompany' and choose **Add**, then **New Item** and add a new JavaScript file called `gulpfile.js`
 
 2. In the **gulpfile.js** file, add a new variable named *gulp* with the value of **require('gulp')**.
 
@@ -83,6 +80,16 @@ The main tasks for this exercise are as follows:
 
     - webroot: **"./wwwroot/"**
     - nodeModules: **"./node_modules/"**
+    
+    Your file should resemble the following:
+    ````javascript
+    var gulp = require('gulp');
+    
+    var paths = {
+        webroot: "./wwwroot/",
+        nodeModules: "./node_modules/"
+    };
+    ````
 
 5. Assign the **jqueryjs** property of the *paths* variable the value of **paths.nodeModules + "jquery/dist/jquery.js"**.
 
