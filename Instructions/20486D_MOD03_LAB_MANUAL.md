@@ -507,7 +507,7 @@ The main tasks for this exercise are the following:
 
 1. In the **Startup** class, in the **Configure** method, remove the *gameVotes* variable and the **FOREACH** statement with its content.
 
-2. Call the **Add** method on the **context.Response.Headers** object as pass *"Content-Type"* and *"text/html"* as parameters.
+2. Call the **context.Response.Header.Add** method. To the **Add** method, pass *"Content-Type"* and *"text/html"* as parameters.
 
 3. Call the **context.Response.WriteAsync** method by using the **await** operator. To the **WriteAsync** method, pass *"Thank you for submitting the poll. You may look at the poll results &lt;a href='/?submitted=true'&gt;Here&lt;/a&gt;."* as a parameter.
 
