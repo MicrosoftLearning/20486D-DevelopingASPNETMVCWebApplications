@@ -212,10 +212,10 @@ The main tasks for this exercise are as follows:
 
 26. In the new **LI** element, add an **A** element with the following information:
 
-     - Content: **My Shopping Card**
+     - Content: **My Shopping Cart**
      - Attributes:
         - class: **nav-link**
-        - href: **@Url.Action("Index", "ShoppingCard")**
+        - href: **@Url.Action("Index", "ShoppingCart")**
 
 27. After the last **LI** element, add an **LI** element with the following information:
 
@@ -444,7 +444,7 @@ The main tasks for this exercise are as follows:
 
 9. Return the **sessionCustomer** parameter to the view.
 
-10. In the **ShoppingCardController** class, add the **USING** statements for the following namespaces:
+10. In the **ShoppingCartController** class, add the **USING** statements for the following namespaces:
 
    - **ElectricStore.Data**
    - **ElectricStore.Models**
@@ -509,7 +509,7 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In the menu bar, click **My Shopping Card**.
+3. In the menu bar, click **My Shopping Cart**.
 
     >**Note**: Examine the browser content.
 
@@ -524,9 +524,9 @@ The main tasks for this exercise are as follows:
     -  Email:  _&lt;An email of your choice&gt;_
     -  Phone: _&lt;A phone number of your choice&gt;_
 
-6. In the menu bar, click **My Shopping Card**.
+6. In the menu bar, click **My Shopping Cart**.
 
-    >**Note**: Examine the browser content; it displays the content of the **ShoppingCard.cshtml** file, rendered by **_Layout.cshtml**, and the cached contents are the products that were selected by you in the **"Add Products to Shopping List"** page.
+    >**Note**: Examine the browser content; it displays the content of the **ShoppingCart.cshtml** file, rendered by **_Layout.cshtml**, and the cached contents are the products that were selected by you in the **"Add Products to Shopping List"** page.
 
 7. In the menu bar, click **Add to Shopping List**.
 
@@ -534,7 +534,7 @@ The main tasks for this exercise are as follows:
 
 8. On the **Add Products to Shopping List** page, in the **Products List** list, again select  _&lt;Products of your choice&gt;._
 
-9. In the menu bar, click **My Shopping Card**.
+9. In the menu bar, click **My Shopping Cart**.
 
     >**Note**: Examine the browser content; the product you selected in the second selection is also displayed in the cached list of products you have selected in the past.
 
@@ -542,7 +542,7 @@ The main tasks for this exercise are as follows:
 
 11. In the second **Microsoft Edge** window, navigate to **http://localhost:[port]**.
 
-12. In the menu bar, click **My Shopping Card**.
+12. In the menu bar, click **My Shopping Cart**.
 
     >**Note**: Examine the browser content; the list of products is not displayed because it is empty. The session is saved only in the original browser.
 
@@ -623,7 +623,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Add a chat view
 
-1. In the **ShoppingCardController**, declare a method with the following information:
+1. In the **ShoppingCartController**, declare a method with the following information:
 
    - Name: **Chat**
    - Return type: **IActionResult**
@@ -704,12 +704,12 @@ The main tasks for this exercise are as follows:
 
     - Src: **~/node_modules/@@aspnet/signalr/dist/browser/signalr.js**
 
-19. In the **Index.cshtml** view under **Views/ShoppingCard**, after the **ELSE** statement code block, add a **BUTTON** element with the following information:
+19. In the **Index.cshtml** view under **Views/ShoppingCart**, after the **ELSE** statement code block, add a **BUTTON** element with the following information:
 
     - Type: **button**
 	- Class: **btn btn-success**
     - Id: **btnChat**
-    - Onclick: **location.href='@Url.Action("Chat", "ShoppingCard")'**
+    - Onclick: **location.href='@Url.Action("Chat", "ShoppingCart")'**
     - Content: **Chat with Online Visitors**
 
 
@@ -735,13 +735,13 @@ The main tasks for this exercise are as follows:
 
 2. Start the application without debugging.
 
-3. In the menu bar, click **My Shopping Card**.
+3. In the menu bar, click **My Shopping Cart**.
 
-4. On the **My Shopping Card** page, click **Chat with Online Visitors**.
+4. On the **My Shopping Cart** page, click **Chat with Online Visitors**.
 
 5. On the taskbar, right-click the **Microsoft Edge** icon, and then click **New Window**.
 
-6. In the second **Microsoft Edge** window, open **http://localhost:[port]/ShoppingCard/Chat**.
+6. In the second **Microsoft Edge** window, open **http://localhost:[port]/ShoppingCart/Chat**.
 
 7. In the second **Microsoft Edge** window, fill the following, and then click **Send message**.
 

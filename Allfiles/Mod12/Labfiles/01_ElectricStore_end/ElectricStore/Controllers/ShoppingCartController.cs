@@ -10,13 +10,13 @@ using Newtonsoft.Json;
 
 namespace ElectricStore.Controllers
 {
-    public class ShoppingCardController : Controller
+    public class ShoppingCartController : Controller
     {
         private StoreContext _context;
         private List<Product> products;
         private SessionStateViewModel sessionModel;
 
-        public ShoppingCardController(StoreContext context)
+        public ShoppingCartController(StoreContext context)
         {
             _context = context;
         }

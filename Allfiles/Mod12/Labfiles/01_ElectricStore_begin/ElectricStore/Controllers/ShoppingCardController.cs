@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ElectricStore.Controllers
 {
-    public class ShoppingCardController : Controller
+    public class ShoppingCartController : Controller
     {
         public IActionResult Index()
         {
