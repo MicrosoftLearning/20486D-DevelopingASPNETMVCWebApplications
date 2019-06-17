@@ -23,7 +23,7 @@ namespace IceCreamCompany.Models
         public string Email { get; set; }
 
         [Display(Name = "Phone"), DataType(DataType.PhoneNumber)]
-        public int PhoneNumber { get; set; }
+        public long PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Please enter your adress")]
         public string Address { get; set; }
