@@ -28,6 +28,7 @@ namespace WorldJourney
                 routes.MapRoute(
                      name: "TravelerRoute",
                      template: "{controller}/{action}/{name}",
+                     constraints: new { name = "[A-Za-z ]+" },
                      defaults: new { controller = "Traveler", action = "Index", name = "Katie Bruce" });
 
                 routes.MapRoute(

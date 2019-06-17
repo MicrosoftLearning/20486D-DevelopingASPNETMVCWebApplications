@@ -271,6 +271,7 @@ The main tasks for this exercise are as follows:
     - Name: **TravelerRoute**
     - Template: **{controller}/{action}/{name}**
     - Defaults: **controller = "Traveler", action = "Index", name = "Katie Bruce"**
+    - Constraints: **name = "[A-Za-z ]+"**
 
     >**Note**: You can replace the default name **Katie Bruce** with your name.
 
