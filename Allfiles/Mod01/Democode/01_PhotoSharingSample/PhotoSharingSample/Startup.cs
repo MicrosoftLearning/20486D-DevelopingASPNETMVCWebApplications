@@ -35,6 +35,7 @@ namespace PhotoSharingSample
             photoSharingDB.Database.EnsureCreated();
 
             app.UseStaticFiles();
+			Console.WriteLine("hello9");
 
             app.UseMvcWithDefaultRoute();
         }
