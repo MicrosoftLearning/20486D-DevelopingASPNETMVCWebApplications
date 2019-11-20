@@ -52,6 +52,7 @@ The main tasks for this exercise are as follows:
     - Project template: **Web Application**
     - Enable docker support: **False**
     - Configure for HTTPS: **False**
+    - Set the ASP.NET Core version to **2.1**
 
 2. Start the application without debugging.
 
