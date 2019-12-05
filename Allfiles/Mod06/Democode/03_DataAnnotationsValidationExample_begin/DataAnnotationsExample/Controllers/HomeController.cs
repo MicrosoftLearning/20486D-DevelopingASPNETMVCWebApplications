@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DataAnnotationsExample.Models;
 
-namespace DataAnnotationsExample.Contollers
+namespace DataAnnotationsExample.Controllers
 {
     public class HomeController : Controller
     {
