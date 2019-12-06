@@ -17,7 +17,7 @@ namespace GridExample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ChessLeagueContext>(options =>
-                  options.UseSqlite("Data Source=chessLeague.db"));
+                   options.UseSqlite("Data Source=chessLeague.db"));
 
             services.AddMvc();
         }

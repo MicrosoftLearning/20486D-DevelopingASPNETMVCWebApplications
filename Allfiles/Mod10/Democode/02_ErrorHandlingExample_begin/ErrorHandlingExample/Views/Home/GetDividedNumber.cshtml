@@ -19,6 +19,7 @@
         {
             <span>@Html.DisplayFor(i => item)</span>
         }
+
         This number was viewed @ViewBag.NumberOfViews
         @if (ViewBag.NumberOfViews > 1)
         {
@@ -30,7 +31,7 @@
         }
     </p>
     <div>
-        @await Html.PartialAsync("_NumberLinks")
+       @await Html.PartialAsync("_NumberLinks")
     </div>
 </body>
 </html>

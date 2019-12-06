@@ -16,7 +16,7 @@ namespace LayoutExample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<StudentContext>(options =>
-                   options.UseSqlite("Data Source=student.db"));
+                  options.UseSqlite("Data Source=student.db"));
 
             services.AddMvc();
         }

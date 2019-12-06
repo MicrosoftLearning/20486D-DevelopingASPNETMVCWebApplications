@@ -48,11 +48,11 @@ namespace Server.Data
                },
                new RestaurantBranch
                {
-                    Id = 4,
-                    Street = "20 Fitzroy Street",
-                    City = "Greendale",
-                    Open = true,
-                    PhoneNumber = "(03)-8622-6758"
+                   Id = 4,
+                   Street = "20 Fitzroy Street",
+                   City = "Greendale",
+                   Open = true,
+                   PhoneNumber = "(03)-8622-6758"
                });
 
             modelBuilder.Entity<EmployeeRequirements>().HasData(
