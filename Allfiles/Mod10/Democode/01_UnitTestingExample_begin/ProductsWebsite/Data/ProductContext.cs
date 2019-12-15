@@ -19,14 +19,14 @@ namespace ProductsWebsite.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>().HasData(
-                 new Product
-                 {
-                     Id = 1,
-                     Name = "Basketball",
-                     BasePrice = 5.5F,
-                     Description = "A spherical ball used in basketball games.",
-                     ImageName = "basketball"
-                 },
+                new Product
+                {
+                    Id = 1,
+                    Name = "Basketball",
+                    BasePrice = 5.5F,
+                    Description = "A spherical ball used in basketball games.",
+                    ImageName = "basketball"
+                },
                 new Product
                 {
                     Id = 2,

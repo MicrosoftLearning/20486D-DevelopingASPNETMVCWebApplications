@@ -15,8 +15,8 @@ namespace EntityFrameworkExample.Data
         }
 
         public DbSet<Person> People { get; set; }
-		
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Person>().HasData(
             new Person
