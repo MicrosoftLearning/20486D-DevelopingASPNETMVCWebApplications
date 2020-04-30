@@ -356,7 +356,7 @@ The main tasks for this exercise are as follows:
     - Key: **CurrentCity**
     - Value: **await GetCity(cityName)**
  
-12. Return the **ViewViewComponentResult** result by using the **View** method. Pass **"SelectCity"** as a parameter to the **View** method.
+12. Return the **ViewComponentResult** result by using the **View** method. Pass **"SelectCity"** as a parameter to the **View** method.
 
 ####	Task 2: Add a view component view
 
