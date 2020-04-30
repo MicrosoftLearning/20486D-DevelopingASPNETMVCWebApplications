@@ -148,7 +148,7 @@ The main tasks for this exercise are as follows:
 
 10. Add a method with the following information:
     - Scope: **public**
-    - Return type: **Task&lt;IActionResult&gt;**
+    - Return type: **IActionResult**
     - Name: **Login**
 
 11. Create an **IF** statement that checks whether the value of **this.User.Identity.IsAuthenticated** is **true**.
