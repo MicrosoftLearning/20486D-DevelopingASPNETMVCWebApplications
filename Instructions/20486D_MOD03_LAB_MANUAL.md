@@ -533,7 +533,7 @@ The main tasks for this exercise are the following:
 
 11. Initialize the *results* variable by using the **StringBuilder** constructor.
 
-12. Add a *voteList* variable of the **&lt;SortedDictionary&lt;SelectedGame, int&gt;&gt;** type.
+12. Add a *voteList* variable of the **SortedDictionary&lt;SelectedGame, int&gt;** type.
 
 13. Initialize the *voteList* variable with the result of **_pollResults.GetVoteResult** method call.
 
