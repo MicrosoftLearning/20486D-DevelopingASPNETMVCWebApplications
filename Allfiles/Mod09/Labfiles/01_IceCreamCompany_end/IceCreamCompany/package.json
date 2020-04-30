@@ -12,7 +12,7 @@
   "dependencies": {
     "bootstrap": "4.3.1",
     "hoek": "4.2.1",
-    "jquery": "3.3.1",
+    "jquery": "3.5.0",
     "lodash": "4.17.11",
     "popper.js": "1.14.3"
   }
