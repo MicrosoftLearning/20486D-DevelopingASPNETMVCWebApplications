@@ -33,15 +33,15 @@ namespace Library.Controllers
             return View(booksQuery);
         }
 
-        public IActionResult GetBooksByGener()
+        public IActionResult GetBooksByGenre()
         {
             if (this.User.Identity.IsAuthenticated)
             {
-                var booksGenerQuery = from b in _context.Books
+                var booksGenreQuery = from b in _context.Books
                                       orderby b.Genre.Name
                                       select b;
 
-                return View(booksGenerQuery);
+                return View(booksGenreQuery);
             }
             return RedirectToAction("Login", "Account");
         }
