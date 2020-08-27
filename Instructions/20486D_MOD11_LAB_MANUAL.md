@@ -358,17 +358,17 @@ The main tasks for this exercise are as follows:
 
 2. Above the **Index** method, add an **AllowAnonymous** attribute.
 
-3. Above the **GetBooksByGener** method, add an **Authorize** attribute.
+3. Above the **GetBooksByGenre** method, add an **Authorize** attribute.
 
-4. Remove the content of **GetBooksByGener**.
+4. Remove the content of **GetBooksByGenre**.
 
-5. Create a new variable named **booksGenerQuery** of type **var** and assign it the value of the following **LINQ** query:
+5. Create a new variable named **booksGenreQuery** of type **var** and assign it the value of the following **LINQ** query:
 
     - From: **b in _context.Books**
     - Orderby: **b.Genre.Name**
     - Select: **b**
 
-6.  Return the **IActionResult** result by using the **View** method. Pass **booksGenerQuery** as a parameter to the **View** method.
+6.  Return the **IActionResult** result by using the **View** method. Pass **booksGenreQuery** as a parameter to the **View** method.
 
 7. Above the **LendingBookPost** method, add an **Authorize** attribute.
 
