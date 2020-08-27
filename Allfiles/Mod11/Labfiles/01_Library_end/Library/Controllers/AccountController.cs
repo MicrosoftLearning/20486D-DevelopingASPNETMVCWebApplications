@@ -43,7 +43,7 @@ namespace Library.Controllers
                     return RedirectToAction("Index", "Library");
                 }
             }
-            ModelState.AddModelError("", "Faild to Login");
+            ModelState.AddModelError("", "Failed to Login");
             return View();
         }
 

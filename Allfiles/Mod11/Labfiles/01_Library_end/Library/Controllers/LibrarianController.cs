@@ -31,7 +31,7 @@ namespace Library.Controllers
 
         public IActionResult AddBook()
         {
-            PopulateGenerDropDownList();
+            PopulateGenreDropDownList();
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace Library.Controllers
                 }
                 return RedirectToAction(nameof(ThankYou));
             }
-            PopulateGenerDropDownList(book.Genre.Id);
+            PopulateGenreDropDownList(book.Genre.Id);
             return View();
         }
 
@@ -65,13 +65,13 @@ namespace Library.Controllers
             return View();
         }
 
-        private void PopulateGenerDropDownList(int? selectedGener = null)
+        private void PopulateGenreDropDownList(int? selectedGenre = null)
         {
             var genres = from b in _context.Genres
                         orderby b.Name
                         select b;
 
-            ViewBag.GenerList = new SelectList(genres.AsNoTracking(), "Id", "Name", selectedGener);
+            ViewBag.GenreList = new SelectList(genres.AsNoTracking(), "Id", "Name", selectedGenre);
         }
     }
 }

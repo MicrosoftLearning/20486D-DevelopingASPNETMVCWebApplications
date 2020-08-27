@@ -36,13 +36,13 @@ namespace Library.Controllers
         }
 
         [Authorize]
-        public IActionResult GetBooksByGener()
+        public IActionResult GetBooksByGenre()
         {
-            var booksGenerQuery = from b in _context.Books
+            var booksGenreQuery = from b in _context.Books
                                   orderby b.Genre.Name
                                   select b;
 
-            return View(booksGenerQuery);
+            return View(booksGenreQuery);
         }
 
         [Authorize]
