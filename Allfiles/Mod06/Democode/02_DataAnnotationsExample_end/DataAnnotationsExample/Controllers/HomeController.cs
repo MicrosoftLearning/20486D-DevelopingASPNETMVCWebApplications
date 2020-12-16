@@ -11,7 +11,7 @@ namespace DataAnnotationsExample.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new User());
         }
 
         public IActionResult Details(User user)
