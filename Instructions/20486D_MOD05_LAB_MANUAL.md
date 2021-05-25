@@ -131,7 +131,7 @@ The main tasks for this exercise are as follows:
     - Type: **string**
     - Name: **cityName**
 
-2. In the **ShowDataForCity** action code block, above the return statement, save the following key and value in the **ViewBag** property:
+2. In the **ShowDataForCity** action code block, above the return statement, save the following key and value in the **ViewData** property:
     - Key: **City**
     - Value: **_cities[cityName]**
 
@@ -351,7 +351,7 @@ The main tasks for this exercise are as follows:
 
 10. In the **GetCity** method code block, return **Task&lt;City&gt;** by using the  **Task.FromResult&lt;City&gt;** method. Pass **_cities[cityName]** as a parameter to the **Task.FromResult&lt;City&gt;** method.
  
-11. In the **InvokeAsync** method code block, save the following key and value in the **ViewBag** property:
+11. In the **InvokeAsync** method code block, save the following key and value in the **ViewData** property:
 
     - Key: **CurrentCity**
     - Value: **await GetCity(cityName)**
