@@ -132,12 +132,12 @@ The main tasks for this exercise are as follows:
    - Type: **UserManager&lt;User&gt;**
    - Name: **_userManager**
 
-6.  Add a constructor with the following parameters:
+6.  Add a constructor with the following parameter:
      - Parameter: 
          - Type: **SignInManager&lt;User&gt;**
          - Name: **signInManager**
 
-7.  Add a constructor with the following parameters:
+7.  Add another parameter to the constructor:
      - Parameter: 
          - Type: **UserManager&lt;User&gt;**
          - Name: **userManager**
