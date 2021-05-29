@@ -136,7 +136,7 @@ The main tasks for this exercise are as follows:
 
 18. Inside the **USING** statement block, assign the **fileBytes** variable the following value: **br.ReadBytes((int)fileOnDisk.Length)**.
 
-19. After the **USING** statement block, return a **FileResult** result by using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedCity**. 
+19. After the **USING** statement block, return a **FileResult** result by using the **File** method. Pass the following parameters to the **File** method: **fileBytes** and **requestedCity.ImageMimeType**. 
 
 20. After the end of **IF** statement, add an **ELSE** statement.
 
@@ -196,9 +196,9 @@ The main tasks for this exercise are as follows:
 11. Initiate the value of the **fullPath** variable with the value of  **webRootpath + folderPath + requestedCity.ImageName** instead of a empty string **("")**.
 
 
-#### Task 6: Store the result in a ViewBag property
+#### Task 6: Store the result in a ViewData property
 
-1. In the **Details** action code block, above the **return** statement, save the following key and value in the **ViewBag** property:
+1. In the **Details** action code block, above the **return** statement, save the following key and value in the **ViewData** property:
      - Key: **Title**
      - Value: **city.CityName**
 
@@ -245,7 +245,7 @@ The main tasks for this exercise are as follows:
     - Type: **string** 
     - Name: **name**
 
-3. At the beginning of the **Index** action code block,  save the following key and value in the **ViewBag** property:
+3. At the beginning of the **Index** action code block,  save the following key and value in the **ViewData** property:
      - Key: **VisiterName**
      - Value: **name**
 

@@ -559,7 +559,7 @@ The main tasks for this exercise are as follows:
 9. In the **Animal** model class, add a new property with the following information:
 
     - Scope: **public**
-    - Name: **id**
+    - Name: **Id**
     - Type: **int**
     - Access:  **Read and write**
 
@@ -738,7 +738,7 @@ The main tasks for this exercise are as follows:
 49. In the **ConfigureServices** method, call the **AddSingleton** method of **services** parameter with the following information:
 
     - Interface: **IData**
-    - Implementation: **data**
+    - Implementation: **Data**
 
 
 #### Task 4: Run the application
