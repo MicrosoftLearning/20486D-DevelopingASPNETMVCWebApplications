@@ -738,7 +738,7 @@ The main tasks for this exercise are as follows:
 49. In the **ConfigureServices** method, call the **AddSingleton** method of **services** parameter with the following information:
 
     - Interface: **IData**
-    - Implementation: **data**
+    - Implementation: **Data**
 
 
 #### Task 4: Run the application
